@@ -6,7 +6,7 @@ Comparison*, submitted to *Autonomous Robots*.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22893458.svg)](https://doi.org/10.5281/zenodo.22893458)
 
-Archived release: [`10.5281/zenodo.22893459`](https://doi.org/10.5281/zenodo.22893459) (v1.0.0, the snapshot the manuscript cites). The badge above points at the concept DOI, which always resolves to the newest version.
+Archived release: [`10.5281/zenodo.22895382`](https://doi.org/10.5281/zenodo.22895382) (v1.1.0, the snapshot the manuscript cites). The badge above points at the concept DOI, which always resolves to the newest version.
 
 **Start here:** [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) - what is in this release, and the exact
 commands that regenerate every table and figure from the per-episode records.

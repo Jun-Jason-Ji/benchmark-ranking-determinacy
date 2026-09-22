@@ -44,7 +44,7 @@ Not applicable.
 
 ```
 All episode-level records underlying the results are openly available in the archived release at
-https://doi.org/10.5281/zenodo.22893459 (version 1.0.0; https://doi.org/10.5281/zenodo.22893458
+https://doi.org/10.5281/zenodo.22895382 (version 1.1.0; https://doi.org/10.5281/zenodo.22893458
 resolves to the latest version), with development at
 https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
 files, one per policy, task and simulator condition, together with the per-run provenance log
@@ -54,7 +54,7 @@ the published values distributed with the benchmark's own source and are not our
 the manuscript cites their location.
 ```
 
-> ✅ Published 2026-09-22. Version DOI **10.5281/zenodo.22893459** (v1.0.0, the snapshot the manuscript cites);
+> ✅ Published 2026-09-22. Version DOI **10.5281/zenodo.22895382** (v1.1.0, the snapshot the manuscript cites);
 > concept DOI **10.5281/zenodo.22893458** always resolves to the newest version. Repository: https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy
 > Both are public now, so the statement is true as written.
 
@@ -70,13 +70,13 @@ Not applicable.
 The evaluation harness, the configuration-census utilities, the resumable evaluation queues, the
 analysis scripts that generate every table and figure in this paper, and the Vulkan compatibility
 layer that allows the original reference stack to render headless on a host without a GPU are openly
-available in the same archived release, https://doi.org/10.5281/zenodo.22893459, under the MIT
+available in the same archived release, https://doi.org/10.5281/zenodo.22895382, under the MIT
 licence for original code; evaluation records and outputs derived from third-party simulators,
 policies and demonstration data are governed by the NOTICE file in that release.
 REPRODUCIBILITY.md gives the commands that regenerate every table and figure from the records.
 ```
 
-> ✅ Same archived release: https://doi.org/10.5281/zenodo.22893459 — MIT for original code, with records and
+> ✅ Same archived release: https://doi.org/10.5281/zenodo.22895382 — MIT for original code, with records and
 > derived outputs governed by the NOTICE file in the release.
 
 ## Author contributions

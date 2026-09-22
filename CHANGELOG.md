@@ -6,6 +6,9 @@ frozen — see the note at the foot of this file.
 
 ## v1.1.0 -- 2026-09-22
 
+- Version DOI: [10.5281/zenodo.22895382](https://doi.org/10.5281/zenodo.22895382)
+- Concept DOI: [10.5281/zenodo.22893458](https://doi.org/10.5281/zenodo.22893458) (always the newest version)
+
 Strengthening pass on the manuscript, tagged so the archived snapshot matches the paper as
 submitted. No evaluation was re-run and no record file changed; the episode data in v1.0.0 and
 v1.1.0 are identical.
