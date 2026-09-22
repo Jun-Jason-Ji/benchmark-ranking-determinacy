@@ -1,3 +1,35 @@
+# What Determines a Simulation Benchmark Ranking?
+
+Reproducibility release for the manuscript *What Determines a Simulation Benchmark Ranking?
+Structural Blindness, Finite Configuration Grids, and Evaluation Budget in Simulation-Based Policy
+Comparison*, submitted to *Autonomous Robots*.
+
+<!-- TODO-AUTHOR: add the Zenodo DOI badge here once the first release is tagged. -->
+
+**Start here:** [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) - what is in this release, and the exact
+commands that regenerate every table and figure from the per-episode records.
+
+This is a **code-and-aggregate release**: it contains the harness, every per-episode record behind
+every number in the paper, the append-only provenance logs, and the analysis scripts. It does not
+redistribute simulator assets, policy checkpoints or the source datasets; see
+[`NOTICE.md`](NOTICE.md).
+
+| | |
+|---|---|
+| How to cite | [`CITATION.cff`](CITATION.cff) |
+| What changed between releases | [`CHANGELOG.md`](CHANGELOG.md) |
+| Integrity of the record files | [`SHA256SUMS.txt`](SHA256SUMS.txt) - 997 files, `sha256sum -c` |
+| Third-party components | [`NOTICE.md`](NOTICE.md) |
+| The manuscript as submitted | `submission/autonomous_robots/` |
+
+One number is carried in deliberately unreconciled - the implementation-build drift in Table 3. See
+the "Known open item" section of `REPRODUCIBILITY.md`.
+
+---
+
+The remainder of this file is the project's working log, in Chinese. It records how the results
+accumulated, including the conclusions that were withdrawn along the way.
+
 # 决策相关可辨识性与 Sim2Real 策略比较
 
 **2026-09-19 方法学更正（重要）**：SIMPLER 式基准的初始构型是有限且循环的（`episode_id mod 构型数`；ms3 茄子 64 个，ms2 茄子与勺子/胡萝卜各 24 个），且 OpenVLA 推理确定性、忽略策略种子。因此「多种子集复现」对确定性策略无效，`episode_id` 超出构型数是精确重复，两个移植版的茄子网格也不相同。现行口径为**构型全普查**，与 SIMPLER 官方协议（24 构型 × 3 个固定种子 = 72 集）一致。方法节见 [docs/methods_census_2026-09-19.md](docs/methods_census_2026-09-19.md)，证据见 `results/controller_sweep_gpu_rep3/FINDING_seed_set_bug.md` 与 `FINDING_estimand_matters.md`。
