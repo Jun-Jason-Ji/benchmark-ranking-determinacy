@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Jun Ji, Bowen Tan, Yi Li, Xiaolei Zhang, Shengjie Guo, Yi Sui
+Copyright (c) 2026 Jun Ji, Yi Li, Xiaolei Zhang, Yi Sui
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +46,12 @@ They do NOT extend to:
     the accompanying manuscript. These are published as part of the benchmark's
     own source, are cited rather than copied, and are not ours to license.
 
-TODO-AUTHOR: confirm the copyright line. It lists all six authors of the
-accompanying manuscript; the previous release in this line listed only the
-Qingdao University authors. Either is defensible -- decide before tagging,
-because the tag is what Zenodo archives.
+Note on the copyright line
+-------------------------------------------------------------------------------
+
+Copyright is held by the four Qingdao University authors, matching the previous
+release in this line (order-without-magnitude). This is deliberately narrower
+than the manuscript's author list, which has six authors and is recorded in
+CITATION.cff. Authorship and copyright are different things: all six authors are
+credited for the work, and four of them hold copyright in the code released here.
+Confirmed by the authors 2026-09-22.
