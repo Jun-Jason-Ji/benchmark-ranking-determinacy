@@ -123,24 +123,24 @@ Affiliations as typeset:
 > School Affiliated to Qingdao University) went with him, since no remaining author was attached to
 > it. The other three affiliation numbers are unchanged.
 >
-> ⚠️ Two details I supplied rather than received, still worth a glance:
-> - **Hohhot** as Inner Mongolia Agricultural University's city. It was not given; it follows from
->   the institution, but confirm it.
-> - **Shengjie Guo** written given-name-first. The name was supplied as "Guo Shengjie" (surname
->   first, Chinese order); Springer sets `\fnm`/`\sur` separately and prints Western order, so it
->   typesets as "Shengjie Guo". Say if you want the surname-first form preserved.
+> ✅ Confirmed by the authors 2026-09-22: **Hohhot** as Inner Mongolia Agricultural University's
+> city, and **Shengjie Guo** in given-name-first order as Springer typesets it. Nothing outstanding
+> in this section.
 
 ## Generative AI disclosure
 
-> A draft is in the manuscript's Acknowledgements, under "Use of generative artificial
-> intelligence". It is written to match the actual extent of use — drafting and revising prose,
-> writing the analysis and figure-generation code, template conversion, and citation checking — with
-> study design, interpretation and every claim decision attributed to the authors, all quantitative
-> results computed by the released scripts, and no language model listed as an author.
->
-> ⚠️ Read it and confirm it matches your own account before submitting. It is deliberately not
-> phrased as language editing, because that would understate it. Check the journal's current wording
-> at submission time as well, since these policies change.
+> ✅ Settled 2026-09-22. Shortened at the authors' direction to state the use without enumerating
+> it. The last two clauses are kept for policy rather than length: Springer requires the disclosure,
+> and states that language models cannot be authors. Worth re-checking the journal's current wording
+> at submission time, since these policies change.
+
+```
+A large language model (Anthropic Claude) was used to assist with writing and revising the
+manuscript, and to help write the analysis and figure-generation scripts. The study design, the
+experiments and the interpretation of results are the authors' own; all quantitative results are
+computed from the episode records by the released scripts. The authors have verified the content and
+take full responsibility for it, and no language model is listed as an author.
+```
 
 ---
 
