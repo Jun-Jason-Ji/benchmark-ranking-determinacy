@@ -1291,7 +1291,9 @@ Not applicable.
 \bmhead{Data availability}
 All episode-level records underlying the results are openly available in the archived release at
 \url{https://doi.org/10.5281/zenodo.22893458}, which resolves to the current version and lists every version with its
-own DOI; the version corresponding to this manuscript is v1.1.1. Development is at \url{https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy}. They are append-only JSON Lines files, one per policy, task and
+own DOI. The records and the scripts that regenerate every table and figure are byte-identical
+across all versions to date, so any version reproduces the results reported here. Development is at
+\url{https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy}. They are append-only JSON Lines files, one per policy, task and
 simulator condition, together with the per-run provenance log that records the port branch,
 inference-stack version and random seeds for every episode, and \texttt{SHA256SUMS.txt} over the
 997 record files. The real-robot reference values used in Sect.~\ref{subsec8_4} are the published

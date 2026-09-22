@@ -1,8 +1,44 @@
 # Changelog
 
 Versions are tagged in git and archived on Zenodo. **A tag is a promise**: once Zenodo mints a DOI
-for it, that snapshot is permanent and the manuscript will cite it. Tag only when the manuscript is
-frozen — see the note at the foot of this file.
+for it, that snapshot is permanent.
+
+The manuscript cites the **concept DOI** [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458), which always resolves to the
+newest version, so it does not go stale when a new one is released. Every version keeps its own DOI:
+
+| Version | DOI |
+|---|---|
+| v1.1.2 | [`10.5281/zenodo.22896200`](https://doi.org/10.5281/zenodo.22896200) |
+| v1.1.1 | [`10.5281/zenodo.22896075`](https://doi.org/10.5281/zenodo.22896075) |
+| v1.1.0 | [`10.5281/zenodo.22895382`](https://doi.org/10.5281/zenodo.22895382) |
+| v1.0.0 | [`10.5281/zenodo.22893459`](https://doi.org/10.5281/zenodo.22893459) |
+
+There are four versions for one result, and the reason is worth stating plainly: v1.0.0 and v1.1.0
+chased byte-exactness between the archive and the manuscript by re-tagging, which cannot converge —
+a version DOI is minted by the snapshot that contains the manuscript, so the DOI always lands one
+commit after the archive it names. v1.1.2 switched the citation to the concept DOI, which ends it.
+Nothing about the data changed across any of the four: `SHA256SUMS.txt` is byte-identical
+throughout.
+
+## v1.1.3 -- 2026-09-22
+
+The manuscript now names **no version at all**. This is the actual fixed point; v1.1.2 was not.
+
+Switching from a version DOI to the concept DOI removed one coupling, but replacing it with a prose
+"the version corresponding to this manuscript is vX" reintroduced the identical one: that sentence
+lives inside an archive, so the version it names is necessarily the one *before* the archive
+containing the sentence. It can only ever be off by one, and it was -- v1.1.2 held the current text
+while its own prose pointed at v1.1.1.
+
+The statements now assert the property that is version-independent and is what a reader following
+the pointer actually wants: the records and the scripts that regenerate every table and figure are
+byte-identical across all versions, so any version reproduces the paper. That is verifiable from
+`SHA256SUMS.txt` and does not decay.
+
+Also: the release changelog now tabulates every version DOI, and `SUBMISSION_CHECKLIST.md` section 6
+no longer contradicts itself about the two book citations.
+
+---
 
 ## v1.1.2 -- 2026-09-22
 
@@ -108,5 +144,10 @@ See `scripts/analyze_platform_drift_paired.py`.
 ## Note on release timing
 
 The previous project in this line released `v1.0.0` before its manuscript settled, and the archived
-snapshot then no longer matched the paper — `v1.1.0` was issued to repair it. Two DOIs now exist for
-one result. That is recoverable but avoidable: freeze the manuscript, then tag.
+snapshot then no longer matched the paper — `v1.1.0` was issued to repair it.
+
+This project repeated that pattern before diagnosing it properly. The lesson is not only "freeze the
+manuscript, then tag", which is good advice but insufficient: as long as the manuscript cites a
+version DOI, any change to the manuscript makes the cited snapshot stale, and re-tagging moves the
+gap rather than closing it. Citing the concept DOI removes the coupling, and is what a project in
+this position should do from the first release.

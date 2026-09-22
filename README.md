@@ -6,7 +6,7 @@ Comparison*, submitted to *Autonomous Robots*.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22893458.svg)](https://doi.org/10.5281/zenodo.22893458)
 
-Archived release: [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458) — the concept DOI, which always resolves to the newest version and lists every version with its own DOI. The manuscript cites this DOI and names v1.1.1 as its corresponding version.
+Archived release: [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458) — the concept DOI, which always resolves to the newest version and lists every version with its own DOI. The manuscript cites this DOI and names no version: the records and regeneration scripts are byte-identical across all versions, so any of them reproduces the paper.
 
 **Start here:** [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) - what is in this release, and the exact
 commands that regenerate every table and figure from the per-episode records.

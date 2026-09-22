@@ -30,7 +30,6 @@ Final build state: **0 errors, 0 overfull boxes, 0 undefined references, 0 bibte
 To rebuild:
 
 ```
-export PATH="<scratchpad>/TinyTeX/bin/windows:$PATH"
 pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
@@ -157,7 +156,7 @@ Consequences:
 
 **Nothing is now held back, and the manuscript is internally consistent.**
 
-### 6. Two book entries still need a catalogue check (was 14 entries)
+### 6. RESOLVED - all 21 citations verified
 
 **Resolved for all 21 entries**, each checked against the publisher, proceedings or dblp
 record. Newly verified: RT-1 (RSS 2023, dblp `conf/rss/BrohanBCCDFGHHH23`, 46 authors truncated at 20
@@ -173,10 +172,13 @@ the in-text citations will read "(Li et al., 2025)". The citation keys still con
 arbitrary labels, but rename them in `main.tex` and `references.bib` together if you want them
 consistent.
 
-**Still outstanding:** the Manski (2003) and Ljung (1999) monographs, marked `[VERIFY BOOK]`. Only
-publisher, year, edition and imprint need checking. The Manski note also flags that the 2007
-"Identification for Prediction and Decision" would support the same sentence, so decide which you
-mean.
+Manski (2003) and Ljung (1999) were subsequently verified against catalogue records: Manski is the
+Springer Series in Statistics monograph with doi 10.1007/b97478, and the 2003 volume is the intended
+citation rather than the 2007 one; Ljung's place of publication was wrong and is corrected to
+Englewood Cliffs. Complete author lists were later obtained for AutoEval, RoboArena and ManiSkill3,
+removing the last `and others` fields and with them the final bibtex warnings -- AutoEval's
+abbreviated form had concealed two missing authors and a mis-ordering. Nothing in the bibliography is
+unverified.
 
 ---
 
