@@ -1214,7 +1214,20 @@ and we know of no way to discover that fact from simulation alone.
 %%=============================================================================%%
 \bmhead{Acknowledgements}
 
-%% TODO-AUTHOR: optional. Not compulsory; keep brief if included.
+The authors declare no conflict of interest in connection with this work; the formal statement
+appears under Declarations below.
+
+\paragraph{Use of generative artificial intelligence.}
+A large language model (Anthropic Claude) was used substantially in preparing this work, and the
+authors consider it appropriate to describe that use rather than characterise it merely as language
+editing. It was used to draft and revise manuscript prose; to write analysis and figure-generation
+code, including the scripts that produce the tables and figures reported here; to convert the
+manuscript into the journal's template; and to check bibliographic records against publisher
+sources. The study design, the experiments, the interpretation of results, and every decision to
+assert or withdraw a claim are the authors' own. All quantitative results are computed from the
+episode records by the released scripts rather than produced by a language model, and the authors
+have verified the content and take full responsibility for it. No language model is listed as an
+author, in accordance with journal policy.
 
 %%=============================================================================%%
 \section*{Declarations}
@@ -1264,12 +1277,158 @@ layer described in Appendix~\ref{secB} are released under an open licence.
 \begin{appendices}
 
 \section{Test inversion for the compatible set}\label{secA}
-%% TODO-AUTHOR: transfer from docs/theory_protocol.md. Include the per-event caveats stated there:
-%% per-pair beta cannot be written as a joint event; E_theta presumes a z* exists; the GP posterior
-%% standard deviation must not be substituted for gamma without validation.
+
+\subsection{Construction}\label{secA1}
+
+Calibration observes $M$ real demonstrations. For a candidate parameter $z$, let $L_m(z)$ be the
+replay error on demonstration $m$ --- the deviation between the simulated and recorded trajectories
+--- and let $\hat z$ minimise $\bar L(z) = M^{-1}\sum_m L_m(z)$ over the grid we search.
+
+Rather than report $\hat z$, we invert a one-sided test. For each candidate $z$ we form the paired
+per-demonstration differences $\{L_m(z) - L_m(\hat z)\}_{m=1}^{M}$, resample demonstrations with
+replacement $B$ times, and take $\mathrm{lo}_{1-\alpha}(z)$ to be the $\alpha$ quantile of the
+bootstrap distribution of their mean. Then
+\begin{equation}\label{eq:csetA}
+C_\alpha = \big\{ z : \mathrm{lo}_{1-\alpha}(z) \le 0 \big\},
+\end{equation}
+the set of parameters whose replay error is not significantly worse than the best. Pairing by
+demonstration matters: the demonstrations differ enormously in difficulty, and an unpaired test
+compares that between-demonstration spread against the parameter effect rather than against itself.
+
+Three properties of this construction carry the argument of Sect.~\ref{sec4}.
+
+\paragraph{Exactly invariant directions belong to $C_\alpha$ at every magnitude.}
+If $L_m(z) = L_m(z')$ for all $m$, then every paired difference is identically zero, the bootstrap
+distribution is a point mass at zero, and $\mathrm{lo}_{1-\alpha} = 0 \le 0$. Membership does not
+depend on $\alpha$, on $B$, or on $M$. This is stronger than ``the data are consistent with a range
+of values'': along such a direction there is no range, because the axis is unconstrained at every
+magnitude. Increasing $M$ does not shrink it.
+
+\paragraph{Unobserved parameters are compatible for a different reason.}
+Contact friction and object density never enter a free-space replay trajectory at all, so their
+compatibility reflects the protocol's \emph{coverage} rather than its precision. We flag these
+separately throughout, because a reader might otherwise conclude that a longer or better-excited
+demonstration set would constrain them. It would not; a different experiment is needed.
+
+\paragraph{Identified directions are excluded with margin.}
+Along the gain ratio and the execution delay the same procedure returns strictly positive lower
+bounds, $+0.004$ to $+0.008$ (Sect.~\ref{subsec4_3}), so those settings are rejected rather than
+retained. The construction therefore discriminates; it is not vacuously inclusive.
+
+\subsection{The error ledger, and what this paper does not establish}\label{secA2}
+
+Writing $[L_{ij}, U_{ij}]$ for the union-bound interval of Sect.~\ref{subsec3_3}, the claim that
+policy $i$ is genuinely better in practice requires three events at once:
+\begin{align}
+E_\theta &= \{ z^* \in C_\alpha \}, \\[2pt]
+E_{MC}   &= \big\{ \forall z \in C_\alpha,\ \forall \pi \in \Pi,\ \forall (i,j): \notag \\
+         &\qquad \Delta^-_{ij} \le \Delta^{\mathrm{sim}}_{ij}(z; \pi)
+                 \le \Delta^+_{ij} \big\}, \\[2pt]
+E_b      &= \big\{ \forall (i,j):\ |\Delta^{\mathrm{real}}_{ij} -
+             \Delta^{\mathrm{sim}}_{ij}(z^*)| \le b_{ij} \big\},
+\end{align}
+with $P(E_\theta) \ge 1 - \alpha$, $P(E_{MC}) \ge 1 - \gamma$ and $P(E_b) \ge 1 - \beta$.
+On $E_\theta \cap E_{MC} \cap E_b$ every real difference lies in
+$[L_{ij} - b_{ij},\ U_{ij} + b_{ij}]$ simultaneously, and a union bound gives at least
+$1 - \alpha - \beta - \gamma$ without any independence assumption. Note that $E_{MC}$ is stated
+over $\Pi \times C_\alpha$: the implementation build is treated as an axis of the same kind as the
+physical parameters, for the reason given in Sect.~\ref{subsec5_5}.
+
+Each event needs its own argument, and four caveats are worth stating explicitly because each is a
+way the ledger can be misused.
+
+\begin{enumerate}
+\item \textbf{Per-pair bias coverage is not the joint event.} Establishing
+$|\Delta^{\mathrm{real}}_{ij} - \Delta^{\mathrm{sim}}_{ij}| \le b_{ij}$ for each pair separately
+does not give $E_b$, which is a statement over all pairs at once. A per-pair guarantee must be
+inflated for multiplicity before it can enter the ledger.
+
+\item \textbf{$E_\theta$ presumes that $z^*$ exists.} The event is empty of content if no
+parameter setting reproduces reality --- that is, if the simulator is structurally misspecified
+rather than merely uncalibrated. The fitted parameters may then be no more than locally effective
+quantities, and $\alpha$ bounds nothing. Section~\ref{subsec8_4} is best read as a case where this
+premise is under strain: no setting of the parameters we can vary reproduces the observed real
+ordering.
+
+\item \textbf{A Gaussian-process posterior standard deviation is not $\gamma$.} Substituting the
+posterior spread of the response-surface rung into $\gamma$ without validating its calibration
+would assume the very smoothness the rung is there to test. Section~\ref{subsec8_2} measures that
+rung's coverage on synthetic surfaces instead, including surfaces that violate its prior.
+
+\item \textbf{Surrogate error must be bounded to be absorbed.} Where an approximation has a
+certified error bound, the band can be widened by it. Where it does not, that rung is an empirical
+diagnostic and must not be reported as a coverage guarantee.
+\end{enumerate}
+
+Two further points concern variance reduction rather than coverage. Pairing on common initial states
+and common exogenous random draws reduces the variance of $\hat\Delta$ and we use it throughout,
+but it does not by itself produce a simultaneous band over $C_\alpha$ --- simultaneity has to be
+constructed, not inherited from pairing. And the internal action sampling of two different policies
+does not correspond; forcing it into a pairing and treating the result as a shared exogenous
+environment is not valid, which is why Sect.~\ref{subsec5_3} treats the seed as a replication axis
+only for policies that consume it.
+
+\textbf{What this paper establishes.} Sections~\ref{sec5}--\ref{sec7} measure $E_{MC}$, and
+enumerating $\mathcal{C}$ removes one of its two components exactly. Section~\ref{sec4}
+characterises $E_\theta$, whose width dominates the ledger. We do \textbf{not} establish $E_b$: we
+have no per-pair sim-to-real bias bound, and Sect.~\ref{subsec8_4} exhibits a pair on which
+$b_{ij}$ is large enough to swamp every other term.
 
 \section{Headless rendering of the original stack without a GPU}\label{secB}
-%% TODO-AUTHOR: transfer the Vulkan external-semaphore compatibility layer description.
+
+The published-protocol reproduction of Sect.~\ref{sec6} and the fractal experiment of
+Sect.~\ref{subsec8_4} both require the \emph{original} reference stack rather than the ManiSkill3
+port, because the two enumerate different configuration grids (Sect.~\ref{subsec5_1}). That stack
+renders through SAPIEN's \texttt{svulkan2}, which requests
+\texttt{VK\_KHR\_external\_semaphore\_fd} at device creation. Under WSL2 on Mesa lavapipe no
+driver offers file-descriptor-based external semaphores, so device creation fails and the renderer
+never initialises --- on a host with no GPU there is no path that satisfies the request.
+
+The extension is requested but, for our workload, unused: fd-based external semaphores serve
+cross-API synchronisation, which \texttt{svulkan2} exercises only when CUDA interop is enabled. We
+therefore supply an explicit Vulkan layer, \texttt{VK\_LAYER\_the\_world\_fakesemfd}, that makes
+the request satisfiable without providing the underlying capability. In 210 lines of C it:
+
+\begin{enumerate}
+\item advertises \texttt{VK\_KHR\_external\_semaphore\_fd} and
+\texttt{VK\_KHR\_external\_fence\_fd} in \texttt{vkEnumerateDeviceExtensionProperties}, appending
+them to whatever the driver reports;
+\item strips those two names from \texttt{ppEnabledExtensionNames} at \texttt{vkCreateDevice}, so
+the driver is never asked to honour them;
+\item removes \texttt{VkExportSemaphoreCreateInfo} and \texttt{VkExportFenceCreateInfo} from
+create-info chains; and
+\item stubs the fd import and export entry points, which are consequently never reached.
+\end{enumerate}
+
+It is an \emph{explicit} layer, enabled per process through \texttt{VK\_LAYER\_PATH} and
+\texttt{VK\_INSTANCE\_LAYERS} and installed nowhere:
+
+\begin{verbatim}
+export VK_LAYER_PATH=<dir>
+export VK_INSTANCE_LAYERS=\
+  VK_LAYER_the_world_fakesemfd
+\end{verbatim}
+
+\noindent so no other process on the host sees a modified Vulkan environment. It builds with a
+single \texttt{gcc -O2 -shared -fPIC} invocation against the Vulkan headers.
+
+\paragraph{Why this does not invalidate the results.}
+The layer makes a capability appear present that is absent, which is exactly the kind of
+intervention that should be distrusted in a paper about whether evaluation results are determined by
+their inputs. Two things bound the risk. First, the mechanism: every path that would consume an
+fd-based semaphore is removed rather than faked, so the renderer takes the same code path it would
+take on a driver that had never advertised the extension --- the layer does not substitute an
+approximate implementation for a real one. Second, and more convincing, the check in
+Sect.~\ref{subsec6_2}: this software-rendered, layer-mediated configuration reproduces the
+published success rates to a mean absolute difference of 0.026 across eight cells, and to $+0.003$
+and $-0.040$ on the second embodiment. A renderer that differed materially from the reference would
+not agree to within a fraction of one seed's worth of noise.
+
+\paragraph{When it would be unsound.}
+If CUDA interop were enabled, the stubbed entry points would be reached and the synchronisation they
+are meant to provide would be absent. Any use of this layer with GPU interop active should be
+assumed incorrect until re-checked. Our runs use CPU physics with software rendering, so the path is
+never taken.
 
 \section{Complete condition table with per-cell n}\label{secC}
 
