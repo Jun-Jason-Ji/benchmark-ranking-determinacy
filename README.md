@@ -23,8 +23,9 @@ redistribute simulator assets, policy checkpoints or the source datasets; see
 | Licence | [`LICENSE`](LICENSE) - MIT for original code; records and derived outputs per `NOTICE.md` |
 | The manuscript as submitted | `submission/autonomous_robots/` |
 
-One number is carried in deliberately unreconciled - the implementation-build drift in Table 3. See
-the "Known open item" section of `REPRODUCIBILITY.md`.
+A caution for anyone recomputing these numbers: the record directories differ in episode count, and
+because the episode index wraps onto the configuration grid, any cross-directory comparison has to
+be paired on shared episode ids. See "Comparing across directories" in `REPRODUCIBILITY.md`.
 
 ---
 

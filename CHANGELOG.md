@@ -4,9 +4,9 @@ Versions are tagged in git and archived on Zenodo. **A tag is a promise**: once 
 for it, that snapshot is permanent and the manuscript will cite it. Tag only when the manuscript is
 frozen — see the note at the foot of this file.
 
-## Unreleased
+## v1.0.0 -- 2026-09-22
 
-Staged for the first release, alongside submission of the manuscript to *Autonomous Robots*.
+First release, accompanying submission of the manuscript to *Autonomous Robots*.
 
 - Evaluation harness, six resumable queues, and the configuration-census utilities.
 - 784 per-episode record files (22.3 MB) covering every table and figure, plus the append-only
@@ -21,11 +21,18 @@ Staged for the first release, alongside submission of the manuscript to *Autonom
 - The Vulkan compatibility layer for headless rendering without a GPU.
 - `SHA256SUMS.txt` over the 997 record and cached-analysis files.
 
-### Known open item carried into the release
+### One number was reconciled just before this release
 
-The implementation-build drift figure in Table 3 (+0.078) does not reproduce on recomputation, which
-gives 0.023. Recorded in `REPRODUCIBILITY.md` and in a comment on that table row rather than quietly
-corrected, because which value is right is not yet established.
+Table 3's implementation-build drift (+0.078) appeared not to reproduce -- a recomputation gave
+0.023. The recorded value was right and the recomputation was wrong. Build drift is a paired
+quantity, and the two directories hold different episode counts (96 against 64); because episode ids
+beyond the grid wrap onto it, comparing each directory's own per-configuration mean measures
+different effective scopes. Paired on the shared ids it reproduces 0.297 / 0.375 / 0.078 exactly.
+
+`seed_sd` had the same flaw, so the policy-seed figure tightened from 0.0702 to 0.0672. Both
+estimators now restrict to shared ids. This mattered beyond one cell: on the unpaired figures build
+drift would have sat *below* policy-seed noise, reversing an ordering the manuscript asserts.
+See `scripts/analyze_platform_drift_paired.py`.
 
 ---
 

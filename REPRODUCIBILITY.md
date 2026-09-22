@@ -74,9 +74,18 @@ exact repeats. `scripts/task_configs.py` exposes the mapping.
 does; OpenVLA decodes greedily and ignores the seed, so its "seed sets" are record-identical repeat
 runs and must be merged into one observation, not averaged as independent draws.
 
-## Known open item
+## Comparing across directories: pair on shared episode ids
 
-The implementation-build drift figure in Table 3 of the manuscript (+0.078) does not currently
-reproduce: recomputing the cell it comes from gives 0.023. See the comment on that table row in
-`submission/autonomous_robots/main.tex`. This is recorded rather than quietly corrected, because
-which value is right is not yet established.
+This one cost us a day, so it is worth stating plainly. The record directories hold different
+numbers of episodes -- the pre-fix build and seed set B hold 96 where the others hold 64 -- and
+because `episode_id` wraps onto the configuration grid, ids 64-95 land back on configs 0-31. A
+per-configuration mean taken over each directory's own full contents therefore averages two
+observations for half the grid on one side and one apiece on the other. That is not a paired
+comparison, and both across-build and across-seed quantities are paired by definition.
+
+Computed the wrong way, the implementation-build drift reads 0.055 and sits *below* policy-seed
+noise; paired on shared ids it is 0.078 and sits above it, which is the ordering the manuscript
+asserts. `scripts/analyze_platform_drift_paired.py` prints both columns side by side, and both
+estimators in `scripts/make_figures_v2.py` now restrict to shared ids.
+
+Any new cross-directory comparison should do the same.
