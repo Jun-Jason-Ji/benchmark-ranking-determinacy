@@ -19,11 +19,8 @@
 \usepackage{multirow}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{amsthm}
-\usepackage{algorithm}
-\usepackage{algorithmicx}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
-\usepackage{manyfoot}
 \usepackage{booktabs}
 \usepackage{url}
 
@@ -562,9 +559,10 @@ Holding the configuration grid fixed, we separated three further sources.
 
 \begin{remark}[Scope of the quantities in this paper]\label{rem:scope}
 Unless a number is explicitly labelled otherwise, every effect size and interval we report is
-census-scope at five seed sets: the task's configuration grid is fully enumerated, so configuration
-sampling error is exactly zero, and the policy-noise term is estimated across five independent seed
-sets. Where a quantity is also available at the three-seed budget the reference protocol uses, we
+census-scope at five seed sets where five exist: the task's configuration grid is fully enumerated,
+so configuration sampling error is exactly zero, and the policy-noise term is estimated across as
+many independent seed sets as that task has. Five is the count for the eggplant census; the spoon
+and carrot sweeps have two, and Appendix~\ref{secC} gives the per-cell figures. Where a quantity is also available at the three-seed budget the reference protocol uses, we
 give both and say which is which, because the difference between them is itself one of the paper's
 results (Sect.~\ref{subsec7_2}).
 \end{remark}
@@ -579,11 +577,8 @@ see.}\label{tab3}
 Source & Isolation & Magnitude \\
 \midrule
 Policy seed & same build, different seeds & $\mathrm{sd}(\Delta) = 0.067$, median over pairs \\
-%% RESOLVED 2026-09-22. This is a paired quantity and must be computed on the episode ids the two
-%% builds share: the pre-fix directory holds 96 episodes against A's 64, and with 64
-%% configurations ids 64-95 wrap onto configs 0-31, so an unpaired comparison measures different
-%% effective scopes and understates the drift as 0.055. Paired, it reproduces the recorded
-%% 0.297 vs 0.375 = 0.078 exactly (scripts/analyze_platform_drift_paired.py).
+%% Paired on the episode ids the two builds share, as the estimator requires; see
+%% scripts/analyze_platform_drift_paired.py, whose docstring gives the derivation.
 Implementation build & same seeds, newer build & $+0.078$ paired; 0.73--0.88 of episodes reproduce \\
 Robot texture variant & \texttt{urdf\_version} only & rates 0.000 / 0.280 / 0.013 / 0.400; range
 \textbf{0.400} \\

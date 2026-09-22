@@ -5,15 +5,15 @@ submission-guidelines page (`link.springer.com/journal/10514/submission-guidelin
 Springer Nature LaTeX template (December 2024), whose `sn-jnl.cls` and `sn-apacite.bst` are in this
 directory unmodified.
 
-**No blocking items remain.** The manuscript compiles at 27 pages with 0 errors, 0 overfull boxes,
+**No blocking items remain.** The manuscript compiles at 26 pages with 0 errors, 0 overfull boxes,
 0 undefined references, 0 bibtex warnings and 0 TODO markers. All 21 citations are verified against
 publisher or proceedings records with complete author lists. The code and data are published with a
 DOI. Every declaration is settled.
 
-What is left is the author's own to do: fill the date on the cover letter, confirm the
-generative-AI disclosure in the Acknowledgements reads as your own account, and glance at two
-details supplied rather than received (Hohhot as Inner Mongolia Agricultural University's city, and
-"Shengjie Guo" in given-name-first order).
+One item is left, and it is the author's: fill the date on the cover letter. Everything else that
+needed an author's decision -- funding, contributions, the generative-AI wording, the licence and
+its copyright line, the affiliation details, and the standard scope -- is confirmed and recorded
+below.
 
 ---
 
@@ -26,7 +26,7 @@ A portable TeX Live 2026 tree was extracted into the session scratchpad (TinyTeX
 system change to undo. Nine missing LaTeX packages were pulled with `tlmgr` (sttools, threeparttable,
 appendix, wrapfig, apacite, multirow, algorithms, algorithmicx, ncctools).
 
-Final build state: **0 errors, 0 overfull boxes, 0 undefined references or citations, 21 pages.**
+Final build state: **0 errors, 0 overfull boxes, 0 undefined references, 0 bibtex warnings, 26 pages.**
 To rebuild:
 
 ```
@@ -34,8 +34,10 @@ export PATH="<scratchpad>/TinyTeX/bin/windows:$PATH"
 pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
-The scratchpad is session-scoped and will be cleaned up, so install your own TeX (or use Overleaf)
-for the next revision round. `main.pdf` and `main.bbl` are in this directory.
+That tree has since been relocated to a permanent install (`C:/Users/Jason/TinyTeX`) and put on
+the user PATH, with the manuscript rebuilt from the new location to confirm it behaves identically.
+A new terminal has `pdflatex`, `bibtex` and `tlmgr` available. `main.pdf` and `main.bbl` are in this
+directory, and the sources are self-contained, so they will also build on Overleaf.
 
 Four defects that only compiling could have surfaced, all fixed:
 - **Figure filenames did not match the printed figure numbers.** LaTeX numbers floats by order of
@@ -66,10 +68,10 @@ ORCIDs are recorded as a comment block in `main.tex` and as a table in
 `Orcidlogo.eps`, which the template package does not ship. ORCIDs belong in the submission system
 anyway.
 
-Two details I supplied rather than received, listed in `declarations_for_interface.md`: Hohhot as
-Inner Mongolia Agricultural University city, and "Shengjie Guo" in given-name-first order (it was
-supplied surname-first). The middle school English name was later confirmed by the author and is now
-moot, the school having been removed with its author.
+Three details were supplied rather than received and have since been confirmed by the authors:
+Hohhot as Inner Mongolia Agricultural University's city, "Shengjie Guo" in given-name-first order as
+Springer typesets it, and the English name of the middle school, which became moot when that author
+was removed.
 
 **Author Contributions is settled** (2026-09-21): CRediT roles carried over from the prior
 submission `IVC_Paper2_Submission_2026-09-12`, with Shengjie Guo taking the same roles as Xiaolei
@@ -109,10 +111,12 @@ cannot be trusted - quoting an S = 3 delta as the headline would undercut the pa
 Applied throughout: delta 0.141 to 0.121 in five places; the Sect. 7.3 per-pair shifts recomputed to
 -0.104 / -0.146 / -0.108 / -0.127 (mean 0.121, range 0.104-0.146) by the new
 `scripts/analyze_torque_shift_s5.py`, whose mean matches Fig. 2 through a separate code path;
-seed-noise half-widths 0.108/0.062/0.034 to 0.138/0.079/0.044; the published-protocol uncertainty
-from +-0.06 to +-0.08; the octo-small negative control from -0.018 to +0.011; and Table 3's seed row
-from sd 0.104 on one pair to 0.070 as a median over pairs. A new remark in Sect. 5.5 declares the
-scope once, as this checklist asked.
+the published-protocol uncertainty from +-0.06 to +-0.08; the octo-small negative control from
+-0.018 to +0.011; and Table 3's seed row from sd 0.104 on one pair to a median over pairs. The
+seed-noise half-widths moved twice: first to 0.138/0.079/0.044 with the scope change, then to
+**0.132/0.076/0.042** when item 5b corrected the estimator to pair on shared episode ids, which also
+put the seed sd at 0.067. A remark in Sect. 5.5 declares the scope once, as this checklist asked,
+and states that five seed sets is the eggplant count while spoon and carrot have two.
 
 Left alone on purpose: the 0.141 mm and 0.207 mm replay differences of Sect. 4 (millimetres, a
 different quantity that merely shares a digit string), and the retracted eggplant ranking
@@ -155,7 +159,7 @@ Consequences:
 
 ### 6. Two book entries still need a catalogue check (was 14 entries)
 
-**Resolved 2026-09-21 for 17 of 19 entries**, each checked against the publisher, proceedings or dblp
+**Resolved for all 21 entries**, each checked against the publisher, proceedings or dblp
 record. Newly verified: RT-1 (RSS 2023, dblp `conf/rss/BrohanBCCDFGHHH23`, 46 authors truncated at 20
 per journal policy), Octo (arXiv:2405.12213 v2, author list confirmed), OpenVLA (PMLR 270:2679-2713,
 `kim25c`), BridgeData V2 (PMLR 229:1723-1736, `walke23a`), ManiSkill2 (ICLR 2023), SAPIEN (CVPR 2020),
@@ -190,7 +194,7 @@ mean.
 - All editable sources present, which the journal makes a condition of review.
 
 ### Manuscript
-`main.tex`, 1208 lines, all ten sections written in full:
+`main.tex`, 1569 lines, all ten sections and all four appendices written in full:
 
 | § | Content |
 |---|---|
@@ -205,15 +209,17 @@ mean.
 | 9 | Limitations, ordered by how much they should move a reader |
 | 10 | Conclusion |
 
-Appendices A–D are stubs: A (test inversion) and B (headless rendering) need transferring from
-`docs/theory_protocol.md` and the platform notes; C and D are tables/steps that can be generated.
+All four appendices are written: A derives the test inversion and states the error ledger with the
+four ways it can be misused, B documents the headless-rendering layer and the condition under which
+it would be unsound, C is a generated per-cell configuration and run-count table, and D gives the
+reproduction structure.
 
 ### Files in this directory
 
 | File | What it is |
 |---|---|
 | `main.tex` | the manuscript |
-| `references.bib` | 19 entries, provenance-marked |
+| `references.bib` | 21 entries, all verified, complete author lists |
 | `sn-jnl.cls`, `sn-apacite.bst` | from the official template package, unmodified — submit these |
 | `Fig1–4,6.eps` | vector EPS at 174 mm, all passing the geometry and 8 pt lettering checks |
 | `proof/Fig*_proof.png` | rasters at the exact submitted geometry, for eyeballing layout. **Not for submission** |
