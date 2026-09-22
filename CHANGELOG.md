@@ -4,10 +4,27 @@ Versions are tagged in git and archived on Zenodo. **A tag is a promise**: once 
 for it, that snapshot is permanent and the manuscript will cite it. Tag only when the manuscript is
 frozen — see the note at the foot of this file.
 
+## v1.1.2 -- 2026-09-22
+
+The manuscript now cites the **concept DOI** ([10.5281/zenodo.22893458](https://doi.org/10.5281/zenodo.22893458))
+rather than a version DOI, and names its corresponding version in prose instead.
+
+This is the fixed point of the previous two releases. A version DOI is minted *by* the snapshot that
+contains the manuscript, so the DOI string necessarily lands one commit after the archive it names:
+the archived `main.tex` always cited the previous version's DOI, and re-tagging to close the gap
+never converged. With the concept DOI the manuscript holds no version-specific identifier, so this
+archive and every future one are byte-identical in that respect, and no further re-tagging is needed
+for the citation to stay correct.
+
+Exactness is not lost: the concept record lists every version with its own DOI, and what carries the
+reproducibility claim is `SHA256SUMS.txt` and the regeneration scripts, which are identical across
+all releases.
+
+---
+
 ## v1.1.1 -- 2026-09-22
 
-Punctuation-level release, tagged so the archived snapshot is byte-exact with the manuscript as
-submitted. No number, claim, figure or record changed.
+Punctuation-level release. No number, claim, figure or record changed.
 
 - `references.bib`: RoboArena's author list carried `Mart{'i}n-Mart{'i}n` with the backslashes
   stripped, which would have copy-edited as an apostrophe rather than an accent. It never appeared

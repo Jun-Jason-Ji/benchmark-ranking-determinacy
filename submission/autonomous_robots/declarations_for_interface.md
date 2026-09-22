@@ -5,9 +5,9 @@ the interface appears in the published version.** The same text is in `main.tex`
 "Declarations", but entering it in the manuscript alone is not sufficient. Copy each block below into
 the corresponding interface field.
 
-Review every one of these before submitting — several are assertions about the authors, not about the
-research. All of them are now settled, including the archived DOI. The only item needing your own
-words is the generative-AI disclosure at the foot, and a draft of it is in the manuscript.
+Review every one of these before submitting — several are assertions about the authors, not about
+the research. All of them are settled, including the archived DOI and the generative-AI wording.
+Nothing in this file is outstanding.
 
 ---
 
@@ -44,9 +44,8 @@ Not applicable.
 
 ```
 All episode-level records underlying the results are openly available in the archived release at
-https://doi.org/10.5281/zenodo.22895382 (version 1.1.0; https://doi.org/10.5281/zenodo.22893458
-resolves to the latest version), with development at
-https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
+https://doi.org/10.5281/zenodo.22893458, which resolves to the current version and lists every version with its own DOI;
+the version corresponding to this manuscript is v1.1.1. Development is at https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
 files, one per policy, task and simulator condition, together with the per-run provenance log
 recording the port branch, inference-stack version and random seeds for every episode, and
 SHA256SUMS.txt over the 997 record files. The real-robot reference values used in Section 8.4 are
@@ -54,9 +53,17 @@ the published values distributed with the benchmark's own source and are not our
 the manuscript cites their location.
 ```
 
-> ✅ Published 2026-09-22. Version DOI **10.5281/zenodo.22895382** (v1.1.0, the snapshot the manuscript cites);
-> concept DOI **10.5281/zenodo.22893458** always resolves to the newest version. Repository: https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy
-> Both are public now, so the statement is true as written.
+> ✅ Published 2026-09-22. The statements cite the **concept DOI 10.5281/zenodo.22893458**, which always resolves to the
+> newest version, and name v1.1.1 as the version corresponding to this manuscript.
+>
+> This is deliberate. A version DOI is minted by the snapshot that contains the manuscript, so the
+> DOI string always lands one commit after the archive it names: the archived `main.tex` would
+> necessarily cite the previous version's DOI, and re-tagging to fix that never converges. The
+> concept DOI ends that, and exactness is not lost, because its record lists every version with its
+> own DOI. What carries the reproducibility claim is `SHA256SUMS.txt` and the regeneration scripts,
+> which are identical across releases.
+>
+> Repository: https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy
 
 ## Materials availability
 
@@ -70,13 +77,13 @@ Not applicable.
 The evaluation harness, the configuration-census utilities, the resumable evaluation queues, the
 analysis scripts that generate every table and figure in this paper, and the Vulkan compatibility
 layer that allows the original reference stack to render headless on a host without a GPU are openly
-available in the same archived release, https://doi.org/10.5281/zenodo.22895382, under the MIT
+available in the same archived release, https://doi.org/10.5281/zenodo.22893458, under the MIT
 licence for original code; evaluation records and outputs derived from third-party simulators,
 policies and demonstration data are governed by the NOTICE file in that release.
 REPRODUCIBILITY.md gives the commands that regenerate every table and figure from the records.
 ```
 
-> ✅ Same archived release: https://doi.org/10.5281/zenodo.22895382 — MIT for original code, with records and
+> ✅ Same archived release: https://doi.org/10.5281/zenodo.22893458 — MIT for original code, with records and
 > derived outputs governed by the NOTICE file in the release.
 
 ## Author contributions
