@@ -563,13 +563,13 @@ see.}\label{tab3}
 \toprule
 Source & Isolation & Magnitude \\
 \midrule
-Policy seed & same build, different seeds & $\mathrm{sd}(\Delta) = 0.070$, median over pairs \\
-%% HELD: this row is the one quantity not yet reconciled. The 0.078 is the recorded A -> A' value on
-%% the octo-base nominal cell (0.297 vs 0.375); recomputing that same cell today gives 0.352 vs
-%% 0.375 = 0.023, with all 64 configurations present on both sides. Most likely the pre-fix
-%% directory gained episodes after the original measurement. Until that is settled, do not assert
-%% that build drift exceeds policy-seed noise -- at 0.023--0.055 against 0.070 it would not.
-Implementation build & same seeds, newer build & $+0.078$; only 0.73--0.88 of episodes reproduce \\
+Policy seed & same build, different seeds & $\mathrm{sd}(\Delta) = 0.067$, median over pairs \\
+%% RESOLVED 2026-09-22. This is a paired quantity and must be computed on the episode ids the two
+%% builds share: the pre-fix directory holds 96 episodes against A's 64, and with 64
+%% configurations ids 64-95 wrap onto configs 0-31, so an unpaired comparison measures different
+%% effective scopes and understates the drift as 0.055. Paired, it reproduces the recorded
+%% 0.297 vs 0.375 = 0.078 exactly (scripts/analyze_platform_drift_paired.py).
+Implementation build & same seeds, newer build & $+0.078$ paired; 0.73--0.88 of episodes reproduce \\
 Robot texture variant & \texttt{urdf\_version} only & rates 0.000 / 0.280 / 0.013 / 0.400; range
 \textbf{0.400} \\
 \bottomrule
@@ -591,7 +591,15 @@ can flip a \emph{ranking} rather than inflate one policy's variance is a separat
 Sect.~\ref{subsec8_4} answers it on a second policy over the same grid: it does not, on the pair we
 can test.
 
-Two practical consequences follow. First, one seed set plus a per-episode bootstrap declares
+Both the seed and build rows are computed on matched episode scopes. That is not a formality: the
+directories differ in size --- the pre-fix build and one seed set hold 96 episodes against 64
+elsewhere --- and because episode ids beyond the grid wrap onto it, averaging each directory over its
+own contents compares different effective scopes. Done that way the drift reads 0.055 and would sit
+\emph{below} policy-seed noise; paired on the shared ids it is 0.078 and sits above it. The
+ordering in Table~\ref{tab3} depends on getting this right, which is an instance of the paper's own
+thesis applied to its own numbers.
+
+Two further practical consequences follow. First, one seed set plus a per-episode bootstrap declares
 rankings that do not hold: in our own data $\Delta(\text{small}-\text{base}) = +0.250\,[+0.08,
 +0.32]$ declared one Octo variant better, and three seed sets from a single build give $+0.141 /
 -0.031 / -0.047$. We retract that verdict. Second, replicates must never be pooled across builds;
@@ -655,7 +663,7 @@ stack cube & octo-base & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & $+0.000$ \\
 \end{table*}
 
 For comparison, the policy-seed noise we measure on the 64-configuration eggplant census is $\pm
-0.138$ at half-width for a single seed set and $\pm 0.079$ for three
+0.132$ at half-width for a single seed set and $\pm 0.076$ for three
 (Sect.~\ref{subsec5_5}). Every discrepancy is well inside that band. A different operating system, a
 software-rendered rasteriser, a different graphics path and an out-of-process policy server move the
 published numbers by less than one seed's worth of noise, which is the external-validity check the
@@ -1175,8 +1183,8 @@ published protocol exactly reproduces its rates to 0.026 while showing that its 
 resolves one of the four orderings it reports, with a second reversing sign under re-run.
 
 The quantitative comparison these three findings converge on is the paper's practical message. On the
-eggplant census, a single seed set gives a half-width of $\pm 0.138$; the reference protocol's three
-seeds give $\pm 0.079$; ten seeds would give $\pm 0.044$. Against that, the shift induced by one
+eggplant census, a single seed set gives a half-width of $\pm 0.132$; the reference protocol's three
+seeds give $\pm 0.076$; ten seeds would give $\pm 0.042$. Against that, the shift induced by one
 calibration-invisible parameter is 0.121, the spread across the four robot texture variants the
 benchmark silently averages over is 0.400, and the sim-to-real gap on the one pair we can check
 against real ground truth is 0.21 --- pointing the other way. \textbf{The terms that evaluation

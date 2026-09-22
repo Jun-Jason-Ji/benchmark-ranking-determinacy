@@ -5,11 +5,11 @@ Prepared 2026-09-21. Requirements fetched from the journal's own submission-guid
 (December 2024 version, downloaded and extracted — `sn-jnl.cls` and `sn-apacite.bst` in this
 directory are from that package, unmodified).
 
-**One item remains.** Items 1-5 are resolved; what each took is recorded in place.
+**No blocking items remain.** Items 1-5 and 5b are resolved; what each took is recorded in place.
 The manuscript compiles clean at 21 pages, 0 errors, 0 overfull boxes, 0 undefined references,
-with all six authors on the title page. What is left is the **held build-drift number** (item 5b),
-which is a measurement question rather than a paperwork one, plus the non-blocking items at the foot
-of this file (repository URL, appendices A-B, optional acknowledgements, two book citations).
+with all six authors on the title page and every declaration settled. What is left is non-blocking:
+the Zenodo DOI (the release is staged and committed, awaiting a push), appendices A-B to transfer,
+optional acknowledgements, and two book citations to check.
 
 ---
 
@@ -120,18 +120,34 @@ than deleted.
 against +-0.079 (1.5x). Every argument's direction survives - delta still exceeds the evaluation
 half-width at every realistic budget and still does not shrink with budget.
 
-### 5b. HELD - the implementation-build drift number
+### 5b. RESOLVED - the drift number was right; the recomputation was wrong
 
-Not a scope question, and the one quantity still unreconciled. Table 3 reports +0.078, which is the
-recorded A -> A' value on the octo-base nominal cell (0.297 vs 0.375 in
-`FINDING_platform_drift.md`). Recomputing that same cell today gives 0.352 vs 0.375 = **0.023**, with
-all 64 configurations present on both sides and no cells dropped; the figure's maximum over four
-cells is 0.055, from octo-small nominal instead. The likeliest explanation is that
-`results/controller_sweep_gpu` gained episodes after the original measurement.
+Diagnosed 2026-09-22. **Table 3's +0.078 was correct all along**; the apparent discrepancy was my
+own unpaired recomputation.
 
-This matters beyond one table entry: Sect. 5.5 currently implies build drift (0.078) exceeds
-policy-seed noise (now 0.070), and at 0.023-0.055 it would not. The table row carries a comment
-saying so. Settle it before quoting either number.
+Build drift is a paired quantity - same seeds, different build. The pre-fix directory holds **96**
+episodes against A's **64**, and with 64 configurations ids 64-95 wrap back onto configs 0-31. So
+averaging each directory over its own per-configuration mean compares different effective scopes:
+half the configurations get two observations on one side and one on the other. Paired on the 64
+shared ids, the cell reproduces the recorded `0.297 vs 0.375 = 0.078` exactly, and the recorded mean
+of 0.043 as well (`scripts/analyze_platform_drift_paired.py`).
+
+The same flaw was in `seed_sd()`, since seed set B also holds 96 episodes. Both estimators in
+`make_figures_v2.py` now restrict to the episode ids common to the directories under comparison.
+
+Consequences:
+
+- Table 3 stands unchanged at +0.078, now labelled "paired".
+- Seed sd tightens 0.0702 to 0.0672, so the half-widths become **0.132 / 0.076 / 0.042** (from
+  0.138 / 0.079 / 0.044). Updated in Sects. 6.2 and 10.
+- **Sect. 5.5's ordering claim now holds on matched scopes**: drift 0.078 above policy-seed noise
+  0.067. On the unpaired figures it would have been reversed (0.055 below 0.070) - so the claim was
+  right and the arithmetic that appeared to threaten it was not.
+- Sect. 5.5 gains a paragraph stating the pairing and why it matters, since the ordering depends on
+  it. It is the paper's own thesis applied to its own numbers.
+- Fig. 2 regenerated; figure and text now agree throughout.
+
+**Nothing is now held back, and the manuscript is internally consistent.**
 
 ### 6. Two book entries still need a catalogue check (was 14 entries)
 

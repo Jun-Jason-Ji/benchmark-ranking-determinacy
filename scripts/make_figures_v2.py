@@ -51,7 +51,29 @@ plt.rcParams.update({"font.family": ["DejaVu Sans", "Arial", "sans-serif"], "fon
                      "xtick.color": INK2, "ytick.color": INK2, "figure.facecolor": "white"})
 
 
-def per_config(root, policy, cond, env=EGG):
+def episode_ids(root, policy, cond, env=EGG):
+    """The episode ids a directory actually holds. Needed because the directories differ in scope:
+    seed set B and the pre-fix directory hold 96 episodes, the rest 64, and with 64 configurations
+    ids 64-95 wrap back onto configs 0-31. Averaging each directory over its own full contents
+    therefore compares different effective scopes -- see analyze_platform_drift_paired.py."""
+    f = ROOT / root / policy / env / f"{cond}.jsonl"
+    out = set()
+    if f.exists():
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                out.add(json.loads(line)["episode_id"])
+    return out
+
+
+def common_ids(roots, policy, cond, env=EGG):
+    """Episode ids present in every directory under comparison: the only scope on which an
+    across-build or across-seed difference is a paired quantity."""
+    sets = [episode_ids(r, policy, cond, env) for r in roots]
+    sets = [s for s in sets if s]
+    return set.intersection(*sets) if sets else set()
+
+
+def per_config(root, policy, cond, env=EGG, ids=None):
     f = ROOT / root / policy / env / f"{cond}.jsonl"
     acc, seen = {}, set()
     if f.exists():
@@ -59,7 +81,7 @@ def per_config(root, policy, cond, env=EGG):
             if line.strip():
                 r = json.loads(line)
                 e = r["episode_id"]
-                if e in seen:
+                if e in seen or (ids is not None and e not in ids):
                     continue
                 seen.add(e)
                 acc.setdefault(config_id(env, e), []).append(int(bool(r["success"])))
@@ -86,13 +108,22 @@ def merged(sets, policy, cond):
 
 
 def seed_sd():
-    """Median sd of Δ across same-generation seed sets, over Octo pairs and the two core conditions."""
+    """Median sd of Δ across same-generation seed sets, over Octo pairs and the two core conditions.
+
+    Restricted to the episode ids every seed set holds. Seed set B carries 96 episodes against 64
+    elsewhere, so without this the sd mixes one-observation-per-configuration draws with
+    two-observations-for-half-the-grid draws and is not a pure across-seed quantity.
+    """
     sds = []
+    roots = list(OCTO_SETS.values())
     for a, b in itertools.combinations(OCTO, 2):
         for cond in ("nominal", "force_x0.5"):
+            ids = common_ids(roots, a, cond) & common_ids(roots, b, cond)
+            if not ids:
+                continue
             ds = []
-            for root in OCTO_SETS.values():
-                da, db = per_config(root, a, cond), per_config(root, b, cond)
+            for root in roots:
+                da, db = per_config(root, a, cond, ids=ids), per_config(root, b, cond, ids=ids)
                 cfgs = sorted(set(da) & set(db))
                 if len(cfgs) == NC:
                     ds.append(float(np.mean([da[k] - db[k] for k in cfgs])))
@@ -102,11 +133,21 @@ def seed_sd():
 
 
 def build_drift():
-    """max |rate(A) - rate(A')| over policy x condition: same seeds, different server build."""
+    """max |rate(pre-fix) - rate(A')| over policy x condition: same seeds, different server build.
+
+    Paired on the episode ids the two builds share. The pre-fix directory holds 96 episodes against
+    A's 64, and ids 64-95 wrap onto configs 0-31, so an unpaired comparison understates the drift --
+    it gave 0.055 where the paired figure is 0.078 (scripts/analyze_platform_drift_paired.py, and
+    FINDING_platform_drift.md, which the paired value reproduces exactly).
+    """
     ds = []
     for p in ("octo-small", "octo-base"):
         for cond in ("nominal", "force_x0.5"):
-            a, b = per_config(PRE_FIX, p, cond), per_config(OCTO_SETS["A'"], p, cond)
+            ids = common_ids([PRE_FIX, OCTO_SETS["A'"]], p, cond)
+            if not ids:
+                continue
+            a = per_config(PRE_FIX, p, cond, ids=ids)
+            b = per_config(OCTO_SETS["A'"], p, cond, ids=ids)
             cfgs = sorted(set(a) & set(b))
             if len(cfgs) == NC:
                 ds.append(abs(float(np.mean([a[k] for k in cfgs])) - float(np.mean([b[k] for k in cfgs]))))
