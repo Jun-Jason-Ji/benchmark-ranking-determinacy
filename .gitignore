@@ -26,3 +26,7 @@ submission/**/*-eps-converted-to.pdf
 #   results/**/runs.jsonl the append-only provenance log (contribution C7)
 #   results/**/*.npz      per-episode replay trajectories -- the evidence for C1's exact invariance
 #   submission/**/main.pdf and main.bbl  the compiled manuscript as submitted
+
+# --- internal review and working notes, not part of the release ---
+.workbuddy/
+submission_audit_*.md

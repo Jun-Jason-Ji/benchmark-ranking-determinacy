@@ -51,7 +51,7 @@ Atreya, P.%
 , Kim, M.J.%
 , Jain, A.%
 , Kuramshin, A.%
-\BDBL {}others%
+\BDBL {}Levine, S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -353,7 +353,7 @@ Ljung, L.%
 \newblock
 \APACrefbtitle {System Identification: Theory for the User} {System identification: Theory for the user}\ (\PrintOrdinal{2}\ \BEd).
 \newblock
-\APACaddressPublisher{Upper Saddle River, NJ}{Prentice Hall}.
+\APACaddressPublisher{Englewood Cliffs, NJ}{Prentice-Hall}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -376,6 +376,34 @@ Manski, C.F.%
 \APACrefbtitle {Partial Identification of Probability Distributions} {Partial identification of probability distributions}.
 \newblock
 \APACaddressPublisher{New York}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Peng%
+, Andrychowicz%
+, Zaremba%
+\BCBL {}\ \BBA {} Abbeel%
+}{%
+Peng%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+peng2018sim}
+\APACinsertmetastar {%
+peng2018sim}%
+\begin{APACrefauthors}%
+Peng, X.B.%
+, Andrychowicz, M.%
+, Zaremba, W.%
+\BCBL {} Abbeel, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Sim-to-real transfer of robotic control with dynamics randomization} {Sim-to-real transfer of robotic control with dynamics randomization}.{\BBCQ}
+\newblock
+ \APACrefbtitle {IEEE International Conference on Robotics and Automation (ICRA)} {Ieee international conference on robotics and automation (icra)}\ (\BPGS\ 3803--3810).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -452,7 +480,12 @@ tao2024maniskill3}
 tao2024maniskill3}%
 \begin{APACrefauthors}%
 Tao, S.%
-\BCBT {}\ \BOthersPeriod {.}
+, Xiang, F.%
+, Shukla, A.%
+, Qin, Y.%
+, Hinrichsen, X.%
+, Yuan, X.%
+\BDBL {}Su, H.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -465,6 +498,33 @@ Tao, S.%
 
 \newblock
 
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tobin%
+\ \protect \BOthers {.}}{%
+Tobin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+tobin2017domain}
+\APACinsertmetastar {%
+tobin2017domain}%
+\begin{APACrefauthors}%
+Tobin, J.%
+, Fong, R.%
+, Ray, A.%
+, Schneider, J.%
+, Zaremba, W.%
+\BCBL {} Abbeel, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Domain randomization for transferring deep neural networks from simulation to the real world} {Domain randomization for transferring deep neural networks from simulation to the real world}.{\BBCQ}
+\newblock
+ \APACrefbtitle {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)} {Ieee/rsj international conference on intelligent robots and systems (iros)}\ (\BPGS\ 23--30).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -527,9 +587,11 @@ Xiang, F.%
 
 \bibitem [\protect \citeauthoryear {%
 Zhou%
+, Atreya%
+, Tan%
 , Pertsch%
-, Levine%
-\BCBL {}\ \protect \BOthers {.}}{%
+\BCBL {}\ \BBA {} Levine%
+}{%
 Zhou%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2025}}%
@@ -539,9 +601,11 @@ zhou2025autoeval}
 zhou2025autoeval}%
 \begin{APACrefauthors}%
 Zhou, Z.%
+, Atreya, P.%
+, Tan, Y.L.%
 , Pertsch, K.%
-, Levine, S.%
-\BCBL {}\ \BOthersPeriod {.}\end{APACrefauthors}%
+\BCBL {} Levine, S.%
+\end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2025}{}{}.

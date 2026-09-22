@@ -1,15 +1,19 @@
 # Autonomous Robots submission — status
 
-Prepared 2026-09-21. Requirements fetched from the journal's own submission-guidelines page
-(`link.springer.com/journal/10514/submission-guidelines`) and the Springer Nature LaTeX template
-(December 2024 version, downloaded and extracted — `sn-jnl.cls` and `sn-apacite.bst` in this
-directory are from that package, unmodified).
+Prepared 2026-09-21, strengthened 2026-09-22. Requirements fetched from the journal's own
+submission-guidelines page (`link.springer.com/journal/10514/submission-guidelines`) and the
+Springer Nature LaTeX template (December 2024), whose `sn-jnl.cls` and `sn-apacite.bst` are in this
+directory unmodified.
 
-**No blocking items remain.** Items 1-5 and 5b are resolved; what each took is recorded in place.
-The manuscript compiles clean at 21 pages, 0 errors, 0 overfull boxes, 0 undefined references,
-with all six authors on the title page and every declaration settled. What is left is non-blocking:
-the Zenodo DOI (the release is staged and committed, awaiting a push), appendices A-B to transfer,
-optional acknowledgements, and two book citations to check.
+**No blocking items remain.** The manuscript compiles at 27 pages with 0 errors, 0 overfull boxes,
+0 undefined references, 0 bibtex warnings and 0 TODO markers. All 21 citations are verified against
+publisher or proceedings records with complete author lists. The code and data are published with a
+DOI. Every declaration is settled.
+
+What is left is the author's own to do: fill the date on the cover letter, confirm the
+generative-AI disclosure in the Acknowledgements reads as your own account, and glance at two
+details supplied rather than received (Hohhot as Inner Mongolia Agricultural University's city, and
+"Shengjie Guo" in given-name-first order).
 
 ---
 

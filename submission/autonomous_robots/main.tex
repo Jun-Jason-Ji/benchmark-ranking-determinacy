@@ -4,19 +4,12 @@
 %% Reference style: sn-apa -- the journal specifies author-year citations, an alphabetised
 %% reference list, italic journal titles and DOIs given as full links.
 %%
-%% Settled: six authors and their affiliations, ORCIDs (in the comment block below the author
-%% list, for entry into the submission system), no funding, and the CRediT contribution statement
-%% carried over from the authors' prior submission. Standard scope is census at S = 5 throughout
-%% (Remark "Scope of the quantities in this paper" in Sect. 5.5).
-%%
-%% BEFORE SUBMITTING, the remaining TODO-AUTHOR items, none of which blocks compilation:
-%%   1. Shengjie Guo's CRediT roles -- he is new to this paper and absent from the prior statement
-%%   2. the code/data repository URL, and an archived DOI if one is minted
-%%   3. Appendices A and B, to transfer from docs/theory_protocol.md and the platform notes
-%%   4. Acknowledgements, if any (optional)
-%%
-%% ONE NUMBER IS DELIBERATELY UNRECONCILED: the implementation-build drift in Table 3. See the
-%% comment on that table row before quoting it.
+%% Authors, affiliations, ORCIDs (comment block below the author list, for the submission
+%% system), funding, competing interests, CRediT contributions, both availability statements with
+%% the archived DOI, and all four appendices are complete. The standard scope for every quantity is
+%% the configuration census at five seed sets where five exist; see the remark "Scope of the
+%% quantities in this paper" in Sect. 5.5, and Appendix C for the per-cell run counts, which differ
+%% by task.
 %%
 %% Build: pdflatex main; bibtex main; pdflatex main; pdflatex main
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,7 +19,6 @@
 \usepackage{multirow}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{amsthm}
-\usepackage{booktabs}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage[utf8]{inputenc}
@@ -153,7 +145,9 @@ widely used ports of the same suite enumerate \emph{different} grids, so a numbe
 not comparable to a number computed on the other. Enumerating the grid drives configuration sampling
 error to exactly zero, and what remains is instructive: policy-seed noise, implementation-build
 drift, and --- larger than either --- the suite's own unreported averaging over four robot
-\emph{texture} variants, across which one policy's success rate ranges over 0.400. That last
+\emph{texture} variants, across which one policy's success rate ranges over 0.400 --- that is, 40
+percentage points of success rate, the unit in which every effect size in this paper is quoted. That
+last
 parameter changes the colour of the robot model, carries no physics whatsoever, and is invisible to
 replay calibration for exactly that reason.
 
@@ -276,6 +270,19 @@ contribution is not methodological novelty here but instantiation and measuremen
 the compatible set for a real calibration protocol, propagate it to policy rankings, and quantify
 what the resulting criterion does and does not buy, including a case where it fails.
 
+\paragraph{Randomising what the simulator gets wrong.}
+A large literature responds to simulator inaccuracy by randomising over it during training, so that
+the learned policy is robust to whichever value is right --- over visual appearance
+\citep{tobin2017domain} and over dynamics \citep{peng2018sim}. Our subject is the mirror image of
+that programme. Randomisation is a technique for making a \emph{policy} insensitive to parameters
+the modeller cannot pin down; we ask what remains of an \emph{evaluation} when those same
+parameters cannot be pinned down. The two interact in a way worth stating plainly, because our
+largest measured variance term is a purely visual one: it is not news that visual variation matters
+for transfer, which is precisely the premise of domain randomisation. What we add is that a
+benchmark can average over such a variant \emph{without reporting that it does}, and that the
+resulting term can dominate the uncertainty budget of the number it publishes. That is a reporting
+obligation, not an argument against randomisation.
+
 \paragraph{Reproducibility and statistical practice in learned-policy evaluation.}
 Sensitivity of reinforcement learning results to random seeds, and the resulting unreliability of
 small-sample comparisons, is documented and has produced concrete recommendations on reporting
@@ -392,6 +399,14 @@ not a flat region of a noisy objective.
 \paragraph{(ii) The torque limit.}
 Along demonstrated velocities the commanded torque never reaches $\tau_{\max}$, so the saturation is
 inactive and the trajectory is independent of its value.
+
+Both invariances are properties of the protocol's \emph{excitation range}, not of the simulator. A
+faster or more contact-rich demonstration set would excite gravitational and Coriolis terms that
+break the first, and would drive the commanded torque into saturation, breaking the second. That is
+the point rather than a caveat: the blindness is inherited from demonstrations that were collected
+for teleoperation rather than for identification, and it would shrink under an excitation designed
+to identify. What cannot shrink it is more of the same data, or a better fit to it --- which is the
+distinction between coverage and precision that Appendix~\ref{secA} makes formal.
 
 The ratio direction $d/k$ and the execution delay \emph{are} identified, and both produce the
 expected bowl-shaped loss curves; the claim is specific to the two directions above.
@@ -586,7 +601,11 @@ comparison, the can's physical orientation, which does change the dynamics, span
 This axis is invisible to replay calibration for the same reason the torque limit is
 (Sect.~\ref{subsec4_2}): it never enters the demonstration trajectory. Unlike the torque limit it is
 not even a physical parameter, which makes it the paper's sharpest illustration that
-``calibration-invisible'' is a property of the protocol's coverage rather than of physics. Whether it
+``calibration-invisible'' is a property of the protocol's coverage rather than of physics. That a
+visual variant should affect a vision-conditioned policy is not itself surprising --- it is the
+premise of domain randomisation \citep{tobin2017domain, peng2018sim}. The finding here is narrower
+and about reporting: the suite averages over four such variants silently, and that unreported
+averaging is the largest single term in the uncertainty budget of the rates it publishes. Whether it
 can flip a \emph{ranking} rather than inflate one policy's variance is a separate question, and
 Sect.~\ref{subsec8_4} answers it on a second policy over the same grid: it does not, on the pair we
 can test.
@@ -656,7 +675,7 @@ spoon & octo-small & 0.375 & 0.333 & 0.583 & 0.431 & 0.472 & $-0.041$ \\
 spoon & octo-base & 0.042 & 0.083 & 0.125 & 0.083 & 0.125 & $-0.042$ \\
 carrot & octo-small & 0.042 & 0.042 & 0.125 & 0.069 & 0.097 & $-0.028$ \\
 carrot & octo-base & 0.125 & 0.125 & 0.125 & 0.125 & 0.083 & $+0.042$ \\
-stack cube & octo-small & 0.083 & 0.042 & 0.000 & 0.042 & 0.042 & $-0.000$ \\
+stack cube & octo-small & 0.083 & 0.042 & 0.000 & 0.042 & 0.042 & $0.000$ \\
 stack cube & octo-base & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & $+0.000$ \\
 \bottomrule
 \end{tabular}
@@ -861,9 +880,10 @@ An earlier version of this section reported that one pair, \texttt{octo-base} vs
 density $\times 0.5$ against positive values under the other five conditions --- and argued from it
 that this pair's abstention was a fact about the parameters rather than about our budget, and so
 could never be removed by more evaluation. \textbf{We withdraw that.} At five seed sets the same
-cell reads $+0.042\,[-0.022, +0.106]$, and all six conditions have point estimates at or above
-$-0.000$: nominal $+0.069$, force $\times 0.5$ $+0.050$, iso $\times 0.25$ $+0.030$, iso $\times
-4.0$ $+0.006$, friction $\times 0.4$ $-0.000$, density $\times 0.5$ $+0.042$.
+cell reads $+0.042\,[-0.022, +0.106]$, and no condition has a point estimate below $-0.001$:
+nominal $+0.069$, force $\times 0.5$ $+0.050$, iso $\times 0.25$ $+0.030$, iso $\times 4.0$
+$+0.006$, friction $\times 0.4$ $0.000$, density $\times 0.5$ $+0.042$. The between-condition sign
+reversal we had reported is not merely smaller at five seed sets; it is absent.
 
 The distinction the withdrawn claim was reaching for is nevertheless real and worth keeping, because
 Sect.~\ref{sec8} needs it. As the evaluation half-width $h \to 0$ the union bound converges to
@@ -896,10 +916,12 @@ become visible.
 \caption{$\Delta$ between two Octo variants by simulator condition, on three bridge tasks. Grey
 points are conditions the calibration data identifies, coloured points are the
 calibration-invisible ones, and the shaded band is the union bound over the invisible conditions.
-Verdicts and set bounds over the invisible conditions: carrot, point abstains and set abstains,
-$[-0.21, +0.21]$; spoon, point declares octo-small better but the set abstains, $[-0.12, +0.48]$;
-eggplant, point declares octo-small better but the set abstains, $[-0.12, +0.54]$. Episodes per
-condition range from 24 to 96 and are tabulated in Appendix~\ref{secC}.}\label{fig4}
+Computed with the same estimator and the same seed sets as Table~\ref{tab6}, so figure and table
+report one computation rather than two. Verdicts and set bounds: carrot, point abstains and set
+abstains, $[-0.20, +0.07]$; spoon, both declare octo-small better, $[+0.04, +0.54]$; eggplant, both
+declare octo-small better, $[+0.02, +0.24]$. Available seed sets differ by task --- five for
+eggplant, two for spoon and carrot --- and the per-cell configuration and run counts are in
+Appendix~\ref{secC}.}\label{fig4}
 \end{figure*}
 
 %%=============================================================================%%
@@ -966,6 +988,11 @@ from $n = 48$ to $n = 96$, because the band extrapolates half a grid step beyond
 and the posterior diverges at the ends. Restricting the band to the sampled range raises that rate
 to 0.77 and restores monotonicity in $n$, at a coverage cost on the between-settings dip (0.91 to
 0.85). We adopt the restricted configuration.
+
+The fitted length scale is $\ell = 0.5$ on all three tasks, with signal scale 0.02 on carrot and
+0.05 on spoon and eggplant, so the band in Fig.~\ref{fig6} does not rest on a per-task tuning
+choice. We also checked that its verdicts agree with the union bound over the same sampled settings,
+which is the rung whose guarantee does not depend on a smoothness prior at all.
 
 We also report a configuration we \textbf{rejected}, because it is a methodological point rather
 than a tuning detail. Imposing a lower bound on the GP length scale equal to the sampling spacing
@@ -1085,9 +1112,18 @@ point margins, from $+0.053$ to $+0.213$, and not one places \texttt{rt-1-15pct}
 dissolves. By our own test it is our power, not a parameter fact, and we decline to claim it as a
 success of the criterion.
 
-The conclusion we draw is about the criterion's reach. The sim-to-real gap on this pair is roughly
-0.21 in the margin, and 0.20 in one policy's own rate (\texttt{rt-1-15pct}: 0.920 real against 0.717
-simulated). No direction in the dynamics compatible set, and not the texture axis either, moves the
+One objection should be met here rather than deferred. The published real margin is $-0.067$,
+which is of the same order as the policy-seed noise we measure in simulation, and the published
+real rates carry no interval of their own --- so the reversal might be real-robot measurement noise
+rather than a model gap. The reading is asymmetric, and either branch supports the same conclusion.
+If the reversal is a genuine model gap, the criterion declared an ordering that is wrong. If it is
+real-robot noise, then the real evaluation cannot resolve this pair either, and a simulated
+declaration still carries no warrant about the robot. What the criterion may not do, on either
+branch, is license the sign it produced.
+
+The conclusion we draw is therefore about the criterion's reach. The sim-to-real gap on this pair is
+roughly 0.21 in the margin, and 0.20 in one policy's own rate (\texttt{rt-1-15pct}: 0.920 real
+against 0.717 simulated). No direction in the dynamics compatible set, and not the texture axis either, moves the
 simulated margin by more than 0.044. Whatever produces the reversal lies outside the parameter family
 that demonstration replay can constrain --- which is, in the ledger of Sect.~\ref{subsec3_4}, a
 statement that $b_{ij}$ is large on this pair and that a criterion built on $E_\theta$ and $E_{MC}$
@@ -1132,6 +1168,18 @@ laboratory, but they carry their own unreported uncertainty: they are single-pro
 evaluations, and the pair in Sect.~\ref{subsec8_4} has a real margin of 0.067, of the same order as
 the seed noise we measure in simulation. A replication of that pair on a real robot is the single
 most valuable follow-up, and it is out of our reach.
+
+\item \textbf{One suite, and two kinds of conclusion.} Every measurement here comes from a single
+evaluation suite, and the two kinds of claim we draw from it do not travel equally. Claims that
+follow from \emph{construction} should hold for any benchmark built the same way: that an
+index-driven initial state makes the configuration set a finite population rather than a sample;
+that free-space demonstration replay is exactly uninformative about a common gain scaling and about
+an inactive saturation limit; that a criterion over a compatible set bounds only the ambiguity that
+set can express. Those arguments nowhere depend on which suite, policies or tasks we used. The
+\emph{numbers} are specific to this instance and should not be carried anywhere --- 0.121 for the
+torque shift, 0.400 for the texture spread, 1 of 17 disagreeing pairs, the 0.026 reproduction. A
+reader should take the mechanisms as general and the magnitudes as an existence proof that they can
+be large.
 
 \item \textbf{Narrow coverage of policies, embodiments and tasks.} Three model families (two Octo
 variants with three deployment configurations, OpenVLA, two RT-1 checkpoints), two embodiments and
@@ -1198,8 +1246,11 @@ a generalisation value over sampled scenes, and the correct interval differs acc
 the configuration grid, since it is finite and the marginal episode past it carries no information.
 Report which implementation build and which visual variant a number came from, because the variant
 axis carries the largest variance in our budget and is currently averaged over without mention.
-Spend budget on seeds before episodes. And use a set-valued verdict --- but for the role it can
-actually fill.
+Spend budget on seeds before episodes --- but only for policies that consume a seed. For a
+deterministically decoding policy the seed axis is degenerate (Sect.~\ref{subsec5_3}), a census is
+already exact, and additional runs buy nothing at all; there, the only way to reduce uncertainty is
+a larger configuration grid. And use a set-valued verdict --- but for the role it can actually
+fill.
 
 That last point is where our own expectations were corrected. We built the compatible-set criterion
 expecting to show that it repairs unreliable rankings, and what we can show is narrower: it detects
@@ -1436,9 +1487,84 @@ are meant to provide would be absent. Any use of this layer with GPU interop act
 assumed incorrect until re-checked. Our runs use CPU physics with software rendering, so the path is
 never taken.
 
-\section{Complete condition table with per-cell n}\label{secC}
+\section{Complete condition table with per-cell counts}\label{secC}
+
+Table~\ref{tabC1} gives, for the pair reported in Fig.~\ref{fig4} and the corresponding rows of
+Table~\ref{tab6}, the configurations the task defines, the configurations actually covered, and the
+number of independent runs per policy. The intervals in the body cannot be read without these: an
+interval over a complete census with five runs per configuration and one over a complete census with
+two are different objects, and the run count is what distinguishes them. Every cell here is a
+complete census, so the configuration sampling error is zero throughout and the intervals carry
+policy noise only (Sect.~\ref{subsec5_4}).
+
+\begin{table*}[t]
+\caption{Per-cell configuration and run counts for octo-small versus octo-base on the three bridge
+tasks, under the nominal condition and the five calibration-invisible conditions. ``Configs'' is the
+size of the task's configuration grid; ``Covered'' is how many were evaluated; ``Runs (S/B)'' is the
+number of independent runs of octo-small and octo-base. Generated from the episode records by
+\texttt{scripts/make\_appendix\_c.py}.}\label{tabC1}
+\centering
+% Appendix C, generated by scripts/make_appendix_c.py -- do not hand-edit.
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Task & Condition & Configs & Covered & Runs (S/B) & $\Delta$ \\
+\midrule
+carrot & \texttt{nominal} & 24 & 24 & 2/2 & $-0.042$ \\
+ & \texttt{iso\_x0.25} & 24 & 24 & 2/2 & $-0.083$ \\
+ & \texttt{iso\_x4.0} & 24 & 24 & 2/2 & $-0.042$ \\
+ & \texttt{force\_x0.5} & 24 & 24 & 2/2 & $-0.104$ \\
+ & \texttt{fric\_x0.4} & 24 & 24 & 2/2 & $-0.062$ \\
+ & \texttt{dens\_x0.5} & 24 & 24 & 2/2 & $-0.042$ \\
+\midrule
+spoon & \texttt{nominal} & 24 & 24 & 2/2 & $+0.396$ \\
+ & \texttt{iso\_x0.25} & 24 & 24 & 2/2 & $+0.250$ \\
+ & \texttt{iso\_x4.0} & 24 & 24 & 2/2 & $+0.354$ \\
+ & \texttt{force\_x0.5} & 24 & 24 & 2/2 & $+0.375$ \\
+ & \texttt{fric\_x0.4} & 24 & 24 & 2/2 & $+0.208$ \\
+ & \texttt{dens\_x0.5} & 24 & 24 & 2/2 & $+0.250$ \\
+\midrule
+eggplant & \texttt{nominal} & 64 & 64 & 5/5 & $+0.064$ \\
+ & \texttt{iso\_x0.25} & 64 & 64 & 5/5 & $+0.092$ \\
+ & \texttt{iso\_x4.0} & 64 & 64 & 5/5 & $+0.174$ \\
+ & \texttt{force\_x0.5} & 64 & 64 & 5/5 & $+0.106$ \\
+ & \texttt{fric\_x0.4} & 64 & 64 & 5/5 & $+0.080$ \\
+ & \texttt{dens\_x0.5} & 64 & 64 & 5/5 & $+0.128$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 \section{Reproduction steps}\label{secD}
+
+The release archived at the DOI in the Data Availability statement carries a
+\texttt{REPRODUCIBILITY.md} that is the authoritative and executable version of this appendix; what
+follows is its structure.
+
+\textbf{Regenerating the tables and figures} requires no evaluation runs. Every number in this paper
+is computed from the episode records rather than transcribed, so the analysis scripts rebuild
+Table~\ref{tab6} (\texttt{make\_core\_table.py}), the compatible-set verdicts
+(\texttt{analyze\_compatible\_set.py}), the reversal pair of Sect.~\ref{subsec8_4}
+(\texttt{analyze\_fractal\_reversal.py}), the per-pair torque shift of Sect.~\ref{subsec7_3}
+(\texttt{analyze\_torque\_shift\_s5.py}), the build-drift figures of Sect.~\ref{subsec5_5}
+(\texttt{analyze\_platform\_drift\_paired.py}), this appendix's table
+(\texttt{make\_appendix\_c.py}), and all six figures, which a companion script re-renders at the
+journal's geometry and audits against its width and lettering requirements.
+
+\textbf{Re-running the evaluations} is needed only to reproduce the records themselves. Two
+simulator stacks are involved and they are not interchangeable: their configuration grids differ, so
+per-episode comparison between them is undefined for the eggplant task (Sect.~\ref{subsec5_1}). The
+original reference stack is used for Sects.~\ref{sec6} and~\ref{subsec8_4} and runs headless
+without a GPU through the layer of Appendix~\ref{secB}; the ManiSkill3 port is used for the
+controller sweeps. Requirements are pinned, and the evaluation queues are resumable: each skips
+episode ids already present in its target record file, so an interruption costs only the episode in
+flight.
+
+\textbf{Three traps} are worth naming for anyone recomputing. Enumerate the configuration grid
+rather than sampling it, since episodes past the grid size are exact repeats. Treat the policy seed
+as a replication axis only for policies that consume one. And pair any cross-directory comparison on
+shared episode ids: the record directories hold different episode counts, and because the episode
+index wraps onto the grid, an unpaired comparison silently contrasts different effective scopes ---
+computed that way the build drift of Table~\ref{tab3} reads 0.055 rather than 0.078, which would
+reverse its ordering against policy-seed noise.
 
 \end{appendices}
 

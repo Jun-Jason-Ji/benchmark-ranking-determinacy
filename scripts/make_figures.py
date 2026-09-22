@@ -99,17 +99,37 @@ ORDER = ["nominal", "stiff_x0.5", "stiff_x2.0", "damp_x0.5", "damp_x2.0", "delay
 
 
 def fig_delta():
-    fig, axes = plt.subplots(1, 3, figsize=(6.85, 4.3), sharey=True)  # 174 mm journal width
+    """Delta by simulator condition, computed with the core table's own estimator.
+
+    This figure previously read `results/controller_sweep_gpu` directly through success() and
+    bootstrapped per episode. That was wrong in three compounding ways: the directory is the
+    pre-fix inference-server generation, which Sect. 5.5 disqualifies from being pooled with
+    current data; a per-episode bootstrap targets the generalisation value where the paper's
+    standard estimand is the benchmark value (Sect. 5.4); and the union ran over nine invisible
+    conditions where the core table uses five, giving a wider band. The result was a figure whose
+    caption reported "set abstains" on spoon and eggplant where Table 6 reports the union bound
+    declaring -- a contradiction a reader comparing the two would find immediately.
+
+    It now calls make_core_table.delta() on the same seed sets and the same five invisible
+    conditions, so figure and table cannot disagree: they are the same computation. Available seed
+    sets differ by task (five for eggplant, two for spoon and carrot), which is why Table 6's runs
+    column differs by row; the caption states it.
+    """
+    import make_core_table as mct
+    mct.SETS_MS3 = dict(mct.SEED_SETS_OCTO)
+    sets = mct.SETS_MS3
+    A, B = "octo-small", "octo-base"
+    conds = ["nominal"] + list(mct.INVISIBLE)
+
+    fig, axes = plt.subplots(1, 3, figsize=(6.85, 3.9), sharey=True)  # 174 mm journal width
     for ax, (name, env) in zip(axes, ENVS.items()):
-        ys, labels, cols, Ls, Us, ns = [], [], [], [], [], []
-        for c in ORDER:
-            S, B = success("octo-small", env, c), success("octo-base", env, c)
-            common = sorted(set(S) & set(B))
-            if len(common) < 12:
+        labels, ys, Ls, Us, cols, runs = [], [], [], [], [], []
+        for c in conds:
+            r = mct.delta(sets, A, B, env, c)
+            if not r:
                 continue
-            m, lo, hi = boot([S[i] - B[i] for i in common]); ys.append(m); Ls.append(lo); Us.append(hi)
-            # The per-condition n moves to the caption: at 174 mm the tick labels cannot carry it.
-            labels.append(c); ns.append(len(common)); cols.append(COLORS[CLASS[c]])
+            labels.append(c); ys.append(r["delta"]); Ls.append(r["lo"]); Us.append(r["hi"])
+            cols.append(COLORS[CLASS[c]]); runs.append(r["runs"])
         x = np.arange(len(ys))
         for xi, m, lo, hi, col in zip(x, ys, Ls, Us, cols):
             ax.errorbar(xi, m, yerr=[[m - lo], [hi - m]], fmt="o", color=col, capsize=2, ms=4)
@@ -118,21 +138,26 @@ def fig_delta():
         if inv:
             L_set, U_set = min(Ls[i] for i in inv), max(Us[i] for i in inv)
             ax.axhspan(L_set, U_set, xmin=0, xmax=1, color="#d62728", alpha=0.08, zorder=0)
-            verdict = "small better" if L_set > 0 else ("base better" if U_set < 0 else "abstain")
-            nom_i = labels.index("nominal")
-            pv = "small better" if Ls[nom_i] > 0 else ("base better" if Us[nom_i] < 0 else "abstain")
-            # Verdicts, set bounds and per-condition n belong in the caption, not inside the figure
-            # file (journal rule). Printed here so the caption cannot drift from the data.
-            print(f"  Fig3 {name}: point={pv}, set={verdict}, bounds=[{L_set:+.2f}, {U_set:+.2f}]")
-            print(f"    n per condition: " + ", ".join(f"{c}={n}" for c, n in zip(labels, ns)))
+            uv = mct.verdict(L_set, U_set, A, B)
+            nom = labels.index("nominal")
+            pv = mct.verdict(Ls[nom], Us[nom], A, B)
+            # Verdicts and bounds belong in the caption, not inside the figure file (journal rule).
+            # Printed so the caption cannot drift, and so any disagreement with Table 6 is visible
+            # the moment it appears.
+            print(f"  Fig4 {name}: point={pv}  set={uv}  bounds=[{L_set:+.2f}, {U_set:+.2f}]  "
+                  f"runs={runs[nom][0]}/{runs[nom][1]}")
         ax.set_title(name, fontsize=9)
-        ax.set_xticks(x); ax.set_xticklabels(labels, rotation=90, ha="center", fontsize=8)
+        ax.set_xticks(x)
+        ax.set_xticklabels([c.replace("_", " ") for c in labels], rotation=90, ha="center", fontsize=8)
         ax.tick_params(axis="y", labelsize=8)
-        ax.set_ylim(-0.6, 0.8)
-    axes[0].set_ylabel("$\\Delta$ = small $-$ base (paired, 95%)", fontsize=8.5)
-    handles = [plt.Line2D([], [], marker="o", ls="", color=c, label=k) for k, c in COLORS.items()]
+        ax.set_ylim(-0.35, 0.65)
+    axes[0].set_ylabel(r"$\Delta$ = small $-$ base (probability points)", fontsize=8.5)
+    handles = [plt.Line2D([], [], marker="o", ls="", color=c, label=k) for k, c in COLORS.items()
+               if k in {CLASS[c] for c in conds}]
     axes[-1].legend(handles=handles, loc="upper right", fontsize=8, frameon=False)
-    fig.tight_layout(); fig.savefig(OUT / "fig_delta_by_condition.png", dpi=180, bbox_inches="tight"); plt.close(fig)
+    fig.tight_layout()
+    fig.savefig(OUT / "fig_delta_by_condition.png", dpi=180, bbox_inches="tight")
+    plt.close(fig)
 
 
 # ---------------- Figure 3: eggplant contact 96 ----------------

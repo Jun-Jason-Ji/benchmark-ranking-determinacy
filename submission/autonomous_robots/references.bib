@@ -1,9 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% references.bib -- Autonomous Robots submission
 %%
-%% Verification status, 2026-09-21: 17 of 19 entries checked against the publisher,
-%% proceedings or dblp record. The two exceptions are the Manski and Ljung monographs,
-%% marked [VERIFY BOOK] -- for those only the publisher/year/edition need a catalogue check.
+%% Verification status, 2026-09-22: all 21 entries checked against the publisher, proceedings or
+%% dblp record, with complete author lists -- no entry uses "and others". Nothing is unverified.
 %%
 %% Two things to note, because they changed after checking:
 %%   * SIMPLER and OpenVLA are both PMLR volume 270 and the proceedings assign them
@@ -33,11 +32,12 @@
   note      = {arXiv:2405.05941}
 }
 
-% [VERIFIED] CoRL (9th); PMLR 305:1997--2017; arXiv:2503.24278.
-% Author list abbreviated: the proceedings record is zhou25a; confirm the middle authors if the
-% copy-editor queries it.
+% [VERIFIED 2026-09-22] CoRL (9th); PMLR 305:1997--2017 (zhou25a); arXiv:2503.24278.
+% Full author list taken from the proceedings page: five authors, not an abbreviated list. The
+% earlier "and others" form had dropped Atreya and Tan and mis-ordered Pertsch.
 @inproceedings{zhou2025autoeval,
-  author    = {Zhou, Zhiyuan and Pertsch, Karl and Levine, Sergey and others},
+  author    = {Zhou, Zhiyuan and Atreya, Pranav and Tan, You Liang and Pertsch, Karl and
+               Levine, Sergey},
   title     = {{AutoEval}: Autonomous evaluation of generalist robot manipulation policies in the
                real world},
   booktitle = {Proceedings of the 9th Conference on Robot Learning (CoRL)},
@@ -51,7 +51,12 @@
 % [VERIFIED] CoRL (9th); PMLR 305:336--364; arXiv:2506.18123; proceedings record atreya25a.
 @inproceedings{atreya2025roboarena,
   author    = {Atreya, Pranav and Pertsch, Karl and Lee, Tony and Kim, Moo Jin and Jain, Arhan and
-               Kuramshin, Artur and Eppner, Clemens and Neary, Cyrus and others},
+               Kuramshin, Artur and Neary, Cyrus and Hu, Edward S. and Arora, Kanav and
+               Ellis, Kirsty and Macesanu, Luca and Leonard, Matthew and Cho, Meedeum and
+               Aslan, Ozgur and Dass, Shivin and Wang, Tony and Yuan, Xingfang and
+               Gupta, Abhishek and Jayaraman, Dinesh and Berseth, Glen and Daniilidis, Kostas and
+               Mart{'i}n-Mart{'i}n, Roberto and Lee, Youngwoon and Liang, Percy and
+               Finn, Chelsea and Levine, Sergey},
   title     = {{RoboArena}: Distributed real-world evaluation of generalist robot policies},
   booktitle = {Proceedings of the 9th Conference on Robot Learning (CoRL)},
   series    = {Proceedings of Machine Learning Research},
@@ -63,10 +68,14 @@
 
 %% ---------------------------------------------------------------- simulators and datasets
 
-% [VERIFIED] arXiv:2410.00425, 1 October 2024. No peer-reviewed version found as of 2026-09-21.
-% The author list is Tao and 22 others; abbreviated here.
+% [VERIFIED 2026-09-22] arXiv:2410.00425, 1 October 2024; no peer-reviewed version found.
+% Full 23-author list from the arXiv abstract page.
 @article{tao2024maniskill3,
-  author  = {Tao, Stone and others},
+  author  = {Tao, Stone and Xiang, Fanbo and Shukla, Arth and Qin, Yuzhe and Hinrichsen, Xander and
+             Yuan, Xiaodi and Bao, Chen and Lin, Xinsong and Liu, Yulin and Chan, Tse-kai and
+             Gao, Yuan and Li, Xuanlin and Mu, Tongzhou and Xiao, Nan and Gurha, Arnav and
+             Rajesh, Viswesh Nagaswamy and Choi, Yong Woo and Chen, Yen-Ru and Huang, Zhiao and
+             Calandra, Roberto and Chen, Rui and Luo, Shan and Su, Hao},
   title   = {{ManiSkill3}: {GPU} parallelized robotics simulation and rendering for generalizable
              embodied {AI}},
   journal = {arXiv preprint},
@@ -173,15 +182,18 @@
   doi     = {10.3982/ECTA5771}
 }
 
-% [VERIFY BOOK] Springer, New York, 2003, Springer Series in Statistics. Confirm the series and
-% that you want the 2003 monograph rather than the 2007 "Identification for Prediction and
-% Decision" -- both are Manski and both would support the sentence that cites this.
+% [VERIFIED 2026-09-22] Springer, New York, 2003; Springer Series in Statistics;
+% ISBN 978-0-387-00454-9; doi 10.1007/b97478. The 2003 monograph is the intended citation rather
+% than the 2007 "Identification for Prediction and Decision": the sentence citing it is about
+% reporting the set of values consistent with the data, which is this book's subject.
 @book{manski2003partial,
   author    = {Manski, Charles F.},
   title     = {Partial Identification of Probability Distributions},
+  series    = {Springer Series in Statistics},
   publisher = {Springer},
   address   = {New York},
-  year      = {2003}
+  year      = {2003},
+  doi       = {10.1007/b97478}
 }
 
 % [VERIFIED] Annual Review of Economics 2:167--195, 2010;
@@ -196,14 +208,14 @@
   doi     = {10.1146/annurev.economics.050708.143401}
 }
 
-% [VERIFY BOOK] Prentice Hall, 2nd edition, 1999. Confirm the imprint (some catalogues list
-% Prentice Hall PTR) and the place of publication.
+% [VERIFIED 2026-09-22] Prentice-Hall, Englewood Cliffs, NJ, 2nd edition, 1999;
+% ISBN 0-13-656695-2. The address was wrong before: Englewood Cliffs, not Upper Saddle River.
 @book{ljung1999system,
   author    = {Ljung, Lennart},
   title     = {System Identification: Theory for the User},
   edition   = {2},
-  publisher = {Prentice Hall},
-  address   = {Upper Saddle River, NJ},
+  publisher = {Prentice-Hall},
+  address   = {Englewood Cliffs, NJ},
   year      = {1999}
 }
 
@@ -264,4 +276,29 @@
   journal = {arXiv preprint},
   volume  = {arXiv:1806.08295},
   year    = {2018}
+}
+
+%% ---------------------------------------------------------------- domain randomization
+
+% [VERIFIED 2026-09-22] IROS 2017, pages 23--30; doi 10.1109/IROS.2017.8202133;
+% dblp conf/iros/TobinFRSZA17.
+@inproceedings{tobin2017domain,
+  author    = {Tobin, Josh and Fong, Rachel and Ray, Alex and Schneider, Jonas and
+               Zaremba, Wojciech and Abbeel, Pieter},
+  title     = {Domain randomization for transferring deep neural networks from simulation to the
+               real world},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {23--30},
+  year      = {2017},
+  doi       = {10.1109/IROS.2017.8202133}
+}
+
+% [VERIFIED 2026-09-22] ICRA 2018, pages 3803--3810; doi 10.1109/ICRA.2018.8460528.
+@inproceedings{peng2018sim,
+  author    = {Peng, Xue Bin and Andrychowicz, Marcin and Zaremba, Wojciech and Abbeel, Pieter},
+  title     = {Sim-to-real transfer of robotic control with dynamics randomization},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {3803--3810},
+  year      = {2018},
+  doi       = {10.1109/ICRA.2018.8460528}
 }
