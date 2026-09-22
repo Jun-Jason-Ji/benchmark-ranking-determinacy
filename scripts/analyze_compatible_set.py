@@ -1,4 +1,23 @@
-"""Experiment B (first instantiation): build the calibration-compatible controller set from the demo
+"""SUPERSEDED by scripts/analyze_compatible_set_v2.py. Kept only to reproduce the earlier outputs.
+
+Three defects made this script unable to answer the question it was written for, and all three are
+fixed in v2:
+
+  1. It reads results/replay_sysid, the 40-demonstration directory, not the 98-demonstration grids.
+  2. It fixes `nominal` as the test reference. The construction in the paper's appendix tests every
+     candidate against the loss MINIMISER; testing against nominal makes nominal's own loss increase
+     zero by construction, so the procedure can never reject it. On the 98-demonstration grids the
+     minimiser is s2_d0.5_delay1 on both stacks and nominal IS rejected -- which this script is
+     structurally incapable of finding.
+  3. It takes the 2.5% quantile while the text specifies a one-sided 5% bound, and its --alpha
+     argument does not reach the computation.
+
+Do not use it for the compatible set. Its condition-to-replay mapping (MAP below) remains the record
+of which sweep conditions correspond to which replay grid point, and that part is still correct.
+
+Original docstring follows.
+
+Experiment B (first instantiation): build the calibration-compatible controller set from the demo
 replay residuals, propagate it to policy differences, and compare point-calibrated vs set-calibrated
 ranking verdicts per task.
 

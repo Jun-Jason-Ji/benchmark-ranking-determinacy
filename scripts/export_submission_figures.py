@@ -14,7 +14,7 @@ Figure numbering follows order of appearance in main.tex (which is what LaTeX pr
   Fig3  torque effect by orientation                  scripts/make_figures_v2.py
   Fig4  delta by condition                             scripts/make_figures.py
   Fig5  track S coverage                               benchmark/decidability_bench/run_track_s.py  [see note]
-  Fig6  GP response surface and simultaneous band      scripts/analyze_response_surface.py
+  Fig6  GP response surface and simultaneous band      scripts/analyze_response_surface_v2.py
 
 Fig5 is redrawn from run_track_s.py's cached cells (track_s_results.json) rather than recomputing its
 300 repetitions per cell.
@@ -124,10 +124,13 @@ def main():
         except Exception as e:
             print(f"  SKIP {fn.__name__}: {type(e).__name__}: {e}")
     try:
-        import analyze_response_surface
-        analyze_response_surface.main()
+        # v2, not v1: v1 draws a single-hyperparameter posterior and reports a pointwise k=2 band,
+        # which is not the rung Sect. 8.2 adopts. v2 draws the marginalised mean and prints the
+        # restricted simultaneous band the caption quotes, from the same computation.
+        import analyze_response_surface_v2
+        analyze_response_surface_v2.main()
     except Exception as e:
-        print(f"  SKIP analyze_response_surface: {type(e).__name__}: {e}")
+        print(f"  SKIP analyze_response_surface_v2: {type(e).__name__}: {e}")
     # Track S: redraw from the cached cells rather than recomputing 300 repetitions per cell.
     try:
         import json

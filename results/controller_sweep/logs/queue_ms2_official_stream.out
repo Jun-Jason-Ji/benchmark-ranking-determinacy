@@ -1,0 +1,49 @@
+05:33:21 start octo-small widowx_put_eggplant_in_basket seed=0
+05:33:21 start octo-base widowx_put_eggplant_in_basket seed=0
+05:42:48 done rc=0 octo-small widowx_put_eggplant_in_basket seed=0
+05:42:48 start octo-small widowx_put_eggplant_in_basket seed=2
+05:43:12 done rc=0 octo-base widowx_put_eggplant_in_basket seed=0
+05:43:12 start octo-base widowx_put_eggplant_in_basket seed=2
+05:51:49 done rc=0 octo-small widowx_put_eggplant_in_basket seed=2
+05:51:49 start octo-small widowx_put_eggplant_in_basket seed=4
+05:52:47 done rc=0 octo-base widowx_put_eggplant_in_basket seed=2
+05:52:47 start octo-base widowx_put_eggplant_in_basket seed=4
+06:00:53 done rc=0 octo-small widowx_put_eggplant_in_basket seed=4
+06:00:53 start octo-small widowx_spoon_on_towel seed=0
+06:02:23 done rc=0 octo-base widowx_put_eggplant_in_basket seed=4
+06:02:23 start octo-base widowx_spoon_on_towel seed=0
+06:05:16 done rc=0 octo-small widowx_spoon_on_towel seed=0
+06:05:16 start octo-small widowx_spoon_on_towel seed=2
+06:06:57 done rc=0 octo-base widowx_spoon_on_towel seed=0
+06:06:57 start octo-base widowx_spoon_on_towel seed=2
+06:09:38 done rc=0 octo-small widowx_spoon_on_towel seed=2
+06:09:38 start octo-small widowx_spoon_on_towel seed=4
+06:11:21 done rc=0 octo-base widowx_spoon_on_towel seed=2
+06:11:21 start octo-base widowx_spoon_on_towel seed=4
+06:13:46 done rc=0 octo-small widowx_spoon_on_towel seed=4
+06:13:46 start octo-small widowx_carrot_on_plate seed=0
+06:15:42 done rc=0 octo-base widowx_spoon_on_towel seed=4
+06:15:42 start octo-base widowx_carrot_on_plate seed=0
+06:17:52 done rc=0 octo-small widowx_carrot_on_plate seed=0
+06:17:52 start octo-small widowx_carrot_on_plate seed=2
+06:19:58 done rc=0 octo-base widowx_carrot_on_plate seed=0
+06:19:58 start octo-base widowx_carrot_on_plate seed=2
+06:21:58 done rc=0 octo-small widowx_carrot_on_plate seed=2
+06:21:58 start octo-small widowx_carrot_on_plate seed=4
+06:24:13 done rc=0 octo-base widowx_carrot_on_plate seed=2
+06:24:13 start octo-base widowx_carrot_on_plate seed=4
+06:26:05 done rc=0 octo-small widowx_carrot_on_plate seed=4
+06:26:05 start octo-small widowx_stack_cube seed=0
+06:28:29 done rc=0 octo-base widowx_carrot_on_plate seed=4
+06:28:29 start octo-base widowx_stack_cube seed=0
+06:30:12 done rc=0 octo-small widowx_stack_cube seed=0
+06:30:12 start octo-small widowx_stack_cube seed=2
+06:32:42 done rc=0 octo-base widowx_stack_cube seed=0
+06:32:42 start octo-base widowx_stack_cube seed=2
+06:34:21 done rc=0 octo-small widowx_stack_cube seed=2
+06:34:21 start octo-small widowx_stack_cube seed=4
+06:36:57 done rc=0 octo-base widowx_stack_cube seed=2
+06:36:57 start octo-base widowx_stack_cube seed=4
+06:38:33 done rc=0 octo-small widowx_stack_cube seed=4
+06:40:48 done rc=0 octo-base widowx_stack_cube seed=4
+06:40:48 MS2_OFFICIAL_STREAM_DONE

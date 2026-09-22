@@ -1,10 +1,13 @@
 """Paper figures for the census-era results (2026-09-20).
 
-  fig_uncertainty_budget.png     the four sources of uncertainty on one axis: evaluation noise at 1/3/10
-                                 seeds, implementation-build drift, the shift caused by a
-                                 calibration-invisible parameter, and the robot texture variant the
-                                 benchmark silently averages over. The point of the figure is that only the
-                                 first shrinks with budget, and the largest term is not physics at all.
+  fig_uncertainty_budget.png     the four sources of uncertainty that survive a configuration census:
+                                 evaluation noise at 1/3/10 seeds, implementation-build drift, the shift
+                                 caused by a calibration-invisible parameter, and the robot texture variant
+                                 the benchmark averages over. The point of the figure is that only the
+                                 first shrinks with budget. The bars are three different KINDS of quantity
+                                 (a 95% half-width, a paired shift, a range over four settings); they share
+                                 the unit of Δ but not a scale, each label says which, and their lengths
+                                 must not be ranked against one another.
   fig_torque_by_orientation.png  the torque-limit effect decomposed over the eggplant orientation grid, for
                                  the deterministic policy (OpenVLA) and a stochastic one (Octo-small).
 
@@ -133,25 +136,42 @@ def seed_sd():
 
 
 def build_drift():
-    """max |rate(pre-fix) - rate(A')| over policy x condition: same seeds, different server build.
+    """Effect of the implementation build on the POLICY DIFFERENCE, same seeds, different server build.
+
+    Returns (max |change in Delta|, mean |change in Delta|, per-condition detail).
+
+    This used to return max |rate(pre-fix) - rate(A')| over policy x condition -- the largest change
+    in a *single policy's* success rate, which was 0.078125. That is the wrong quantity for this
+    paper twice over: it is not a difference between policies, so it does not belong on a Delta axis
+    or in a table of effects on Delta; and a maximum over four cells is not an effect size. What the
+    argument needs is how much the build moves Delta = rate(small) - rate(base), which is larger:
+    -0.109 at nominal and -0.063 under the halved torque limit.
 
     Paired on the episode ids the two builds share. The pre-fix directory holds 96 episodes against
-    A's 64, and ids 64-95 wrap onto configs 0-31, so an unpaired comparison understates the drift --
-    it gave 0.055 where the paired figure is 0.078 (scripts/analyze_platform_drift_paired.py, and
-    FINDING_platform_drift.md, which the paired value reproduces exactly).
+    A's 64, and ids 64-95 wrap onto configs 0-31, so an unpaired comparison mixes different effective
+    scopes (scripts/analyze_platform_drift_paired.py).
     """
-    ds = []
-    for p in ("octo-small", "octo-base"):
-        for cond in ("nominal", "force_x0.5"):
+    detail = {}
+    for cond in ("nominal", "force_x0.5"):
+        rates = {}
+        for p in ("octo-small", "octo-base"):
             ids = common_ids([PRE_FIX, OCTO_SETS["A'"]], p, cond)
             if not ids:
                 continue
             a = per_config(PRE_FIX, p, cond, ids=ids)
             b = per_config(OCTO_SETS["A'"], p, cond, ids=ids)
             cfgs = sorted(set(a) & set(b))
-            if len(cfgs) == NC:
-                ds.append(abs(float(np.mean([a[k] for k in cfgs])) - float(np.mean([b[k] for k in cfgs]))))
-    return (float(np.max(ds)), float(np.mean(ds))) if ds else (float("nan"),) * 2
+            if len(cfgs) != NC:
+                continue
+            rates[p] = (float(np.mean([a[k] for k in cfgs])), float(np.mean([b[k] for k in cfgs])))
+        if len(rates) == 2:
+            pre = rates["octo-small"][0] - rates["octo-base"][0]
+            post = rates["octo-small"][1] - rates["octo-base"][1]
+            detail[cond] = post - pre
+    if not detail:
+        return float("nan"), float("nan"), {}
+    v = np.abs(list(detail.values()))
+    return float(v.max()), float(v.mean()), detail
 
 
 def parameter_shift():
@@ -187,18 +207,67 @@ def texture_variant_range():
     return (float(max(rates) - min(rates)), rates) if rates else (float("nan"), [])
 
 
+def texture_variant_delta_span():
+    """Span of the policy DIFFERENCE across the four urdf_version recolourings, on the fractal pair.
+
+    texture_variant_range() above is the span of a single policy's rate, which is the right number
+    for "how much does the published rate depend on a parameter carrying no physics" but the wrong
+    one for a figure whose axis is Delta: a rate and a difference of rates are not the same object,
+    and putting one on the other's axis is the error this function exists to avoid. Here we take
+    Delta = rate(rt-1-converged) - rate(rt-1-15pct) within each variant, over the 300-configuration
+    census, and report its span across the four variants.
+    """
+    base = ROOT / "results/fractal_reversal"
+    env = "GraspSingleOpenedCokeCanInScene-v0"
+    per = {}
+    for pol in ("rt-1-converged", "rt-1-15pct"):
+        f = base / pol / env / "nominal.jsonl"
+        if not f.exists():
+            return float("nan"), []
+        seen, acc = set(), {}
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            e = r["episode_id"]
+            if e in seen:
+                continue
+            seen.add(e)
+            acc.setdefault((e % 300) // 75, {})[e % 75] = int(bool(r["success"]))
+        per[pol] = acc
+    deltas = []
+    for v in sorted(set(per["rt-1-converged"]) & set(per["rt-1-15pct"])):
+        a, b = per["rt-1-converged"][v], per["rt-1-15pct"][v]
+        cfgs = sorted(set(a) & set(b))
+        if cfgs:
+            deltas.append(float(np.mean([a[c] - b[c] for c in cfgs])))
+    return (float(max(deltas) - min(deltas)), deltas) if deltas else (float("nan"), [])
+
+
 def fig_uncertainty_budget():
     sd = seed_sd()
-    drift_max, drift_mean = build_drift()
+    drift_max, drift_mean, drift_detail = build_drift()
     shift = parameter_shift()
     tex_range, tex_rates = texture_variant_range()
-    rows = [("Evaluation noise, 1 seed", 1.96 * sd, BLUE, 0.45),
-            ("Evaluation noise, 3 seeds", 1.96 * sd / np.sqrt(3), BLUE, 0.70),
-            ("Evaluation noise, 10 seeds", 1.96 * sd / np.sqrt(10), BLUE, 0.95),
-            ("Implementation build", drift_max, VIOLET, 1.0),
-            ("Calibration-invisible\nparameter (torque limit)", shift, ORANGE, 1.0),
-            ("Robot texture variant\n(no physics at all)", tex_range, AQUA, 1.0)]
-    print("  texture variant per-urdf rates: " + ", ".join(f"{r:.3f}" for r in tex_rates))
+    tex_span, tex_deltas = texture_variant_delta_span()
+    # EVERY bar is now a quantity in units of Delta, the policy difference. That was not true
+    # before: the build bar was a single policy's rate change and the texture bar a single policy's
+    # rate range, and neither is a difference between policies, so neither belonged on this axis.
+    # They remain three different KINDS of Delta-quantity -- a 95% half-width, a shift, and a span
+    # across settings -- so each label says which, and the caption says not to rank them by length.
+    rows = [("Evaluation noise, 1 seed\n(95% half-width of $\\Delta$)", 1.96 * sd, BLUE, 0.45),
+            ("Evaluation noise, 3 seeds\n(95% half-width of $\\Delta$)", 1.96 * sd / np.sqrt(3), BLUE, 0.70),
+            ("Evaluation noise, 10 seeds\n(95% half-width of $\\Delta$)", 1.96 * sd / np.sqrt(10), BLUE, 0.95),
+            ("Implementation build\n(shift in $\\Delta$)", drift_max, VIOLET, 1.0),
+            ("Calibration-invisible parameter,\ntorque limit (shift in $\\Delta$)", shift, ORANGE, 1.0),
+            ("Robot texture variant, no physics\n(span of $\\Delta$ over 4 settings)", tex_span, AQUA, 1.0)]
+    print("  texture variant per-urdf rates (single policy): "
+          + ", ".join(f"{r:.3f}" for r in tex_rates) + f"  range {tex_range:.4f}")
+    print("  texture variant per-urdf Delta: " + ", ".join(f"{d:+.4f}" for d in tex_deltas)
+          + f"  span {tex_span:.4f}")
+    print("  build: shift in Delta per condition: "
+          + ", ".join(f"{k} {v:+.4f}" for k, v in drift_detail.items())
+          + f"   -> max |shift| {drift_max:.4f}, mean |shift| {drift_mean:.4f}")
     fig, ax = plt.subplots(figsize=(6.85, 3.5))  # 174 mm: the journal full-column width, so no rescale
     y = np.arange(len(rows))[::-1]
     vmax = max(r[1] for r in rows)
@@ -207,8 +276,9 @@ def fig_uncertainty_budget():
         ax.text(v + vmax * 0.02, yi, f"{v:.3f}", va="center", ha="left", fontsize=8.5, color=INK)
     ax.set_yticks(y)
     ax.set_yticklabels([r[0] for r in rows], fontsize=8.5)
-    ax.set_xlabel("effect on the success-rate difference $\\Delta$  (95% half-width, or measured shift)")
-    ax.set_xlim(0, vmax * 1.62)
+    ax.set_xlabel("effect on the success-rate difference $\\Delta$ (probability points).\n"
+                  "Three different quantities; see each label.", fontsize=8.5)
+    ax.set_xlim(0, vmax * 1.95)  # room for the right-hand brackets and their labels
     ax.grid(axis="x", color=MUTED, alpha=0.45, linewidth=0.6, zorder=0)
     ax.set_axisbelow(True)
     ax.spines["left"].set_visible(False)
@@ -223,9 +293,12 @@ def fig_uncertainty_budget():
     ax.text(bx + vmax * 0.03, (y[4] + y[5]) / 2, "irreducible without\nnew calibration evidence", va="center",
             ha="left", fontsize=8, color=ORANGE)
     fig.tight_layout()
-    fig.savefig(OUT / "fig_uncertainty_budget.png", dpi=300)
+    # bbox_inches="tight": the bracket labels sit outside the axes with clip_on=False, so a
+    # default bbox crops them (and the two-line xlabel) at the canvas edge.
+    fig.savefig(OUT / "fig_uncertainty_budget.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
-    return dict(seed_sd=sd, drift_max=drift_max, drift_mean=drift_mean, shift=shift)
+    return dict(seed_sd=sd, drift_max=drift_max, drift_mean=drift_mean, shift=shift,
+                drift_detail=drift_detail)
 
 
 ORIENT = ["-45", "0", "45", "90", "135", "180", "225", "270"]

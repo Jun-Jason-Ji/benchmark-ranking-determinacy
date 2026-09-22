@@ -134,7 +134,10 @@ def fig_delta():
         for xi, m, lo, hi, col in zip(x, ys, Ls, Us, cols):
             ax.errorbar(xi, m, yerr=[[m - lo], [hi - m]], fmt="o", color=col, capsize=2, ms=4)
         ax.axhline(0, color="k", lw=0.8)
-        inv = [i for i, c in enumerate(labels) if CLASS[c].startswith("invisible")]
+        # The envelope spans nominal together with the invisible conditions: the compatible set
+        # contains the fitted nominal parameter by construction, so a bound that left it out would
+        # not cover the set. Same convention as make_core_table, which shares this estimator.
+        inv = [i for i, c in enumerate(labels) if CLASS[c].startswith("invisible") or c == "nominal"]
         if inv:
             L_set, U_set = min(Ls[i] for i in inv), max(Us[i] for i in inv)
             ax.axhspan(L_set, U_set, xmin=0, xmax=1, color="#d62728", alpha=0.08, zorder=0)
@@ -144,7 +147,10 @@ def fig_delta():
             # Verdicts and bounds belong in the caption, not inside the figure file (journal rule).
             # Printed so the caption cannot drift, and so any disagreement with Table 6 is visible
             # the moment it appears.
-            print(f"  Fig4 {name}: point={pv}  set={uv}  bounds=[{L_set:+.2f}, {U_set:+.2f}]  "
+            # Four decimals, not two: one of these bounds sits at +0.000042, and a bound that
+            # rounds to +0.00 is a declaration resting on a knife edge. The caption has to be able
+            # to say so, which it cannot if the diagnostic hides it.
+            print(f"  Fig4 {name}: point={pv}  set={uv}  bounds=[{L_set:+.4f}, {U_set:+.4f}]  "
                   f"runs={runs[nom][0]}/{runs[nom][1]}")
         ax.set_title(name, fontsize=9)
         ax.set_xticks(x)

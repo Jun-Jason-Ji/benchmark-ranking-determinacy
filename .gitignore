@@ -30,3 +30,17 @@ submission/**/*-eps-converted-to.pdf
 # --- internal review and working notes, not part of the release ---
 .workbuddy/
 submission_audit_*.md
+
+# The simulated-peer-review rounds and the Chinese working translation are internal working
+# documents, not evidence and not part of the release. Same reason as submission_audit_*.md:
+# they are notes about the manuscript, not records behind it.
+review_english_*.md
+manuscript_zh_*.md
+manuscript_zh_*.pdf
+tmp/
+
+# Verification builds. main.pdf is the deliverable; check.* is the throwaway job name used to
+# compile while a viewer holds main.pdf open.
+submission/**/check.*
+scripts/make_manuscript_zh_pdf.py
+submission/**/chk.*

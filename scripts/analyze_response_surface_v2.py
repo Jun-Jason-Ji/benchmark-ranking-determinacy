@@ -6,8 +6,12 @@ Improvements over analyze_response_surface.py:
     grid with weights ∝ exp(−NLL)); L = 2.5th percentile of the per-draw minimum, U = 97.5th percentile
     of the per-draw maximum. This bounds the whole strip, not one point at a time.
   * flatness gate per axis: paired bootstrap of Δ(c) − Δ(nominal) for every calibration-invisible
-    condition on the axis; if any interval excludes 0 the surface model is not trusted on that axis and
-    the union bound (analysis_compatible_set.md) is reported instead.
+    condition on the axis; if any interval excludes 0 the surface model is not trusted on that axis.
+    NOTE: the gate is a DIAGNOSTIC here, not a rung of the paper's ladder. Sect. 8.2 removed it,
+    because on the synthetic track it lowered coverage on the between-settings surface (0.91-0.98 to
+    0.89) and mis-fired on flat surfaces 16-20% of the time. The column is kept because it is
+    informative about which axes the smoothness prior is doing work on, but no verdict in the
+    manuscript is decided by it, and Fig. 6's caption does not invoke it.
 Outputs analysis_response_surface_v2.md.
 """
 import json
@@ -21,7 +25,7 @@ try:
 except Exception:
     pass
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from analyze_response_surface import ENVS, DESIGN, EPS, SWEEP, success, observations, rbf  # noqa: E402
+from analyze_response_surface import ENVS, DESIGN, EPS, SWEEP, ROOT, success, observations, rbf  # noqa: E402
 
 RNG = np.random.default_rng(0)
 ELLS = [0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0]
@@ -98,24 +102,107 @@ def verdict(lo, hi):
     return "small better" if lo > 0 else ("base better" if hi < 0 else "abstain")
 
 
-def main():
-    out = SWEEP / "analysis_response_surface_v2.md"
-    g = np.linspace(-2.5, 2.5, 41)
+# Half-width of the plane the band is evaluated over. The design points reach +-2, so RESTRICTED is
+# the sampled range and EXTENDED goes half a grid step beyond it. Sect. 8.2 of the paper adopts the
+# restricted configuration -- it raises power and restores monotonicity in n, at a coverage cost on
+# the between-settings dip -- so RESTRICTED is what this script reports as the headline and what the
+# figure draws. EXTENDED is reported alongside it because the choice is a methodological one and a
+# reader should see both numbers rather than take the adopted one on trust.
+RESTRICTED, EXTENDED = 2.0, 2.5
+
+
+def strip_grid(half, n=41):
+    g = np.linspace(-half, half, n)
     U, V = np.meshgrid(g, g, indexing="ij")
     Xs_all = np.stack([U.ravel(), V.ravel()], 1)
-    Xs = Xs_all[np.abs(Xs_all[:, 0] - Xs_all[:, 1]) <= EPS]
+    return Xs_all[np.abs(Xs_all[:, 0] - Xs_all[:, 1]) <= EPS]
+
+
+def marginal_mean(X, y, se, Xs):
+    """Posterior mean averaged over the (ell, sf) grid with the same weights the band uses.
+
+    The figure has to draw the surface the band was computed from. Plotting a single-hyperparameter
+    fit next to a marginalised band is how Fig. 6 came to quote bounds from a different computation
+    than the one the text adopts; sharing this function removes that possibility.
+    """
+    m0 = y.mean()
+    grid = []
+    for ell in ELLS:
+        for sf in SFS:
+            try:
+                grid.append((ell, sf, nll(X, y, se, ell, sf, m0)))
+            except np.linalg.LinAlgError:
+                pass
+    nl = np.array([g[2] for g in grid]); w = np.exp(-(nl - nl.min())); w /= w.sum()
+    acc = np.zeros(len(Xs))
+    for (ell, sf, _), wi in zip(grid, w):
+        mu, _ = posterior(X, y, se, ell, sf, m0, Xs)
+        acc += wi * mu
+    return acc
+
+
+def make_figure(rows, half=RESTRICTED):
+    """Draw the marginalised posterior mean over the plane the adopted band is evaluated on."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    g = np.linspace(-half, half, 41)
+    U, V = np.meshgrid(g, g, indexing="ij")
+    Xs_all = np.stack([U.ravel(), V.ravel()], 1)
+    fig, axes = plt.subplots(1, 3, figsize=(6.85, 2.9))  # 174 mm journal full width
+    im = None
+    for ax, (name, X, y, mu_all) in zip(axes, rows):
+        im = ax.imshow(mu_all.reshape(U.shape).T, origin="lower",
+                       extent=[-half, half, -half, half], cmap="RdBu_r", vmin=-0.4, vmax=0.4)
+        ax.plot([-half, half], [-half - EPS, half - EPS], "k--", lw=0.8)
+        ax.plot([-half, half], [-half + EPS, half + EPS], "k--", lw=0.8)
+        ax.scatter(X[:, 0], X[:, 1], c=y, cmap="RdBu_r", vmin=-0.4, vmax=0.4, edgecolors="k", s=40)
+        ax.set_xlabel("log$_2$ stiffness scale", fontsize=8)
+        ax.tick_params(labelsize=8)
+        ax.set_xlim(-half, half); ax.set_ylim(-half, half)
+        if ax is axes[0]:
+            ax.set_ylabel("log$_2$ damping scale", fontsize=8)
+        ax.set_title(name, fontsize=8.5)
+    cb = fig.colorbar(im, ax=axes, shrink=0.85)
+    cb.ax.tick_params(labelsize=8)
+    cb.set_label("marginalised posterior mean $\\Delta$", size=8)
+    d = ROOT / "results/figures"
+    d.mkdir(exist_ok=True)
+    fig.savefig(d / "fig_response_surface.png", dpi=180, bbox_inches="tight")
+    plt.close(fig)
+    return d / "fig_response_surface.png"
+
+
+def main():
+    out = SWEEP / "analysis_response_surface_v2.md"
+    Xs = strip_grid(RESTRICTED)
+    Xs_ext = strip_grid(EXTENDED)
     L = ["# Response-surface bound v2: simultaneous 95% band over the compatible strip + flatness gate", "",
          f"Strip |log2 k − log2 d| ≤ {EPS}; GP hyperparameters marginalised over a (ℓ, σf) grid with weights ∝ exp(−NLL); "
          "4000 posterior function draws; L/U = 2.5th pct of draw-minimum / 97.5th pct of draw-maximum. "
          "Flatness gate: paired Δ(c) − Δ(nominal) over the calibration-invisible controller conditions; '*' = rejects flatness.", "",
-         "| task | controller strip: simultaneous bound | verdict | top (weight, ℓ, σf) | flatness gate (controller-invisible) | union bound verdict |", "|---|---|---|---|---|---|"]
+         f"Two evaluation ranges are reported: **restricted** to the sampled design range "
+         f"(|u|, |v| ≤ {RESTRICTED:g}), which is the configuration the paper adopts, and **extended** "
+         f"half a grid step beyond it (≤ {EXTENDED:g}). The figure draws the restricted one.", "",
+         "| task | restricted band (adopted) | verdict | extended band | verdict | top (weight, ℓ, σf) | flatness gate (controller-invisible) | union bound verdict |",
+         "|---|---|---|---|---|---|---|---|"]
     union = json.loads((SWEEP / "analysis_compatible_set.json").read_text(encoding="utf-8"))["summary"] if (SWEEP / "analysis_compatible_set.json").exists() else {}
+    rows, verdicts = [], {}
     for name, env in ENVS.items():
         X, y, se, names = observations(env)
         lo, hi, top = simultaneous_bounds(X, y, se, Xs)
+        lo_e, hi_e, _ = simultaneous_bounds(X, y, se, Xs_ext)
         rej, det = flatness_gate(env, ["iso_x0.25", "iso_x0.5", "iso_x2.0", "iso_x4.0", "force_x0.5"])
         ub = union.get(name, {}).get("set_controller", "n/a")
-        L.append(f"| {name} | [{lo:+.2f}, {hi:+.2f}] | {verdict(lo, hi)}{' (gated → union bound)' if rej else ''} | {top} | {'; '.join(det)} | {ub} |")
+        gate = " (gated → union bound)" if rej else ""
+        L.append(f"| {name} | [{lo:+.2f}, {hi:+.2f}] | {verdict(lo, hi)}{gate} | "
+                 f"[{lo_e:+.2f}, {hi_e:+.2f}] | {verdict(lo_e, hi_e)} | {top} | {'; '.join(det)} | {ub} |")
+        verdicts[name] = dict(lo=lo, hi=hi, verdict=verdict(lo, hi), gated=bool(rej),
+                              lo_ext=lo_e, hi_ext=hi_e, verdict_ext=verdict(lo_e, hi_e), top=top)
+        g = np.linspace(-RESTRICTED, RESTRICTED, 41)
+        U, V = np.meshgrid(g, g, indexing="ij")
+        rows.append((name, X, y, marginal_mean(X, y, se, np.stack([U.ravel(), V.ravel()], 1))))
     L += ["", "## Contact axes (1-D, same method; gate over friction/density conditions)", "", "| task | axis | simultaneous bound | verdict | flatness gate | union verdict (controller+contact) |", "|---|---|---|---|---|---|"]
     axes = {"friction": {"fric_x0.4": np.log2(0.4), "nominal": 0.0, "fric_x2.5": np.log2(2.5)}, "density": {"dens_x0.5": -1.0, "nominal": 0.0, "dens_x2.0": 1.0}}
     for name, env in ENVS.items():
@@ -138,9 +225,20 @@ def main():
             L.append(f"| {name} | {axname} | [{lo:+.2f}, {hi:+.2f}] | {verdict(lo, hi)}{' (gated → union bound)' if rej else ''} | {'; '.join(det)} | {ub} |")
     L += ["", "Reading: the simultaneous band is the certified-style version of the strip bound under the GP model; the gate says whether the model's "
           "smoothness assumption is contradicted by the paired data on that axis. Where gated, report the union bound instead."]
+    png = make_figure(rows)
+    L += ["", f"Figure: `{png.relative_to(ROOT).as_posix()}` -- the marginalised posterior mean over the "
+          "restricted plane, i.e. the same computation as the adopted band above. Caption values for "
+          "the paper's Fig. 6 are the restricted columns of the first table, verbatim:", ""]
+    for name, v in verdicts.items():
+        L.append(f"- {name}: [{v['lo']:+.2f}, {v['hi']:+.2f}], {v['verdict']}"
+                 + (" (flatness gate rejects; report the union bound)" if v["gated"] else ""))
     text = "\n".join(L)
     out.write_text(text, encoding="utf-8")
     print(text)
+    print("\nFig6 caption values (restricted simultaneous band, the adopted rung):")
+    for name, v in verdicts.items():
+        print(f"  {name}: [{v['lo']:+.3f}, {v['hi']:+.3f}] {v['verdict']}"
+              f"{'  GATED' if v['gated'] else ''}   extended: [{v['lo_ext']:+.3f}, {v['hi_ext']:+.3f}] {v['verdict_ext']}")
 
 
 if __name__ == "__main__":

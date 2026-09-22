@@ -4,26 +4,31 @@
 
 | 任务 | 策略对 | 构型 | 运行数 | 点校准 Δ [95%] | 判定 | 并集界 | 判定 | 不一致 | 方差模型 |
 |---|---|---|---|---|---|---|---|---|---|
-| eggplant (ms3) | octo-small vs octo-base | 64/64 | 5/5 | +0.064 [+0.00, +0.13] | octo-small> | [+0.02, +0.24] | octo-small> | 否 | empirical / empirical |
+| eggplant (ms3) | octo-small vs octo-base | 64/64 | 5/5 | +0.064 [+0.00, +0.13] | octo-small>† | [+0.00, +0.24] | octo-small>† | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small vs octo-small@hist1 | 64/64 | 5/5 | +0.077 [+0.01, +0.14] | octo-small> | [+0.01, +0.24] | octo-small> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small vs octo-base@hist1 | 64/64 | 5/5 | +0.133 [+0.07, +0.20] | octo-small> | [+0.01, +0.24] | octo-small> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small vs openvla-7b-4bit | 64/64 | 5/2 | +0.333 [+0.27, +0.40] | octo-small> | [+0.17, +0.51] | octo-small> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-base vs octo-small@hist1 | 64/64 | 5/5 | +0.013 [-0.05, +0.08] | abstain | [-0.14, +0.16] | abstain | 否 | empirical / empirical |
-| eggplant (ms3) | octo-base vs octo-base@hist1 | 64/64 | 5/5 | +0.069 [+0.00, +0.13] | octo-base> | [-0.06, +0.12] | abstain | **是** | empirical / empirical |
+| eggplant (ms3) | octo-base vs octo-base@hist1 | 64/64 | 5/5 | +0.069 [+0.00, +0.13] | octo-base>† | [-0.06, +0.13] | abstain | **是** | empirical / empirical |
 | eggplant (ms3) | octo-base vs openvla-7b-4bit | 64/64 | 5/2 | +0.269 [+0.20, +0.34] | octo-base> | [+0.07, +0.42] | octo-base> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small@hist1 vs octo-base@hist1 | 64/64 | 5/5 | +0.056 [-0.01, +0.12] | abstain | [-0.16, +0.15] | abstain | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small@hist1 vs openvla-7b-4bit | 64/64 | 5/2 | +0.256 [+0.19, +0.32] | octo-small@hist1> | [+0.09, +0.41] | octo-small@hist1> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-base@hist1 vs openvla-7b-4bit | 64/64 | 5/2 | +0.200 [+0.13, +0.27] | octo-base@hist1> | [+0.02, +0.43] | octo-base@hist1> | 否 | empirical / empirical |
-| spoon (ms3) | octo-small vs octo-base | 24/24 | 2/2 | +0.396 [+0.23, +0.56] | octo-small> | [+0.04, +0.54] | octo-small> | 否 | empirical / empirical |
+| spoon (ms3) | octo-small vs octo-base | 24/24 | 2/2 | +0.396 [+0.23, +0.56] | octo-small> | [+0.04, +0.56] | octo-small> | 否 | empirical / empirical |
 | carrot (ms3) | octo-small vs octo-base | 24/24 | 2/2 | -0.042 [-0.12, +0.04] | abstain | [-0.20, +0.07] | abstain | 否 | empirical / empirical |
 | eggplant (ms2, original stack) | octo-small vs octo-base | 24/24 | 1/1 | +0.062 [-0.21, +0.34] | abstain | [-0.22, +0.40] | abstain | 否 | binomial (1 run/config) / binomial (1 run/config) |
 | eggplant (ms2, original stack) | octo-small vs openvla-7b-4bit | 24/24 | 1/1 | +0.438 [+0.24, +0.64] | octo-small> | [+0.24, +0.64] | octo-small> | 否 | binomial (1 run/config) / 1 run (drift unmeasured) |
-| eggplant (ms2, original stack) | octo-base vs openvla-7b-4bit | 24/24 | 1/1 | +0.375 [+0.18, +0.57] | octo-base> | [+0.12, +0.50] | octo-base> | 否 | binomial (1 run/config) / 1 run (drift unmeasured) |
+| eggplant (ms2, original stack) | octo-base vs openvla-7b-4bit | 24/24 | 1/1 | +0.375 [+0.18, +0.57] | octo-base> | [+0.12, +0.57] | octo-base> | 否 | binomial (1 run/config) / 1 run (drift unmeasured) |
 | spoon (ms2, original stack) | octo-small vs octo-base | 24/24 | 1/1 | +0.208 [-0.04, +0.46] | abstain | [-0.07, +0.56] | abstain | 否 | binomial (1 run/config) / binomial (1 run/config) |
-| carrot (ms2, original stack) | octo-small vs octo-base | 24/24 | 1/1 | +0.000 [-0.16, +0.16] | abstain | [-0.20, +0.14] | abstain | 否 | binomial (1 run/config) / binomial (1 run/config) |
+| carrot (ms2, original stack) | octo-small vs octo-base | 24/24 | 1/1 | +0.000 [-0.16, +0.16] | abstain | [-0.20, +0.16] | abstain | 否 | binomial (1 run/config) / binomial (1 run/config) |
 | pick-coke-can (ms2, fractal) | rt-1-converged vs rt-1-15pct | 300/300 | 1/1 | +0.147 [+0.08, +0.21] | rt-1-converged> | [+0.07, +0.24] | rt-1-converged> | 否 | binomial (1 run/config) / binomial (1 run/config) |
 
 不一致的策略对共 **1** 个。
+
+† 打了此标记的判定落在刀口上：把它排除出 0 的那一端界限绝对值小于 0.01，四舍五入到两位小数即为 0。**这种“宣布”与拒判之间只差数值噪声，不应与稳健的宣布同等看待。**
+
+- eggplant (ms3)，octo-small vs octo-base：点校准 [+0.000042, +0.128083]（刀口）；并集界 [+0.000042, +0.243903]（刀口）
+- eggplant (ms3)，octo-base vs octo-base@hist1：点校准 [+0.004001, +0.133499]（刀口）；并集界 [-0.063800, +0.133499]
 
 **并集所覆盖的条件数按任务不同，不可横向当作同等强度**（条件越少，并集界越接近点校准）：
 

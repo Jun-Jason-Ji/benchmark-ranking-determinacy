@@ -5,7 +5,7 @@ submission-guidelines page (`link.springer.com/journal/10514/submission-guidelin
 Springer Nature LaTeX template (December 2024), whose `sn-jnl.cls` and `sn-apacite.bst` are in this
 directory unmodified.
 
-**No blocking items remain.** The manuscript compiles at 26 pages with 0 errors, 0 overfull boxes,
+**No blocking items remain.** The manuscript compiles at 36 pages with 0 errors, 0 overfull boxes,
 0 undefined references, 0 bibtex warnings and 0 TODO markers. All 21 citations are verified against
 publisher or proceedings records with complete author lists. The code and data are published with a
 DOI. Every declaration is settled.
@@ -26,7 +26,7 @@ A portable TeX Live 2026 tree was extracted into the session scratchpad (TinyTeX
 system change to undo. Nine missing LaTeX packages were pulled with `tlmgr` (sttools, threeparttable,
 appendix, wrapfig, apacite, multirow, algorithms, algorithmicx, ncctools).
 
-Final build state: **0 errors, 0 overfull boxes, 0 undefined references, 0 bibtex warnings, 26 pages.**
+Final build state: **0 errors, 0 overfull boxes, 0 undefined references, 0 bibtex warnings, 36 pages.**
 To rebuild:
 
 ```
@@ -188,7 +188,7 @@ unverified.
 - Format: LaTeX, Springer Nature template, formatting option `[iicol]` — both applied in `main.tex`.
 - Reference style: `sn-apa`, matching the journal's author–year citations, alphabetised list, italic
   journal titles and DOIs as full links.
-- Abstract: **249 words**, inside the journal's 150–250 limit (checked, not estimated).
+- Abstract: **250 words**, inside the journal's 150–250 limit (checked, not estimated).
 - Keywords: **6**, inside the 4–6 limit.
 - Headings: decimal, three levels maximum — the manuscript uses at most two.
 - Footnotes, not endnotes. Acknowledgements in their own section.

@@ -2,9 +2,16 @@
 
 scripts/octo_bridge.sh (SimplerEnv main) evaluates every bridge task as `--obj-episode-range 0 24` under
 `for init_rng in 0 2 4`, i.e. **the full 24-configuration census repeated under three policy seeds, 72 episodes**,
-with one seed held fixed for a whole run (OctoInference seeds jax.random.PRNGKey(init_rng) at every reset).
-Our sweeps instead used policy_seed = base + episode_id, which is a different (finer) scheme, so the numbers were
-never directly comparable with the published table. `--policy-seed-fixed` reproduces the official scheme.
+with one seed given once per run. Our sweeps instead used policy_seed = base + episode_id, a different (finer)
+scheme, so the numbers were never directly comparable with the published table.
+
+WARNING -- this queue does not reproduce the official scheme, and the reason is a misreading recorded here for
+the record. `--policy-seed-fixed` sends the seed on *every* reset, and our server re-seeds whenever it receives
+one, so all 24 episodes of a cell replay one identical noise realisation. The reference does something else:
+OctoInference seeds jax.random.PRNGKey(init_rng) in __init__ only, and its reset() never touches the key
+(simpler_env/policies/octo/octo_model.py), so one stream advances across every step of every episode in a run.
+`--policy-seed-stream`, driven by queue_ms2_official_stream.py, is the faithful reproduction; this queue is kept
+because it generated the data in the `..._official` directory.
 
 Published sim success (simpler_env/utils/metrics.py, SIMPLER_SUCCESS): spoon octo-base 0.125 / octo-small 0.472;
 carrot 0.083 / 0.097; stack 0.000 / 0.042; eggplant 0.431 / 0.569 -- all n/72.

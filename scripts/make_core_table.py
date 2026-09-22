@@ -162,6 +162,7 @@ def main():
          "|---|---|---|---|---|---|---|---|---|---|"]
     disagree = 0
     used_conds = {}
+    knife = []
     for label, env, override in TASKS:
         sets = override or sets_ms3
         total = n_configs(env)
@@ -175,14 +176,36 @@ def main():
             if not inv:
                 continue
             used_conds.setdefault(label, sorted({c for c, r in got if r}, key=INVISIBLE.index))
-            lo, hi = min(r["lo"] for r in inv), max(r["hi"] for r in inv)
+            # The union runs over nominal as well as the calibration-invisible conditions. The
+            # compatible set contains the fitted nominal parameter by construction -- it is the loss
+            # minimiser, so it is never rejected -- and a union bound that omitted it would not cover
+            # the whole set. It widens no verdict here, but it is what makes the bound a bound.
+            env_rs = inv + [nom]
+            lo, hi = min(r["lo"] for r in env_rs), max(r["hi"] for r in env_rs)
             pv, uv = verdict(nom["lo"], nom["hi"], a, b), verdict(lo, hi, a, b)
             if pv != uv:
                 disagree += 1
+            # A declaration whose excluding bound rounds to +0.00 is a knife edge, and printing it
+            # at two decimals shows a reader a bound of zero next to a declared ordering. Mark it
+            # and report the bound at full precision, rather than let the rounding carry the claim.
+            edge_u = uv != "abstain" and min(abs(lo), abs(hi)) < 0.01
+            edge_p = pv != "abstain" and min(abs(nom["lo"]), abs(nom["hi"])) < 0.01
+            if edge_p or edge_u:
+                knife.append((label, f"{a} vs {b}", nom["lo"], nom["hi"], lo, hi, edge_p, edge_u))
             L.append(f"| {label} | {a} vs {b} | {nom['n']}/{total} | {nom['runs'][0]}/{nom['runs'][1]} | "
-                     f"{nom['delta']:+.3f} [{nom['lo']:+.2f}, {nom['hi']:+.2f}] | {pv} | [{lo:+.2f}, {hi:+.2f}] | {uv} | "
+                     f"{nom['delta']:+.3f} [{nom['lo']:+.2f}, {nom['hi']:+.2f}] | "
+                     f"{pv}{'†' if edge_p else ''} | [{lo:+.2f}, {hi:+.2f}] | "
+                     f"{uv}{'†' if edge_u else ''} | "
                      f"{'**是**' if pv != uv else '否'} | {nom['model']} |")
-    L += ["", f"不一致的策略对共 **{disagree}** 个。", "",
+    L += ["", f"不一致的策略对共 **{disagree}** 个。", ""]
+    if knife:
+        L += ["† 打了此标记的判定落在刀口上：把它排除出 0 的那一端界限绝对值小于 0.01，"
+              "四舍五入到两位小数即为 0。**这种“宣布”与拒判之间只差数值噪声，不应与稳健的宣布同等看待。**", ""]
+        for lab, pair, plo, phi, lo, hi, ep, eu in knife:
+            L.append(f"- {lab}，{pair}：点校准 [{plo:+.6f}, {phi:+.6f}]{'（刀口）' if ep else ''}；"
+                     f"并集界 [{lo:+.6f}, {hi:+.6f}]{'（刀口）' if eu else ''}")
+        L += [""]
+    L += [
           "**并集所覆盖的条件数按任务不同，不可横向当作同等强度**（条件越少，并集界越接近点校准）：", ""]
     for label in (t[0] for t in TASKS):
         if label in used_conds:

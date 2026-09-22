@@ -171,8 +171,32 @@ def set_arm_drives(u, cond, nominal):
                 force_limit=[float(joints[j].force_limit) for j in arm.joint_indices])
 
 
+_SEEDED = {"done": False}
+
+
 def policy_seed(args, ep):
-    """One seed for the whole run (official SIMPLER protocol) or a per-episode seed (our default)."""
+    """The seed to send with this episode's reset. Three modes, and the distinction matters.
+
+    --policy-seed-stream S  seed once, then send None so the server carries one PRNG stream across
+                            episode boundaries. This is what the reference implementation does:
+                            simpler_env/policies/octo/octo_model.py seeds in __init__ and its
+                            reset() never touches the key, so one chain advances through every step
+                            of every episode in a run. Use this for protocol-fidelity claims.
+
+    --policy-seed-fixed S   send S on every reset. Because the server re-seeds whenever it receives
+                            a seed, every episode then replays the identical noise sequence, so the
+                            configurations in a cell share one noise realisation rather than being
+                            independent draws. This is NOT the reference behaviour; it was used for
+                            the earlier reproduction and is kept only to regenerate that data.
+
+    default                 policy_seed_base + episode_id: an independent draw per episode. A
+                            legitimate design for our own sweeps, but not the reference protocol.
+    """
+    if getattr(args, "policy_seed_stream", None) is not None:
+        if _SEEDED["done"]:
+            return None
+        _SEEDED["done"] = True
+        return args.policy_seed_stream
     return args.policy_seed_fixed if args.policy_seed_fixed is not None else args.policy_seed_base + ep
 
 
@@ -187,9 +211,14 @@ def main():
     ap.add_argument("--episode-offset", type=int, default=0)
     ap.add_argument("--policy-seed-base", type=int, default=20260918)
     ap.add_argument("--policy-seed-fixed", type=int, default=None,
-                    help="Use this one policy seed for every episode, as the official SIMPLER protocol does "
-                         "(scripts/octo_bridge.sh: one --octo-init-rng per run over the whole config range), "
-                         "instead of policy_seed_base + episode_id.")
+                    help="Send this seed on every reset. The server re-seeds on each, so every episode "
+                         "replays the identical noise sequence and the configurations in a cell are not "
+                         "independent draws. This is NOT the reference behaviour -- see --policy-seed-stream. "
+                         "Kept only to regenerate the earlier reproduction data.")
+    ap.add_argument("--policy-seed-stream", type=int, default=None,
+                    help="Seed once with this value, then let one PRNG stream advance across episodes, "
+                         "which is what the reference implementation does (it seeds in __init__ and its "
+                         "reset() never touches the key). Use this for protocol-fidelity claims.")
     ap.add_argument("--output-dir", default="results/controller_sweep_ms2")
     ap.add_argument("--max-steps", type=int, default=None)
     args = ap.parse_args()
@@ -294,7 +323,20 @@ def main():
                                      obj_mass=(float(src.mass) if src is not None else None))
                     print(f"[{cname}] effective: {json.dumps(effective)}", flush=True)
                 instruction = u.get_language_instruction()
-                client.reset(instruction, policy_seed(args, ep), dict(variant_cfg or {}, policy_setup=task.get("policy_setup", "widowx_bridge")))
+                _sd = policy_seed(args, ep)
+                _rr = client.reset(instruction, _sd, dict(variant_cfg or {}, policy_setup=task.get("policy_setup", "widowx_bridge")))
+                # Verify the server applied the lifecycle we asked for. In stream mode a server
+                # without the stream patch coerces a null seed to 0 and re-seeds every episode,
+                # which is exactly the defect this mode exists to avoid -- and it would fail
+                # silently, producing plausible numbers under the wrong protocol.
+                if getattr(args, "policy_seed_stream", None) is not None:
+                    want = "reseed" if _sd is not None else "continue"
+                    got = _rr.get("rng_mode")
+                    if got != want:
+                        raise RuntimeError(
+                            "policy server does not honour stream RNG mode (episode %d sent seed=%r, "
+                            "server reports rng_mode=%r, expected %r). Restart the server from the "
+                            "current scripts/octo_policy_server.py." % (ep, _sd, got, want))
                 queue = deque([np.array([0, 0, 0, 0, 0, 0, 1.0])] * delay) if delay else None
                 gripper_closes, prev_grip, inf_s, steps, success, done_flag = 0, 1.0, 0.0, 0, False, False
                 terminated_by_policy = False

@@ -1,0 +1,80 @@
+{
+  "started_utc": "2026-09-22T12:33:26Z",
+  "args": {
+    "policy_name": "octo-small",
+    "policy_url": "http://127.0.0.1:8767",
+    "task": "widowx_put_eggplant_in_basket",
+    "preset": "variants_v1",
+    "conditions": "nominal",
+    "episodes": 24,
+    "episode_offset": 0,
+    "policy_seed_base": 20260918,
+    "policy_seed_fixed": null,
+    "policy_seed_stream": 0,
+    "output_dir": "results/controller_sweep_ms2_official_stream/seed0",
+    "max_steps": null
+  },
+  "compat": {
+    "render": "sapien2_lavapipe_via_vk_fakesemfd_layer",
+    "missing_env": []
+  },
+  "task": {
+    "env_id": "PutEggplantInBasketScene-v0",
+    "robot": "widowx_sink_camera_setup",
+    "scene": "bridge_table_1_v2",
+    "overlay": "ManiSkill2_real2sim/data/real_inpainting/bridge_sink.png",
+    "init_xy": [
+      0.127,
+      0.06
+    ],
+    "max_steps": 120
+  },
+  "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+  "evidence": "original_simpler_main_ms2_sapien2_cpu_render_wsl",
+  "server_health": {
+    "model": "octo-small",
+    "hf_id": "hf://rail-berkeley/octo-small",
+    "jax": "0.5.3",
+    "flax": "0.10.4",
+    "tensorflow": "2.18.0",
+    "numpy": "2.0.2",
+    "python": "3.11.16",
+    "jax_backend": "gpu",
+    "load_seconds": 11.96499224199215,
+    "jit_warmup_seconds": 14.248613263000152,
+    "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz",
+    "variants": "reset config: ensemble(bool), exec_horizon(int), history(int), policy_setup(str)",
+    "policy_setups": {
+      "widowx_bridge": {
+        "sticky_gripper_num_repeat": 1
+      },
+      "google_robot": {
+        "sticky_gripper_num_repeat": 15
+      }
+    },
+    "action_mean": [
+      0.00021160596224945039,
+      0.00012613728176802397,
+      -0.00017021960229612887,
+      -0.0001506186235928908,
+      -0.00023830769350752234,
+      0.0002564573078416288,
+      0.0
+    ],
+    "action_std": [
+      0.009637207724153996,
+      0.013506603427231312,
+      0.012518610805273056,
+      0.028067905455827713,
+      0.03016904927790165,
+      0.07632624357938766,
+      1.0
+    ],
+    "startup_seconds": 30.38002184999641,
+    "step_count": 63,
+    "sessions": 5,
+    "session_isolation": true
+  },
+  "variant": null,
+  "episode_protocol": "run to max_episode_steps unless the policy predicts terminate_episode (RT-1 does, Octo does not), success from final info; common episode_ids and policy seeds"
+}

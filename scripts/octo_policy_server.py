@@ -78,7 +78,7 @@ class OctoPolicy:
 
     # ---- episode state (per session; clients pass a session id so that two concurrent clients never
     # share history / ensemble / instruction state -- incident 2026-09-19, results/contaminated_2026-09-19) --
-    def reset(self, instruction: str, seed: int, config: dict = None, session: str = "default"):
+    def reset(self, instruction: str, seed=None, config: dict = None, session: str = "default"):
         """config: deployment variant (same weights) -- ensemble (bool), exec_horizon (int, open-loop
         chunk length; >1 implies no ensembling), history (int, image window 1..2) -- plus
         policy_setup ('widowx_bridge' | 'google_robot'), which selects the un-normalisation statistics
@@ -102,9 +102,30 @@ class OctoPolicy:
         st.chunk = deque()
         st.instruction = instruction
         st.task = self.model.create_tasks(texts=[instruction])
-        st.rng = jax.random.PRNGKey(int(seed))
-        for _ in range(5):  # match SIMPLER's octo server seeding
-            st.rng, _ = jax.random.split(st.rng)
+        # RNG lifecycle. The reference implementation seeds once in its constructor and never touches
+        # the key in reset(): simpler_env/policies/octo/octo_model.py sets self.rng =
+        # PRNGKey(init_rng) in __init__ (plus five warm-up splits) and its reset() resets task,
+        # image history, ensembler and sticky-gripper state only. One stream therefore advances
+        # across every step of every episode in a sweep.
+        #
+        # seed=None reproduces that: keep the session's existing stream across episode boundaries.
+        # An explicit seed re-seeds, which is our own sweep design (one independent draw per
+        # episode) and NOT what the reference does. Callers that claim protocol fidelity must send
+        # the seed on the first reset of a sweep and None thereafter.
+        # rng_mode names what this reset did to the key, not the caller's intent, so that a client
+        # can verify the lifecycle episode by episode: "continue" carried the session's stream over,
+        # "reseed" built a fresh key. rng_seed is the seed the live stream originated from.
+        prev = getattr(self, "sessions", {}).get(session)
+        if seed is None and prev is not None and hasattr(prev, "rng"):
+            st.rng = prev.rng          # continue the stream, as the reference does
+            st.rng_mode = "continue"
+            st.rng_seed = getattr(prev, "rng_seed", None)
+        else:
+            st.rng = jax.random.PRNGKey(int(seed if seed is not None else 0))
+            for _ in range(5):  # match the reference's five warm-up splits after seeding
+                st.rng, _ = jax.random.split(st.rng)
+            st.rng_mode = "reseed"
+            st.rng_seed = int(seed) if seed is not None else 0
         st.image_history = deque(maxlen=st.horizon)
         st.num_image_history = 0
         st.action_history = deque(maxlen=self.pred_action_horizon)
@@ -239,8 +260,19 @@ def make_handler(policy: OctoPolicy, meta: dict):
                     req = json.loads(body)
                     session = str(req.get("session", "default"))
                     with policy.lock:
-                        policy.reset(req["instruction"], int(req.get("seed", 0)), req.get("config"), session=session)
-                    self._json(200, {"ok": True, "instruction": req["instruction"], "session": session})
+                        # A missing or null seed means "continue this session's RNG stream", which is
+                        # what the reference implementation does across episodes. Do not coerce to 0.
+                        _sd = req.get("seed", None)
+                        policy.reset(req["instruction"], None if _sd is None else int(_sd),
+                                     req.get("config"), session=session)
+                    _st = policy.sessions[session]
+                    # Echo the lifecycle the server actually applied. A client claiming protocol
+                    # fidelity must verify this rather than trust that the running server carries
+                    # the stream patch: an older build coerces a null seed to 0 and silently
+                    # reproduces the per-episode re-seed we are trying to eliminate.
+                    self._json(200, {"ok": True, "instruction": req["instruction"], "session": session,
+                                     "rng_mode": getattr(_st, "rng_mode", None),
+                                     "rng_seed": getattr(_st, "rng_seed", None)})
                 elif self.path == "/step":
                     shape = tuple(int(v) for v in self.headers["X-Shape"].split(","))
                     img = np.frombuffer(body, dtype=np.uint8).reshape(shape)
