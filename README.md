@@ -20,6 +20,7 @@ redistribute simulator assets, policy checkpoints or the source datasets; see
 | What changed between releases | [`CHANGELOG.md`](CHANGELOG.md) |
 | Integrity of the record files | [`SHA256SUMS.txt`](SHA256SUMS.txt) - 997 files, `sha256sum -c` |
 | Third-party components | [`NOTICE.md`](NOTICE.md) |
+| Licence | [`LICENSE`](LICENSE) - MIT for original code; records and derived outputs per `NOTICE.md` |
 | The manuscript as submitted | `submission/autonomous_robots/` |
 
 One number is carried in deliberately unreconciled - the implementation-build drift in Table 3. See

@@ -50,9 +50,11 @@ keywords:
   - partial identification
   - benchmark reproducibility
   - robot manipulation
-# TODO-AUTHOR: set once, then never edit in place -- Zenodo reads this at tag time.
+# Matches the previous release in this line: MIT for original code, with NOTICE.md
+# governing evaluation records and anything inherited from upstream. Zenodo reads this
+# file at tag time, so it must be correct before the tag, not after.
 license: MIT
 version: 1.0.0
 date-released: "2026-09-22"
-# repository-code: https://github.com/Jun-Jason-Ji/<repo>
+repository-code: "https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy"
 # doi: 10.5281/zenodo.XXXXXXXX      # concept DOI, filled in after the first Zenodo release
