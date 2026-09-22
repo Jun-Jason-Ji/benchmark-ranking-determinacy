@@ -57,4 +57,5 @@ license: MIT
 version: 1.0.0
 date-released: "2026-09-22"
 repository-code: "https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy"
-# doi: 10.5281/zenodo.XXXXXXXX      # concept DOI, filled in after the first Zenodo release
+doi: "10.5281/zenodo.22893458"   # concept DOI: always resolves to the newest version
+# version DOI for v1.0.0, the snapshot the manuscript cites: 10.5281/zenodo.22893459

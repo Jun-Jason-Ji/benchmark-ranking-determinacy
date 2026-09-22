@@ -8,6 +8,9 @@ frozen — see the note at the foot of this file.
 
 First release, accompanying submission of the manuscript to *Autonomous Robots*.
 
+- Version DOI: [10.5281/zenodo.22893459](https://doi.org/10.5281/zenodo.22893459)
+- Concept DOI: [10.5281/zenodo.22893458](https://doi.org/10.5281/zenodo.22893458) (always the newest version)
+
 - Evaluation harness, six resumable queues, and the configuration-census utilities.
 - 784 per-episode record files (22.3 MB) covering every table and figure, plus the append-only
   `runs.jsonl` provenance logs.

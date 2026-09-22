@@ -4,7 +4,9 @@ Reproducibility release for the manuscript *What Determines a Simulation Benchma
 Structural Blindness, Finite Configuration Grids, and Evaluation Budget in Simulation-Based Policy
 Comparison*, submitted to *Autonomous Robots*.
 
-<!-- TODO-AUTHOR: add the Zenodo DOI badge here once the first release is tagged. -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22893458.svg)](https://doi.org/10.5281/zenodo.22893458)
+
+Archived release: [`10.5281/zenodo.22893459`](https://doi.org/10.5281/zenodo.22893459) (v1.0.0, the snapshot the manuscript cites). The badge above points at the concept DOI, which always resolves to the newest version.
 
 **Start here:** [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) - what is in this release, and the exact
 commands that regenerate every table and figure from the per-episode records.

@@ -6,8 +6,8 @@ the interface appears in the published version.** The same text is in `main.tex`
 the corresponding interface field.
 
 Review every one of these before submitting — several are assertions about the authors, not about the
-research. Funding and competing interests are settled; **Author Contributions is the one still
-outstanding.**
+research. All of them are now settled, including the archived DOI. The only item needing your own
+words is the generative-AI disclosure at the foot, and a draft of it is in the manuscript.
 
 ---
 
@@ -43,17 +43,20 @@ Not applicable.
 ## Data availability
 
 ```
-All episode-level records underlying the results are released with the code repository as
-append-only JSON Lines files, one per policy, task and simulator condition, together with the
-per-run provenance log recording the port branch, inference-stack version and random seeds for every
-episode. The real-robot reference values used in Section 8.4 are the published values distributed
-with the benchmark's own source and are not ours to redistribute; the manuscript cites their
-location.
+All episode-level records underlying the results are openly available in the archived release at
+https://doi.org/10.5281/zenodo.22893459 (version 1.0.0; https://doi.org/10.5281/zenodo.22893458
+resolves to the latest version), with development at
+https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
+files, one per policy, task and simulator condition, together with the per-run provenance log
+recording the port branch, inference-stack version and random seeds for every episode, and
+SHA256SUMS.txt over the 997 record files. The real-robot reference values used in Section 8.4 are
+the published values distributed with the benchmark's own source and are not ours to redistribute;
+the manuscript cites their location.
 ```
 
-> ⚠️ Add the repository URL once it is public. If the repository is not yet public at submission,
-> say so and state that it will be released on acceptance — do not describe data as available if a
-> reviewer cannot reach it.
+> ✅ Published 2026-09-22. Version DOI **10.5281/zenodo.22893459** (v1.0.0, the snapshot the manuscript cites);
+> concept DOI **10.5281/zenodo.22893458** always resolves to the newest version. Repository: https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy
+> Both are public now, so the statement is true as written.
 
 ## Materials availability
 
@@ -66,13 +69,15 @@ Not applicable.
 ```
 The evaluation harness, the configuration-census utilities, the resumable evaluation queues, the
 analysis scripts that generate every table and figure in this paper, and the Vulkan compatibility
-layer that allows the original reference stack to render headless on a host without a GPU are
-released under an open licence.
+layer that allows the original reference stack to render headless on a host without a GPU are openly
+available in the same archived release, https://doi.org/10.5281/zenodo.22893459, under the MIT
+licence for original code; evaluation records and outputs derived from third-party simulators,
+policies and demonstration data are governed by the NOTICE file in that release.
+REPRODUCIBILITY.md gives the commands that regenerate every table and figure from the records.
 ```
 
-> ⚠️ Add the URL, and a DOI if you archive a release (Zenodo or similar). A DOI is worth minting:
-> the reproducibility assets are one of the paper's contributions and a bare repository URL is a
-> weaker claim than an archived snapshot.
+> ✅ Same archived release: https://doi.org/10.5281/zenodo.22893459 — MIT for original code, with records and
+> derived outputs governed by the NOTICE file in the release.
 
 ## Author contributions
 
@@ -127,11 +132,15 @@ Affiliations as typeset:
 
 ## Generative AI disclosure
 
-> The journal states that large language models do not satisfy authorship criteria and cannot be
-> listed as authors, and Springer requires disclosure of generative-AI use in the writing process.
-> Check the journal's current wording at submission time and disclose accurately. This is yours to
-> decide and state; I have not drafted wording for it, because the accurate description of what was
-> used and how is something only you can attest to.
+> A draft is in the manuscript's Acknowledgements, under "Use of generative artificial
+> intelligence". It is written to match the actual extent of use — drafting and revising prose,
+> writing the analysis and figure-generation code, template conversion, and citation checking — with
+> study design, interpretation and every claim decision attributed to the authors, all quantitative
+> results computed by the released scripts, and no language model listed as an author.
+>
+> ⚠️ Read it and confirm it matches your own account before submitting. It is deliberately not
+> phrased as language editing, because that would understate it. Check the journal's current wording
+> at submission time as well, since these policies change.
 
 ---
 
