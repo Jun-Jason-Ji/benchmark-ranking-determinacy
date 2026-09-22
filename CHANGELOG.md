@@ -4,6 +4,24 @@ Versions are tagged in git and archived on Zenodo. **A tag is a promise**: once 
 for it, that snapshot is permanent and the manuscript will cite it. Tag only when the manuscript is
 frozen — see the note at the foot of this file.
 
+## v1.1.1 -- 2026-09-22
+
+Punctuation-level release, tagged so the archived snapshot is byte-exact with the manuscript as
+submitted. No number, claim, figure or record changed.
+
+- `references.bib`: RoboArena's author list carried `Mart{'i}n-Mart{'i}n` with the backslashes
+  stripped, which would have copy-edited as an apostrophe rather than an accent. It never appeared
+  in the rendered bibliography because apacite truncates that 26-author list, which is why only
+  reading the source caught it.
+- Sect. 5.5's scope remark said "five seed sets" flatly while Appendix C shows spoon and carrot have
+  two. It now says where five exist and points at the appendix.
+- Removed three packages loaded from the template's example preamble and never used.
+- The comment on Table 3's drift row was a development note; replaced with a neutral pointer to the
+  script whose docstring carries the derivation.
+- `SUBMISSION_CHECKLIST.md` reconciled with the work it describes.
+
+---
+
 ## v1.1.0 -- 2026-09-22
 
 - Version DOI: [10.5281/zenodo.22895382](https://doi.org/10.5281/zenodo.22895382)
