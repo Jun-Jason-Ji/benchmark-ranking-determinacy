@@ -158,11 +158,14 @@ single-variant reproduction measures.
 \paragraph{The published protocol does not resolve the rankings it reports (Sect.~\ref{sec6}).}
 We follow the reference protocol, including its pseudo-random-number lifecycle, and reproduce the
 published success rates to a mean absolute difference of 0.038 across eight cells, and on the second
-embodiment to $+0.003$ and $-0.040$. The agreement carries a systematic offset --- seven of eight
-cells fall below the published value, mean $-0.038$ with $95\%$ CI $[-0.074, -0.002]$ --- which is an
-order of magnitude below the effects this paper is about, and which we report because our own first
-reproduction did not show it: that run re-seeded the policy every episode, which inflated its
-variance and let a noisier estimator look like a closer match (Sect.~\ref{subsec6_2}). At the
+embodiment to $+0.003$ and $-0.040$. The differences are one-signed --- six of the eight cells fall
+below the published value, two match it, none exceeds it, mean $-0.038$ --- and we report that
+because our own first reproduction did not show it: that run re-seeded the policy every episode,
+which inflated its variance and let a noisier estimator look like a closer match
+(Sect.~\ref{subsec6_2}). We do not convert those eight cells into a platform constant; they share
+tasks, policies and seeds. What licenses the rest of the paper is narrower and sufficient: every
+effect we report is a difference between two policies measured in the same configuration on one
+pipeline, where a common offset cancels. At the
 protocol's own 72-episode budget, one of the four policy orderings it reports is statistically
 resolvable under the variance model the protocol's own randomisation implies, and two under a
 coarser model that treats each run rather than each configuration as the replication unit; we report
@@ -205,8 +208,8 @@ conditional rate instead and can differ by $-0.173$ to $+0.227$ with nothing wro
 lifecycle, showing that its own budget resolves one of the four orderings it reports (two under a
 coarser variance model, which we report as a sensitivity), and that the
 lifecycle itself is consequential: re-seeding the policy each episode instead of advancing one
-stream doubles the across-run spread of a cell's rate (0.052 to 0.109), hides a systematic $-0.038$
-platform offset behind the extra variance, and decided the sign of one comparison.
+stream doubles the across-run spread of a cell's rate (0.052 to 0.109), changes the mean difference
+from the published rates from $-0.005$ to $-0.038$, and decided the sign of one comparison.
 \item (Sect.~\ref{sec7}) A decision-relevant instance of non-identifiability --- a
 calibration-invisible torque limit that displaces a policy difference by 0.121 and moves verdicts from
 decidable to abstaining --- stated, after our own larger-budget replication, as a property of the
@@ -915,7 +918,7 @@ in-process. Published values are read from the pinned metrics table distributed 
 episode, that the server applied the lifecycle it asked for; \texttt{analyze\_official\_protocol.py
 --compare} prints the two side by side.
 
-\subsection{The reproduction agrees, with a systematic offset}\label{subsec6_2}
+\subsection{The reproduction agrees, and the differences are one-signed}\label{subsec6_2}
 
 \begin{table*}[t]
 \caption{Our 72-episode reproduction against the published values, under the reference RNG
@@ -1074,7 +1077,7 @@ calibration-invisible torque limit. That these two are comparable is the paper's
 claim, and Sect.~\ref{subsec6_2} establishes that we can say it about the benchmark as published, not
 merely about our port of it.
 
-Two qualifications travel with that licence. Our rates sit systematically $0.038$ below the published
+Two qualifications travel with that licence. Our rates average $0.038$ below the published
 ones, so a comparison of an absolute rate of ours against a published absolute rate should carry that
 offset; every claim in Sects.~\ref{sec7} and~\ref{sec8} is instead a \emph{difference} between two
 policies measured in the same configuration, where a common offset cancels. And the RNG lifecycle is
@@ -1736,7 +1739,7 @@ independent simulator stacks. The benchmark's initial states form a finite
 population of 24 to 300 configurations rather than a sample, so enumerating them sets configuration
 sampling error to zero, and two widely used ports enumerate different populations. And following the
 published protocol, down to the pseudo-random-number lifecycle its wrapper implies, reproduces its
-rates to 0.038 with a systematic $-0.038$ offset, while showing that its own 72-episode budget
+rates to 0.038 mean absolute difference, one-signed across the eight cells, while showing that its own 72-episode budget
 resolves one of the four orderings it reports --- two under a coarser variance model, a sensitivity
 we report rather than choose between on the strength of the conclusion.
 
@@ -2037,7 +2040,7 @@ approximate implementation for a real one. Second, and more convincing, the chec
 Sect.~\ref{subsec6_2}: this software-rendered, layer-mediated configuration reproduces the
 published success rates to a mean absolute difference of 0.038 across eight cells, and to $+0.003$
 and $-0.040$ on the second embodiment. A renderer that differed materially from the reference would
-not agree to within one seed's worth of noise. The systematic part of that difference ($-0.038$) is
+not agree to within one seed's worth of noise. The one-signed part of that difference ($-0.038$) is
 consistent with a rendering or physics-backend gap and we do not attribute it to the layer
 specifically; what the check bounds is the total, which is small.
 
@@ -2142,9 +2145,9 @@ computed that way the build effect of Table~\ref{tab3} changes by roughly a fact
 And match the \emph{pseudo-random-number lifecycle}, not only the loop structure. A per-episode
 re-seed and a single advancing stream can share an outer loop and still measure different things:
 the first makes a run one noise realisation replicated across the grid. On the protocol of
-Sect.~\ref{sec6} that choice doubled the across-run spread of a cell's rate (0.052 to 0.109), hid a
-systematic $-0.038$ offset from the published rates behind the extra variance, and decided the sign
-of one comparison --- the retraction in Sect.~\ref{subsec1_2}. Our inference server therefore reports
+Sect.~\ref{sec6} that choice doubled the across-run spread of a cell's rate (0.052 to 0.109), moved
+the mean difference from the published rates from $-0.005$ to $-0.038$, and decided the sign of one
+comparison --- the retraction in Sect.~\ref{subsec1_2}. Our inference server therefore reports
 which lifecycle it applied on every reset, and the sweep asserts it, because the failure mode is
 silent: a server without the fix coerces an absent seed to zero and returns plausible numbers under
 the wrong protocol.
