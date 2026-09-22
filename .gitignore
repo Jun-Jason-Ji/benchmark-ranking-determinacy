@@ -1,0 +1,28 @@
+# --- environments and vendored trees (2.5 GB of third_party, 189 MB of data) ---
+.runtime/
+.venv-*/
+third_party/
+checkpoints/
+data/
+__pycache__/
+*.pyc
+core
+core.*
+
+# --- build noise, not evidence ---
+# 57.8 MB across 67 files of captured stderr. The provenance claim of this release rests on the
+# append-only runs.jsonl records, not on stderr, so these are excluded to keep the archive legible.
+results/**/*.err
+
+# --- LaTeX intermediates ---
+submission/**/*.aux
+submission/**/*.log
+submission/**/*.out
+submission/**/*.blg
+submission/**/*-eps-converted-to.pdf
+
+# Kept deliberately, against the usual advice:
+#   results/**/*.jsonl   the per-episode records -- the evidence for every table
+#   results/**/runs.jsonl the append-only provenance log (contribution C7)
+#   results/**/*.npz      per-episode replay trajectories -- the evidence for C1's exact invariance
+#   submission/**/main.pdf and main.bbl  the compiled manuscript as submitted

@@ -1,0 +1,97 @@
+==== Sat 09/19/2026 22:58:23.70 restarted scheduler after busy_ports crash (queue_refresh_analyses) 
+23:02:23 === refreshing analyses after OCTO_RECOLLECT_DONE
+23:02:24 analyze_platform_drift.py rc=0
+23:02:24 analyze_seed_noise.py rc=0
+23:02:24 analyze_benchmark_value.py rc=0
+23:02:25 analyze_cluster_bootstrap.py rc=0
+05:40:25 === refreshing analyses after OPENVLA_CENSUS_DONE
+05:40:25 analyze_benchmark_value.py rc=0
+05:40:26 analyze_openvla_torque_sets.py rc=0
+05:40:26 analyze_benchmark_value.py rc=0
+05:40:27 analyze_cross_stack.py rc=0
+==== Sun 09/20/2026  7:28:04.13 restarted scheduler after busy_ports crash (queue_refresh_analyses) 
+07:28:04 === refreshing analyses after OCTO_RECOLLECT_DONE
+07:28:04 analyze_platform_drift.py rc=0
+07:28:05 analyze_seed_noise.py rc=0
+07:28:06 analyze_benchmark_value.py rc=0
+07:28:08 analyze_cluster_bootstrap.py rc=0
+07:28:08 === refreshing analyses after OPENVLA_CENSUS_DONE
+07:28:08 analyze_benchmark_value.py rc=0
+07:28:09 analyze_openvla_torque_sets.py rc=0
+07:28:10 analyze_benchmark_value.py rc=0
+07:28:10 analyze_cross_stack.py rc=0
+==== Sun 09/20/2026  7:37:25.49 restarted scheduler after busy_ports crash (queue_refresh_analyses) 
+07:37:25 === refreshing analyses after OCTO_RECOLLECT_DONE
+07:37:26 analyze_platform_drift.py rc=0
+07:37:26 analyze_seed_noise.py rc=0
+07:37:27 analyze_benchmark_value.py rc=0
+07:37:29 analyze_cluster_bootstrap.py rc=0
+07:37:29 === refreshing analyses after OPENVLA_CENSUS_DONE
+07:37:29 analyze_benchmark_value.py rc=0
+07:37:31 analyze_openvla_torque_sets.py rc=0
+07:37:31 analyze_benchmark_value.py rc=0
+07:37:32 analyze_cross_stack.py rc=0
+09:11:32 === refreshing analyses after UNION_CONDS_DONE
+09:11:32 analyze_benchmark_value.py rc=0
+09:11:33 analyze_seed_noise.py rc=0
+12:25:34 === refreshing analyses after T1_UNION_HIST1_DONE
+12:25:35 make_core_table.py rc=0
+12:25:35 analyze_benchmark_value.py rc=0
+13:51:35 === refreshing analyses after MS2_OFFICIAL_DONE
+13:51:36 analyze_official_protocol.py rc=0
+13:51:36 make_core_table.py rc=0
+==== Sun 09/20/2026 18:59:26.10 restarted scheduler after busy_ports crash (queue_refresh_analyses) 
+18:59:26 === refreshing analyses after OCTO_RECOLLECT_DONE
+18:59:26 analyze_platform_drift.py rc=0
+18:59:26 analyze_seed_noise.py rc=0
+18:59:26 analyze_benchmark_value.py rc=0
+18:59:27 analyze_cluster_bootstrap.py rc=0
+18:59:27 === refreshing analyses after OPENVLA_CENSUS_DONE
+18:59:27 analyze_benchmark_value.py rc=0
+18:59:28 analyze_openvla_torque_sets.py rc=0
+18:59:28 analyze_benchmark_value.py rc=0
+18:59:29 analyze_cross_stack.py rc=0
+18:59:29 === refreshing analyses after UNION_CONDS_DONE
+18:59:29 analyze_benchmark_value.py rc=0
+18:59:30 analyze_seed_noise.py rc=0
+18:59:30 === refreshing analyses after T1_UNION_HIST1_DONE
+18:59:30 make_core_table.py rc=0
+18:59:30 analyze_benchmark_value.py rc=0
+18:59:30 === refreshing analyses after MS2_OFFICIAL_DONE
+18:59:31 analyze_official_protocol.py rc=0
+18:59:31 make_core_table.py rc=0
+==== Sun 09/20/2026 19:07:32.47 restarted scheduler after busy_ports crash (queue_refresh_analyses) 
+19:07:32 === refreshing analyses after OCTO_RECOLLECT_DONE
+19:07:32 stage already snapshotted; this replay goes to OCTO_RECOLLECT_DONE__replay_20260921T020732Z
+19:07:33 analyze_platform_drift.py rc=0
+19:07:33 analyze_seed_noise.py rc=0
+19:07:34 analyze_benchmark_value.py rc=0
+19:07:35 analyze_cluster_bootstrap.py rc=0
+19:07:35 === refreshing analyses after OPENVLA_CENSUS_DONE
+19:07:35 stage already snapshotted; this replay goes to OPENVLA_CENSUS_DONE__replay_20260921T020735Z
+19:07:36 analyze_benchmark_value.py rc=0
+19:07:37 analyze_openvla_torque_sets.py rc=0
+19:07:37 analyze_benchmark_value.py rc=0
+19:07:38 analyze_cross_stack.py rc=0
+19:07:38 === refreshing analyses after UNION_CONDS_DONE
+19:07:38 stage already snapshotted; this replay goes to UNION_CONDS_DONE__replay_20260921T020738Z
+19:07:38 analyze_benchmark_value.py rc=0
+19:07:39 analyze_seed_noise.py rc=0
+19:07:39 === refreshing analyses after T1_UNION_HIST1_DONE
+19:07:39 stage already snapshotted; this replay goes to T1_UNION_HIST1_DONE__replay_20260921T020739Z
+19:07:40 make_core_table.py rc=0
+19:07:41 analyze_benchmark_value.py rc=0
+19:07:41 === refreshing analyses after MS2_OFFICIAL_DONE
+19:07:41 stage already snapshotted; this replay goes to MS2_OFFICIAL_DONE__replay_20260921T020741Z
+19:07:41 analyze_official_protocol.py rc=0
+19:07:42 make_core_table.py rc=0
+19:33:42 === refreshing analyses after T1B_NEARTIED_DONE
+19:33:43 make_core_table.py rc=0
+19:33:43 analyze_benchmark_value.py rc=0
+19:33:44 make_figures_v2.py rc=0
+04:37:45 === refreshing analyses after T2A_SEEDS_DONE
+04:37:51 make_core_table.py rc=0
+04:37:52 analyze_benchmark_value.py rc=0
+04:37:53 analyze_seed_noise.py rc=0
+04:37:57 make_figures_v2.py rc=0
+04:37:57 REFRESH_DONE

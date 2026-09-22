@@ -1,0 +1,115 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-19 15:48:56,461 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-19 15:48:56,521 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-19 15:48:56,539 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 0 success=False steps=120 inf=57.0s sim=2.3s total=61.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 1 success=False steps=120 inf=59.0s sim=2.2s total=63.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 2 success=True steps=120 inf=57.7s sim=1.8s total=61.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 3 success=False steps=120 inf=57.4s sim=2.6s total=61.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 4 success=False steps=120 inf=57.4s sim=2.4s total=61.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 5 success=False steps=120 inf=57.4s sim=2.5s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 6 success=False steps=120 inf=57.6s sim=2.8s total=62.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 7 success=False steps=120 inf=59.0s sim=2.7s total=63.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 8 success=False steps=120 inf=57.5s sim=2.4s total=61.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 9 success=False steps=120 inf=57.2s sim=2.4s total=61.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 10 success=False steps=120 inf=57.3s sim=2.4s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 11 success=False steps=120 inf=58.0s sim=2.6s total=62.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 12 success=True steps=120 inf=58.6s sim=2.1s total=62.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 13 success=False steps=120 inf=58.1s sim=2.4s total=62.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 14 success=True steps=120 inf=57.7s sim=2.2s total=61.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 15 success=False steps=120 inf=57.4s sim=2.4s total=61.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 16 success=False steps=120 inf=57.7s sim=2.5s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 17 success=False steps=120 inf=57.4s sim=2.5s total=61.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 18 success=False steps=120 inf=59.2s sim=2.4s total=63.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 19 success=False steps=120 inf=57.7s sim=2.5s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 20 success=False steps=120 inf=57.7s sim=2.6s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 21 success=False steps=120 inf=57.5s sim=2.4s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 22 success=False steps=120 inf=58.0s sim=2.8s total=62.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 23 success=False steps=120 inf=57.6s sim=2.5s total=61.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 24 success=False steps=120 inf=59.1s sim=2.4s total=63.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 25 success=True steps=120 inf=57.8s sim=2.6s total=62.2s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 26 success=False steps=120 inf=57.5s sim=2.3s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 27 success=False steps=120 inf=57.7s sim=2.2s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 28 success=False steps=120 inf=57.8s sim=2.6s total=62.2s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 29 success=False steps=120 inf=57.8s sim=2.1s total=61.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 30 success=False steps=120 inf=59.0s sim=2.3s total=63.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 31 success=False steps=120 inf=57.6s sim=2.4s total=61.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 32 success=False steps=120 inf=57.4s sim=2.7s total=61.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 33 success=False steps=120 inf=57.6s sim=2.1s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 34 success=False steps=120 inf=57.5s sim=2.7s total=61.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 35 success=False steps=120 inf=58.0s sim=2.6s total=62.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 36 success=True steps=120 inf=58.7s sim=2.6s total=63.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 37 success=False steps=120 inf=57.7s sim=2.5s total=62.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 38 success=True steps=120 inf=57.3s sim=2.3s total=61.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 39 success=True steps=120 inf=57.5s sim=2.7s total=61.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 40 success=False steps=120 inf=57.3s sim=2.6s total=61.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 41 success=False steps=120 inf=58.2s sim=2.3s total=62.2s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 42 success=False steps=120 inf=58.1s sim=2.3s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 43 success=False steps=120 inf=57.4s sim=2.6s total=61.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 44 success=False steps=120 inf=57.2s sim=2.9s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 45 success=False steps=120 inf=57.6s sim=2.7s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 46 success=False steps=120 inf=57.3s sim=2.4s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 47 success=False steps=120 inf=59.2s sim=2.9s total=63.8s
+== nominal: 7/48 success
+[33;1m2026-09-19 16:38:36,544 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-19 16:38:36,546 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-19 16:38:36,546 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 0 success=False steps=120 inf=57.5s sim=2.7s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 1 success=True steps=120 inf=57.1s sim=2.6s total=61.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 2 success=True steps=120 inf=57.1s sim=2.1s total=61.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 3 success=True steps=120 inf=59.6s sim=2.8s total=64.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 4 success=True steps=120 inf=60.1s sim=2.7s total=64.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 5 success=False steps=120 inf=59.8s sim=2.5s total=64.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 6 success=True steps=120 inf=59.7s sim=2.5s total=63.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 7 success=False steps=120 inf=59.8s sim=2.8s total=64.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 8 success=True steps=120 inf=89.4s sim=3.0s total=94.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 9 success=False steps=120 inf=118.6s sim=4.8s total=125.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 10 success=True steps=120 inf=109.9s sim=4.9s total=116.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 11 success=False steps=120 inf=110.4s sim=5.3s total=117.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 12 success=True steps=120 inf=111.1s sim=4.4s total=117.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 13 success=False steps=120 inf=115.2s sim=4.5s total=121.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 14 success=True steps=120 inf=114.5s sim=4.9s total=122.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 15 success=False steps=120 inf=113.0s sim=5.0s total=120.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 16 success=True steps=120 inf=124.6s sim=4.4s total=131.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 17 success=False steps=120 inf=123.5s sim=5.3s total=130.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 18 success=False steps=120 inf=113.1s sim=5.1s total=120.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 19 success=False steps=120 inf=113.4s sim=5.3s total=120.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 20 success=False steps=120 inf=110.8s sim=4.0s total=117.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 21 success=False steps=120 inf=110.5s sim=4.8s total=117.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 22 success=True steps=120 inf=111.3s sim=5.0s total=118.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 23 success=True steps=120 inf=106.6s sim=5.1s total=113.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 24 success=False steps=120 inf=107.7s sim=4.7s total=114.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 25 success=False steps=120 inf=108.9s sim=4.4s total=115.5s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 26 success=False steps=120 inf=108.9s sim=4.6s total=115.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 27 success=False steps=120 inf=109.0s sim=4.8s total=116.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 28 success=False steps=120 inf=109.0s sim=5.0s total=116.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 29 success=False steps=120 inf=108.4s sim=4.5s total=115.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 30 success=False steps=120 inf=107.2s sim=4.5s total=114.2s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 31 success=False steps=120 inf=107.7s sim=4.3s total=114.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 32 success=False steps=120 inf=106.7s sim=5.0s total=113.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 33 success=False steps=120 inf=106.7s sim=4.8s total=113.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 34 success=False steps=120 inf=107.5s sim=4.4s total=114.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 35 success=True steps=120 inf=107.3s sim=5.2s total=114.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 36 success=False steps=120 inf=106.4s sim=5.0s total=113.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 37 success=True steps=120 inf=104.2s sim=4.1s total=110.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 38 success=True steps=120 inf=105.9s sim=4.8s total=113.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 39 success=True steps=120 inf=106.6s sim=5.0s total=113.8s
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-19 19:25:54,235 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-19 19:25:54,495 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-19 19:25:54,513 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+== nominal: 7/48 success
+[33;1m2026-09-19 19:25:55,424 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-19 19:25:55,425 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-19 19:25:55,425 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 40 success=False steps=120 inf=67.0s sim=2.2s total=70.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 41 success=False steps=120 inf=61.2s sim=2.5s total=65.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 42 success=False steps=120 inf=83.5s sim=3.9s total=89.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 43 success=False steps=120 inf=58.5s sim=1.9s total=62.1s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 44 success=False steps=120 inf=59.3s sim=3.3s total=64.4s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 45 success=False steps=120 inf=64.1s sim=3.2s total=69.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 46 success=True steps=120 inf=69.4s sim=2.6s total=73.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|force_x0.5] ep 47 success=True steps=120 inf=63.3s sim=3.0s total=68.1s
+== force_x0.5: 18/48 success

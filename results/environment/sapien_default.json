@@ -1,0 +1,8 @@
+{
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "VK_ICD_FILENAMES": null,
+  "status": "failed",
+  "physics_engine": "created",
+  "error_type": "RuntimeError",
+  "error": "vk::PhysicalDevice::createDeviceUnique: ErrorExtensionNotPresent"
+}

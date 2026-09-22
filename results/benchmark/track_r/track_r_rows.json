@@ -1,0 +1,245 @@
+[
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "point",
+  "A": "+",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-small@hist1",
+  "method": "point",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-small@hist1",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-small@hist1",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base@hist1",
+  "method": "point",
+  "A": "0",
+  "B": "+"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base@hist1",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base@hist1",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-base vs octo-small@hist1",
+  "method": "point",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-base vs octo-small@hist1",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-base vs octo-small@hist1",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-base vs octo-base@hist1",
+  "method": "point",
+  "A": "0",
+  "B": "+"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-base vs octo-base@hist1",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-base vs octo-base@hist1",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small@hist1 vs octo-base@hist1",
+  "method": "point",
+  "A": "0",
+  "B": "+"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small@hist1 vs octo-base@hist1",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_seedsets",
+  "kind": "seed sets 20260918 vs 20270101 (ManiSkill3)",
+  "grid_match": true,
+  "pair": "octo-small@hist1 vs octo-base@hist1",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": false,
+  "pair": "octo-small vs octo-base",
+  "method": "point",
+  "A": "+",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": false,
+  "pair": "octo-small vs octo-base",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "eggplant_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": false,
+  "pair": "octo-small vs octo-base",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "spoon_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "point",
+  "A": "+",
+  "B": "+"
+ },
+ {
+  "dataset": "spoon_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "union_ctrl",
+  "A": "+",
+  "B": "0"
+ },
+ {
+  "dataset": "spoon_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "carrot_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "point",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "carrot_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "union_ctrl",
+  "A": "0",
+  "B": "0"
+ },
+ {
+  "dataset": "carrot_stacks",
+  "kind": "ManiSkill3 vs original SIMPLER main (same seeds)",
+  "grid_match": true,
+  "pair": "octo-small vs octo-base",
+  "method": "union_all",
+  "A": "0",
+  "B": "0"
+ }
+]

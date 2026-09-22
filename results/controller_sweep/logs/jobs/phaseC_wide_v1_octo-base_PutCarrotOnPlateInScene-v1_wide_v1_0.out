@@ -1,0 +1,142 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-18 14:05:00,270 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 14:05:00,343 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_carrot_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 14:05:00,350 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_plate_objaverse_larger, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 0 success=False steps=60 inf=9.9s sim=1.5s total=13.1s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 1 success=False steps=60 inf=10.4s sim=1.7s total=13.7s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 2 success=False steps=60 inf=10.0s sim=1.8s total=13.6s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 3 success=False steps=60 inf=9.9s sim=1.8s total=13.6s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 4 success=False steps=60 inf=10.0s sim=1.9s total=13.8s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 5 success=False steps=60 inf=11.3s sim=1.8s total=14.9s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 6 success=False steps=60 inf=10.5s sim=1.8s total=14.1s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 7 success=False steps=60 inf=11.4s sim=1.9s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 8 success=False steps=60 inf=11.0s sim=1.9s total=14.8s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 9 success=False steps=60 inf=12.0s sim=1.6s total=15.5s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 10 success=False steps=60 inf=11.4s sim=1.7s total=14.9s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 11 success=False steps=60 inf=12.0s sim=1.7s total=15.9s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 12 success=False steps=60 inf=12.1s sim=1.9s total=16.0s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 13 success=False steps=60 inf=10.9s sim=1.8s total=14.5s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 14 success=False steps=60 inf=11.4s sim=1.9s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 15 success=False steps=60 inf=10.8s sim=2.0s total=14.8s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 16 success=False steps=60 inf=11.8s sim=1.8s total=15.9s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 17 success=False steps=60 inf=11.6s sim=1.9s total=15.6s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 18 success=False steps=60 inf=12.2s sim=1.7s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 19 success=False steps=60 inf=11.3s sim=1.8s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 20 success=False steps=60 inf=11.7s sim=1.9s total=15.5s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 21 success=False steps=60 inf=11.4s sim=1.8s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 22 success=False steps=60 inf=11.9s sim=1.8s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x0.25] ep 23 success=False steps=60 inf=12.2s sim=1.7s total=15.9s
+== stiff_x0.25: 0/24 success
+[33;1m2026-09-18 14:10:59,998 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 14:11:00,000 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_carrot_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 14:11:00,001 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_plate_objaverse_larger, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 0 success=False steps=60 inf=11.2s sim=1.7s total=14.9s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 1 success=False steps=60 inf=11.7s sim=1.9s total=15.5s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 2 success=False steps=60 inf=10.6s sim=2.0s total=14.4s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 3 success=False steps=60 inf=11.1s sim=2.1s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 4 success=False steps=60 inf=11.7s sim=1.8s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 5 success=False steps=60 inf=11.6s sim=2.0s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 6 success=False steps=60 inf=11.1s sim=1.9s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 7 success=False steps=60 inf=11.7s sim=1.9s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 8 success=False steps=60 inf=11.4s sim=1.7s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 9 success=False steps=60 inf=10.7s sim=1.9s total=14.4s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 10 success=False steps=60 inf=10.5s sim=2.0s total=14.4s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 11 success=False steps=60 inf=11.4s sim=2.0s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 12 success=False steps=60 inf=11.1s sim=1.9s total=14.8s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 13 success=False steps=60 inf=11.5s sim=1.6s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 14 success=True steps=60 inf=12.0s sim=1.8s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 15 success=False steps=60 inf=12.0s sim=1.7s total=15.6s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 16 success=True steps=60 inf=11.3s sim=1.8s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 17 success=False steps=60 inf=11.2s sim=1.7s total=14.7s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 18 success=False steps=60 inf=11.9s sim=1.8s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 19 success=False steps=60 inf=12.0s sim=1.9s total=15.8s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 20 success=False steps=60 inf=11.2s sim=1.9s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 21 success=False steps=60 inf=11.3s sim=1.9s total=14.9s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 22 success=True steps=60 inf=11.7s sim=1.7s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|stiff_x4.0] ep 23 success=False steps=60 inf=11.6s sim=1.9s total=15.3s
+== stiff_x4.0: 3/24 success
+[33;1m2026-09-18 14:17:03,608 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 14:17:03,611 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_carrot_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 14:17:03,611 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_plate_objaverse_larger, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 0 success=False steps=60 inf=12.2s sim=1.6s total=15.8s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 1 success=False steps=60 inf=11.7s sim=1.8s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 2 success=False steps=60 inf=11.2s sim=1.8s total=14.8s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 3 success=False steps=60 inf=11.9s sim=1.9s total=15.8s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 4 success=False steps=60 inf=10.8s sim=1.9s total=14.7s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 5 success=False steps=60 inf=11.4s sim=2.0s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 6 success=False steps=60 inf=12.1s sim=1.8s total=16.0s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 7 success=False steps=60 inf=11.7s sim=2.1s total=15.8s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 8 success=False steps=60 inf=11.6s sim=1.7s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 9 success=False steps=60 inf=11.6s sim=1.9s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 10 success=False steps=60 inf=11.5s sim=1.7s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 11 success=False steps=60 inf=11.8s sim=1.8s total=15.6s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 12 success=False steps=60 inf=11.6s sim=1.8s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 13 success=False steps=60 inf=11.8s sim=1.7s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 14 success=True steps=60 inf=11.9s sim=1.7s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 15 success=False steps=60 inf=11.5s sim=1.8s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 16 success=True steps=60 inf=12.5s sim=1.6s total=16.0s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 17 success=False steps=60 inf=10.9s sim=1.8s total=14.5s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 18 success=False steps=60 inf=10.9s sim=2.0s total=14.7s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 19 success=False steps=60 inf=12.2s sim=1.9s total=15.9s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 20 success=False steps=60 inf=11.7s sim=1.8s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 21 success=False steps=60 inf=12.0s sim=1.9s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 22 success=True steps=60 inf=11.9s sim=1.7s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x0.25] ep 23 success=False steps=60 inf=11.2s sim=1.8s total=14.7s
+== damp_x0.25: 3/24 success
+[33;1m2026-09-18 14:23:13,049 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 14:23:13,052 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_carrot_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 14:23:13,052 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_plate_objaverse_larger, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 0 success=False steps=60 inf=10.9s sim=1.8s total=14.5s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 1 success=False steps=60 inf=11.4s sim=1.8s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 2 success=False steps=60 inf=11.2s sim=1.9s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 3 success=False steps=60 inf=12.2s sim=1.8s total=15.9s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 4 success=True steps=60 inf=11.7s sim=1.8s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 5 success=False steps=60 inf=11.8s sim=1.9s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 6 success=False steps=60 inf=11.5s sim=1.8s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 7 success=False steps=60 inf=11.3s sim=1.8s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 8 success=False steps=60 inf=11.6s sim=1.7s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 9 success=False steps=60 inf=11.3s sim=1.7s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 10 success=False steps=60 inf=11.6s sim=1.7s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 11 success=True steps=60 inf=11.3s sim=1.9s total=14.9s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 12 success=True steps=60 inf=11.9s sim=1.9s total=16.0s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 13 success=False steps=60 inf=10.8s sim=2.0s total=14.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 14 success=True steps=60 inf=11.3s sim=1.9s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 15 success=False steps=60 inf=11.6s sim=1.9s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 16 success=False steps=60 inf=10.7s sim=2.0s total=14.6s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 17 success=False steps=60 inf=11.3s sim=1.8s total=14.8s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 18 success=False steps=60 inf=11.6s sim=1.9s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 19 success=False steps=60 inf=11.8s sim=1.8s total=15.5s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 20 success=False steps=60 inf=10.9s sim=2.0s total=14.8s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 21 success=False steps=60 inf=11.7s sim=1.7s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 22 success=False steps=60 inf=11.0s sim=1.8s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|damp_x4.0] ep 23 success=False steps=60 inf=11.3s sim=1.7s total=15.0s
+== damp_x4.0: 4/24 success
+[33;1m2026-09-18 14:29:17,674 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 14:29:17,678 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_carrot_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 14:29:17,679 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_plate_objaverse_larger, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 0 success=False steps=60 inf=11.5s sim=1.8s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 1 success=False steps=60 inf=11.2s sim=2.0s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 2 success=False steps=60 inf=11.5s sim=1.7s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 3 success=False steps=60 inf=12.1s sim=1.8s total=15.8s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 4 success=False steps=60 inf=11.7s sim=1.9s total=15.9s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 5 success=False steps=60 inf=9.9s sim=1.7s total=13.5s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 6 success=False steps=60 inf=11.7s sim=1.6s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 7 success=False steps=60 inf=11.5s sim=1.7s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 8 success=False steps=60 inf=10.6s sim=1.8s total=14.3s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 9 success=False steps=60 inf=11.2s sim=1.9s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 10 success=False steps=60 inf=12.6s sim=1.6s total=16.3s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 11 success=False steps=60 inf=11.3s sim=1.9s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 12 success=False steps=60 inf=11.8s sim=2.0s total=15.7s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 13 success=False steps=60 inf=10.7s sim=1.8s total=14.3s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 14 success=False steps=60 inf=11.3s sim=1.7s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 15 success=False steps=60 inf=10.5s sim=2.2s total=14.6s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 16 success=False steps=60 inf=11.9s sim=1.8s total=15.6s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 17 success=False steps=60 inf=11.7s sim=1.9s total=15.5s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 18 success=False steps=60 inf=11.6s sim=1.7s total=15.2s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 19 success=False steps=60 inf=11.1s sim=1.9s total=15.0s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 20 success=False steps=60 inf=11.8s sim=1.7s total=15.4s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 21 success=False steps=60 inf=11.4s sim=2.0s total=15.3s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 22 success=False steps=60 inf=11.2s sim=2.0s total=15.1s
+[octo-base|PutCarrotOnPlateInScene-v1|delay_2] ep 23 success=False steps=60 inf=11.3s sim=1.7s total=15.1s
+== delay_2: 0/24 success

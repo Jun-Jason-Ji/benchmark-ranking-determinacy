@@ -1,0 +1,49 @@
+==== Sat 09/19/2026  0:37:00.79 restarted scheduler after busy_ports crash (queue_spoon_hist1_96) 
+02:35:01 === spoon_hist1_96: 12 jobs
+02:35:02 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+02:35:02 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+02:50:59 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+02:51:02 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+02:52:30 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+02:52:33 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+03:08:10 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+03:08:13 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+03:11:13 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+03:11:15 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+03:30:42 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+03:30:45 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8767
+03:33:26 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+03:33:29 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+03:48:46 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+03:48:49 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+03:49:09 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8767
+03:49:13 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8767
+04:04:07 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+04:04:10 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+04:06:29 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8767
+04:06:32 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+04:27:27 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+04:34:29 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+04:34:52 === spoon_hist1_96 complete
+04:34:52 SPOON_HIST1_96_DONE
+==== Sat 09/19/2026  4:38:03.86 restarted scheduler after busy_ports crash (queue_spoon_hist1_96) 
+04:38:04 === spoon_hist1_96: 12 jobs
+04:38:06 skip complete octo-small@hist1 PutSpoonOnTableClothInScene-v1 nominal off=24
+04:38:06 skip complete octo-small@hist1 PutSpoonOnTableClothInScene-v1 iso_x0.25 off=24
+04:38:06 skip complete octo-small@hist1 PutSpoonOnTableClothInScene-v1 iso_x4.0 off=24
+04:38:06 skip complete octo-small@hist1 PutSpoonOnTableClothInScene-v1 force_x0.5 off=24
+04:38:06 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+04:38:06 skip complete octo-small@hist1 PutSpoonOnTableClothInScene-v1 dens_x0.5 off=24
+04:38:06 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+04:38:06 skip complete octo-small PutSpoonOnTableClothInScene-v1 iso_x0.25 off=48
+04:38:06 skip complete octo-small PutSpoonOnTableClothInScene-v1 iso_x4.0 off=48
+04:51:05 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+04:51:07 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+04:55:16 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+04:55:18 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+05:04:06 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=48 on 8769
+05:04:10 launched octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+05:13:49 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8767
+05:23:40 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 variants_v1 off=24 on 8769
+05:24:02 === spoon_hist1_96 complete
+05:24:03 SPOON_HIST1_96_DONE

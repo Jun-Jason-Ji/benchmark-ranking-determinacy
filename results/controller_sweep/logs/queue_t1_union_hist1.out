@@ -1,0 +1,35 @@
+==== Sun 09/20/2026  7:37:25.41 restarted scheduler after busy_ports crash (queue_t1_union_hist1) 
+09:11:25 === t1_union_hist1: 16 jobs
+09:11:26 launched octo-small@hist1 iso_x0.25 seed=20260918 on 8767
+09:11:26 launched octo-base@hist1 iso_x0.25 seed=20260918 on 8768
+09:36:10 done rc=0 octo-small@hist1 iso_x0.25 seed=20260918 on 8767
+09:36:12 launched octo-small@hist1 iso_x4.0 seed=20260918 on 8767
+09:36:32 done rc=0 octo-base@hist1 iso_x0.25 seed=20260918 on 8768
+09:36:33 launched octo-base@hist1 iso_x4.0 seed=20260918 on 8768
+10:00:56 done rc=0 octo-small@hist1 iso_x4.0 seed=20260918 on 8767
+10:00:57 launched octo-small@hist1 fric_x0.4 seed=20260918 on 8767
+10:01:17 done rc=0 octo-base@hist1 iso_x4.0 seed=20260918 on 8768
+10:01:19 launched octo-base@hist1 fric_x0.4 seed=20260918 on 8768
+10:25:42 done rc=0 octo-small@hist1 fric_x0.4 seed=20260918 on 8767
+10:25:43 launched octo-small@hist1 dens_x0.5 seed=20260918 on 8767
+10:26:03 done rc=0 octo-base@hist1 fric_x0.4 seed=20260918 on 8768
+10:26:04 launched octo-base@hist1 dens_x0.5 seed=20260918 on 8768
+10:50:27 done rc=0 octo-small@hist1 dens_x0.5 seed=20260918 on 8767
+10:50:28 launched octo-small@hist1 iso_x0.25 seed=20280101 on 8767
+10:50:48 done rc=0 octo-base@hist1 dens_x0.5 seed=20260918 on 8768
+10:50:49 launched octo-base@hist1 iso_x0.25 seed=20280101 on 8768
+11:14:49 done rc=0 octo-small@hist1 iso_x0.25 seed=20280101 on 8767
+11:14:50 launched octo-small@hist1 iso_x4.0 seed=20280101 on 8767
+11:15:10 done rc=0 octo-base@hist1 iso_x0.25 seed=20280101 on 8768
+11:15:11 launched octo-base@hist1 iso_x4.0 seed=20280101 on 8768
+11:37:59 done rc=0 octo-small@hist1 iso_x4.0 seed=20280101 on 8767
+11:38:00 launched octo-small@hist1 fric_x0.4 seed=20280101 on 8767
+11:38:20 done rc=0 octo-base@hist1 iso_x4.0 seed=20280101 on 8768
+11:38:22 launched octo-base@hist1 fric_x0.4 seed=20280101 on 8768
+12:00:47 done rc=0 octo-small@hist1 fric_x0.4 seed=20280101 on 8767
+12:00:48 launched octo-small@hist1 dens_x0.5 seed=20280101 on 8767
+12:01:30 done rc=0 octo-base@hist1 fric_x0.4 seed=20280101 on 8768
+12:01:31 launched octo-base@hist1 dens_x0.5 seed=20280101 on 8768
+12:23:36 done rc=0 octo-small@hist1 dens_x0.5 seed=20280101 on 8767
+12:24:39 done rc=0 octo-base@hist1 dens_x0.5 seed=20280101 on 8768
+12:25:00 T1_UNION_HIST1_DONE

@@ -1,0 +1,6 @@
+Using Python 3.11.16 environment at: .venv-windows-ms3
+Resolved 2 packages in 1.82s
+Prepared 2 packages in 1.04s
+Installed 2 packages in 9ms
+ + google-crc32c==1.7.1
+ + protobuf==4.25.8

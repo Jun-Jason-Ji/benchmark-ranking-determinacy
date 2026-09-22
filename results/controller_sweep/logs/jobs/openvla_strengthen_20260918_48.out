@@ -1,0 +1,14 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-19 19:35:34,263 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-19 19:35:34,526 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-19 19:35:34,543 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 48 success=False steps=120 inf=71.4s sim=3.2s total=76.6s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 49 success=True steps=120 inf=76.6s sim=2.7s total=81.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 50 success=True steps=120 inf=185.4s sim=4.8s total=192.7s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 51 success=True steps=120 inf=205.7s sim=3.8s total=211.9s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 52 success=False steps=120 inf=214.0s sim=5.9s total=223.0s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 53 success=False steps=120 inf=418.0s sim=10.7s total=432.8s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 54 success=False steps=120 inf=426.9s sim=8.9s total=439.2s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 55 success=False steps=120 inf=276.6s sim=5.2s total=284.3s
+[openvla-7b-4bit|PutEggplantInBasketScene-v1|nominal] ep 56 success=False steps=120 inf=204.1s sim=4.1s total=210.5s

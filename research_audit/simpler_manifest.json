@@ -1,0 +1,17 @@
+{
+  "source_url": "https://github.com/simpler-env/SimplerEnv/blob/06accaca93535902d408da4855f21cece12bceb7/simpler_env/utils/metrics.py",
+  "source_sha256": "ee8596be6997d41295bf5b25f90c9b5b3ba47ef2bd92296b8c45e7ffc5606dc6",
+  "tasks": 9,
+  "task_policy_cells": 42,
+  "public_checkpoint_candidate_cells": 37,
+  "excluded_from_reexecution": [
+    "rt-2-x"
+  ],
+  "evidence": "Upstream published aggregate scores; not new observations",
+  "limitations": [
+    "Checkpoint availability does not prove weight/version and control protocol alignment.",
+    "Octo 1.5 checkpoints must not be matched to original Octo 1.0 labels.",
+    "Trial counts and scene strata not inferred from rounded success rates.",
+    "Do not synthesize episodes from aggregate means for cluster bootstrap."
+  ]
+}

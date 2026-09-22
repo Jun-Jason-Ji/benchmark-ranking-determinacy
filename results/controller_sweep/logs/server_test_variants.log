@@ -1,0 +1,15 @@
+WARNING:tensorflow:From E:\research\the_world\.venv-policy\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files: 100%|##########| 8/8 [00:00<00:00, 413.09it/s]
+E:\research\the_world\.venv-policy\Lib\site-packages\huggingface_hub\file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+E:\research\the_world\.venv-policy\Lib\site-packages\huggingface_hub\file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+WARNING:root:'observations' is missing items compared to example_batch: {'proprio', 'pad_mask_dict/proprio', 'pad_mask_dict/image_wrist', 'image_wrist', 'pad_mask_dict/timestep', 'pad_mask_dict/image_primary', 'timestep'}
+WARNING:root:No pad_mask_dict found. Nothing will be masked.
+WARNING:root:Skipping observation tokenizer: obs_wrist
+WARNING:root:'observations' is missing items compared to example_batch: {'proprio', 'pad_mask_dict/proprio', 'pad_mask_dict/image_wrist', 'image_wrist', 'pad_mask_dict/timestep', 'pad_mask_dict/image_primary', 'timestep'}
+WARNING:root:No pad_mask_dict found. Nothing will be masked.
+WARNING:root:Skipping observation tokenizer: obs_wrist
+{"model": "octo-small", "hf_id": "hf://rail-berkeley/octo-small", "jax": "0.4.20", "flax": "0.7.5", "tensorflow": "2.15.0", "numpy": "1.26.4", "python": "3.11.16", "jax_backend": "cpu", "load_seconds": 20.003120000008494, "jit_warmup_seconds": 49.06053499999689, "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz", "variants": "reset config: ensemble(bool), exec_horizon(int), history(int)", "action_mean": [0.00021160596224945039, 0.00012613728176802397, -0.00017021960229612887, -0.0001506186235928908, -0.00023830769350752234, 0.0002564573078416288, 0.0], "action_std": [0.009637207724153996, 0.013506603427231312, 0.012518610805273056, 0.028067905455827713, 0.03016904927790165, 0.07632624357938766, 1.0], "startup_seconds": 82.7373871000018}
+READY 127.0.0.1:8799

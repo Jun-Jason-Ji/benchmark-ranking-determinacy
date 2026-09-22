@@ -1,0 +1,722 @@
+[
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 51620,
+  "md5": "f00ce78926d1d0046ef7bb1cd1c19886",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 51638,
+  "md5": "7d593f29b91af96f40aa1aa8ae31b384",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 51858,
+  "md5": "d74ae284120b94905cf105e2ab9ebf01",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 25905,
+  "md5": "1c5306005e391cda950a6660bd5f92bf",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 51660,
+  "md5": "d4e7d6dc5b4f83eaaeb64ff65ea35219",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 25855,
+  "md5": "8428043d4f257f74ea499bb0cafc9546",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 51912,
+  "md5": "4e4fcdeeab0429bf17196f4b2ddd06d8",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 25952,
+  "md5": "afc69180b8c8b592f759c0b52fdabf26",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 51873,
+  "md5": "9d4344b1c32c96c8256004493211d09a",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 51810,
+  "md5": "67e39cfa268707e70e9998f66ad0d82c",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 51846,
+  "md5": "d5a98c1e34ececf0851280457170540d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 25903,
+  "md5": "e310df8018e98cbbaf67e94ed0b77d1b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 51569,
+  "md5": "2a0ac9809ec5d5067e28099801d2f07b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 51527,
+  "md5": "68b8863cd65ed63f795cd1ce1c5f7ee6",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 51739,
+  "md5": "7c2afa2bb1fb6532c2b372936e231a64",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 25854,
+  "md5": "0a75cb35b2df47a17bbfb259227d1149",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 51700,
+  "md5": "13106162772b387d88d5f97051d80492",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 25799,
+  "md5": "e139eaf2f80d56efdd274dc1efaa9d7d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 51907,
+  "md5": "1558c343e449acc7ecfa408070eca399",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 25895,
+  "md5": "5dd26c32234fe69254c8ce0b2667a596",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 51778,
+  "md5": "fe4327261bd24a0ec458d5a23877837f",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 51732,
+  "md5": "7b0877b73ba59c35b1a272bf5b9ca30b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 51789,
+  "md5": "41b3f5930750aba3ec067da68745ea5d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 25865,
+  "md5": "2aeed3e2752ac09c232f6cf2536bcc86",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 65250,
+  "md5": "5e72c4e497f1afbc39868f5297cf3748",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 26123,
+  "md5": "2096ece27d59d019ef318f1e35bb6087",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 52455,
+  "md5": "bbc4e3b3a360716e5b4c11c391005827",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 26246,
+  "md5": "f0d4a02ce91d5514c213ef81b002842d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 52323,
+  "md5": "b4f8aa3da2dabbfbe0276f7650100574",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 26146,
+  "md5": "02e6a8db1b7e75a417568fb7e83a66b4",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 52529,
+  "md5": "a38bd0e8aa4ef6f1d62adb41617567a8",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 26267,
+  "md5": "43743f6288b6b02f0907fdd099f0050b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 52462,
+  "md5": "215e9eabdafd61763f3530ad9faaf0d9",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 26235,
+  "md5": "5492af2dfbaa52278822aeca427b5d1d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 52403,
+  "md5": "efc9d9b8220991df22b2c382e16a1c96",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 26217,
+  "md5": "6377c4b04e731bcbb5ae0370a48f7fe5",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 71150,
+  "md5": "97e8fbfb668360430f2ce15ff8bae117",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 26078,
+  "md5": "d46d1a2eaddcd97704e801baa70e92df",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 52338,
+  "md5": "1c33e3f6ce5f653648f46d050441b891",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 26212,
+  "md5": "141b97da4752b702ffcb9c878489ac08",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 52241,
+  "md5": "ee97d6548a2b88187cccb01161b54cbd",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 26117,
+  "md5": "2b8b5105d98350cbc87fe0913cbb029d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 52463,
+  "md5": "1e1881d70ff13b9bcf76ae7566a12b99",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 26237,
+  "md5": "0e6e62ce7c73c10de1a923fc209c2225",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 52313,
+  "md5": "4c97abbe5a964aaaa66d45d113d9efb3",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 26176,
+  "md5": "f7c14c41d7e295aeb78a985e8ffd2d41",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 52413,
+  "md5": "237d2497461a1ce7159e36934bf2a4f1",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 26193,
+  "md5": "261b91fba86341533eaabb570f78d59b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 51620,
+  "md5": "f00ce78926d1d0046ef7bb1cd1c19886",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/nominal.jsonl",
+  "bytes": 35992,
+  "md5": "a51ed5fdc0d2d749a4e011eda08186fb",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 51858,
+  "md5": "d74ae284120b94905cf105e2ab9ebf01",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/iso_x0.25.jsonl",
+  "bytes": 36094,
+  "md5": "45d9bf86c37a8a85be5e6d801f1752ce",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 51660,
+  "md5": "d4e7d6dc5b4f83eaaeb64ff65ea35219",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/iso_x4.0.jsonl",
+  "bytes": 35992,
+  "md5": "f1d24ea77b4493b0ad984658175c6da6",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 51912,
+  "md5": "4e4fcdeeab0429bf17196f4b2ddd06d8",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/force_x0.5.jsonl",
+  "bytes": 36105,
+  "md5": "8f74e6f2539f8220a16509c19f2e5e1c",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 51873,
+  "md5": "9d4344b1c32c96c8256004493211d09a",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/fric_x0.4.jsonl",
+  "bytes": 36111,
+  "md5": "c5be1426959028be77358ab84ce06168",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 51846,
+  "md5": "d5a98c1e34ececf0851280457170540d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/dens_x0.5.jsonl",
+  "bytes": 36077,
+  "md5": "150d1413dfdf255c0b1f61c12d32afb3",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl",
+  "bytes": 51569,
+  "md5": "2a0ac9809ec5d5067e28099801d2f07b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/nominal.jsonl",
+  "bytes": 35954,
+  "md5": "9113585320ada018d01b4a68bf2c9f44",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl",
+  "bytes": 51739,
+  "md5": "7c2afa2bb1fb6532c2b372936e231a64",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/iso_x0.25.jsonl",
+  "bytes": 36026,
+  "md5": "3d14727a980310a27f5191f5e0b9b674",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl",
+  "bytes": 51700,
+  "md5": "13106162772b387d88d5f97051d80492",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/iso_x4.0.jsonl",
+  "bytes": 35938,
+  "md5": "d495ebde837d83ee59555de392668492",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl",
+  "bytes": 51907,
+  "md5": "1558c343e449acc7ecfa408070eca399",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/force_x0.5.jsonl",
+  "bytes": 36095,
+  "md5": "02fbec13b9a52f7199639ad95c156287",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl",
+  "bytes": 51778,
+  "md5": "fe4327261bd24a0ec458d5a23877837f",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/fric_x0.4.jsonl",
+  "bytes": 36075,
+  "md5": "ed54e0b340e3683d78507975e8c6f857",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl",
+  "bytes": 51789,
+  "md5": "41b3f5930750aba3ec067da68745ea5d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/dens_x0.5.jsonl",
+  "bytes": 36053,
+  "md5": "d62fca7bc218af77ad1a7b7052b79c39",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl",
+  "bytes": 51377,
+  "md5": "23f9f8c989be77b78454245d77919638",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/nominal.jsonl",
+  "bytes": 35452,
+  "md5": "d22a212c2224e43d47a619c6e0da39a4",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl",
+  "bytes": 51584,
+  "md5": "8d426a348979b54570ddaf8ab6b5b44f",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/iso_x0.25.jsonl",
+  "bytes": 35553,
+  "md5": "aa0b5a7b1589564889543aa59d8a1347",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/iso_x4.0.jsonl",
+  "bytes": 51465,
+  "md5": "492dcbb5ebfab219bcbeb6f306e7bbfc",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/iso_x4.0.jsonl",
+  "bytes": 35456,
+  "md5": "aaafa36721ef2e4bf5ab388d275f78d9",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl",
+  "bytes": 51663,
+  "md5": "f80570aa1ad31eee7bd911313dc54cba",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/force_x0.5.jsonl",
+  "bytes": 35576,
+  "md5": "a8a5c4930c29b515b5e9328a9e9e960b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl",
+  "bytes": 51617,
+  "md5": "824eab281f912e5ef75077ac7525c500",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/fric_x0.4.jsonl",
+  "bytes": 35551,
+  "md5": "7e5e3fbad6689b85e732f5a71bbad2e4",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/dens_x0.5.jsonl",
+  "bytes": 51571,
+  "md5": "0f3c2ae00ed6eec298de7cf0febab771",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/dens_x0.5.jsonl",
+  "bytes": 35508,
+  "md5": "32c7fb305a446658097f2b5daf3a951b",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl",
+  "bytes": 25704,
+  "md5": "2cb8976d20991d2c14ed167f7f603ae5",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/nominal.jsonl",
+  "bytes": 35584,
+  "md5": "34ba4084b9108a70639fe147c3dc6e87",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl",
+  "bytes": 25825,
+  "md5": "c5d936b423987e5b85d643306ed83288",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/iso_x0.25.jsonl",
+  "bytes": 35714,
+  "md5": "59d404dbf00858ad4171ba88b0b91912",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/iso_x4.0.jsonl",
+  "bytes": 25760,
+  "md5": "ad752db610c5d34b74404b16add4e64e",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/iso_x4.0.jsonl",
+  "bytes": 35670,
+  "md5": "5a0af417770d08758a94a1e9716f86f2",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl",
+  "bytes": 25841,
+  "md5": "bc858712e7b2faae77c99b9bd1233485",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/force_x0.5.jsonl",
+  "bytes": 35763,
+  "md5": "55b60bde8e266e7d79c62e9567d19b8a",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl",
+  "bytes": 12903,
+  "md5": "518ddcd990ec965fe35e0f66b60942fb",
+  "episodes_used": 24
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/fric_x0.4.jsonl",
+  "bytes": 35763,
+  "md5": "f141fccf3513b5434f918badfb9fd7c7",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/dens_x0.5.jsonl",
+  "bytes": 12899,
+  "md5": "e59ec150a530725a9aad6b22b890c147",
+  "episodes_used": 24
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/dens_x0.5.jsonl",
+  "bytes": 35763,
+  "md5": "ba66539fbfd3ce00e405c1adb42be848",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/nominal.jsonl",
+  "bytes": 25221,
+  "md5": "6a8151681c823acb1fdce17345131ea2",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/nominal.jsonl",
+  "bytes": 35159,
+  "md5": "b570f42e4b04c05f42e670674b67a698",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/iso_x0.25.jsonl",
+  "bytes": 50698,
+  "md5": "16a55d3cc222b4f42f3c21f69d2bef24",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/iso_x0.25.jsonl",
+  "bytes": 35250,
+  "md5": "d6d7e543f27228200a1179b409f4e2d8",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl",
+  "bytes": 50520,
+  "md5": "9fd340d9fd5b958ee1939b188f2811ea",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/iso_x4.0.jsonl",
+  "bytes": 35186,
+  "md5": "212ae71793a61883e8881eb741697a89",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/force_x0.5.jsonl",
+  "bytes": 25395,
+  "md5": "5b3f3c6ceaca7f88b82f38957d78f56d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/force_x0.5.jsonl",
+  "bytes": 35297,
+  "md5": "e34a29cb1599e501e9e2cc68fac0db03",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/fric_x0.4.jsonl",
+  "bytes": 12673,
+  "md5": "1b30348a44f46106f7de89c9855829a1",
+  "episodes_used": 24
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/fric_x0.4.jsonl",
+  "bytes": 35259,
+  "md5": "2b25440d8c1d9210bb4c99905685a89e",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/dens_x0.5.jsonl",
+  "bytes": 12674,
+  "md5": "4d2bf452faae1327c712661358cc95ac",
+  "episodes_used": 24
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/dens_x0.5.jsonl",
+  "bytes": 35226,
+  "md5": "1a666319127692edae327c63c6d49ff6",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/nominal.jsonl",
+  "bytes": 25135,
+  "md5": "8e8291a2d7fb8cf6e19f9281807260ef",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/nominal.jsonl",
+  "bytes": 35035,
+  "md5": "0d0445dbf8f4b21dd660491aaba4d25a",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/iso_x0.25.jsonl",
+  "bytes": 50569,
+  "md5": "2c683540e22edb0ca4a96d0082aa7169",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/iso_x0.25.jsonl",
+  "bytes": 35122,
+  "md5": "e2acb1f2a03f7de95a338a4ec83f93df",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl",
+  "bytes": 50477,
+  "md5": "00e8e7708da7664f35fa5aace844fd55",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/iso_x4.0.jsonl",
+  "bytes": 35063,
+  "md5": "6c6706bd02b2f1e8d3c5b1cc79b3b44d",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/force_x0.5.jsonl",
+  "bytes": 25314,
+  "md5": "429fbdf5b21d0b754b10b324fc0c190c",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/force_x0.5.jsonl",
+  "bytes": 35166,
+  "md5": "f6040db934faf99dcef8a0075f8fcb00",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/fric_x0.4.jsonl",
+  "bytes": 12632,
+  "md5": "4e6305d2403d7dd106f1a8e318666245",
+  "episodes_used": 24
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/fric_x0.4.jsonl",
+  "bytes": 35143,
+  "md5": "a700205e3b767009634541c9b233b4fc",
+  "episodes_used": 48
+ },
+ {
+  "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/dens_x0.5.jsonl",
+  "bytes": 12628,
+  "md5": "ab3ee852d7e2854c287abfd9b3af77c6",
+  "episodes_used": 24
+ },
+ {
+  "path": "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/dens_x0.5.jsonl",
+  "bytes": 35137,
+  "md5": "cbb4652973b255f97ee98b8f84d0e4e2",
+  "episodes_used": 48
+ }
+]

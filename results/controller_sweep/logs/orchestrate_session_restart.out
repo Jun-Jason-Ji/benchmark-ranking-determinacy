@@ -1,0 +1,15 @@
+==== Sat 09/19/2026  4:52:19.68 restarted scheduler after busy_ports crash (orchestrate_session_restart) 
+06:11:39 re-run queues finished
+06:11:39 restarting octo-small on 8767 with session-isolated server code
+06:11:59 restarting octo-base on 8768 with session-isolated server code
+06:12:23 health session_isolation: {8767: False, 8768: False}
+06:12:57 health session_isolation: {8767: False, 8768: False}
+06:13:32 health session_isolation: {8767: False, 8768: False}
+06:14:06 health session_isolation: {8767: False, 8768: False}
+06:14:40 health session_isolation: {8767: False, 8768: False}
+06:15:14 health session_isolation: {8767: False, 8768: False}
+06:15:48 health session_isolation: {8767: False, 8768: False}
+06:16:20 health session_isolation: {8767: True, 8768: False}
+06:16:50 health session_isolation: {8767: True, 8768: True}
+06:16:50 SESSION_RESTART_DONE
+06:16:50 MS2_SWEEP_LAUNCHED

@@ -1,0 +1,40 @@
+13:02:51 === phaseA_carrot_iso96: 2 jobs
+13:03:35 launched octo-base PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=48 on 8770
+13:26:12 launched octo-small PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=48 on 8769
+13:43:51 done rc=0 octo-base PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=48 on 8770
+13:53:12 done rc=0 octo-small PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=48 on 8769
+13:53:32 === phaseA_carrot_iso96 complete
+13:53:32 ISO96_ANALYSIS rc=0
+13:53:32 === phaseB_iso_to48: 6 jobs
+13:53:33 launched octo-small PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8767
+13:53:33 launched octo-base PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8768
+13:53:33 launched octo-small PutEggplantInBasketScene-v1 iso_ratio_v1 off=24 on 8769
+13:53:33 launched octo-base PutEggplantInBasketScene-v1 iso_ratio_v1 off=24 on 8770
+13:53:53 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8767
+13:53:53 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8768
+13:53:53 done rc=0 octo-small PutEggplantInBasketScene-v1 iso_ratio_v1 off=24 on 8769
+13:53:53 done rc=0 octo-base PutEggplantInBasketScene-v1 iso_ratio_v1 off=24 on 8770
+13:53:53 launched octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 iso_ratio_v1 off=24 on 8767
+13:53:53 launched octo-base StackGreenCubeOnYellowCubeBakedTexInScene-v1 iso_ratio_v1 off=24 on 8768
+13:54:13 done rc=0 octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 iso_ratio_v1 off=24 on 8767
+14:04:35 done rc=0 octo-base StackGreenCubeOnYellowCubeBakedTexInScene-v1 iso_ratio_v1 off=24 on 8768
+14:04:55 === phaseB_iso_to48 complete
+14:04:55 === phaseC_wide_v1: 8 jobs
+14:04:56 launched octo-small PutCarrotOnPlateInScene-v1 wide_v1 off=0 on 8767
+14:04:56 launched octo-base PutCarrotOnPlateInScene-v1 wide_v1 off=0 on 8768
+14:04:56 launched octo-small PutSpoonOnTableClothInScene-v1 wide_v1 off=0 on 8769
+14:04:56 launched octo-base PutSpoonOnTableClothInScene-v1 wide_v1 off=0 on 8770
+14:30:42 done rc=0 octo-small PutCarrotOnPlateInScene-v1 wide_v1 off=0 on 8767
+14:30:43 launched octo-small PutEggplantInBasketScene-v1 wide_v1 off=0 on 8767
+14:35:38 done rc=0 octo-base PutCarrotOnPlateInScene-v1 wide_v1 off=0 on 8768
+14:35:39 launched octo-base PutEggplantInBasketScene-v1 wide_v1 off=0 on 8768
+14:35:59 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 wide_v1 off=0 on 8769
+14:36:00 launched octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 wide_v1 off=0 on 8769
+14:38:27 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 wide_v1 off=0 on 8770
+14:38:28 launched octo-base StackGreenCubeOnYellowCubeBakedTexInScene-v1 wide_v1 off=0 on 8770
+15:06:01 done rc=0 octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 wide_v1 off=0 on 8769
+15:11:18 done rc=0 octo-base StackGreenCubeOnYellowCubeBakedTexInScene-v1 wide_v1 off=0 on 8770
+15:19:39 done rc=0 octo-small PutEggplantInBasketScene-v1 wide_v1 off=0 on 8767
+15:25:11 done rc=0 octo-base PutEggplantInBasketScene-v1 wide_v1 off=0 on 8768
+15:25:31 === phaseC_wide_v1 complete
+15:25:31 NEXT_GPU_QUEUE_DONE

@@ -1,0 +1,198 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-18 11:04:27,686 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:04:27,825 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:04:27,839 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 24 success=True steps=120 inf=21.7s sim=3.7s total=29.3s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 25 success=False steps=120 inf=22.8s sim=5.1s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 26 success=True steps=120 inf=24.7s sim=3.9s total=32.3s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 27 success=False steps=120 inf=23.2s sim=5.0s total=32.0s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 28 success=True steps=120 inf=22.9s sim=3.8s total=30.4s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 29 success=True steps=120 inf=25.0s sim=4.2s total=32.6s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 30 success=True steps=120 inf=25.2s sim=3.6s total=32.6s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 31 success=False steps=120 inf=22.8s sim=5.0s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 32 success=False steps=120 inf=24.5s sim=5.0s total=33.3s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 33 success=False steps=120 inf=24.0s sim=5.0s total=32.6s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 34 success=False steps=120 inf=24.7s sim=5.8s total=33.9s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 35 success=False steps=120 inf=24.6s sim=5.0s total=33.2s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 36 success=False steps=120 inf=22.7s sim=6.3s total=32.5s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 37 success=True steps=120 inf=24.5s sim=3.9s total=32.5s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 38 success=False steps=120 inf=25.2s sim=6.0s total=34.8s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 39 success=False steps=120 inf=23.8s sim=5.1s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 40 success=True steps=120 inf=23.8s sim=3.9s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 41 success=True steps=120 inf=25.2s sim=4.1s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 42 success=False steps=120 inf=24.3s sim=5.0s total=33.0s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 43 success=True steps=120 inf=23.7s sim=4.0s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 44 success=False steps=120 inf=25.3s sim=5.4s total=34.4s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 45 success=True steps=120 inf=23.9s sim=3.8s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 46 success=True steps=120 inf=22.5s sim=4.1s total=30.6s
+[octo-small|PutEggplantInBasketScene-v1|nominal] ep 47 success=True steps=120 inf=24.8s sim=3.8s total=32.2s
+== nominal: 25/48 success
+[33;1m2026-09-18 11:17:24,695 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:17:24,703 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:17:24,707 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 24 success=True steps=120 inf=22.7s sim=3.9s total=30.3s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 25 success=True steps=120 inf=23.8s sim=4.2s total=32.0s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 26 success=True steps=120 inf=24.2s sim=3.9s total=31.7s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 27 success=True steps=120 inf=24.5s sim=4.4s total=32.5s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 28 success=True steps=120 inf=24.1s sim=4.6s total=32.3s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 29 success=True steps=120 inf=24.4s sim=4.8s total=33.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 30 success=True steps=120 inf=23.8s sim=3.9s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 31 success=True steps=120 inf=23.6s sim=5.2s total=32.2s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 32 success=False steps=120 inf=25.4s sim=4.7s total=33.8s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 33 success=True steps=120 inf=23.9s sim=3.9s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 34 success=True steps=120 inf=24.1s sim=4.7s total=32.6s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 35 success=False steps=120 inf=23.3s sim=5.3s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 36 success=False steps=120 inf=23.8s sim=5.3s total=33.3s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 37 success=False steps=120 inf=23.7s sim=5.3s total=33.2s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 38 success=False steps=120 inf=23.4s sim=6.1s total=33.3s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 39 success=False steps=120 inf=23.4s sim=4.3s total=31.7s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 40 success=True steps=120 inf=25.0s sim=4.0s total=32.7s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 41 success=True steps=120 inf=23.6s sim=5.0s total=32.2s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 42 success=False steps=120 inf=23.2s sim=5.8s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 43 success=True steps=120 inf=23.2s sim=4.0s total=31.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 44 success=False steps=120 inf=23.6s sim=6.0s total=33.5s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 45 success=True steps=120 inf=24.6s sim=3.9s total=32.4s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 46 success=True steps=120 inf=24.0s sim=4.3s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x0.5] ep 47 success=False steps=120 inf=23.6s sim=4.8s total=32.2s
+== stiff_x0.5: 29/48 success
+[33;1m2026-09-18 11:30:21,409 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:30:21,411 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:30:21,412 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 24 success=True steps=120 inf=23.9s sim=3.7s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 25 success=True steps=120 inf=23.2s sim=5.4s total=32.5s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 26 success=True steps=120 inf=22.6s sim=4.2s total=30.6s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 27 success=False steps=120 inf=23.4s sim=5.1s total=32.4s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 28 success=True steps=120 inf=22.7s sim=4.0s total=30.6s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 29 success=True steps=120 inf=22.9s sim=4.2s total=30.8s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 30 success=True steps=120 inf=23.3s sim=4.6s total=31.7s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 31 success=False steps=120 inf=24.4s sim=4.9s total=33.2s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 32 success=False steps=120 inf=24.4s sim=5.6s total=33.8s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 33 success=False steps=120 inf=23.9s sim=5.7s total=33.4s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 34 success=False steps=120 inf=24.2s sim=6.0s total=34.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 35 success=False steps=120 inf=25.4s sim=5.0s total=34.2s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 36 success=False steps=120 inf=24.0s sim=5.4s total=33.5s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 37 success=False steps=120 inf=24.0s sim=5.4s total=32.9s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 38 success=False steps=120 inf=24.4s sim=5.9s total=34.2s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 39 success=False steps=120 inf=23.6s sim=5.1s total=32.5s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 40 success=True steps=120 inf=23.2s sim=4.1s total=31.0s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 41 success=True steps=120 inf=24.0s sim=4.1s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 42 success=False steps=120 inf=24.9s sim=5.3s total=33.8s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 43 success=False steps=120 inf=24.4s sim=4.6s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 44 success=True steps=120 inf=23.6s sim=5.6s total=32.9s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 45 success=True steps=120 inf=24.3s sim=3.7s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 46 success=True steps=120 inf=21.6s sim=3.7s total=29.1s
+[octo-small|PutEggplantInBasketScene-v1|stiff_x2.0] ep 47 success=False steps=120 inf=24.5s sim=4.8s total=33.0s
+== stiff_x2.0: 24/48 success
+[33;1m2026-09-18 11:43:20,117 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:43:20,120 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:43:20,121 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 24 success=True steps=120 inf=23.8s sim=4.7s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 25 success=False steps=120 inf=23.8s sim=4.1s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 26 success=True steps=120 inf=23.9s sim=4.0s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 27 success=False steps=120 inf=23.8s sim=5.2s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 28 success=True steps=120 inf=24.7s sim=5.2s total=33.6s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 29 success=True steps=120 inf=24.1s sim=4.4s total=32.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 30 success=True steps=120 inf=23.6s sim=4.5s total=31.9s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 31 success=False steps=120 inf=20.3s sim=5.6s total=29.3s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 32 success=False steps=120 inf=23.4s sim=5.6s total=33.0s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 33 success=False steps=120 inf=24.1s sim=5.2s total=33.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 34 success=False steps=120 inf=24.2s sim=5.6s total=33.7s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 35 success=False steps=120 inf=23.7s sim=5.6s total=33.3s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 36 success=False steps=120 inf=26.0s sim=4.5s total=34.6s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 37 success=False steps=120 inf=23.1s sim=4.9s total=31.9s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 38 success=False steps=120 inf=24.9s sim=5.6s total=34.4s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 39 success=False steps=120 inf=24.8s sim=4.9s total=33.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 40 success=True steps=120 inf=23.5s sim=3.9s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 41 success=True steps=120 inf=22.4s sim=4.3s total=30.4s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 42 success=False steps=120 inf=23.8s sim=5.0s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 43 success=True steps=120 inf=22.2s sim=4.2s total=30.2s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 44 success=False steps=120 inf=25.5s sim=5.5s total=34.6s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 45 success=True steps=120 inf=23.5s sim=4.1s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 46 success=True steps=120 inf=24.0s sim=3.8s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|damp_x0.5] ep 47 success=False steps=120 inf=24.2s sim=5.0s total=33.0s
+== damp_x0.5: 22/48 success
+[33;1m2026-09-18 11:56:19,019 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:56:19,028 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:56:19,035 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 24 success=True steps=120 inf=24.8s sim=3.8s total=32.3s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 25 success=False steps=120 inf=25.3s sim=4.4s total=33.6s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 26 success=False steps=120 inf=22.7s sim=4.7s total=31.2s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 27 success=True steps=120 inf=22.9s sim=5.0s total=31.8s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 28 success=False steps=120 inf=23.7s sim=3.8s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 29 success=True steps=120 inf=25.8s sim=4.6s total=34.3s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 30 success=True steps=120 inf=23.8s sim=4.0s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 31 success=True steps=120 inf=23.8s sim=4.5s total=31.9s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 32 success=False steps=120 inf=22.1s sim=5.0s total=30.8s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 33 success=True steps=120 inf=24.8s sim=4.5s total=33.2s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 34 success=True steps=120 inf=23.8s sim=6.0s total=33.9s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 35 success=False steps=120 inf=22.9s sim=5.2s total=32.0s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 36 success=False steps=120 inf=23.8s sim=5.3s total=33.1s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 37 success=True steps=120 inf=24.3s sim=4.0s total=32.3s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 38 success=False steps=120 inf=24.6s sim=6.0s total=34.4s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 39 success=False steps=120 inf=24.0s sim=4.8s total=32.9s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 40 success=True steps=120 inf=23.3s sim=4.6s total=31.7s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 41 success=True steps=120 inf=23.5s sim=4.5s total=31.8s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 42 success=False steps=120 inf=23.9s sim=6.2s total=33.8s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 43 success=False steps=120 inf=23.1s sim=4.6s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 44 success=False steps=120 inf=23.1s sim=5.7s total=32.7s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 45 success=True steps=120 inf=23.3s sim=4.8s total=31.9s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 46 success=False steps=120 inf=22.7s sim=4.4s total=31.2s
+[octo-small|PutEggplantInBasketScene-v1|damp_x2.0] ep 47 success=False steps=120 inf=24.9s sim=5.0s total=33.9s
+== damp_x2.0: 26/48 success
+[33;1m2026-09-18 12:09:18,424 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 12:09:18,426 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 12:09:18,427 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 24 success=True steps=120 inf=23.7s sim=3.8s total=31.5s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 25 success=False steps=120 inf=23.8s sim=5.2s total=32.6s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 26 success=True steps=120 inf=22.8s sim=4.1s total=31.1s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 27 success=False steps=120 inf=24.2s sim=4.6s total=32.7s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 28 success=True steps=120 inf=24.0s sim=5.7s total=33.4s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 29 success=False steps=120 inf=23.5s sim=4.0s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 30 success=True steps=120 inf=24.4s sim=3.6s total=31.6s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 31 success=False steps=120 inf=23.6s sim=5.3s total=32.7s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 32 success=False steps=120 inf=23.6s sim=5.4s total=33.3s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 33 success=True steps=120 inf=22.8s sim=4.5s total=31.8s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 34 success=False steps=120 inf=24.3s sim=5.8s total=33.8s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 35 success=False steps=120 inf=24.1s sim=5.1s total=33.0s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 36 success=False steps=120 inf=25.3s sim=5.7s total=34.6s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 37 success=False steps=120 inf=24.6s sim=3.6s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 38 success=False steps=120 inf=24.2s sim=6.2s total=34.0s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 39 success=False steps=120 inf=24.4s sim=4.7s total=33.1s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 40 success=True steps=120 inf=23.2s sim=3.9s total=31.2s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 41 success=True steps=120 inf=24.3s sim=3.8s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 42 success=False steps=120 inf=24.8s sim=5.1s total=33.8s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 43 success=True steps=120 inf=21.8s sim=3.9s total=29.4s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 44 success=False steps=120 inf=20.1s sim=4.7s total=28.3s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 45 success=True steps=120 inf=19.3s sim=3.6s total=26.4s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 46 success=True steps=120 inf=18.3s sim=3.6s total=25.4s
+[octo-small|PutEggplantInBasketScene-v1|force_x0.5] ep 47 success=False steps=120 inf=18.9s sim=4.9s total=27.1s
+== force_x0.5: 22/48 success
+[33;1m2026-09-18 12:21:55,456 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 12:21:55,458 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 12:21:55,459 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 24 success=True steps=120 inf=18.9s sim=3.6s total=25.8s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 25 success=False steps=120 inf=19.2s sim=4.5s total=27.1s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 26 success=False steps=120 inf=20.3s sim=5.0s total=29.0s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 27 success=False steps=120 inf=18.4s sim=4.1s total=26.0s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 28 success=True steps=120 inf=19.2s sim=3.6s total=26.1s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 29 success=True steps=120 inf=19.7s sim=3.9s total=27.1s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 30 success=False steps=120 inf=20.0s sim=3.5s total=26.9s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 31 success=True steps=120 inf=19.2s sim=4.9s total=27.4s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 32 success=False steps=120 inf=19.8s sim=4.6s total=27.9s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 33 success=True steps=120 inf=19.3s sim=3.6s total=26.3s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 34 success=False steps=120 inf=19.4s sim=4.9s total=27.7s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 35 success=False steps=120 inf=19.2s sim=4.7s total=27.5s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 36 success=False steps=120 inf=20.3s sim=4.9s total=28.7s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 37 success=False steps=120 inf=17.5s sim=3.4s total=24.2s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 38 success=False steps=120 inf=14.4s sim=4.1s total=21.6s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 39 success=True steps=120 inf=13.8s sim=3.5s total=20.4s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 40 success=False steps=120 inf=14.6s sim=3.8s total=21.6s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 41 success=True steps=120 inf=14.8s sim=4.0s total=22.0s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 42 success=False steps=120 inf=14.8s sim=3.9s total=21.8s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 43 success=True steps=120 inf=14.6s sim=4.2s total=22.1s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 44 success=False steps=120 inf=14.3s sim=4.0s total=21.4s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 45 success=True steps=120 inf=13.6s sim=3.0s total=19.8s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 46 success=True steps=120 inf=13.6s sim=3.1s total=19.7s
+[octo-small|PutEggplantInBasketScene-v1|delay_1] ep 47 success=True steps=120 inf=14.0s sim=3.1s total=20.0s
+== delay_1: 24/48 success

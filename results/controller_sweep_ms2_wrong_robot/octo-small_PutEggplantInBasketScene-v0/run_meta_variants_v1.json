@@ -1,0 +1,67 @@
+{
+  "started_utc": "2026-09-19T10:17:48Z",
+  "args": {
+    "policy_name": "octo-small",
+    "policy_url": "http://127.0.0.1:8767",
+    "task": "widowx_put_eggplant_in_basket",
+    "preset": "variants_v1",
+    "conditions": null,
+    "episodes": 48,
+    "episode_offset": 0,
+    "policy_seed_base": 20260918,
+    "output_dir": "results/controller_sweep_ms2",
+    "max_steps": null
+  },
+  "compat": {
+    "render": "sapien2_lavapipe_via_vk_fakesemfd_layer",
+    "missing_env": []
+  },
+  "task": {
+    "env_id": "PutEggplantInBasketScene-v0",
+    "scene": "bridge_table_1_v2",
+    "overlay": "ManiSkill2_real2sim/data/real_inpainting/bridge_sink.png",
+    "init_xy": [
+      0.127,
+      0.06
+    ],
+    "max_steps": 120
+  },
+  "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+  "evidence": "original_simpler_main_ms2_sapien2_cpu_render_wsl",
+  "server_health": {
+    "model": "octo-small",
+    "hf_id": "hf://rail-berkeley/octo-small",
+    "jax": "0.5.3",
+    "flax": "0.10.4",
+    "tensorflow": "2.18.0",
+    "numpy": "2.0.2",
+    "python": "3.11.16",
+    "jax_backend": "gpu",
+    "load_seconds": 27.7213255759998,
+    "jit_warmup_seconds": 104.95784741600073,
+    "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz",
+    "variants": "reset config: ensemble(bool), exec_horizon(int), history(int)",
+    "action_mean": [
+      0.00021160596224945039,
+      0.00012613728176802397,
+      -0.00017021960229612887,
+      -0.0001506186235928908,
+      -0.00023830769350752234,
+      0.0002564573078416288,
+      0.0
+    ],
+    "action_std": [
+      0.009637207724153996,
+      0.013506603427231312,
+      0.012518610805273056,
+      0.028067905455827713,
+      0.03016904927790165,
+      0.07632624357938766,
+      1.0
+    ],
+    "startup_seconds": 145.28787632999592,
+    "step_count": 30
+  },
+  "variant": null,
+  "episode_protocol": "run to max_episode_steps, success from final info; obj_variation_mode=episode; common episode_ids and policy seeds"
+}

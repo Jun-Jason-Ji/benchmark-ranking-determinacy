@@ -1,0 +1,84 @@
+{
+  "started_utc": "2026-09-21T14:15:24Z",
+  "args": {
+    "policy_name": "rt-1-converged",
+    "policy_url": "http://127.0.0.1:8774",
+    "task": "google_pick_coke_can",
+    "preset": "variants_v1",
+    "conditions": "fric_x0.4",
+    "episodes": 300,
+    "episode_offset": 0,
+    "policy_seed_base": 20260918,
+    "policy_seed_fixed": null,
+    "output_dir": "results/fractal_reversal",
+    "max_steps": null
+  },
+  "compat": {
+    "render": "sapien2_lavapipe_via_vk_fakesemfd_layer",
+    "missing_env": []
+  },
+  "task": {
+    "env_id": "GraspSingleOpenedCokeCanInScene-v0",
+    "robot": "google_robot_static",
+    "scene": "google_pick_coke_can_1_v4",
+    "overlay": "ManiSkill2_real2sim/data/real_inpainting/google_coke_can_real_eval_1.png",
+    "init_xy": [
+      0.35,
+      0.2
+    ],
+    "max_steps": 80,
+    "control_freq": 3,
+    "sim_freq": 501,
+    "camera": "overhead_camera",
+    "policy_setup": "google_robot",
+    "obj_mode": "xy",
+    "control_mode": "arm_pd_ee_delta_pose_align_interpolate_by_planner_gripper_pd_joint_target_delta_pos_interpolate_by_planner",
+    "obj_grid": {
+      "x": [
+        -0.35,
+        -0.12,
+        5
+      ],
+      "y": [
+        -0.02,
+        0.42,
+        5
+      ]
+    },
+    "can_options": [
+      "lr_switch",
+      "upright",
+      "laid_vertically"
+    ],
+    "urdf_versions": [
+      null,
+      "recolor_tabletop_visual_matching_1",
+      "recolor_tabletop_visual_matching_2",
+      "recolor_cabinet_visual_matching_1"
+    ]
+  },
+  "control_mode": "arm_pd_ee_delta_pose_align_interpolate_by_planner_gripper_pd_joint_target_delta_pos_interpolate_by_planner",
+  "evidence": "original_simpler_main_ms2_sapien2_cpu_render_wsl",
+  "server_health": {
+    "model": "rt-1-converged",
+    "saved_model": "E:\\research\\the_world\\third_party\\SimplerEnv\\checkpoints\\rt_1_tf_trained_for_000400120",
+    "tensorflow": "2.15.0",
+    "tf_agents": "0.19.0",
+    "numpy": "1.26.4",
+    "policy_setup": "google_robot",
+    "deterministic": "no seed input; verify by re-running a config",
+    "image_size": [
+      256,
+      320
+    ],
+    "load_seconds": 18.136201599998458,
+    "jit_warmup_seconds": 2.5147970000034547,
+    "startup_seconds": 28.35399470000266,
+    "terminate_episode": "predicted by RT-1; the caller must honour it",
+    "step_count": 16951,
+    "sessions": 2,
+    "session_isolation": true
+  },
+  "variant": null,
+  "episode_protocol": "run to max_episode_steps unless the policy predicts terminate_episode (RT-1 does, Octo does not), success from final info; common episode_ids and policy seeds"
+}

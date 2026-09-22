@@ -1,0 +1,17 @@
+15:26:56 === contact_v1_24: 6 jobs
+15:26:56 launched octo-small PutEggplantInBasketScene-v1 contact_v1 off=0 on 8767
+15:26:56 launched octo-base PutEggplantInBasketScene-v1 contact_v1 off=0 on 8768
+15:26:56 launched octo-small PutSpoonOnTableClothInScene-v1 contact_v1 off=0 on 8769
+15:26:56 launched octo-base PutSpoonOnTableClothInScene-v1 contact_v1 off=0 on 8770
+15:51:18 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 contact_v1 off=0 on 8769
+15:51:19 launched octo-small PutCarrotOnPlateInScene-v1 contact_v1 off=0 on 8769
+15:53:47 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 contact_v1 off=0 on 8770
+15:53:48 launched octo-base PutCarrotOnPlateInScene-v1 contact_v1 off=0 on 8770
+16:10:03 done rc=0 octo-small PutEggplantInBasketScene-v1 contact_v1 off=0 on 8767
+16:14:16 done rc=0 octo-small PutCarrotOnPlateInScene-v1 contact_v1 off=0 on 8769
+16:16:00 done rc=0 octo-base PutEggplantInBasketScene-v1 contact_v1 off=0 on 8768
+16:17:44 done rc=0 octo-base PutCarrotOnPlateInScene-v1 contact_v1 off=0 on 8770
+16:18:04 === contact_v1_24 complete
+16:18:04 analysis scripts/analyze_controller_sweep.py rc=0
+16:18:05 analysis scripts/analyze_equiv_pairs.py rc=0
+16:18:05 CONTACT_QUEUE_DONE

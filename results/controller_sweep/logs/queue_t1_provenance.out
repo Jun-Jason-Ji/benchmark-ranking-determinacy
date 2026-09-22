@@ -1,0 +1,99 @@
+==== Sun 09/20/2026  7:28:01.60 restarted scheduler after busy_ports crash (queue_t1_provenance) 
+13:52:03 === t1a_provenance: 48 jobs
+13:52:04 launched octo-small PutSpoonOnTableClothInScene-v1 nominal seed=20260918 on 8767
+13:52:04 launched octo-base PutSpoonOnTableClothInScene-v1 nominal seed=20260918 on 8768
+13:56:41 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 nominal seed=20260918 on 8767
+13:56:41 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 nominal seed=20260918 on 8768
+13:56:42 launched octo-small PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20260918 on 8767
+13:56:42 launched octo-base PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20260918 on 8768
+14:01:19 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20260918 on 8767
+14:01:19 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20260918 on 8768
+14:01:20 launched octo-small PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20260918 on 8767
+14:01:20 launched octo-base PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20260918 on 8768
+14:05:58 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20260918 on 8767
+14:05:58 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20260918 on 8768
+14:05:59 launched octo-small PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20260918 on 8767
+14:05:59 launched octo-base PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20260918 on 8768
+14:10:58 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20260918 on 8767
+14:10:58 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20260918 on 8768
+14:10:59 launched octo-small PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20260918 on 8767
+14:10:59 launched octo-base PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20260918 on 8768
+14:15:36 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20260918 on 8767
+14:15:36 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20260918 on 8768
+14:15:37 launched octo-small PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20260918 on 8767
+14:15:37 launched octo-base PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20260918 on 8768
+14:20:14 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20260918 on 8767
+14:20:14 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20260918 on 8768
+14:20:15 launched octo-small PutCarrotOnPlateInScene-v1 nominal seed=20260918 on 8767
+14:20:15 launched octo-base PutCarrotOnPlateInScene-v1 nominal seed=20260918 on 8768
+14:24:52 done rc=0 octo-small PutCarrotOnPlateInScene-v1 nominal seed=20260918 on 8767
+14:24:52 done rc=0 octo-base PutCarrotOnPlateInScene-v1 nominal seed=20260918 on 8768
+14:24:53 launched octo-small PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20260918 on 8767
+14:24:53 launched octo-base PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20260918 on 8768
+14:29:31 done rc=0 octo-small PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20260918 on 8767
+14:29:31 done rc=0 octo-base PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20260918 on 8768
+14:29:32 launched octo-small PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20260918 on 8767
+14:29:32 launched octo-base PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20260918 on 8768
+14:34:09 done rc=0 octo-small PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20260918 on 8767
+14:34:09 done rc=0 octo-base PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20260918 on 8768
+14:34:10 launched octo-small PutCarrotOnPlateInScene-v1 force_x0.5 seed=20260918 on 8767
+14:34:10 launched octo-base PutCarrotOnPlateInScene-v1 force_x0.5 seed=20260918 on 8768
+14:38:47 done rc=0 octo-small PutCarrotOnPlateInScene-v1 force_x0.5 seed=20260918 on 8767
+14:38:47 done rc=0 octo-base PutCarrotOnPlateInScene-v1 force_x0.5 seed=20260918 on 8768
+14:38:48 launched octo-small PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20260918 on 8767
+14:38:48 launched octo-base PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20260918 on 8768
+14:43:26 done rc=0 octo-small PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20260918 on 8767
+14:43:26 done rc=0 octo-base PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20260918 on 8768
+14:43:27 launched octo-small PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20260918 on 8767
+14:43:27 launched octo-base PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20260918 on 8768
+14:48:04 done rc=0 octo-small PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20260918 on 8767
+14:48:04 done rc=0 octo-base PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20260918 on 8768
+14:48:05 launched octo-small PutSpoonOnTableClothInScene-v1 nominal seed=20280101 on 8767
+14:48:05 launched octo-base PutSpoonOnTableClothInScene-v1 nominal seed=20280101 on 8768
+14:52:43 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 nominal seed=20280101 on 8767
+14:52:43 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 nominal seed=20280101 on 8768
+14:52:43 launched octo-small PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20280101 on 8767
+14:52:43 launched octo-base PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20280101 on 8768
+14:57:21 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20280101 on 8767
+14:57:21 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 iso_x0.25 seed=20280101 on 8768
+14:57:22 launched octo-small PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20280101 on 8767
+14:57:22 launched octo-base PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20280101 on 8768
+15:02:21 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20280101 on 8767
+15:02:21 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 iso_x4.0 seed=20280101 on 8768
+15:02:22 launched octo-small PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20280101 on 8767
+15:02:22 launched octo-base PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20280101 on 8768
+15:06:59 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20280101 on 8767
+15:06:59 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 force_x0.5 seed=20280101 on 8768
+15:07:00 launched octo-small PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20280101 on 8767
+15:07:00 launched octo-base PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20280101 on 8768
+15:11:37 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20280101 on 8767
+15:11:37 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 fric_x0.4 seed=20280101 on 8768
+15:11:38 launched octo-small PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20280101 on 8767
+15:11:38 launched octo-base PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20280101 on 8768
+15:16:16 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20280101 on 8767
+15:16:16 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 dens_x0.5 seed=20280101 on 8768
+15:16:17 launched octo-small PutCarrotOnPlateInScene-v1 nominal seed=20280101 on 8767
+15:16:17 launched octo-base PutCarrotOnPlateInScene-v1 nominal seed=20280101 on 8768
+15:20:55 done rc=0 octo-small PutCarrotOnPlateInScene-v1 nominal seed=20280101 on 8767
+15:20:56 launched octo-small PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20280101 on 8767
+15:21:16 done rc=0 octo-base PutCarrotOnPlateInScene-v1 nominal seed=20280101 on 8768
+15:21:17 launched octo-base PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20280101 on 8768
+15:25:33 done rc=0 octo-small PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20280101 on 8767
+15:25:34 launched octo-small PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20280101 on 8767
+15:25:54 done rc=0 octo-base PutCarrotOnPlateInScene-v1 iso_x0.25 seed=20280101 on 8768
+15:25:56 launched octo-base PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20280101 on 8768
+15:30:12 done rc=0 octo-small PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20280101 on 8767
+15:30:13 launched octo-small PutCarrotOnPlateInScene-v1 force_x0.5 seed=20280101 on 8767
+15:30:33 done rc=0 octo-base PutCarrotOnPlateInScene-v1 iso_x4.0 seed=20280101 on 8768
+15:30:34 launched octo-base PutCarrotOnPlateInScene-v1 force_x0.5 seed=20280101 on 8768
+15:35:11 done rc=0 octo-small PutCarrotOnPlateInScene-v1 force_x0.5 seed=20280101 on 8767
+15:35:12 launched octo-small PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20280101 on 8767
+15:35:32 done rc=0 octo-base PutCarrotOnPlateInScene-v1 force_x0.5 seed=20280101 on 8768
+15:35:33 launched octo-base PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20280101 on 8768
+15:39:27 done rc=0 octo-small PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20280101 on 8767
+15:39:29 launched octo-small PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20280101 on 8767
+15:40:10 done rc=0 octo-base PutCarrotOnPlateInScene-v1 fric_x0.4 seed=20280101 on 8768
+15:40:11 launched octo-base PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20280101 on 8768
+15:44:06 done rc=0 octo-small PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20280101 on 8767
+15:44:48 done rc=0 octo-base PutCarrotOnPlateInScene-v1 dens_x0.5 seed=20280101 on 8768
+15:45:09 T1A_PROVENANCE_DONE

@@ -1,0 +1,7 @@
+rt-1-x: no objects under open_x_embodiment_and_rt_x_oss/rt_1_x_tf_trained_for_002272480_step/
+rt-1-converged (rt_1_tf_trained_for_000400120): 9 objects, 647 MB
+rt-1-converged: done
+rt-1-15pct (rt_1_tf_trained_for_000058240): 9 objects, 647 MB
+    retry 1/5 after URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+rt-1-15pct: done
+RT1_FETCH_INCOMPLETE (1 problems)

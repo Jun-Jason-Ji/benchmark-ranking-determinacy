@@ -1,0 +1,83 @@
+{
+  "started_utc": "2026-09-18T14:51:13Z",
+  "args": {
+    "episodes_dir": "data/bridge_sysid",
+    "episodes": 3,
+    "preset": "sweep_v1",
+    "conditions": null,
+    "grid": false,
+    "output_dir": "results/replay_sysid_smoke",
+    "max_steps": null,
+    "ik_iters": 400,
+    "verbose": false
+  },
+  "compat": {
+    "ik": "upstream_torch_jacobian_solver_on_cpu",
+    "pci_parser": "preserve_full_pci_address",
+    "benchmark_equivalent": false
+  },
+  "robot_uid": "widowx250s_bridgedataset_flat_table",
+  "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+  "sim_freq": 500,
+  "control_freq": 5,
+  "nominal": {
+    "arm_stiffness": [
+      1169.7891719504198,
+      730.0,
+      808.4601346394447,
+      1229.1299089624076,
+      1272.2760456418862,
+      1056.3326605132252
+    ],
+    "arm_damping": [
+      330.0,
+      180.0,
+      152.12036565582588,
+      309.6215302722146,
+      201.04998711007383,
+      269.51458932695414
+    ],
+    "arm_force_limit": [
+      200,
+      200,
+      100,
+      100,
+      100,
+      100
+    ],
+    "gripper_stiffness": 1000,
+    "gripper_damping": 200,
+    "gripper_force_limit": 60
+  },
+  "conditions": {
+    "nominal": {},
+    "stiff_x0.5": {
+      "stiffness_scale": 0.5
+    },
+    "stiff_x2.0": {
+      "stiffness_scale": 2.0
+    },
+    "damp_x0.5": {
+      "damping_scale": 0.5
+    },
+    "damp_x2.0": {
+      "damping_scale": 2.0
+    },
+    "force_x0.5": {
+      "force_scale": 0.5
+    },
+    "delay_1": {
+      "delay_steps": 1
+    }
+  },
+  "n_demos": 3,
+  "demo_ids": [
+    0,
+    1,
+    2
+  ],
+  "pose_convention": "p=state[:3]; R=euler2mat(rpy,'sxyz') @ [[0,0,1],[0,1,0],[-1,0,0]]",
+  "action_convention": "world_vector; euler2axangle(rpy,'sxyz'); gripper 2*open-1",
+  "evidence": "exploratory_ms3_windows_platform_not_original_simpler",
+  "simpler_main_commit": "06accaca93535902d408da4855f21cece12bceb7"
+}

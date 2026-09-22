@@ -1,0 +1,6 @@
+==== Sat 09/19/2026  6:39:54.18 restarted scheduler after busy_ports crash (queue_openvla_run) 
+06:44:10 openvla server ready: {'model': 'openvla-7b-4bit', 'hf_id': 'openvla/openvla-7b', 'quant': '4bit', 'torch': '2.7.1+cu128', 'gpu': 'NVIDIA GeForce RTX 5060 Laptop GPU', 'vram_alloc_gb': 4.73, 'load_seconds': 32.56560129998252, 'jit_warmup_seconds': 20.19663209997816, 'rotation_convention': 'transforms3d.euler2axangle(roll
+11:56:49 done rc=0 openvla-7b-4bit PutEggplantInBasketScene-v1
+13:15:09 done rc=0 openvla-7b-4bit PutSpoonOnTableClothInScene-v1
+13:15:11 analysis rc=0
+13:15:11 OPENVLA_QUEUE_DONE

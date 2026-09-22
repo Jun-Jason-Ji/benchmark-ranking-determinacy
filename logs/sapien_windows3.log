@@ -1,0 +1,18 @@
+Starting SAPIEN import and renderer probe
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+E:\research\the_world\scripts\probe_sapien.py:22: DeprecationWarning: Engine is deprecated. use sapien.Scene() directly.
+  engine = sapien.Engine()
+E:\research\the_world\scripts\probe_sapien.py:25: DeprecationWarning: SapienRenderer is no no longer needed.
+  renderer = sapien.SapienRenderer(offscreen_only=True)
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "VK_ICD_FILENAMES": null,
+  "status": "passed",
+  "physics_engine": "created",
+  "image_shape": [
+    64,
+    64,
+    4
+  ]
+}

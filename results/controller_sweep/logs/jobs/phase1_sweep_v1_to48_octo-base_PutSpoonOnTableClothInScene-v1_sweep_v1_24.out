@@ -1,0 +1,198 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-18 11:04:27,717 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:04:27,854 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:04:27,872 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 24 success=False steps=60 inf=9.9s sim=2.0s total=13.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 25 success=False steps=60 inf=10.0s sim=2.1s total=14.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 26 success=False steps=60 inf=10.6s sim=1.8s total=14.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 27 success=False steps=60 inf=10.9s sim=2.2s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 28 success=False steps=60 inf=11.7s sim=2.1s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 29 success=False steps=60 inf=11.7s sim=2.1s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 30 success=False steps=60 inf=10.8s sim=2.0s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 31 success=False steps=60 inf=12.3s sim=2.2s total=16.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 32 success=True steps=60 inf=10.3s sim=2.1s total=14.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 33 success=False steps=60 inf=11.0s sim=2.2s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 34 success=False steps=60 inf=11.8s sim=1.9s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 35 success=False steps=60 inf=11.8s sim=2.0s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 36 success=False steps=60 inf=12.0s sim=1.8s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 37 success=False steps=60 inf=12.0s sim=1.8s total=15.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 38 success=False steps=60 inf=11.9s sim=1.8s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 39 success=False steps=60 inf=10.6s sim=2.0s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 40 success=True steps=60 inf=11.8s sim=1.8s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 41 success=False steps=60 inf=10.9s sim=2.0s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 42 success=False steps=60 inf=12.1s sim=1.7s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 43 success=False steps=60 inf=12.4s sim=2.0s total=16.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 44 success=False steps=60 inf=10.7s sim=2.1s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 45 success=False steps=60 inf=11.7s sim=2.0s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 46 success=False steps=60 inf=10.6s sim=2.1s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|nominal] ep 47 success=False steps=60 inf=11.4s sim=2.0s total=15.0s
+== nominal: 4/48 success
+[33;1m2026-09-18 11:10:32,499 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:10:32,502 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:10:32,503 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 24 success=False steps=60 inf=11.6s sim=1.8s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 25 success=False steps=60 inf=11.3s sim=2.2s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 26 success=True steps=60 inf=10.4s sim=2.3s total=14.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 27 success=False steps=60 inf=12.1s sim=2.1s total=16.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 28 success=False steps=60 inf=10.8s sim=2.0s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 29 success=False steps=60 inf=11.8s sim=1.9s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 30 success=False steps=60 inf=11.5s sim=1.8s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 31 success=False steps=60 inf=11.0s sim=2.0s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 32 success=False steps=60 inf=10.6s sim=2.1s total=14.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 33 success=False steps=60 inf=11.5s sim=2.1s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 34 success=False steps=60 inf=12.4s sim=1.9s total=16.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 35 success=False steps=60 inf=11.5s sim=2.4s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 36 success=False steps=60 inf=11.4s sim=1.9s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 37 success=False steps=60 inf=12.1s sim=1.7s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 38 success=False steps=60 inf=11.3s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 39 success=False steps=60 inf=11.3s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 40 success=False steps=60 inf=11.9s sim=1.8s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 41 success=False steps=60 inf=11.7s sim=1.9s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 42 success=False steps=60 inf=11.3s sim=2.0s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 43 success=False steps=60 inf=12.0s sim=1.9s total=15.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 44 success=False steps=60 inf=11.1s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 45 success=False steps=60 inf=11.1s sim=2.0s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 46 success=False steps=60 inf=11.5s sim=1.9s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x0.5] ep 47 success=False steps=60 inf=11.4s sim=2.2s total=15.8s
+== stiff_x0.5: 4/48 success
+[33;1m2026-09-18 11:16:39,541 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:16:39,544 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:16:39,545 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 24 success=False steps=60 inf=11.5s sim=1.9s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 25 success=False steps=60 inf=12.7s sim=1.9s total=16.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 26 success=False steps=60 inf=11.7s sim=1.9s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 27 success=False steps=60 inf=11.2s sim=2.2s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 28 success=False steps=60 inf=10.6s sim=2.0s total=14.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 29 success=False steps=60 inf=11.8s sim=1.8s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 30 success=True steps=60 inf=11.1s sim=2.0s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 31 success=False steps=60 inf=11.5s sim=2.3s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 32 success=False steps=60 inf=11.9s sim=1.9s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 33 success=False steps=60 inf=12.2s sim=2.0s total=16.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 34 success=True steps=60 inf=11.4s sim=2.1s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 35 success=True steps=60 inf=11.6s sim=2.1s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 36 success=False steps=60 inf=11.2s sim=1.9s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 37 success=False steps=60 inf=10.7s sim=1.9s total=14.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 38 success=False steps=60 inf=12.1s sim=1.8s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 39 success=False steps=60 inf=11.3s sim=2.0s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 40 success=False steps=60 inf=11.3s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 41 success=False steps=60 inf=11.1s sim=2.0s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 42 success=False steps=60 inf=11.0s sim=1.9s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 43 success=False steps=60 inf=11.5s sim=1.9s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 44 success=False steps=60 inf=12.5s sim=2.1s total=16.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 45 success=False steps=60 inf=11.1s sim=2.0s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 46 success=False steps=60 inf=11.7s sim=1.9s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|stiff_x2.0] ep 47 success=False steps=60 inf=11.5s sim=2.0s total=15.5s
+== stiff_x2.0: 4/48 success
+[33;1m2026-09-18 11:22:47,781 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:22:47,785 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:22:47,787 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 24 success=False steps=60 inf=11.5s sim=1.8s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 25 success=False steps=60 inf=11.3s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 26 success=False steps=60 inf=11.4s sim=1.9s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 27 success=False steps=60 inf=11.5s sim=2.4s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 28 success=False steps=60 inf=10.8s sim=1.9s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 29 success=False steps=60 inf=11.4s sim=2.0s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 30 success=True steps=60 inf=11.3s sim=1.9s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 31 success=False steps=60 inf=11.4s sim=2.3s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 32 success=False steps=60 inf=11.2s sim=1.9s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 33 success=False steps=60 inf=10.5s sim=2.3s total=14.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 34 success=False steps=60 inf=11.2s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 35 success=False steps=60 inf=11.3s sim=2.2s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 36 success=False steps=60 inf=11.1s sim=2.0s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 37 success=False steps=60 inf=11.1s sim=1.7s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 38 success=False steps=60 inf=12.6s sim=1.7s total=16.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 39 success=False steps=60 inf=11.5s sim=2.0s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 40 success=False steps=60 inf=11.4s sim=1.8s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 41 success=False steps=60 inf=11.4s sim=1.9s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 42 success=False steps=60 inf=10.4s sim=2.0s total=14.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 43 success=False steps=60 inf=11.0s sim=2.0s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 44 success=False steps=60 inf=11.0s sim=2.4s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 45 success=False steps=60 inf=11.1s sim=2.0s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 46 success=False steps=60 inf=10.5s sim=2.0s total=14.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x0.5] ep 47 success=False steps=60 inf=11.1s sim=2.2s total=15.1s
+== damp_x0.5: 3/48 success
+[33;1m2026-09-18 11:28:50,579 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:28:50,582 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:28:50,583 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 24 success=False steps=60 inf=12.0s sim=1.7s total=15.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 25 success=False steps=60 inf=11.5s sim=2.3s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 26 success=True steps=60 inf=11.8s sim=2.0s total=15.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 27 success=False steps=60 inf=11.5s sim=2.0s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 28 success=False steps=60 inf=10.9s sim=2.2s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 29 success=False steps=60 inf=10.8s sim=2.1s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 30 success=False steps=60 inf=11.5s sim=1.9s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 31 success=False steps=60 inf=11.7s sim=1.8s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 32 success=False steps=60 inf=11.2s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 33 success=False steps=60 inf=11.3s sim=2.1s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 34 success=False steps=60 inf=10.9s sim=2.0s total=14.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 35 success=False steps=60 inf=11.4s sim=2.0s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 36 success=False steps=60 inf=11.1s sim=1.8s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 37 success=False steps=60 inf=10.7s sim=2.0s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 38 success=True steps=60 inf=11.4s sim=2.0s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 39 success=False steps=60 inf=11.4s sim=1.9s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 40 success=True steps=60 inf=11.1s sim=2.1s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 41 success=False steps=60 inf=10.8s sim=2.0s total=14.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 42 success=False steps=60 inf=11.1s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 43 success=False steps=60 inf=10.7s sim=2.2s total=14.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 44 success=False steps=60 inf=11.4s sim=2.0s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 45 success=False steps=60 inf=11.4s sim=1.8s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 46 success=False steps=60 inf=11.4s sim=1.8s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|damp_x2.0] ep 47 success=False steps=60 inf=11.5s sim=1.9s total=15.2s
+== damp_x2.0: 4/48 success
+[33;1m2026-09-18 11:34:55,681 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:34:55,685 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:34:55,687 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 24 success=False steps=60 inf=10.8s sim=1.8s total=14.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 25 success=False steps=60 inf=11.4s sim=2.2s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 26 success=False steps=60 inf=11.0s sim=2.0s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 27 success=False steps=60 inf=11.4s sim=2.1s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 28 success=True steps=60 inf=11.1s sim=2.0s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 29 success=False steps=60 inf=12.5s sim=1.9s total=16.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 30 success=False steps=60 inf=12.0s sim=1.9s total=15.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 31 success=False steps=60 inf=11.1s sim=2.3s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 32 success=True steps=60 inf=11.3s sim=2.0s total=15.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 33 success=False steps=60 inf=11.3s sim=2.1s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 34 success=False steps=60 inf=12.3s sim=1.9s total=15.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 35 success=False steps=60 inf=11.1s sim=2.2s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 36 success=False steps=60 inf=10.8s sim=2.0s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 37 success=False steps=60 inf=10.7s sim=1.9s total=14.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 38 success=False steps=60 inf=10.4s sim=2.0s total=14.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 39 success=False steps=60 inf=11.3s sim=2.0s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 40 success=True steps=60 inf=10.7s sim=2.0s total=14.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 41 success=False steps=60 inf=11.3s sim=2.0s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 42 success=False steps=60 inf=11.4s sim=1.8s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 43 success=False steps=60 inf=11.7s sim=2.0s total=15.5s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 44 success=False steps=60 inf=11.4s sim=2.0s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 45 success=False steps=60 inf=11.4s sim=2.0s total=15.2s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 46 success=False steps=60 inf=11.7s sim=1.9s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 47 success=False steps=60 inf=11.9s sim=2.0s total=15.7s
+== force_x0.5: 5/48 success
+[33;1m2026-09-18 11:41:00,442 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 11:41:00,445 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 11:41:00,446 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 24 success=False steps=60 inf=11.2s sim=2.0s total=14.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 25 success=False steps=60 inf=11.7s sim=2.2s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 26 success=False steps=60 inf=10.7s sim=1.8s total=14.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 27 success=False steps=60 inf=11.9s sim=1.9s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 28 success=True steps=60 inf=11.4s sim=2.1s total=15.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 29 success=False steps=60 inf=11.8s sim=1.9s total=15.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 30 success=True steps=60 inf=9.3s sim=1.9s total=13.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 31 success=False steps=60 inf=10.3s sim=1.6s total=13.8s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 32 success=False steps=60 inf=12.4s sim=2.0s total=16.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 33 success=False steps=60 inf=12.5s sim=2.0s total=16.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 34 success=True steps=60 inf=11.0s sim=2.2s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 35 success=False steps=60 inf=10.5s sim=2.3s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 36 success=False steps=60 inf=12.4s sim=1.8s total=16.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 37 success=False steps=60 inf=10.9s sim=1.8s total=14.6s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 38 success=False steps=60 inf=11.9s sim=2.0s total=15.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 39 success=False steps=60 inf=10.7s sim=2.3s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 40 success=False steps=60 inf=10.5s sim=2.1s total=14.4s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 41 success=False steps=60 inf=12.1s sim=1.9s total=15.9s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 42 success=False steps=60 inf=12.4s sim=1.8s total=16.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 43 success=False steps=60 inf=10.3s sim=2.1s total=14.3s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 44 success=False steps=60 inf=11.7s sim=2.0s total=15.7s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 45 success=False steps=60 inf=11.2s sim=1.9s total=15.0s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 46 success=True steps=60 inf=11.2s sim=2.0s total=15.1s
+[octo-base|PutSpoonOnTableClothInScene-v1|delay_1] ep 47 success=False steps=60 inf=11.4s sim=2.0s total=15.2s
+== delay_1: 8/48 success

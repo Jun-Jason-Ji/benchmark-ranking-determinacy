@@ -1,0 +1,250 @@
+==== Fri 09/18/2026 19:15:58.30 download shards 1-3
+end of shard reached after 28 records
+done: 28 records in E:\research\the_world\data\bridge_sysid
+record 12: 28 steps, 13.2 MB, 'Hold and move the tiffin box from center of the table to right edge of the table.'
+record 13: 29 steps, 12.1 MB, 'put potato in pot cardboard fence'
+record 14: 22 steps, 9.1 MB, 'put corn in pan which is on stove distractors'
+record 15: 26 steps, 10.5 MB, 'put corn into bowl'
+record 16: 49 steps, 20.8 MB, 'NOT MOVING ANYTHING'
+record 17: 32 steps, 11.1 MB, 'put spatula on plate sink'
+record 18: 24 steps, 9.8 MB, 'Place the red pepper into the silver pot'
+record 19: 24 steps, 10.3 MB, 'put lid on pot or pan'
+record 20: 49 steps, 21.4 MB, 'Move the bowl to the upper right side of the table'
+record 21: 28 steps, 13.7 MB, 'pick up green mug'
+record 22: 29 steps, 12.1 MB, 'Pick the blue spoon and place it on blue towel'
+record 23: 28 steps, 11.7 MB, 'put carrot in pot cardboard fence'
+record 24: 35 steps, 9.7 MB, 'take cucumber out of cup'
+record 25: 76 steps, 32.9 MB, 'put blueberry in pot or pan an put pot or pan on stove'
+record 26: 24 steps, 8.6 MB, 'flip cup upright'
+record 27: 36 steps, 15.5 MB, 'Move red pot closer to right side of banana.'
+record 28: 19 steps, 8.1 MB, 'end effector transition from object to object'
+record 29: 39 steps, 13.1 MB, 'close fridge'
+done: 30 records in E:\research\the_world\data\bridge_sysid
+record 0: 40 steps, 18.0 MB, 'Pick up the pot and place it behind the orange cloth'
+record 1: 46 steps, 19.6 MB, 'Move cucumber to bowl, laying down.'
+record 2: 28 steps, 11.8 MB, 'Slide the green rag into the corner near the blue handle.'
+record 3: 49 steps, 20.7 MB, 'Move the pan to the right of the bottle and banana.'
+record 4: 32 steps, 10.7 MB, 'take cup off plate'
+record 5: 42 steps, 18.0 MB, 'Move the bowl to the left of the blue towel'
+record 6: 48 steps, 20.6 MB, 'Place the red fork on the green cloth.'
+record 7: 41 steps, 17.2 MB, 'Move the sushi on the top left of the table.'
+record 8: 19 steps, 8.1 MB, 'end effector transition from pot or pan to object'
+record 9: 18 steps, 7.4 MB, 'pick up pot from sink distractors'
+done: 10 records in E:\research\the_world\data\bridge_sysid
+==== Fri 09/18/2026 19:19:30.04 replay sweep_v1 (100 demos)
+== nominal: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== stiff_x0.5: n=98 transl 23.5 mm, rot 1.94 deg, init 0.1 mm
+== stiff_x2.0: n=98 transl 23.5 mm, rot 1.80 deg, init 0.1 mm
+== damp_x0.5: n=98 transl 23.5 mm, rot 1.80 deg, init 0.1 mm
+== damp_x2.0: n=98 transl 23.5 mm, rot 1.94 deg, init 0.1 mm
+== force_x0.5: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== delay_1: n=98 transl 22.6 mm, rot 1.83 deg, init 0.1 mm
+# Replay fit error by controller condition
+
+Exploratory ManiSkill3/Windows platform (torch-Jacobian IK adapter); SIMPLER sysid protocol; not original SIMPLER main.
+
+| condition | n | transl err mm (±sem) | rot err deg | total err | init err mm |
+|---|---:|---:|---:|---:|---:|
+| nominal | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| stiff_x0.5 | 98 | 23.5 ±1.2 | 1.94 | 0.0574 | 0.1 |
+| stiff_x2.0 | 98 | 23.5 ±1.4 | 1.80 | 0.0549 | 0.1 |
+| damp_x0.5 | 98 | 23.5 ±1.4 | 1.80 | 0.0549 | 0.1 |
+| damp_x2.0 | 98 | 23.5 ±1.2 | 1.94 | 0.0574 | 0.1 |
+| force_x0.5 | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| delay_1 | 98 | 22.6 ±1.2 | 1.83 | 0.0545 | 0.1 |
+
+## Paired difference of per-episode total error vs nominal
+
+| condition | n | Δ total err | bootstrap 95% |
+|---|---:|---:|---|
+| stiff_x0.5 | 98 | +0.0089 | [+0.0073, +0.0105] |
+| stiff_x2.0 | 98 | +0.0064 | [+0.0055, +0.0072] |
+| damp_x0.5 | 98 | +0.0064 | [+0.0055, +0.0072] |
+| damp_x2.0 | 98 | +0.0089 | [+0.0073, +0.0105] |
+| force_x0.5 | 98 | -0.0000 | [-0.0000, +0.0000] |
+| delay_1 | 98 | +0.0060 | [+0.0046, +0.0075] |
+==== Fri 09/18/2026 19:36:53.11 replay grid (100 demos)
+== s0.5_d0.5_delay0: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== s0.5_d0.5_delay1: n=98 transl 22.6 mm, rot 1.83 deg, init 0.1 mm
+== s0.5_d0.7_delay0: n=98 transl 20.3 mm, rot 1.68 deg, init 0.1 mm
+== s0.5_d0.7_delay1: n=98 transl 26.0 mm, rot 2.09 deg, init 0.1 mm
+== s0.5_d1_delay0: n=98 transl 23.5 mm, rot 1.94 deg, init 0.1 mm
+== s0.5_d1_delay1: n=98 transl 31.3 mm, rot 2.47 deg, init 0.1 mm
+== s0.5_d1.4_delay0: n=98 transl 29.2 mm, rot 2.36 deg, init 0.1 mm
+== s0.5_d1.4_delay1: n=98 transl 37.7 mm, rot 2.91 deg, init 0.1 mm
+== s0.5_d2_delay0: n=98 transl 37.4 mm, rot 2.91 deg, init 0.1 mm
+== s0.5_d2_delay1: n=98 transl 45.5 mm, rot 3.43 deg, init 0.1 mm
+== s0.7_d0.5_delay0: n=98 transl 21.7 mm, rot 1.69 deg, init 0.1 mm
+== s0.7_d0.5_delay1: n=98 transl 20.5 mm, rot 1.66 deg, init 0.1 mm
+== s0.7_d0.7_delay0: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== s0.7_d0.7_delay1: n=98 transl 22.6 mm, rot 1.83 deg, init 0.1 mm
+== s0.7_d1_delay0: n=98 transl 20.4 mm, rot 1.69 deg, init 0.1 mm
+== s0.7_d1_delay1: n=98 transl 26.2 mm, rot 2.11 deg, init 0.1 mm
+== s0.7_d1.4_delay0: n=98 transl 23.5 mm, rot 1.94 deg, init 0.1 mm
+== s0.7_d1.4_delay1: n=98 transl 31.3 mm, rot 2.47 deg, init 0.1 mm
+== s0.7_d2_delay0: n=98 transl 29.6 mm, rot 2.39 deg, init 0.1 mm
+== s0.7_d2_delay1: n=98 transl 38.1 mm, rot 2.94 deg, init 0.1 mm
+== s1_d0.5_delay0: n=98 transl 23.5 mm, rot 1.80 deg, init 0.1 mm
+== s1_d0.5_delay1: n=98 transl 19.5 mm, rot 1.57 deg, init 0.1 mm
+== s1_d0.7_delay0: n=98 transl 21.8 mm, rot 1.69 deg, init 0.1 mm
+== s1_d0.7_delay1: n=98 transl 20.4 mm, rot 1.65 deg, init 0.1 mm
+== s1_d1_delay0: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== s1_d1_delay1: n=98 transl 22.6 mm, rot 1.83 deg, init 0.1 mm
+== s1_d1.4_delay0: n=98 transl 20.3 mm, rot 1.68 deg, init 0.1 mm
+== s1_d1.4_delay1: n=98 transl 26.0 mm, rot 2.09 deg, init 0.1 mm
+== s1_d2_delay0: n=98 transl 23.5 mm, rot 1.94 deg, init 0.1 mm
+== s1_d2_delay1: n=98 transl 31.3 mm, rot 2.47 deg, init 0.1 mm
+== s1.4_d0.5_delay0: n=98 transl 24.8 mm, rot 1.88 deg, init 0.1 mm
+== s1.4_d0.5_delay1: n=98 transl 19.2 mm, rot 1.53 deg, init 0.1 mm
+== s1.4_d0.7_delay0: n=98 transl 23.5 mm, rot 1.80 deg, init 0.1 mm
+== s1.4_d0.7_delay1: n=98 transl 19.5 mm, rot 1.57 deg, init 0.1 mm
+== s1.4_d1_delay0: n=98 transl 21.7 mm, rot 1.69 deg, init 0.1 mm
+== s1.4_d1_delay1: n=98 transl 20.5 mm, rot 1.66 deg, init 0.1 mm
+== s1.4_d1.4_delay0: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== s1.4_d1.4_delay1: n=98 transl 22.6 mm, rot 1.83 deg, init 0.1 mm
+== s1.4_d2_delay0: n=98 transl 20.4 mm, rot 1.69 deg, init 0.1 mm
+== s1.4_d2_delay1: n=98 transl 26.2 mm, rot 2.11 deg, init 0.1 mm
+== s2_d0.5_delay0: n=98 transl 25.6 mm, rot 1.94 deg, init 0.1 mm
+== s2_d0.5_delay1: n=98 transl 19.1 mm, rot 1.52 deg, init 0.1 mm
+== s2_d0.7_delay0: n=98 transl 24.9 mm, rot 1.89 deg, init 0.1 mm
+== s2_d0.7_delay1: n=98 transl 19.2 mm, rot 1.53 deg, init 0.1 mm
+== s2_d1_delay0: n=98 transl 23.5 mm, rot 1.80 deg, init 0.1 mm
+== s2_d1_delay1: n=98 transl 19.5 mm, rot 1.57 deg, init 0.1 mm
+== s2_d1.4_delay0: n=98 transl 21.8 mm, rot 1.69 deg, init 0.1 mm
+== s2_d1.4_delay1: n=98 transl 20.4 mm, rot 1.65 deg, init 0.1 mm
+== s2_d2_delay0: n=98 transl 20.2 mm, rot 1.62 deg, init 0.1 mm
+== s2_d2_delay1: n=98 transl 22.6 mm, rot 1.83 deg, init 0.1 mm
+# Replay fit error by controller condition
+
+Exploratory ManiSkill3/Windows platform (torch-Jacobian IK adapter); SIMPLER sysid protocol; not original SIMPLER main.
+
+| condition | n | transl err mm (±sem) | rot err deg | total err | init err mm |
+|---|---:|---:|---:|---:|---:|
+| s0.5_d0.5_delay0 | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| s0.5_d0.5_delay1 | 98 | 22.6 ±1.2 | 1.83 | 0.0545 | 0.1 |
+| s0.5_d0.7_delay0 | 98 | 20.3 ±1.3 | 1.68 | 0.0496 | 0.1 |
+| s0.5_d0.7_delay1 | 98 | 26.0 ±1.2 | 2.09 | 0.0625 | 0.1 |
+| s0.5_d1_delay0 | 98 | 23.5 ±1.2 | 1.94 | 0.0574 | 0.1 |
+| s0.5_d1_delay1 | 98 | 31.3 ±1.2 | 2.47 | 0.0744 | 0.1 |
+| s0.5_d1.4_delay0 | 98 | 29.2 ±1.1 | 2.36 | 0.0704 | 0.1 |
+| s0.5_d1.4_delay1 | 98 | 37.7 ±1.3 | 2.91 | 0.0885 | 0.1 |
+| s0.5_d2_delay0 | 98 | 37.4 ±1.2 | 2.91 | 0.0883 | 0.1 |
+| s0.5_d2_delay1 | 98 | 45.5 ±1.3 | 3.43 | 0.1055 | 0.1 |
+| s0.7_d0.5_delay0 | 98 | 21.7 ±1.4 | 1.69 | 0.0511 | 0.1 |
+| s0.7_d0.5_delay1 | 98 | 20.5 ±1.3 | 1.66 | 0.0495 | 0.1 |
+| s0.7_d0.7_delay0 | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| s0.7_d0.7_delay1 | 98 | 22.6 ±1.2 | 1.83 | 0.0545 | 0.1 |
+| s0.7_d1_delay0 | 98 | 20.4 ±1.2 | 1.69 | 0.0499 | 0.1 |
+| s0.7_d1_delay1 | 98 | 26.2 ±1.2 | 2.11 | 0.0630 | 0.1 |
+| s0.7_d1.4_delay0 | 98 | 23.5 ±1.2 | 1.94 | 0.0574 | 0.1 |
+| s0.7_d1.4_delay1 | 98 | 31.3 ±1.2 | 2.47 | 0.0744 | 0.1 |
+| s0.7_d2_delay0 | 98 | 29.6 ±1.1 | 2.39 | 0.0713 | 0.1 |
+| s0.7_d2_delay1 | 98 | 38.1 ±1.3 | 2.94 | 0.0894 | 0.1 |
+| s1_d0.5_delay0 | 98 | 23.5 ±1.4 | 1.80 | 0.0549 | 0.1 |
+| s1_d0.5_delay1 | 98 | 19.5 ±1.3 | 1.57 | 0.0469 | 0.1 |
+| s1_d0.7_delay0 | 98 | 21.8 ±1.4 | 1.69 | 0.0513 | 0.1 |
+| s1_d0.7_delay1 | 98 | 20.4 ±1.3 | 1.65 | 0.0493 | 0.1 |
+| s1_d1_delay0 | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| s1_d1_delay1 | 98 | 22.6 ±1.2 | 1.83 | 0.0545 | 0.1 |
+| s1_d1.4_delay0 | 98 | 20.3 ±1.3 | 1.68 | 0.0496 | 0.1 |
+| s1_d1.4_delay1 | 98 | 26.0 ±1.2 | 2.09 | 0.0625 | 0.1 |
+| s1_d2_delay0 | 98 | 23.5 ±1.2 | 1.94 | 0.0574 | 0.1 |
+| s1_d2_delay1 | 98 | 31.3 ±1.2 | 2.47 | 0.0744 | 0.1 |
+| s1.4_d0.5_delay0 | 98 | 24.8 ±1.4 | 1.88 | 0.0577 | 0.1 |
+| s1.4_d0.5_delay1 | 98 | 19.2 ±1.3 | 1.53 | 0.0459 | 0.1 |
+| s1.4_d0.7_delay0 | 98 | 23.5 ±1.4 | 1.80 | 0.0549 | 0.1 |
+| s1.4_d0.7_delay1 | 98 | 19.5 ±1.3 | 1.57 | 0.0469 | 0.1 |
+| s1.4_d1_delay0 | 98 | 21.7 ±1.4 | 1.69 | 0.0511 | 0.1 |
+| s1.4_d1_delay1 | 98 | 20.5 ±1.3 | 1.66 | 0.0495 | 0.1 |
+| s1.4_d1.4_delay0 | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| s1.4_d1.4_delay1 | 98 | 22.6 ±1.2 | 1.83 | 0.0545 | 0.1 |
+| s1.4_d2_delay0 | 98 | 20.4 ±1.2 | 1.69 | 0.0499 | 0.1 |
+| s1.4_d2_delay1 | 98 | 26.2 ±1.2 | 2.11 | 0.0630 | 0.1 |
+| s2_d0.5_delay0 | 98 | 25.6 ±1.5 | 1.94 | 0.0594 | 0.1 |
+| s2_d0.5_delay1 | 98 | 19.1 ±1.3 | 1.52 | 0.0456 | 0.1 |
+| s2_d0.7_delay0 | 98 | 24.9 ±1.4 | 1.89 | 0.0579 | 0.1 |
+| s2_d0.7_delay1 | 98 | 19.2 ±1.3 | 1.53 | 0.0459 | 0.1 |
+| s2_d1_delay0 | 98 | 23.5 ±1.4 | 1.80 | 0.0549 | 0.1 |
+| s2_d1_delay1 | 98 | 19.5 ±1.3 | 1.57 | 0.0469 | 0.1 |
+| s2_d1.4_delay0 | 98 | 21.8 ±1.4 | 1.69 | 0.0513 | 0.1 |
+| s2_d1.4_delay1 | 98 | 20.4 ±1.3 | 1.65 | 0.0493 | 0.1 |
+| s2_d2_delay0 | 98 | 20.2 ±1.3 | 1.62 | 0.0485 | 0.1 |
+| s2_d2_delay1 | 98 | 22.6 ±1.2 | 1.83 | 0.0545 | 0.1 |
+
+## Paired difference of per-episode total error vs s1_d1_delay0
+
+| condition | n | Δ total err | bootstrap 95% |
+|---|---:|---:|---|
+| s0.5_d0.5_delay0 | 98 | +0.0000 | [-0.0000, +0.0000] |
+| s0.5_d0.5_delay1 | 98 | +0.0060 | [+0.0046, +0.0075] |
+| s0.5_d0.7_delay0 | 98 | +0.0011 | [+0.0005, +0.0018] |
+| s0.5_d0.7_delay1 | 98 | +0.0140 | [+0.0119, +0.0161] |
+| s0.5_d1_delay0 | 98 | +0.0089 | [+0.0073, +0.0105] |
+| s0.5_d1_delay1 | 98 | +0.0259 | [+0.0229, +0.0290] |
+| s0.5_d1.4_delay0 | 98 | +0.0219 | [+0.0191, +0.0248] |
+| s0.5_d1.4_delay1 | 98 | +0.0400 | [+0.0361, +0.0440] |
+| s0.5_d2_delay0 | 98 | +0.0398 | [+0.0355, +0.0442] |
+| s0.5_d2_delay1 | 98 | +0.0570 | [+0.0517, +0.0625] |
+| s0.7_d0.5_delay0 | 98 | +0.0026 | [+0.0022, +0.0031] |
+| s0.7_d0.5_delay1 | 98 | +0.0010 | [-0.0001, +0.0022] |
+| s0.7_d0.7_delay0 | 98 | +0.0000 | [-0.0000, +0.0000] |
+| s0.7_d0.7_delay1 | 98 | +0.0060 | [+0.0045, +0.0075] |
+| s0.7_d1_delay0 | 98 | +0.0014 | [+0.0007, +0.0020] |
+| s0.7_d1_delay1 | 98 | +0.0146 | [+0.0125, +0.0168] |
+| s0.7_d1.4_delay0 | 98 | +0.0089 | [+0.0073, +0.0105] |
+| s0.7_d1.4_delay1 | 98 | +0.0259 | [+0.0230, +0.0288] |
+| s0.7_d2_delay0 | 98 | +0.0228 | [+0.0200, +0.0257] |
+| s0.7_d2_delay1 | 98 | +0.0409 | [+0.0368, +0.0450] |
+| s1_d0.5_delay0 | 98 | +0.0064 | [+0.0056, +0.0072] |
+| s1_d0.5_delay1 | 98 | -0.0016 | [-0.0025, -0.0007] |
+| s1_d0.7_delay0 | 98 | +0.0029 | [+0.0024, +0.0033] |
+| s1_d0.7_delay1 | 98 | +0.0008 | [-0.0002, +0.0019] |
+| s1_d1_delay1 | 98 | +0.0060 | [+0.0045, +0.0075] |
+| s1_d1.4_delay0 | 98 | +0.0011 | [+0.0005, +0.0017] |
+| s1_d1.4_delay1 | 98 | +0.0140 | [+0.0119, +0.0161] |
+| s1_d2_delay0 | 98 | +0.0089 | [+0.0073, +0.0105] |
+| s1_d2_delay1 | 98 | +0.0259 | [+0.0230, +0.0289] |
+| s1.4_d0.5_delay0 | 98 | +0.0092 | [+0.0082, +0.0103] |
+| s1.4_d0.5_delay1 | 98 | -0.0026 | [-0.0034, -0.0018] |
+| s1.4_d0.7_delay0 | 98 | +0.0064 | [+0.0055, +0.0072] |
+| s1.4_d0.7_delay1 | 98 | -0.0016 | [-0.0025, -0.0007] |
+| s1.4_d1_delay0 | 98 | +0.0026 | [+0.0022, +0.0031] |
+| s1.4_d1_delay1 | 98 | +0.0010 | [-0.0001, +0.0022] |
+| s1.4_d1.4_delay0 | 98 | -0.0000 | [-0.0000, +0.0000] |
+| s1.4_d1.4_delay1 | 98 | +0.0060 | [+0.0045, +0.0075] |
+| s1.4_d2_delay0 | 98 | +0.0014 | [+0.0007, +0.0021] |
+| s1.4_d2_delay1 | 98 | +0.0146 | [+0.0125, +0.0167] |
+| s2_d0.5_delay0 | 98 | +0.0110 | [+0.0097, +0.0122] |
+| s2_d0.5_delay1 | 98 | -0.0029 | [-0.0037, -0.0021] |
+| s2_d0.7_delay0 | 98 | +0.0094 | [+0.0082, +0.0105] |
+| s2_d0.7_delay1 | 98 | -0.0026 | [-0.0034, -0.0018] |
+| s2_d1_delay0 | 98 | +0.0064 | [+0.0055, +0.0072] |
+| s2_d1_delay1 | 98 | -0.0016 | [-0.0025, -0.0007] |
+| s2_d1.4_delay0 | 98 | +0.0028 | [+0.0024, +0.0033] |
+| s2_d1.4_delay1 | 98 | +0.0008 | [-0.0002, +0.0019] |
+| s2_d2_delay0 | 98 | -0.0000 | [-0.0000, +0.0000] |
+| s2_d2_delay1 | 98 | +0.0060 | [+0.0045, +0.0075] |
+# Iso-ratio invariance check: results\replay_sysid_100\grid
+
+| group (k/d ratio, delay) | conditions | episodes | max |Δp| (mm) | p95 |Δp| (mm) | max |Δ mean err| |
+|---|---|---:|---:|---:|---:|
+| (0.5, 0) | s0.5_d1_delay0, s0.7_d1.4_delay0, s1_d2_delay0 | 98 | 0.032 | 0.017 | 5.04e-06 |
+| (0.5, 1) | s0.5_d1_delay1, s0.7_d1.4_delay1, s1_d2_delay1 | 98 | 0.032 | 0.016 | 9.50e-06 |
+| (0.7, 0) | s0.7_d1_delay0, s1.4_d2_delay0 | 98 | 0.051 | 0.018 | 6.97e-06 |
+| (0.7, 1) | s0.7_d1_delay1, s1.4_d2_delay1 | 98 | 0.028 | 0.018 | 5.26e-06 |
+| (0.714286, 0) | s0.5_d0.7_delay0, s1_d1.4_delay0 | 98 | 0.073 | 0.026 | 1.01e-05 |
+| (0.714286, 1) | s0.5_d0.7_delay1, s1_d1.4_delay1 | 98 | 0.040 | 0.026 | 7.40e-06 |
+| (1.0, 0) | s0.5_d0.5_delay0, s0.7_d0.7_delay0, s1_d1_delay0, s1.4_d1.4_delay0, s2_d2_delay0 | 98 | 0.138 | 0.039 | 2.54e-05 |
+| (1.0, 1) | s0.5_d0.5_delay1, s0.7_d0.7_delay1, s1_d1_delay1, s1.4_d1.4_delay1, s2_d2_delay1 | 98 | 0.137 | 0.039 | 1.96e-05 |
+| (1.4, 0) | s0.7_d0.5_delay0, s1.4_d1_delay0 | 98 | 0.104 | 0.040 | 1.79e-05 |
+| (1.4, 1) | s0.7_d0.5_delay1, s1.4_d1_delay1 | 98 | 0.082 | 0.040 | 1.76e-05 |
+| (1.428571, 0) | s1_d0.7_delay0, s2_d1.4_delay0 | 98 | 0.056 | 0.029 | 1.31e-05 |
+| (1.428571, 1) | s1_d0.7_delay1, s2_d1.4_delay1 | 98 | 0.056 | 0.029 | 1.29e-05 |
+| (2.0, 0) | s1_d0.5_delay0, s1.4_d0.7_delay0, s2_d1_delay0 | 98 | 0.076 | 0.044 | 2.15e-05 |
+| (2.0, 1) | s1_d0.5_delay1, s1.4_d0.7_delay1, s2_d1_delay1 | 98 | 0.075 | 0.044 | 2.16e-05 |
+
+Between-group reference (nominal vs ratio-changing or delayed conditions): median / max |Δp| over episodes
+
+
+**Verdict:** within-group max |Δp| = 0.138 mm vs tolerance 1.0 mm → invariance HOLDS.
+REPLAY100_DONE

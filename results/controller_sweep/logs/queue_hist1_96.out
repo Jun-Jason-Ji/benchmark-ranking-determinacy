@@ -1,0 +1,52 @@
+23:05:32 === eggplant_neartied_96: 18 jobs
+23:05:32 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8767
+23:05:32 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8769
+23:05:32 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8768
+23:05:32 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+23:38:21 === eggplant_neartied_96: 18 jobs
+23:38:22 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8769
+23:38:22 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+23:51:13 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8767
+23:52:15 done rc=0 octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8769
+23:52:17 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8769
+00:01:06 done rc=0 octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+00:01:07 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+00:01:28 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8768
+00:20:50 done rc=0 octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8767
+00:20:51 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8767
+00:29:18 done rc=0 octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8769
+00:29:19 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8769
+==== Sat 09/19/2026  0:37:00.79 restarted scheduler after busy_ports crash (queue_hist1_96) 
+00:37:01 === eggplant_neartied_96: 18 jobs
+00:37:03 skip complete octo-small@hist1 PutEggplantInBasketScene-v1 nominal off=24
+00:37:03 skip complete octo-small@hist1 PutEggplantInBasketScene-v1 iso_x0.25 off=24
+00:37:03 skip complete octo-small@hist1 PutEggplantInBasketScene-v1 iso_x4.0 off=24
+00:37:03 skip complete octo-base@hist1 PutEggplantInBasketScene-v1 nominal off=24
+00:41:16 skip complete octo-base@hist1 PutEggplantInBasketScene-v1 iso_x0.25 off=24
+00:41:16 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+00:48:08 skip complete octo-base@hist1 PutEggplantInBasketScene-v1 iso_x4.0 off=24
+00:48:08 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8768
+00:56:27 skip complete octo-small@hist1 PutEggplantInBasketScene-v1 force_x0.5 off=24
+00:56:27 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8767
+01:08:59 skip complete octo-small@hist1 PutEggplantInBasketScene-v1 fric_x0.4 off=24
+01:08:59 launched octo-small PutEggplantInBasketScene-v1 variants_v1 off=48 on 8769
+01:28:51 done rc=0 octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+01:28:54 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+01:37:13 done rc=0 octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8768
+01:37:13 done rc=0 octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8767
+01:37:16 launched octo-small PutEggplantInBasketScene-v1 variants_v1 off=48 on 8767
+01:37:16 launched octo-base PutEggplantInBasketScene-v1 variants_v1 off=48 on 8768
+01:40:00 done rc=0 octo-small PutEggplantInBasketScene-v1 variants_v1 off=48 on 8769
+01:40:03 launched octo-small PutEggplantInBasketScene-v1 variants_v1 off=48 on 8769
+02:06:02 done rc=0 octo-small PutEggplantInBasketScene-v1 variants_v1 off=48 on 8767
+02:09:25 done rc=0 octo-small PutEggplantInBasketScene-v1 variants_v1 off=48 on 8769
+02:10:10 done rc=0 octo-base PutEggplantInBasketScene-v1 variants_v1 off=48 on 8768
+02:10:12 launched octo-base PutEggplantInBasketScene-v1 variants_v1 off=48 on 8768
+02:14:37 done rc=0 octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=24 on 8770
+02:14:38 launched octo-base PutEggplantInBasketScene-v1 variants_v1 off=48 on 8770
+02:31:36 done rc=0 octo-base PutEggplantInBasketScene-v1 variants_v1 off=48 on 8768
+02:34:09 done rc=0 octo-base PutEggplantInBasketScene-v1 variants_v1 off=48 on 8770
+02:34:30 === eggplant_neartied_96 complete
+02:34:30 analysis (first) rc=0
+02:34:30 analysis (last) rc=0
+02:34:30 HIST1_96_DONE

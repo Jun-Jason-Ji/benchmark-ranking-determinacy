@@ -1,0 +1,17 @@
+==== Sat 09/19/2026 21:37:12.75 restarted scheduler after busy_ports crash (queue_octo_recollect) 
+21:58:12 === octo_recollect_A: 8 jobs
+21:58:13 skip complete octo-small nominal
+21:58:13 launched octo-small force_x0.5 on 8767
+21:58:13 skip complete octo-base nominal
+21:58:13 launched octo-base force_x0.5 on 8768
+22:17:07 done rc=0 octo-small force_x0.5 on 8767
+22:17:08 launched octo-small@hist1 nominal on 8767
+22:18:52 done rc=0 octo-base force_x0.5 on 8768
+22:18:53 launched octo-base@hist1 nominal on 8768
+22:36:48 done rc=0 octo-small@hist1 nominal on 8767
+22:36:49 launched octo-small@hist1 force_x0.5 on 8767
+22:39:36 done rc=0 octo-base@hist1 nominal on 8768
+22:39:37 launched octo-base@hist1 force_x0.5 on 8768
+22:56:52 done rc=0 octo-small@hist1 force_x0.5 on 8767
+23:00:20 done rc=0 octo-base@hist1 force_x0.5 on 8768
+23:00:40 OCTO_RECOLLECT_DONE

@@ -1,0 +1,44 @@
+==== Sat 09/19/2026 19:38:22.64 restarted scheduler after busy_ports crash (queue_octo_strengthen) 
+19:38:22 === octo_seedC_48: 8 jobs
+19:38:23 launched octo-small nominal seed=20280101 off=0 on 8767
+19:38:23 launched octo-base nominal seed=20280101 off=0 on 8768
+20:03:18 done rc=0 octo-small nominal seed=20280101 off=0 on 8767
+20:03:19 launched octo-small force_x0.5 seed=20280101 off=0 on 8767
+20:09:42 done rc=0 octo-base nominal seed=20280101 off=0 on 8768
+20:09:43 launched octo-base force_x0.5 seed=20280101 off=0 on 8768
+==== Sat 09/19/2026 20:15:12.36 restarted scheduler after busy_ports crash (queue_octo_strengthen) 
+20:15:12 === octo_seedC_census64: 8 jobs
+20:22:46 launched octo-small nominal seed=20280101 off=0 on 8767
+20:28:26 done rc=0 octo-small nominal seed=20280101 off=0 on 8767
+20:28:27 launched octo-small force_x0.5 seed=20280101 off=0 on 8767
+20:28:48 launched octo-base nominal seed=20280101 off=0 on 8768
+20:34:05 done rc=0 octo-small force_x0.5 seed=20280101 off=0 on 8767
+20:34:06 launched octo-small@hist1 nominal seed=20280101 off=0 on 8767
+20:34:47 done rc=0 octo-base nominal seed=20280101 off=0 on 8768
+20:34:48 launched octo-base force_x0.5 seed=20280101 off=0 on 8768
+20:40:48 done rc=0 octo-base force_x0.5 seed=20280101 off=0 on 8768
+20:40:48 launched octo-base@hist1 nominal seed=20280101 off=0 on 8768
+20:54:53 done rc=0 octo-small@hist1 nominal seed=20280101 off=0 on 8767
+20:54:54 launched octo-small@hist1 force_x0.5 seed=20280101 off=0 on 8767
+21:02:17 done rc=0 octo-base@hist1 nominal seed=20280101 off=0 on 8768
+21:02:18 launched octo-base@hist1 force_x0.5 seed=20280101 off=0 on 8768
+21:15:21 done rc=0 octo-small@hist1 force_x0.5 seed=20280101 off=0 on 8767
+21:21:36 done rc=0 octo-base@hist1 force_x0.5 seed=20280101 off=0 on 8768
+21:21:57 === octo_seedC_census64 complete
+21:21:57 === octo_seedB_to64: 8 jobs
+21:21:57 skip complete octo-small nominal seed=20270101 off=48
+21:21:57 launched octo-small force_x0.5 seed=20270101 off=48 on 8767
+21:21:57 skip complete octo-base nominal seed=20270101 off=48
+21:21:57 launched octo-base force_x0.5 seed=20270101 off=48 on 8768
+21:26:52 done rc=0 octo-small force_x0.5 seed=20270101 off=48 on 8767
+21:26:53 launched octo-small@hist1 nominal seed=20270101 off=48 on 8767
+21:27:13 done rc=0 octo-base force_x0.5 seed=20270101 off=48 on 8768
+21:27:14 launched octo-base@hist1 nominal seed=20270101 off=48 on 8768
+21:32:52 done rc=0 octo-small@hist1 nominal seed=20270101 off=48 on 8767
+21:34:17 done rc=0 octo-base@hist1 nominal seed=20270101 off=48 on 8768
+21:50:26 launched octo-small@hist1 force_x0.5 seed=20270101 off=48 on 8767
+21:52:11 launched octo-base@hist1 force_x0.5 seed=20270101 off=48 on 8768
+21:55:19 done rc=0 octo-small@hist1 force_x0.5 seed=20270101 off=48 on 8767
+21:57:03 done rc=0 octo-base@hist1 force_x0.5 seed=20270101 off=48 on 8768
+21:57:23 === octo_seedB_to64 complete
+21:57:23 OCTO_STRENGTHEN_DONE

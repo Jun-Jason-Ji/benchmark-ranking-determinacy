@@ -1,0 +1,170 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-18 20:15:10,137 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 20:15:10,640 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 20:15:10,667 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 0 success=True steps=60 inf=10.8s sim=2.0s total=16.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 1 success=False steps=60 inf=10.9s sim=2.4s total=16.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 2 success=False steps=60 inf=11.5s sim=2.5s total=16.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 3 success=True steps=60 inf=10.3s sim=3.0s total=16.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 4 success=True steps=60 inf=9.5s sim=3.2s total=15.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 5 success=False steps=60 inf=10.1s sim=2.9s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 6 success=True steps=60 inf=11.2s sim=2.2s total=16.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 7 success=False steps=60 inf=11.1s sim=2.4s total=16.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 8 success=False steps=60 inf=10.8s sim=2.3s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 9 success=False steps=60 inf=10.1s sim=3.1s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 10 success=True steps=60 inf=10.2s sim=2.9s total=15.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 11 success=False steps=60 inf=10.3s sim=3.2s total=16.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 12 success=False steps=60 inf=11.4s sim=2.9s total=17.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 13 success=False steps=60 inf=10.2s sim=3.2s total=16.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 14 success=False steps=60 inf=9.6s sim=2.6s total=15.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 15 success=False steps=60 inf=10.2s sim=3.0s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 16 success=False steps=60 inf=10.0s sim=3.0s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 17 success=False steps=60 inf=10.2s sim=3.0s total=15.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 18 success=False steps=60 inf=10.9s sim=2.9s total=16.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 19 success=True steps=60 inf=11.3s sim=3.0s total=17.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 20 success=False steps=60 inf=10.2s sim=3.0s total=15.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 21 success=False steps=60 inf=11.3s sim=2.8s total=17.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 22 success=False steps=60 inf=9.8s sim=2.9s total=15.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|nominal] ep 23 success=False steps=60 inf=10.5s sim=2.9s total=16.0s
+== nominal: 6/24 success
+[33;1m2026-09-18 20:21:38,924 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 20:21:38,929 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 20:21:38,930 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 0 success=True steps=60 inf=10.6s sim=2.8s total=16.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 1 success=False steps=60 inf=9.8s sim=3.4s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 2 success=False steps=60 inf=10.6s sim=2.7s total=16.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 3 success=False steps=60 inf=10.9s sim=2.2s total=15.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 4 success=False steps=60 inf=11.1s sim=2.3s total=16.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 5 success=True steps=60 inf=10.1s sim=3.0s total=15.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 6 success=True steps=60 inf=11.6s sim=2.8s total=17.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 7 success=False steps=60 inf=10.7s sim=2.4s total=15.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 8 success=True steps=60 inf=9.4s sim=2.1s total=13.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 9 success=False steps=60 inf=9.3s sim=2.0s total=13.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 10 success=True steps=60 inf=9.2s sim=1.9s total=13.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 11 success=False steps=60 inf=9.9s sim=2.1s total=14.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 12 success=True steps=60 inf=9.9s sim=2.9s total=15.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 13 success=False steps=60 inf=9.6s sim=3.3s total=15.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 14 success=False steps=60 inf=9.1s sim=3.0s total=14.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 15 success=False steps=60 inf=8.9s sim=2.8s total=14.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 16 success=True steps=60 inf=9.5s sim=2.6s total=14.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 17 success=False steps=60 inf=9.8s sim=2.7s total=15.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 18 success=False steps=60 inf=9.3s sim=2.8s total=14.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 19 success=True steps=60 inf=10.0s sim=2.9s total=15.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 20 success=False steps=60 inf=9.8s sim=2.8s total=15.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 21 success=False steps=60 inf=11.0s sim=2.1s total=15.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 22 success=False steps=60 inf=10.1s sim=1.9s total=14.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x0.25] ep 23 success=False steps=60 inf=10.2s sim=2.0s total=14.6s
+== iso_x0.25: 8/24 success
+[33;1m2026-09-18 20:27:43,472 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 20:27:43,475 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 20:27:43,475 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 0 success=True steps=60 inf=10.4s sim=2.4s total=15.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 1 success=False steps=60 inf=9.8s sim=2.3s total=14.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 2 success=True steps=60 inf=11.5s sim=2.1s total=14.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 3 success=False steps=60 inf=12.1s sim=2.2s total=14.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 4 success=True steps=60 inf=12.7s sim=2.5s total=15.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 5 success=False steps=60 inf=26.5s sim=239.2s total=267.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 6 success=False steps=60 inf=28.4s sim=4.2s total=34.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 7 success=False steps=60 inf=29.4s sim=3.8s total=36.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 8 success=True steps=60 inf=27.2s sim=3.6s total=34.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 9 success=False steps=60 inf=26.2s sim=3.9s total=33.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 10 success=True steps=60 inf=27.0s sim=3.4s total=34.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 11 success=False steps=60 inf=25.0s sim=3.7s total=32.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 12 success=False steps=60 inf=24.8s sim=3.8s total=32.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 13 success=False steps=60 inf=24.7s sim=3.7s total=32.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 14 success=False steps=60 inf=22.5s sim=3.0s total=29.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 15 success=False steps=60 inf=24.7s sim=2.9s total=31.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 16 success=True steps=60 inf=22.6s sim=2.9s total=28.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 17 success=False steps=60 inf=17.1s sim=2.6s total=22.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 18 success=False steps=60 inf=19.7s sim=2.9s total=26.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 19 success=False steps=60 inf=26.8s sim=3.2s total=33.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 20 success=False steps=60 inf=27.3s sim=3.0s total=34.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 21 success=False steps=60 inf=27.3s sim=3.1s total=34.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 22 success=False steps=60 inf=26.0s sim=3.1s total=33.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|iso_x4.0] ep 23 success=False steps=60 inf=26.8s sim=3.4s total=34.5s
+== iso_x4.0: 6/24 success
+[33;1m2026-09-18 20:43:05,920 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 20:43:05,924 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 20:43:05,925 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 0 success=True steps=60 inf=24.1s sim=3.5s total=31.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 1 success=False steps=60 inf=25.5s sim=3.5s total=33.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 2 success=False steps=60 inf=22.3s sim=3.4s total=29.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 3 success=False steps=60 inf=22.8s sim=2.9s total=29.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 4 success=True steps=60 inf=19.2s sim=2.8s total=25.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 5 success=False steps=60 inf=20.6s sim=2.6s total=26.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 6 success=True steps=60 inf=21.1s sim=2.6s total=27.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 7 success=False steps=60 inf=18.1s sim=3.1s total=24.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 8 success=True steps=60 inf=18.6s sim=2.7s total=24.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 9 success=False steps=60 inf=18.6s sim=2.8s total=24.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 10 success=True steps=60 inf=17.6s sim=2.7s total=23.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 11 success=False steps=60 inf=14.5s sim=2.8s total=20.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 12 success=False steps=60 inf=12.7s sim=2.7s total=18.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 13 success=False steps=60 inf=14.2s sim=2.7s total=19.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 14 success=True steps=60 inf=12.6s sim=2.5s total=17.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 15 success=False steps=60 inf=15.2s sim=2.7s total=20.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 16 success=False steps=60 inf=13.2s sim=2.6s total=18.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 17 success=False steps=60 inf=13.6s sim=2.5s total=19.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 18 success=False steps=60 inf=13.9s sim=2.4s total=19.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 19 success=False steps=60 inf=15.2s sim=2.3s total=20.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 20 success=False steps=60 inf=14.1s sim=2.5s total=19.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 21 success=False steps=60 inf=16.4s sim=2.8s total=22.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 22 success=False steps=60 inf=17.5s sim=2.8s total=23.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|force_x0.5] ep 23 success=False steps=60 inf=18.5s sim=2.6s total=24.4s
+== force_x0.5: 6/24 success
+[33;1m2026-09-18 20:52:32,191 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 20:52:32,194 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 20:52:32,195 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 0 success=True steps=60 inf=18.6s sim=3.4s total=25.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 1 success=False steps=60 inf=20.4s sim=3.1s total=27.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 2 success=True steps=60 inf=18.1s sim=3.2s total=24.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 3 success=False steps=60 inf=18.0s sim=2.9s total=24.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 4 success=True steps=60 inf=22.1s sim=3.3s total=28.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 5 success=True steps=60 inf=18.1s sim=3.0s total=24.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 6 success=False steps=60 inf=17.2s sim=3.3s total=23.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 7 success=False steps=60 inf=20.4s sim=3.0s total=27.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 8 success=True steps=60 inf=18.3s sim=2.8s total=24.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 9 success=False steps=60 inf=16.4s sim=3.5s total=440.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 10 success=True steps=60 inf=22.5s sim=2.8s total=27.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 11 success=False steps=60 inf=27.0s sim=2.9s total=32.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 12 success=True steps=60 inf=22.6s sim=2.9s total=28.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 13 success=False steps=60 inf=21.1s sim=2.9s total=27.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 14 success=False steps=60 inf=21.1s sim=2.5s total=27.2s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 15 success=False steps=60 inf=20.7s sim=2.8s total=27.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 16 success=True steps=60 inf=21.9s sim=2.7s total=28.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 17 success=False steps=60 inf=19.4s sim=3.0s total=26.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 18 success=True steps=60 inf=21.0s sim=3.1s total=27.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 19 success=False steps=60 inf=19.1s sim=2.9s total=25.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 20 success=False steps=60 inf=19.3s sim=2.7s total=25.6s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 21 success=False steps=60 inf=19.3s sim=2.7s total=25.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 22 success=False steps=60 inf=22.6s sim=2.7s total=29.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|fric_x0.4] ep 23 success=False steps=60 inf=18.7s sim=2.9s total=24.8s
+== fric_x0.4: 9/24 success
+[33;1m2026-09-18 21:10:05,027 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 21:10:05,031 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 21:10:05,032 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 0 success=False steps=60 inf=20.9s sim=2.7s total=27.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 1 success=False steps=60 inf=23.5s sim=3.2s total=28.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 2 success=True steps=60 inf=23.2s sim=3.0s total=28.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 3 success=False steps=60 inf=19.1s sim=3.0s total=25.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 4 success=True steps=60 inf=21.0s sim=2.6s total=26.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 5 success=False steps=60 inf=20.2s sim=3.2s total=26.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 6 success=True steps=60 inf=20.5s sim=2.9s total=27.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 7 success=False steps=60 inf=19.1s sim=2.8s total=24.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 8 success=False steps=60 inf=15.7s sim=2.5s total=21.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 9 success=False steps=60 inf=14.9s sim=2.5s total=20.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 10 success=True steps=60 inf=14.4s sim=2.5s total=19.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 11 success=False steps=60 inf=14.2s sim=2.7s total=19.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 12 success=False steps=60 inf=14.0s sim=2.7s total=19.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 13 success=False steps=60 inf=15.8s sim=2.8s total=22.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 14 success=False steps=60 inf=14.8s sim=2.4s total=20.3s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 15 success=False steps=60 inf=16.0s sim=2.6s total=21.8s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 16 success=True steps=60 inf=12.9s sim=2.6s total=18.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 17 success=False steps=60 inf=14.7s sim=2.7s total=20.4s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 18 success=False steps=60 inf=13.6s sim=2.4s total=19.0s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 19 success=False steps=60 inf=13.8s sim=2.7s total=19.5s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 20 success=False steps=60 inf=15.4s sim=2.5s total=21.1s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 21 success=False steps=60 inf=15.2s sim=2.4s total=20.7s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 22 success=False steps=60 inf=15.3s sim=2.5s total=20.9s
+[octo-small@hist1|PutSpoonOnTableClothInScene-v1|dens_x0.5] ep 23 success=False steps=60 inf=15.6s sim=2.5s total=21.3s
+== dens_x0.5: 5/24 success

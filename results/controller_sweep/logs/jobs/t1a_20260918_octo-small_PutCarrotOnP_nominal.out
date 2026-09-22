@@ -1,0 +1,30 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-20 14:20:19,710 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-20 14:20:19,795 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_carrot_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-20 14:20:19,803 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_plate_objaverse_larger, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 0 success=False steps=60 inf=8.4s sim=1.6s total=11.3s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 1 success=False steps=60 inf=8.9s sim=1.6s total=11.8s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 2 success=False steps=60 inf=9.0s sim=1.5s total=12.0s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 3 success=False steps=60 inf=8.6s sim=1.5s total=11.4s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 4 success=False steps=60 inf=8.6s sim=1.6s total=11.7s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 5 success=False steps=60 inf=6.9s sim=1.4s total=9.8s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 6 success=False steps=60 inf=6.8s sim=1.5s total=9.6s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 7 success=False steps=60 inf=7.1s sim=1.5s total=10.0s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 8 success=False steps=60 inf=7.3s sim=1.4s total=10.1s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 9 success=False steps=60 inf=8.5s sim=1.6s total=11.7s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 10 success=False steps=60 inf=9.1s sim=1.6s total=12.2s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 11 success=False steps=60 inf=9.1s sim=1.6s total=12.0s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 12 success=False steps=60 inf=9.2s sim=1.6s total=12.1s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 13 success=False steps=60 inf=8.5s sim=1.5s total=11.4s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 14 success=False steps=60 inf=6.5s sim=1.4s total=9.2s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 15 success=False steps=60 inf=6.4s sim=1.4s total=9.1s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 16 success=True steps=60 inf=6.3s sim=1.4s total=9.0s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 17 success=False steps=60 inf=7.8s sim=1.5s total=10.7s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 18 success=True steps=60 inf=8.4s sim=1.7s total=11.6s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 19 success=False steps=60 inf=8.8s sim=1.6s total=11.8s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 20 success=False steps=60 inf=9.0s sim=1.6s total=12.1s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 21 success=False steps=60 inf=8.9s sim=1.6s total=11.9s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 22 success=True steps=60 inf=8.4s sim=1.6s total=11.5s
+[octo-small|PutCarrotOnPlateInScene-v1|nominal] ep 23 success=False steps=60 inf=6.9s sim=1.4s total=9.7s
+== nominal: 3/24 success

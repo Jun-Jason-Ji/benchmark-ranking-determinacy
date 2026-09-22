@@ -1,0 +1,22 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-19 21:50:30,213 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-19 21:50:30,290 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-19 21:50:30,313 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 48 success=False steps=120 inf=9.8s sim=3.5s total=16.9s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 49 success=True steps=120 inf=11.2s sim=3.0s total=17.6s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 50 success=True steps=120 inf=10.9s sim=3.5s total=17.9s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 51 success=False steps=120 inf=10.2s sim=3.6s total=17.1s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 52 success=False steps=120 inf=8.4s sim=3.5s total=15.1s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 53 success=True steps=120 inf=6.8s sim=2.3s total=12.2s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 54 success=False steps=120 inf=8.9s sim=3.8s total=16.0s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 55 success=False steps=120 inf=10.6s sim=4.2s total=18.1s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 56 success=False steps=120 inf=10.4s sim=3.9s total=17.8s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 57 success=True steps=120 inf=9.7s sim=3.1s total=16.2s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 58 success=False steps=120 inf=11.1s sim=4.0s total=18.7s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 59 success=False steps=120 inf=10.3s sim=3.4s total=17.1s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 60 success=False steps=120 inf=11.1s sim=3.9s total=18.5s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 61 success=False steps=120 inf=11.0s sim=4.3s total=18.8s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 62 success=False steps=120 inf=9.9s sim=3.4s total=17.0s
+[octo-small@hist1|PutEggplantInBasketScene-v1|force_x0.5] ep 63 success=True steps=120 inf=10.7s sim=3.5s total=17.5s
+== force_x0.5: 24/64 success

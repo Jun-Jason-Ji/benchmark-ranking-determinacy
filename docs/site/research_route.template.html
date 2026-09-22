@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>决策相关可辨识性：研究路线与复现 / Decision-Relevant Identifiability: Route &amp; Reproduction</title>
+<style>
+:root{
+  --bg:#f7f7f4;--fg:#1d1d1b;--muted:#5d5d58;--line:#d9d9d3;--card:#ffffff;
+  --accent:#0b5d8a;--accent-2:#8a4b0b;--ok:#1d7a3e;--warn:#a1541a;--bad:#a12a2a;--code:#f0f0ea;
+  --retract:#faf1ec;--note:#eef4f8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15161a;--fg:#e8e8e3;--muted:#a3a39c;--line:#33353c;--card:#1d1f25;
+    --accent:#6fb4dc;--accent-2:#dca46f;--ok:#67c58a;--warn:#e0965a;--bad:#e07070;--code:#23252c;
+    --retract:#2a2220;--note:#1d262e;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Helvetica Neue",Arial,sans-serif}
+a{color:var(--accent)}
+code,pre{font-family:ui-monospace,Consolas,"Cascadia Mono",Menlo,monospace;font-size:.92em}
+code{background:var(--code);padding:.1em .35em;border-radius:4px}
+pre{background:var(--code);padding:12px 14px;border-radius:8px;overflow-x:auto;line-height:1.5;border:1px solid var(--line)}
+pre code{background:none;padding:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px 64px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1040px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bar .title{font-weight:600;flex:1;min-width:200px}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.toggle button{border:0;background:transparent;color:var(--fg);padding:6px 14px;cursor:pointer;font:inherit}
+.toggle button[aria-pressed="true"]{background:var(--accent);color:#fff}
+nav.toc{font-size:.92em;display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 6px}
+nav.toc a{text-decoration:none;color:var(--muted)}
+nav.toc a:hover{color:var(--accent)}
+h1{font-size:1.9em;line-height:1.25;margin:28px 0 8px}
+h2{font-size:1.4em;margin:44px 0 10px;padding-top:8px;border-top:2px solid var(--line)}
+h3{font-size:1.12em;margin:26px 0 8px;color:var(--accent)}
+h4{font-size:1em;margin:18px 0 6px}
+p{margin:8px 0}
+.sub{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
+.note{background:var(--note);border-left:4px solid var(--accent);padding:10px 14px;border-radius:6px;margin:12px 0}
+.retract{background:var(--retract);border-left:4px solid var(--bad);padding:10px 14px;border-radius:6px;margin:12px 0}
+.warn{border-left-color:var(--warn)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.93em;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:var(--code)}
+td.num,th.num{text-align:right;white-space:nowrap}
+.tag{display:inline-block;font-size:.78em;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-left:6px;vertical-align:middle}
+.tag.ok{color:var(--ok);border-color:var(--ok)}
+.tag.warn{color:var(--warn);border-color:var(--warn)}
+.tag.bad{color:var(--bad);border-color:var(--bad)}
+.route{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;counter-reset:step}
+.route .step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;position:relative}
+.route .step::before{counter-increment:step;content:counter(step);position:absolute;top:-10px;left:12px;background:var(--accent);color:#fff;border-radius:999px;width:22px;height:22px;font-size:.8em;display:flex;align-items:center;justify-content:center}
+.route .step h4{margin:6px 0 4px}
+.route .step p{font-size:.9em;margin:4px 0;color:var(--muted)}
+figure{margin:16px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px}
+figure img{width:100%;height:auto;display:block;border-radius:6px}
+figcaption{font-size:.9em;color:var(--muted);margin-top:8px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpi b{display:block;font-size:1.3em;color:var(--accent)}
+.kpi span{font-size:.88em;color:var(--muted)}
+.files li{margin:3px 0}
+footer{margin-top:48px;color:var(--muted);font-size:.9em;border-top:1px solid var(--line);padding-top:12px}
+html[data-lang="zh"] .en{display:none}
+html[data-lang="en"] .zh{display:none}
+@media print{header{position:static}.toggle{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="title"><span class="zh">决策相关可辨识性 · 研究路线与复现指南</span><span class="en">Decision-Relevant Identifiability · Research Route &amp; Reproduction Guide</span></div>
+    <div class="toggle" role="group" aria-label="language">
+      <button type="button" data-set="zh" aria-pressed="true">中文</button>
+      <button type="button" data-set="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h1><span class="zh">校准后的仿真何时能可靠地比较机器人策略？</span><span class="en">When can a calibrated simulator reliably compare robot policies?</span></h1>
+<p class="sub"><span class="zh">研究路线、预注册协议、已确认与已撤回的结果、复现步骤。状态截至 2026-09-20 06:00（本地时间）。本页为静态离线文件，所有数据来自项目目录 <code>E:\research\the_world</code> 下的结果文件。</span><span class="en">Research route, pre-registered protocols, confirmed and retracted results, and reproduction steps. Status as of 2026-09-20 06:00 local time. This is a static offline page; every number comes from result files under <code>E:\research\the_world</code>.</span></p>
+
+<nav class="toc">
+  <a href="#tldr"><span class="zh">摘要</span><span class="en">Summary</span></a>
+  <a href="#question"><span class="zh">问题与命题</span><span class="en">Question &amp; thesis</span></a>
+  <a href="#route"><span class="zh">研究路线</span><span class="en">Route</span></a>
+  <a href="#platform"><span class="zh">平台与偏离</span><span class="en">Platform</span></a>
+  <a href="#protocol"><span class="zh">预注册协议</span><span class="en">Protocols</span></a>
+  <a href="#findings"><span class="zh">结果</span><span class="en">Findings</span></a>
+  <a href="#retractions"><span class="zh">撤回与教训</span><span class="en">Retractions</span></a>
+  <a href="#reproduce"><span class="zh">复现</span><span class="en">Reproduce</span></a>
+  <a href="#status"><span class="zh">在跑与计划</span><span class="en">Running &amp; plan</span></a>
+  <a href="#files"><span class="zh">文件索引</span><span class="en">File index</span></a>
+</nav>
+
+<div class="note warn">
+  <p class="zh"><b>阅读前的边界声明。</b>所有机器人侧结果来自 ManiSkill 3.0.1 + SAPIEN 3.0.3（Windows，CPU 物理 + GPU 渲染）上的探索平台，其中 Pinocchio 逆运动学被替换为 ManiSkill 自带的 torch 雅可比求解器。它<b>不是</b>原始 SIMPLER 主分支（SAPIEN 2）的复现，也不能与 SIMPLER 公开的真机成绩表直接对表。所有结论都是"该校准协议在该仿真器中"的陈述。</p>
+  <p class="en"><b>Scope statement, read first.</b> Every robot-side result comes from an exploratory platform: ManiSkill 3.0.1 + SAPIEN 3.0.3 on Windows (CPU physics, GPU rendering) with the Pinocchio inverse kinematics replaced by ManiSkill's torch Jacobian solver. It is <b>not</b> a reproduction of the original SIMPLER main branch (SAPIEN 2) and cannot be tabulated against SIMPLER's published real-robot scores. Every conclusion is a statement about "this calibration protocol in this simulator".</p>
+</div>
+
+<h2 id="tldr"><span class="zh">摘要</span><span class="en">Summary</span></h2>
+<div class="kpi">
+  <div><b>98</b><span class="zh">条 BridgeData V2 真实示范用于回放校准</span><span class="en">real BridgeData V2 demos used for replay calibration</span></div>
+  <div><b>0.138 mm</b><span class="zh">等比（刚度×c, 阻尼×c）组内最大末端轨迹差：校准对共同尺度精确不可见</span><span class="en">max end-effector deviation within iso-ratio groups: calibration is exactly blind to the common scale</span></div>
+  <div><b>20</b><span class="zh">个控制器/时延/接触条件 × 4 任务 × 2 策略，48–96 集</span><span class="en">controller / delay / contact conditions × 4 tasks × 2 policies, 48–96 episodes</span></div>
+  <div><b>0</b><span class="zh">个区间支持的排序符号翻转（Octo-small vs Octo-base）</span><span class="en">CI-supported ranking sign flips (Octo-small vs Octo-base)</span></div>
+  <div><b>3</b><span class="zh">个中期"发现"在加集数或换种子后撤回</span><span class="en">interim "findings" retracted after more episodes or a new seed set</span></div>
+</div>
+
+<div class="card">
+<p class="zh"><b>一句话。</b>用真实示范轨迹校准仿真器时，SIMPLER 式的自由空间回放协议只能定出关节 PD 控制器的刚度/阻尼<i>比值</i>与执行时延；刚度与阻尼的共同尺度、力矩上限、物体摩擦与密度对校准数据<i>精确</i>不可见。把这些"校准不可见"参数在合理范围内改动，Octo-small 与 Octo-base 在四个 WidowX 任务上的排序<i>符号</i>没有出现区间支持的翻转，但排序<i>能否下结论</i>会改变：点校准（只用标称参数）在勺子、茄子任务上判 small 优，而在整个相容参数集合上取上下界后三个任务都只能拒判。用响应面 + 同时置信带代替逐条件极值，勺子的结论恢复稳健，茄子仍拒判。一个更强的"茄子摩擦改变可判定性"的发现在第二个种子集下未复现，同时发现同一种子的 rollout 在推理服务器重启后会分叉（GPU 数值非确定性），因此所有单种子集的"可判定/翻转"陈述都被标记为待复现。引入第二模型家族后，第一个在两个种子集下成立的实例出现了：力矩上限 ×0.5（校准精确不可见）使 OpenVLA-7B 在茄子任务上的成功率翻倍，Octo-small 对 OpenVLA 的可判定优势在两个种子集下都退为拒判（5.8 节）。</p>
+<p class="en"><b>One paragraph.</b> When a simulator is calibrated from real demonstration trajectories, the SIMPLER-style free-space replay protocol identifies only the stiffness/damping <i>ratio</i> of the joint PD controller and the execution delay; the common stiffness/damping scale, the torque limit, and object friction/density are <i>exactly</i> invisible to the calibration data. Varying these calibration-invisible parameters over a reasonable range never produced a CI-supported flip of the ranking <i>sign</i> between Octo-small and Octo-base on four WidowX tasks, but it did change whether a ranking can be <i>declared</i>: point calibration (nominal parameters only) declares small better on the spoon and eggplant tasks, whereas taking bounds over the whole compatible parameter set forces abstention on all three informative tasks. Replacing per-condition extrema by a response surface with a simultaneous confidence band restores the spoon conclusion but keeps eggplant undecided. A stronger interim finding ("object friction changes decidability on eggplant") failed to replicate under a second seed set, and we found that rollouts with identical seeds diverge after the inference server restarts (GPU numerical nondeterminism). All single-seed-set "decidable / flip" statements are therefore flagged as pending replication. With a second model family, the first instance that holds under two seed sets appeared: torque limit ×0.5 (exactly invisible to calibration) doubles OpenVLA-7B's eggplant success rate, and Octo-small's decidable advantage over OpenVLA falls to abstain in both seed sets (section 5.8).</p>
+</div>
+
+<h2 id="question"><span class="zh">1. 研究问题与核心命题</span><span class="en">1. Research question and thesis</span></h2>
+<p class="zh">令联合未知量 z = (θ, ν, κ)（动力学、观测标定、控制接口参数），D 为真实校准证据。固定任务与初始状态分布，对同一 z 比较两个策略：Δ<sub>ij</sub>(z) = J<sub>sim</sub>(π<sub>i</sub>; z) − J<sub>sim</sub>(π<sub>j</sub>; z)。问题是：<b>校准数据提供的哪些信息足以支持策略比较？哪些额外证据最有效地消除与策略选择有关的歧义？</b></p>
+<p class="en">Let z = (θ, ν, κ) be the joint unknown (dynamics, observation calibration, control-interface parameters) and D the real calibration evidence. For a fixed task and initial-state distribution, two policies are compared at the same z: Δ<sub>ij</sub>(z) = J<sub>sim</sub>(π<sub>i</sub>; z) − J<sub>sim</sub>(π<sub>j</sub>; z). The question: <b>which information in the calibration data suffices to support a policy comparison, and which additional evidence most efficiently removes the ambiguity that matters for the choice?</b></p>
+<div class="card">
+<p class="zh"><b>命题。</b>完整参数辨识不是策略差值辨识的必要条件；有限数据下的整体轨迹拟合精度也不是排序可靠性的充分指标。决定因素是<i>未确定方向对策略差值的影响</i>，以及策略差值相对实践阈值 δ 的间隔。局部形式：若参数置信集合为椭球、差值可线性化为 Δ̂ + gᵀ(z − ẑ)，则半宽 h = q·√(gᵀ I<sub>D</sub><sup>−1</sup> g)，实践优势的充分判据是 |Δ̂| &gt; δ + h + η（η 为仿真采样、代理和结构偏差的总半宽）。</p>
+<p class="en"><b>Thesis.</b> Full parameter identifiability is not necessary for identifying the policy difference, and the overall trajectory-fit accuracy under finite data is not a sufficient indicator of ranking reliability. What matters is <i>how the undetermined directions move the policy difference</i>, and the margin of that difference over a practical threshold δ. Locally: if the parameter confidence set is an ellipsoid and the difference linearises as Δ̂ + gᵀ(z − ẑ), the half-width is h = q·√(gᵀ I<sub>D</sub><sup>−1</sup> g) and a sufficient criterion for a practical advantage is |Δ̂| &gt; δ + h + η, with η the total half-width from simulation sampling, surrogate and structural error.</p>
+<p class="zh">三个必须分开的对象：<b>结构可辨识性</b>（无限同类观测能否区分）、<b>有限样本证据强度</b>（当前区间多宽）、<b>实践优势</b>（真实差值是否超过 δ）。</p>
+<p class="en">Three objects kept separate throughout: <b>structural identifiability</b> (can infinitely many observations of this type distinguish?), <b>finite-sample evidence strength</b> (how wide is the current interval?), and <b>practical advantage</b> (does the true difference exceed δ?).</p>
+</div>
+<h3><span class="zh">研究问题与可证伪假设（方案 v3 §5）</span><span class="en">Research questions and falsifiable hypotheses (proposal v3 §5)</span></h3>
+<table>
+<thead><tr><th><span class="zh">问题</span><span class="en">Question</span></th><th><span class="zh">检验方式</span><span class="en">Test</span></th><th><span class="zh">不支持时的处理</span><span class="en">If unsupported</span></th></tr></thead>
+<tbody>
+<tr><td>RQ0 <span class="zh">歧义在机器人评估中有多常见？</span><span class="en">How common is ambiguity in robot evaluation?</span></td><td><span class="zh">对预注册任务与策略组合统计区间跨零、跨 ±δ 与宽度</span><span class="en">Count intervals crossing 0 / ±δ and their widths over pre-registered task × policy combinations</span></td><td><span class="zh">若稀少且影响轻微，报告边界并停止堆叠方法</span><span class="en">If rare and mild, report the boundary and stop stacking methods</span></td></tr>
+<tr><td>RQ1 <span class="zh">激励失配能解释哪些排名错误？</span><span class="en">Which ranking errors does excitation mismatch explain?</span></td><td><span class="zh">真实参数范围与敏感方向分析；受控 null / weak / full 激励</span><span class="en">Real parameter ranges and sensitive directions; controlled null / weak / full excitation</span></td><td><span class="zh">若关联仅由范围选择造成，重审机制</span><span class="en">If the link is an artefact of range choice, revisit the mechanism</span></td></tr>
+<tr><td>RQ2 <span class="zh">保留歧义是否改善可靠性？</span><span class="en">Does keeping the ambiguity improve reliability?</span></td><td><span class="zh">同覆盖率下的风险、选型遗憾与成本</span><span class="en">Risk at equal coverage, selection regret, cost</span></td><td><span class="zh">若收益全来自过度拒判或额外预算，则不成立</span><span class="en">Fails if all benefit comes from over-abstention or extra budget</span></td></tr>
+<tr><td>RQ3 <span class="zh">针对决策选证据是否优于经典设计？</span><span class="en">Does decision-targeted evidence selection beat classical design?</span></td><td><span class="zh">与 c-optimal、D-optimal、参数熵、随机比较</span><span class="en">Against c-optimal, D-optimal, parameter entropy, random</span></td><td><span class="zh">若无法超越经典方法，以机制与验证为主</span><span class="en">If not, lead with mechanism and validation</span></td></tr>
+<tr><td>RQ4 <span class="zh">仿真结论能否预测历史真机差异？</span><span class="en">Do simulator conclusions predict historical real-robot differences?</span></td><td><span class="zh">冻结算法后用匹配的 SIMPLER 历史标签外部检验</span><span class="en">Frozen algorithm, external check on matched SIMPLER historical labels</span></td><td><span class="zh">若匹配或样本不足，明确减弱外部主张</span><span class="en">If matching or sample size is insufficient, weaken the external claim explicitly</span></td></tr>
+</tbody></table>
+
+<h2 id="route"><span class="zh">2. 研究路线（按实际执行顺序）</span><span class="en">2. Research route (in the order actually executed)</span></h2>
+<div class="route">
+  <div class="step"><h4><span class="zh">审计原方案</span><span class="en">Audit the original proposal</span></h4><p class="zh">识别 P0 缺陷：缺少正面命题、遗漏集合成员辨识/I4C/价值等价/决策聚焦学习/置信 OPE 文献、无零硬件真机通道、无统计 ε/δ。产出审计与 v2/v3 方案。</p><p class="en">P0 gaps found: no positive thesis; missing set-membership / I4C / value-equivalence / decision-focused learning / confident-OPE literature; no zero-hardware real-robot channel; no statistical ε/δ. Produced the audit and proposals v2/v3.</p></div>
+  <div class="step"><h4><span class="zh">合成机制原型</span><span class="en">Synthetic mechanism pilot</span></h4><p class="zh">二维线性高斯模型，已知方差。证明存在"校准观测相同、策略排序相反"的参数对；比较 D-opt / c-opt / 随机证据选择；300 次重复、8 项单元测试。不是机器人实验。</p><p class="en">2-D linear-Gaussian model, known variance. Shows parameter pairs with identical calibration observations and opposite policy rankings; compares D-opt / c-opt / random evidence selection; 300 repeats, 8 unit tests. Not a robot experiment.</p></div>
+  <div class="step"><h4><span class="zh">资源核验</span><span class="en">Resource verification</span></h4><p class="zh">SIMPLER 检查点、AutoEval/RoboArena 队列、BridgeData V2 分片可读性（HTTP Range + CRC32C）。</p><p class="en">SIMPLER checkpoints, AutoEval / RoboArena queues, readability of BridgeData V2 shards (HTTP range requests + CRC32C).</p></div>
+  <div class="step"><h4><span class="zh">搭建仿真与推理平台</span><span class="en">Simulation and inference platform</span></h4><p class="zh">Windows ManiSkill3/SAPIEN3 四个 WidowX 场景；Octo 1.0 先在 CPU、后在 WSL2 GPU（jax 0.5.3，Blackwell）以本地 HTTP 服务器提供推理；测得每步 0.06–0.25 s。</p><p class="en">Four WidowX scenes on Windows ManiSkill3/SAPIEN3; Octo 1.0 served over local HTTP, first on CPU then on the WSL2 GPU (jax 0.5.3, Blackwell); 0.06–0.25 s per step.</p></div>
+  <div class="step"><h4><span class="zh">控制器敏感性扫描</span><span class="en">Controller sensitivity sweep</span></h4><p class="zh">协议冻结后执行：刚度、阻尼、力矩上限、时延；24 → 48 → 96 集逐级加深；共同随机数配对。</p><p class="en">Protocol frozen first: stiffness, damping, torque limit, delay; 24 → 48 → 96 episodes; common random numbers, paired.</p></div>
+  <div class="step"><h4><span class="zh">B-1 校准回放</span><span class="en">B-1 calibration replay</span></h4><p class="zh">移植 SIMPLER sysid 协议，在 40 条、随后 98 条真实示范上回放各控制器条件，量化哪些参数方向可辨识。</p><p class="en">Ported the SIMPLER sysid protocol; replayed each controller condition on 40, then 98 real demos to quantify which parameter directions are identifiable.</p></div>
+  <div class="step"><h4><span class="zh">相容集合 → 策略判定</span><span class="en">Compatible set → policy verdict</span></h4><p class="zh">用回放误差的配对自助定义相容集合，把 Δ 的区间沿集合取极值（并集界），与点校准判定对照。</p><p class="en">Compatible set from paired bootstrap of replay error; extremise Δ intervals over the set (union bound); compare with point-calibration verdicts.</p></div>
+  <div class="step"><h4><span class="zh">响应面 + 同时置信带</span><span class="en">Response surface + simultaneous band</span></h4><p class="zh">在 (log₂ k, log₂ d) 上拟合 GP，超参数边际化，4000 条后验函数的带内极值分布；配对平坦性检验作门控。</p><p class="en">GP over (log₂ k, log₂ d), hyperparameters marginalised, extremum distribution of 4000 posterior draws over the strip; paired flatness test as a gate.</p></div>
+  <div class="step"><h4><span class="zh">接触参数与部署变体</span><span class="en">Contact parameters and deployment variants</span></h4><p class="zh">物体摩擦/密度（校准按构造不可见）；策略变体（关集成、4 步动作块、单帧历史）以获得中段成功率的近平局对。</p><p class="en">Object friction/density (invisible to calibration by construction); policy variants (no ensembling, 4-step chunk, single-frame history) to obtain mid-success near-tied pairs.</p></div>
+  <div class="step"><h4><span class="zh">种子复现与确定性检查</span><span class="en">Seed replication and determinism check</span></h4><p class="zh">新种子集重跑关键条件；原种子在重启后的服务器上重跑。发现跨进程非确定性，撤回一项发现，加入确定性 XLA 开关。</p><p class="en">Key conditions rerun with a new seed set; original seeds rerun on restarted servers. Found cross-process nondeterminism, retracted one finding, added deterministic XLA flags.</p></div>
+  <div class="step"><h4><span class="zh">第二模型家族（进行中）</span><span class="en">Second model family (in progress)</span></h4><p class="zh">OpenVLA-7B 4-bit 服务器已就绪，排队在 Octo 队列之后运行同一 6 条件扫描。</p><p class="en">OpenVLA-7B 4-bit server ready; queued after the Octo queues to run the same 6-condition sweep.</p></div>
+  <div class="step"><h4><span class="zh">计划：原版 SIMPLER 复核</span><span class="en">Planned: original-SIMPLER recheck</span></h4><p class="zh">在 Linux + SIMPLER main（SAPIEN 2）上复核不可辨识性结构；回放只需 CPU，策略扫描约需 4–10 GPU 小时。</p><p class="en">Recheck the identifiability structure on Linux + SIMPLER main (SAPIEN 2); replay needs CPU only, the policy sweep about 4–10 GPU-hours.</p></div>
+</div>
+
+<h2 id="platform"><span class="zh">3. 平台与已知偏离</span><span class="en">3. Platform and known deviations</span></h2>
+<table>
+<thead><tr><th><span class="zh">组件</span><span class="en">Component</span></th><th><span class="zh">本研究使用</span><span class="en">Used here</span></th><th><span class="zh">与参考实现的偏离 / 影响</span><span class="en">Deviation from reference / impact</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">仿真器</span><span class="en">Simulator</span></td><td>ManiSkill 3.0.1 + SAPIEN 3.0.3, Windows 11, CPU physics + GPU render</td><td><span class="zh">SIMPLER main 用 ManiSkill2 / SAPIEN 2；公开真机成绩不可直接对表</span><span class="en">SIMPLER main uses ManiSkill2 / SAPIEN 2; published real-robot scores are not directly comparable</span></td></tr>
+<tr><td><span class="zh">逆运动学</span><span class="en">Inverse kinematics</span></td><td><code>scripts/ms3_windows_compat.py</code>: torch Jacobian IK</td><td><span class="zh">替代 Pinocchio；改变控制行为；明确标记为探索性适配层</span><span class="en">Replaces Pinocchio; changes control behaviour; explicitly marked as an exploratory adapter</span></td></tr>
+<tr><td><span class="zh">机器人 / 控制</span><span class="en">Robot / control</span></td><td>WidowX (Real2Sim-tuned), control 5 Hz, sim 500 Hz, joint PD (arm_stiffness / arm_damping / arm_force_limit)</td><td><span class="zh">条件通过进程内改写类属性实现，建环境后从关节驱动回读核验</span><span class="en">Conditions applied by in-process class-attribute patching, verified by reading joint drives back after env creation</span></td></tr>
+<tr><td><span class="zh">策略</span><span class="en">Policies</span></td><td>Octo 1.0 small / base (HF weights); OpenVLA-7B nf4 (queued)</td><td><span class="zh">前后处理移植自 SIMPLER <code>octo_model.py</code>（widowx_bridge）；旋转增量用 transforms3d sxyz 欧拉 → 轴角；夹爪 2·(open&gt;0.5)−1</span><span class="en">Pre/post-processing ported from SIMPLER <code>octo_model.py</code> (widowx_bridge); rotation deltas via transforms3d sxyz Euler → axis-angle; gripper 2·(open&gt;0.5)−1</span></td></tr>
+<tr><td><span class="zh">推理后端</span><span class="en">Inference backend</span></td><td>WSL2 Ubuntu, jax 0.5.3 + CUDA 12 plugin, RTX 5060 Laptop 8 GB</td><td><span class="zh">Octo 钉死的 jax 0.4.x 不支持 Blackwell（sm_90a ptxas 错误）；Octo 源码 2 处补丁（KeyArray → jax.Array；distrax 延迟导入）。CPU 与 GPU 后端逐集一致率 0.83–0.96，比较只在同一后端内做</span><span class="en">Octo's pinned jax 0.4.x lacks Blackwell support (sm_90a ptxas error); 2 small Octo patches (KeyArray → jax.Array; lazy distrax import). CPU vs GPU per-episode agreement 0.83–0.96, so comparisons stay within one backend</span></td></tr>
+<tr><td><span class="zh">确定性</span><span class="en">Determinism</span></td><td><code>XLA_FLAGS=--xla_gpu_deterministic_ops=true --xla_gpu_autotune_level=0</code> (added 2026-09-18 23:20)</td><td><span class="zh">加入前：同一种子跨服务器进程逐集成功一致率 18/24、19/24，夹爪事件一致率 8/24、2/24</span><span class="en">Before the flags: same-seed per-episode success agreement across server processes 18/24 and 19/24, gripper-event agreement 8/24 and 2/24</span></td></tr>
+<tr><td><span class="zh">真实数据</span><span class="en">Real data</span></td><td>BridgeData V2 TFRecord shards 0–3, 98 demos, read by HTTP range requests with CRC32C</td><td><span class="zh">只用于回放校准；状态约定 p = state[:3]，R = euler2mat(rpy)·[[0,0,1],[0,1,0],[−1,0,0]]</span><span class="en">Used only for replay calibration; state convention p = state[:3], R = euler2mat(rpy)·[[0,0,1],[0,1,0],[−1,0,0]]</span></td></tr>
+</tbody></table>
+
+<h2 id="protocol"><span class="zh">4. 预注册协议（结果出来前冻结）</span><span class="en">4. Pre-registered protocols (frozen before results)</span></h2>
+<h3><span class="zh">4.1 控制器扫描</span><span class="en">4.1 Controller sweep</span></h3>
+<table>
+<thead><tr><th><span class="zh">预设</span><span class="en">Preset</span></th><th><span class="zh">条件</span><span class="en">Conditions</span></th><th><span class="zh">改动</span><span class="en">Change</span></th></tr></thead>
+<tbody>
+<tr><td><code>sweep_v1</code></td><td>nominal, stiff_x0.5, stiff_x2.0, damp_x0.5, damp_x2.0, force_x0.5, delay_1</td><td><span class="zh">六关节刚度 / 阻尼 / 力矩上限乘因子；时延 = 执行上一控制步（200 ms）的动作</span><span class="en">Six-joint stiffness / damping / torque limit scaled; delay = execute the action issued one control step (200 ms) earlier</span></td></tr>
+<tr><td><code>iso_ratio_v1</code></td><td>iso_x0.25, iso_x0.5, nominal, iso_x2.0, iso_x4.0</td><td><span class="zh">刚度与阻尼同乘 c（比值不变）</span><span class="en">Stiffness and damping multiplied by the same c (ratio unchanged)</span></td></tr>
+<tr><td><code>wide_v1</code></td><td>stiff_x0.25, stiff_x4.0, damp_x0.25, damp_x4.0, delay_2</td><td><span class="zh">敏感性上限补充</span><span class="en">Upper bound on sensitivity</span></td></tr>
+<tr><td><code>contact_v1</code></td><td>fric_x0.4, fric_x2.5, dens_x0.5, dens_x2.0</td><td><span class="zh">物体静/动摩擦系数（0.5 → 0.2 / 1.25）与密度；自由空间回放按构造不可见</span><span class="en">Object static/dynamic friction (0.5 → 0.2 / 1.25) and density; invisible to free-space replay by construction</span></td></tr>
+<tr><td><code>variants_v1</code></td><td>nominal, iso_x0.25, iso_x4.0, force_x0.5, fric_x0.4, dens_x0.5</td><td><span class="zh">用于部署变体策略对的 6 个校准不可见条件</span><span class="en">The 6 calibration-invisible conditions used for deployment-variant pairs</span></td></tr>
+</tbody></table>
+<ul>
+<li class="zh"><b>任务：</b>PutCarrotOnPlate（60 步）、PutSpoonOnTableCloth（60）、PutEggplantInBasket（120）、StackGreenCubeOnYellowCube（60）。每（策略，任务，条件）24 集起，episode_id 0–23 覆盖全部 12 个位置构型 × 2 个朝向构型。</li>
+<li class="en"><b>Tasks:</b> PutCarrotOnPlate (60 steps), PutSpoonOnTableCloth (60), PutEggplantInBasket (120), StackGreenCubeOnYellowCube (60). At least 24 episodes per (policy, task, condition); episode_id 0–23 covers all 12 position × 2 orientation configurations.</li>
+<li class="zh"><b>共同随机数：</b>同一 episode_id 在所有条件、所有策略下使用相同初始状态和相同策略种子（20260918 + episode_id）。每集跑满最大步数，成功取最后一步 <code>success</code>。</li>
+<li class="en"><b>Common random numbers:</b> the same episode_id uses the same initial state and policy seed (20260918 + episode_id) under every condition and policy. Episodes run to the step limit; success is the final-step <code>success</code> flag.</li>
+<li class="zh"><b>判读规则：</b>Δ = rate(small) − rate(base) 按 episode_id 配对，配对自助 95% 区间。只有"一个条件的区间整体 &gt; 0 且另一个条件整体 &lt; 0"才称"翻转"；点估计符号变化只称"候选"，追加集数而不改条件。</li>
+<li class="en"><b>Reading rule:</b> Δ = rate(small) − rate(base), paired by episode_id, 95% paired-bootstrap interval. Only "one condition's interval entirely &gt; 0 and another's entirely &lt; 0" is called a flip; a point-estimate sign change is a "candidate" that triggers more episodes, never a change of conditions.</li>
+<li class="zh"><b>停止规则：</b>四任务均无候选且策略内敏感性区间跨零 → 结论为"该范围内控制器参数不影响排序"，转向其他参数族（已执行：接触参数、部署变体）。</li>
+<li class="en"><b>Stopping rule:</b> no candidate on any task and within-policy sensitivity intervals covering zero → "controller parameters in this range do not affect the ranking", move to another parameter family (done: contact parameters, deployment variants).</li>
+</ul>
+
+<h3><span class="zh">4.2 校准回放（B-1，SIMPLER sysid 协议移植）</span><span class="en">4.2 Calibration replay (B-1, ported SIMPLER sysid protocol)</span></h3>
+<ol>
+<li class="zh">读取 BridgeData V2 示范（状态、动作、夹爪），CRC 校验。</li><li class="en">Read BridgeData V2 demos (states, actions, gripper) with CRC checks.</li>
+<li class="zh">在 Empty-v1 场景中把机器人抬高 1 m，从固定的规范关节位形用 IK 对齐首帧末端位姿（初始误差 0.1 mm，2π 回绕处理满转关节）。</li><li class="en">In the Empty-v1 scene, lift the robot 1 m and align the first end-effector pose by IK from a fixed canonical joint configuration (initial error 0.1 mm; 2π wrapping for full-turn joints).</li>
+<li class="zh">开环回放示范动作序列，逐步记录仿真末端位姿；误差 = 平移 L2 + 旋转 arcsin(‖R<sub>pred</sub> − R<sub>gt</sub>‖<sub>F</sub> / 2√2)。</li><li class="en">Replay the demo actions open-loop, logging the simulated end-effector pose each step; error = translation L2 + rotation arcsin(‖R<sub>pred</sub> − R<sub>gt</sub>‖<sub>F</sub> / 2√2).</li>
+<li class="zh">对 <code>sweep_v1</code> 与 5×5×2 网格（刚度 × 阻尼 ∈ {0.5, 0.7, 1, 1.4, 2}，时延 ∈ {0, 1}）重复；用 <code>check_iso_invariance.py</code> 检查等比组内轨迹差（容差 1 mm）。</li><li class="en">Repeat for <code>sweep_v1</code> and a 5×5×2 grid (stiffness × damping ∈ {0.5, 0.7, 1, 1.4, 2}, delay ∈ {0, 1}); check within-iso-ratio-group trajectory deviations with <code>check_iso_invariance.py</code> (tolerance 1 mm).</li>
+<li class="zh"><b>相容集合规则：</b>条件 c 相容 ⇔ 配对自助的 mean(err<sub>c</sub> − err<sub>nominal</sub>) 单侧 95% 下界 ≤ 0。</li><li class="en"><b>Compatible-set rule:</b> condition c is compatible ⇔ the one-sided 95% lower bound of the paired-bootstrap mean(err<sub>c</sub> − err<sub>nominal</sub>) is ≤ 0.</li>
+</ol>
+
+<h3><span class="zh">4.3 统计与报告规则</span><span class="en">4.3 Statistical and reporting rules</span></h3>
+<ul>
+<li class="zh">单率：Wilson 95%；差值：按 episode_id 配对自助 10 000–20 000 次。</li><li class="en">Single rates: Wilson 95%; differences: paired bootstrap by episode_id, 10 000–20 000 resamples.</li>
+<li class="zh">集合判定（并集界）：L = min 集合内各条件 CI 下界，U = max 上界；L &gt; 0 或 U &lt; 0 才下结论，否则拒判。</li><li class="en">Set verdict (union bound): L = min over compatible conditions of the CI lower bound, U = max of upper bounds; declare only if L &gt; 0 or U &lt; 0, otherwise abstain.</li>
+<li class="zh">响应面判定：GP 同时 95% 带的带内极值；配对平坦性检验拒绝平坦的轴不使用响应面，回退到并集界。</li><li class="en">Response-surface verdict: extremes of the GP's simultaneous 95% band over the strip; any axis where the paired flatness test rejects flatness falls back to the union bound.</li>
+<li class="zh">任何"可判定 / 翻转"主张必须在 ≥ 2 个独立种子集下成立（2026-09-18 23:20 起）。</li><li class="en">Any "decidable / flip" claim must hold under ≥ 2 independent seed sets (rule adopted 2026-09-18 23:20).</li>
+<li class="zh">重复记录（同一 episode_id 被两个进程写入）：保留首条完成记录，并输出"保留末条"版本作对照。</li><li class="en">Duplicate records (one episode_id written by two processes): keep the first completed record and also publish a "keep last" variant for comparison.</li>
+<li class="zh">SIMPLER 公开成绩表已被查看，不声称盲测。</li><li class="en">SIMPLER's published score table has been seen; no blind-test claim is made.</li>
+</ul>
+
+<h3><span class="zh">4.4 构型普查口径（2026-09-19 起，取代逐集自助为默认）</span><span class="en">4.4 The configuration-census protocol (default since 2026-09-19)</span> <span class="tag ok">census</span></h3>
+<p class="zh">基准任务的初始条件是<b>有限集合</b>：<code>pos = (episode_id mod (n_xy·n_quat)) div n_quat</code>、<code>quat = episode_id mod n_quat</code>。原版 SIMPLER 的茄子为 8×3 = 24 个构型，ManiSkill3 移植版为 8×8 = 64 个；勺子/胡萝卜/堆叠两栈皆为 24 个。<code>episode_id</code> 超出构型数即<b>精确重复</b>此前场景。SIMPLER 官方协议本身就是普查：<code>--obj-episode-range 0 24</code> × <code>init_rng ∈ {0,2,4}</code> = 24 构型 × 3 个固定种子 = 72 集，公布表的分母正是 72。</p>
+<p class="en">A task's initial conditions form a <b>finite set</b>: <code>pos = (episode_id mod (n_xy·n_quat)) div n_quat</code>, <code>quat = episode_id mod n_quat</code>. The original SIMPLER eggplant has 8×3 = 24 configurations, the ManiSkill3 port 8×8 = 64; spoon, carrot and stack have 24 on both. An <code>episode_id</code> beyond the grid <b>repeats an earlier scene exactly</b>. The official SIMPLER protocol is itself a census: <code>--obj-episode-range 0 24</code> × <code>init_rng ∈ {0,2,4}</code> = 24 configurations × 3 fixed seeds = 72 episodes, which is the denominator of the published table.</p>
+<ul>
+<li class="zh">被估量必须明写：<b>(i) 基准值</b>（该基准自身的数字，全普查后构型抽样误差为零，区间只含策略噪声，方差 N⁻²Σ_c[s²(c)/S_c]）或 <b>(ii) 泛化值</b>（同类场景上的表现，自助必须按构型聚类）。</li><li class="en">The estimand must be stated: <b>(i) the benchmark value</b> (configuration sampling error is zero after a census; the interval carries only policy noise, variance N⁻²Σ_c[s²(c)/S_c]) or <b>(ii) the generalisation value</b> (the bootstrap must then be clustered by configuration).</li>
+<li class="zh">确定性策略（OpenVLA：<code>do_sample=False</code>，seed 不参与推理）没有种子维度；其"多种子集复现"无效，全普查即为精确测定。逐条相同的重复运行必须合并为一次观测。</li><li class="en">A deterministic policy (OpenVLA: <code>do_sample=False</code>, the seed is unused) has no seed axis; "replication across seed sets" is vacuous for it and a census measures it exactly. Record-identical re-runs must be merged into one observation.</li>
+<li class="zh">每构型只跑一次时，(i) 退化为标准二项区间。<b>普查本身不收窄区间，重复运行才收窄</b>：先跑全构型（消除重复计数），再加运行次数（压策略噪声）。</li><li class="en">With one run per configuration, (i) degenerates to the ordinary binomial interval. <b>A census does not narrow the interval; replicates do</b>: enumerate the grid first, then add runs.</li>
+<li class="zh">不得跨实现版本合并重复：实测把修复前的数据计入会把种子标准差由 0.055 虚高到 0.093。每个结果目录记录服务器版本。</li><li class="en">Never pool replicates across implementation versions: including pre-fix data inflated the seed standard deviation from 0.055 to 0.093. Every result directory records the server build.</li>
+<li class="zh">报告五项：构型覆盖率、每构型独立运行次数、方差模型、被估量、移植版与版本。</li><li class="en">Report five things: configuration coverage, independent runs per configuration, variance model, estimand, port and build.</li>
+</ul>
+<div class="note"><p class="zh"><b>隐藏变量量级对照（茄子，64 构型全普查）：</b>策略种子 sd = 0.055（单种子 95% 半宽 ±0.108，3 种子 ±0.062，10 种子 ±0.034）；实现版本 0.03–0.08（同种子换推理栈，逐集一致率低至 0.73）；<b>相容集合内力矩上限引起的位移 ≈ 0.23</b>。参数模糊性比任何现实评测预算下的噪声大一个量级——这是"更多评测无法解决该问题"的定量依据。方法节：<code>docs/methods_census_2026-09-19.md</code>；形式化账本：<code>docs/theory_protocol.md §6.1</code>。</p><p class="en"><b>Hidden-variable magnitudes (eggplant, 64-configuration census):</b> policy seed sd = 0.055 (95% half-width ±0.108 at one seed, ±0.062 at three, ±0.034 at ten); implementation build 0.03–0.08 (same seeds, new inference stack; per-episode agreement as low as 0.73); <b>the shift from the torque limit inside the compatible set ≈ 0.23</b>. The parameter ambiguity is an order of magnitude larger than the noise at any realistic evaluation budget — the quantitative basis for "more evaluation cannot settle this".</p></div>
+
+<h2 id="findings"><span class="zh">5. 结果（按证据强度排序）</span><span class="en">5. Findings (ordered by strength of evidence)</span></h2>
+
+<h3><span class="zh">5.1 校准协议的精确结构不可辨识性</span><span class="en">5.1 Exact structural non-identifiability of the calibration protocol</span> <span class="tag ok">98 demos</span></h3>
+<p class="zh">自由空间回放下，刚度与阻尼同乘常数 c 的所有控制器给出同一条末端轨迹（关节响应近似一阶，只依赖时间常数 d/k）；力矩上限在示范速度范围内从不饱和，差为 0。比值方向与时延方向可辨识，误差曲线为碗形。</p>
+<p class="en">Under free-space replay, every controller with stiffness and damping scaled by the same c yields the same end-effector trajectory (joint response is near first order and depends only on the time constant d/k); the torque limit never saturates at demonstration speeds, so its effect is exactly 0. The ratio and delay directions are identifiable with bowl-shaped error curves.</p>
+<table>
+<thead><tr><th><span class="zh">等比组 (k/d 比值, 时延)</span><span class="en">Iso-ratio group (k/d ratio, delay)</span></th><th><span class="zh">组内条件数</span><span class="en">Conditions</span></th><th class="num"><span class="zh">组内最大 |Δp| (mm)</span><span class="en">max within-group |Δp| (mm)</span></th><th class="num">p95 |Δp| (mm)</th></tr></thead>
+<tbody>
+<tr><td>(1.0, 0)</td><td>5</td><td class="num">0.138</td><td class="num">0.039</td></tr>
+<tr><td>(1.0, 1)</td><td>5</td><td class="num">0.137</td><td class="num">0.039</td></tr>
+<tr><td>(1.4, 0)</td><td>2</td><td class="num">0.104</td><td class="num">0.040</td></tr>
+<tr><td>(2.0, 0)</td><td>3</td><td class="num">0.076</td><td class="num">0.044</td></tr>
+<tr><td>(0.5, 0)</td><td>3</td><td class="num">0.032</td><td class="num">0.017</td></tr>
+<tr><td colspan="4"><span class="zh">14 个等比组全部 &lt; 1 mm 容差；判定：不变性成立。相对标称的配对误差增量（98 条示范，95%）：比值 0.5 → +0.0089 [+0.0073, +0.0105]；比值 2 → +0.0064 [+0.0055, +0.0072]；时延 1 步 → +0.0060 [+0.0046, +0.0075]；力矩 ×0.5 → 0。</span><span class="en">All 14 iso-ratio groups below the 1 mm tolerance; verdict: invariance holds. Paired error increments vs nominal (98 demos, 95%): ratio 0.5 → +0.0089 [+0.0073, +0.0105]; ratio 2 → +0.0064 [+0.0055, +0.0072]; delay 1 step → +0.0060 [+0.0046, +0.0075]; torque ×0.5 → 0.</span></td></tr>
+</tbody></table>
+<figure><img src="{{FIG:fig_replay_identifiability}}" alt="replay identifiability"><figcaption><span class="zh">图 1. 回放可辨识性：比值方向与时延可辨识（碗形），共同尺度与力矩上限不可见（平坦）。数据：98 条示范。</span><span class="en">Fig. 1. Replay identifiability: ratio and delay are identifiable (bowl-shaped), common scale and torque limit are invisible (flat). Data: 98 demos.</span></figcaption></figure>
+<div class="note"><p class="zh">这是方案命题中"校准数据信息矩阵零空间"的一个真实机器人实例，且是<i>精确</i>的而非近似的：拟合相等由构造保证，不需要统计检验。注意这是仿真器性质，真实机器人不一定成立。</p><p class="en">This is a real-robot instance of the "null space of the calibration information matrix" from the thesis, and it is <i>exact</i> rather than approximate: equal fit is guaranteed by construction, no statistical test needed. It is a property of the simulator; a real robot need not share it.</p></div>
+
+<div class="note"><p class="zh"><b>原版 SIMPLER 栈复核（2026-09-19）：</b>同一 98 条示范在 ManiSkill2_real2sim + SAPIEN 2.2.2（SIMPLER main 固定提交，原版控制器与 Pinocchio IK，WSL2 CPU 物理、渲染器桩掉）上重放：等比组内最大偏差 0.141 mm（比值 2.0 组）、0.523 mm（尺度 ×0.25…×4 组），力矩 ×0.5 与标称误差完全相同（0.04714），首帧对齐 0.0 mm；比值方向与时延的配对误差增量区间全部远离零。不可辨识性结构与 Windows 平台一致到亚毫米，是校准协议的性质而非适配层的产物。见 <code>results/replay_sysid_ms2/FINDING_original_stack.md</code>。</p><p class="en"><b>Recheck on the original SIMPLER stack (2026-09-19):</b> the same 98 demos replayed on ManiSkill2_real2sim + SAPIEN 2.2.2 (pinned SIMPLER main commit, original controllers and Pinocchio IK, WSL2 CPU physics with the renderer stubbed) give a within-iso-ratio-group maximum deviation of 0.141 mm (ratio-2 group) and 0.523 mm (scale ×0.25…×4 group), identical error for torque ×0.5 and nominal (0.04714), 0.0 mm initial alignment, and paired error increments for the ratio and delay directions all clearly away from zero. The non-identifiability structure matches the Windows platform to sub-millimetre precision: it is a property of the calibration protocol, not of the adapter. See <code>results/replay_sysid_ms2/FINDING_original_stack.md</code>.</p></div>
+<h3><span class="zh">5.2 相容集合校准 vs 点校准</span><span class="en">5.2 Compatible-set calibration vs point calibration</span> <span class="tag ok">48–96 eps, 1 seed set</span></h3>
+<p class="zh">相容集合 = {k/d 比值 ≈ 1} × 尺度全轴 × 力矩全轴 (× 接触参数全轴)。比值 ×0.5 / ×2 / ×0.25 / ×4 与时延条件均被排除（误差增量下界 +0.004 到 +0.008）。</p>
+<p class="en">Compatible set = {k/d ratio ≈ 1} × full scale axis × full torque axis (× full contact axes). Ratio ×0.5 / ×2 / ×0.25 / ×4 and the delay conditions are excluded (error-increment lower bounds +0.004 to +0.008).</p>
+<table>
+<thead><tr><th><span class="zh">任务</span><span class="en">Task</span></th><th><span class="zh">点校准（标称）</span><span class="en">Point calibration (nominal)</span></th><th><span class="zh">并集界（控制器）</span><span class="en">Union bound (controller)</span></th><th><span class="zh">并集界（控制器 + 接触）</span><span class="en">Union bound (controller + contact)</span></th><th><span class="zh">GP 同时带 v2（控制器带）</span><span class="en">GP simultaneous band v2 (controller strip)</span></th><th><span class="zh">GP v2（接触轴）</span><span class="en">GP v2 (contact axes)</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">胡萝卜</span><span class="en">Carrot</span></td><td><span class="zh">拒判</span><span class="en">abstain</span></td><td><span class="zh">拒判</span><span class="en">abstain</span></td><td><span class="zh">拒判</span><span class="en">abstain</span></td><td>[−0.11, +0.04] <span class="zh">拒判</span><span class="en">abstain</span></td><td><span class="zh">摩擦 [−0.17, +0.10]、密度 [−0.15, +0.11] 拒判</span><span class="en">friction [−0.17, +0.10], density [−0.15, +0.11]: abstain</span></td></tr>
+<tr><td><span class="zh">勺子</span><span class="en">Spoon</span></td><td>small +0.29 [+0.15, +0.44]</td><td><span class="zh">拒判</span><span class="en">abstain</span> (iso ×2: +0.146 [0.00, +0.29])</td><td><span class="zh">拒判</span><span class="en">abstain</span></td><td>[+0.01, +0.46] small <span class="zh">优（下界贴零）</span><span class="en">better (lower bound at zero)</span></td><td><span class="zh">摩擦 [−0.02, +0.42] 拒判；密度 [+0.09, +0.38] small 优</span><span class="en">friction [−0.02, +0.42] abstain; density [+0.09, +0.38] small better</span></td></tr>
+<tr><td><span class="zh">茄子</span><span class="en">Eggplant</span></td><td>small +0.21 [+0.09, +0.32]</td><td><span class="zh">拒判</span><span class="en">abstain</span> (iso ×0.25: +0.06 [−0.10, +0.23])</td><td><span class="zh">拒判</span><span class="en">abstain</span></td><td>[−0.02, +0.34] <span class="zh">拒判</span><span class="en">abstain</span></td><td><span class="zh">摩擦：门控拒绝平坦 → 并集界 拒判；密度 [0.00, +0.40] 边界</span><span class="en">friction: gate rejects flatness → union bound, abstain; density [0.00, +0.40] borderline</span></td></tr>
+<tr><td><span class="zh">叠方块</span><span class="en">Stack cubes</span></td><td colspan="5"><span class="zh">地板效应（两策略成功率 ≈ 0），全部拒判</span><span class="en">Floor effect (both rates ≈ 0), abstain throughout</span></td></tr>
+</tbody></table>
+<figure><img src="{{FIG:fig_delta_by_condition}}" alt="delta by condition"><figcaption><span class="zh">图 2. 三个有信息任务上逐条件 Δ = small − base 与 95% 配对自助区间；可辨识条件与校准不可见条件分色；标出集合上下界与点/集合判定。</span><span class="en">Fig. 2. Per-condition Δ = small − base with 95% paired-bootstrap intervals on the three informative tasks; identifiable vs calibration-invisible conditions coloured; set bounds and point/set verdicts marked.</span></figcaption></figure>
+<figure><img src="{{FIG:fig_response_surface}}" alt="response surface"><figcaption><span class="zh">图 3. (log₂ 刚度尺度, log₂ 阻尼尺度) 平面上的 Δ 响应面（GP v1 图示）与相容带 |u − v| ≤ 0.25。v2 的同时置信带数值见上表。</span><span class="en">Fig. 3. Δ response surface over (log₂ stiffness scale, log₂ damping scale) (GP v1 illustration) with the compatible strip |u − v| ≤ 0.25. Simultaneous-band numbers from v2 are in the table above.</span></figcaption></figure>
+<div class="note"><p class="zh"><b>三列结论的共同点：</b>胡萝卜不可判定；茄子的"small 优"不被校准数据支撑；勺子的"small 优"对控制器不可见方向稳健、对接触参数不稳健。<b>方法论要点：</b>并集界把抽样噪声当成歧义（条件数越多区间越宽）；响应面把真实变化也抹平；因此采用"配对检验未拒绝平坦时用响应面界，拒绝时用并集界"的门控规则。v1 的逐点 k·sd 界（茄子 [+0.14, +0.23]）过于乐观，v2 的同时覆盖把它拉回拒判。</p><p class="en"><b>What the three columns agree on:</b> carrot is undecidable; eggplant's "small better" is not supported by the calibration data; spoon's "small better" is robust to the controller-invisible directions but not to the contact parameters. <b>Methodological point:</b> the union bound treats sampling noise as ambiguity (wider with more conditions); the response surface also smooths away real variation; hence the gate rule "use the response-surface bound unless the paired test rejects flatness, then use the union bound". The v1 pointwise k·sd bound (eggplant [+0.14, +0.23]) was over-optimistic; v2's simultaneous coverage returns it to abstain.</p></div>
+
+<h3><span class="zh">5.3 没有区间支持的排序符号翻转</span><span class="en">5.3 No CI-supported ranking sign flip</span> <span class="tag ok">20 conditions × 4 tasks, 48–96 eps</span></h3>
+<p class="zh">Octo-small vs Octo-base：12 个 sweep/iso 条件 + 5 个 wide 条件 + 4 个接触条件，四任务，Δ 的符号在任一任务内从未出现区间支持的反向。48 集判定：勺子 9 个条件 small 优、2 个拒判（时延 1 步 Δ = 0.00 [−0.12, +0.12]；等比 ×2 +0.15 [0.00, +0.29]）；茄子 6 个 small 优、5 个拒判；胡萝卜与叠方块全部拒判。结构原因：几乎所有条件只压低强策略，弱策略没有上升空间。</p>
+<p class="en">Octo-small vs Octo-base: 12 sweep/iso conditions + 5 wide + 4 contact, four tasks; the sign of Δ never reversed with interval support within a task. At 48 episodes: spoon 9 conditions small better, 2 abstain (delay 1 step Δ = 0.00 [−0.12, +0.12]; iso ×2 +0.15 [0.00, +0.29]); eggplant 6 small better, 5 abstain; carrot and stacking abstain throughout. Structural reason: almost every condition only lowers the stronger policy, and the weaker one has no headroom.</p>
+<div class="card"><p class="zh"><b>功效：</b>两策略成功率 ≤ 0.15 时，48 集区间半宽约 0.12，96 集约 0.08；检出 0.1 的排序变化需要数百集。这是转向中段成功率策略对（部署变体）的直接原因。</p><p class="en"><b>Power:</b> with both success rates ≤ 0.15, the interval half-width is about 0.12 at 48 episodes and 0.08 at 96; detecting a 0.1 ranking change would need hundreds. This motivated the move to mid-success policy pairs (deployment variants).</p></div>
+
+<h3><span class="zh">5.4 部署变体与近平局对</span><span class="en">5.4 Deployment variants and near-tied pairs</span> <span class="tag warn">24 eps; 96 eps running</span></h3>
+<p class="zh">同一权重的部署变体：<code>@noens</code>（关闭动作集成）、<code>@chunk4</code>（执行 4 步动作块）、<code>@hist1</code>（单帧历史）。茄子标称 24 集：small 0.54、small@hist1 0.46、base@hist1 0.375、base 0.25；noens 与 chunk4 把两模型压到 0.08–0.17。近平局对（|Δ| ≤ 0.10，双方在 [0.2, 0.8]）：base@hist1 vs small@hist1（−0.08）、small vs small@hist1（+0.08）；24 集下 6 个不可见条件全部拒判。勺子候选反向对 small vs small@hist1：标称 +0.125、摩擦 0.2 −0.21、等比 ×0.25 −0.08（区间均跨零）。茄子集合 96 集：无区间支持翻转，但两处 Δ 的配对变化有区间支持（base vs small@hist1 的摩擦轴 +0.19 [+0.07, +0.31]、等比轴 +0.16 [+0.01, +0.30]），等第二种子集。勺子候选对 96 集：标称与摩擦下两策略完全打平（各 30/96、19/96），候选反向消失，为第四个被撤回的中期候选。</p>
+<p class="en">Deployment variants of the same weights: <code>@noens</code> (no action ensembling), <code>@chunk4</code> (execute 4-step action chunks), <code>@hist1</code> (single-frame history). Eggplant nominal, 24 episodes: small 0.54, small@hist1 0.46, base@hist1 0.375, base 0.25; noens and chunk4 push both models to 0.08–0.17. Near-tied pairs (|Δ| ≤ 0.10, both rates in [0.2, 0.8]): base@hist1 vs small@hist1 (−0.08), small vs small@hist1 (+0.08); all 6 invisible conditions abstain at 24 episodes. Spoon candidate reversal pair small vs small@hist1: nominal +0.125, friction 0.2 −0.21, iso ×0.25 −0.08 (all intervals cross zero). Eggplant set at 96: no CI-supported flip, but two CI-supported paired changes of Δ (base vs small@hist1: friction axis +0.19 [+0.07, +0.31], iso axis +0.16 [+0.01, +0.30]), pending the second seed set. Spoon candidate pair at 96: the two policies tie exactly at nominal and at low friction (30/96 each, 19/96 each); the candidate reversal vanished, the fourth interim candidate retracted.</p>
+
+<h3><span class="zh">5.5 跨进程非确定性与种子复现</span><span class="en">5.5 Cross-process nondeterminism and seed replication</span> <span class="tag bad">methodological</span></h3>
+<table>
+<thead><tr><th><span class="zh">检查</span><span class="en">Check</span></th><th><span class="zh">设置</span><span class="en">Setting</span></th><th><span class="zh">结果</span><span class="en">Result</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">跨后端</span><span class="en">Cross-backend</span></td><td><span class="zh">胡萝卜，同 episode_id 与种子，CPU jax 0.4.20 vs GPU jax 0.5.3</span><span class="en">Carrot, same episode_ids and seeds, CPU jax 0.4.20 vs GPU jax 0.5.3</span></td><td><span class="zh">逐集一致率 0.83–0.96；条件级成功率在噪声内</span><span class="en">Per-episode agreement 0.83–0.96; condition-level rates within noise</span></td></tr>
+<tr><td><span class="zh">跨服务器进程</span><span class="en">Cross-server-process</span></td><td><span class="zh">茄子标称，原始种子在重启后的 GPU 服务器重跑 24 集</span><span class="en">Eggplant nominal, original seeds rerun on restarted GPU servers, 24 episodes</span></td><td><span class="zh">成功一致 18/24 (small)、19/24 (base)；夹爪开合次数一致 8/24、2/24</span><span class="en">Success agreement 18/24 (small), 19/24 (base); gripper-event agreement 8/24, 2/24</span></td></tr>
+<tr><td><span class="zh">种子复现</span><span class="en">Seed replication</span></td><td><span class="zh">茄子标称与摩擦 0.2，96 集，种子 20270101 + ep</span><span class="en">Eggplant nominal and friction 0.2, 96 episodes, seeds 20270101 + ep</span></td><td><span class="zh">标称 Δ −0.010 [−0.14, +0.11]（原 +0.208 [+0.08, +0.32]）；Δ(摩擦) − Δ(标称) +0.083 [−0.09, +0.26]（原 −0.156 [−0.29, −0.03]）</span><span class="en">Nominal Δ −0.010 [−0.14, +0.11] (was +0.208 [+0.08, +0.32]); Δ(friction) − Δ(nominal) +0.083 [−0.09, +0.26] (was −0.156 [−0.29, −0.03])</span></td></tr>
+</tbody></table>
+<p class="zh">结论：策略随机性 + 数值噪声造成的集间差异约 0.1–0.2，与研究效应同量级。已为后续服务器加入确定性 XLA 开关，并把"≥ 2 个种子集"设为任何可判定主张的前提。第二种子集的近平局集合复现（4 策略 × 6 条件 × 48 集）已排队。</p>
+<p class="en">Conclusion: between-set differences from policy stochasticity plus numerical noise are about 0.1–0.2, the same magnitude as the effects under study. Deterministic XLA flags are now set for all future servers, and "≥ 2 seed sets" is a precondition for any decidability claim. A second-seed-set replication of the near-tied set (4 policies × 6 conditions × 48 episodes) is queued.</p>
+
+
+<div class="note"><p class="zh"><b>2026-09-19 决定性实验（茄子 64 构型全普查）：</b>此前三个"种子集"同时也是三代推理服务器（A 采于 XLA 确定性开关引入之前），两个变量混淆。补做 <b>A′</b>——在当前服务器上用 A 的种子重跑同一批构型——把两者分开：<b>平台漂移</b>（同种子换版本）octo-base +0.078、octo-small −0.031，<b>逐集一致率仅 0.73–0.88</b>，即换一个推理栈版本就有 12–27% 的 episode 结果翻转；<b>策略种子噪声</b>（同版本换种子）octo-base 基准值 0.375 / 0.516 / 0.500，Δ(small−base) = +0.141 / −0.031 / −0.047，sd = 0.104，要在 95% 下分辨其均值（+0.021）需 <b>96 个种子</b>。把修复前的数据计入会把 sd_seed 由 0.055 虚高到 0.093。三个同代种子集的 octo-base 值把 SIMPLER 公布的 0.431 夹在中间——<b>公布表的三位小数本身带着约 ±0.07 的未报告种子不确定性</b>。证据：<code>results/controller_sweep_gpu_replayA/FINDING_platform_drift.md</code>；来源审计：<code>results/PROVENANCE_AUDIT_2026-09-19.md</code>。</p><p class="en"><b>Decisive experiment, 2026-09-19 (eggplant, 64-configuration census):</b> the three "seed sets" were also three inference-server builds (A predates the XLA determinism flags), confounding two variables. <b>A'</b> — A's seeds re-run on today's servers over the same configurations — separates them: <b>platform drift</b> (same seeds, new build) octo-base +0.078, octo-small −0.031, with <b>per-episode agreement of only 0.73–0.88</b>, i.e. changing the inference stack flips 12–27% of episodes; <b>policy-seed noise</b> (same build, new seeds) octo-base 0.375 / 0.516 / 0.500 and Δ(small−base) = +0.141 / −0.031 / −0.047, sd = 0.104, so resolving its mean (+0.021) at 95% would need <b>96 seeds</b>. Including pre-fix data inflates sd_seed from 0.055 to 0.093. The three same-build values bracket SIMPLER's published 0.431 — <b>the published three-decimal figures carry roughly ±0.07 of unreported seed uncertainty</b>.</p></div>
+
+<h3><span class="zh">5.6 判定方法的覆盖率基准（赛道 S，合成真值）</span><span class="en">5.6 Coverage benchmark of the verdict methods (Track S, synthetic truth)</span> <span class="tag ok">300 reps × 48 cells</span></h3>
+<p class="zh">为了给"点校准 / 并集界 / GP 同时带 / 门控"各自的保证类型一个数值检验，我们建立了可判定性基准（<code>benchmark/</code>）。赛道 S 使用与真实扫描相同的 13 个设计点与相容带，在已知的 Δ(z) 曲面（平坦、线性、采样点凹陷、未采样凹陷）× Δ₀ ∈ {0, 0.1, 0.2, 0.3} × n ∈ {24, 48, 96} 上生成配对伯努利结果（copula 相关 0.3，与真实数据一致），评估各方法对带内极值 [L*, U*] 的覆盖率、误判率与宣布率。方法代码与真实分析共用。</p>
+<p class="en">To test numerically what kind of guarantee each of point / union / GP-simultaneous / gated actually delivers, we built a decidability benchmark (<code>benchmark/</code>). Track S uses the same 13 design points and compatible strip as the real sweep, generates paired Bernoulli outcomes (copula correlation 0.3, matching the real data) on known Δ(z) surfaces (flat, linear, sampled dip, unsampled dip) × Δ₀ ∈ {0, 0.1, 0.2, 0.3} × n ∈ {24, 48, 96}, and scores coverage of the strip extremes [L*, U*], false-declaration rate and declaration rate. The method code is shared with the real analysis.</p>
+<table>
+<thead><tr><th><span class="zh">曲面</span><span class="en">Surface</span></th><th><span class="zh">点校准</span><span class="en">Point</span></th><th><span class="zh">并集界</span><span class="en">Union bound</span></th><th><span class="zh">GP 同时带（外推 / 不外推）</span><span class="en">GP simultaneous (extrapolating / in-range)</span></th><th><span class="zh">门控</span><span class="en">Gated</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">平坦</span><span class="en">flat</span></td><td>0.92 / 0.05 / 0.53</td><td>1.00 / 0.00 / 0.24</td><td>1.00 / 0.00 / 0.14 → 0.99 / 0.00 / 0.22</td><td>1.00 / 0.00 / 0.15</td></tr>
+<tr><td><span class="zh">线性</span><span class="en">linear</span></td><td>0.24 / 0.36 / 0.71</td><td>0.99 / 0.00 / 0.29</td><td>0.95 / 0.00 / 0.15 → 0.96 / 0.00 / 0.17</td><td>0.95 / 0.00 / 0.19</td></tr>
+<tr><td><span class="zh">采样点凹陷</span><span class="en">sampled dip</span></td><td>0.00 / 0.88 / 0.45</td><td>0.98 / 0.00 / 0.03</td><td>0.97 / 0.00 / 0.04 → 0.94 / 0.00 / 0.07</td><td>0.96 / 0.00 / 0.05</td></tr>
+<tr><td><span class="zh">未采样凹陷</span><span class="en">unsampled dip</span></td><td>0.00 / 0.85 / 0.43</td><td>0.22 / 0.17 / 0.21</td><td>0.91 / 0.00 / 0.08 → 0.85 / 0.01 / 0.15</td><td>0.89 / 0.01 / 0.10</td></tr>
+<tr><td colspan="5"><span class="zh">单元格：跨 Δ₀ 与 n 的 最小覆盖率 / 最大误判率 / 真值可判定时的平均宣布率。目标覆盖 ≥ 0.95、误判 ≤ 0.05。</span><span class="en">Cells: min coverage / max false-declaration / mean declaration rate where the truth is decidable, over Δ₀ and n. Targets: coverage ≥ 0.95, false ≤ 0.05.</span></td></tr>
+</tbody></table>
+<div class="note"><p class="zh"><b>结论：</b>(1) 点校准的误判率随集数上升（采样点凹陷、Δ₀ = 0.2：24 集 0.26 → 96 集 0.88），更多数据让错误结论更自信；(2) 并集界是"采样极值"型保证，对采样点之间的特征失效；(3) GP 同时带在所有曲面上有效但功效低，不外推的配置把功效提高约 1.6 倍、覆盖率下限降到 0.85；(4) 平坦性门控无收益（平坦曲面上误触发 16–20%），从推荐阶梯中撤下。判定阶梯因此改为两级并标注各自保证类型：并集界（采样极值保证、高功效）与 GP 同时带（带内保证、低功效）。</p><p class="en"><b>Conclusions:</b> (1) point calibration's false-declaration rate grows with episodes (sampled dip, Δ₀ = 0.2: 0.26 at 24 → 0.88 at 96), so more data makes the wrong conclusion more confident; (2) the union bound is a "sampled-extremum" guarantee and fails on features between design points; (3) the GP simultaneous band is valid on every surface but has low power; the in-range configuration raises power about 1.6× at a coverage floor of 0.85; (4) the flatness gate adds nothing (16–20% false triggers on flat surfaces) and is dropped. The verdict ladder therefore becomes two rungs with explicit guarantee types: union bound (sampled-extremum, high power) and GP simultaneous band (in-strip, low power).</p></div>
+<p class="zh"><b>赛道 R（真实数据，无真值，2026-09-19）：</b>以独立复制间的判定稳定性评分（两个种子集；两个仿真栈），共 9 个策略对 × 48 集。点校准：稳定 0.44、宣布 0.39，宣布中过半在复制上不被支持；并集界（控制器条件）：稳定 0.89、宣布 0.06；并集界（全部不可见条件）：稳定 1.00、宣布 0。稳定性必须与宣布率一起读。文件 <code>results/benchmark/track_r/track_r_summary.md</code>。</p><p class="en"><b>Track R (real data, no ground truth, 2026-09-19):</b> methods scored by verdict stability across independent replicates (two seed sets; two simulation stacks), 9 policy pairs × 48 episodes. Point calibration: stable 0.44, declare 0.39, more than half of its declarations unsupported on the replicate; union bound over controller conditions: stable 0.89, declare 0.06; union over all invisible conditions: stable 1.00, declare 0. Stability must be read together with the declaration rate. File <code>results/benchmark/track_r/track_r_summary.md</code>.</p><p class="zh"><b>第三配置（长度尺度下限 = 采样间距）：</b>GP 功效再翻倍（平坦曲面宣布率 0.22 → 0.40），但凹陷曲面的覆盖率降到 0.45–0.83、误判 0.03–0.10，不采用。响应面法的功效增益只能靠更强的平滑先验换取，先验越强、对未采样特征越脆弱。</p><p class="en"><b>Third configuration (length-scale floor = design spacing):</b> GP power doubles again (flat-surface declaration 0.22 → 0.40) but coverage on dip surfaces falls to 0.45–0.83 with 0.03–0.10 false declarations; rejected. Power gains of response-surface methods are bought only with stronger smoothness priors, and the stronger the prior the more fragile it is to unsampled features.</p>
+
+
+<h3><span class="zh">5.7 跨平台复核：同一策略对在原版 SIMPLER 栈上的判定</span><span class="en">5.7 Cross-platform recheck: the same policy pair on the original SIMPLER stack</span> <span class="tag warn">eggplant, 48 eps, 1 seed set</span></h3>
+<p class="zh">修好 WSL 渲染后（SAPIEN 2 需要的 <code>VK_KHR_external_semaphore_fd</code> 由自写的显式 Vulkan 层伪装，CPU 光栅化），原版 ManiSkill2_real2sim + SAPIEN 2.2.2 上的策略扫描与 ManiSkill3 平台在同一 episode_id、同一策略种子、同 6 个条件下对比。</p>
+<p class="en">After fixing WSL rendering (the <code>VK_KHR_external_semaphore_fd</code> extension that SAPIEN 2 demands is faked by a small explicit Vulkan layer over the CPU rasteriser), the policy sweep on the original ManiSkill2_real2sim + SAPIEN 2.2.2 stack is compared with the ManiSkill3 platform on the same episode_ids, policy seeds and six conditions.</p>
+<table>
+<thead><tr><th><span class="zh">条件</span><span class="en">Condition</span></th><th><span class="zh">Δ 原版栈</span><span class="en">Δ original stack</span></th><th><span class="zh">Δ ManiSkill3</span><span class="en">Δ ManiSkill3</span></th><th><span class="zh">判定 原版 / ms3</span><span class="en">Verdict original / ms3</span></th></tr></thead>
+<tbody>
+<tr><td>nominal</td><td>+0.062 [−0.08, +0.21]</td><td>+0.229 [+0.06, +0.40]</td><td><span class="zh">拒判 / small 优</span><span class="en">abstain / small better</span></td></tr>
+<tr><td>iso ×0.25</td><td>+0.062 [−0.10, +0.23]</td><td>+0.062 [−0.10, +0.23]</td><td><span class="zh">拒判 / 拒判</span><span class="en">abstain / abstain</span></td></tr>
+<tr><td>iso ×4</td><td>+0.062 [−0.08, +0.21]</td><td>+0.208 [+0.02, +0.40]</td><td><span class="zh">拒判 / small 优</span><span class="en">abstain / small better</span></td></tr>
+<tr><td>force ×0.5</td><td>+0.125 [−0.04, +0.29]</td><td>+0.146 [−0.02, +0.31]</td><td><span class="zh">拒判 / 拒判</span><span class="en">abstain / abstain</span></td></tr>
+<tr><td>friction 0.2</td><td>+0.062 [−0.10, +0.23]</td><td>−0.021 [−0.21, +0.15]</td><td><span class="zh">拒判 / 拒判</span><span class="en">abstain / abstain</span></td></tr>
+<tr><td>density ×0.5</td><td>+0.104 [−0.08, +0.29]</td><td>+0.104 [−0.06, +0.27]</td><td><span class="zh">拒判 / 拒判</span><span class="en">abstain / abstain</span></td></tr>
+<tr><td colspan="4"><span class="zh">并集界：原版 [−0.10, +0.29] 拒判；ManiSkill3 [−0.21, +0.40] 拒判。逐集一致率 0.44–0.69（约等于偶然一致率）。</span><span class="en">Union bound: original [−0.10, +0.29] abstain; ManiSkill3 [−0.21, +0.40] abstain. Per-episode agreement 0.44–0.69 (about chance level).</span></td></tr>
+</tbody></table>
+<div class="note"><p class="zh"><b>读法：</b>条件级成功率跨栈一致到约 ±0.1，两栈都无符号翻转，集合型判定一致（拒判）；但点校准的结论不一致（ManiSkill3 判 small 优，原版栈拒判）。仿真平台本身是又一个校准不可见的隐藏变量，其对 Δ 的影响约 0.15，与种子集间差异同量级。这直接支持"点校准的可判定结论对未建模实现细节脆弱、集合型判定稳健"的主张。见 <code>results/controller_sweep_ms2/FINDING_cross_stack_eggplant.md</code>。</p><p class="en"><b>Reading:</b> condition-level success rates agree across stacks to about ±0.1, neither stack shows a sign flip, and the set-based verdicts agree (abstain); but the point-calibration verdicts disagree (ManiSkill3 declares small better, the original stack abstains). The simulation platform is one more calibration-invisible hidden variable, moving Δ by about 0.15, the same magnitude as between seed sets. This directly supports the claim that point-calibration verdicts are fragile to unmodelled implementation details while set-based verdicts are robust. See <code>results/controller_sweep_ms2/FINDING_cross_stack_eggplant.md</code>.</p></div>
+<p class="zh"><b>勺子任务（48 集）：</b>两栈的点校准都判 small 优（+0.21 vs +0.29），6 个条件中 4 个两栈同判；并集界两栈都拒判（原版 [0.00, +0.48]，等比 ×0.25 下界贴零）。逐集一致率 0.71–0.96。与茄子对照：跨栈差异只在 Δ 余量小的任务上改变结论，余量大时不改变，正是 |Δ̂| − δ − h 判据的含义。</p><p class="en"><b>Spoon (48 eps):</b> both stacks declare small better at nominal (+0.21 vs +0.29) and agree on 4 of 6 conditions; the union bound abstains on both (original [0.00, +0.48], iso ×0.25 lower bound at zero). Per-episode agreement 0.71–0.96. Against eggplant: the cross-stack difference changes the conclusion only where the Δ margin is small, exactly what the |Δ̂| − δ − h criterion says.</p><p class="zh"><b>胡萝卜（48 集）：</b>地板效应，两栈全部拒判。三任务总结：并集界在三个任务上跨栈一致；点校准只在余量最小的茄子上跨栈不一致。</p><p class="en"><b>Carrot (48 eps):</b> floor effect, both stacks abstain everywhere. Across the three tasks the union bound agrees between stacks on all three; point calibration disagrees only on eggplant, the task with the smallest margin.</p>
+
+<div class="note"><p class="zh"><b>第二种子集完成（2026-09-19 12:15，48 集 × 2）：</b>茄子近平局集合 6 对 × 6 条件 = 36 个单元中，两集各自区间支持且同号的为 <b>0</b>，反号 0，仅一集支持 9，两集都拒判 27。原始集的 4 个"可判定"单元在复现集全部退回拒判。种子集间 Δ 差异典型 0.15–0.3。结论：在 48 集、单种子集下"可判定"的出现率约 11%，复现率 0；论文报告标准必须是双种子集。见 <code>results/controller_sweep_gpu_rep/FINDING_seed_replication_48.md</code>。</p><p class="en"><b>Second seed set complete (2026-09-19 12:15, 48 eps × 2):</b> of the 36 pair × condition cells of the eggplant near-tied set, <b>0</b> are CI-supported with the same sign in both seed sets, 0 with opposite signs, 9 in one set only, 27 undecided in both. All 4 "decidable" cells of the original set fall back to abstain in the replication. Between-set Δ differences are typically 0.15–0.3. Conclusion: at 48 episodes with one seed set, "decidable" appears in about 11% of cells and replicates in none; the reporting standard must be two seed sets. See <code>results/controller_sweep_gpu_rep/FINDING_seed_replication_48.md</code>.</p></div>
+
+
+<h3><span class="zh">5.8 可判定性变化：力矩上限 × OpenVLA（构型普查口径）</span><span class="en">5.8 A decidability change: torque limit × OpenVLA (config-census framing)</span> <span class="tag ok">48/64 configs × 3 runs</span></h3>
+<div class="note"><p class="zh"><b>方法学更正（2026-09-19）：</b>本节原写作"两个独立种子集下复现"。这是错的：OpenVLA 推理确定性（<code>do_sample=False</code>，每集 seed 不参与推理），所谓 A/B/C 三个种子集是<b>同一配置的重复运行</b>（标称条件下 B 与 C 的 48 条记录逐条完全相同）。SIMPLER 任务的初始构型也是有限且会循环的：<code>episode_id % (n_xy·n_quat)</code>，ms3 茄子 64 个、ms2 茄子与勺子/胡萝卜各 24 个。因此对确定性策略，唯一的抽样轴是<b>构型</b>，跑完全部构型即得到精确成功率、抽样误差恰为零。效应与判定变化保留，复现论证改写为"构型普查 + 运行间数值稳定性"。</p><p class="en"><b>Methodological correction (2026-09-19):</b> this section previously claimed replication across two independent seed sets. That was wrong: OpenVLA inference is deterministic (<code>do_sample=False</code>; the per-episode seed is unused), so sets A/B/C are <b>re-runs of one configuration</b> (under nominal, all 48 records of B and C are identical). Initial configurations are also finite and cyclic: <code>episode_id % (n_xy·n_quat)</code> gives 64 configs for the ms3 eggplant task and 24 for ms2 eggplant, spoon and carrot. For a deterministic policy the only sampling axis is the configuration, and running the whole grid leaves exactly zero sampling error. The effect and the decision change stand; the replication argument is restated as census + run-to-run stability.</p></div>
+<p class="zh">第二模型家族 OpenVLA-7B（4-bit）在茄子任务上对力矩上限 ×0.5（校准协议精确不可见的方向）的响应，在 48/64 个构型上、三次独立重复运行中同号且各自区间支持：成功率 7/48 → 15/48、16/48、18/48，变化 +0.17 [+0.02, +0.31]、+0.19 [+0.04, +0.33]、+0.23 [+0.08, +0.38]；Octo 四个策略在同一条件下变化 ≤ 0.15 且跨零。运行间数值不确定性：同一构型重复运行的成功一致率 42–48/48。64 构型全普查正在补齐。</p>
+<p class="en">The second model family, OpenVLA-7B (4-bit), responds to torque limit ×0.5 (a direction exactly invisible to the calibration protocol) on the eggplant task with the same sign and CI support in each of three re-runs over 48 of the 64 configurations: 7/48 → 15/48, 16/48 and 18/48, changes +0.17 [+0.02, +0.31], +0.19 [+0.04, +0.33] and +0.23 [+0.08, +0.38]; the four Octo policies change by ≤ 0.15 with intervals covering zero. Run-to-run nondeterminism on identical configurations: success agreement 42–48/48. The full 64-configuration census is being completed.</p>
+<table>
+<thead><tr><th><span class="zh">对（Δ = Octo − OpenVLA）</span><span class="en">Pair (Δ = Octo − OpenVLA)</span></th><th><span class="zh">重复运行</span><span class="en">Re-run</span></th><th><span class="zh">标称</span><span class="en">nominal</span></th><th><span class="zh">力矩 ×0.5</span><span class="en">torque ×0.5</span></th><th><span class="zh">Δ 变化</span><span class="en">Δ change</span></th></tr></thead>
+<tbody>
+<tr><td>octo-small vs OpenVLA</td><td>run A</td><td>+0.38 [+0.19, +0.54] <span class="zh">可判定</span><span class="en">decided</span></td><td>+0.15 [−0.06, +0.35] <span class="zh">拒判</span><span class="en">abstain</span></td><td>−0.23 [−0.42, −0.04]</td></tr>
+<tr><td></td><td>run B</td><td>+0.35 [+0.17, +0.54] <span class="zh">可判定</span><span class="en">decided</span></td><td>+0.19 [−0.02, +0.40] <span class="zh">拒判</span><span class="en">abstain</span></td><td>−0.17 [−0.33, 0.00]</td></tr>
+<tr><td>octo-small@hist1 vs OpenVLA</td><td>run A</td><td>+0.23 [+0.06, +0.40] <span class="zh">可判定</span><span class="en">decided</span></td><td>+0.06 [−0.12, +0.25] <span class="zh">拒判</span><span class="en">abstain</span></td><td>−0.17 [−0.33, 0.00]</td></tr>
+<tr><td></td><td>run B</td><td>+0.38 [+0.19, +0.54] <span class="zh">可判定</span><span class="en">decided</span></td><td>+0.06 [−0.15, +0.27] <span class="zh">拒判</span><span class="en">abstain</span></td><td>−0.31 [−0.50, −0.15]</td></tr>
+</tbody></table>
+<div class="note"><p class="zh"><b>地位：</b>弱形式命题（校准不可见参数改变结论能否下）的第一个在两个独立种子集下成立的真实实例：判定层面两集一致（可判定 → 拒判）；Δ 变化在每对各有一集区间支持、另一集上界恰为 0，合并后支持。没有符号翻转（强形式仍不成立）。机制：OpenVLA 单步动作幅度更大，力矩饱和只对它起作用；校准数据对该参数零信息。限制：单任务、量化模型、ManiSkill3 平台。见 <code>results/controller_sweep_gpu_rep/FINDING_openvla_torque_replicated.md</code>。</p><p class="en"><b>Status:</b> the first real instance of the weak-form thesis (a calibration-invisible parameter changes whether a conclusion can be declared) that holds under two independent seed sets: at the verdict level both sets agree (decided → abstain); the Δ change is CI-supported in one set per pair with the other set's upper bound exactly at 0, and supported when pooled. No sign flip (the strong form still does not hold). Mechanism: OpenVLA's per-step actions are larger, so torque saturation matters only for it, while the calibration data carry zero information about the parameter. Limits: one task, a quantised model, the ManiSkill3 platform. See <code>results/controller_sweep_gpu_rep/FINDING_openvla_torque_replicated.md</code>.</p></div>
+
+<h2 id="retractions"><span class="zh">6. 已撤回的中期陈述与教训</span><span class="en">6. Retracted interim statements and lessons</span></h2>
+<div class="retract"><p class="zh"><b>「茄子标称 Octo-small 优于 Octo-base」（种子集 A，逐集自助 +0.250 [+0.08, +0.32]）</b>：在 64 构型全普查上用同一代服务器的三个种子集复核，Δ = +0.141 / −0.031 / −0.047，符号不一致，判定撤回。分解表明两个隐藏变量同时存在：**平台漂移**（同种子换一代推理服务器，octo-base +0.078、逐集一致率仅 73%）与**策略种子噪声**（同一代换种子，octo-base 基准值 0.375 / 0.516 / 0.500），后者更大。教训：对随机策略，「单个种子集 + 逐集自助」把「每构型只抽一个种子」当作总体，会系统性低估不确定性并给出站不住的判定——官方 SIMPLER 协议用 3 个种子正是为此。见 <code>results/controller_sweep_gpu_replayA/FINDING_platform_drift.md</code>。</p><p class="en"><b>"Octo-small beats Octo-base on nominal eggplant" (seed set A, episode bootstrap +0.250 [+0.08, +0.32])</b>: rechecked on the 64-configuration census with three seed sets from one server generation, Δ = +0.141 / −0.031 / −0.047 — the sign disagrees and the verdict is retracted. The decomposition shows two hidden variables at once: **platform drift** (same seeds, a newer inference server: octo-base +0.078, only 73% of episodes reproduce) and **policy-seed noise** (same generation, different seeds: octo-base 0.375 / 0.516 / 0.500), the latter larger. Lesson: for a stochastic policy, one seed set plus a per-episode bootstrap treats a single seed draw per configuration as the population and understates the uncertainty; the official SIMPLER protocol averages three seeds for exactly this reason.</p></div>
+<div class="retract"><p class="zh"><b>"力矩 × OpenVLA 已在两个独立种子集下复现"（2026-09-19 15:50）</b>：OpenVLA 确定性推理忽略 seed，A/B/C 是重复运行而非独立种子集（B 与 C 标称 48/48 逐条相同），该措辞撤回；效应本身改按构型普查与运行间稳定性陈述（见 5.8）。同一原因下，"茄子跨栈逐集一致率 ≈ 偶然 ⇒ 平台是 ~0.15 的隐藏变量"也撤回：两栈茄子构型网格不同（8×8 vs 8×3），同一 episode_id 不是同一场景；勺子与胡萝卜网格逐值相同，一致率 0.71–0.96，正是该诊断的对照。</p><p class="en"><b>"The torque × OpenVLA effect is replicated across two independent seed sets" (2026-09-19 15:50)</b>: OpenVLA is deterministic and ignores the seed, so A/B/C are re-runs, not seed sets (B and C are record-identical under nominal); the wording is retracted and the effect is restated as a config census plus run-to-run stability (§5.8). For the same reason, "per-episode cross-stack agreement ≈ chance on eggplant ⇒ the platform is a hidden variable worth ~0.15" is retracted: the two stacks use different eggplant configuration grids (8×8 vs 8×3), so an episode_id is not the same scene; spoon and carrot share grids exactly and agree 0.71–0.96, which is the control for this diagnosis.</p></div>
+<div class="retract"><p class="zh"><b>胡萝卜等比轴单调反转（24/48 集）</b>，以及"c = 0.5 下 base 优"：96 集下 Δ 在 −0.06 到 0.00，半宽 0.08，撤回。</p><p class="en"><b>Monotone reversal along the carrot iso-ratio axis (24/48 episodes)</b> and "base better at c = 0.5": at 96 episodes Δ lies in −0.06 to 0.00 with half-width 0.08; retracted.</p></div>
+<div class="retract"><p class="zh"><b>勺子力矩 ×0.5、刚度 ×2 / 阻尼 ×0.5 的可判定性翻转（24 集）</b>：48 集下消失，撤回。</p><p class="en"><b>Spoon decidability flips at torque ×0.5 and stiffness ×2 / damping ×0.5 (24 episodes)</b>: gone at 48 episodes; retracted.</p></div>
+<div class="retract"><p class="zh"><b>茄子摩擦 0.2 以区间支持方式改变可判定性（96 集）</b>：Δ(摩擦) − Δ(标称) = −0.156 [−0.29, −0.03] 在第二个种子集下为 +0.083 [−0.09, +0.26]，方向相反，降级为"未确认"。密度 ×0.5 的 −0.135 [−0.27, 0.00] 同样待复现。</p><p class="en"><b>Eggplant friction 0.2 changing decidability with interval support (96 episodes)</b>: Δ(friction) − Δ(nominal) = −0.156 [−0.29, −0.03] became +0.083 [−0.09, +0.26] under the second seed set, opposite direction; downgraded to "unconfirmed". The density ×0.5 result −0.135 [−0.27, 0.00] likewise awaits replication.</p></div>
+<figure><img src="{{FIG:fig_eggplant_contact}}" alt="eggplant contact"><figcaption><span class="zh">图 4. 茄子任务接触参数下的 96 集成功率（原始种子集）。此图对应的"可判定性翻转"陈述已因未复现而撤回，保留以说明单种子集证据的不可靠性。</span><span class="en">Fig. 4. Eggplant success rates under contact parameters, 96 episodes (original seed set). The "decidability flip" reading of this figure was retracted after failed replication; kept to illustrate the unreliability of single-seed-set evidence.</span></figcaption></figure>
+<ul>
+<li class="zh"><b>教训 1：</b>预注册的"区间支持才称翻转"规则阻止了三次错误主张；点估计符号变化在低成功率任务上是常态。</li><li class="en"><b>Lesson 1:</b> the pre-registered "interval support or it is not a flip" rule prevented three false claims; point-estimate sign changes are routine on low-success tasks.</li>
+<li class="zh"><b>教训 2：</b>推理服务器的 GPU 数值非确定性等价于一个隐藏的随机源；确定性开关与多种子集缺一不可。</li><li class="en"><b>Lesson 2:</b> GPU numerical nondeterminism in the inference server is a hidden random source; deterministic flags and multiple seed sets are both required.</li>
+<li class="zh"><b>教训 3：</b>并集界与响应面界各有系统性偏向；报告三列（点 / 并集 / 同时带 + 门控）比选一列更诚实。</li><li class="en"><b>Lesson 3:</b> union and response-surface bounds are biased in opposite directions; reporting three columns (point / union / simultaneous band + gate) is more honest than choosing one.</li>
+<li class="zh"><b>教训 5：</b>推理服务器若无会话隔离，两个客户端共用一台会互相污染观测历史与指令（2026-09-19 事故，约 80 分钟数据隔离重跑）。规则：服务器按会话 id 保存状态；诊断请求不打在队列使用中的端口。</li><li class="en"><b>Lesson 5:</b> an inference server without per-session state lets two clients corrupt each other's observation history and instruction (incident of 2026-09-19, about 80 minutes of data quarantined and re-run). Rule: servers keep state per session id; diagnostic requests never target a port a queue is using.</li>
+<li class="zh"><b>教训 4：</b>工程事故也要记录：并发写同一结果文件造成的重复记录、调度器解析外部命令行崩溃，均已记录并给出处理规则（见 <code>NOTE_duplicate_records.md</code>）。</li><li class="en"><b>Lesson 4:</b> engineering incidents are recorded too: duplicate records from two writers on one result file and a scheduler crash from parsing a foreign command line, each with its handling rule (see <code>NOTE_duplicate_records.md</code>).</li>
+</ul>
+
+<h2 id="reproduce"><span class="zh">7. 复现步骤</span><span class="en">7. Reproduction</span></h2>
+<p class="zh">以下命令在 Windows 主机的项目根目录 <code>E:\research\the_world</code> 运行（PowerShell 或 Git Bash）。硬件：i9-14900HX、RTX 5060 Laptop 8 GB。三个 Python 环境：<code>.venv-windows-ms3</code>（ManiSkill3 仿真与分析）、WSL2 <code>~/venvs/octo-gpu2</code>（Octo GPU 推理）、<code>.venv-openvla</code>（OpenVLA，torch 2.7.1+cu128）。</p>
+<p class="en">Commands run from the project root <code>E:\research\the_world</code> on the Windows host (PowerShell or Git Bash). Hardware: i9-14900HX, RTX 5060 Laptop 8 GB. Three Python environments: <code>.venv-windows-ms3</code> (ManiSkill3 simulation and analysis), WSL2 <code>~/venvs/octo-gpu2</code> (Octo GPU inference), <code>.venv-openvla</code> (OpenVLA, torch 2.7.1+cu128).</p>
+
+<h3><span class="zh">7.1 环境</span><span class="en">7.1 Environments</span></h3>
+<pre><code># Windows simulation stack (Python 3.11)
+uv venv .venv-windows-ms3 --python 3.11
+uv pip install --python .venv-windows-ms3\Scripts\python.exe mani_skill==3.0.1 sapien==3.0.3 torch transforms3d numpy&lt;2 pillow
+#   scripts/ms3_windows_compat.py is imported by the sweep/replay scripts (torch Jacobian IK adapter)
+#   scene assets: data/maniskill-assets  (set MS_ASSET_DIR=E:\research\the_world\data\maniskill-assets)
+
+# WSL2 Octo GPU stack (Blackwell needs jax &gt;= 0.5)
+python3.11 -m venv ~/venvs/octo-gpu2 &amp;&amp; source ~/venvs/octo-gpu2/bin/activate
+pip install "jax[cuda12]==0.5.3" flax==0.10.4 orbax-checkpoint==0.11.* tensorflow-cpu==2.18.* distrax transforms3d
+pip install -e /mnt/e/research/the_world/third_party/octo   # 2 patches: KeyArray -&gt; jax.Array; lazy distrax import
+#   weights cached offline under E:\models\hf (HF_HOME=/mnt/e/models/hf, HF_HUB_OFFLINE=1)
+
+# OpenVLA stack (Windows)
+scripts\setup_openvla_env.cmd         # torch 2.7.1+cu128, torchvision 0.22.1+cu128, transformers 4.40.1, bitsandbytes 0.50.2, timm 0.9.10
+python scripts\download_openvla.py    # openvla/openvla-7b -&gt; E:\models\hf (15 GB)</code></pre>
+
+<h3><span class="zh">7.2 启动策略服务器</span><span class="en">7.2 Start the policy servers</span></h3>
+<pre><code># from WSL (one process per model/port; two per model were used: small 8767/8769, base 8768/8770)
+bash /mnt/e/research/the_world/scripts/run_wsl_server.sh octo-small 8767
+bash /mnt/e/research/the_world/scripts/run_wsl_server.sh octo-base  8768
+#   the script sets JAX_PLATFORMS=cuda, XLA_PYTHON_CLIENT_MEM_FRACTION=0.35, offline HF cache and
+#   XLA_FLAGS="--xla_gpu_deterministic_ops=true --xla_gpu_autotune_level=0"
+curl http://127.0.0.1:8767/health      # {"model": "octo-small", "variants": [...]}
+
+# OpenVLA (after freeing ~4.5 GB VRAM)
+.venv-openvla\Scripts\python.exe scripts\openvla_policy_server.py --port 8771 --quant 4bit</code></pre>
+<p class="zh">HTTP 协议：<code>POST /reset</code> {instruction, seed, config} 其中 config 可含 <code>ensemble</code> / <code>exec_horizon</code> / <code>history</code>；<code>POST /step</code> {image} → {action[7], raw_action, inference_seconds}。</p>
+<p class="en">HTTP protocol: <code>POST /reset</code> {instruction, seed, config} where config may hold <code>ensemble</code> / <code>exec_horizon</code> / <code>history</code>; <code>POST /step</code> {image} → {action[7], raw_action, inference_seconds}.</p>
+
+<h3><span class="zh">7.3 控制器扫描</span><span class="en">7.3 Controller sweep</span></h3>
+<pre><code>set MS_ASSET_DIR=E:\research\the_world\data\maniskill-assets
+.venv-windows-ms3\Scripts\python.exe scripts\controller_sweep.py ^
+  --policy-name octo-small --policy-url http://127.0.0.1:8767 ^
+  --env-id PutEggplantInBasketScene-v1 --preset sweep_v1 ^
+  --episodes 48 --episode-offset 0 --policy-seed-base 20260918 ^
+  --output-dir results\controller_sweep_gpu
+# presets: sweep_v1 | iso_ratio_v1 | wide_v1 | contact_v1 | variants_v1 | quick3
+# --conditions nominal,iso_x0.25   restricts to listed conditions (resume-safe: existing episode_ids are skipped)
+# deployment variants: --policy-name octo-small@hist1  (also @noens, @chunk4); the server must advertise "variants"
+# second seed set: --policy-seed-base 20270101 --output-dir results\controller_sweep_gpu_rep
+# output: results/&lt;root&gt;/&lt;policy&gt;/&lt;env&gt;/&lt;condition&gt;.jsonl, one record per episode
+#   {policy, env_id, condition, episode_id, policy_seed, instruction, steps, success, info, gripper_close_events, ...}</code></pre>
+<p class="zh">队列脚本（<code>scripts/queue_v2.py</code> 及其衍生）只是把上面的命令按空闲服务器端口分发；它们检测其他调度器占用的端口，跳过已完整的作业，并且同一 (策略, 任务, 条件) 不会被两个进程同时写。</p>
+<p class="en">The queue scripts (<code>scripts/queue_v2.py</code> and derivatives) merely dispatch the command above to idle server ports; they respect ports taken by other schedulers, skip already-complete jobs, and never let two processes write the same (policy, task, condition).</p>
+
+<h3><span class="zh">7.4 校准回放（B-1）</span><span class="en">7.4 Calibration replay (B-1)</span></h3>
+<pre><code># 1) fetch demos by HTTP range requests (CRC32C checked); 30 records per shard, HTTP 416 = end of shard
+.venv-windows-ms3\Scripts\python.exe scripts\read_bridge_batch.py --shard 0 --n 30 --out data\bridge_sysid
+.venv-windows-ms3\Scripts\python.exe scripts\read_bridge_batch.py --shard 1 --n 30 --out data\bridge_sysid --name-offset 30
+#    ... shards 2 and 3 with --name-offset 60 / 90  (98 demos in total)
+
+# 2) replay each controller condition, then the 5x5x2 grid
+.venv-windows-ms3\Scripts\python.exe scripts\replay_bridge_sysid.py --episodes-dir data\bridge_sysid --episodes 100 --preset sweep_v1 --output-dir results\replay_sysid_100
+.venv-windows-ms3\Scripts\python.exe scripts\replay_bridge_sysid.py --episodes-dir data\bridge_sysid --episodes 100 --grid --output-dir results\replay_sysid_100
+
+# 3) iso-ratio invariance check (tolerance 1 mm)
+.venv-windows-ms3\Scripts\python.exe scripts\check_iso_invariance.py --dir results\replay_sysid_100\grid --tol-m 1e-3</code></pre>
+
+<h3><span class="zh">7.5 分析与图件</span><span class="en">7.5 Analyses and figures</span></h3>
+<pre><code>PY=.venv-windows-ms3\Scripts\python.exe
+%PY% scripts\analyze_controller_sweep.py        # per-condition rates, Wilson CIs, paired Δ           -&gt; analysis_*.md
+%PY% scripts\analyze_equiv_pairs.py --root results\controller_sweep_gpu   # calibration-equivalent pairs
+%PY% scripts\analyze_compatible_set.py --alpha 0.05                      # compatible set + union-bound verdicts
+%PY% scripts\analyze_response_surface_v2.py                              # GP simultaneous band + flatness gate
+%PY% scripts\analyze_variant_pairs.py --n 96 --dedupe first --out results\controller_sweep_gpu\analysis_variant_pairs_eggplant96.md
+%PY% scripts\analyze_seed_replication_pairs.py --n 48                    # two-seed-set comparison (after the rep queue)
+%PY% scripts\make_figures.py                                             # results\figures\*.png
+%PY% scripts\build_research_site.py                                      # this page</code></pre>
+
+<h3><span class="zh">7.6 预期运行时间（本机）</span><span class="en">7.6 Expected runtimes (this machine)</span></h3>
+<table>
+<thead><tr><th><span class="zh">项目</span><span class="en">Item</span></th><th class="num"><span class="zh">时间</span><span class="en">Time</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">Octo-small GPU 推理，每步</span><span class="en">Octo-small GPU inference per step</span></td><td class="num">≈ 0.06–0.11 s</td></tr>
+<tr><td><span class="zh">Octo-base GPU 推理，每步</span><span class="en">Octo-base GPU inference per step</span></td><td class="num">≈ 0.08 s</td></tr>
+<tr><td><span class="zh">一集 60 步（含 CPU 物理约 1.2 s）</span><span class="en">One 60-step episode (incl. ≈ 1.2 s CPU physics)</span></td><td class="num">≈ 6–8 s (single job)</td></tr>
+<tr><td><span class="zh">四路并行时每作业每集（茄子 120 步）</span><span class="en">Per job per episode with 4 parallel jobs (eggplant, 120 steps)</span></td><td class="num">≈ 34 s</td></tr>
+<tr><td><span class="zh">98 条示范 × 50 条件网格回放（CPU）</span><span class="en">98 demos × 50-condition grid replay (CPU)</span></td><td class="num">≈ 2 h</td></tr>
+<tr><td><span class="zh">在 Linux SIMPLER main 上复核不可辨识性</span><span class="en">Identifiability recheck on Linux SIMPLER main</span></td><td class="num"><span class="zh">仅 CPU，无需租 GPU</span><span class="en">CPU only, no GPU rental</span></td></tr>
+<tr><td><span class="zh">原版栈上的策略扫描（估计）</span><span class="en">Policy sweep on the original stack (estimate)</span></td><td class="num">≈ 10 h (5060-class) / 4–6 h (A100)</td></tr>
+</tbody></table>
+
+<h2 id="status"><span class="zh">8. 当前进展与计划</span><span class="en">8. Progress and plan</span></h2>
+<p class="zh"><b>本节反映 2026-09-20 06:00 的真实状态。</b>2026-09-19 夜间完成了一次方法学整改（见 §4.4 与撤回节），此后所有新数据均按构型普查口径、在同一代推理服务器上采集。</p>
+<p class="en"><b>This section reflects the state at 2026-09-20 06:00.</b> A methodological overhaul on 2026-09-19 (see &sect;4.4 and the retractions) means all data collected since is a configuration census taken on a single inference-server build.</p>
+
+<h3><span class="zh">8.1 已完成</span><span class="en">8.1 Completed</span></h3>
+<table>
+<thead><tr><th><span class="zh">项目</span><span class="en">Item</span></th><th><span class="zh">规模</span><span class="en">Scale</span></th><th><span class="zh">产出</span><span class="en">Output</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">茄子 ms3 全普查</span><span class="en">Eggplant (ms3) census</span></td><td><span class="zh">64 构型 &times; 6 条件 &times; 5 策略；Octo 三个种子集</span><span class="en">64 configs &times; 6 conditions &times; 5 policies; three Octo seed sets</span></td><td><code>CORE_TABLE.md</code></td></tr>
+<tr><td><span class="zh">胡萝卜 ms3 全普查</span><span class="en">Carrot (ms3) census</span></td><td><span class="zh">24 构型 &times; 6 条件（OpenVLA）</span><span class="en">24 configs &times; 6 conditions (OpenVLA)</span></td><td><code>controller_sweep_gpu/</code></td></tr>
+<tr><td><span class="zh">茄子 ms2 全普查</span><span class="en">Eggplant (ms2) census</span></td><td><span class="zh">24 构型 &times; 2 条件（OpenVLA）</span><span class="en">24 configs &times; 2 conditions (OpenVLA)</span></td><td><code>controller_sweep_ms2/</code></td></tr>
+<tr><td><span class="zh">平台漂移分离实验</span><span class="en">Platform-drift experiment</span></td><td><span class="zh">A 的种子在当代服务器重跑 64 构型</span><span class="en">A's seeds re-run on today's build, 64 configs</span></td><td><code>FINDING_platform_drift.md</code></td></tr>
+<tr><td><span class="zh">论文素材</span><span class="en">Manuscript material</span></td><td><span class="zh">Q2 口径结构与贡献清单；第 4、5 节英文初稿；图 2 与图 4</span><span class="en">Q2 outline and contribution list; English draft of &sect;4&ndash;5; Figures 2 and 4</span></td><td><code>docs/paper_outline_Q2_2026-09-20.md</code>、<code>docs/paper_draft_s4_s5.md</code></td></tr>
+</tbody></table>
+
+<div class="note"><p class="zh"><b>核心表当前形态（茄子 64 构型全普查，Octo 三次运行 / OpenVLA 两次）：</b>13 个策略对中，点校准与并集界<b>不一致 4 个</b>。跨家族对里，余量大的两对（octo-small、octo-base 对 OpenVLA，&Delta; = +0.32 / +0.29）两种口径都判定成立；余量小的两对（两个 <code>@hist1</code> 变体，&Delta; = +0.25 / +0.20）点校准判定、并集界拒判。Octo 家族内部同样的模式出现在 <code>octo-small vs octo-base@hist1</code>（+0.117）与 <code>octo-base vs octo-base@hist1</code>（+0.083）。<b>判据的含义正是 |&Delta;&#770;| 与 &delta; + h 的比较</b>：余量能否扛过参数位移加评测半宽。</p>
+<p class="en"><b>Core table as it stands (eggplant, 64-configuration census, three Octo runs / two OpenVLA runs):</b> of 13 policy pairs, point calibration and the union bound <b>disagree on 4</b>. Among cross-family pairs the two with a large margin (octo-small and octo-base against OpenVLA, &Delta; = +0.32 / +0.29) are declared under both; the two with a small margin (the <code>@hist1</code> variants, &Delta; = +0.25 / +0.20) are declared by point calibration and abstained on by the union bound. The same pattern appears inside the Octo family.</p></div>
+
+<h3><span class="zh">8.2 在跑</span><span class="en">8.2 Running</span></h3>
+<table>
+<thead><tr><th><span class="zh">队列</span><span class="en">Queue</span></th><th><span class="zh">内容</span><span class="en">Content</span></th><th><span class="zh">预计</span><span class="en">ETA</span></th></tr></thead>
+<tbody>
+<tr><td><code>queue_octo_union_conds</code></td><td><span class="zh">并集界四条件在当代服务器重采：2 策略 &times; 4 条件 &times; 64 构型 &times; 2 种子 = 1024 集。此前并集界依赖修复前的数据。</span><span class="en">The four invisible conditions re-collected on the current build: 2 policies &times; 4 conditions &times; 64 configs &times; 2 seeds = 1024 episodes; the union bound previously rested on pre-fix data.</span></td><td>~09:00</td></tr>
+<tr><td><code>queue_ms2_official_protocol</code></td><td><span class="zh">官方协议复现：4 任务 &times; 2 策略 &times; 3 个固定种子 &times; 24 构型 = 576 集，逐格对表 <code>metrics.py</code> 公布值。</span><span class="en">Official-protocol reproduction: 4 tasks &times; 2 policies &times; 3 fixed seeds &times; 24 configs = 576 episodes, compared cell by cell with the published table.</span></td><td>~10:30</td></tr>
+<tr><td><code>queue_refresh_analyses</code></td><td><span class="zh">每个阶段标记后自动重算分析并快照到 <code>results/analysis_refresh/</code>。</span><span class="en">Re-runs the affected analyses after each stage marker and snapshots them.</span></td><td><span class="zh">随阶段</span><span class="en">per stage</span></td></tr>
+</tbody></table>
+<p class="zh">队列串行执行：实测并发会把 OpenVLA 每集推理从 36&ndash;41 s 拖到 204&ndash;427 s（5&ndash;10 倍），而 CPU 占用仅 4%，瓶颈在显存带宽（8 GB 卡已占用 7.5 GB）。</p>
+<p class="en">The queues run serially: measured concurrency costs OpenVLA 5&ndash;10&times; per-episode inference (36&ndash;41 s alone vs 204&ndash;427 s under contention) at 4% CPU, so the bottleneck is GPU memory bandwidth (7.5 of 8 GB in use).</p>
+
+<h3><span class="zh">8.3 待办</span><span class="en">8.3 To do</span></h3>
+<table>
+<thead><tr><th><span class="zh">任务</span><span class="en">Task</span></th><th><span class="zh">为什么</span><span class="en">Why</span></th><th><span class="zh">成本</span><span class="en">Cost</span></th></tr></thead>
+<tbody>
+<tr><td><span class="zh">ms3 勺子 / 胡萝卜的 Octo 数据在当代服务器补齐</span><span class="en">Re-collect ms3 spoon / carrot Octo data on the current build</span></td><td><span class="zh">消掉来源审计中的中风险项：这两项 Octo 数据仍来自修复前的服务器</span><span class="en">Clears the medium-risk rows of the provenance audit</span></td><td>~2.5 h</td></tr>
+<tr><td><span class="zh">OpenVLA bf16 对照</span><span class="en">OpenVLA bf16 control</span></td><td><span class="zh">现用 4-bit 量化版，与公布模型不同，需对照或在设定中写明</span><span class="en">The 4-bit quantisation departs from the released model</span></td><td>~2 h</td></tr>
+<tr><td><span class="zh">OpenVLA 在 Bridge 上的地板效应核查</span><span class="en">Check OpenVLA's floor effect on Bridge</span></td><td><span class="zh">勺子 0/24、胡萝卜 1/24（两栈皆然），茄子是其唯一有信号的任务；须确认是模型本身弱还是集成问题</span><span class="en">Spoon 0/24 and carrot 1/24 on both stacks; eggplant is its only task with signal</span></td><td>~1 h</td></tr>
+<tr><td><span class="zh">论文正文第 3、6&ndash;10 节</span><span class="en">Manuscript &sect;3, &sect;6&ndash;10</span></td><td><span class="zh">第 4、5 节已成稿；其余待核心表与官方对表数据齐</span><span class="en">&sect;4&ndash;5 drafted; the rest needs the finished tables</span></td><td>&mdash;</td></tr>
+<tr><td><span class="zh">真机或第三方代评</span><span class="en">Real-robot or third-party evaluation</span></td><td><span class="zh">当前为公开 limitation；AutoEval 端点离线、RoboArena 额度未确认</span><span class="en">Currently an explicit limitation</span></td><td><span class="zh">外部依赖</span><span class="en">external</span></td></tr>
+</tbody></table>
+
+<div class="note"><p class="zh"><b>论文定位（2026-09-20 决定）：</b>按 <b>Q2 评测方法学论文</b>撰写，首投 Autonomous Robots，备选 RAS / JIRS。第一贡献是方法学（结构性不可辨识、有限构型总体、被估量与隐藏变量分解），"校准不可见参数改变可判定性"作为主证据链，真机验证作为公开 limitation。强形式（排序符号在相容集合内翻转）在本研究全部条件下不成立，作为负面结果显式写出。详见 <code>docs/paper_outline_Q2_2026-09-20.md</code>。</p>
+<p class="en"><b>Positioning (decided 2026-09-20):</b> written as an <b>evaluation-methodology paper</b> for a Q2 venue (Autonomous Robots first, RAS / JIRS as fallbacks). The methodology is the lead contribution; the decision-relevant non-identifiability instance is the main evidence chain; real-robot validation is an explicit limitation. The strong form &mdash; a sign flip of the ranking inside the compatible set &mdash; does not hold anywhere in our data and is reported as a negative result.</p></div>
+
+<h2 id="files"><span class="zh">9. 文件索引</span><span class="en">9. File index</span></h2>
+<div class="grid">
+<div class="card"><h4><span class="zh">方案与理论</span><span class="en">Proposal and theory</span></h4><ul class="files">
+<li><code>sim2real_proposal_audit_2026-09-18.md</code> <span class="zh">审计</span><span class="en">audit</span></li>
+<li><code>sim2real_research_proposal_v3_2026-09-18.md</code> <span class="zh">方案 v3（执行基线）</span><span class="en">proposal v3 (execution baseline)</span></li>
+<li><code>docs/theory_protocol.md</code> <span class="zh">数学协议</span><span class="en">mathematical protocol</span></li>
+<li><code>docs/execution_status_2026-09-18_v2.md</code> <span class="zh">执行记录</span><span class="en">execution log</span></li>
+<li><code>pilot/</code> <span class="zh">合成机制原型</span><span class="en">synthetic pilot</span></li>
+</ul></div>
+<div class="card"><h4><span class="zh">脚本</span><span class="en">Scripts</span></h4><ul class="files">
+<li><code>scripts/octo_policy_server.py</code>, <code>run_wsl_server.sh</code>, <code>openvla_policy_server.py</code></li>
+<li><code>scripts/controller_sweep.py</code>, <code>ms3_windows_compat.py</code></li>
+<li><code>scripts/read_bridge_batch.py</code>, <code>replay_bridge_sysid.py</code>, <code>check_iso_invariance.py</code></li>
+<li><code>scripts/analyze_*.py</code>, <code>make_figures.py</code></li>
+<li><code>scripts/queue_*.py</code> <span class="zh">调度</span><span class="en">schedulers</span></li>
+</ul></div>
+<div class="card"><h4><span class="zh">结果</span><span class="en">Results</span></h4><ul class="files">
+<li><code>results/controller_sweep/PROTOCOL.md</code>, <code>gpu_timing_2026-09-18.md</code></li>
+<li><code>results/controller_sweep_gpu/SUMMARY_24.md</code>, <code>SUMMARY_48.md</code></li>
+<li><code>results/controller_sweep_gpu/FINDING_compatible_set.md</code>, <code>FINDING_eggplant_friction.md</code> <span class="zh">（含撤回）</span><span class="en">(incl. retraction)</span>, <code>FINDING_iso_scale_carrot.md</code> <span class="zh">（已撤回）</span><span class="en">(retracted)</span></li>
+<li><code>results/controller_sweep_gpu/analysis_*.md</code>, <code>NOTE_duplicate_records.md</code></li>
+<li><code>results/replay_sysid_100/{sweep_v1,grid}/</code>, <code>results/replay_sysid_smoke/FINDING_iso_ratio.md</code></li>
+<li><code>results/controller_sweep_gpu_rep/</code>, <code>results/controller_sweep_gpu_det/</code></li>
+<li><code>results/figures/*.png</code></li>
+</ul></div>
+</div>
+
+<footer>
+<p class="zh">本页由 <code>scripts/build_research_site.py</code> 从模板生成，图件以 base64 内嵌；无外部脚本、样式或字体。状态与数字以对应结果文件为准，页面不会自动更新。</p>
+<p class="en">Generated by <code>scripts/build_research_site.py</code> from a template; figures are embedded as base64; no external scripts, styles or fonts. Numbers are those of the referenced result files at build time; the page does not auto-update.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l); root.setAttribute('lang', l==='zh'?'zh':'en');
+    document.querySelectorAll('.toggle button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.set===l?'true':'false');});
+    try{localStorage.setItem('rr_lang',l);}catch(e){}
+  }
+  document.querySelectorAll('.toggle button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
+  var saved=null; try{saved=localStorage.getItem('rr_lang');}catch(e){}
+  if(saved==='zh'||saved==='en'){setLang(saved);}
+  else if((navigator.language||'').toLowerCase().indexOf('zh')!==0){setLang('en');}
+})();
+</script>
+</body>
+</html>

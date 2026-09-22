@@ -1,0 +1,368 @@
+{
+  "meta": {
+    "started_utc": "2026-09-19T09:55:57Z",
+    "args": {
+      "episodes_dir": "data/bridge_sysid",
+      "episodes": 3,
+      "preset": "sweep_v1",
+      "conditions": null,
+      "grid": false,
+      "output_dir": "results/replay_sysid_ms2_smoke",
+      "max_steps": null,
+      "verbose": true
+    },
+    "compat": {
+      "renderer": "stubbed_no_render",
+      "lighting_patched_classes": 10,
+      "physics": "sapien2_cpu_original",
+      "ik": "original_controller_compute_ik"
+    },
+    "env_id": "PutCarrotOnPlateInScene-v0",
+    "robot": "widowx",
+    "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+    "sim_freq": 500,
+    "control_freq": 5,
+    "nominal": {
+      "stiffness": [
+        1169.7891719504198,
+        730.0,
+        808.4601346394447,
+        1229.1299089624076,
+        1272.2760456418862,
+        1056.3326605132252
+      ],
+      "damping": [
+        330.0,
+        180.0,
+        152.12036565582588,
+        309.6215302722146,
+        201.04998711007383,
+        269.51458932695414
+      ],
+      "force_limit": [
+        200.0,
+        200.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    },
+    "conditions": {
+      "nominal": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 0
+      },
+      "stiff_x0.5": {
+        "stiffness_scale": 0.5,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 0
+      },
+      "stiff_x2.0": {
+        "stiffness_scale": 2.0,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 0
+      },
+      "damp_x0.5": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 0.5,
+        "force_scale": 1.0,
+        "delay_steps": 0
+      },
+      "damp_x2.0": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 2.0,
+        "force_scale": 1.0,
+        "delay_steps": 0
+      },
+      "force_x0.5": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 1.0,
+        "force_scale": 0.5,
+        "delay_steps": 0
+      },
+      "delay_1": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 1
+      }
+    },
+    "n_demos": 3,
+    "demo_ids": [
+      0,
+      1,
+      2
+    ],
+    "pose_convention": "p=state[:3]; R=euler2mat(rpy,'sxyz') @ [[0,0,1],[0,1,0],[-1,0,0]]",
+    "action_convention": "world_vector; euler2axangle(rpy,'sxyz'); gripper 0 (as in SIMPLER tools/sysid/sysid.py)",
+    "evidence": "original_simpler_main_ms2_sapien2_cpu_headless_wsl",
+    "simpler_main_commit": "06accaca93535902d408da4855f21cece12bceb7",
+    "sapien": null
+  },
+  "conditions": {
+    "nominal": {
+      "effective": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 0,
+        "drive_stiffness": [
+          1169.7891845703125,
+          730.0,
+          808.4601440429688,
+          1229.1298828125,
+          1272.2760009765625,
+          1056.3326416015625
+        ],
+        "drive_damping": [
+          330.0,
+          180.0,
+          152.120361328125,
+          309.62152099609375,
+          201.04998779296875,
+          269.51458740234375
+        ],
+        "drive_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.06934893922669937,
+      "mean_transl_err": 0.014852595573356256,
+      "mean_rot_err": 0.05449634365334311,
+      "init_ok_frac": 1.0
+    },
+    "stiff_x0.5": {
+      "effective": {
+        "stiffness_scale": 0.5,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 0,
+        "drive_stiffness": [
+          584.8945922851562,
+          365.0,
+          404.2300720214844,
+          614.56494140625,
+          636.1380004882812,
+          528.1663208007812
+        ],
+        "drive_damping": [
+          330.0,
+          180.0,
+          152.120361328125,
+          309.62152099609375,
+          201.04998779296875,
+          269.51458740234375
+        ],
+        "drive_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.07734285118543698,
+      "mean_transl_err": 0.023659282769407656,
+      "mean_rot_err": 0.05368356841602931,
+      "init_ok_frac": 1.0
+    },
+    "stiff_x2.0": {
+      "effective": {
+        "stiffness_scale": 2.0,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 0,
+        "drive_stiffness": [
+          2339.578369140625,
+          1460.0,
+          1616.9202880859375,
+          2458.259765625,
+          2544.552001953125,
+          2112.665283203125
+        ],
+        "drive_damping": [
+          330.0,
+          180.0,
+          152.120361328125,
+          309.62152099609375,
+          201.04998779296875,
+          269.51458740234375
+        ],
+        "drive_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.07955016175345193,
+      "mean_transl_err": 0.02037775620915615,
+      "mean_rot_err": 0.05917240554429578,
+      "init_ok_frac": 1.0
+    },
+    "damp_x0.5": {
+      "effective": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 0.5,
+        "force_scale": 1.0,
+        "delay_steps": 0,
+        "drive_stiffness": [
+          1169.7891845703125,
+          730.0,
+          808.4601440429688,
+          1229.1298828125,
+          1272.2760009765625,
+          1056.3326416015625
+        ],
+        "drive_damping": [
+          165.0,
+          90.0,
+          76.0601806640625,
+          154.81076049804688,
+          100.52499389648438,
+          134.75729370117188
+        ],
+        "drive_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.07956262050135082,
+      "mean_transl_err": 0.020386480835044043,
+      "mean_rot_err": 0.059176139666306755,
+      "init_ok_frac": 1.0
+    },
+    "damp_x2.0": {
+      "effective": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 2.0,
+        "force_scale": 1.0,
+        "delay_steps": 0,
+        "drive_stiffness": [
+          1169.7891845703125,
+          730.0,
+          808.4601440429688,
+          1229.1298828125,
+          1272.2760009765625,
+          1056.3326416015625
+        ],
+        "drive_damping": [
+          660.0,
+          360.0,
+          304.24072265625,
+          619.2430419921875,
+          402.0999755859375,
+          539.0291748046875
+        ],
+        "drive_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.07734514567778628,
+      "mean_transl_err": 0.023661108304843245,
+      "mean_rot_err": 0.05368403737294303,
+      "init_ok_frac": 1.0
+    },
+    "force_x0.5": {
+      "effective": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 1.0,
+        "force_scale": 0.5,
+        "delay_steps": 0,
+        "drive_stiffness": [
+          1169.7891845703125,
+          730.0,
+          808.4601440429688,
+          1229.1298828125,
+          1272.2760009765625,
+          1056.3326416015625
+        ],
+        "drive_damping": [
+          330.0,
+          180.0,
+          152.120361328125,
+          309.62152099609375,
+          201.04998779296875,
+          269.51458740234375
+        ],
+        "drive_force_limit": [
+          100.0,
+          100.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.06934893922669937,
+      "mean_transl_err": 0.014852595573356256,
+      "mean_rot_err": 0.05449634365334311,
+      "init_ok_frac": 1.0
+    },
+    "delay_1": {
+      "effective": {
+        "stiffness_scale": 1.0,
+        "damping_scale": 1.0,
+        "force_scale": 1.0,
+        "delay_steps": 1,
+        "drive_stiffness": [
+          1169.7891845703125,
+          730.0,
+          808.4601440429688,
+          1229.1298828125,
+          1272.2760009765625,
+          1056.3326416015625
+        ],
+        "drive_damping": [
+          330.0,
+          180.0,
+          152.120361328125,
+          309.62152099609375,
+          201.04998779296875,
+          269.51458740234375
+        ],
+        "drive_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "n": 3,
+      "mean_total_err": 0.07295895295855141,
+      "mean_transl_err": 0.017799702973131992,
+      "mean_rot_err": 0.055159249985419434,
+      "init_ok_frac": 1.0
+    }
+  }
+}

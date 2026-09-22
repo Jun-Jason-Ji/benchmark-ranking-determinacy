@@ -1,0 +1,67 @@
+run_replay_ms2 start 2026-09-19T09:57:11Z
+[nominal] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[stiff_x0.5] n=98 mean_total_err=0.05823 transl=0.02499 rot=0.03324 init_ok=1.00
+[stiff_x2.0] n=98 mean_total_err=0.05353 transl=0.02293 rot=0.03060 init_ok=1.00
+[damp_x0.5] n=98 mean_total_err=0.05354 transl=0.02294 rot=0.03060 init_ok=1.00
+[damp_x2.0] n=98 mean_total_err=0.05823 transl=0.02499 rot=0.03324 init_ok=1.00
+[force_x0.5] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[delay_1] n=98 mean_total_err=0.05342 transl=0.02212 rot=0.03131 init_ok=1.00
+REPLAY_MS2_DONE /mnt/e/research/the_world/results/replay_sysid_ms2/sweep_v1
+[iso_x0.25] n=98 mean_total_err=0.04713 transl=0.01973 rot=0.02741 init_ok=1.00
+[iso_x0.5] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[nominal] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[iso_x2.0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[iso_x4.0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+REPLAY_MS2_DONE /mnt/e/research/the_world/results/replay_sysid_ms2/iso_ratio_v1
+[s0.5_d0.5_delay0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[s0.5_d0.5_delay1] n=98 mean_total_err=0.05342 transl=0.02211 rot=0.03130 init_ok=1.00
+[s0.5_d0.7_delay0] n=98 mean_total_err=0.04921 transl=0.02069 rot=0.02852 init_ok=1.00
+[s0.5_d0.7_delay1] n=98 mean_total_err=0.06201 transl=0.02613 rot=0.03588 init_ok=1.00
+[s0.5_d1_delay0] n=98 mean_total_err=0.05823 transl=0.02499 rot=0.03324 init_ok=1.00
+[s0.5_d1_delay1] n=98 mean_total_err=0.07487 transl=0.03235 rot=0.04253 init_ok=1.00
+[s0.5_d1.4_delay0] n=98 mean_total_err=0.07234 transl=0.03176 rot=0.04058 init_ok=1.00
+[s0.5_d1.4_delay1] n=98 mean_total_err=0.08994 transl=0.03967 rot=0.05027 init_ok=1.00
+[s0.5_d2_delay0] n=98 mean_total_err=0.09123 transl=0.04079 rot=0.05044 init_ok=1.00
+[s0.5_d2_delay1] n=98 mean_total_err=0.10791 transl=0.04836 rot=0.05955 init_ok=1.00
+[s0.7_d0.5_delay0] n=98 mean_total_err=0.04956 transl=0.02096 rot=0.02861 init_ok=1.00
+[s0.7_d0.5_delay1] n=98 mean_total_err=0.04827 transl=0.01991 rot=0.02835 init_ok=1.00
+[s0.7_d0.7_delay0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[s0.7_d0.7_delay1] n=98 mean_total_err=0.05342 transl=0.02211 rot=0.03131 init_ok=1.00
+[s0.7_d1_delay0] n=98 mean_total_err=0.04954 transl=0.02084 rot=0.02869 init_ok=1.00
+[s0.7_d1_delay1] n=98 mean_total_err=0.06263 transl=0.02643 rot=0.03620 init_ok=1.00
+[s0.7_d1.4_delay0] n=98 mean_total_err=0.05823 transl=0.02499 rot=0.03324 init_ok=1.00
+[s0.7_d1.4_delay1] n=98 mean_total_err=0.07487 transl=0.03235 rot=0.04253 init_ok=1.00
+[s0.7_d2_delay0] n=98 mean_total_err=0.07332 transl=0.03223 rot=0.04109 init_ok=1.00
+[s0.7_d2_delay1] n=98 mean_total_err=0.09092 transl=0.04014 rot=0.05077 init_ok=1.00
+[s1_d0.5_delay0] n=98 mean_total_err=0.05354 transl=0.02294 rot=0.03060 init_ok=1.00
+[s1_d0.5_delay1] n=98 mean_total_err=0.04574 transl=0.01908 rot=0.02666 init_ok=1.00
+[s1_d0.7_delay0] n=98 mean_total_err=0.04978 transl=0.02106 rot=0.02871 init_ok=1.00
+[s1_d0.7_delay1] n=98 mean_total_err=0.04806 transl=0.01983 rot=0.02822 init_ok=1.00
+[s1_d1_delay0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[s1_d1_delay1] n=98 mean_total_err=0.05342 transl=0.02212 rot=0.03131 init_ok=1.00
+[s1_d1.4_delay0] n=98 mean_total_err=0.04922 transl=0.02069 rot=0.02852 init_ok=1.00
+[s1_d1.4_delay1] n=98 mean_total_err=0.06201 transl=0.02613 rot=0.03588 init_ok=1.00
+[s1_d2_delay0] n=98 mean_total_err=0.05823 transl=0.02499 rot=0.03324 init_ok=1.00
+[s1_d2_delay1] n=98 mean_total_err=0.07487 transl=0.03235 rot=0.04253 init_ok=1.00
+[s1.4_d0.5_delay0] n=98 mean_total_err=0.05668 transl=0.02448 rot=0.03220 init_ok=1.00
+[s1.4_d0.5_delay1] n=98 mean_total_err=0.04498 transl=0.01902 rot=0.02596 init_ok=1.00
+[s1.4_d0.7_delay0] n=98 mean_total_err=0.05353 transl=0.02293 rot=0.03060 init_ok=1.00
+[s1.4_d0.7_delay1] n=98 mean_total_err=0.04574 transl=0.01908 rot=0.02666 init_ok=1.00
+[s1.4_d1_delay0] n=98 mean_total_err=0.04956 transl=0.02095 rot=0.02861 init_ok=1.00
+[s1.4_d1_delay1] n=98 mean_total_err=0.04827 transl=0.01992 rot=0.02835 init_ok=1.00
+[s1.4_d1.4_delay0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[s1.4_d1.4_delay1] n=98 mean_total_err=0.05342 transl=0.02212 rot=0.03131 init_ok=1.00
+[s1.4_d2_delay0] n=98 mean_total_err=0.04954 transl=0.02084 rot=0.02870 init_ok=1.00
+[s1.4_d2_delay1] n=98 mean_total_err=0.06263 transl=0.02643 rot=0.03620 init_ok=1.00
+[s2_d0.5_delay0] n=98 mean_total_err=0.05877 transl=0.02550 rot=0.03327 init_ok=1.00
+[s2_d0.5_delay1] n=98 mean_total_err=0.04488 transl=0.01915 rot=0.02572 init_ok=1.00
+[s2_d0.7_delay0] n=98 mean_total_err=0.05683 transl=0.02455 rot=0.03227 init_ok=1.00
+[s2_d0.7_delay1] n=98 mean_total_err=0.04496 transl=0.01902 rot=0.02594 init_ok=1.00
+[s2_d1_delay0] n=98 mean_total_err=0.05353 transl=0.02293 rot=0.03060 init_ok=1.00
+[s2_d1_delay1] n=98 mean_total_err=0.04574 transl=0.01908 rot=0.02666 init_ok=1.00
+[s2_d1.4_delay0] n=98 mean_total_err=0.04977 transl=0.02106 rot=0.02871 init_ok=1.00
+[s2_d1.4_delay1] n=98 mean_total_err=0.04806 transl=0.01984 rot=0.02822 init_ok=1.00
+[s2_d2_delay0] n=98 mean_total_err=0.04714 transl=0.01973 rot=0.02741 init_ok=1.00
+[s2_d2_delay1] n=98 mean_total_err=0.05342 transl=0.02212 rot=0.03131 init_ok=1.00
+REPLAY_MS2_DONE /mnt/e/research/the_world/results/replay_sysid_ms2/grid
+REPLAY_MS2_ALL_DONE 2026-09-19T12:24:42Z

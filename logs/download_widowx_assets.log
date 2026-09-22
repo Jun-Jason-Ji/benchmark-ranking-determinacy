@@ -1,0 +1,14 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+<frozen runpy>:128: RuntimeWarning: 'mani_skill.utils.download_asset' found in sys.modules after import of package 'mani_skill.utils', but prior to execution of 'mani_skill.utils.download_asset'; this may result in unpredictable behaviour
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\utils\download_asset.py", line 241, in <module>
+    main(args)
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\utils\download_asset.py", line 231, in main
+    output_path = download(assets.DATA_SOURCES[uid], **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\utils\download_asset.py", line 154, in download
+    os.rename(
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'E:\\research\\the_world\\data\\maniskill-assets\\data\\robots\\ManiSkill-WidowX250S-0.2.0' -> 'E:\\research\\the_world\\data\\maniskill-assets\\data\\robots\\widowx'

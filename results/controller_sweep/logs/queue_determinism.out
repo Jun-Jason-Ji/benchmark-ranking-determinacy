@@ -1,0 +1,13 @@
+23:05:36 === determinism_check: 2 jobs
+23:10:55 launched octo-small PutEggplantInBasketScene-v1 sweep_v1 off=0 on 8769
+23:10:55 launched octo-base PutEggplantInBasketScene-v1 sweep_v1 off=0 on 8770
+23:30:48 done rc=0 octo-small PutEggplantInBasketScene-v1 sweep_v1 off=0 on 8769
+23:37:59 done rc=0 octo-base PutEggplantInBasketScene-v1 sweep_v1 off=0 on 8770
+23:38:21 === determinism_check complete
+# Determinism check: original seeds re-run on restarted servers (eggplant nominal, episodes 0-23)
+
+| policy | n | original successes | rerun successes | identical episodes |
+|---|---:|---:|---:|---:|
+| octo-small | 24 | 13 | 13 | 18 |
+| octo-base | 24 | 6 | 9 | 19 |
+23:38:21 DETERMINISM_DONE

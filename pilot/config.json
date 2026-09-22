@@ -1,0 +1,21 @@
+{
+  "protocol_version": "synthetic-linear-gaussian-v1",
+  "frozen_before_first_run": true,
+  "master_seed": 20260918,
+  "trials": 300,
+  "noise_sigma": 0.15,
+  "parameter_box": [0.0, 1.0],
+  "sampling_box": [0.1, 0.9],
+  "delta": 0.05,
+  "initial_samples": 8,
+  "pool_repetitions_per_direction": 16,
+  "budgets": [0, 2, 4, 8, 16, 32],
+  "alphas": [0.5, 0.2, 0.1, 0.05, 0.01],
+  "main_alpha": 0.05,
+  "methods": ["random", "d_opt", "c_opt"],
+  "mechanism_samples": [8, 32, 128, 512, 2048, 8192],
+  "mechanism_theta": [0.6, 0.4],
+  "weak_excitation": 0.03,
+  "selection_ridge": 1e-10,
+  "notes": "Frozen synthetic protocol; no robot, real observations, or VLA checkpoints. Known Gaussian noise and correct linear model. Input-only selection; finite pool outcomes are hidden until selected. Each budget is a fixed-design marginal analysis, not an anytime confidence sequence."
+}

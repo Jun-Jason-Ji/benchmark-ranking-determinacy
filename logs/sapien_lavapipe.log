@@ -1,0 +1,16 @@
+Starting SAPIEN import and renderer probe
+/mnt/e/research/the_world/.venv-linux/lib/python3.11/site-packages/sapien/__init__.py:7: UserWarning: It seems you are using WSL. SAPIEN renderer is not supported on WSL
+  warnings.warn("It seems you are using WSL. SAPIEN renderer is not supported on WSL")
+{
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "VK_ICD_FILENAMES": "/usr/share/vulkan/icd.d/lvp_icd.json",
+  "status": "failed",
+  "physics_engine": "created",
+  "error_type": "RuntimeError",
+  "error": "vk::PhysicalDevice::createDeviceUnique: ErrorExtensionNotPresent"
+}
+Traceback (most recent call last):
+  File "/mnt/e/research/the_world/scripts/probe_sapien.py", line 25, in <module>
+    renderer = sapien.SapienRenderer(offscreen_only=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: vk::PhysicalDevice::createDeviceUnique: ErrorExtensionNotPresent

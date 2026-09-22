@@ -1,0 +1,70 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-21 01:29:34,305 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-21 01:29:34,494 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-21 01:29:34,519 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 0 success=False steps=120 inf=14.8s sim=11.2s total=31.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 1 success=True steps=120 inf=14.6s sim=8.2s total=28.5s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 2 success=False steps=120 inf=14.5s sim=12.9s total=33.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 3 success=False steps=120 inf=15.9s sim=9.6s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 4 success=True steps=120 inf=15.3s sim=8.1s total=29.2s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 5 success=False steps=120 inf=15.6s sim=10.4s total=31.9s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 6 success=True steps=120 inf=14.7s sim=10.3s total=30.8s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 7 success=True steps=120 inf=14.6s sim=8.6s total=28.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 8 success=True steps=120 inf=15.6s sim=9.5s total=30.5s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 9 success=True steps=120 inf=14.7s sim=11.1s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 10 success=False steps=120 inf=16.1s sim=11.3s total=33.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 11 success=False steps=120 inf=15.3s sim=9.9s total=30.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 12 success=False steps=120 inf=16.0s sim=9.9s total=31.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 13 success=True steps=120 inf=17.1s sim=8.5s total=31.2s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 14 success=True steps=120 inf=15.6s sim=8.0s total=29.0s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 15 success=True steps=120 inf=15.7s sim=11.5s total=32.8s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 16 success=True steps=120 inf=15.6s sim=8.1s total=29.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 17 success=True steps=120 inf=15.6s sim=9.4s total=30.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 18 success=True steps=120 inf=15.8s sim=9.0s total=30.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 19 success=False steps=120 inf=15.5s sim=10.9s total=32.0s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 20 success=False steps=120 inf=16.5s sim=11.1s total=33.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 21 success=True steps=120 inf=15.5s sim=8.6s total=29.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 22 success=True steps=120 inf=15.8s sim=8.3s total=29.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 23 success=False steps=120 inf=15.1s sim=11.6s total=32.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 24 success=True steps=120 inf=15.8s sim=9.3s total=30.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 25 success=True steps=120 inf=16.3s sim=8.2s total=30.2s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 26 success=True steps=120 inf=19.7s sim=11.3s total=36.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 27 success=False steps=120 inf=18.2s sim=11.1s total=34.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 28 success=True steps=120 inf=18.8s sim=9.5s total=34.5s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 29 success=True steps=120 inf=17.5s sim=7.4s total=30.0s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 30 success=True steps=120 inf=13.0s sim=5.7s total=23.2s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 31 success=False steps=120 inf=13.8s sim=6.4s total=24.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 32 success=False steps=120 inf=14.4s sim=6.5s total=25.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 33 success=False steps=120 inf=14.0s sim=7.4s total=25.9s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 34 success=True steps=120 inf=13.3s sim=8.2s total=26.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 35 success=False steps=120 inf=13.8s sim=5.1s total=23.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 36 success=False steps=120 inf=14.3s sim=8.3s total=27.0s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 37 success=True steps=120 inf=14.8s sim=5.4s total=24.7s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 38 success=False steps=120 inf=14.8s sim=8.3s total=27.8s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 39 success=False steps=120 inf=15.0s sim=7.2s total=27.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 40 success=True steps=120 inf=14.3s sim=7.0s total=26.2s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 41 success=True steps=120 inf=14.1s sim=5.8s total=24.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 42 success=True steps=120 inf=15.0s sim=6.1s total=25.8s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 43 success=True steps=120 inf=14.8s sim=6.5s total=26.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 44 success=True steps=120 inf=13.9s sim=5.2s total=23.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 45 success=True steps=120 inf=15.0s sim=6.9s total=26.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 46 success=False steps=120 inf=14.2s sim=8.3s total=27.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 47 success=False steps=120 inf=15.8s sim=6.6s total=27.5s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 48 success=True steps=120 inf=14.6s sim=5.2s total=24.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 49 success=True steps=120 inf=14.7s sim=6.9s total=26.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 50 success=True steps=120 inf=14.1s sim=5.6s total=24.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 51 success=True steps=120 inf=14.6s sim=5.6s total=24.9s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 52 success=True steps=120 inf=14.4s sim=5.3s total=24.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 53 success=True steps=120 inf=14.6s sim=5.1s total=24.5s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 54 success=False steps=120 inf=13.9s sim=6.9s total=25.6s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 55 success=False steps=120 inf=14.1s sim=6.6s total=25.4s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 56 success=True steps=120 inf=14.7s sim=5.5s total=24.9s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 57 success=True steps=120 inf=14.0s sim=5.2s total=24.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 58 success=False steps=120 inf=14.9s sim=6.6s total=26.2s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 59 success=False steps=120 inf=14.0s sim=6.0s total=24.8s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 60 success=False steps=120 inf=13.4s sim=7.2s total=25.5s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 61 success=True steps=120 inf=13.7s sim=4.8s total=22.9s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 62 success=True steps=120 inf=13.4s sim=7.4s total=25.1s
+[octo-small|PutEggplantInBasketScene-v1|fric_x0.4] ep 63 success=False steps=120 inf=13.5s sim=5.3s total=23.3s
+== fric_x0.4: 38/64 success

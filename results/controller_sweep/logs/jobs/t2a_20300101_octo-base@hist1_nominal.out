@@ -1,0 +1,70 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-21 01:29:13,265 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-21 01:29:13,450 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-21 01:29:13,481 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 0 success=True steps=120 inf=12.5s sim=11.5s total=29.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 1 success=False steps=120 inf=14.3s sim=11.4s total=31.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 2 success=False steps=120 inf=14.2s sim=12.1s total=32.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 3 success=False steps=120 inf=15.0s sim=11.9s total=33.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 4 success=False steps=120 inf=15.6s sim=11.7s total=33.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 5 success=False steps=120 inf=16.4s sim=8.0s total=30.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 6 success=False steps=120 inf=14.1s sim=11.2s total=30.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 7 success=False steps=120 inf=14.6s sim=11.6s total=31.6s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 8 success=False steps=120 inf=14.9s sim=10.2s total=30.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 9 success=False steps=120 inf=15.4s sim=11.2s total=32.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 10 success=True steps=120 inf=15.0s sim=8.2s total=29.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 11 success=False steps=120 inf=14.6s sim=10.8s total=31.5s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 12 success=True steps=120 inf=16.1s sim=12.7s total=34.4s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 13 success=False steps=120 inf=16.6s sim=8.6s total=30.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 14 success=True steps=120 inf=18.0s sim=11.0s total=34.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 15 success=False steps=120 inf=15.7s sim=11.0s total=32.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 16 success=False steps=120 inf=16.6s sim=10.6s total=32.8s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 17 success=True steps=120 inf=16.0s sim=12.1s total=34.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 18 success=False steps=120 inf=15.8s sim=7.8s total=29.4s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 19 success=True steps=120 inf=15.8s sim=11.9s total=33.4s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 20 success=True steps=120 inf=16.0s sim=8.1s total=29.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 21 success=True steps=120 inf=16.3s sim=12.3s total=34.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 22 success=False steps=120 inf=16.0s sim=8.1s total=29.8s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 23 success=False steps=120 inf=14.4s sim=10.8s total=30.8s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 24 success=True steps=120 inf=16.4s sim=11.9s total=34.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 25 success=False steps=120 inf=16.7s sim=8.2s total=30.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 26 success=True steps=120 inf=21.2s sim=12.7s total=39.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 27 success=False steps=120 inf=18.6s sim=11.7s total=35.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 28 success=True steps=120 inf=20.2s sim=8.9s total=34.8s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 29 success=True steps=120 inf=16.7s sim=6.6s total=28.2s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 30 success=True steps=120 inf=13.5s sim=4.6s total=22.4s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 31 success=False steps=120 inf=13.9s sim=7.1s total=25.4s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 32 success=False steps=120 inf=15.3s sim=7.2s total=27.2s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 33 success=True steps=120 inf=14.2s sim=7.5s total=26.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 34 success=False steps=120 inf=13.2s sim=7.1s total=24.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 35 success=False steps=120 inf=14.6s sim=6.8s total=25.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 36 success=False steps=120 inf=14.1s sim=7.3s total=26.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 37 success=False steps=120 inf=14.7s sim=5.0s total=24.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 38 success=False steps=120 inf=14.6s sim=7.6s total=26.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 39 success=False steps=120 inf=15.1s sim=7.8s total=27.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 40 success=True steps=120 inf=14.5s sim=7.7s total=27.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 41 success=False steps=120 inf=14.3s sim=7.5s total=26.6s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 42 success=False steps=120 inf=15.1s sim=6.2s total=26.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 43 success=False steps=120 inf=15.1s sim=6.9s total=26.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 44 success=True steps=120 inf=14.2s sim=5.6s total=24.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 45 success=True steps=120 inf=14.6s sim=7.6s total=26.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 46 success=False steps=120 inf=14.7s sim=6.7s total=26.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 47 success=False steps=120 inf=15.2s sim=7.0s total=27.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 48 success=False steps=120 inf=15.0s sim=6.9s total=26.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 49 success=False steps=120 inf=15.2s sim=8.3s total=28.3s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 50 success=True steps=120 inf=14.5s sim=6.3s total=25.5s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 51 success=False steps=120 inf=14.2s sim=7.3s total=26.4s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 52 success=False steps=120 inf=14.8s sim=4.6s total=24.6s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 53 success=True steps=120 inf=14.6s sim=7.5s total=27.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 54 success=False steps=120 inf=14.1s sim=6.6s total=25.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 55 success=False steps=120 inf=14.0s sim=7.1s total=25.8s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 56 success=True steps=120 inf=14.6s sim=7.6s total=26.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 57 success=False steps=120 inf=15.6s sim=6.3s total=26.5s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 58 success=True steps=120 inf=14.0s sim=7.3s total=26.0s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 59 success=False steps=120 inf=13.4s sim=7.0s total=25.1s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 60 success=False steps=120 inf=13.5s sim=6.4s total=24.8s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 61 success=False steps=120 inf=13.2s sim=6.7s total=24.7s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 62 success=False steps=120 inf=13.5s sim=6.8s total=24.9s
+[octo-base@hist1|PutEggplantInBasketScene-v1|nominal] ep 63 success=False steps=120 inf=10.6s sim=6.7s total=21.6s
+== nominal: 21/64 success

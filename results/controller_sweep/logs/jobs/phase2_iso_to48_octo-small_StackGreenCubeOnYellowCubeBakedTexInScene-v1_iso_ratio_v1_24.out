@@ -1,0 +1,120 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\envs\tasks\digital_twins\bridge_dataset_eval\put_on_in_scene.py:197: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_new.cpp:257.)
+  quat_configs = torch.tensor(quat_configs)
+[33;1m2026-09-18 13:02:11,585 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 13:02:11,723 - mani_skill  - WARNING - No initial pose set for actor builder of baked_green_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 13:02:11,729 - mani_skill  - WARNING - No initial pose set for actor builder of baked_yellow_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 24 success=False steps=60 inf=11.2s sim=1.9s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 25 success=False steps=60 inf=12.4s sim=1.7s total=16.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 26 success=False steps=60 inf=12.0s sim=1.7s total=15.6s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 27 success=False steps=60 inf=11.5s sim=1.6s total=14.9s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 28 success=False steps=60 inf=11.4s sim=1.6s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 29 success=False steps=60 inf=9.1s sim=1.5s total=12.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 30 success=False steps=60 inf=10.6s sim=1.8s total=14.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 31 success=False steps=60 inf=11.9s sim=1.7s total=15.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 32 success=False steps=60 inf=10.7s sim=1.8s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 33 success=False steps=60 inf=10.5s sim=1.9s total=14.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 34 success=False steps=60 inf=11.8s sim=1.6s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 35 success=False steps=60 inf=12.2s sim=1.5s total=15.6s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 36 success=False steps=60 inf=10.4s sim=1.9s total=14.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 37 success=False steps=60 inf=11.3s sim=1.7s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 38 success=False steps=60 inf=10.8s sim=1.7s total=14.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 39 success=False steps=60 inf=11.0s sim=1.7s total=14.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 40 success=False steps=60 inf=10.9s sim=1.8s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 41 success=False steps=60 inf=11.0s sim=1.7s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 42 success=False steps=60 inf=11.0s sim=1.8s total=14.6s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 43 success=False steps=60 inf=11.2s sim=1.9s total=14.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 44 success=False steps=60 inf=11.7s sim=1.6s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 45 success=False steps=60 inf=11.9s sim=1.6s total=15.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 46 success=False steps=60 inf=10.9s sim=1.6s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.25] ep 47 success=False steps=60 inf=11.7s sim=1.6s total=14.9s
+== iso_x0.25: 1/48 success
+[33;1m2026-09-18 13:08:06,395 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 13:08:06,399 - mani_skill  - WARNING - No initial pose set for actor builder of baked_green_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 13:08:06,400 - mani_skill  - WARNING - No initial pose set for actor builder of baked_yellow_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 24 success=False steps=60 inf=10.6s sim=1.9s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 25 success=False steps=60 inf=10.5s sim=1.9s total=14.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 26 success=False steps=60 inf=12.4s sim=1.6s total=15.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 27 success=False steps=60 inf=11.4s sim=1.7s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 28 success=False steps=60 inf=11.0s sim=1.7s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 29 success=False steps=60 inf=11.0s sim=1.6s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 30 success=False steps=60 inf=11.8s sim=1.7s total=15.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 31 success=False steps=60 inf=11.5s sim=1.8s total=15.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 32 success=False steps=60 inf=11.0s sim=1.8s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 33 success=False steps=60 inf=11.6s sim=1.6s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 34 success=False steps=60 inf=11.0s sim=1.7s total=14.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 35 success=False steps=60 inf=10.6s sim=1.7s total=14.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 36 success=False steps=60 inf=11.3s sim=1.7s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 37 success=False steps=60 inf=12.1s sim=1.7s total=15.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 38 success=False steps=60 inf=11.3s sim=1.8s total=14.9s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 39 success=False steps=60 inf=10.9s sim=1.7s total=14.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 40 success=False steps=60 inf=11.0s sim=1.7s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 41 success=False steps=60 inf=11.3s sim=1.7s total=14.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 42 success=False steps=60 inf=11.2s sim=1.8s total=14.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 43 success=False steps=60 inf=11.6s sim=1.7s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 44 success=False steps=60 inf=11.6s sim=1.6s total=14.9s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 45 success=False steps=60 inf=10.9s sim=1.7s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 46 success=False steps=60 inf=10.7s sim=1.7s total=14.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x0.5] ep 47 success=False steps=60 inf=11.4s sim=1.7s total=15.0s
+== iso_x0.5: 1/48 success
+[33;1m2026-09-18 13:14:01,084 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 13:14:01,087 - mani_skill  - WARNING - No initial pose set for actor builder of baked_green_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 13:14:01,087 - mani_skill  - WARNING - No initial pose set for actor builder of baked_yellow_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+== nominal: 0/48 success
+[33;1m2026-09-18 13:14:01,510 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 13:14:01,514 - mani_skill  - WARNING - No initial pose set for actor builder of baked_green_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 13:14:01,514 - mani_skill  - WARNING - No initial pose set for actor builder of baked_yellow_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 24 success=False steps=60 inf=11.4s sim=1.7s total=14.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 25 success=False steps=60 inf=11.5s sim=1.8s total=15.6s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 26 success=False steps=60 inf=12.5s sim=1.6s total=16.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 27 success=False steps=60 inf=11.1s sim=1.8s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 28 success=True steps=60 inf=11.6s sim=1.8s total=15.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 29 success=False steps=60 inf=10.9s sim=1.9s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 30 success=False steps=60 inf=11.1s sim=1.8s total=14.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 31 success=False steps=60 inf=11.2s sim=1.7s total=15.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 32 success=False steps=60 inf=10.9s sim=1.7s total=14.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 33 success=False steps=60 inf=11.3s sim=1.8s total=14.9s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 34 success=False steps=60 inf=10.4s sim=1.7s total=13.9s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 35 success=False steps=60 inf=11.2s sim=1.8s total=14.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 36 success=False steps=60 inf=11.4s sim=1.7s total=15.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 37 success=False steps=60 inf=11.8s sim=1.7s total=15.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 38 success=False steps=60 inf=11.8s sim=1.7s total=15.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 39 success=False steps=60 inf=11.5s sim=1.7s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 40 success=False steps=60 inf=11.3s sim=1.7s total=14.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 41 success=False steps=60 inf=10.8s sim=1.7s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 42 success=False steps=60 inf=11.2s sim=1.8s total=14.7s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 43 success=False steps=60 inf=11.7s sim=1.9s total=15.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 44 success=False steps=60 inf=11.1s sim=1.8s total=14.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 45 success=False steps=60 inf=11.6s sim=1.7s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 46 success=False steps=60 inf=10.7s sim=1.7s total=14.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x2.0] ep 47 success=False steps=60 inf=11.0s sim=1.8s total=14.7s
+== iso_x2.0: 1/48 success
+[33;1m2026-09-18 13:19:59,612 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-18 13:19:59,620 - mani_skill  - WARNING - No initial pose set for actor builder of baked_green_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-18 13:19:59,621 - mani_skill  - WARNING - No initial pose set for actor builder of baked_yellow_cube_3cm, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 24 success=False steps=60 inf=12.3s sim=1.6s total=15.9s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 25 success=False steps=60 inf=10.9s sim=1.8s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 26 success=False steps=60 inf=10.6s sim=1.9s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 27 success=False steps=60 inf=11.0s sim=1.8s total=14.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 28 success=False steps=60 inf=12.1s sim=1.7s total=15.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 29 success=False steps=60 inf=12.3s sim=1.6s total=15.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 30 success=False steps=60 inf=11.7s sim=1.7s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 31 success=False steps=60 inf=11.5s sim=1.9s total=15.5s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 32 success=False steps=60 inf=10.8s sim=1.9s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 33 success=False steps=60 inf=10.6s sim=1.9s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 34 success=False steps=60 inf=11.4s sim=1.7s total=14.8s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 35 success=False steps=60 inf=10.8s sim=1.7s total=14.4s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 36 success=False steps=60 inf=11.5s sim=1.7s total=15.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 37 success=False steps=60 inf=11.8s sim=1.7s total=15.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 38 success=False steps=60 inf=11.1s sim=1.7s total=14.6s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 39 success=False steps=60 inf=11.0s sim=1.9s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 40 success=False steps=60 inf=11.5s sim=1.7s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 41 success=False steps=60 inf=11.1s sim=1.7s total=14.6s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 42 success=False steps=60 inf=10.6s sim=1.8s total=14.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 43 success=False steps=60 inf=11.4s sim=1.8s total=15.0s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 44 success=False steps=60 inf=11.6s sim=1.7s total=15.2s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 45 success=False steps=60 inf=10.8s sim=1.7s total=14.3s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 46 success=False steps=60 inf=11.4s sim=1.6s total=15.1s
+[octo-small|StackGreenCubeOnYellowCubeBakedTexInScene-v1|iso_x4.0] ep 47 success=False steps=60 inf=10.9s sim=1.8s total=15.0s
+== iso_x4.0: 0/48 success

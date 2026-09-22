@@ -1,0 +1,267 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% references.bib -- Autonomous Robots submission
+%%
+%% Verification status, 2026-09-21: 17 of 19 entries checked against the publisher,
+%% proceedings or dblp record. The two exceptions are the Manski and Ljung monographs,
+%% marked [VERIFY BOOK] -- for those only the publisher/year/edition need a catalogue check.
+%%
+%% Two things to note, because they changed after checking:
+%%   * SIMPLER and OpenVLA are both PMLR volume 270 and the proceedings assign them
+%%     year 2025, not 2024 (the ids are li25c and kim25c), even though CoRL 2024 is the
+%%     conference. The years below follow the proceedings. The citation keys still read
+%%     "2024" -- keys are arbitrary labels and changing them would touch main.tex, but if
+%%     you prefer them consistent, rename in both files together.
+%%   * The journal requires all authors up to 20; RT-1 has 46, so it is truncated at 20
+%%     with a note, which is what the guideline prescribes for larger groups.
+%%
+%% DOIs are given where the record supplied one. None has been invented.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ---------------------------------------------------------------- benchmarks and evaluation
+
+% [VERIFIED] CoRL (8th); PMLR 270 (li25c); arXiv:2405.05941. Full author list confirmed.
+@inproceedings{li2024simpler,
+  author    = {Li, Xuanlin and Hsu, Kyle and Gu, Jiayuan and Mees, Oier and Pertsch, Karl and
+               Walke, Homer Rich and Fu, Chuyuan and Lunawat, Ishikaa and Sieh, Isabel and
+               Kirmani, Sean and Levine, Sergey and Wu, Jiajun and Finn, Chelsea and Su, Hao and
+               Vuong, Quan and Xiao, Ted},
+  title     = {Evaluating real-world robot manipulation policies in simulation},
+  booktitle = {Proceedings of the 8th Conference on Robot Learning (CoRL)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {270},
+  year      = {2025},
+  note      = {arXiv:2405.05941}
+}
+
+% [VERIFIED] CoRL (9th); PMLR 305:1997--2017; arXiv:2503.24278.
+% Author list abbreviated: the proceedings record is zhou25a; confirm the middle authors if the
+% copy-editor queries it.
+@inproceedings{zhou2025autoeval,
+  author    = {Zhou, Zhiyuan and Pertsch, Karl and Levine, Sergey and others},
+  title     = {{AutoEval}: Autonomous evaluation of generalist robot manipulation policies in the
+               real world},
+  booktitle = {Proceedings of the 9th Conference on Robot Learning (CoRL)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {305},
+  pages     = {1997--2017},
+  year      = {2025},
+  note      = {arXiv:2503.24278}
+}
+
+% [VERIFIED] CoRL (9th); PMLR 305:336--364; arXiv:2506.18123; proceedings record atreya25a.
+@inproceedings{atreya2025roboarena,
+  author    = {Atreya, Pranav and Pertsch, Karl and Lee, Tony and Kim, Moo Jin and Jain, Arhan and
+               Kuramshin, Artur and Eppner, Clemens and Neary, Cyrus and others},
+  title     = {{RoboArena}: Distributed real-world evaluation of generalist robot policies},
+  booktitle = {Proceedings of the 9th Conference on Robot Learning (CoRL)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {305},
+  pages     = {336--364},
+  year      = {2025},
+  note      = {arXiv:2506.18123}
+}
+
+%% ---------------------------------------------------------------- simulators and datasets
+
+% [VERIFIED] arXiv:2410.00425, 1 October 2024. No peer-reviewed version found as of 2026-09-21.
+% The author list is Tao and 22 others; abbreviated here.
+@article{tao2024maniskill3,
+  author  = {Tao, Stone and others},
+  title   = {{ManiSkill3}: {GPU} parallelized robotics simulation and rendering for generalizable
+             embodied {AI}},
+  journal = {arXiv preprint},
+  volume  = {arXiv:2410.00425},
+  year    = {2024}
+}
+
+% [VERIFIED] ICLR 2023 conference paper; arXiv:2302.04659; OpenReview b_CQDy9vrD1.
+@inproceedings{gu2023maniskill2,
+  author    = {Gu, Jiayuan and Xiang, Fanbo and Li, Xuanlin and Ling, Zhan and Liu, Xiqiang and
+               Mu, Tongzhou and Tang, Yihe and Tao, Stone and Wei, Xinyue and Yao, Yunchao and
+               Yuan, Xiaodi and Xie, Pengwei and Huang, Zhiao and Chen, Rui and Su, Hao},
+  title     = {{ManiSkill2}: A unified benchmark for generalizable manipulation skills},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023},
+  note      = {arXiv:2302.04659}
+}
+
+% [VERIFIED] CVPR 2020; CVF open access proceedings.
+@inproceedings{xiang2020sapien,
+  author    = {Xiang, Fanbo and Qin, Yuzhe and Mo, Kaichun and Xia, Yikuan and Zhu, Hao and
+               Liu, Fangchen and Liu, Minghua and Jiang, Hanxiao and Yuan, Yifu and Wang, He and
+               Yi, Li and Chang, Angel X. and Guibas, Leonidas J. and Su, Hao},
+  title     = {{SAPIEN}: A {SimulAted} part-based interactive {ENvironment}},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
+               (CVPR)},
+  year      = {2020}
+}
+
+% [VERIFIED] CoRL (7th); PMLR 229:1723--1736 (walke23a); arXiv:2308.12952. Author list confirmed.
+@inproceedings{walke2023bridgedata,
+  author    = {Walke, Homer Rich and Black, Kevin and Zhao, Tony Z. and Vuong, Quan and
+               Zheng, Chongyi and Hansen-Estruch, Philippe and He, Andre Wang and Myers, Vivek and
+               Kim, Moo Jin and Du, Max and Lee, Abraham and Fang, Kuan and Finn, Chelsea and
+               Levine, Sergey},
+  title     = {{BridgeData V2}: A dataset for robot learning at scale},
+  booktitle = {Proceedings of the 7th Conference on Robot Learning (CoRL)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {229},
+  pages     = {1723--1736},
+  year      = {2023},
+  note      = {arXiv:2308.12952}
+}
+
+%% ---------------------------------------------------------------- the policies evaluated
+
+% [VERIFIED] Robotics: Science and Systems 2023; dblp conf/rss/BrohanBCCDFGHHH23;
+% arXiv:2212.06817. The paper has 46 authors; truncated at 20 per the journal's rule for
+% larger groups. This entry is the source of the published real and simulated rates that
+% Sect. 8.4 rests on, so it was checked first.
+@inproceedings{brohan2023rt1,
+  author    = {Brohan, Anthony and Brown, Noah and Carbajal, Justice and Chebotar, Yevgen and
+               Dabis, Joseph and Finn, Chelsea and Gopalakrishnan, Keerthana and Hausman, Karol and
+               Herzog, Alexander and Hsu, Jasmine and Ibarz, Julian and Ichter, Brian and
+               Irpan, Alex and Jackson, Tomas and Jesmonth, Sally and Joshi, Nikhil J. and
+               Julian, Ryan and Kalashnikov, Dmitry and Kuang, Yuheng and Leal, Isabel},
+  title     = {{RT-1}: Robotics transformer for real-world control at scale},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2023},
+  note      = {arXiv:2212.06817. 46 authors in total; list truncated at 20 per journal policy}
+}
+
+% [VERIFIED] arXiv:2405.12213 (v2, 26 May 2024); author list confirmed, led by the
+% "Octo Model Team" collective. Widely cited as RSS 2024; the arXiv form is given here because
+% the RSS proceedings entry was not confirmed. Switch to the RSS form if you confirm it.
+@article{octo2024,
+  author  = {Ghosh, Dibya and Walke, Homer and Pertsch, Karl and Black, Kevin and Mees, Oier and
+             Dasari, Sudeep and Hejna, Joey and Kreiman, Tobias and Xu, Charles and Luo, Jianlan
+             and Tan, You Liang and Chen, Lawrence Yunliang and Sanketi, Pannag and Vuong, Quan
+             and Xiao, Ted and Sadigh, Dorsa and Finn, Chelsea and Levine, Sergey},
+  title   = {{Octo}: An open-source generalist robot policy},
+  journal = {arXiv preprint},
+  volume  = {arXiv:2405.12213},
+  year    = {2024}
+}
+
+% [VERIFIED] CoRL (8th); PMLR 270:2679--2713 (kim25c); arXiv:2406.09246.
+@inproceedings{kim2024openvla,
+  author    = {Kim, Moo Jin and Pertsch, Karl and Karamcheti, Siddharth and Xiao, Ted and
+               Balakrishna, Ashwin and Nair, Suraj and Rafailov, Rafael and Foster, Ethan and
+               Lam, Grace and Sanketi, Pannag and Vuong, Quan and Kollar, Thomas and
+               Burchfiel, Benjamin and Tedrake, Russ and Sadigh, Dorsa and Levine, Sergey and
+               Liang, Percy and Finn, Chelsea},
+  title     = {{OpenVLA}: An open-source vision-language-action model},
+  booktitle = {Proceedings of the 8th Conference on Robot Learning (CoRL)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {270},
+  pages     = {2679--2713},
+  year      = {2025},
+  note      = {arXiv:2406.09246}
+}
+
+%% ---------------------------------------------------------------- identifiability, partial ID
+
+% [VERIFIED] Econometrica 79(2):453--497; doi 10.3982/ECTA5771.
+@article{hansen2011model,
+  author  = {Hansen, Peter Reinhard and Lunde, Asger and Nason, James M.},
+  title   = {The model confidence set},
+  journal = {Econometrica},
+  volume  = {79},
+  number  = {2},
+  pages   = {453--497},
+  year    = {2011},
+  doi     = {10.3982/ECTA5771}
+}
+
+% [VERIFY BOOK] Springer, New York, 2003, Springer Series in Statistics. Confirm the series and
+% that you want the 2003 monograph rather than the 2007 "Identification for Prediction and
+% Decision" -- both are Manski and both would support the sentence that cites this.
+@book{manski2003partial,
+  author    = {Manski, Charles F.},
+  title     = {Partial Identification of Probability Distributions},
+  publisher = {Springer},
+  address   = {New York},
+  year      = {2003}
+}
+
+% [VERIFIED] Annual Review of Economics 2:167--195, 2010;
+% doi 10.1146/annurev.economics.050708.143401.
+@article{tamer2010partial,
+  author  = {Tamer, Elie},
+  title   = {Partial identification in econometrics},
+  journal = {Annual Review of Economics},
+  volume  = {2},
+  pages   = {167--195},
+  year    = {2010},
+  doi     = {10.1146/annurev.economics.050708.143401}
+}
+
+% [VERIFY BOOK] Prentice Hall, 2nd edition, 1999. Confirm the imprint (some catalogues list
+% Prentice Hall PTR) and the place of publication.
+@book{ljung1999system,
+  author    = {Ljung, Lennart},
+  title     = {System Identification: Theory for the User},
+  edition   = {2},
+  publisher = {Prentice Hall},
+  address   = {Upper Saddle River, NJ},
+  year      = {1999}
+}
+
+% [VERIFIED] Mathematical Biosciences 7:329--339, 1970 (Lund University research portal record).
+@article{bellman1970structural,
+  author  = {Bellman, Richard and {\AA}str{\"o}m, Karl Johan},
+  title   = {On structural identifiability},
+  journal = {Mathematical Biosciences},
+  volume  = {7},
+  pages   = {329--339},
+  year    = {1970}
+}
+
+% [VERIFIED] IEEE Transactions on Robotics and Automation 13(5):730--740, October 1997.
+% The third author appears as "D. Bilgin Tukel" in some records and "D. Bilgin" in others;
+% the form below follows the journal header. Worth a glance at the PDF if the copy-editor queries.
+@article{swevers1997optimal,
+  author  = {Swevers, Jan and Ganseman, Chris and T{\"u}kel, D. Bilgin and De Schutter, Joris and
+             Van Brussel, Hendrik},
+  title   = {Optimal robot excitation and identification},
+  journal = {IEEE Transactions on Robotics and Automation},
+  volume  = {13},
+  number  = {5},
+  pages   = {730--740},
+  year    = {1997}
+}
+
+%% ---------------------------------------------------------------- evaluation practice in RL
+
+% [VERIFIED] AAAI 2018, 32:3207--3214; dblp conf/aaai/0002IBPPM18.
+@inproceedings{henderson2018deep,
+  author    = {Henderson, Peter and Islam, Riashat and Bachman, Philip and Pineau, Joelle and
+               Precup, Doina and Meger, David},
+  title     = {Deep reinforcement learning that matters},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {32},
+  pages     = {3207--3214},
+  year      = {2018}
+}
+
+% [VERIFIED] NeurIPS 2021, volume 34; arXiv:2108.13264; NeurIPS outstanding paper.
+% Proceedings page range not confirmed; NeurIPS entries are commonly cited without pages.
+@inproceedings{agarwal2021deep,
+  author    = {Agarwal, Rishabh and Schwarzer, Max and Castro, Pablo Samuel and
+               Courville, Aaron C. and Bellemare, Marc G.},
+  title     = {Deep reinforcement learning at the edge of the statistical precipice},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {34},
+  year      = {2021},
+  note      = {arXiv:2108.13264}
+}
+
+% [VERIFIED] arXiv:1806.08295, 21 June 2018; authors confirmed. No journal version found.
+@article{colas2018how,
+  author  = {Colas, C{\'e}dric and Sigaud, Olivier and Oudeyer, Pierre-Yves},
+  title   = {How many random seeds? Statistical power analysis in deep reinforcement learning
+             experiments},
+  journal = {arXiv preprint},
+  volume  = {arXiv:1806.08295},
+  year    = {2018}
+}

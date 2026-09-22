@@ -1,0 +1,49 @@
+{
+  "started_utc": "2026-09-20T11:18:38Z",
+  "args": {
+    "policy_name": "openvla-7b-4bit",
+    "policy_url": "http://127.0.0.1:8771",
+    "task": "widowx_put_eggplant_in_basket",
+    "preset": "variants_v1",
+    "conditions": "nominal,force_x0.5",
+    "episodes": 24,
+    "episode_offset": 0,
+    "policy_seed_base": 20260918,
+    "policy_seed_fixed": null,
+    "output_dir": "results/controller_sweep_ms2",
+    "max_steps": null
+  },
+  "compat": {
+    "render": "sapien2_lavapipe_via_vk_fakesemfd_layer",
+    "missing_env": []
+  },
+  "task": {
+    "env_id": "PutEggplantInBasketScene-v0",
+    "robot": "widowx_sink_camera_setup",
+    "scene": "bridge_table_1_v2",
+    "overlay": "ManiSkill2_real2sim/data/real_inpainting/bridge_sink.png",
+    "init_xy": [
+      0.127,
+      0.06
+    ],
+    "max_steps": 120
+  },
+  "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+  "evidence": "original_simpler_main_ms2_sapien2_cpu_render_wsl",
+  "server_health": {
+    "model": "openvla-7b-4bit",
+    "hf_id": "openvla/openvla-7b",
+    "quant": "4bit",
+    "torch": "2.7.1+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_alloc_gb": 4.73,
+    "load_seconds": 18.91672349999999,
+    "jit_warmup_seconds": 17.12842009999997,
+    "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz",
+    "unnorm_key": "bridge_orig",
+    "variants": "reset config accepted but ignored (no history/ensemble in OpenVLA)",
+    "step_count": 60
+  },
+  "variant": null,
+  "episode_protocol": "run to max_episode_steps, success from final info; obj_variation_mode=episode; common episode_ids and policy seeds"
+}

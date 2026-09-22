@@ -1,0 +1,181 @@
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.logging.TaskLevelStatusMessage is deprecated. Please use tf.compat.v1.logging.TaskLevelStatusMessage instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.control_flow_v2_enabled is deprecated. Please use tf.compat.v1.control_flow_v2_enabled instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tf_agents\typing\types.py:114: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tensorflow_hub\resolver.py:120: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tensorflow_hub\resolver.py:120: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-rt1-win\Lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+WARNING:absl:Importing a function (__inference_block3c_activation_layer_call_and_return_conditional_losses_534861) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7b_expand_activation_layer_call_and_return_conditional_losses_544783) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4a_activation_layer_call_and_return_conditional_losses_520678) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5b_expand_activation_layer_call_and_return_conditional_losses_521895) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3c_expand_activation_layer_call_and_return_conditional_losses_520424) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4a_expand_activation_layer_call_and_return_conditional_losses_520642) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6c_se_reduce_layer_call_and_return_conditional_losses_523247) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2b_se_reduce_layer_call_and_return_conditional_losses_532683) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5d_activation_layer_call_and_return_conditional_losses_522366) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5c_se_reduce_layer_call_and_return_conditional_losses_522184) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5d_se_reduce_layer_call_and_return_conditional_losses_522402) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2a_expand_activation_layer_call_and_return_conditional_losses_519388) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5c_activation_layer_call_and_return_conditional_losses_539322) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3a_expand_activation_layer_call_and_return_conditional_losses_520015) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6d_se_reduce_layer_call_and_return_conditional_losses_542752) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3c_expand_activation_layer_call_and_return_conditional_losses_534725) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3a_se_reduce_layer_call_and_return_conditional_losses_533830) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3b_expand_activation_layer_call_and_return_conditional_losses_520206) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2c_se_reduce_layer_call_and_return_conditional_losses_519868) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1a_se_reduce_layer_call_and_return_conditional_losses_531196) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2b_expand_activation_layer_call_and_return_conditional_losses_519579) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1a_se_reduce_layer_call_and_return_conditional_losses_519084) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6b_activation_layer_call_and_return_conditional_losses_541558) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6b_se_reduce_layer_call_and_return_conditional_losses_541616) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1b_se_reduce_layer_call_and_return_conditional_losses_531583) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4c_activation_layer_call_and_return_conditional_losses_521086) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3c_se_reduce_layer_call_and_return_conditional_losses_534919) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1a_activation_layer_call_and_return_conditional_losses_519048) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4d_activation_layer_call_and_return_conditional_losses_537097) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4a_se_reduce_layer_call_and_return_conditional_losses_520714) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5b_se_reduce_layer_call_and_return_conditional_losses_521966) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6f_se_reduce_layer_call_and_return_conditional_losses_523901) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4c_activation_layer_call_and_return_conditional_losses_536529) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4a_se_reduce_layer_call_and_return_conditional_losses_535498) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5c_expand_activation_layer_call_and_return_conditional_losses_522113) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5d_expand_activation_layer_call_and_return_conditional_losses_539754) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4e_expand_activation_layer_call_and_return_conditional_losses_537529) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6a_activation_layer_call_and_return_conditional_losses_541037) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6f_activation_layer_call_and_return_conditional_losses_523865) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2b_expand_activation_layer_call_and_return_conditional_losses_532489) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5d_se_reduce_layer_call_and_return_conditional_losses_539948) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2c_expand_activation_layer_call_and_return_conditional_losses_533057) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7a_se_reduce_layer_call_and_return_conditional_losses_524119) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6a_expand_activation_layer_call_and_return_conditional_losses_522767) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6b_expand_activation_layer_call_and_return_conditional_losses_541422) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6f_expand_activation_layer_call_and_return_conditional_losses_523830) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2c_expand_activation_layer_call_and_return_conditional_losses_519797) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6e_se_reduce_layer_call_and_return_conditional_losses_523683) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4e_activation_layer_call_and_return_conditional_losses_521522) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5c_activation_layer_call_and_return_conditional_losses_522148) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3b_activation_layer_call_and_return_conditional_losses_534293) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4e_activation_layer_call_and_return_conditional_losses_537665) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2a_se_reduce_layer_call_and_return_conditional_losses_532162) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6e_expand_activation_layer_call_and_return_conditional_losses_543126) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3b_expand_activation_layer_call_and_return_conditional_losses_534157) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3a_activation_layer_call_and_return_conditional_losses_533772) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_stem_activation_layer_call_and_return_conditional_losses_519013) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5b_se_reduce_layer_call_and_return_conditional_losses_538812) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5a_expand_activation_layer_call_and_return_conditional_losses_521705) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6d_expand_activation_layer_call_and_return_conditional_losses_523394) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2b_activation_layer_call_and_return_conditional_losses_532625) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5a_se_reduce_layer_call_and_return_conditional_losses_521776) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5e_se_reduce_layer_call_and_return_conditional_losses_522620) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2b_activation_layer_call_and_return_conditional_losses_519614) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4b_expand_activation_layer_call_and_return_conditional_losses_535825) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5e_expand_activation_layer_call_and_return_conditional_losses_522549) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_stem_activation_layer_call_and_return_conditional_losses_531002) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6c_expand_activation_layer_call_and_return_conditional_losses_541990) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6c_activation_layer_call_and_return_conditional_losses_542126) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6a_activation_layer_call_and_return_conditional_losses_522803) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2c_activation_layer_call_and_return_conditional_losses_519832) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3b_activation_layer_call_and_return_conditional_losses_520241) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_top_activation_layer_call_and_return_conditional_losses_524456) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7a_expand_activation_layer_call_and_return_conditional_losses_544262) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4e_se_reduce_layer_call_and_return_conditional_losses_521558) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5a_activation_layer_call_and_return_conditional_losses_521740) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3b_se_reduce_layer_call_and_return_conditional_losses_520277) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5c_expand_activation_layer_call_and_return_conditional_losses_539186) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7a_se_reduce_layer_call_and_return_conditional_losses_544456) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6e_se_reduce_layer_call_and_return_conditional_losses_543320) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7b_activation_layer_call_and_return_conditional_losses_544919) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4b_expand_activation_layer_call_and_return_conditional_losses_520833) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7b_se_reduce_layer_call_and_return_conditional_losses_544977) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5b_expand_activation_layer_call_and_return_conditional_losses_538618) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2b_se_reduce_layer_call_and_return_conditional_losses_519650) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4a_expand_activation_layer_call_and_return_conditional_losses_535293) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4c_expand_activation_layer_call_and_return_conditional_losses_536393) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6f_expand_activation_layer_call_and_return_conditional_losses_543694) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6d_activation_layer_call_and_return_conditional_losses_523429) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7a_activation_layer_call_and_return_conditional_losses_524083) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5b_activation_layer_call_and_return_conditional_losses_521930) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6b_expand_activation_layer_call_and_return_conditional_losses_522958) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4d_activation_layer_call_and_return_conditional_losses_521304) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7a_activation_layer_call_and_return_conditional_losses_544398) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2c_activation_layer_call_and_return_conditional_losses_533193) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4b_se_reduce_layer_call_and_return_conditional_losses_520904) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7b_expand_activation_layer_call_and_return_conditional_losses_524238) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5a_se_reduce_layer_call_and_return_conditional_losses_538291) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6b_se_reduce_layer_call_and_return_conditional_losses_523029) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6c_expand_activation_layer_call_and_return_conditional_losses_523176) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2a_expand_activation_layer_call_and_return_conditional_losses_531957) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3a_se_reduce_layer_call_and_return_conditional_losses_520087) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4d_expand_activation_layer_call_and_return_conditional_losses_521269) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1b_se_reduce_layer_call_and_return_conditional_losses_519241) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6c_activation_layer_call_and_return_conditional_losses_523211) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2a_activation_layer_call_and_return_conditional_losses_519424) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4d_se_reduce_layer_call_and_return_conditional_losses_521340) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6c_se_reduce_layer_call_and_return_conditional_losses_542184) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2a_activation_layer_call_and_return_conditional_losses_532104) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6a_se_reduce_layer_call_and_return_conditional_losses_522839) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6d_expand_activation_layer_call_and_return_conditional_losses_542558) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6f_se_reduce_layer_call_and_return_conditional_losses_543888) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_top_activation_layer_call_and_return_conditional_losses_545351) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4d_se_reduce_layer_call_and_return_conditional_losses_537155) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4d_expand_activation_layer_call_and_return_conditional_losses_536961) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4b_activation_layer_call_and_return_conditional_losses_520868) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6d_se_reduce_layer_call_and_return_conditional_losses_523465) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5e_se_reduce_layer_call_and_return_conditional_losses_540516) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6e_expand_activation_layer_call_and_return_conditional_losses_523612) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5d_activation_layer_call_and_return_conditional_losses_539890) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5d_expand_activation_layer_call_and_return_conditional_losses_522331) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5e_activation_layer_call_and_return_conditional_losses_540458) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3c_activation_layer_call_and_return_conditional_losses_520459) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4b_se_reduce_layer_call_and_return_conditional_losses_536019) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6a_se_reduce_layer_call_and_return_conditional_losses_541095) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7a_expand_activation_layer_call_and_return_conditional_losses_524048) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1b_activation_layer_call_and_return_conditional_losses_531525) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5a_activation_layer_call_and_return_conditional_losses_538233) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5e_activation_layer_call_and_return_conditional_losses_522584) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7b_activation_layer_call_and_return_conditional_losses_524273) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4e_se_reduce_layer_call_and_return_conditional_losses_537723) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6e_activation_layer_call_and_return_conditional_losses_523647) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4b_activation_layer_call_and_return_conditional_losses_535961) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4c_se_reduce_layer_call_and_return_conditional_losses_521122) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2a_se_reduce_layer_call_and_return_conditional_losses_519460) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1a_activation_layer_call_and_return_conditional_losses_531138) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block1b_activation_layer_call_and_return_conditional_losses_519205) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3b_se_reduce_layer_call_and_return_conditional_losses_534351) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4a_activation_layer_call_and_return_conditional_losses_535440) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4c_expand_activation_layer_call_and_return_conditional_losses_521051) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4c_se_reduce_layer_call_and_return_conditional_losses_536587) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_action_504202) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block7b_se_reduce_layer_call_and_return_conditional_losses_524309) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3c_se_reduce_layer_call_and_return_conditional_losses_520495) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5e_expand_activation_layer_call_and_return_conditional_losses_540322) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block2c_se_reduce_layer_call_and_return_conditional_losses_533251) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3a_expand_activation_layer_call_and_return_conditional_losses_533625) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6f_activation_layer_call_and_return_conditional_losses_543830) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block3a_activation_layer_call_and_return_conditional_losses_520051) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5c_se_reduce_layer_call_and_return_conditional_losses_539380) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6e_activation_layer_call_and_return_conditional_losses_543262) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5a_expand_activation_layer_call_and_return_conditional_losses_538097) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6d_activation_layer_call_and_return_conditional_losses_542694) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block4e_expand_activation_layer_call_and_return_conditional_losses_521487) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_distribution_fn_510631) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block5b_activation_layer_call_and_return_conditional_losses_538754) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6a_expand_activation_layer_call_and_return_conditional_losses_540890) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_action_488366) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_block6b_activation_layer_call_and_return_conditional_losses_522993) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+WARNING:absl:Importing a function (__inference_action_497897) with ops with unsaved custom gradients. Will likely fail if a gradient is requested.
+{"model": "rt-1-15pct", "saved_model": "E:\\research\\the_world\\third_party\\SimplerEnv\\checkpoints\\rt_1_tf_trained_for_000058240", "tensorflow": "2.15.0", "tf_agents": "0.19.0", "numpy": "1.26.4", "policy_setup": "google_robot", "deterministic": "no seed input; verify by re-running a config", "image_size": [256, 320], "load_seconds": 16.64344710000296, "jit_warmup_seconds": 2.3102252000026056, "startup_seconds": 23.515458699999726, "terminate_episode": "predicted by RT-1; the caller must honour it"}
+READY 0.0.0.0:8774

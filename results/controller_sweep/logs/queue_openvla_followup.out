@@ -1,0 +1,4 @@
+==== Sat 09/19/2026 11:58:03.27 restarted scheduler after busy_ports crash (queue_openvla_followup) 
+14:06:18 done rc=0 openvla followup seed=20260918 off=24
+15:46:31 done rc=0 openvla followup seed=20270101 off=0
+15:46:31 OPENVLA_FOLLOWUP_DONE

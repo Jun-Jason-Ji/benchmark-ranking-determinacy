@@ -1,0 +1,9 @@
+21:48:57 launched {'policy': 'octo-small', 'conds': 'nominal'} on 8767
+21:48:57 launched {'policy': 'octo-small', 'conds': 'fric_x0.4'} on 8769
+21:48:57 launched {'policy': 'octo-base', 'conds': 'nominal'} on 8768
+21:48:57 launched {'policy': 'octo-base', 'conds': 'fric_x0.4'} on 8770
+22:46:42 done rc=0 {'policy': 'octo-small', 'conds': 'nominal'}
+22:50:35 done rc=0 {'policy': 'octo-small', 'conds': 'fric_x0.4'}
+23:04:23 done rc=0 {'policy': 'octo-base', 'conds': 'fric_x0.4'}
+23:05:04 done rc=0 {'policy': 'octo-base', 'conds': 'nominal'}
+23:05:25 REPLICATION_DONE

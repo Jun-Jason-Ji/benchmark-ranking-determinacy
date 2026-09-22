@@ -1,0 +1,19 @@
+06:21:02 gate: rt-1-x census 0.527 vs published 0.567 (diff -0.040)
+06:21:03 released the idle validation server on 8773
+06:21:37 server up: rt-1-converged on 8774 (startup 28s)
+06:21:37 start rt-1-converged nominal (0/300 already done)
+06:47:39 done rc=0 rt-1-converged nominal -> 300/300
+06:47:39 start rt-1-converged force_x0.5 (0/300 already done)
+07:15:17 done rc=0 rt-1-converged force_x0.5 -> 300/300
+07:15:17 start rt-1-converged fric_x0.4 (0/300 already done)
+07:43:40 done rc=0 rt-1-converged fric_x0.4 -> 300/300
+07:43:40 server on 8774 stopped
+07:44:14 server up: rt-1-15pct on 8774 (startup 24s)
+07:44:14 start rt-1-15pct nominal (0/300 already done)
+08:23:37 done rc=0 rt-1-15pct nominal -> 300/300
+08:23:37 start rt-1-15pct force_x0.5 (0/300 already done)
+09:02:41 done rc=0 rt-1-15pct force_x0.5 -> 300/300
+09:02:41 start rt-1-15pct fric_x0.4 (0/300 already done)
+09:37:50 done rc=0 rt-1-15pct fric_x0.4 -> 300/300
+09:37:50 server on 8774 stopped
+09:37:50 FRACTAL_REVERSAL_DONE

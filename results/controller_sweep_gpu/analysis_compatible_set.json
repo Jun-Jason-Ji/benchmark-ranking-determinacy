@@ -1,0 +1,65 @@
+{
+  "compatible": {
+    "nominal": true,
+    "stiff_x0.5": false,
+    "stiff_x2.0": false,
+    "damp_x0.5": false,
+    "damp_x2.0": false,
+    "delay_1": false,
+    "stiff_x0.25": false,
+    "stiff_x4.0": false,
+    "damp_x0.25": false,
+    "damp_x4.0": false,
+    "delay_2": false,
+    "iso_x0.25": true,
+    "iso_x0.5": true,
+    "iso_x2.0": true,
+    "iso_x4.0": true,
+    "force_x0.5": true,
+    "fric_x0.4": true,
+    "fric_x2.5": true,
+    "dens_x0.5": true,
+    "dens_x2.0": true
+  },
+  "summary": {
+    "carrot": {
+      "point": "abstain",
+      "set_controller": "abstain",
+      "set_controller_contact": "abstain",
+      "set_controller_bounds": [
+        -0.16666666666666666,
+        0.125
+      ],
+      "set_all_bounds": [
+        -0.20833333333333334,
+        0.20833333333333334
+      ]
+    },
+    "spoon": {
+      "point": "small better",
+      "set_controller": "abstain",
+      "set_controller_contact": "abstain",
+      "set_controller_bounds": [
+        0.0,
+        0.4791666666666667
+      ],
+      "set_all_bounds": [
+        -0.125,
+        0.4791666666666667
+      ]
+    },
+    "eggplant": {
+      "point": "small better",
+      "set_controller": "abstain",
+      "set_controller_contact": "abstain",
+      "set_controller_bounds": [
+        -0.10416666666666667,
+        0.3958333333333333
+      ],
+      "set_all_bounds": [
+        -0.10416666666666667,
+        0.5416666666666666
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+==== Sat 09/19/2026  4:38:03.87 restarted scheduler after busy_ports crash (queue_recontam_rep) 
+04:38:04 === rep_recontam_base: 2 jobs on [8768, 8770]
+05:07:17 launched octo-base dens_x0.5 on 8768
+05:53:18 done rc=0 octo-base dens_x0.5 on 8768
+05:53:20 launched octo-base@hist1 iso_x0.25 on 8768
+06:11:09 done rc=0 octo-base@hist1 iso_x0.25 on 8768
+06:11:30 === rep_recontam_base complete
+06:11:30 REP_RECONTAM_DONE

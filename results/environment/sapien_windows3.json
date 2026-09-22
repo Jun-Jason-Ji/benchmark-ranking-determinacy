@@ -1,0 +1,11 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "VK_ICD_FILENAMES": null,
+  "status": "passed",
+  "physics_engine": "created",
+  "image_shape": [
+    64,
+    64,
+    4
+  ]
+}

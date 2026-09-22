@@ -1,0 +1,9 @@
+# Compatibility pins for the upstream SAPIEN 2.2 / ManiSkill2 stack.
+numpy==1.24.4
+scipy==1.12.0
+opencv-python==4.9.0.80
+sapien==2.2.2
+gymnasium==0.29.1
+ruckig==0.12.2
+setuptools==70.3.0
+trimesh==4.2.4

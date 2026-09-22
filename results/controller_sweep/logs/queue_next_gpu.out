@@ -1,0 +1,103 @@
+08:28:22 waiting for main sweeps and iso queue to finish
+08:30:22 waiting for main sweeps and iso queue to finish
+08:32:22 waiting for main sweeps and iso queue to finish
+08:34:22 waiting for main sweeps and iso queue to finish
+08:36:22 waiting for main sweeps and iso queue to finish
+08:38:22 waiting for main sweeps and iso queue to finish
+08:40:22 waiting for main sweeps and iso queue to finish
+08:42:22 waiting for main sweeps and iso queue to finish
+08:44:22 waiting for main sweeps and iso queue to finish
+08:46:22 waiting for main sweeps and iso queue to finish
+08:48:22 waiting for main sweeps and iso queue to finish
+08:50:22 waiting for main sweeps and iso queue to finish
+08:52:22 waiting for main sweeps and iso queue to finish
+08:54:22 waiting for main sweeps and iso queue to finish
+08:56:22 waiting for main sweeps and iso queue to finish
+08:58:22 waiting for main sweeps and iso queue to finish
+09:00:22 waiting for main sweeps and iso queue to finish
+09:02:22 waiting for main sweeps and iso queue to finish
+09:04:22 waiting for main sweeps and iso queue to finish
+09:06:22 waiting for main sweeps and iso queue to finish
+09:08:22 waiting for main sweeps and iso queue to finish
+09:10:22 waiting for main sweeps and iso queue to finish
+09:12:22 waiting for main sweeps and iso queue to finish
+09:14:22 waiting for main sweeps and iso queue to finish
+09:16:22 waiting for main sweeps and iso queue to finish
+09:18:22 waiting for main sweeps and iso queue to finish
+09:20:22 waiting for main sweeps and iso queue to finish
+09:22:22 waiting for main sweeps and iso queue to finish
+09:24:22 waiting for main sweeps and iso queue to finish
+09:26:22 waiting for main sweeps and iso queue to finish
+09:28:22 waiting for main sweeps and iso queue to finish
+09:30:22 waiting for main sweeps and iso queue to finish
+09:32:22 waiting for main sweeps and iso queue to finish
+09:34:22 waiting for main sweeps and iso queue to finish
+09:36:22 waiting for main sweeps and iso queue to finish
+09:38:22 waiting for main sweeps and iso queue to finish
+09:40:22 waiting for main sweeps and iso queue to finish
+09:42:22 waiting for main sweeps and iso queue to finish
+09:44:22 waiting for main sweeps and iso queue to finish
+09:46:22 waiting for main sweeps and iso queue to finish
+09:48:22 waiting for main sweeps and iso queue to finish
+09:50:22 waiting for main sweeps and iso queue to finish
+09:52:22 waiting for main sweeps and iso queue to finish
+09:54:22 waiting for main sweeps and iso queue to finish
+09:56:22 waiting for main sweeps and iso queue to finish
+09:58:22 waiting for main sweeps and iso queue to finish
+10:00:22 waiting for main sweeps and iso queue to finish
+10:02:22 waiting for main sweeps and iso queue to finish
+10:04:22 waiting for main sweeps and iso queue to finish
+10:06:22 waiting for main sweeps and iso queue to finish
+10:08:22 waiting for main sweeps and iso queue to finish
+10:10:22 waiting for main sweeps and iso queue to finish
+10:12:22 waiting for main sweeps and iso queue to finish
+10:14:22 waiting for main sweeps and iso queue to finish
+10:16:22 waiting for main sweeps and iso queue to finish
+10:18:22 waiting for main sweeps and iso queue to finish
+10:20:22 waiting for main sweeps and iso queue to finish
+10:22:22 waiting for main sweeps and iso queue to finish
+10:24:22 waiting for main sweeps and iso queue to finish
+10:26:22 waiting for main sweeps and iso queue to finish
+10:28:22 waiting for main sweeps and iso queue to finish
+10:30:22 waiting for main sweeps and iso queue to finish
+10:32:22 waiting for main sweeps and iso queue to finish
+10:34:22 waiting for main sweeps and iso queue to finish
+10:36:22 waiting for main sweeps and iso queue to finish
+10:38:22 waiting for main sweeps and iso queue to finish
+10:40:22 waiting for main sweeps and iso queue to finish
+10:42:22 waiting for main sweeps and iso queue to finish
+10:44:22 waiting for main sweeps and iso queue to finish
+10:46:22 waiting for main sweeps and iso queue to finish
+10:48:22 waiting for main sweeps and iso queue to finish
+10:50:22 waiting for main sweeps and iso queue to finish
+10:52:22 waiting for main sweeps and iso queue to finish
+10:54:22 waiting for main sweeps and iso queue to finish
+10:56:22 waiting for main sweeps and iso queue to finish
+10:58:22 waiting for main sweeps and iso queue to finish
+11:00:22 waiting for main sweeps and iso queue to finish
+11:02:22 waiting for main sweeps and iso queue to finish
+11:04:22 === phase1_sweep_v1_to48: 6 jobs
+11:04:22 launched octo-small PutSpoonOnTableClothInScene-v1 sweep_v1 off=24 on 8767
+11:04:22 launched octo-base PutSpoonOnTableClothInScene-v1 sweep_v1 off=24 on 8768
+11:04:22 launched octo-small PutEggplantInBasketScene-v1 sweep_v1 off=24 on 8769
+11:04:22 launched octo-base PutEggplantInBasketScene-v1 sweep_v1 off=24 on 8770
+11:42:42 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 sweep_v1 off=24 on 8767
+11:42:42 launched octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 sweep_v1 off=24 on 8767
+11:47:22 done rc=0 octo-base PutSpoonOnTableClothInScene-v1 sweep_v1 off=24 on 8768
+11:47:22 launched octo-base StackGreenCubeOnYellowCubeBakedTexInScene-v1 sweep_v1 off=24 on 8768
+12:20:02 done rc=0 octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 sweep_v1 off=24 on 8767
+12:28:22 done rc=0 octo-base StackGreenCubeOnYellowCubeBakedTexInScene-v1 sweep_v1 off=24 on 8768
+12:32:02 done rc=0 octo-small PutEggplantInBasketScene-v1 sweep_v1 off=24 on 8769
+12:35:42 done rc=0 octo-base PutEggplantInBasketScene-v1 sweep_v1 off=24 on 8770
+12:36:02 === phase1_sweep_v1_to48 complete
+12:36:02 === phase2_iso_to48: 8 jobs
+12:36:03 launched octo-small PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=24 on 8767
+12:36:03 launched octo-base PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=24 on 8768
+12:36:03 launched octo-small PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8769
+12:36:03 launched octo-base PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8770
+12:58:03 done rc=0 octo-small PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=24 on 8767
+12:58:03 launched octo-small PutEggplantInBasketScene-v1 iso_ratio_v1 off=24 on 8767
+13:01:23 done rc=0 octo-base PutCarrotOnPlateInScene-v1 iso_ratio_v1 off=24 on 8768
+13:01:23 launched octo-base PutEggplantInBasketScene-v1 iso_ratio_v1 off=24 on 8768
+13:02:03 done rc=0 octo-small PutSpoonOnTableClothInScene-v1 iso_ratio_v1 off=24 on 8769
+13:02:03 launched octo-small StackGreenCubeOnYellowCubeBakedTexInScene-v1 iso_ratio_v1 off=24 on 8769

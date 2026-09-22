@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="880" viewBox="0 0 1200 880">
+<rect width="1200" height="880" fill="#f9fafb"/>
+<style>text{font-family:Arial,sans-serif;fill:#18212b} .small{font-size:13px} .axis{font-size:14px}</style>
+<text x="50" y="38" font-size="23" font-weight="bold">Synthetic mechanism pilot: identifiability and policy ranking</text>
+<text x="50" y="64" font-size="14">300 trials | known Gaussian noise | two gain parameters | no robot or real-world evidence</text>
+<text x="35" y="105" font-size="17" font-weight="bold">A. Decision coverage (alpha = 0.05)</text>
+<rect x="93" y="133" width="455" height="255" fill="white" stroke="#cbd5e1"/>
+<text class="small" text-anchor="middle" x="93.00" y="408">0</text>
+<text class="small" text-anchor="middle" x="121.44" y="408">2</text>
+<text class="small" text-anchor="middle" x="149.88" y="408">4</text>
+<text class="small" text-anchor="middle" x="206.75" y="408">8</text>
+<text class="small" text-anchor="middle" x="320.50" y="408">16</text>
+<text class="small" text-anchor="middle" x="548.00" y="408">32</text>
+<line x1="93" y1="388.00" x2="548" y2="388.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="392.00">0</text>
+<line x1="93" y1="324.25" x2="548" y2="324.25" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="328.25">0.25</text>
+<line x1="93" y1="260.50" x2="548" y2="260.50" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="264.50">0.5</text>
+<line x1="93" y1="196.75" x2="548" y2="196.75" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="200.75">0.75</text>
+<line x1="93" y1="133.00" x2="548" y2="133.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="137.00">1</text>
+<polyline points="93.000,388.000 121.438,351.450 149.875,322.550 206.750,291.950 320.500,259.650 548.000,230.750" stroke="#64748b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="93.000" cy="388.000" r="3.2" fill="#64748b"/>
+<circle cx="121.438" cy="351.450" r="3.2" fill="#64748b"/>
+<circle cx="149.875" cy="322.550" r="3.2" fill="#64748b"/>
+<circle cx="206.750" cy="291.950" r="3.2" fill="#64748b"/>
+<circle cx="320.500" cy="259.650" r="3.2" fill="#64748b"/>
+<circle cx="548.000" cy="230.750" r="3.2" fill="#64748b"/>
+<polyline points="93.000,388.000 121.438,325.950 149.875,287.700 206.750,256.250 320.500,237.550 548.000,226.500" stroke="#007f8b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="93.000" cy="388.000" r="3.2" fill="#007f8b"/>
+<circle cx="121.438" cy="325.950" r="3.2" fill="#007f8b"/>
+<circle cx="149.875" cy="287.700" r="3.2" fill="#007f8b"/>
+<circle cx="206.750" cy="256.250" r="3.2" fill="#007f8b"/>
+<circle cx="320.500" cy="237.550" r="3.2" fill="#007f8b"/>
+<circle cx="548.000" cy="226.500" r="3.2" fill="#007f8b"/>
+<polyline points="93.000,388.000 121.438,325.950 149.875,287.700 206.750,256.250 320.500,233.300 548.000,225.650" stroke="#c55334" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="93.000" cy="388.000" r="3.2" fill="#c55334"/>
+<circle cx="121.438" cy="325.950" r="3.2" fill="#c55334"/>
+<circle cx="149.875" cy="287.700" r="3.2" fill="#c55334"/>
+<circle cx="206.750" cy="256.250" r="3.2" fill="#c55334"/>
+<circle cx="320.500" cy="233.300" r="3.2" fill="#c55334"/>
+<circle cx="548.000" cy="225.650" r="3.2" fill="#c55334"/>
+<text class="axis" text-anchor="middle" x="320.5" y="433">Additional revealed observations</text>
+<text class="axis" transform="translate(48,260.5) rotate(-90)" text-anchor="middle">Fraction making a claim</text>
+<line x1="93" y1="454" x2="111" y2="454" stroke="#64748b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="117" y="458">random</text>
+<line x1="248" y1="454" x2="266" y2="454" stroke="#007f8b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="272" y="458">d_opt</text>
+<line x1="403" y1="454" x2="421" y2="454" stroke="#c55334" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="427" y="458">c_opt</text>
+<text x="625" y="105" font-size="17" font-weight="bold">B. Shared-set interval width</text>
+<rect x="683" y="133" width="455" height="255" fill="white" stroke="#cbd5e1"/>
+<text class="small" text-anchor="middle" x="683.00" y="408">0</text>
+<text class="small" text-anchor="middle" x="711.44" y="408">2</text>
+<text class="small" text-anchor="middle" x="739.88" y="408">4</text>
+<text class="small" text-anchor="middle" x="796.75" y="408">8</text>
+<text class="small" text-anchor="middle" x="910.50" y="408">16</text>
+<text class="small" text-anchor="middle" x="1138.00" y="408">32</text>
+<line x1="683" y1="388.00" x2="1138" y2="388.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="392.00">0</text>
+<line x1="683" y1="324.25" x2="1138" y2="324.25" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="328.25">0.5</text>
+<line x1="683" y1="260.50" x2="1138" y2="260.50" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="264.50">1</text>
+<line x1="683" y1="196.75" x2="1138" y2="196.75" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="200.75">1.5</text>
+<line x1="683" y1="133.00" x2="1138" y2="133.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="137.00">2</text>
+<polyline points="683.000,174.951 711.438,262.298 739.875,293.127 796.750,319.846 910.500,340.619 1138.000,354.680" stroke="#64748b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="683.000" cy="174.951" r="3.2" fill="#64748b"/>
+<circle cx="711.438" cy="262.298" r="3.2" fill="#64748b"/>
+<circle cx="739.875" cy="293.127" r="3.2" fill="#64748b"/>
+<circle cx="796.750" cy="319.846" r="3.2" fill="#64748b"/>
+<circle cx="910.500" cy="340.619" r="3.2" fill="#64748b"/>
+<circle cx="1138.000" cy="354.680" r="3.2" fill="#64748b"/>
+<polyline points="683.000,174.951 711.438,298.280 739.875,322.688 796.750,341.309 910.500,349.813 1138.000,358.019" stroke="#007f8b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="683.000" cy="174.951" r="3.2" fill="#007f8b"/>
+<circle cx="711.438" cy="298.280" r="3.2" fill="#007f8b"/>
+<circle cx="739.875" cy="322.688" r="3.2" fill="#007f8b"/>
+<circle cx="796.750" cy="341.309" r="3.2" fill="#007f8b"/>
+<circle cx="910.500" cy="349.813" r="3.2" fill="#007f8b"/>
+<circle cx="1138.000" cy="358.019" r="3.2" fill="#007f8b"/>
+<polyline points="683.000,174.951 711.438,298.280 739.875,322.688 796.750,341.309 910.500,354.916 1138.000,360.974" stroke="#c55334" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="683.000" cy="174.951" r="3.2" fill="#c55334"/>
+<circle cx="711.438" cy="298.280" r="3.2" fill="#c55334"/>
+<circle cx="739.875" cy="322.688" r="3.2" fill="#c55334"/>
+<circle cx="796.750" cy="341.309" r="3.2" fill="#c55334"/>
+<circle cx="910.500" cy="354.916" r="3.2" fill="#c55334"/>
+<circle cx="1138.000" cy="360.974" r="3.2" fill="#c55334"/>
+<text class="axis" text-anchor="middle" x="910.5" y="433">Additional revealed observations</text>
+<text class="axis" transform="translate(638,260.5) rotate(-90)" text-anchor="middle">Mean width</text>
+<line x1="683" y1="454" x2="701" y2="454" stroke="#64748b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="707" y="458">random</text>
+<line x1="838" y1="454" x2="856" y2="454" stroke="#007f8b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="862" y="458">d_opt</text>
+<line x1="993" y1="454" x2="1011" y2="454" stroke="#c55334" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="1017" y="458">c_opt</text>
+<text x="35" y="510" font-size="17" font-weight="bold">C. Risk vs coverage (budget = 8)</text>
+<rect x="93" y="538" width="455" height="255" fill="white" stroke="#cbd5e1"/>
+<text class="small" text-anchor="middle" x="93.00" y="813">0</text>
+<text class="small" text-anchor="middle" x="206.75" y="813">.25</text>
+<text class="small" text-anchor="middle" x="320.50" y="813">.5</text>
+<text class="small" text-anchor="middle" x="434.25" y="813">.75</text>
+<text class="small" text-anchor="middle" x="548.00" y="813">1</text>
+<line x1="93" y1="793.00" x2="548" y2="793.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="797.00">0</text>
+<line x1="93" y1="742.00" x2="548" y2="742.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="746.00">0.05</text>
+<line x1="93" y1="691.00" x2="548" y2="691.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="695.00">0.1</text>
+<line x1="93" y1="640.00" x2="548" y2="640.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="644.00">0.15</text>
+<line x1="93" y1="589.00" x2="548" y2="589.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="593.00">0.2</text>
+<line x1="93" y1="538.00" x2="548" y2="538.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="85" y="542.00">0.25</text>
+<polyline points="226.467,793.000 264.383,793.000 284.100,793.000 317.467,793.000 382.683,760.958" stroke="#64748b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="226.467" cy="793.000" r="3.2" fill="#64748b"/>
+<circle cx="264.383" cy="793.000" r="3.2" fill="#64748b"/>
+<circle cx="284.100" cy="793.000" r="3.2" fill="#64748b"/>
+<circle cx="317.467" cy="793.000" r="3.2" fill="#64748b"/>
+<circle cx="382.683" cy="760.958" r="3.2" fill="#64748b"/>
+<polyline points="293.200,793.000 328.083,793.000 344.767,793.000 366.000,793.000 417.567,783.467" stroke="#007f8b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="293.200" cy="793.000" r="3.2" fill="#007f8b"/>
+<circle cx="328.083" cy="793.000" r="3.2" fill="#007f8b"/>
+<circle cx="344.767" cy="793.000" r="3.2" fill="#007f8b"/>
+<circle cx="366.000" cy="793.000" r="3.2" fill="#007f8b"/>
+<circle cx="417.567" cy="783.467" r="3.2" fill="#007f8b"/>
+<polyline points="293.200,793.000 328.083,793.000 344.767,793.000 366.000,793.000 417.567,783.467" stroke="#c55334" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="293.200" cy="793.000" r="3.2" fill="#c55334"/>
+<circle cx="328.083" cy="793.000" r="3.2" fill="#c55334"/>
+<circle cx="344.767" cy="793.000" r="3.2" fill="#c55334"/>
+<circle cx="366.000" cy="793.000" r="3.2" fill="#c55334"/>
+<circle cx="417.567" cy="783.467" r="3.2" fill="#c55334"/>
+<text class="axis" text-anchor="middle" x="320.5" y="838">Fraction making a claim</text>
+<text class="axis" transform="translate(48,665.5) rotate(-90)" text-anchor="middle">Incorrect claims / all claims</text>
+<line x1="93" y1="859" x2="111" y2="859" stroke="#64748b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="117" y="863">random</text>
+<line x1="248" y1="859" x2="266" y2="859" stroke="#007f8b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="272" y="863">d_opt</text>
+<line x1="403" y1="859" x2="421" y2="859" stroke="#c55334" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="427" y="863">c_opt</text>
+<text x="625" y="510" font-size="17" font-weight="bold">D. Null vs weak vs balanced excitation</text>
+<rect x="683" y="538" width="455" height="255" fill="white" stroke="#cbd5e1"/>
+<text class="small" text-anchor="middle" x="683.00" y="813">8</text>
+<text class="small" text-anchor="middle" x="774.00" y="813">32</text>
+<text class="small" text-anchor="middle" x="865.00" y="813">128</text>
+<text class="small" text-anchor="middle" x="956.00" y="813">512</text>
+<text class="small" text-anchor="middle" x="1047.00" y="813">2048</text>
+<text class="small" text-anchor="middle" x="1138.00" y="813">8192</text>
+<line x1="683" y1="793.00" x2="1138" y2="793.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="797.00">0</text>
+<line x1="683" y1="729.25" x2="1138" y2="729.25" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="733.25">0.5</text>
+<line x1="683" y1="665.50" x2="1138" y2="665.50" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="669.50">1</text>
+<line x1="683" y1="601.75" x2="1138" y2="601.75" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="605.75">1.5</text>
+<line x1="683" y1="538.00" x2="1138" y2="538.00" stroke="#e2e8f0"/>
+<text class="small" text-anchor="end" x="675" y="542.00">2</text>
+<polyline points="683.000,538.607 774.000,538.125 865.000,538.115 956.000,538.042 1047.000,538.024 1138.000,538.016" stroke="#64748b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="683.000" cy="538.607" r="3.2" fill="#64748b"/>
+<circle cx="774.000" cy="538.125" r="3.2" fill="#64748b"/>
+<circle cx="865.000" cy="538.115" r="3.2" fill="#64748b"/>
+<circle cx="956.000" cy="538.042" r="3.2" fill="#64748b"/>
+<circle cx="1047.000" cy="538.024" r="3.2" fill="#64748b"/>
+<circle cx="1138.000" cy="538.016" r="3.2" fill="#64748b"/>
+<polyline points="683.000,541.545 774.000,545.479 865.000,554.675 956.000,611.773 1047.000,695.429 1138.000,744.214" stroke="#c55334" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="683.000" cy="541.545" r="3.2" fill="#c55334"/>
+<circle cx="774.000" cy="545.479" r="3.2" fill="#c55334"/>
+<circle cx="865.000" cy="554.675" r="3.2" fill="#c55334"/>
+<circle cx="956.000" cy="611.773" r="3.2" fill="#c55334"/>
+<circle cx="1047.000" cy="695.429" r="3.2" fill="#c55334"/>
+<circle cx="1138.000" cy="744.214" r="3.2" fill="#c55334"/>
+<polyline points="683.000,726.796 774.000,759.898 865.000,776.449 956.000,784.725 1047.000,788.862 1138.000,790.931" stroke="#007f8b" stroke-width="2.6" fill="none" stroke-dasharray=""/>
+<circle cx="683.000" cy="726.796" r="3.2" fill="#007f8b"/>
+<circle cx="774.000" cy="759.898" r="3.2" fill="#007f8b"/>
+<circle cx="865.000" cy="776.449" r="3.2" fill="#007f8b"/>
+<circle cx="956.000" cy="784.725" r="3.2" fill="#007f8b"/>
+<circle cx="1047.000" cy="788.862" r="3.2" fill="#007f8b"/>
+<circle cx="1138.000" cy="790.931" r="3.2" fill="#007f8b"/>
+<text class="axis" text-anchor="middle" x="910.5" y="838">Calibration sample count (log scale)</text>
+<text class="axis" transform="translate(638,665.5) rotate(-90)" text-anchor="middle">Mean contrast interval width</text>
+<line x1="683" y1="859" x2="701" y2="859" stroke="#64748b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="707" y="863">null</text>
+<line x1="838" y1="859" x2="856" y2="859" stroke="#c55334" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="862" y="863">weak</text>
+<line x1="993" y1="859" x2="1011" y2="859" stroke="#007f8b" stroke-width="2.5" stroke-dasharray=""/>
+<text class="small" x="1017" y="863">balanced</text>
+</svg>

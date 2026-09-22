@@ -1,0 +1,25 @@
+WARNING:tensorflow:From E:\research\the_world\.venv-policy\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-policy\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.logging.TaskLevelStatusMessage is deprecated. Please use tf.compat.v1.logging.TaskLevelStatusMessage instead.
+
+WARNING:tensorflow:From E:\research\the_world\.venv-policy\Lib\site-packages\tensorflow_probability\python\internal\backend\numpy\_utils.py:48: The name tf.control_flow_v2_enabled is deprecated. Please use tf.compat.v1.control_flow_v2_enabled instead.
+
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]E:\research\the_world\.venv-policy\Lib\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in E:\models\hf\hub\models--rail-berkeley--octo-small. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Fetching 8 files:  12%|#2        | 1/8 [00:01<00:10,  1.54s/it]Fetching 8 files:  88%|########7 | 7/8 [00:03<00:00,  2.06it/s]Fetching 8 files: 100%|##########| 8/8 [00:16<00:00,  2.10s/it]
+E:\research\the_world\.venv-policy\Lib\site-packages\huggingface_hub\file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+E:\research\the_world\.venv-policy\Lib\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in E:\models\hf\hub\models--t5-base. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+E:\research\the_world\.venv-policy\Lib\site-packages\huggingface_hub\file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+WARNING:root:'observations' is missing items compared to example_batch: {'proprio', 'pad_mask_dict/timestep', 'pad_mask_dict/image_wrist', 'timestep', 'pad_mask_dict/proprio', 'image_wrist', 'pad_mask_dict/image_primary'}
+WARNING:root:No pad_mask_dict found. Nothing will be masked.
+WARNING:root:Skipping observation tokenizer: obs_wrist
+WARNING:root:'observations' is missing items compared to example_batch: {'proprio', 'pad_mask_dict/timestep', 'pad_mask_dict/image_wrist', 'timestep', 'pad_mask_dict/proprio', 'image_wrist', 'pad_mask_dict/image_primary'}
+WARNING:root:No pad_mask_dict found. Nothing will be masked.
+WARNING:root:Skipping observation tokenizer: obs_wrist
+{"model": "octo-small", "hf_id": "hf://rail-berkeley/octo-small", "jax": "0.4.20", "flax": "0.7.5", "tensorflow": "2.15.0", "numpy": "1.26.4", "python": "3.11.16", "jax_backend": "cpu", "load_seconds": 31.47327449999284, "jit_warmup_seconds": 17.44649959995877, "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz", "action_mean": [0.00021160596224945039, 0.00012613728176802397, -0.00017021960229612887, -0.0001506186235928908, -0.00023830769350752234, 0.0002564573078416288, 0.0], "action_std": [0.009637207724153996, 0.013506603427231312, 0.012518610805273056, 0.028067905455827713, 0.03016904927790165, 0.07632624357938766, 1.0], "startup_seconds": 67.2041436000145}
+READY 127.0.0.1:8765

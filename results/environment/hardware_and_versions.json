@@ -1,0 +1,44 @@
+{
+  "recorded_at_utc": "2026-09-18T13:08:19.388983+00:00",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.16",
+  "evidence": "hardware_and_environment_audit",
+  "nvidia_smi": {
+    "exit_code": 0,
+    "stdout": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 616.92",
+    "stderr": ""
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.7.1+cu128",
+    "sapien": "3.0.3",
+    "mani_skill": "3.0.1",
+    "gymnasium": "1.3.0"
+  },
+  "sources": {
+    "third_party/SimplerEnv": {
+      "exit_code": 0,
+      "stdout": "06accaca93535902d408da4855f21cece12bceb7",
+      "stderr": ""
+    },
+    "third_party/SimplerEnv/ManiSkill2_real2sim": {
+      "exit_code": 0,
+      "stdout": "ef7a4d4fdf4b69f2c2154db5b15b9ac8dfe10682",
+      "stderr": ""
+    },
+    "third_party/SimplerEnv-ms3": {
+      "exit_code": 0,
+      "stdout": "52a5088ca4bfc3a7159828af08874a198d6f95c3",
+      "stderr": ""
+    }
+  },
+  "torch_cuda": {
+    "available": true,
+    "runtime": "12.8",
+    "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "kernel_check_sum": 1240.0
+  },
+  "asset_files": 350,
+  "asset_total_bytes": 180619879
+}

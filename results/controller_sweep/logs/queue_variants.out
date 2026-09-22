@@ -1,0 +1,58 @@
+16:56:00 waiting for CONTACT_EXT_DONE
+16:58:00 waiting for CONTACT_EXT_DONE
+17:00:00 waiting for CONTACT_EXT_DONE
+17:02:00 waiting for CONTACT_EXT_DONE
+17:04:00 waiting for CONTACT_EXT_DONE
+17:06:00 waiting for CONTACT_EXT_DONE
+17:08:00 waiting for CONTACT_EXT_DONE
+17:10:00 waiting for CONTACT_EXT_DONE
+17:12:00 waiting for CONTACT_EXT_DONE
+17:14:00 waiting for CONTACT_EXT_DONE
+17:16:00 waiting for CONTACT_EXT_DONE
+17:18:00 waiting for CONTACT_EXT_DONE
+17:20:00 waiting for CONTACT_EXT_DONE
+17:22:00 waiting for CONTACT_EXT_DONE
+17:24:02 waiting for running sweep jobs to finish on ports [8768]
+17:25:04 waiting for running sweep jobs to finish on ports [8768]
+17:26:06 waiting for running sweep jobs to finish on ports [8768]
+17:27:08 waiting for running sweep jobs to finish on ports [8768]
+17:28:10 waiting for running sweep jobs to finish on ports [8768]
+17:29:12 waiting for running sweep jobs to finish on ports [8768]
+17:30:13 stopping WSL policy servers
+17:30:13 launched server octo-small on 8767
+17:30:33 launched server octo-small on 8769
+17:30:53 launched server octo-base on 8768
+17:31:13 launched server octo-base on 8770
+17:31:41 server health (variant-capable): {8767: False, 8768: False, 8769: False, 8770: False}
+17:32:19 server health (variant-capable): {8767: False, 8768: False, 8769: False, 8770: False}
+17:32:57 server health (variant-capable): {8767: False, 8768: False, 8769: False, 8770: False}
+17:33:31 server health (variant-capable): {8767: True, 8768: False, 8769: True, 8770: False}
+17:34:01 server health (variant-capable): {8767: True, 8768: True, 8769: True, 8770: True}
+17:34:01 === variants_v1_24: 12 jobs
+17:34:02 launched octo-small@noens PutEggplantInBasketScene-v1 variants_v1 off=0 on 8767
+17:34:02 launched octo-small@chunk4 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8769
+17:34:02 launched octo-base@noens PutEggplantInBasketScene-v1 variants_v1 off=0 on 8768
+17:34:02 launched octo-base@chunk4 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8770
+18:51:29 done rc=0 octo-small@chunk4 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8769
+18:51:31 launched octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8769
+18:56:05 done rc=0 octo-base@chunk4 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8770
+18:56:06 launched octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8770
+19:26:23 done rc=0 octo-small@noens PutEggplantInBasketScene-v1 variants_v1 off=0 on 8767
+19:26:24 launched octo-small@noens PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8767
+19:44:58 done rc=0 octo-base@noens PutEggplantInBasketScene-v1 variants_v1 off=0 on 8768
+19:44:59 launched octo-base@noens PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8768
+20:04:57 done rc=0 octo-small@noens PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8767
+20:04:59 launched octo-small@chunk4 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8767
+20:14:37 done rc=0 octo-small@hist1 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8769
+20:14:39 launched octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8769
+20:23:54 done rc=0 octo-small@chunk4 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8767
+20:28:54 done rc=0 octo-base@hist1 PutEggplantInBasketScene-v1 variants_v1 off=0 on 8770
+20:28:57 launched octo-base@chunk4 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8770
+20:39:46 done rc=0 octo-base@noens PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8768
+20:39:47 launched octo-base@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8768
+21:19:09 done rc=0 octo-small@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8769
+21:20:34 done rc=0 octo-base@chunk4 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8770
+21:48:17 done rc=0 octo-base@hist1 PutSpoonOnTableClothInScene-v1 variants_v1 off=0 on 8768
+21:48:38 === variants_v1_24 complete
+21:48:39 analysis rc=0
+21:48:39 VARIANTS_QUEUE_DONE

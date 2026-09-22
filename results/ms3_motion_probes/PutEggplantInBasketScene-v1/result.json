@@ -1,0 +1,66 @@
+{
+  "env_id": "PutEggplantInBasketScene-v1",
+  "steps": 10,
+  "action_mode": "lift_probe",
+  "seed": 20260918,
+  "output_dir": "results/ms3_motion_probes/PutEggplantInBasketScene-v1",
+  "status": "passed",
+  "evidence": "simulator_smoke_only",
+  "policy": "lift_probe_debug_only",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "original_simpler_reproduction": false,
+  "sim_backend": "cpu",
+  "elapsed_seconds": 4.0480222999467514,
+  "compatibility_adapter": {
+    "ik": "upstream_torch_jacobian_solver_on_cpu",
+    "pci_parser": "preserve_full_pci_address",
+    "benchmark_equivalent": false
+  },
+  "versions": {
+    "sapien": "3.0.3",
+    "mani_skill": "3.0.1",
+    "torch": "2.7.1+cu128",
+    "gymnasium": "1.3.0",
+    "numpy": "1.26.4"
+  },
+  "render_backend": "pci:0000:01:00.0",
+  "render_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "torch_cuda_available": true,
+  "instruction": [
+    "put eggplant into yellow basket"
+  ],
+  "action_shape": [
+    7
+  ],
+  "image_shape": [
+    480,
+    640,
+    3
+  ],
+  "completed_steps": 10,
+  "step_wall_seconds": 0.1483555000158958,
+  "final_info": {
+    "elapsed_steps": [
+      10
+    ],
+    "moved_correct_obj": [
+      false
+    ],
+    "moved_wrong_obj": [
+      false
+    ],
+    "is_src_obj_grasped": [
+      false
+    ],
+    "consecutive_grasp": [
+      false
+    ],
+    "src_on_target": [
+      false
+    ],
+    "success": [
+      false
+    ]
+  },
+  "joint_displacement_norm": 0.3057442009449005
+}

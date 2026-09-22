@@ -1,0 +1,2 @@
+{"model": "openvla-7b-4bit", "hf_id": "openvla/openvla-7b", "quant": "4bit", "torch": "2.7.1+cu128", "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU", "vram_alloc_gb": 4.73, "load_seconds": 32.56560129998252, "jit_warmup_seconds": 20.19663209997816, "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz", "unnorm_key": "bridge_orig", "variants": "reset config accepted but ignored (no history/ensemble in OpenVLA)"}
+READY 127.0.0.1:8771

@@ -1,0 +1,122 @@
+# Deployment-variant policy pairs (same 96 episode_ids per condition; duplicate records: keep last)
+
+Policies: octo-base, octo-base@chunk4, octo-base@hist1, octo-base@noens, octo-small, octo-small@chunk4, octo-small@hist1, octo-small@noens. Near-tied = |Δ| ≤ 0.1 at nominal with both rates in [0.2, 0.8].
+
+## PutEggplantInBasketScene-v1
+
+### Nominal success rates
+
+| policy | n | rate |
+|---|---:|---:|
+| octo-base | 96 | 0.375 |
+| octo-base@chunk4 | 24 | 0.083 |
+| octo-base@hist1 | 96 | 0.365 |
+| octo-base@noens | 24 | 0.167 |
+| octo-small | 96 | 0.583 |
+| octo-small@chunk4 | 24 | 0.167 |
+| octo-small@hist1 | 96 | 0.479 |
+| octo-small@noens | 24 | 0.167 |
+
+### All pairs at nominal (Δ = rate(A) − rate(B), paired)
+
+| A | B | n | Δ | 95% | near-tied |
+|---|---|---:|---:|---|---|
+| octo-base | octo-base@chunk4 | 24 | +0.167 | [+0.00, +0.38] |  |
+| octo-base | octo-base@hist1 | 96 | +0.010 | [-0.10, +0.12] | yes |
+| octo-base | octo-base@noens | 24 | +0.083 | [-0.12, +0.29] |  |
+| octo-base | octo-small | 96 | -0.208 | [-0.32, -0.09] |  |
+| octo-base | octo-small@chunk4 | 24 | +0.083 | [-0.17, +0.33] |  |
+| octo-base | octo-small@hist1 | 96 | -0.104 | [-0.22, +0.02] |  |
+| octo-base | octo-small@noens | 24 | +0.083 | [-0.08, +0.25] |  |
+| octo-base@chunk4 | octo-base@hist1 | 24 | -0.292 | [-0.50, -0.08] |  |
+| octo-base@chunk4 | octo-base@noens | 24 | -0.083 | [-0.25, +0.08] |  |
+| octo-base@chunk4 | octo-small | 24 | -0.458 | [-0.67, -0.21] |  |
+| octo-base@chunk4 | octo-small@chunk4 | 24 | -0.083 | [-0.29, +0.12] |  |
+| octo-base@chunk4 | octo-small@hist1 | 24 | -0.375 | [-0.58, -0.17] |  |
+| octo-base@chunk4 | octo-small@noens | 24 | -0.083 | [-0.21, +0.00] |  |
+| octo-base@hist1 | octo-base@noens | 24 | +0.208 | [+0.00, +0.46] |  |
+| octo-base@hist1 | octo-small | 96 | -0.219 | [-0.34, -0.08] |  |
+| octo-base@hist1 | octo-small@chunk4 | 24 | +0.208 | [-0.04, +0.46] |  |
+| octo-base@hist1 | octo-small@hist1 | 96 | -0.115 | [-0.23, +0.00] |  |
+| octo-base@hist1 | octo-small@noens | 24 | +0.208 | [-0.04, +0.46] |  |
+| octo-base@noens | octo-small | 24 | -0.375 | [-0.58, -0.17] |  |
+| octo-base@noens | octo-small@chunk4 | 24 | +0.000 | [-0.25, +0.21] |  |
+| octo-base@noens | octo-small@hist1 | 24 | -0.292 | [-0.50, -0.12] |  |
+| octo-base@noens | octo-small@noens | 24 | +0.000 | [-0.21, +0.21] |  |
+| octo-small | octo-small@chunk4 | 24 | +0.375 | [+0.08, +0.62] |  |
+| octo-small | octo-small@hist1 | 96 | +0.104 | [-0.02, +0.23] |  |
+| octo-small | octo-small@noens | 24 | +0.375 | [+0.17, +0.58] |  |
+| octo-small@chunk4 | octo-small@hist1 | 24 | -0.292 | [-0.54, -0.04] |  |
+| octo-small@chunk4 | octo-small@noens | 24 | +0.000 | [-0.21, +0.25] |  |
+| octo-small@hist1 | octo-small@noens | 24 | +0.292 | [+0.04, +0.54] |  |
+
+### Near-tied pairs under calibration-invisible conditions (1 pairs)
+
+#### octo-base vs octo-base@hist1
+
+| condition | n | Δ | 95% | sign |
+|---|---:|---:|---|---|
+| nominal | 96 | +0.010 | [-0.10, +0.12] | 0 |
+| iso_x0.25 | 96 | +0.125 | [+0.01, +0.24] | + |
+| iso_x4.0 | 96 | +0.042 | [-0.07, +0.16] | 0 |
+| force_x0.5 | 96 | +0.031 | [-0.08, +0.16] | 0 |
+| fric_x0.4 | 96 | +0.021 | [-0.10, +0.16] | 0 |
+| dens_x0.5 | 96 | +0.104 | [-0.02, +0.22] | 0 |
+
+### CI-supported sign flips among near-tied pairs
+
+None.
+
+## PutSpoonOnTableClothInScene-v1
+
+### Nominal success rates
+
+| policy | n | rate |
+|---|---:|---:|
+| octo-base | 48 | 0.083 |
+| octo-base@chunk4 | 24 | 0.000 |
+| octo-base@hist1 | 24 | 0.167 |
+| octo-base@noens | 24 | 0.125 |
+| octo-small | 48 | 0.375 |
+| octo-small@chunk4 | 24 | 0.083 |
+| octo-small@hist1 | 24 | 0.250 |
+| octo-small@noens | 24 | 0.125 |
+
+### All pairs at nominal (Δ = rate(A) − rate(B), paired)
+
+| A | B | n | Δ | 95% | near-tied |
+|---|---|---:|---:|---|---|
+| octo-base | octo-base@chunk4 | 24 | +0.083 | [+0.00, +0.21] |  |
+| octo-base | octo-base@hist1 | 24 | -0.083 | [-0.29, +0.12] |  |
+| octo-base | octo-base@noens | 24 | -0.042 | [-0.21, +0.08] |  |
+| octo-base | octo-small | 48 | -0.292 | [-0.44, -0.15] |  |
+| octo-base | octo-small@chunk4 | 24 | +0.000 | [-0.17, +0.17] |  |
+| octo-base | octo-small@hist1 | 24 | -0.167 | [-0.38, +0.00] |  |
+| octo-base | octo-small@noens | 24 | -0.042 | [-0.21, +0.12] |  |
+| octo-base@chunk4 | octo-base@hist1 | 24 | -0.167 | [-0.33, -0.04] |  |
+| octo-base@chunk4 | octo-base@noens | 24 | -0.125 | [-0.25, +0.00] |  |
+| octo-base@chunk4 | octo-small | 24 | -0.375 | [-0.58, -0.17] |  |
+| octo-base@chunk4 | octo-small@chunk4 | 24 | -0.083 | [-0.21, +0.00] |  |
+| octo-base@chunk4 | octo-small@hist1 | 24 | -0.250 | [-0.42, -0.08] |  |
+| octo-base@chunk4 | octo-small@noens | 24 | -0.125 | [-0.25, +0.00] |  |
+| octo-base@hist1 | octo-base@noens | 24 | +0.042 | [-0.17, +0.25] |  |
+| octo-base@hist1 | octo-small | 24 | -0.208 | [-0.46, +0.04] |  |
+| octo-base@hist1 | octo-small@chunk4 | 24 | +0.083 | [-0.08, +0.25] |  |
+| octo-base@hist1 | octo-small@hist1 | 24 | -0.083 | [-0.29, +0.12] |  |
+| octo-base@hist1 | octo-small@noens | 24 | +0.042 | [-0.17, +0.25] |  |
+| octo-base@noens | octo-small | 24 | -0.250 | [-0.42, -0.08] |  |
+| octo-base@noens | octo-small@chunk4 | 24 | +0.042 | [-0.12, +0.21] |  |
+| octo-base@noens | octo-small@hist1 | 24 | -0.125 | [-0.33, +0.08] |  |
+| octo-base@noens | octo-small@noens | 24 | +0.000 | [-0.17, +0.17] |  |
+| octo-small | octo-small@chunk4 | 24 | +0.292 | [+0.04, +0.54] |  |
+| octo-small | octo-small@hist1 | 24 | +0.125 | [-0.04, +0.29] |  |
+| octo-small | octo-small@noens | 24 | +0.250 | [+0.00, +0.50] |  |
+| octo-small@chunk4 | octo-small@hist1 | 24 | -0.167 | [-0.38, +0.00] |  |
+| octo-small@chunk4 | octo-small@noens | 24 | -0.042 | [-0.21, +0.12] |  |
+| octo-small@hist1 | octo-small@noens | 24 | +0.125 | [-0.12, +0.38] |  |
+
+### Near-tied pairs under calibration-invisible conditions (0 pairs)
+
+### CI-supported sign flips among near-tied pairs
+
+None.

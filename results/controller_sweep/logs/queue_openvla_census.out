@@ -1,0 +1,12 @@
+==== Sat 09/19/2026 20:15:11.96 restarted scheduler after busy_ports crash (queue_openvla_census) 
+==== Sat 09/19/2026 21:37:12.81 restarted scheduler after busy_ports crash (queue_openvla_census) 
+23:01:13 starting OpenVLA census jobs
+23:01:13 start ms3_PutEggplantInBasketScene-v1_nominal (nominal,force_x0.5, 64 eps)
+23:29:34 done rc=0 ms3_PutEggplantInBasketScene-v1_nominal
+23:29:34 start ms3_PutEggplantInBasketScene-v1_iso_x0.25 (iso_x0.25,iso_x4.0,fric_x0.4,dens_x0.5, 64 eps)
+02:43:39 done rc=0 ms3_PutEggplantInBasketScene-v1_iso_x0.25
+02:43:39 start ms3_PutCarrotOnPlateInScene-v1_nominal (nominal,force_x0.5,iso_x0.25,iso_x4.0,fric_x0.4,dens_x0.5, 24 eps)
+04:18:20 done rc=0 ms3_PutCarrotOnPlateInScene-v1_nominal
+04:18:20 start ms2_widowx_put_eggplant_in_basket (nominal,force_x0.5, 24 eps)
+05:38:51 done rc=0 ms2_widowx_put_eggplant_in_basket
+05:38:51 OPENVLA_CENSUS_DONE

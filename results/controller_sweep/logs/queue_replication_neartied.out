@@ -1,0 +1,53 @@
+==== Sat 09/19/2026  0:40:11.70 restarted scheduler after busy_ports crash (queue_replication_neartied) 
+02:36:12 === rep_neartied_base: 12 jobs on [8768, 8770]
+02:36:14 skip complete octo-base nominal
+02:36:14 launched octo-base iso_x0.25 on 8768
+02:36:14 launched octo-base iso_x4.0 on 8770
+02:36:14 skip complete octo-base fric_x0.4
+03:07:08 done rc=0 octo-base iso_x4.0 on 8770
+03:07:10 launched octo-base force_x0.5 on 8770
+03:07:53 done rc=0 octo-base iso_x0.25 on 8768
+03:07:56 launched octo-base dens_x0.5 on 8768
+03:41:23 done rc=0 octo-base force_x0.5 on 8770
+03:41:26 launched octo-base@hist1 nominal on 8770
+03:51:35 done rc=0 octo-base dens_x0.5 on 8768
+03:51:39 launched octo-base@hist1 iso_x0.25 on 8768
+04:17:13 done rc=0 octo-base@hist1 nominal on 8770
+04:17:17 launched octo-base@hist1 iso_x4.0 on 8770
+04:36:50 done rc=0 octo-base@hist1 iso_x0.25 on 8768
+04:36:52 launched octo-base@hist1 force_x0.5 on 8768
+04:47:32 done rc=0 octo-base@hist1 iso_x4.0 on 8770
+04:47:35 launched octo-base@hist1 fric_x0.4 on 8770
+05:07:25 done rc=0 octo-base@hist1 force_x0.5 on 8768
+05:17:25 done rc=0 octo-base@hist1 fric_x0.4 on 8770
+05:17:27 launched octo-base@hist1 dens_x0.5 on 8770
+05:59:53 done rc=0 octo-base@hist1 dens_x0.5 on 8770
+06:00:16 === rep_neartied_base complete
+06:00:16 REP_NEARTIED_BASE_DONE
+06:42:20 === rep_neartied_small: 12 jobs on [8767]
+06:42:22 skip complete octo-small nominal
+06:42:22 launched octo-small iso_x0.25 on 8767
+06:42:22 skip complete octo-small fric_x0.4
+07:09:10 done rc=0 octo-small iso_x0.25 on 8767
+07:09:12 launched octo-small iso_x4.0 on 8767
+07:35:53 done rc=0 octo-small iso_x4.0 on 8767
+07:35:55 launched octo-small force_x0.5 on 8767
+08:02:52 done rc=0 octo-small force_x0.5 on 8767
+08:02:54 launched octo-small dens_x0.5 on 8767
+08:29:43 done rc=0 octo-small dens_x0.5 on 8767
+08:29:45 launched octo-small@hist1 nominal on 8767
+08:55:10 done rc=0 octo-small@hist1 nominal on 8767
+08:55:12 launched octo-small@hist1 iso_x0.25 on 8767
+09:21:12 done rc=0 octo-small@hist1 iso_x0.25 on 8767
+09:21:14 launched octo-small@hist1 iso_x4.0 on 8767
+09:48:18 done rc=0 octo-small@hist1 iso_x4.0 on 8767
+09:48:20 launched octo-small@hist1 force_x0.5 on 8767
+10:15:02 done rc=0 octo-small@hist1 force_x0.5 on 8767
+10:15:04 launched octo-small@hist1 fric_x0.4 on 8767
+10:42:09 done rc=0 octo-small@hist1 fric_x0.4 on 8767
+10:42:10 launched octo-small@hist1 dens_x0.5 on 8767
+11:09:14 done rc=0 octo-small@hist1 dens_x0.5 on 8767
+11:09:36 === rep_neartied_small complete
+11:09:36 REP_NEARTIED_SMALL_DONE
+11:09:37 analysis rc=0 
+11:09:37 REP_NEARTIED_DONE

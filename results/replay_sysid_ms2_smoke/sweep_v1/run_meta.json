@@ -1,0 +1,105 @@
+{
+  "started_utc": "2026-09-19T09:55:57Z",
+  "args": {
+    "episodes_dir": "data/bridge_sysid",
+    "episodes": 3,
+    "preset": "sweep_v1",
+    "conditions": null,
+    "grid": false,
+    "output_dir": "results/replay_sysid_ms2_smoke",
+    "max_steps": null,
+    "verbose": true
+  },
+  "compat": {
+    "renderer": "stubbed_no_render",
+    "lighting_patched_classes": 10,
+    "physics": "sapien2_cpu_original",
+    "ik": "original_controller_compute_ik"
+  },
+  "env_id": "PutCarrotOnPlateInScene-v0",
+  "robot": "widowx",
+  "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+  "sim_freq": 500,
+  "control_freq": 5,
+  "nominal": {
+    "stiffness": [
+      1169.7891719504198,
+      730.0,
+      808.4601346394447,
+      1229.1299089624076,
+      1272.2760456418862,
+      1056.3326605132252
+    ],
+    "damping": [
+      330.0,
+      180.0,
+      152.12036565582588,
+      309.6215302722146,
+      201.04998711007383,
+      269.51458932695414
+    ],
+    "force_limit": [
+      200.0,
+      200.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ]
+  },
+  "conditions": {
+    "nominal": {
+      "stiffness_scale": 1.0,
+      "damping_scale": 1.0,
+      "force_scale": 1.0,
+      "delay_steps": 0
+    },
+    "stiff_x0.5": {
+      "stiffness_scale": 0.5,
+      "damping_scale": 1.0,
+      "force_scale": 1.0,
+      "delay_steps": 0
+    },
+    "stiff_x2.0": {
+      "stiffness_scale": 2.0,
+      "damping_scale": 1.0,
+      "force_scale": 1.0,
+      "delay_steps": 0
+    },
+    "damp_x0.5": {
+      "stiffness_scale": 1.0,
+      "damping_scale": 0.5,
+      "force_scale": 1.0,
+      "delay_steps": 0
+    },
+    "damp_x2.0": {
+      "stiffness_scale": 1.0,
+      "damping_scale": 2.0,
+      "force_scale": 1.0,
+      "delay_steps": 0
+    },
+    "force_x0.5": {
+      "stiffness_scale": 1.0,
+      "damping_scale": 1.0,
+      "force_scale": 0.5,
+      "delay_steps": 0
+    },
+    "delay_1": {
+      "stiffness_scale": 1.0,
+      "damping_scale": 1.0,
+      "force_scale": 1.0,
+      "delay_steps": 1
+    }
+  },
+  "n_demos": 3,
+  "demo_ids": [
+    0,
+    1,
+    2
+  ],
+  "pose_convention": "p=state[:3]; R=euler2mat(rpy,'sxyz') @ [[0,0,1],[0,1,0],[-1,0,0]]",
+  "action_convention": "world_vector; euler2axangle(rpy,'sxyz'); gripper 0 (as in SIMPLER tools/sysid/sysid.py)",
+  "evidence": "original_simpler_main_ms2_sapien2_cpu_headless_wsl",
+  "simpler_main_commit": "06accaca93535902d408da4855f21cece12bceb7",
+  "sapien": null
+}

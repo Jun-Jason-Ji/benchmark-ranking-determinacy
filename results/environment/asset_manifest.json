@@ -1,0 +1,1752 @@
+[
+  {
+    "path": "robots/widowx/interbotix_black.png",
+    "bytes": 1994,
+    "sha256": "4cd224156bbaab1ddf1b92b90d46c54835a8b41f61bc258b2f216c2618e062cf"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-1-Base.mtl",
+    "bytes": 264,
+    "sha256": "50251834d51d5a8aa7e35828e02293f886f6491cfba5cb3c5bcdd92f0db83a7b"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-1-Base.obj",
+    "bytes": 90132,
+    "sha256": "cfd94392082cbb3ca3d4f6ced9ae27597bd8ee7d82713d10c73b243279b0a6e5"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-1-Base.stl",
+    "bytes": 75584,
+    "sha256": "69facd590abff70fa03431497ead2c7f1aabe616d55af594288e9bf36b1fd067"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-10-Finger.mtl",
+    "bytes": 264,
+    "sha256": "69722b1558a280874b50ab2344a16da03179a0b83306f0d9e31b180fe8306ad0"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-10-Finger.obj",
+    "bytes": 20005,
+    "sha256": "aaaa946a04923ed31cc452550aefbd8c6165dba08af32cec817deed4250be550"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-10-Finger.stl",
+    "bytes": 22284,
+    "sha256": "6a459bd4ef07eb5c4687e258bd9564004e741437e2e668af7ed31964567d8f90"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-2-Shoulder.mtl",
+    "bytes": 264,
+    "sha256": "83b0a97a580f6a2066a1df4d0e580052fc1ce1234211a3ecc458322f4bc594b5"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-2-Shoulder.obj",
+    "bytes": 63364,
+    "sha256": "b6ff150e48076e245141e68c036243f963187d908542bac51e3013e362333c8c"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-2-Shoulder.stl",
+    "bytes": 61884,
+    "sha256": "337b4cb7e9b637ee3dca6a737becf831fe5f95b790b34f9a97e5cf11475fc222"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-3-UA.mtl",
+    "bytes": 264,
+    "sha256": "42a6e1a00269c21d3207619bec1d8f56d084874c1cb81a0c415b210178e57a0c"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-3-UA.obj",
+    "bytes": 76630,
+    "sha256": "ad13e1481995bc99952ee434698abeef4390cf68ee82268f6a6dfead53502c03"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-3-UA.stl",
+    "bytes": 70484,
+    "sha256": "b4550b3a79e83d0ca9e1a65e490ff4e25b667e8a7d8e94bab441851c96eb11fa"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-4-UF.mtl",
+    "bytes": 264,
+    "sha256": "8b0251d58af13d4f4804e57e8b40e84d672ffc405040f5fd3e85b5852303d965"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-4-UF.obj",
+    "bytes": 30040,
+    "sha256": "83c41227a1f9e042689c71afd6768f66d1bded8b6a37bbdfc5077c50edaf0e08"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-4-UF.stl",
+    "bytes": 30084,
+    "sha256": "1a64efc97dc129bc277afee75c129de27721e8fedcad45a4ec8b251f44542f23"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-5-LF.mtl",
+    "bytes": 264,
+    "sha256": "c7231116094bc04941a27e474fa5cf4082760708d3c05183100176dce8dcd225"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-5-LF.obj",
+    "bytes": 162813,
+    "sha256": "3bb06c5d045c35b5b9b5502fff6ea3d5c593807438cd9650030c039cd957f55e"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-5-LF.stl",
+    "bytes": 149084,
+    "sha256": "1445950b7f5ce2cf374b98711df296acd6c2b4df24c3937b413bcb6beb037603"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-6-Wrist.mtl",
+    "bytes": 264,
+    "sha256": "4a83c8b46fa3732d23dfabe6d702d2342ede2f6d5ee9163b9859bebb15363b66"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-6-Wrist.obj",
+    "bytes": 54720,
+    "sha256": "163c6045e6721c2775b9aec2a69b07da6f7cd91006d347fb5666d2aeb1398bb9"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-6-Wrist.stl",
+    "bytes": 57684,
+    "sha256": "8602fe1313765caceec64faff5ec919ec09c57c614b87f1c1c625dcef1e3df5a"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-7-Gripper.mtl",
+    "bytes": 264,
+    "sha256": "52679031a89ef1abf5c8658eee3cc3dad1d9f8b34fa4c8ad245d2c46cd864e80"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-7-Gripper.obj",
+    "bytes": 16025,
+    "sha256": "b2693bc6796375200996371c98ebce3cb9e28dfc79419fdd920e8558e2c0eaa6"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-7-Gripper.stl",
+    "bytes": 17684,
+    "sha256": "6dbc189d3787ca62e09a8cf3f928ceca70c5c184a95c97ac6587805aa6a1ec6d"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-8-Gripper-Prop.mtl",
+    "bytes": 264,
+    "sha256": "7e2bb4b56f691015d49add667a7f04a0bed0ec29a5b9210aecbfa660237029fe"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-8-Gripper-Prop.obj",
+    "bytes": 21989,
+    "sha256": "bc3b29d50690231542cdd7cfdb111a260e98abf02f5ef2bb91f4c69c2e00cd6d"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-8-Gripper-Prop.stl",
+    "bytes": 22684,
+    "sha256": "30fcd807817b7c9df6275d2c8100cfe0e7786e2c65b574d22efe177520f1a316"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-9-Gripper-Bar.mtl",
+    "bytes": 264,
+    "sha256": "9b47bcbf913cd5d97fe4325436d64e965e82d377efa36a0996831312c3603359"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-9-Gripper-Bar.obj",
+    "bytes": 36117,
+    "sha256": "e184d13326b0fa6c082936345d627aa877f7d60d1bbebe16e3f60152cba56d4a"
+  },
+  {
+    "path": "robots/widowx/meshes_wx250s/WXSA-250-M-9-Gripper-Bar.stl",
+    "bytes": 76084,
+    "sha256": "7980c24781c496a1f046b07ba132c36ce54630f3be61220c5271e65d70344545"
+  },
+  {
+    "path": "robots/widowx/README.md",
+    "bytes": 445,
+    "sha256": "47793de5bec75c02d52143948baf2a85c41c0efaaa8deb441a5b9c37dfe84881"
+  },
+  {
+    "path": "robots/widowx/wx250s.srdf",
+    "bytes": 652,
+    "sha256": "e53089886a87f17e2a249b6b5c84c31af97d0059cf9f54acdd253ff77c37e221"
+  },
+  {
+    "path": "robots/widowx/wx250s.urdf",
+    "bytes": 15834,
+    "sha256": "1e8a73f270804dbcc32603d68a8fb5d34f57d109b30cc325ad89b36eecbb8506"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/info_bridge_custom_baked_tex_v0.json",
+    "bytes": 494,
+    "sha256": "a25bdb72746bd51e7cb612d95ace97b535623ba6b79367084c4fa3ba62d08eda"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/info_bridge_custom_v0.json",
+    "bytes": 2958,
+    "sha256": "18b428fc3a10683389ada74233ac63dee04db2870453890133172cdbaa6678cc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/info_pick_custom_baked_tex_v0.json",
+    "bytes": 5031,
+    "sha256": "ab81c61dee637e6f8ae5094308e1c0c2894e8f30365f0f778b5a2e8da6ac1e4b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/info_pick_custom_baked_tex_v1.json",
+    "bytes": 5055,
+    "sha256": "18f97a64d788d874cc98a51e9cdad2d18d3402d272c54dd8cf2669d91fa9ad19"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/info_pick_custom_v0.json",
+    "bytes": 4318,
+    "sha256": "23f1422c72438e8e917ea5ea29cdeac67fb1735ca807537b4cc43295effc312b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/mk_station.urdf",
+    "bytes": 13729,
+    "sha256": "14c11ece256bda7e74d1043a3de1ddbdd9c03d1afa2b1ea0fe483b9374675427"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/mk_station2.urdf",
+    "bytes": 13729,
+    "sha256": "96f6643efbcb6ef2963c92a583d7fbad239aade31779698371f94efb525ed481"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/mk_station3.urdf",
+    "bytes": 13613,
+    "sha256": "e59c61546a4a59fd454f8a8f5bab02cde462b034afb498b6aa085c3fb63a85de"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/mk_station4.urdf",
+    "bytes": 13594,
+    "sha256": "808492880cffde8d4f0e8a5e6cc2e7883998d42c27f856f098e47c02fb979d0a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/mk_station_recolor.urdf",
+    "bytes": 13803,
+    "sha256": "59efdcedc52fd89fcab1715cebe57c68a8ffefe676d6b9bbd294f82dfeb8307a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can/collision.obj",
+    "bytes": 124584,
+    "sha256": "d27d076dfad3b2c79c2c4b148ec18bac5f408581a8069fa2e12b488cbcb2e75b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can/Image_0.001.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can/Image_1.001.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can/Image_3.001.jpg",
+    "bytes": 13936,
+    "sha256": "56fe499dd18ea98cfb2abe389925ff5bc6f42e9b4898da4303fbd85d7ff3d6f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can/Pepsi1.001_baseColor.png",
+    "bytes": 326985,
+    "sha256": "37bdacda4d7f276b145a5e8b33207664ac05921287c8d97283279fbad336d5f2"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can/textured.dae",
+    "bytes": 302140,
+    "sha256": "3d377ce3c03278ac6a38e78da3b57d42fc12f089b8168d5ffc50145fe542dff6"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can_alt/collision.obj",
+    "bytes": 412166,
+    "sha256": "dd2107a88e383f60c3f2ed063dd6ba18fd4a5ea03a5db183025a6b055887fad0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can_alt/Image_0.001.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can_alt/Image_1.001.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can_alt/Image_3.001.jpg",
+    "bytes": 13936,
+    "sha256": "56fe499dd18ea98cfb2abe389925ff5bc6f42e9b4898da4303fbd85d7ff3d6f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can_alt/Image_4.001.jpg",
+    "bytes": 11670,
+    "sha256": "80b3898669b06377151d95daf76a5aa9740d4fb3a6961bb8afbbf5dc1ff1620d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/7up_can_alt/textured.dae",
+    "bytes": 301444,
+    "sha256": "81aa12dc136f890a336d5f3a8f0179c7a0d81db82516606884510acf99fcb6c9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/apple/collision.obj",
+    "bytes": 1873617,
+    "sha256": "1bca40992fb7e105f919d133547a0d13aaee5ba0182e34ea3cde1e6726a62441"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/apple/Image_0.001.png",
+    "bytes": 1270502,
+    "sha256": "4001636b44c127a783108acc129cd17b8765100fc516a5dc888fedd467774833"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/apple/textured.dae",
+    "bytes": 216474,
+    "sha256": "ed1c5de566acc30e408c65bc3a04884256b7023205ee951251408f10e5adf92b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple/collision.obj",
+    "bytes": 1873617,
+    "sha256": "1bca40992fb7e105f919d133547a0d13aaee5ba0182e34ea3cde1e6726a62441"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple/textured.glb",
+    "bytes": 146324,
+    "sha256": "a23f0ef0c0346165a6530d3dedde16c7f6bb2e582ec61b0eede3e449d8903a4d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple/textured_bkup.glb",
+    "bytes": 146324,
+    "sha256": "a23f0ef0c0346165a6530d3dedde16c7f6bb2e582ec61b0eede3e449d8903a4d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple/textured_cand1.glb",
+    "bytes": 143096,
+    "sha256": "a66b4d0360e3d8dcec0c820490d09d4aee15fdde09d0bc378d740e7f6aad3c59"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple/textured_toobright.glb",
+    "bytes": 146596,
+    "sha256": "62d328a270dcff6a676787a6a72e8cc8d90faba967f8c56eaaf584dead412f3b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple_v2/collision.obj",
+    "bytes": 1873617,
+    "sha256": "1bca40992fb7e105f919d133547a0d13aaee5ba0182e34ea3cde1e6726a62441"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple_v2/textured.baked.glb",
+    "bytes": 73936,
+    "sha256": "62d3eeae26287e5426d2d82f53004e13e4b19159e8f61a79fca1e7122b2a4f43"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple_v2/textured.baked.zero123plus.png",
+    "bytes": 530052,
+    "sha256": "5939ed0f41c25cb6a1f34d3c9ab5b787e8fee7509853aadd6690763f1b03f53c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 45058,
+    "sha256": "605f2c3f0779c2584d22338dd3b2963e800121f96ff66f588bd94e9bf514e80c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple_v2/textured.glb",
+    "bytes": 140092,
+    "sha256": "07a1d5422af1551fc3ee87b0e105c9f81459930e109c2718c1d0d4c998a37b38"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_apple_v2/textured.vis.glb",
+    "bytes": 140012,
+    "sha256": "56175984e7413e56a6a0e0339b199b9aa7e7297e0fcd25b374bae274b44a8a7b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle/collision.obj",
+    "bytes": 227255,
+    "sha256": "be7ca080c853bfab9e38e7a1defd758cd031a118922cd456c52b1f9d7b4231b7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle/old_not_very_good/textured.glb",
+    "bytes": 440024,
+    "sha256": "8c1e2e4fc1f52b01c8c145775c6c44f293dca9ba4d58f7a7c5d75ae367a4ae6b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle/old_not_very_good/textured_bkup.glb",
+    "bytes": 440024,
+    "sha256": "8c1e2e4fc1f52b01c8c145775c6c44f293dca9ba4d58f7a7c5d75ae367a4ae6b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle/old_not_very_good/textured_cand1.glb",
+    "bytes": 436456,
+    "sha256": "23fa7ccbabc51ed232c339f30832129b025c2654d621b21ea259594e43cd0a70"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle/old_not_very_good/textured_toobright.glb",
+    "bytes": 431432,
+    "sha256": "85a1a29c18b8eb0a38f441a0ee9645607d7818f414649e1869bda1117bb5edeb"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle/textured.glb",
+    "bytes": 364252,
+    "sha256": "c2fe007d2bf027807ad13ceb9e76aa41d7ea890fb4a0838152f3e80545f564a1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle_v2/collision.obj",
+    "bytes": 80409,
+    "sha256": "5b2654cec6146b7619d4fa1df5b414a8d55672c9a648e9198ffc006d6f1b3ff1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle_v2/textured.baked.glb",
+    "bytes": 313212,
+    "sha256": "fdae184328cdb5e3245a1ecdc71e66d7050e10663062e00190da57ca6180c398"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle_v2/textured.baked.zero123plus.png",
+    "bytes": 253511,
+    "sha256": "b84bc6f3db7aa1d7b7e556c44cf1773139ed0995eb63980114440d663b0d5883"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 22977,
+    "sha256": "eca10a1040b237d5cf562f8ac16cc1bdcb575b5934f25af56567e3ec993758ce"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle_v2/textured.glb",
+    "bytes": 351076,
+    "sha256": "cda8101320aded09f8ee3932a44dc0866f6a02221161ecdda894c4c808c6930c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_blue_plastic_bottle_v2/textured.vis.glb",
+    "bytes": 350996,
+    "sha256": "d328f0da9512749e7a72878cad45f8d5d883bd0ebb820c7967a97fbd58ae0c57"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_green_cube_3cm/collision.obj",
+    "bytes": 593,
+    "sha256": "b57ba99c4a72caa36e99329c604f412834014726f2fc077eab6b07629abbc237"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_green_cube_3cm/textured.dae",
+    "bytes": 7379,
+    "sha256": "90a1904406d3c4d303b583f65220b1e91a8bacd3731da9ae25ce9c1c3a7297c9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can/collision.obj",
+    "bytes": 130218,
+    "sha256": "a08987f13dc876967e5e7528ba8a7bc792db731b134bf3875e4eb4484f2ed692"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can/textured.glb",
+    "bytes": 118860,
+    "sha256": "e09e1013293f822ed7cd4110acd327e9b00ff69232a940e9e158c115efc78a36"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can/textured_bkup.glb",
+    "bytes": 118860,
+    "sha256": "e09e1013293f822ed7cd4110acd327e9b00ff69232a940e9e158c115efc78a36"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can/textured_cand1.glb",
+    "bytes": 117068,
+    "sha256": "8895480c9283d9f0c1f468652185b4933885eb3b42391d50cdf0af77efd6bc00"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can/textured_toobright.glb",
+    "bytes": 115256,
+    "sha256": "cdcda70700ee5acd8670b98b9e4878094aa24d0c5ca79e41fdf038ae7fab58ef"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can_v2/collision.obj",
+    "bytes": 124584,
+    "sha256": "d27d076dfad3b2c79c2c4b148ec18bac5f408581a8069fa2e12b488cbcb2e75b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can_v2/textured.baked.glb",
+    "bytes": 74816,
+    "sha256": "2dd3961d47ad25056ee54c425d6f7a274db47ab567a4b3d64087d24c797b39a6"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can_v2/textured.baked.zero123plus.png",
+    "bytes": 388263,
+    "sha256": "3e61bc4f3dfd0757cbd3a908bf0747e0d36abaef994c46da76a7bcb9407ee6f4"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 30877,
+    "sha256": "17270e21f57c40eece586e3b5626f45bbedef1467a01bd81433f7fc8e46033a0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can_v2/textured.glb",
+    "bytes": 111124,
+    "sha256": "d71b18728708573eaf90a71d5c37ef7d275646fbbb835887a9b5fc7d1aeb6cfd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_7up_can_v2/textured.vis.glb",
+    "bytes": 111044,
+    "sha256": "6120231b44ee6d0b001c390a8c581ffc7a37c9f04463896ed4f2610a2e44245f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can/collision.obj",
+    "bytes": 9019,
+    "sha256": "7a86fedf06cfea120f5a41a9b02b25d2c9071fb181414852e4f992ba9e92c20d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can/textured.glb",
+    "bytes": 1937368,
+    "sha256": "e28c5fa75636a0ee2e312067dab9e483d34d2c32d0aa2708001bab66af6ab6f7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can/textured_bkup.glb",
+    "bytes": 1937368,
+    "sha256": "e28c5fa75636a0ee2e312067dab9e483d34d2c32d0aa2708001bab66af6ab6f7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can/textured_cand1.glb",
+    "bytes": 1933024,
+    "sha256": "fe1496dd021b920831b7de6eaf9d228a4f6a4b04793fdf4254661042fc52384a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can/textured_toobright.glb",
+    "bytes": 1944208,
+    "sha256": "c0eff2a517bb2beb3e739f6ffb875d02df0dfabc9b34a09d42ecd39f0fcfeb7a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/collision.obj",
+    "bytes": 9019,
+    "sha256": "7a86fedf06cfea120f5a41a9b02b25d2c9071fb181414852e4f992ba9e92c20d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/manual/Image_2.004.jpg",
+    "bytes": 315912,
+    "sha256": "cf1db919e0c34519b5d23692472505f047a37d831aa3e661b1382d2aa4a6f28e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/manual/textured.dae",
+    "bytes": 4007367,
+    "sha256": "cb6bbe2a6ce789c449ff80b2d6f68868525959a4e5888aca4b3886014fded389"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/textured.baked.glb",
+    "bytes": 1817084,
+    "sha256": "e00690e3a6ee977393ee23fd537634b44b111ab6564fb458bcc1803e595c8ff0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/textured.baked.zero123plus.png",
+    "bytes": 420513,
+    "sha256": "88063ab133741c7e2069b9d0a5e8f4c3dcdb60a22ad0323af12d3846f10d21f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 29928,
+    "sha256": "692cdeb62bc32e765902fb76d7cc02d90e4b087d0b07b905bca2593b13f84fb0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/textured.glb",
+    "bytes": 2755048,
+    "sha256": "b1e6f43b367381c893355051be1b7b1087d6fb4097055ffc4e33835cdbefd332"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_coke_can_v2/textured.vis.glb",
+    "bytes": 2754972,
+    "sha256": "24519b424c11022efb5c9e38aed02c0789e95d33db1082a7d96acd2921edb0f0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can/collision.obj",
+    "bytes": 415251,
+    "sha256": "61e11087c98aaaa69f2717686ebcc9d8e7843dd4572c126a195f35b2072b85a1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can/textured.glb",
+    "bytes": 135120,
+    "sha256": "be3de60a0632fbbcc2e095533ef40df5e2499d4ef7379a855d0c99fc5f36f66b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can/textured_bkup.glb",
+    "bytes": 135120,
+    "sha256": "be3de60a0632fbbcc2e095533ef40df5e2499d4ef7379a855d0c99fc5f36f66b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can/textured_cand1.glb",
+    "bytes": 133852,
+    "sha256": "5948af33ee31248d52ffb1f3bf01b7c2fd9b071f9886f371fd7585bd87373ace"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can/textured_toobright.glb",
+    "bytes": 139736,
+    "sha256": "bb07f408f65939b7e3d511ece3a6a20ae96a93cf0d39d7fb7644e66bb9315abc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/collision.obj",
+    "bytes": 415251,
+    "sha256": "61e11087c98aaaa69f2717686ebcc9d8e7843dd4572c126a195f35b2072b85a1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/manual/Image_0.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/manual/Image_0.png",
+    "bytes": 585560,
+    "sha256": "cc9024bb9d0043dbd79b873609710696d46416d88de969e606209ce9a8d02f15"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/manual/Image_3.jpg",
+    "bytes": 103058,
+    "sha256": "204f0af3cf6f5d220bf0a6ab70e5257d7e7b42ec95804824f2aab37f2e4ed36e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/manual/textured.dae",
+    "bytes": 299710,
+    "sha256": "507c47cf4652c11ca52e0cf7a522abb5d709cd3efb020c71b02b9815ad706cc9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/textured.baked.glb",
+    "bytes": 72332,
+    "sha256": "ff25897a8ac5bdac443b2f721d37d126af956716557d31a6f27d87292141c274"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/textured.baked.zero123plus.png",
+    "bytes": 379585,
+    "sha256": "71a13035037f8f14b74b86ca006e756e53abf159f12c58a923df815e0914b8df"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 30513,
+    "sha256": "2646afe776e375c0426e28d1fb7088ed91dc31569862292b17b4f88a9f9464a2"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/textured.glb",
+    "bytes": 105156,
+    "sha256": "f9a0a51659374810f466d61dbdbbbc31e8b31bd9673edd8329c2763f45620c13"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_pepsi_can_v2/textured.vis.glb",
+    "bytes": 105080,
+    "sha256": "7af70a2953ec4675dd683f956e566d119612c37d7d1feaf4c21fc62c8a7de116"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can/collision.obj",
+    "bytes": 2390439,
+    "sha256": "dbb4b5d03ade7f7f9bc06b1e50da9fb49637e2eefdb6e81d1450a222c14e25cf"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can/Image_0.005.png",
+    "bytes": 142887,
+    "sha256": "85d13fdb28fa83dabc05cf052927122dd580cfe0ede9c3875c8f21e7a50c1859"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can/Image_1.png",
+    "bytes": 951,
+    "sha256": "cd9b2c8db17037a49e8423130e4331daa3091cff8ff847f344864198e7fbfdcd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can/Image_2.jpg",
+    "bytes": 110334,
+    "sha256": "9b30d4f10af229caf1eba251df64dc27f3a8b87bb6899fdef2c55c2d06b82819"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can/textured.dae",
+    "bytes": 7250837,
+    "sha256": "c92104dedadcfdf1a8dfd13f84f392f0eda57ccc264090d8e568f9bfbbbcc2eb"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/collision.obj",
+    "bytes": 152088,
+    "sha256": "73a299d8bd1c3776057b04c3f54947c72710a4cda8b8906a16bda14d5b1122f2"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/manual/Image_0.004.png",
+    "bytes": 241775,
+    "sha256": "d19119d43df8f31754d07ff2be5dd2d6a053f388fe65e88373c41b8dc6ec579c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/manual/Image_2.002.png",
+    "bytes": 6995,
+    "sha256": "b0074c01a9be007cc81c12e801a181be6308b75a06aade347353684500b2af4f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/manual/Image_3.002.jpg",
+    "bytes": 104397,
+    "sha256": "8bc4e84ddd4cf0ff55388fecf8c260aa4acd19db0e733f0e05050f31ec51fed1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/manual/textured.dae",
+    "bytes": 7150002,
+    "sha256": "8c6a43904c7d944ea7e82366bb4738eec80427fa2b8efb4ba53433c30e1e201c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/remeshed.obj",
+    "bytes": 1568300,
+    "sha256": "524bd588be0f8d17bcc3a05ef2ff5b26ffa6d671f1113c04038997785878fed8"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/textured.baked.glb",
+    "bytes": 682748,
+    "sha256": "c07cb92b608b61d42078b000cb27d15559ee9995af2dfa137c1868d1c84dc78a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/textured.baked.zero123plus.png",
+    "bytes": 320314,
+    "sha256": "ce7ab1271e890e7f85cf67a6f57c1751a5e4a3e26d350c8ff83ee8eef39b952e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 24878,
+    "sha256": "c37c0475cc35a5a8e008f699fa43421547f5c174fc94b8efd9e4ec7404e54525"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/textured.glb",
+    "bytes": 728688,
+    "sha256": "16428dfd2acbb1fffa855c8db3fa835804e529b83b0c08fead17e85586711c1a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_opened_redbull_can_v2/textured.vis.glb",
+    "bytes": 728612,
+    "sha256": "f941423086d6f7c0f2cbe7d301e0e9bf8d7718429ea26e2237b57bda3612a7d5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange/collision.obj",
+    "bytes": 2946075,
+    "sha256": "c6f3125e28fdfca3a34bd56046239c1e305e223790f6fe8db6b196e5a9490471"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange/textured.glb",
+    "bytes": 143172,
+    "sha256": "4aa9ad9337adc7f466dcc81524ce5b183c1629ea68ba77654f228907f6698eea"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange/textured_bkup.glb",
+    "bytes": 143172,
+    "sha256": "4aa9ad9337adc7f466dcc81524ce5b183c1629ea68ba77654f228907f6698eea"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange/textured_cand1.glb",
+    "bytes": 140840,
+    "sha256": "d8a6e46585e3ea17a4dfd2bcbd8987404050406317a7a849501287c044f39a67"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange/textured_toobright.glb",
+    "bytes": 143400,
+    "sha256": "b314f2e6701073396a0ea636f2c1cec44bbd3d943c82f912b4a2f718b12dcfd1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange_v2/collision.obj",
+    "bytes": 2946075,
+    "sha256": "c6f3125e28fdfca3a34bd56046239c1e305e223790f6fe8db6b196e5a9490471"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange_v2/textured.baked.glb",
+    "bytes": 77144,
+    "sha256": "1cd83ec57e440c828c5da9a87e13f6446ef9540f41d2e9b55e57e2419132beab"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange_v2/textured.baked.zero123plus.png",
+    "bytes": 526849,
+    "sha256": "af14ccebf95c32b0ad504343d1aa96832b9d862d3c16091f2ba3c2ccbf2f25dc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 51381,
+    "sha256": "c635f70afc3e2013adfde82b61c204cd04b506f71a7862688f88e70990e2b61e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange_v2/textured.glb",
+    "bytes": 119644,
+    "sha256": "b1f9e4ae23ca3cb2b9653cb6ddafc3d679575d05797b04b6d06d17008cab8951"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_orange_v2/textured.vis.glb",
+    "bytes": 119564,
+    "sha256": "ad570dc690cb9d47ce96f3a2c56d56e9c7d14c2d2a62290bf267e0fe5d41b80a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge/collision.obj",
+    "bytes": 162611,
+    "sha256": "6d12589a7b9fba3703630c2b2ce4828bd22af3653987647ab3923bd5659f81b8"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge/textured.glb",
+    "bytes": 154988,
+    "sha256": "fa6db3ad1dedce22fa0501910ad520403cd200b571831cebcb967d7bb288a72e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge/textured_bkup.glb",
+    "bytes": 154988,
+    "sha256": "fa6db3ad1dedce22fa0501910ad520403cd200b571831cebcb967d7bb288a72e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge/textured_cand1.glb",
+    "bytes": 163424,
+    "sha256": "e45b6f7ece6f40b2a6582609ae1747c82f988b0b8a1a797f985347aea8149eac"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge/textured_toobright.glb",
+    "bytes": 165808,
+    "sha256": "12b2c1803fa13e25abbe467e585dc886ffd63755ebbad31cc8c9c1ab6cfc6e7a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/collision.obj",
+    "bytes": 162611,
+    "sha256": "6d12589a7b9fba3703630c2b2ce4828bd22af3653987647ab3923bd5659f81b8"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/manual/Image_0.003.png",
+    "bytes": 19647,
+    "sha256": "5cc48829edec33ada54347d8a0b00148ada228a39d211750c86bd558e18903cc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/manual/textured.dae",
+    "bytes": 61863,
+    "sha256": "4c47b2411ee12bef31e5d9d8ac5252fefa10329dfa1a932ba9eddc908de963e9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/textured.baked.glb",
+    "bytes": 35444,
+    "sha256": "61621f3db4a4d859198b831bf5a4e907730ab885a0d8f821d3f99be7962afd0a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/textured.baked.zero123plus.png",
+    "bytes": 400158,
+    "sha256": "7e2f2977cdcc3979003b07e9de43e19b25fb9b4da28286deb3f880f04b6ad316"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/textured.baked.zero123plus_mask.png",
+    "bytes": 32728,
+    "sha256": "930c2b9cf48f9f0a25beb4a126c1316021fa453d6d11959aa5b190e13cbf99d3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/textured.glb",
+    "bytes": 72548,
+    "sha256": "0d5b7639706672cf8a90f5a001670ce558e527781f3e0305fd937cd32bf959f4"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_sponge_v2/textured.vis.glb",
+    "bytes": 72472,
+    "sha256": "0756551b011c58db49113a0a7ed4451a420e1d963ecb0c8d063873350fae22ab"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_yellow_cube_3cm/collision.obj",
+    "bytes": 593,
+    "sha256": "b57ba99c4a72caa36e99329c604f412834014726f2fc077eab6b07629abbc237"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/baked_yellow_cube_3cm/textured.dae",
+    "bytes": 7414,
+    "sha256": "0eedc10a63594cd2b6a2af67faffbbcdbfb29b77edc9e0e65884e532bb53a364"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/blue_plastic_bottle/collision.obj",
+    "bytes": 227255,
+    "sha256": "be7ca080c853bfab9e38e7a1defd758cd031a118922cd456c52b1f9d7b4231b7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/blue_plastic_bottle/jasmine_tea_3.jpg.002.jpg",
+    "bytes": 1172246,
+    "sha256": "82c10803d9aac79582f33a41236ff6a04195b63273160e8c126089f3ada5fc69"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/blue_plastic_bottle/textured.dae",
+    "bytes": 12124958,
+    "sha256": "716c21d7a2134d74b8c1b1a68716f50343e707a6e15edff46a9a38672d5205e5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_carrot_generated/collision.obj",
+    "bytes": 136534,
+    "sha256": "259153ea5c5da23d36abb51d3576132a9c865b5765cdd22838dd5d43bc286b41"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_carrot_generated/Image_0.005.png",
+    "bytes": 2611762,
+    "sha256": "c23aa14532978e72644da9613f83e27ac8dfda1844293d6fe7e46ff88d8c6cb9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_carrot_generated/textured.dae",
+    "bytes": 120502,
+    "sha256": "f5d768775183f1aa6ff858671a1a1845bfe12a6338e93a69b3ae4d7e20bd83ef"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_carrot_generated_modified/collision.obj",
+    "bytes": 10686,
+    "sha256": "a6aed91e197c5e43ea7e3d1ae0c1382c07d13ac736699d19e8b6db45fcd856df"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_carrot_generated_modified/Image_0.005.png",
+    "bytes": 2611762,
+    "sha256": "c23aa14532978e72644da9613f83e27ac8dfda1844293d6fe7e46ff88d8c6cb9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_carrot_generated_modified/textured.dae",
+    "bytes": 120502,
+    "sha256": "f5d768775183f1aa6ff858671a1a1845bfe12a6338e93a69b3ae4d7e20bd83ef"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse/collision.obj",
+    "bytes": 60128,
+    "sha256": "7b239c44c59614e31945239174c28a82da284f089ef634a05caf5e7ce5041566"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse/plate_texture.png",
+    "bytes": 1364,
+    "sha256": "b096033e42a0482e0e391ffbf8025f86b30daa49a3d18ea5aaa163ea762b83cd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse/textured.dae",
+    "bytes": 110586,
+    "sha256": "99bc7731f539bc89e2c81580cda255c211184f3495940b22b25dce640bd87829"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse_larger/collision.mtl",
+    "bytes": 284,
+    "sha256": "171bd4d144d528a63b5c5d3a93d98a799f0f2b967cb890e5e1ccccf76e559117"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse_larger/collision.obj",
+    "bytes": 74357,
+    "sha256": "87b39a0d02b88ff1bab4cb1053e00b7d0c805c2593dce08a2ad3b56f84f70605"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse_larger/plate_texture.png",
+    "bytes": 1364,
+    "sha256": "b096033e42a0482e0e391ffbf8025f86b30daa49a3d18ea5aaa163ea762b83cd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_plate_objaverse_larger/textured.dae",
+    "bytes": 103452,
+    "sha256": "6e10d7461174a702ab2b7847a4c835508e3e5500562b070be6d6cb6a8f9e665f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_spoon_generated_modified/collision.obj",
+    "bytes": 203679,
+    "sha256": "9b951ae89a995b8ac5782679cf21ea1fc7607c89ef8134a94274bcb892eb9928"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_spoon_generated_modified/Image_0.003.jpg",
+    "bytes": 2018301,
+    "sha256": "6a3a360b219b224638e69f0efb679d4e34be23fa5f143913eb5077e3998166d2"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/bridge_spoon_generated_modified/textured.dae",
+    "bytes": 1186105,
+    "sha256": "7d80de627a4662b6dfdce0ae970831582e4d587c9244f3457815bb355ef18375"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/coke_can/collision.obj",
+    "bytes": 9019,
+    "sha256": "7a86fedf06cfea120f5a41a9b02b25d2c9071fb181414852e4f992ba9e92c20d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/coke_can/Image_2.004.jpg",
+    "bytes": 350977,
+    "sha256": "cc4068ac6cd1ecdadca33d2ea0568057ffde4eeccd84bd748dadda66b9b447e9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/coke_can/textured.dae",
+    "bytes": 4007418,
+    "sha256": "0fab276cf45fe9b24d68c09f582c55392a482474604bc16f18afd508358b222f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/dummy_bridge_plate_objaverse/collision.obj",
+    "bytes": 60128,
+    "sha256": "7b239c44c59614e31945239174c28a82da284f089ef634a05caf5e7ce5041566"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/dummy_bridge_plate_objaverse/plate_texture.png",
+    "bytes": 1364,
+    "sha256": "b096033e42a0482e0e391ffbf8025f86b30daa49a3d18ea5aaa163ea762b83cd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/dummy_bridge_plate_objaverse/textured.dae",
+    "bytes": 110586,
+    "sha256": "99bc7731f539bc89e2c81580cda255c211184f3495940b22b25dce640bd87829"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/dummy_sink_target_plane/collision.obj",
+    "bytes": 928,
+    "sha256": "72b6f42d2eb383cdf54bc693ec5ad692c43fa3762bcc03f1a309e315e9f8f01f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/dummy_sink_target_plane/textured.dae",
+    "bytes": 3767,
+    "sha256": "a6d89530fcd5090fcb607228999906096bd0c619a8c1deede707712467fadccd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/collision.obj",
+    "bytes": 53473,
+    "sha256": "6e14211550ea50e24aa81e5320698e123b3058ef9e5f8f38a0fd75fb326b4bd7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/eggplanttexture.png",
+    "bytes": 52327,
+    "sha256": "b2a3767d4a9bdb34244cdb0e5cd2645d41ff1f6a1b240a154c4f3fed6677d3d6"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/eggtexture.png",
+    "bytes": 62191,
+    "sha256": "13670432cbe3b6e0b1e26e0bc6497d3c67cbb3ca2c41c881da3425e97bf9e777"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/eggtexturenew.png",
+    "bytes": 62191,
+    "sha256": "13670432cbe3b6e0b1e26e0bc6497d3c67cbb3ca2c41c881da3425e97bf9e777"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/Image_0.001.png",
+    "bytes": 72080,
+    "sha256": "818e2497749f5b3de9f4ed70f275c571c5178c1f9a834788a22bc0d2991a2b3a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/Image_0.png",
+    "bytes": 15611,
+    "sha256": "338f30ca7a0bed2d362ba1e25fd1712c8270a47f0974a5f01f2e737b493f0182"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/textured.baked_texture.png",
+    "bytes": 12193,
+    "sha256": "b757f1e0f74871ab50d8ea2013fa3134b09084fbe7f36900ddca3e3a9a046ccc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/eggplant/textured.dae",
+    "bytes": 9898063,
+    "sha256": "e294558917fbc3363eadc4beb304d0697813b202bc1705ed832e1b7f114a7034"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/fanta_can/collision.obj",
+    "bytes": 413027,
+    "sha256": "80c8a86337ec83c3bf74e9ea7646ccb1c8d1111fc62e5abba9f71cccb104b893"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/fanta_can/Image_0.001.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/fanta_can/Image_1.001.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/fanta_can/Image_3.001.jpg",
+    "bytes": 13936,
+    "sha256": "56fe499dd18ea98cfb2abe389925ff5bc6f42e9b4898da4303fbd85d7ff3d6f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/fanta_can/Image_6.001.jpg",
+    "bytes": 12257,
+    "sha256": "143c4e807e25b2a3becf5e96665007cd78efd7c650b795a716d7517632c0b581"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/fanta_can/textured.dae",
+    "bytes": 302643,
+    "sha256": "39cfd85e6739332095fe9ea8b2a8dd60db6f4e1e01ee011babfa9b73c2658005"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/green_cube_3cm/collision.obj",
+    "bytes": 593,
+    "sha256": "b57ba99c4a72caa36e99329c604f412834014726f2fc077eab6b07629abbc237"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/green_cube_3cm/textured.dae",
+    "bytes": 4875,
+    "sha256": "8812fc63a2a7e7324fc549c1a32088840ab3aba52bc1369acdf3a255ebd5f0b5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_7up_can/collision.obj",
+    "bytes": 124584,
+    "sha256": "d27d076dfad3b2c79c2c4b148ec18bac5f408581a8069fa2e12b488cbcb2e75b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_7up_can/Image_0.001.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_7up_can/Image_1.001.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_7up_can/Image_3.001.jpg",
+    "bytes": 13369,
+    "sha256": "eb031dfaaffb379e2626912f8ef21daa62f75b980b65067f3efc7d6ae6058945"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_7up_can/Pepsi1.001_baseColor.png",
+    "bytes": 326985,
+    "sha256": "37bdacda4d7f276b145a5e8b33207664ac05921287c8d97283279fbad336d5f2"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_7up_can/textured.dae",
+    "bytes": 302177,
+    "sha256": "a1f7cd4b2daf75b5260727530dc298487d2e438614fe01f41880b70ccfb6adcd"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_coke_can/collision.obj",
+    "bytes": 9019,
+    "sha256": "7a86fedf06cfea120f5a41a9b02b25d2c9071fb181414852e4f992ba9e92c20d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_coke_can/Image_2.004.jpg",
+    "bytes": 350977,
+    "sha256": "cc4068ac6cd1ecdadca33d2ea0568057ffde4eeccd84bd748dadda66b9b447e9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_coke_can/textured.dae",
+    "bytes": 4007418,
+    "sha256": "0fab276cf45fe9b24d68c09f582c55392a482474604bc16f18afd508358b222f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_fanta_can/collision.obj",
+    "bytes": 413027,
+    "sha256": "80c8a86337ec83c3bf74e9ea7646ccb1c8d1111fc62e5abba9f71cccb104b893"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_fanta_can/Image_0.001.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_fanta_can/Image_1.001.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_fanta_can/Image_3.001.jpg",
+    "bytes": 13605,
+    "sha256": "1c8ef5c4afad78a80f1148f9367379c1db5c70b907b8bf0a49b42614632b6921"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_fanta_can/Image_6.001.jpg",
+    "bytes": 12257,
+    "sha256": "143c4e807e25b2a3becf5e96665007cd78efd7c650b795a716d7517632c0b581"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_fanta_can/textured.dae",
+    "bytes": 302643,
+    "sha256": "39cfd85e6739332095fe9ea8b2a8dd60db6f4e1e01ee011babfa9b73c2658005"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_pepsi_can/collision.obj",
+    "bytes": 415251,
+    "sha256": "61e11087c98aaaa69f2717686ebcc9d8e7843dd4572c126a195f35b2072b85a1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_pepsi_can/Image_0.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_pepsi_can/Image_0.png",
+    "bytes": 548056,
+    "sha256": "392ae07c85cc42f70081dacbb8d86295ac34b2935587bddd8e32246bb50e0ab4"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_pepsi_can/Image_1.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_pepsi_can/Image_3.jpg",
+    "bytes": 13605,
+    "sha256": "1c8ef5c4afad78a80f1148f9367379c1db5c70b907b8bf0a49b42614632b6921"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_pepsi_can/textured.dae",
+    "bytes": 304308,
+    "sha256": "539c6462c7695e1375ce7c588f405ffb636dc6ede647ee4a02aefbc691fc6de4"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_redbull_can/collision.obj",
+    "bytes": 222852,
+    "sha256": "80002a50e6fcb45aaae32b77d27cb7c793c305a9d5a22af91ff71ec8e12801b3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_redbull_can/Image_0.004.png",
+    "bytes": 209323,
+    "sha256": "f63eb9ea2b0184a2abf2fc76792cdcd8e4fd5d4a585c86a70740b862f1d33f8c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_redbull_can/Image_2.002.png",
+    "bytes": 6995,
+    "sha256": "b0074c01a9be007cc81c12e801a181be6308b75a06aade347353684500b2af4f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_redbull_can/Image_3.002.jpg",
+    "bytes": 103058,
+    "sha256": "204f0af3cf6f5d220bf0a6ab70e5257d7e7b42ec95804824f2aab37f2e4ed36e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_redbull_can/textured.dae",
+    "bytes": 7150726,
+    "sha256": "6e07959ae065f289a67cac4dbf2762e09f082b7ada57c41b5ec829cc2394a3ab"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_sprite_can/collision.obj",
+    "bytes": 418215,
+    "sha256": "4ac5e55b8595addaf0f3f0165e15c461873b5241068d561c3e32abd1427cb450"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_sprite_can/Image_0.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_sprite_can/Image_1.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_sprite_can/Image_3.jpg",
+    "bytes": 13605,
+    "sha256": "1c8ef5c4afad78a80f1148f9367379c1db5c70b907b8bf0a49b42614632b6921"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/opened_sprite_can/textured.dae",
+    "bytes": 380067,
+    "sha256": "512db69d1923ec2acb2ba30bd94f6b4642393cd58b1e1038bb513fbf976da28e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/orange/collision.obj",
+    "bytes": 2946075,
+    "sha256": "c6f3125e28fdfca3a34bd56046239c1e305e223790f6fe8db6b196e5a9490471"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/orange/Image_2.png",
+    "bytes": 1131502,
+    "sha256": "7993a4a959ad06a0afb9f831d2a3377c0a2264748e1531e7ca2fc4c4cb7a7cb7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/orange/textured.dae",
+    "bytes": 322795,
+    "sha256": "24ee65d46de5a1d643ff94112b61fa4584a10328b175c6a77cf6594b8d06ac9c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can/collision.obj",
+    "bytes": 415251,
+    "sha256": "61e11087c98aaaa69f2717686ebcc9d8e7843dd4572c126a195f35b2072b85a1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can/Image_0.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can/Image_0.png",
+    "bytes": 548056,
+    "sha256": "392ae07c85cc42f70081dacbb8d86295ac34b2935587bddd8e32246bb50e0ab4"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can/Image_1.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can/Image_3.jpg",
+    "bytes": 13936,
+    "sha256": "56fe499dd18ea98cfb2abe389925ff5bc6f42e9b4898da4303fbd85d7ff3d6f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can/textured.dae",
+    "bytes": 304308,
+    "sha256": "539c6462c7695e1375ce7c588f405ffb636dc6ede647ee4a02aefbc691fc6de4"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can_alt/collision.obj",
+    "bytes": 415251,
+    "sha256": "61e11087c98aaaa69f2717686ebcc9d8e7843dd4572c126a195f35b2072b85a1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can_alt/Image_0.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can_alt/Image_1.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can_alt/Image_3.jpg",
+    "bytes": 13936,
+    "sha256": "56fe499dd18ea98cfb2abe389925ff5bc6f42e9b4898da4303fbd85d7ff3d6f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can_alt/Image_5.jpg",
+    "bytes": 9640,
+    "sha256": "29948ddf6a124922bcfe7b6a5873e6eac8081993c5f5e0b42329f133e4886826"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/pepsi_can_alt/textured.dae",
+    "bytes": 304770,
+    "sha256": "b9748ac8b9e1b8d38d4d910b91fc476ba14912e4070d61a572e96dc79b197d39"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can/collision.obj",
+    "bytes": 222852,
+    "sha256": "80002a50e6fcb45aaae32b77d27cb7c793c305a9d5a22af91ff71ec8e12801b3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can/Image_0.004.png",
+    "bytes": 209323,
+    "sha256": "f63eb9ea2b0184a2abf2fc76792cdcd8e4fd5d4a585c86a70740b862f1d33f8c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can/Image_2.002.png",
+    "bytes": 6995,
+    "sha256": "b0074c01a9be007cc81c12e801a181be6308b75a06aade347353684500b2af4f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can/Image_3.002.jpg",
+    "bytes": 110336,
+    "sha256": "dc67dd9f13f2c9151c9c56479a5c3fe5566c5924b8b7da6a35804909d8caffd3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can/textured.dae",
+    "bytes": 7138191,
+    "sha256": "9e354d8a3bfd8e059cbb357b09f08692d86aed7ed9a6fe4c3e606abefea08e03"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can_original/collision.obj",
+    "bytes": 301706,
+    "sha256": "7d47f2faea28c22a5660fcd1d87bf049244cc78ae1d63cf7749418290872780e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can_original/Image_0.004.png",
+    "bytes": 209323,
+    "sha256": "f63eb9ea2b0184a2abf2fc76792cdcd8e4fd5d4a585c86a70740b862f1d33f8c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can_original/Image_2.002.png",
+    "bytes": 6995,
+    "sha256": "b0074c01a9be007cc81c12e801a181be6308b75a06aade347353684500b2af4f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can_original/Image_3.002.jpg",
+    "bytes": 110336,
+    "sha256": "dc67dd9f13f2c9151c9c56479a5c3fe5566c5924b8b7da6a35804909d8caffd3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/redbull_can_original/textured.dae",
+    "bytes": 7130867,
+    "sha256": "13bdc89c3a1bbe0c2cdd4b80551940ffae7be87294310a7c5a2322b90c0e2a19"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sink/collision.mtl",
+    "bytes": 232,
+    "sha256": "2de530d0d53b5bf27151cb55c6b378c49a6b111f97e7b93b52c53c48c49a70e0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sink/collision.obj",
+    "bytes": 1476224,
+    "sha256": "4275640c457774ac33d83d59fe058fe248f8f8ae020f846fcc87f6c37580aa75"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sink/textured.dae",
+    "bytes": 1593662,
+    "sha256": "552d7b8729f437172a4a5851f5480f43e3d17fd79de296ba17b7b2262e12e179"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sponge/collision.obj",
+    "bytes": 162611,
+    "sha256": "6d12589a7b9fba3703630c2b2ce4828bd22af3653987647ab3923bd5659f81b8"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sponge/Image_0.003.png",
+    "bytes": 34632,
+    "sha256": "4dd151afd8a4dd90c2b125399f9a3512925e85279ec13255730b19962f630786"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sponge/textured.dae",
+    "bytes": 61863,
+    "sha256": "4c47b2411ee12bef31e5d9d8ac5252fefa10329dfa1a932ba9eddc908de963e9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sprite_can/collision.obj",
+    "bytes": 418215,
+    "sha256": "4ac5e55b8595addaf0f3f0165e15c461873b5241068d561c3e32abd1427cb450"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sprite_can/Image_0.jpg",
+    "bytes": 6947,
+    "sha256": "25a9525ce4f28915c29591582fca0038f8cffc572b10fbb2cb99bc0609ffbd1c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sprite_can/Image_1.jpg",
+    "bytes": 9618,
+    "sha256": "09cd0244137aad610e9e7ae4f9767eb472ac1008d8c248421cfbcb4dfe5ca0ed"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sprite_can/Image_3.jpg",
+    "bytes": 13936,
+    "sha256": "56fe499dd18ea98cfb2abe389925ff5bc6f42e9b4898da4303fbd85d7ff3d6f1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/sprite_can/textured.dae",
+    "bytes": 380067,
+    "sha256": "512db69d1923ec2acb2ba30bd94f6b4642393cd58b1e1038bb513fbf976da28e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/stone_tabletop.glb",
+    "bytes": 250560,
+    "sha256": "b38a4237c15dd2c74812abf9d134c0d149002fd583358e16661e239201846c7d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated/collision.obj",
+    "bytes": 352202,
+    "sha256": "44ffa47b4d2a0d506562f5181fb3059af2bebc7b3a555fb75732cbefc1c89000"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated/Image_0.001.jpg",
+    "bytes": 3373009,
+    "sha256": "dd56703c28fc307420c09f55b52e7e398ba6c170c9393381aa5abbe6ae1452c1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated/textured.dae",
+    "bytes": 1724187,
+    "sha256": "0f503e4ef82e8f57389fce1931cfd64ecba01294a423d0610f9bca63e4926db5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated_shorter/collision.mtl",
+    "bytes": 338,
+    "sha256": "cb009dbc9d9618ed0cd4e0c03eb11e333062aa390df175cf8f6fc09cd9b6d17f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated_shorter/collision.obj",
+    "bytes": 232464,
+    "sha256": "98353d373227e21c61680dc7b01c4f5080c1fa0b94fbb7d23709285b59bb2fdb"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated_shorter/Image_0.001.jpg",
+    "bytes": 3373009,
+    "sha256": "dd56703c28fc307420c09f55b52e7e398ba6c170c9393381aa5abbe6ae1452c1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_generated_shorter/textured.dae",
+    "bytes": 1731085,
+    "sha256": "1a642896ad7fd62cafa0cd221fa8cfef4ae0b9bda94fba4a83a685a31c27472a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_objaverse/collision.obj",
+    "bytes": 1032643,
+    "sha256": "bfd82ae995f16511b0846d8d4b4f0bf46c948c0538058d23411dddf229e02b06"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_objaverse/Image_14.jpg",
+    "bytes": 264453,
+    "sha256": "4bc5a06a4805e0d3b00fbdc276c09ef0d812e5022e84b37fd0279cd5c8f7d36d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/table_cloth_objaverse/textured.dae",
+    "bytes": 515828,
+    "sha256": "26bcf94dc17c16a46a2076a7694df31b45fe7d26fbf697d8f1832625038f33c9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/yellow_cube_3cm/collision.obj",
+    "bytes": 593,
+    "sha256": "b57ba99c4a72caa36e99329c604f412834014726f2fc077eab6b07629abbc237"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/custom/models/yellow_cube_3cm/textured.dae",
+    "bytes": 4878,
+    "sha256": "e410266c06527a32602ee98fd7b15a42f06193c330c46e0295ef4a49eb5c3988"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge/bridge_1_cleanup.png",
+    "bytes": 522496,
+    "sha256": "051abdf6a67da542f7c6fb34d0cfe70809febf45b2c577a2f79ff59ab3698290"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge/bridge_calibration.png",
+    "bytes": 340238,
+    "sha256": "cf2df816694efa5326231fa1213cbaebec171da8d0a12e84c47ef1a750612680"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge/bridge_sink_calibrate.png",
+    "bytes": 307918,
+    "sha256": "92d0f731006b5a05a23fc3904fac066f6c10c8b8858e9e0bd881df0d16b43f8e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge/bridge_sink_calibrate_mask.png",
+    "bytes": 639,
+    "sha256": "8d94904ec1d00a4c7b216545a0676bd971dd0cc5c29c2acf9d71937521f43d44"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge/debug.png",
+    "bytes": 342036,
+    "sha256": "ca54aa7ff1920c98dc3c6e3db6912113741698e2997c627686425d1277797484"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge/stack_cube_1st_frame.png",
+    "bytes": 230924,
+    "sha256": "8f7c19cd794b20b1e93583104523101e07460f0ddc7e58a1800a883285853e19"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge_real_eval_1.png",
+    "bytes": 361295,
+    "sha256": "1d25ac179f7cdace1de14d5dab9496d52099231ea3e3d60eb3fe422c9802b611"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge_real_eval_2.png",
+    "bytes": 312712,
+    "sha256": "b6bd4840b8c4de8f7919b1095bbb44221f04c92c7204afd7d36bf93fee233403"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/bridge_sink.png",
+    "bytes": 334926,
+    "sha256": "86b50fa15ede8e2c28cc01b6adffc40b79f7136130547c6ee905cf91b4aff188"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/11_table.png",
+    "bytes": 96676,
+    "sha256": "f61eaaa551248b56f1511475d20f09e3be58c246f1f7fa2888cad9c09ace01e1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1257_0_cleanup.png",
+    "bytes": 100557,
+    "sha256": "c3da73b1bc3ec1ea0d93ed0e080818a7ba00c442ad2f8a53a963b04f77a1dcf7"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1257_0_cleanup_no_coke_can.png",
+    "bytes": 98534,
+    "sha256": "5d58a63f4509906569cee0db65c9433f1b9021a2c0aca4f56baf9e591e63ad88"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1495_0_cleanup.png",
+    "bytes": 134585,
+    "sha256": "a35103afd1f2bdc1c1640f3db69fc17f794072079afa389f50f4fc3cf9e984ae"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1495_0_cleanup_no_coke_can.png",
+    "bytes": 133819,
+    "sha256": "d4b3d99d3e6dc33cbffa07055f59a869693818ada54394bd7bd73ee02111030f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1539_0_cleanup.png",
+    "bytes": 136463,
+    "sha256": "7edcd123bf9edf0105943bcad662a9502a3d2d73f536e3a0e7612892dec2e5bc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1539_0_cleanup_no_coke_can.png",
+    "bytes": 135629,
+    "sha256": "0f0bfca1796ca3f13b9839d2cc48a04e6194394b0fc80361f7da60b9cc105df8"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1991_0_cleanup.png",
+    "bytes": 102546,
+    "sha256": "8efcc51c048ff5f60987828ea1b15b7bb45a1dbea5c3fc9c5a4dd1d8c9ae19d1"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/1991_0_cleanup_no_coke_can.png",
+    "bytes": 100762,
+    "sha256": "e84b16bb275763071e0a66636f71d615b473ea36a3b4f04405516ae3717f3391"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/2398_0_cleanup.png",
+    "bytes": 99940,
+    "sha256": "1e3eb1a7bb54530571f3a6fb6d7d0a5fee0b8dcddfc9689618ff5c7501cb6cd5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/2398_0_cleanup_no_coke_can.png",
+    "bytes": 99094,
+    "sha256": "54805bae44b3121b713deb41dcf584260b24fafd7b0783e92bd563ef414fc9b5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/3289_0_cleanup.png",
+    "bytes": 132999,
+    "sha256": "15c3152578b11318e64da76dff6f6a4a4cfe8f16d65c3912497c6eb58bc6f667"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/3289_0_cleanup_no_coke_can.png",
+    "bytes": 131972,
+    "sha256": "75ef386c090d62ebf88139fc22ac5a37cfe262c83e43f604cbdec10f3103e89f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/73_table.png",
+    "bytes": 95416,
+    "sha256": "054648b667f0f7c53396464e04febda22bbe1c333e94c34894c693c9c3ad862e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/73_table_brighter.png",
+    "bytes": 106372,
+    "sha256": "67136abbff8460b8eebf184deb6b04a9358d7f9acab9fddd9ffc9e89008034df"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/73_table_darker.png",
+    "bytes": 94930,
+    "sha256": "047c47e4d80ba58fcc88afa2820454c75a603f7699c21a4d1d396476c205846e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/805_0_cleanup.png",
+    "bytes": 117834,
+    "sha256": "5b6209e95651d9511aa910cffe25f48c76e1a15ea49db68ccb6961d9ff867fd5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/805_0_cleanup_no_coke_can.png",
+    "bytes": 116257,
+    "sha256": "6dbf284cf9db9e7d4f02109072678d03a6c5a1feed5b4454a9ed7dae36c01d9e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/fractal/another_counter_1.png",
+    "bytes": 250602,
+    "sha256": "2b8d0f3a11ce219e4da0f500355523a38fd55670e34e623e1745add458a5d87d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/google_coke_can_real_eval_1.png",
+    "bytes": 96389,
+    "sha256": "4218cc93e73c97fb4c275ec1c015fc51ae5c4d5d0c3ea9018bef31d0b71a87ba"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/google_move_near_real_eval_1.png",
+    "bytes": 101906,
+    "sha256": "c9bf9ace717a1895d1e0f2af2c4c5b0a2c8c030717cd1f44380074f640e06bd3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_1_1.png",
+    "bytes": 101688,
+    "sha256": "99e0629eef54b506b8a2e41d0124b1a7baad49fd22520909f450e01bec9ab21a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_1_2.png",
+    "bytes": 105612,
+    "sha256": "bf96366fd2dd3e2dc56ebe75d06acae899dcb4c0fd0b9ece1edf4e1a2993463c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_2_1.png",
+    "bytes": 101261,
+    "sha256": "0552aeda674d32a2aec9754bdd129b937ee228d7980ba49ab85e8797539a5ed3"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_2_2.png",
+    "bytes": 102451,
+    "sha256": "63de480d13a138d45482b6b76a7ed39a1dc54114b3f05f861c290188b7592f7f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_3_1.png",
+    "bytes": 102705,
+    "sha256": "2ac1342b28b614c07c30559e8d933d07112c5d09691aa3765f07c4c5c350f092"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_3_2.png",
+    "bytes": 104991,
+    "sha256": "18fd552da3d3017fda0e9aebf25faa4004ad937bb62fe8cda41346349bcb988d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_4_1.png",
+    "bytes": 103064,
+    "sha256": "a71047738d842f1583f2971f5a86ae25831960c1e0d550cd8113b58b90d474b6"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_4_2.png",
+    "bytes": 103401,
+    "sha256": "dc621f76466a78939eed7fe69b220a565000e62b7a37798dcb19b87cb55df47f"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_5_1.png",
+    "bytes": 102230,
+    "sha256": "15dab9a85b392fb5c765c696bcc5b8dcc23443e09a259f1f79b4e309e172564a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/move_near_real_obj_variants/move_near_real_5_2.png",
+    "bytes": 102087,
+    "sha256": "65fa779f090f263280b25522ef9cbb80572cc43cc913671a514d9141ef1ec399"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_a0.png",
+    "bytes": 133795,
+    "sha256": "a98b68b0a6b097af38b463e7b30371ec30eb15391f62fe9f03f16b97a0f6359b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_a1.png",
+    "bytes": 129521,
+    "sha256": "fef25cffac02dd31898514fee63d2b0b9e763448f657da4a1be007f5fd4cf5d0"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_a2.png",
+    "bytes": 128898,
+    "sha256": "75aeff00694ed2e4c9c299fc7a20bed1b3b7d6f863b28dc5964ea1931ea7069b"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_b0.png",
+    "bytes": 135840,
+    "sha256": "6665d9e3b2185c615994a5bdd435e2004c0374ebb1aa9480b7392c1dcc5277a5"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_b1.png",
+    "bytes": 130940,
+    "sha256": "5a106aa95d35a9ea5b0c3ae21e9aaea6496855494ab6c8d07dd25181615ad599"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_b2.png",
+    "bytes": 125760,
+    "sha256": "7b2eb39e654224fa5e8201eaa2614f76e72baa3881a0242b61c84e903d65ab48"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_c0.png",
+    "bytes": 137761,
+    "sha256": "3bb62bf601598467c3a9cc515abcc9b43a37bd1b2296b431420b5806367b04a9"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_c1.png",
+    "bytes": 129527,
+    "sha256": "72746163c07514e6dda4e4145961f619be0439814917b913a035295bf65bd7be"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/open_drawer_c2.png",
+    "bytes": 132432,
+    "sha256": "84b9eb5ac8a8eb8faa1866f8761af318f89e876c9b4d6632d47ead4c6854db9e"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_coke_can_real_eval_1_brighter.png",
+    "bytes": 108953,
+    "sha256": "50069d8151daf35282974f4a1a11703fb4d302891ebebf22e09b1c09b16764b8"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_coke_can_real_eval_1_darker.png",
+    "bytes": 97363,
+    "sha256": "162b638a5a016cf340696c8792803bddc0b27cce8096576e169072536525a23c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_coke_can_real_eval_2.png",
+    "bytes": 98729,
+    "sha256": "3233c5a9bb292f6e44170997710db02436dc1f746673de2c7286a818845fba9a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_horizontal_coke_can_a1.png",
+    "bytes": 70802,
+    "sha256": "587ad23a9d592d4e1dc1a7aa7f8866ccc492579c019f4c92255cc8cb9ca76d91"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_horizontal_coke_can_a1_bluegripper.png",
+    "bytes": 75448,
+    "sha256": "5267f94d238a8ab8c32fa3b0356e0ace777406e9d22c0e348ac67c77812a1b82"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_horizontal_coke_can_a2.png",
+    "bytes": 69443,
+    "sha256": "ccc60afd4fe2444a1022d281e3570b5a1fd350e4037166cbb5c06d99585dacb6"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_horizontal_coke_can_b0_cleanup.png",
+    "bytes": 94579,
+    "sha256": "dc011e1fcc2aee930e1a473a0ec83e9b01395e76b108166b58aafb120113718d"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_standing_coke_can_c0_cleanup.png",
+    "bytes": 101715,
+    "sha256": "0277c973647a071bd923c7aaea05b85f2b8dc97055c2e190075a4a484829f427"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_vertical_coke_can_a0_cleanup.png",
+    "bytes": 96933,
+    "sha256": "7a8da0da3d13196d4834c8b851fa6ee07d4d86eb8dc17bbed09cd6bb3a9d961a"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_vertical_coke_can_a0_cleanup_no_coke_can.png",
+    "bytes": 96389,
+    "sha256": "4218cc93e73c97fb4c275ec1c015fc51ae5c4d5d0c3ea9018bef31d0b71a87ba"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/real_inpainting/pick_coke_can_real_misc/google_vertical_coke_can_d4_cleanup.png",
+    "bytes": 92779,
+    "sha256": "0f03c31197b2ca8079c8b48827f163a16610c5600675dc6c54137d0f0d29d36c"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/stages/bridge_table_1_v1.glb",
+    "bytes": 4470984,
+    "sha256": "9a15b3055c007803b16a921a82602299c5c234a1ed69d98815078aff7d4717fc"
+  },
+  {
+    "path": "tasks/bridge_v2_real2sim_dataset/stages/bridge_table_1_v2.glb",
+    "bytes": 4470984,
+    "sha256": "b094056de003aecf69e11c42d45a2a231bd54990832be50d69ef3b812a8d14e5"
+  }
+]

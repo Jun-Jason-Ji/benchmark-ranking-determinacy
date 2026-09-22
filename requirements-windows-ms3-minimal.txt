@@ -1,0 +1,12 @@
+# Exploratory Windows stack. Not original SIMPLER reproduction.
+# First install torch==2.7.1 from https://download.pytorch.org/whl/cu128.
+# Then install this file and third_party/SimplerEnv-ms3 in editable mode.
+mani-skill==3.0.1
+sapien==3.0.3
+numpy==1.26.4
+gymnasium==1.3.0
+tyro==0.8.5
+protobuf==4.25.8
+google-crc32c==1.7.1
+# Full resolved environment: requirements-windows-ms3-lock.txt
+# Pinocchio is not installed; see scripts/ms3_windows_compat.py and execution log.

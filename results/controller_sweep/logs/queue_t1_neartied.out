@@ -1,0 +1,49 @@
+==== Sun 09/20/2026  7:28:01.63 restarted scheduler after busy_ports crash (queue_t1_neartied) 
+15:46:03 === t1b_neartied: 16 jobs
+15:46:04 launched octo-small@noens nominal seed=20260918 on 8767
+15:46:04 launched octo-base@noens nominal seed=20260918 on 8768
+16:10:19 done rc=0 octo-small@noens nominal seed=20260918 on 8767
+16:10:20 launched octo-small@noens force_x0.5 seed=20260918 on 8767
+16:11:02 done rc=0 octo-base@noens nominal seed=20260918 on 8768
+16:11:04 launched octo-base@noens force_x0.5 seed=20260918 on 8768
+16:34:59 done rc=0 octo-small@noens force_x0.5 seed=20260918 on 8767
+16:35:01 launched octo-small@chunk4 nominal seed=20260918 on 8767
+16:36:25 done rc=0 octo-base@noens force_x0.5 seed=20260918 on 8768
+16:36:26 launched octo-base@chunk4 nominal seed=20260918 on 8768
+16:46:19 done rc=0 octo-small@chunk4 nominal seed=20260918 on 8767
+16:46:20 launched octo-small@chunk4 force_x0.5 seed=20260918 on 8767
+16:47:44 done rc=0 octo-base@chunk4 nominal seed=20260918 on 8768
+16:47:45 launched octo-base@chunk4 force_x0.5 seed=20260918 on 8768
+16:57:17 done rc=0 octo-small@chunk4 force_x0.5 seed=20260918 on 8767
+16:57:18 launched octo-small@noens nominal seed=20280101 on 8767
+16:59:04 done rc=0 octo-base@chunk4 force_x0.5 seed=20260918 on 8768
+16:59:05 launched octo-base@noens nominal seed=20280101 on 8768
+17:34:55 done rc=0 octo-small@noens nominal seed=20280101 on 8767
+17:34:56 launched octo-small@noens force_x0.5 seed=20280101 on 8767
+17:44:57 done rc=0 octo-base@noens nominal seed=20280101 on 8768
+17:44:59 launched octo-base@noens force_x0.5 seed=20280101 on 8768
+==== Sun 09/20/2026 18:59:23.06 restarted scheduler after busy_ports crash (queue_t1_neartied) 
+18:59:23 === t1b_neartied: 16 jobs
+18:59:23 skip complete octo-small@noens nominal seed=20260918
+18:59:23 skip complete octo-small@noens force_x0.5 seed=20260918
+18:59:23 skip complete octo-small@chunk4 nominal seed=20260918
+18:59:23 skip complete octo-small@chunk4 force_x0.5 seed=20260918
+18:59:23 skip complete octo-base@noens nominal seed=20260918
+18:59:23 skip complete octo-base@noens force_x0.5 seed=20260918
+18:59:23 skip complete octo-base@chunk4 nominal seed=20260918
+18:59:23 skip complete octo-base@chunk4 force_x0.5 seed=20260918
+18:59:23 skip complete octo-small@noens nominal seed=20280101
+18:59:23 launched octo-small@noens force_x0.5 seed=20280101 on 8767
+18:59:23 skip complete octo-base@noens nominal seed=20280101
+18:59:23 launched octo-base@noens force_x0.5 seed=20280101 on 8768
+19:08:57 done rc=0 octo-small@noens force_x0.5 seed=20280101 on 8767
+19:08:58 launched octo-small@chunk4 nominal seed=20280101 on 8767
+19:14:57 done rc=0 octo-base@noens force_x0.5 seed=20280101 on 8768
+19:14:58 launched octo-base@chunk4 nominal seed=20280101 on 8768
+19:19:29 done rc=0 octo-small@chunk4 nominal seed=20280101 on 8767
+19:19:30 launched octo-small@chunk4 force_x0.5 seed=20280101 on 8767
+19:24:00 done rc=0 octo-base@chunk4 nominal seed=20280101 on 8768
+19:24:00 launched octo-base@chunk4 force_x0.5 seed=20280101 on 8768
+19:28:09 done rc=0 octo-small@chunk4 force_x0.5 seed=20280101 on 8767
+19:32:18 done rc=0 octo-base@chunk4 force_x0.5 seed=20280101 on 8768
+19:32:38 T1B_NEARTIED_DONE
