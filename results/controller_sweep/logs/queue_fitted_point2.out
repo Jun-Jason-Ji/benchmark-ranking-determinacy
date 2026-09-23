@@ -68,3 +68,17 @@
 03:17:18 start egg octo-small fitted_dens_x0.5 base=20290101
 03:29:59 done rc=0 egg octo-base fitted_dens_x0.5 base=20280101 (21.3 min)
 03:29:59 start egg octo-base fitted_dens_x0.5 base=20290101
+03:37:45 done rc=0 egg octo-small fitted_dens_x0.5 base=20290101 (20.4 min)
+03:37:45 start spoon octo-small fitted base=20260918
+03:42:15 done rc=0 spoon octo-small fitted base=20260918 (4.5 min)
+03:42:15 start spoon octo-small fitted base=20280101
+03:46:25 done rc=0 spoon octo-small fitted base=20280101 (4.2 min)
+03:46:25 start spoon octo-small fitted_force_x0.5 base=20260918
+03:50:22 done rc=0 spoon octo-small fitted_force_x0.5 base=20260918 (3.9 min)
+03:50:22 start spoon octo-small fitted_force_x0.5 base=20280101
+03:52:23 done rc=0 egg octo-base fitted_dens_x0.5 base=20290101 (22.4 min)
+03:52:23 start spoon octo-base fitted base=20260918
+03:54:27 done rc=0 spoon octo-small fitted_force_x0.5 base=20280101 (4.1 min)
+03:54:27 start spoon octo-small fitted_iso_x0.25 base=20260918
+03:56:33 done rc=0 spoon octo-base fitted base=20260918 (4.2 min)
+03:56:33 start spoon octo-base fitted base=20280101

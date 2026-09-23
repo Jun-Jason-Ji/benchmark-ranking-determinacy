@@ -190,10 +190,12 @@ conservative as designed on synthetic ground truth, where the point criterion's 
 reference protocol's three seed sets it disagrees with point calibration on 3 of 17 policy pairs, and
 at a single seed set on 2 of the 13 pairs one seed set can evaluate at all --- but when we spend more
 seeds, two of the three disagreements turn out to have been our own insufficient power, leaving
-one. And on the single policy pair for which published
-real-robot results contradict the simulator, the criterion over the invisible fibre
-\emph{declares the ordering the published real means reverse}. Its reach stops at the parameter family the
-calibration data can constrain, and the sim-to-real gap on that pair lies outside it.
+one. And on a pair we selected from the 5 of 62 published pairs whose real and simulated means point
+opposite ways, the criterion over the invisible fibre \emph{declares the ordering the published real
+means reverse}. Whether that is a model gap or noise in a real evaluation published without
+intervals we cannot say, and Sect.~\ref{subsec8_4} argues the two readings support the same
+conclusion: a declaration from this criterion carries no warranty about the robot. Its reach stops
+at the parameter family the calibration data can constrain.
 
 \subsection{Contributions}\label{subsec1_1}
 
@@ -479,19 +481,26 @@ interval $\big[\min_{z} \mathrm{lo}(z),\ \max_{z} \mathrm{hi}(z)\big]$.
 \end{itemize}
 
 \noindent The second needs no multiplicity correction across the settings in $S$, and the reason is
-worth two lines because it is the only place this paper gets something for free. Suppose we declare
-$i \succ j$, so $\min_z \mathrm{lo}(z) > 0$, and suppose the declaration is wrong, so
-$\Delta(z_0) \le 0$ for some $z_0 \in S$. Then $\mathrm{lo}(z_0) > 0 \ge \Delta(z_0)$: that one
-setting's lower bound exceeded its own truth, which happens with probability at most $\alpha$ if the
-interval at $z_0$ is a valid one-sided bound. Since $z_0$ is fixed by the surface rather than chosen
-from the data, no union over $|S|$ is needed and the false-declaration rate is at most $\alpha$ for
-any finite $S$. Coverage of the whole range $[\min_z \Delta(z), \max_z \Delta(z)]$ is a different
-statement, and it costs a factor of two rather than a factor of $|S|$: with equal-tailed valid
-intervals, $\min_z \mathrm{lo}(z) \le \mathrm{lo}(z_{\min}) \le \Delta(z_{\min})$ fails only if the
-interval at the \emph{argmin} misses low, and symmetrically at the argmax, so the envelope covers the
-range with probability at least $1 - 2\alpha$ regardless of how many settings $S$ holds. Neither
-statement says anything about parameter values we did not sample, which is the limitation
-Sect.~\ref{subsec8_2} measures. Both
+worth stating because it is the only place this paper gets something for free. Throughout,
+$[\mathrm{lo}(z), \mathrm{hi}(z)]$ is an \emph{equal-tailed two-sided} $95\%$ interval, so each
+one-sided tail carries $\alpha_1 = 0.025$; we write $\alpha_1$ for that tail and not for the nominal
+$0.05$, because the two differ by a factor of two and the distinction decides both bounds below.
+
+\emph{The declaration.} Suppose we declare $i \succ j$, so $\min_z \mathrm{lo}(z) > 0$, and suppose
+the declaration is wrong, so $\Delta(z_0) \le 0$ for some $z_0 \in S$. Then
+$\mathrm{lo}(z_0) > 0 \ge \Delta(z_0)$: that one setting's lower bound exceeded its own truth, which
+happens with probability at most $\alpha_1$. Since $z_0$ is fixed by the response surface rather
+than chosen from the data, no union over $|S|$ is needed, and the false-declaration rate is at most
+$\alpha_1 = 0.025$ for any finite $S$.
+
+\emph{Coverage of the range} $[\min_z \Delta(z), \max_z \Delta(z)]$ is a different statement and
+costs a factor of two on the tails rather than a factor of $|S|$:
+$\min_z \mathrm{lo}(z) \le \mathrm{lo}(z_{\min}) \le \Delta(z_{\min})$ fails only if the interval at
+the \emph{argmin} misses low, and symmetrically at the argmax, so the envelope covers the range with
+probability at least $1 - 2\alpha_1 = 0.95$ however many settings $S$ holds. Both bounds are
+conditional on the per-setting intervals being valid, which Sect.~\ref{subsec5_4} qualifies where a
+variance term is imputed, and neither says anything about parameter values we did not sample --- the
+limitation Sect.~\ref{subsec8_2} measures. Both
 statements are conditional on the intervals at each $z$ being valid, which Sect.~\ref{subsec5_4}
 qualifies where a variance term is imputed.
 Throughout the empirical sections $S = F_{\mathrm{nom}}$ and the single setting is nominal, which is
@@ -1356,7 +1365,13 @@ column is what the calibration protocol can resolve about the condition, in the 
 Eq.~\eqref{eq:loss}; \emph{``unobserved''} means the parameter never enters a free-space replay
 trajectory, so there is nothing to measure --- a gap in the protocol's coverage rather than in its
 precision. The $\hat\Delta$ column is how far the policy comparison moves there, in probability
-points. Generated by \texttt{scripts/make\_evidence\_chain.py}.}\label{tab6a}
+points. \textbf{The two columns come from different stacks and we do not hide the join}: the
+replay bounds are the \emph{larger} of the two stacks' figures, which for both the iso family and
+the torque limit is the original ManiSkill2 stack, while the policy census is on the ManiSkill3
+port. We quote the larger bound so the column is conservative, and the two stacks agree on these
+directions to within a factor of a few (Sect.~\ref{subsec4_3}); a reader who wants a single-stack
+row should use the ManiSkill3 figures, which are smaller and would widen the gap this table reports.
+Generated by \texttt{scripts/make\_evidence\_chain.py}.}\label{tab6a}
 \small
 \begin{tabular}{@{}lllrll@{}}
 \toprule
@@ -1664,9 +1679,8 @@ point with the budget.
 the benchmark's operating point and at the one its replay objective prefers. \textbf{The point
 verdict changes and the set verdict does not.} The replay-loss column is the composite objective of
 Sect.~\ref{subsec4_1}, in its own units, not a distance --- see Sect.~\ref{subsec4_4}. The set
-envelope at nominal is over its complete six-condition fibre; at the fitted point four of the six
-planned conditions are complete and already abstain, and because a min/max envelope only widens as
-conditions are added, the remaining two cannot restore a declaration. Generated by
+envelope at each operating point is over that point's own complete six-condition fibre --- six
+64-configuration censuses at each setting, 12 in total for this table, all complete. Generated by
 \texttt{scripts/analyze\_fitted\_point.py}, which refuses any condition that is not a complete
 census.}\label{tab10}
 \begin{tabular}{@{}lrlll@{}}
@@ -1677,8 +1691,8 @@ Operating point & vs minimiser & $\hat\Delta$ & point $95\%$ & set envelope \\
 \midrule
 nominal, $d/k = 1$, no delay & $+0.0029$ & $+0.073$ & $[-0.016, +0.161]$ & $[-0.035, +0.300]$ \\
  & (rejected) & & abstain & abstain (6 cond.) \\[2pt]
-fitted, $d/k = 0.25$, delay 1 & $0$ & $+0.104$ & $[+0.016, +0.192]$ & $[-0.029, +0.212]$ \\
- & (the minimiser) & & \texttt{small} $\succ$ \texttt{base} & abstain (4 of 6) \\
+fitted, $d/k = 0.25$, delay 1 & $0$ & $+0.104$ & $[+0.016, +0.192]$ & $[-0.029, +0.219]$ \\
+ & (the minimiser) & & \texttt{small} $\succ$ \texttt{base} & abstain (6 cond.) \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -1727,20 +1741,17 @@ cannot see any of this, because those rates exist at one operating point and car
 
 \paragraph{The set-valued verdict does not change: it abstains at both operating points.}
 Taking the union over each point's own calibration-invisible fibre gives $[-0.035, +0.300]$ at
-nominal, over its complete six-condition fibre, and $[-0.029, +0.212]$ at the fitted point, over the
-four of six planned conditions that are complete. Both abstain. The fitted figure is already final
-in the only sense that matters here: an envelope is a minimum of lower bounds and a maximum of upper
-bounds, so adding a condition can only push the bound outward, and a bound that already contains
-zero will still contain zero once the remaining two conditions are in. That is a monotonicity
-argument rather than a prediction about data we have not collected.
+nominal and $[-0.029, +0.219]$ at the fitted point, each over that point's complete six-condition
+fibre --- twelve 64-configuration censuses in all. Both abstain.
 
-This corrects an earlier draft of this section, and the correction is worth recording because it
-illustrates the trap. Over the first two completed conditions the fitted envelope was
-$[+0.009, +0.192]$ and declared, and we wrote that both verdicts flip. The third condition ---
-a common rescaling of the fitted gains --- gives $\hat\Delta = +0.057$ with
+One methodological note, because it cost us a wrong claim and the mistake is easy to make. An
+earlier version of this section reported the fitted envelope over the first two completed
+conditions, where it was $[+0.009, +0.192]$ and declared, and concluded that both verdicts flip. The
+third condition --- a common rescaling of the fitted gains --- gives $\hat\Delta = +0.057$ with
 $[-0.029, +0.144]$, which pulls the envelope across zero on its own. An envelope reported before its
-design is complete is not a conservative version of the final answer; it is a different and narrower
-one, and here it pointed the opposite way.
+design is complete is not a conservative version of the final answer but a different and narrower
+one, and here it pointed the opposite way. The monotonicity that makes the completed envelope safe
+to report --- a min/max over conditions only widens --- is exactly what makes a partial one unsafe.
 
 Both fibre memberships are measured rather than assumed, which took two additional replay
 experiments. The common-scale directions: the objective is flat along them in 14 of the replay
@@ -2182,14 +2193,14 @@ verdicts sensitive to the operating point, set verdicts not --- generalises, and
 establish it; it is the cheapest available test of the question and it is not a survey. Extending it
 means the same census at the fitted setting on spoon and carrot, and on more policy pairs.
 
-\item \textbf{The fibre through the fitted point is not yet censused to full width.}
-Fibre \emph{membership} at the fitted ratio is measured rather than assumed: the replay grid varies
-the common scale at seven other ratios but only once at $0.25$, so we swept the scale sixteenfold at
-ratio $0.25$ directly and re-measured the torque limit at the fitted gains
-(Sect.~\ref{subsec7_7}). What remains open is policy data, not replay data: four of the six planned conditions in the fitted fibre have a complete
-64-configuration census and two are still running. The envelope is a min/max over conditions and so
-only widens, and it already abstains, so the two outstanding conditions cannot change the set
-verdict --- but they can widen it, and the number we report will move.
+Within that one task the design is complete rather than partial, and that is worth separating from
+the coverage limitation above. Both operating points carry a full six-condition fibre --- twelve
+64-configuration censuses in all --- and fibre \emph{membership} at the fitted ratio is measured
+rather than assumed: the replay grid varies the common scale at seven other ratios but only once at
+$0.25$, so we swept the scale sixteenfold at ratio $0.25$ directly and re-measured the torque limit
+at the fitted gains, which does not transfer for free because the fitted point doubles the stiffness
+(Sect.~\ref{subsec7_7}). What is narrow here is the number of tasks and pairs, not the design on the
+one we ran.
 
 \item \textbf{The criterion's central negative result rests on one selected policy pair.}
 Section~\ref{subsec8_4} shows the union bound declaring an ordering the published real means
@@ -2589,7 +2600,8 @@ statement about \emph{these} 17 pairs and the ledger's $E_{MC}$ quantifies over 
 well; but the gap is now measured rather than merely named.
 Our per-pair results should be read as exploratory in the multiplicity sense. This is a statement
 about \emph{multiple policy pairs}, not about the envelope over conditions: for a fixed finite set
-of conditions the envelope's false-declaration rate is at most $\alpha$ without correction, by the
+of conditions the envelope's false-declaration rate is at most the interval's one-sided tail
+$\alpha_1 = 0.025$ without correction, by the
 argument in Sect.~\ref{subsec3_3} --- a wrong declaration requires one particular condition's own
 lower bound to exceed its own truth. The two multiplicities are different: across conditions the
 error event pins down which interval must fail, across policy pairs it does not.

@@ -64,6 +64,38 @@ discarding real observations. It now compares the per-configuration outcomes and
 only when it is an exact duplicate. This restores the S=3 declaration count to **3 of 17**; the
 "2 of 17" reported in the v1.4.0 documents was an artifact of the regression.
 
+### The fitted-point fibre is complete
+
+All six conditions at both operating points now have a complete 64-configuration census on the
+eggplant task -- twelve censuses in all. The fitted envelope is `[-0.029, +0.219]` and abstains, as
+nominal's `[-0.035, +0.300]` does. Table 10, Sect. 7.7 and the limitations no longer describe any
+condition as outstanding, and Limitation 2 is folded into Limitation 1: what is narrow is the number
+of tasks and pairs, not the design on the one we ran. The fitted-setting census on spoon is an
+extension beyond the manuscript and is not referenced by any number in it.
+
+### Three residual boundaries named
+
+- **Table 6a splices two stacks and now says so.** Its replay bounds are the larger of the two
+  stacks' figures, which for both the iso family and the torque limit is the original ManiSkill2
+  stack, while the policy census is on the ManiSkill3 port. The larger bound is quoted so the column
+  is conservative; a single-stack row would use the smaller ManiSkill3 figures and widen the gap the
+  table reports.
+- **The one-sided tail is written as `alpha_1 = 0.025`, not as `alpha`.** The intervals are
+  equal-tailed two-sided 95%, so each tail carries 0.025. That makes both bounds in Sect. 3.3
+  sharper than previously stated: the envelope's false-declaration rate is at most 0.025, and its
+  coverage of the true range is at least `1 - 2*alpha_1 = 0.95`. An earlier version wrote `alpha`
+  for both and left the factor of two ambiguous.
+- **The introduction asserted a sim-to-real gap that Sect. 8.4 says the data cannot establish**, and
+  still called the reversal case unique. It now matches the body: 5 of 62 published pairs, and
+  whether the case is a model gap or noise in a real evaluation published without intervals is left
+  open, both readings supporting the same conclusion.
+
+### The cover letter is one page
+
+It was 2 129 words. The submission version is 816, leading with the question, the three findings,
+the provenance bound and the scope position the journal asks about. The long version is kept as
+`cover_letter_long.md` for a revision round.
+
 ### The calibration result is a re-calibration audit, not a claim about the original fit
 
 The paper said the benchmark "is operated at a point its own calibration evidence excludes." That

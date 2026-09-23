@@ -65,3 +65,6 @@ E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocch
 [octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 59 success=False steps=120 inf=12.6s sim=4.9s total=21.0s
 [octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 60 success=True steps=120 inf=11.8s sim=4.3s total=19.5s
 [octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 61 success=False steps=120 inf=12.0s sim=5.5s total=20.7s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 62 success=False steps=120 inf=12.4s sim=5.6s total=21.5s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 63 success=False steps=120 inf=12.4s sim=6.0s total=21.9s
+== fitted_dens_x0.5: 33/64 success

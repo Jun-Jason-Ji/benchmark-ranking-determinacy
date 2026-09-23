@@ -7,13 +7,10 @@ Complete configuration censuses, octo-small vs octo-base, evaluated at the bench
 | operating point | $\Delta$ | point 95% | point verdict | set bound | conditions | set verdict |
 |---|---:|---|---|---|---:|---|
 | nominal (shipped) | +0.0729 | [-0.0155, +0.1613] | abstain | [-0.0348, +0.3002] | 6 | abstain |
-| fitted (minimiser) | +0.1042 | [+0.0164, +0.1920] | octo-small> | [-0.0293, +0.2117] | 4* | abstain |
-
-\* incomplete and excluded: fitted_dens_x0.5, fitted_fric_x0.4. The affected envelope is over fewer conditions than the design calls for and can only be narrower than the final one.
-
+| fitted (minimiser) | +0.1042 | [+0.0164, +0.1920] | octo-small> | [-0.0293, +0.2186] | 6 | abstain |
 
 - $\Delta$ shifts by **+0.0313** between the two operating points.
-- Point verdict **flips**; set verdict holds (provisional, a condition is still running).
+- Point verdict **flips**; set verdict holds.
 
 The shift itself, paired per configuration, under each sampling model. The first is the primary one because it matches this paper's estimand: the configuration grid is enumerated and fixed, so what is random is the policy seed within a configuration.
 
@@ -28,12 +25,12 @@ Per seed set the shift is $+0.172$, $+0.016$, $-0.094$, so the sets do not agree
 
 ## spoon (24 configurations, 2 seed sets)
 
-**Incomplete.** Episodes present per seed set and policy: A'/small 0/24, A'/base 0/24, C/small 0/24, C/base 0/24. No verdict reported; configurations are covered in a deterministic order, so a partial slice is a systematic subset of object poses rather than a random one.
+**Incomplete.** Episodes present per seed set and policy: A'/small 24/24, A'/base 1/24, C/small 24/24, C/base 0/24. No verdict reported; configurations are covered in a deterministic order, so a partial slice is a systematic subset of object poses rather than a random one.
 
 ## Across tasks
 
 | task | $\Delta$ shift | point verdict | set verdict |
 |---|---:|---|---|
-| eggplant | +0.0313 | flips | holds (prov.) |
+| eggplant | +0.0313 | flips | holds |
 
 The union bound cannot protect against a change of operating point, and it is worth being clear that this is structural rather than a shortcoming of the particular fibre. The bound ranges over the directions the calibration data leave \emph{unconstrained}; nominal and the minimiser differ in the gain ratio and the execution delay, which the data \emph{identify}. A union over the invisible directions is silent about a move along an identified one by construction.
