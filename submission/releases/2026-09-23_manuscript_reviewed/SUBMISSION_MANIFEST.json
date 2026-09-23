@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "kind": "submission_materials_snapshot",
+  "created_utc": "2026-09-23T12:09:11.425193+00:00",
+  "git_head": "10c8a3b53af183c689ff8e45c8ece8b0eca57716",
+  "full_data_release_included": false,
+  "archive_deposit_verified": false,
+  "episode_records_included": false,
+  "files": [
+    {
+      "path": "README.md",
+      "source": "generated:package_submission.py",
+      "bytes": 2173,
+      "sha256": "228dc6e2ee27a244719823bdc285b4064a1557e1c587f440f676e954b629a526"
+    },
+    {
+      "path": "reviewer_evidence_index.md",
+      "source": "submission/autonomous_robots/REVIEW_EVIDENCE_INDEX.md",
+      "source_mtime_ns": 1790165304010556900,
+      "bytes": 6460,
+      "sha256": "349b176fecc15f9530184078f8420da4b2038a0217f6fbaa45144855bc117a31"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig1-eps-converted-to.pdf",
+      "source": "submission/autonomous_robots/Fig1-eps-converted-to.pdf",
+      "source_mtime_ns": 1790155356703153400,
+      "bytes": 16316,
+      "sha256": "e7b9500efab1d3ffc6c69df15a6c7777e64684fc480778065b81ba403cf77709"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig1.eps",
+      "source": "submission/autonomous_robots/Fig1.eps",
+      "source_mtime_ns": 1790155279360050100,
+      "bytes": 39340,
+      "sha256": "544cc86e52788887496a569b6ede444dd143b7811334b7994e5a5901d9f64ea6"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig2-eps-converted-to.pdf",
+      "source": "submission/autonomous_robots/Fig2-eps-converted-to.pdf",
+      "source_mtime_ns": 1790155357366374900,
+      "bytes": 20778,
+      "sha256": "b0fef4076c3dd99febc4a83cfcd78c68e8185c1375f434134b066b1fce1125c7"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig2.eps",
+      "source": "submission/autonomous_robots/Fig2.eps",
+      "source_mtime_ns": 1790155282726161800,
+      "bytes": 47905,
+      "sha256": "f39a8d97d53fb48a74dcd0626c4b6d20cd331d4b92063adfcf88e5deb6c9c907"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig3-eps-converted-to.pdf",
+      "source": "submission/autonomous_robots/Fig3-eps-converted-to.pdf",
+      "source_mtime_ns": 1790155358003345200,
+      "bytes": 21549,
+      "sha256": "7c651b1a154f9cf061f702e886edf0fba99482345907d8e4c6f26e06e24fb2e8"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig3.eps",
+      "source": "submission/autonomous_robots/Fig3.eps",
+      "source_mtime_ns": 1790155283943073400,
+      "bytes": 58930,
+      "sha256": "aea2faabf51b0be2149eb039992dc3ca524e962c96936a1ceb5248c2c08af082"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig4-eps-converted-to.pdf",
+      "source": "submission/autonomous_robots/Fig4-eps-converted-to.pdf",
+      "source_mtime_ns": 1790155358598269600,
+      "bytes": 18463,
+      "sha256": "fdbd31ed3eac633a48a47175b177b094e87f9ce967bd133c6d8970d1939f4591"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig4.eps",
+      "source": "submission/autonomous_robots/Fig4.eps",
+      "source_mtime_ns": 1790155280368979500,
+      "bytes": 61846,
+      "sha256": "11146034cbffe0e2d87e4c2e0091f5afea47f7f4b0e6fce37b5d0594cc87adc6"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig5-eps-converted-to.pdf",
+      "source": "submission/autonomous_robots/Fig5-eps-converted-to.pdf",
+      "source_mtime_ns": 1790155359229625300,
+      "bytes": 41622,
+      "sha256": "ca1f80c2e036051e9cd07e71fdba32919f4cf714538e94cdb3663f308a12070f"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig5.eps",
+      "source": "submission/autonomous_robots/Fig5.eps",
+      "source_mtime_ns": 1790155326940687500,
+      "bytes": 131964,
+      "sha256": "1347a8a380c8f6fa0e0e6a8e3cece04b210a7b20808eba14b1f2a48c4d8d8952"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig6-eps-converted-to.pdf",
+      "source": "submission/autonomous_robots/Fig6-eps-converted-to.pdf",
+      "source_mtime_ns": 1790155359755051100,
+      "bytes": 22716,
+      "sha256": "29e94de6ab3df758aac65cf0dc6632423fdd7674497e313dfb464ca867c827fb"
+    },
+    {
+      "path": "submission/autonomous_robots/Fig6.eps",
+      "source": "submission/autonomous_robots/Fig6.eps",
+      "source_mtime_ns": 1790155324611458100,
+      "bytes": 338497,
+      "sha256": "4417d5b8c8603ff849fd769bc9a351ae9c1100c55174e93da0175e6790baafc1"
+    },
+    {
+      "path": "submission/autonomous_robots/SUBMISSION_CHECKLIST.md",
+      "source": "submission/autonomous_robots/SUBMISSION_CHECKLIST.md",
+      "source_mtime_ns": 1790165304877207400,
+      "bytes": 5097,
+      "sha256": "3ff2606b7338a0638ba1d3f9e5b1542b035cb034717a5fcea64f9bd1737abdbd"
+    },
+    {
+      "path": "submission/autonomous_robots/cover_letter.md",
+      "source": "submission/autonomous_robots/cover_letter.md",
+      "source_mtime_ns": 1790164889124476900,
+      "bytes": 4326,
+      "sha256": "4d43d66fa719325206627533ecd5355c55a43ffdc611327fea645cb5b86cb6a3"
+    },
+    {
+      "path": "submission/autonomous_robots/declarations_for_interface.md",
+      "source": "submission/autonomous_robots/declarations_for_interface.md",
+      "source_mtime_ns": 1790164981811895000,
+      "bytes": 8206,
+      "sha256": "5ed17a59173ca4057c3ccea0629a000e1bff3aacbab97476ef7fd9d566324f87"
+    },
+    {
+      "path": "submission/autonomous_robots/main.bbl",
+      "source": "submission/autonomous_robots/main.bbl",
+      "source_mtime_ns": 1790165270087207800,
+      "bytes": 18206,
+      "sha256": "03c41de3851d9a4171b6db78b57ecffa032cd8d7ac1bd5b4dc2c7d63b3256024"
+    },
+    {
+      "path": "submission/autonomous_robots/main.pdf",
+      "source": "submission/autonomous_robots/main.pdf",
+      "source_mtime_ns": 1790165271471031700,
+      "bytes": 791880,
+      "sha256": "cc173dd888b6c2328993da91ca37c85eba3001673f1b557e2b0bc75fd0dd6efa"
+    },
+    {
+      "path": "submission/autonomous_robots/main.tex",
+      "source": "submission/autonomous_robots/main.tex",
+      "source_mtime_ns": 1790165208534288600,
+      "bytes": 207110,
+      "sha256": "87b572d8d95f5dce1b0e47754577bb80dd5e90a5a72e1110db486662d42e1b32"
+    },
+    {
+      "path": "submission/autonomous_robots/references.bib",
+      "source": "submission/autonomous_robots/references.bib",
+      "source_mtime_ns": 1790154348056312400,
+      "bytes": 17411,
+      "sha256": "a11ee6ca5e68eb4fd7bdf3e454af6be56d01b9771299a48ad73c885d9003d910"
+    },
+    {
+      "path": "submission/autonomous_robots/sn-apacite.bst",
+      "source": "submission/autonomous_robots/sn-apacite.bst",
+      "source_mtime_ns": 1790046960910551500,
+      "bytes": 151345,
+      "sha256": "be9346857b116ec0359319ff26ace70da573475e4c92c6fb9418f841ff7a7c75"
+    },
+    {
+      "path": "submission/autonomous_robots/sn-jnl.cls",
+      "source": "submission/autonomous_robots/sn-jnl.cls",
+      "source_mtime_ns": 1790046960869832200,
+      "bytes": 55857,
+      "sha256": "36d0c3273a59d48dc6a9c7b080dfa1ec50dc10229d8751568d1f2e490ffa5ecc"
+    }
+  ]
+}

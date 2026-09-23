@@ -72,10 +72,10 @@ implementations, two robot embodiments and eight policy configurations.
 First, replaying 98 public demonstrations reveals weakly observed controller directions. On a
 64-configuration census with five seed sets, varying these directions changes one estimated policy
 gap by 0.120. Re-calibration on same-source demonstrations favours a different operating point.
-Matched censuses on two tasks show distinct effects: an unresolved gap change of $+0.031$ on
-eggplant, and a change of $-0.271$ on spoon (primary 95\% interval $[-0.458,-0.084]$).
-On spoon, both single-setting and sampled-set declarations become abstentions at the fitted point;
-on eggplant, both set envelopes abstain. Second, the benchmark evaluates finite populations of
+Matched censuses on two tasks show distinct effects. On spoon the gap changes by $-0.271$ (primary
+95\% interval $[-0.458,-0.084]$) and both the single-setting and the sampled-set declaration become
+abstentions; on eggplant the change is an unresolved $+0.031$, the single-setting verdict moves the
+other way into a declaration, and both set envelopes abstain. Which rule moves is task-dependent. Second, the benchmark evaluates finite populations of
 24 to 300 configurations, and its implementations can enumerate different populations. A census
 removes configuration sampling error while leaving policy randomness and simulator sensitivity.
 Third, the reference 72-episode budget resolves only one or two of four reported orderings,
@@ -460,9 +460,7 @@ the \emph{argmin} misses low, and symmetrically at the argmax, so the envelope c
 probability at least $1 - 2\alpha_1 = 0.95$ however many settings $S$ holds. Both bounds are
 conditional on the per-setting intervals being valid, which Sect.~\ref{subsec5_4} qualifies where a
 variance term is imputed, and neither says anything about parameter values we did not sample --- the
-limitation Sect.~\ref{subsec8_2} measures. Both
-statements are conditional on the intervals at each $z$ being valid, which Sect.~\ref{subsec5_4}
-qualifies where a variance term is imputed.
+limitation Sect.~\ref{subsec8_2} measures.
 Throughout the empirical sections $S = F_{\mathrm{nom}}$ and the single setting is nominal, which is
 the pairing the benchmark's own reporting implies.
 A third rung, a Gaussian-process simultaneous band over the parameter axes, is introduced in
@@ -2804,14 +2802,19 @@ when adding episodes removed them. They are the reason every effect size in this
 census-scope.
 \end{enumerate}
 
-Four further corrections were to how a result was described rather than to the result: the
+Five further corrections were to how a result was described rather than to the result: the
 compatible set was called a confidence set when it carries no coverage as computed
 (Sect.~\ref{subsec3_2}); the test reference was nominal, which makes nominal's own loss increase
 zero by construction and so could never reject it (Sect.~\ref{subsec4_4}); the abstention at both
 operating points was read as the criterion protecting against the operating-point choice, which an
-envelope over a set that excludes the other point cannot do (Sect.~\ref{subsec7_7}); and the case
+envelope over a set that excludes the other point cannot do (Sect.~\ref{subsec7_7}); the case
 of Sect.~\ref{subsec8_4} was called the only real-versus-simulated reversal in the published tables
-when the audit finds five. The release's \texttt{CHANGELOG.md} carries the per-version record,
+when the audit finds five; and, most recently, we generalised from the eggplant census that point
+verdicts are sensitive to the operating point while set verdicts are not. The spoon census refutes
+that --- there the set verdict moves too --- so the generalisation is withdrawn and replaced by the
+weaker statement that neither criterion is protected and which one moves is a property of the task
+(Sect.~\ref{subsec7_7}). That is the second time in this paper that a claim drawn from one task or
+a partial design did not survive completing it. The release's \texttt{CHANGELOG.md} carries the per-version record,
 including corrections to units, estimator implementation and documentation that never reached a
 stated result.
 
