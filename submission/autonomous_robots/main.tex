@@ -68,7 +68,9 @@ Simulation-Based Policy Comparison}
 simulator as evidence of which is better. We ask which ranking claims a benchmark's own evidence
 determines, on a widely used sim-to-real suite across two embodiments, enumerating every grid. First, the calibration protocol
 is structurally blind: replaying 98 demonstrations identifies the controller ratio and delay, while a
-common gain rescaling moves the loss by at most $3\times10^{-6}$ over a sixteenfold range and halving the
+common gain rescaling moves the replay objective by at most $3\times10^{-6}$ of its own composite
+units over a sixteenfold range --- against $1.4\times10^{-3}$ between two independent implementations
+of the same dynamics --- and halving the
 torque limit leaves 97 of 98 replays bitwise unchanged. The same test rejects the simulator's shipped
 setting; a full census at the setting it prefers moves the point-calibration verdict from abstention
 to a declaration on a difference change of 0.031 that is not itself resolved, while the set-valued
@@ -128,7 +130,8 @@ findings, each independent of the others.
 The protocol identifies some dynamics parameters and is, over the range it excites, uninformative
 about others.
 Replaying 98 real demonstrations, we show analytically and then empirically that a common scaling of
-the joint PD gains and the value of the torque limit leave the replay trajectory unchanged --- the
+the joint PD gains and the value of the torque limit leave the replay trajectory unchanged to within
+magnitudes we quantify below --- the
 first because the free-space response depends on the ratio $d/k$ up to inertial terms that these
 slow, teleoperated demonstrations do not excite, the second because commanded
 torque never saturates along demonstrated velocities. Sect.~\ref{subsec4_2} states both as
@@ -186,9 +189,10 @@ verdict: declare an ordering only when it holds for every simulator parameter th
 cannot exclude. We measure that criterion's reach, and report both halves of the answer. It is
 conservative as designed on synthetic ground truth, where the point criterion's error rate
 \emph{rises} with episode count to 0.88, and it stabilises verdicts on real replicate data. At the
-one- to three-seed budgets the literature actually uses it disagrees with point calibration on 3 of
-17 policy pairs --- but when we spend more seeds, two of those three disagreements turn out to have
-been our own insufficient power, leaving one. And on the single policy pair for which published
+reference protocol's three seed sets it disagrees with point calibration on 3 of 17 policy pairs, and
+at a single seed set on 2 of the 13 pairs one seed set can evaluate at all --- but when we spend more
+seeds, two of the three disagreements turn out to have been our own insufficient power, leaving
+one. And on the single policy pair for which published
 real-robot results contradict the simulator, the criterion over the invisible fibre
 \emph{declares the ordering the published real means reverse}. Its reach stops at the parameter family the
 calibration data can constrain, and the sim-to-real gap on that pair lies outside it.
@@ -225,7 +229,8 @@ claim. \emph{Scope:} 17 bridge pairs, one to five seed sets. Three distinct thin
 keep them apart. (i) \emph{Modelling choices the data cannot adjudicate}: the protocol's own
 72-episode budget resolves one or two of the four orderings it reports depending on the variance
 model, and the observation unit --- runs or directory means, both consistent with the stated formula
---- moves two verdicts of eighteen. (ii) \emph{A choice the evidence does settle, against the
+--- moves two verdicts among the 18 rows of the release's core table (the 17 bridge pairs plus the
+pick-coke-can pair). (ii) \emph{A choice the evidence does settle, against the
 benchmark}: the controller operating point, which the replay objective rejects, moves the
 point-calibration verdict from abstention to a declaration; here the evidence has a preference and
 the benchmark is not at it. The set-valued verdict abstains at both points.
@@ -567,8 +572,8 @@ $e^{\mathrm{r}}_t = \arcsin(\lVert R_t - \hat R_t\rVert_F/(2\sqrt2))$ is an orie
 \emph{radians}, and $L(z) = M^{-1}\sum_m L_m(z)$. Adding the two makes this a \textbf{composite}
 objective: it adds a length to an
 angle, weighting one radian as one metre. That weight is inherited, not derived, and the sum is
-therefore not a distance --- a point we belabour because an earlier version of this paper multiplied
-$L$ by $1000$ and reported the result in millimetres, which is not a meaningful operation. Values of
+therefore not a distance, and in particular it must not be scaled by $1000$ and reported in
+millimetres. Values of
 $L$ and differences in $L$ are quoted below in \emph{composite units}, and wherever the physical size
 of an effect matters we give the translation and rotation components separately. For orientation:
 at the fitted setting $L = 0.0456$, of which the translation part is $19.1$~mm and the remainder is
@@ -633,8 +638,9 @@ purpose-built Vulkan layer (Appendix~\ref{secB}).
 demonstrations. The two insensitive directions are flat to sub-millimetre and to bitwise on 97 of 98
 demonstrations respectively; the identified directions produce the expected loss increase. The scale
 to judge these against is the $1.36\times10^{-3}$ composite disagreement between these two stacks at
-\emph{identical} nominal parameters (Sect.~\ref{subsec4_4}), whose translation part is $0.47$~mm,
-which is the protocol's own resolution floor.}\label{tab1}
+\emph{identical} nominal parameters (Sect.~\ref{subsec4_4}), whose translation part is $0.47$~mm.
+Sect.~\ref{subsec4_4} states what that magnitude is and is not: an engineering reference with an
+external basis, not a resolution limit below which an effect becomes unattributable.}\label{tab1}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Direction & ManiSkill3 & Original stack & Verdict \\
@@ -647,7 +653,8 @@ Execution delay 1 step & clearly identified & clearly identified & identified \\
 \end{tabular}
 \end{table*}
 
-All 14 iso-scale groups fall below a 1~mm trajectory tolerance. The paired \emph{loss} increases for
+All 14 iso-scale groups have maximum trajectory differences below $1$~mm; we quote that threshold
+as a round descriptive figure, not as a tolerance anyone has defended. The paired \emph{loss} increases for
 the ratio direction are $+0.0089\,[+0.0073, +0.0105]$ and $+0.0064\,[+0.0055, +0.0072]$ in composite
 units --- three orders of magnitude above the $3.1\times10^{-6}$ the common scale produces over a
 larger range, which is the contrast this section exists to establish. Figure~\ref{fig1} shows the
@@ -659,7 +666,8 @@ between parameter settings, in metres. The loss increases just quoted are differ
 \emph{composite} objective of Eq.~\eqref{eq:loss}, which is not a length. And neither is a residual
 of the fit: the fit's own residual at the fitted setting is $L = 0.0456$ composite, of which
 $19.1$~mm is translation. Sect.~\ref{subsec4_4} judges parameter effects against a between-stack
-reference magnitude in the same composite units.
+reference magnitude in the same composite units. Each is quoted in its own terms throughout and none
+is a substitute for another.
 
 Halving the torque limit leaves the replayed trajectory \emph{bitwise} identical on 97 of the 98
 demonstrations, on both stacks independently, consistent with what Sect.~\ref{subsec4_2}(ii) predicts
@@ -696,7 +704,8 @@ point}\label{subsec4_4}
 Inverting the calibration test requires a search domain, a loss, a reference and a threshold, and the
 answer depends on all four, so we state them. The domain is the 50-point grid of
 $(\text{stiffness scale}, \text{damping scale}, \text{execution delay})$ that the replay sweep
-enumerates; the loss is the per-demonstration mean total end-effector error; the reference is the
+enumerates; the loss is the per-demonstration composite objective of Eq.~\eqref{eq:loss}, which sums
+a position error in metres and an orientation error in radians; the reference is the
 grid's loss minimiser; and a candidate is retained when the one-sided $95\%$ lower bound of its
 paired mean loss increase over that minimiser does not exceed zero, which is the rule
 Appendix~\ref{secA} states. Computed that way on the 98 common demonstrations
@@ -739,7 +748,7 @@ implementations of one set of equations differ by that much, so we use it as a r
 $\tau = 1.36\times10^{-3}$, reading the set at $\tau$ as well as at zero and reporting
 $2.10\times10^{-3}$ as a sensitivity.
 
-We state its status carefully, because an earlier draft overstated it. This is an
+We state its status carefully, because it is easy to overstate. This is an
 \emph{engineering reference} with an external basis, not a resolution limit: a same-stack paired
 parameter effect can be both smaller than a fixed cross-stack offset and perfectly well resolved,
 since the two quantities have different sources of variation. What $\tau$ buys is a scale that was
@@ -921,7 +930,19 @@ reason for preferring this one.
 sampling error is real and the appropriate estimator is a paired bootstrap \emph{clustered by
 configuration}.
 
-Three implementation points matter and are easy to get wrong. With a single run per configuration,
+One term in Eq.~\eqref{eq:var} has to be imputed and we state the rule rather than leave it in the
+code. A configuration with a single run supplies no within-configuration variance, so $s^2(c)$ is
+unavailable there. Where the cell has other configurations with two or more runs we substitute the
+mean of the measured $s^2$; where \emph{no} configuration has a replicate we fall back to the
+binomial $\bar p(1 - \bar p)$; and for a policy that decodes deterministically, whose re-runs are
+record-identical, we set the term to zero and label the cell as carrying no measurement of run-to-run
+drift. Of the 18 rows in the release's core table, 15 are fully empirical on both sides, 2 use the
+deterministic-zero term for the OpenVLA side, and 2 use the binomial fallback. Every row prints its
+model, so a reader can see which interval rests on an imputation; the imputation is a pooled
+variance, which is an assumption of homogeneity across configurations that we do not test and that
+would be optimistic if run-to-run noise were concentrated in a few scenes.
+
+Three further implementation points matter and are easy to get wrong. With a single run per configuration,
 estimator (i) degenerates to the ordinary binomial interval: \textbf{a census does not narrow an
 interval; replicates do.} Enumerate the grid first, which removes double counting, then add runs,
 which removes policy noise. Record-identical re-runs of a deterministic policy must be merged into
@@ -950,10 +971,9 @@ results (Sect.~\ref{subsec7_2}).
 magnitudes are \emph{different kinds of quantity} --- a standard deviation across seed sets, a paired
 mean shift between builds, and the spread of one policy's rate across four settings --- so the column
 reports each in its own terms and they should not be ranked against one another as though they shared
-a scale. Every entry is nevertheless a quantity in units of $\Delta$, the policy difference, which
-an earlier version of this table got wrong: the build row reported the largest change in a
-\emph{single} policy's success rate ($0.078$) and the texture row the range of a single policy's rate
-($0.400$), neither of which is a difference between policies. The scopes differ per row. The seed row
+a scale. Every entry is a quantity in units of $\Delta$, the policy difference, and not a change in a
+single policy's success rate --- the two are easy to interchange and are not the same magnitude.
+The scopes differ per row. The seed row
 is census-scope at $S = 5$ on eggplant, median over policy pairs. The build row is a single run of
 each of two server builds on the eggplant census, so it carries no seed replication and no $S$; it
 reproduces at the episode level on 0.73--0.88 of episodes. The texture row is one run per
@@ -1117,7 +1137,14 @@ Two things in Table~\ref{tab4} matter, and they pull in opposite directions.
 
 The magnitudes are small. The policy-seed noise we measure on the 64-configuration eggplant census is
 $\pm 0.132$ at half-width for a single seed set and $\pm 0.076$ for three
-(Sect.~\ref{subsec5_5}), and every cell's discrepancy is inside that band. A different operating
+(\texttt{analyze\_seed\_noise.py}), and every cell's discrepancy is inside that band. Those two
+figures come from the spread of $\hat\Delta$ \emph{across whole seed sets} --- median
+$\mathrm{sd} = 0.068$ over pairs and conditions, scaled as $1.96\,\mathrm{sd}/\sqrt{S}$ --- which is
+a different noise model from Eq.~\eqref{eq:var}, the estimator every table in this paper uses. Eq.~\eqref{eq:var}
+pools per-configuration run variances and gives per-pair three-seed half-widths of $0.075$--$0.088$
+on the same census (Sect.~\ref{subsec7_6}). The two answer different questions --- how far a
+whole-census result moves between seed sets, against how precisely one census estimates the benchmark
+value --- and we quote each where it belongs rather than treating them as one quantity. A different operating
 system, a software-rendered rasteriser, a different graphics path and an out-of-process policy server
 move the published numbers by less than one seed's worth of noise, which is the external-validity
 check the rest of the paper rests on. On the second embodiment the same check gives $+0.003$
@@ -1144,8 +1171,10 @@ difference $0.038$ is about a third of the $0.121$ torque shift, not an order of
 and the largest single cell, $0.111$, is close to it; against the $0.400$ texture range the ratio is
 about ten. So the pipeline check licenses less than a sweeping claim of negligibility. What it does
 license is the specific use we make of it: every effect in Sects.~\ref{sec5}--\ref{sec8} is a
-\emph{difference between two policies measured in the same configuration on our own pipeline}, where
-a common platform offset cancels and only its interaction with the policy pair would matter. The
+\emph{difference between two policies measured in the same configuration on our own pipeline and one
+build}, where an offset common to both policies cancels and only its interaction with the policy pair
+would matter. The build condition is not decoration: Sect.~\ref{subsec5_5} measures a build change
+moving $\hat\Delta$ by $-0.109$, so it is not such an offset. The
 $-0.038$ is a caution about comparing our absolute rates with published absolute rates, which we do
 only in this section.
 
@@ -1338,19 +1367,16 @@ report, rather than bury, that the knife edges are not stable across the two obs
 the largest of them under the directory unit was $+0.000042$, on a pair that abstains under the run
 unit. A bound that small is a property of the estimator's last digit, not of the policies.
 
-At three seed sets, two rows disagreed. The one that no longer does was resolved by spending seeds,
-not by any change of method.
+At three seed sets, three rows disagreed. The two that no longer do were resolved by spending seeds,
+not by any change of method or of data-retention rule.
 
 \begin{table*}[t]
 \caption{The effect of raising the seed budget from three to five on the point-versus-set
 disagreements of the eggplant census. Both columns are recomputed on the run observation unit with
 $S=3$ defined as seed sets A$'$, B and C, so the two are directly comparable and both are
-reproducible from the release; an earlier version quoted historical $S=3$ figures whose seed-set
-membership was not recorded, and a second omitted the third row because a defect in the
-deterministic-policy path of \texttt{make\_core\_table.py} discarded OpenVLA's differing seed-set
-directories. The third row's $S=3$ abstention rests on a lower bound of $-6\times10^{-6}$, which is
-a disagreement in arithmetic and not in substance; we list it because the count is ours to report,
-not to curate. Envelopes include the nominal setting, as the bound requires.}\label{tab6}
+reproducible from the release with \texttt{make\_core\_table.py -}\texttt{-max-sets 3}. The third
+row's $S=3$ abstention rests on a lower bound of $-6\times10^{-6}$, which is a disagreement in
+arithmetic and not in substance; we list it because the count is ours to report, not to curate. Envelopes include the nominal setting, as the bound requires.}\label{tab6}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Pair & Union at $S=3$ & at $S=5$ & Outcome \\
@@ -1505,7 +1531,7 @@ planned conditions are complete and already abstain, and because a min/max envel
 conditions are added, the remaining two cannot restore a declaration. Generated by
 \texttt{scripts/analyze\_fitted\_point.py}, which refuses any condition that is not a complete
 census.}\label{tab10}
-\begin{tabular}{@{}lrllll@{}}
+\begin{tabular}{@{}lrlll@{}}
 \toprule
  & Replay loss & & \multicolumn{2}{c}{verdict} \\
 \cmidrule(l){4-5}
@@ -1538,8 +1564,8 @@ rather than assuming the arms independent. That gives
 $D \in \mathbf{[-0.086, +0.148]}$. Three sensitivities bracket it: summing the four arms' run
 variances separately, which discards the pairing, gives $[-0.093, +0.156]$; treating configurations
 as a sampling unit --- a superpopulation reading, and the estimand
-Sect.~\ref{sec5} argues is not the benchmark's --- gives $[-0.064, +0.126]$, and an earlier version
-of this paper quoted it as the main interval; whole seed sets as blocks on two degrees of freedom
+Sect.~\ref{sec5} argues is not the benchmark's --- gives $[-0.064, +0.126]$; whole seed sets as
+blocks on two degrees of freedom
 give $[-0.300, +0.363]$. The three seed sets individually give $+0.172$, $+0.016$ and
 $\mathbf{-0.094}$ --- one of the three moves the other way. All four intervals contain zero and none
 is an exact finite-sample guarantee. So a significant interval at one operating point and a
@@ -1553,9 +1579,13 @@ abstention to a declaration, because at nominal the lower bound already sat at $
 declaration at the fitted point rests on a lower bound of $+0.016$. This comparison is matched at
 three seed sets, so each policy contributes $64 \times 3 = 192$ episodes and each weighs $0.0052$ in
 $\hat\Delta$: the bound is about \textbf{three single-policy episodes}, or one configuration's mean
-outcome out of 64. Three episodes are what separates the declaration from an abstention. At the budgets in use the verdict is decided by a modelling choice the evidence does
-not settle, and a reader given only the published rates cannot see any of this, because those rates
-exist at one operating point and carry no interval.
+outcome out of 64. Three episodes are what separates the declaration from an abstention. So at the budgets in use the
+verdict here turns on the operating point --- and, unlike the modelling choices of
+Sect.~\ref{subsec7_2}, this is a choice the calibration evidence \emph{does} settle, against the
+setting the benchmark uses. That is the C3(ii) case rather than the C3(i) case, and we keep them
+apart: what is unsettled is not which point the evidence prefers but which verdict is correct, since
+the difference between the two points is not itself resolved. A reader given only the published rates
+cannot see any of this, because those rates exist at one operating point and carry no interval.
 
 \paragraph{The set-valued verdict does not change: it abstains at both operating points.}
 Taking the union over each point's own calibration-invisible fibre gives $[-0.035, +0.300]$ at
@@ -1999,11 +2029,10 @@ establish it; it is the cheapest available test of the question and it is not a 
 means the same census at the fitted setting on spoon and carrot, and on more policy pairs.
 
 \item \textbf{The fibre through the fitted point is not yet censused to full width.}
-Fibre \emph{membership} at the fitted ratio is no longer assumed: an earlier version of this
-limitation said the common-scale invariance was verified at seven ratios but not at $0.25$, and we
-closed that by sweeping the scale sixteenfold at ratio $0.25$ directly and by re-measuring the
-torque limit at the fitted gains (Sect.~\ref{subsec7_7}). What remains open is policy data, not
-replay data: four of the six planned conditions in the fitted fibre have a complete
+Fibre \emph{membership} at the fitted ratio is measured rather than assumed: the replay grid varies
+the common scale at seven other ratios but only once at $0.25$, so we swept the scale sixteenfold at
+ratio $0.25$ directly and re-measured the torque limit at the fitted gains
+(Sect.~\ref{subsec7_7}). What remains open is policy data, not replay data: four of the six planned conditions in the fitted fibre have a complete
 64-configuration census and two are still running. The envelope is a min/max over conditions and so
 only widens, and it already abstains, so the two outstanding conditions cannot change the set
 verdict --- but they can widen it, and the number we report will move.
@@ -2480,13 +2509,10 @@ episode count is five on most configurations and four or six on the rest, for th
 caption gives. Any statement of the form ``five runs per configuration'' should be read as the
 directory count and checked against this table.
 
-An earlier version of this appendix added that Eq.~\eqref{eq:var} ``takes the per-configuration
-$S_c$ and is unaffected''. That was wrong about the implementation as it then stood, which averaged
-a directory's episodes at a configuration before computing the variance, making $S_c$ the number of
-directories rather than of runs. The estimator now uses the run count, matching the formula, and
-Sect.~\ref{subsec7_2} reports the two units and the two rows on which they differ. The columns here
-are generated by the same code path as the tables, so the counts and the estimator cannot disagree
-again.
+Eq.~\eqref{eq:var} sums over the per-configuration run count, which is the ``Runs/config'' column
+rather than the ``Dirs'' column, and Sect.~\ref{subsec7_2} reports the alternative directory unit
+and the two rows on which the two differ. The columns here are generated by the same code path as
+the tables, so the counts and the estimator cannot disagree.
 
 \begin{table*}[t]
 \caption{Per-cell configuration and run counts for octo-small versus octo-base on the three bridge
@@ -2494,9 +2520,8 @@ tasks, under the nominal condition and the five calibration-invisible conditions
 size of the task's configuration grid and ``Covered'' how many were evaluated. ``Dirs'' is the number
 of seed-set directories holding records for the cell; ``Min runs'' is the smallest per-configuration
 run count in it; and the last two columns give the full distribution the variance estimator uses,
-written as runs$\times$configurations. Those three are different numbers and an earlier version of
-this table printed the second under the heading of the first, so it reported four seed sets for cells
-where the release contains five. The reason they differ: seed set B holds
+written as runs$\times$configurations. Those three are different numbers, and the reason they differ
+is worth giving because it is easy to misread the middle one as the first: seed set B holds
 96 episodes on a 64-configuration grid, so ids 64--95 wrap onto configurations 0--31 and give those
 an extra observation, while B stops at configuration 47 for three conditions, leaving those
 configurations one run short. On the eggplant census the result

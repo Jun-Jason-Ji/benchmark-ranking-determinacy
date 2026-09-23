@@ -124,8 +124,19 @@ def main():
               "before any configuration sampling.",
               f"- Averaging 3 seeds (the official SIMPLER protocol) cuts that to ±{1.96 * np.median(sds) / math.sqrt(3):.3f}; "
               f"10 seeds to ±{1.96 * np.median(sds) / math.sqrt(10):.3f}.",
-              "- Compare with the parameter-induced shift measured on this task (torque ×0.5: ≈0.23): the ambiguity is "
-              "larger than the policy noise at any realistic seed budget, which is why more evaluation cannot settle it.", ""]
+              "- Compare with the parameter-induced shift measured on this task. The torque x0.5 shift is "
+              "**0.121** on the complete 64-configuration census at S=5 "
+              "(`analyze_torque_shift_s5.py`); an earlier reading of ~0.23 came from 48 of the 64 "
+              "configurations and is superseded. At three seeds the policy half-width and the "
+              "parameter shift are the same order, so a practitioner there cannot tell an "
+              "identifiability problem from a power problem; at S=5 the half-width drops below the "
+              "shift and the two separate.",
+              "- These half-widths use the sd across whole seed sets as the noise model, which is "
+              "NOT the estimator the paper's tables use. Those use Eq. (eq:var), pooling "
+              "per-configuration run variances, and give per-pair three-seed half-widths of "
+              "0.075-0.088 on the same census. Both appear in the paper and neither substitutes for "
+              "the other: this one asks how much a whole-census result moves between seed sets; "
+              "Eq. (eq:var) asks how precisely one census estimates the benchmark value.", ""]
     text = "\n".join(L)
     out = ROOT / args.out
     out.parent.mkdir(parents=True, exist_ok=True)
