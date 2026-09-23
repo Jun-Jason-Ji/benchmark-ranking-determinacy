@@ -38,6 +38,7 @@ python scripts/analyze_compatible_set_v2.py        # the compatible set (results
 python scripts/rebuild_compatible_set.py --stack ms3   # full candidate table, switchable rule
 python scripts/make_table5.py --root results/controller_sweep_ms2_official_stream \
        --compare results/controller_sweep_ms2_official     # Tables 4-5, both RNG lifecycles
+python scripts/analyze_fitted_point.py             # nominal vs the calibration-preferred setting
 python scripts/analyze_fractal_reversal.py         # the real-vs-sim reversal pair (Sect. 8.4)
 python scripts/analyze_torque_shift_s5.py          # the per-pair torque shift at S = 5 (Sect. 7.3)
 python scripts/analyze_benchmark_value.py          # benchmark-value estimator and intervals
@@ -133,6 +134,36 @@ nominal remains excluded -- so the invariance results are threshold-independent 
 is genuinely borderline. `rebuild_compatible_set.py --tol` takes the tolerance as an argument and
 prints the one that would be needed to retain any candidate, so it has to be named and defended
 rather than inherited.
+
+## The operating point is a free parameter, and it decides verdicts
+
+The set above rejects the simulator's shipped controller setting, which is also the setting at which
+every published rate and every number in this project is computed. `queue_fitted_point.py` measures
+what that costs: the complete 64-configuration eggplant census at `(k x2, d x0.5, delay 1)`, three
+seed sets with bases matching census sets A'/C/D, so the comparison is paired on configuration and
+on policy seed (identical episode ids 0-63, identical seeds on all 64 -- checked, not assumed).
+
+| operating point | Δ | point 95% | matched set |
+|---|---:|---|---|
+| nominal (shipped) | +0.073 | [−0.016, +0.161] abstain | [−0.016, +0.167] abstain |
+| fitted (minimiser) | +0.104 | [+0.016, +0.192] **declare** | [+0.009, +0.192] **declare** |
+
+Both flip, on a Δ shift of only 0.031 -- under half the ±0.088 half-width at this budget. Nominal's
+lower bound sat at −0.016; a 0.032 move carries it over zero.
+
+Two things worth carrying forward if you extend this:
+
+**The union bound cannot help here, by construction.** It ranges over the calibration-*invisible*
+directions. These two settings differ in the ratio and the delay, which the calibration data
+*identify*. A union over the invisible fibre is silent about a move along an identified axis.
+
+**Match the fibres before comparing them.** The common-scale invariance is verified in 14 of the
+grid's 26 (ratio, delay) groups across seven ratios, to 7.2 µm -- but ratio 0.25 has one grid point
+per delay, so at the fitted ratio it is unverified and the fitted fibre admits only the torque limit.
+`analyze_fitted_point.py` therefore reports the nominal side over both its full six-condition fibre
+and the matching two, and refuses any condition that is not a complete census: an envelope is a
+min/max, so one partial condition moves the bound with nothing to show it did. That guard exists
+because a partial run briefly produced [+0.0000, +0.1920] and the opposite conclusion.
 
 ## The RNG lifecycle is part of the protocol, not an implementation detail
 

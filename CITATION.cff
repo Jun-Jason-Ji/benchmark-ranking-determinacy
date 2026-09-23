@@ -54,7 +54,7 @@ keywords:
 # governing evaluation records and anything inherited from upstream. Zenodo reads this
 # file at tag time, so it must be correct before the tag, not after.
 license: MIT
-version: 1.3.0
+version: 1.4.0
 date-released: "2026-09-22"
 repository-code: "https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy"
 doi: "10.5281/zenodo.22893458"   # concept DOI: always resolves to the newest version

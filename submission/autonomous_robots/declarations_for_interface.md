@@ -155,7 +155,7 @@ take full responsibility for it, and no language model is listed as an author.
 
 ## Other interface fields to expect
 
-- **Title, abstract, keywords** — the abstract in `main.tex` is 250 words, inside the journal's
+- **Title, abstract, keywords** — the abstract in `main.tex` is 247 words, inside the journal's
   150–250 limit. Keywords are the six in `main.tex`; the limit is 4–6.
 - **Corresponding author** with an active email address, and ORCID if you have one (16 digits).
 - **Suggested reviewers** — usually optional. If you supply them, avoid anyone from the groups whose

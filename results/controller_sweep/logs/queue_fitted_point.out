@@ -1,0 +1,25 @@
+16:43:20 start octo-small fitted base=20260918
+16:43:20 start octo-base fitted base=20260918
+17:07:28 done rc=0 octo-small fitted base=20260918 (24.1 min)
+17:07:28 start octo-small fitted base=20280101
+17:09:39 done rc=0 octo-base fitted base=20260918 (26.3 min)
+17:09:39 start octo-base fitted base=20280101
+17:33:04 done rc=0 octo-small fitted base=20280101 (25.6 min)
+17:33:04 start octo-small fitted base=20290101
+17:35:54 done rc=0 octo-base fitted base=20280101 (26.2 min)
+17:35:54 start octo-base fitted base=20290101
+21:04:53 done rc=0 octo-small fitted base=20290101 (211.8 min)
+21:04:53 start octo-small fitted_force_x0.5 base=20260918
+21:08:20 done rc=0 octo-base fitted base=20290101 (212.4 min)
+21:08:20 start octo-base fitted_force_x0.5 base=20260918
+21:25:35 done rc=0 octo-small fitted_force_x0.5 base=20260918 (20.7 min)
+21:25:35 start octo-small fitted_force_x0.5 base=20280101
+21:31:20 done rc=0 octo-base fitted_force_x0.5 base=20260918 (23.0 min)
+21:31:20 start octo-base fitted_force_x0.5 base=20280101
+21:50:09 done rc=0 octo-small fitted_force_x0.5 base=20280101 (24.6 min)
+21:50:09 start octo-small fitted_force_x0.5 base=20290101
+21:55:33 done rc=0 octo-base fitted_force_x0.5 base=20280101 (24.2 min)
+21:55:33 start octo-base fitted_force_x0.5 base=20290101
+22:10:20 done rc=0 octo-small fitted_force_x0.5 base=20290101 (20.2 min)
+22:14:44 done rc=0 octo-base fitted_force_x0.5 base=20290101 (19.2 min)
+22:14:44 FITTED_POINT_DONE

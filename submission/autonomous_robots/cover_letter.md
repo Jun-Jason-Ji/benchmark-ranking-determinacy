@@ -45,10 +45,18 @@ From there, three independent findings:
    is minimised not at the simulator's shipped controller setting but at ratio 0.25 with one step of
    delay, on both stacks independently, and the shipped setting is rejected against that minimiser.
    Every published rate, and every measurement in our paper, is computed at the shipped setting. We
-   have restructured Section 4 around this, separated the compatible set from the
-   calibration-invisible fibre through the benchmark's operating point, and named the policy census
-   at the calibration-preferred setting as the first follow-up rather than claiming what it would
-   show.
+   restructured Section 4 around this and separated the compatible set from the
+   calibration-invisible fibre through the benchmark's operating point.
+
+   We then measured the consequence rather than leaving it as a caveat. Re-running the complete
+   64-configuration census at the calibration-preferred setting — same configurations, same policy
+   seeds episode for episode — moves the policy difference by only 0.031, and that is enough to
+   carry the verdict from abstention to a declaration, under point calibration and under the union
+   bound alike (Section 7.7). The operating point is not pinned down by the calibration evidence,
+   and at the budgets in use it decides the answer. We think this is the paper's sharpest single
+   result, and it also delimits our own proposed remedy: a criterion defined over the
+   calibration-*invisible* directions cannot see a disagreement that lies in the directions the
+   calibration *identifies*.
 
 2. The benchmark's initial states are a finite population, not a sample. The episode index fixes the
    initial state modulo 24 to 300 configurations, so episodes beyond that count are exact repeats;

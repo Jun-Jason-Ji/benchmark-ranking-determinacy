@@ -21,6 +21,61 @@ Nothing about the data changed across any of the four: `SHA256SUMS.txt` is byte-
 throughout. **v1.2.0 was the first release to add evaluation data**, so its `SHA256SUMS.txt` differs
 from the earlier ones by 72 new record files.
 
+## v1.4.0 -- 2026-09-22
+
+Closes the limitation v1.3.0 opened. v1.3.0 established that the benchmark's nominal controller
+setting is rejected by its own replay data, and had to leave the consequence unmeasured: every
+ranking in the paper is computed at that rejected point. This release measures it.
+
+### The census at the calibration-preferred operating point
+
+`queue_fitted_point.py` runs the complete 64-configuration eggplant census for octo-small and
+octo-base at `(k x2, d x0.5, delay 1)` -- the replay loss minimiser on both stacks -- plus the halved
+torque limit there. 1,536 episodes, three seed sets whose bases match census sets A'/C/D, so the
+comparison is paired on configuration **and** on policy seed: verified identical episode ids 0-63 and
+identical seeds on all 64.
+
+| operating point | Δ | point 95% | matched set |
+|---|---:|---|---|
+| nominal (shipped) | +0.073 | [−0.016, +0.161] abstain | [−0.016, +0.167] abstain |
+| fitted (minimiser) | +0.104 | [+0.016, +0.192] **declare** | [+0.009, +0.192] **declare** |
+
+**Both verdicts flip**, and the reason is not a large effect. Δ moves by only 0.031 -- under half the
+±0.088 half-width at this budget, a quarter of the 0.121 torque shift. Nominal's lower bound was
+already at −0.016, so a 0.032 move in the bound carries it across zero. The fitted declaration rests
+on +0.009, inside the knife-edge band the paper marks with a dagger.
+
+The structural point, now §7.7: the union bound **cannot** protect against this. It ranges over the
+directions the calibration data leave unconstrained, while nominal and the minimiser differ in the
+ratio and the delay -- the directions the data *do* constrain. This is a third kind of ambiguity,
+distinct from both events the error ledger tracks: not whether the true parameter is in the set, not
+evaluation noise, but that the benchmark is *operated* at a point its own evidence rejects. The
+recommendation that follows costs nothing: report the operating point and how it stands against the
+calibration objective.
+
+### Two corrections caught by running it
+
+- **A provisional set bound nearly became a published claim.** The first analysis run reported the
+  fitted fibre as 2 conditions with bound [+0.0000, +0.1920] while `fitted_force_x0.5` had 14 and 2
+  episodes of 64. The completeness guard covered the point estimate but not the fibre, and an
+  envelope is a min/max, so one partial condition moves the bound invisibly. `envelope()` now admits
+  only complete conditions and names any it excludes. On the complete data the bound is
+  [+0.009, +0.192] and **declares**, the opposite of what the partial data suggested -- the draft
+  had said "the set-valued verdict does not flip", which was wrong and is now corrected in four
+  places.
+- **The invariance was understated, not overstated.** §4.4 implied the common-scale result was
+  unverified away from nominal. It is verified in 14 of the grid's 26 (ratio, delay) groups across
+  seven ratios from 0.5 to 2.0, to within 7.2 µm, identically on both stacks. What is true is
+  narrower: ratio 0.25 has exactly one grid point per delay, so at the *fitted* ratio the scale is
+  never varied. That is why the fitted fibre has two conditions and not six, and why the nominal side
+  is reported cut down to two for the comparison.
+
+New: `queue_fitted_point.py`, `analyze_fitted_point.py`, the `fitted_v1` preset,
+`results/FITTED_POINT.md`. `analyze_platform_drift_paired.py` now also emits the shift in Δ
+(−0.1094) so its record file matches the corrected Table 3, reproduced from independent code.
+
+---
+
 ## v1.3.0 -- 2026-09-22
 
 A second revision pass, and the one that reaches the construction rather than its presentation. The

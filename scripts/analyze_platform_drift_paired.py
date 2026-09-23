@@ -96,7 +96,31 @@ def main():
                      f"**{dp:+.3f}** |")
     L += ["",
           f"Maximum paired drift: **{max(paired):.3f}**. Mean **{np.mean(paired):.3f}**.",
-          f"Maximum naive drift: {max(naive):.3f} (mean {np.mean(naive):.3f}).", ""]
+          f"Maximum naive drift: {max(naive):.3f} (mean {np.mean(naive):.3f}).", "",
+          "Those are changes in a SINGLE policy's success rate. The manuscript's Table 3 reports a "
+          "quantity in units of the policy difference instead, because a single-policy rate change "
+          "is not an effect on a ranking and does not belong on a Delta axis. The shift in "
+          "Delta = rate(octo-small) - rate(octo-base) is:", "",
+          "| condition | Delta before | Delta after | shift in Delta |", "|---|---:|---:|---:|"]
+    dshift = {}
+    for c in CONDS:
+        rates = {}
+        for p in ("octo-small", "octo-base"):
+            a, b = episodes(PRE, p, c), episodes(POST, p, c)
+            if not a or not b:
+                continue
+            shared = set(a) & set(b)
+            rates[p] = (rate_by_config(a, shared)[0], rate_by_config(b, shared)[0])
+        if len(rates) == 2:
+            pre = rates["octo-small"][0] - rates["octo-base"][0]
+            post = rates["octo-small"][1] - rates["octo-base"][1]
+            dshift[c] = post - pre
+            L.append(f"| `{c}` | {pre:+.4f} | {post:+.4f} | **{post - pre:+.4f}** |")
+    if dshift:
+        v = np.abs(list(dshift.values()))
+        L += ["", f"Maximum |shift in Delta|: **{v.max():.4f}**, mean {v.mean():.4f}. This is the "
+              f"figure Table 3 carries; the 0.078 above is the largest single-policy rate change and "
+              f"was the wrong statistic for that table.", ""]
 
     # The specific cell the original finding quotes.
     a, b = episodes(PRE, "octo-base", "nominal"), episodes(POST, "octo-base", "nominal")

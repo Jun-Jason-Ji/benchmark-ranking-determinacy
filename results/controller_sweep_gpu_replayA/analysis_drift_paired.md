@@ -17,6 +17,15 @@ an unpaired per-configuration mean over each directory's full contents gives ins
 Maximum paired drift: **0.078**. Mean **0.043**.
 Maximum naive drift: 0.055 (mean 0.041).
 
+Those are changes in a SINGLE policy's success rate. The manuscript's Table 3 reports a quantity in units of the policy difference instead, because a single-policy rate change is not an effect on a ranking and does not belong on a Delta axis. The shift in Delta = rate(octo-small) - rate(octo-base) is:
+
+| condition | Delta before | Delta after | shift in Delta |
+|---|---:|---:|---:|
+| `nominal` | +0.2500 | +0.1406 | **-0.1094** |
+| `force_x0.5` | +0.1875 | +0.1250 | **-0.0625** |
+
+Maximum |shift in Delta|: **0.1094**, mean 0.0859. This is the figure Table 3 carries; the 0.078 above is the largest single-policy rate change and was the wrong statistic for that table.
+
 ## The cell FINDING_platform_drift.md quotes
 
 - recorded: pre 0.297 vs post 0.375, drift 0.078

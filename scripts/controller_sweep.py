@@ -91,6 +91,35 @@ PRESETS = {
         "fric_x0.4": dict(friction_scale=0.4),
         "dens_x0.5": dict(density_scale=0.5),
     },
+    # The calibration-PREFERRED operating point and its own invisible fibre.
+    #
+    # analyze_compatible_set_v2.py finds the replay loss minimised at (k x2, d x0.5, delay 1) --
+    # ratio d/k = 0.25 with one step of execution delay -- on both simulator stacks independently,
+    # and the simulator's shipped nominal setting rejected against it. Every published rate, and
+    # every other number in this project, is computed at nominal instead. This preset evaluates
+    # policies at the setting the calibration data actually prefer, so that the ranking there can be
+    # compared with the ranking at nominal rather than assumed to match it.
+    #
+    # `fitted` is the minimiser. `fitted_force_x0.5` halves the torque limit there, which is the one
+    # calibration-invisible direction we can legitimately claim at this operating point: the
+    # saturation argument of Sect. 4.2(ii) is about the commanded torque staying below the limit and
+    # does not depend on the gain ratio, so it carries over from nominal.
+    #
+    # NOTE on what is deliberately absent. There is no `fitted_iso_*` here, and the reason is a
+    # sampling gap rather than a failed test. The common-scale invariance is verified in 14 of the
+    # grid's 26 (ratio, delay) groups, spanning seven distinct ratios from 0.5 to 2.0, with a largest
+    # within-group spread of 7.2 um -- identically on both stacks. But ratio 0.25 has exactly one
+    # grid point per delay value, so at the fitted ratio specifically there is no second scale to
+    # compare against and the invariance is inferred from the pattern rather than measured. Adding
+    # iso variants here would rest on that inference; verifying it instead needs replay runs at, say,
+    # s1_d0.25_delay1 and s4_d1_delay1. Until then the fibre through the fitted point is narrower
+    # than the fibre through nominal, and analyze_fitted_point.py reports a matched two-condition
+    # nominal fibre so the set comparison stays like-for-like.
+    "fitted_v1": {
+        "fitted": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1),
+        "fitted_force_x0.5": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1,
+                                  force_scale=0.5),
+    },
     "quick3": {
         "nominal": dict(),
         "stiff_x0.5": dict(stiffness_scale=0.5),
