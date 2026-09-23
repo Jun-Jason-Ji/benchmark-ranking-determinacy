@@ -1,26 +1,50 @@
 # Autonomous Robots submission — status
 
-Prepared 2026-09-21, strengthened 2026-09-22. Requirements fetched from the journal's own
+Prepared 2026-09-21, strengthened 2026-09-22, revised 2026-09-23. Requirements fetched from the journal's own
 submission-guidelines page (`link.springer.com/journal/10514/submission-guidelines`) and the
 Springer Nature LaTeX template (December 2024), whose `sn-jnl.cls` and `sn-apacite.bst` are in this
 directory unmodified.
 
-**One blocking item remains.** Three citations added for the related-work positioning —
-`suresim2025`, `polaris2025`, `scape2025` — carry the arXiv identifiers supplied in review but
-**placeholder author lists and unverified titles**. Their author fields read
-`VERIFY AUTHORS BEFORE SUBMISSION` so they cannot be missed in the rendered bibliography. Fill them
-from the actual preprints, or drop the citations and the paragraph that depends on them, before
-submitting. The other 21 citations are verified against publisher or proceedings records with
-complete author lists.
+**No blocking item remains.** The three related-work citations added in review --- `suresim2025`,
+`polaris2025`, `scape2026` --- now carry the full author lists and the original titles, verified
+against the arXiv records on 2026-09-23. All 24 citations are verified against publisher,
+proceedings or preprint records with complete author lists. PolaRiS is described in Sect. 2 as a
+real-to-sim reconstruction and evaluation pipeline rather than a finite-sample interval method,
+which is what its own record claims.
 
-Otherwise the manuscript compiles at 41 pages with 0 errors, 0 overfull boxes, 0 undefined
-references and 0 bibtex warnings. The code and data are published with a DOI. Every declaration is
-settled.
+The manuscript compiles at **43 pages** with 0 errors, 0 undefined references, 0 bibtex warnings and
+no content-overflowing boxes (one 4.3 pt vertical overflow remains from page breaking, which is
+below the visible threshold and is a layout artifact rather than a text overrun).
+The code and data are published with a DOI. Every declaration is settled.
 
 One item is left, and it is the author's: fill the date on the cover letter. Everything else that
 needed an author's decision -- funding, contributions, the generative-AI wording, the licence and
 its copyright line, the affiliation details, and the standard scope -- is confirmed and recorded
 below.
+
+### Changed in the 2026-09-23 revision
+
+- **The replay loss is no longer reported in millimetres.** It is a composite of metres and radians
+  (Eq. (eq:loss), now stated explicitly), so scaling it by 1000 and calling the result mm was not a
+  meaningful operation. All composite values are in scientific notation; lengths that are genuinely
+  lengths keep their units and are labelled.
+- **The set-valued verdict at the fitted point abstains**, as it does at nominal. The earlier
+  "both verdicts flip" was computed on two of six conditions; four are now complete and the
+  envelope is `[-0.029, +0.212]`. Propagated to the abstract, the contributions, Table 10, the
+  limitations, the conclusion and the cover letter.
+- **The point/set disagreement count at S=3 is 3 of 17, not 2**, after fixing a regression in
+  `make_core_table.py` that discarded OpenVLA's differing seed-set directories. Reproducible with
+  the new `--max-sets` flag. One of the three abstains by 6e-6 and the caption says so.
+- **The primary interval on the operating-point shift is the fixed-census one**,
+  `[-0.086, +0.148]`, which keeps the four arms paired inside each seed set. The
+  configuration-as-sampling-unit interval is now labelled a sensitivity.
+- **The case-selection justification is corrected**: pick-coke-can has the *smallest* published real
+  margin of the five reversal pairs (0.067), not the largest.
+- **Appendix C's "Sets" column** printed the minimum per-configuration run count; it now has
+  separate "Dirs" and "Min runs" columns, so the table matches the release.
+- **Fig 4 was regenerated.** Its EPS still embedded the directory-unit computation, and its envelope
+  fill used matplotlib alpha, which the PostScript backend renders opaque and which was covering the
+  figure's own points.
 
 ---
 
@@ -33,7 +57,7 @@ A portable TeX Live 2026 tree was extracted into the session scratchpad (TinyTeX
 system change to undo. Nine missing LaTeX packages were pulled with `tlmgr` (sttools, threeparttable,
 appendix, wrapfig, apacite, multirow, algorithms, algorithmicx, ncctools).
 
-Final build state: **0 errors, 0 overfull boxes, 0 undefined references, 0 bibtex warnings, 41 pages.**
+Final build state: **0 errors, 0 undefined references, 0 bibtex warnings, 43 pages**, and no content-overflowing boxes (one 4.3 pt vertical page-breaking artifact remains).
 To rebuild:
 
 ```

@@ -1,0 +1,70 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-23 00:56:08,152 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-23 00:56:08,222 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-23 00:56:08,230 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 0 success=True steps=120 inf=12.8s sim=4.1s total=19.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 1 success=True steps=120 inf=13.2s sim=2.9s total=19.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 2 success=True steps=120 inf=13.1s sim=3.3s total=19.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 3 success=False steps=120 inf=13.2s sim=4.6s total=20.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 4 success=True steps=120 inf=12.8s sim=3.4s total=19.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 5 success=True steps=120 inf=13.3s sim=3.4s total=19.4s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 6 success=True steps=120 inf=13.6s sim=3.9s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 7 success=False steps=120 inf=12.9s sim=3.9s total=20.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 8 success=True steps=120 inf=13.2s sim=3.3s total=19.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 9 success=False steps=120 inf=13.5s sim=3.8s total=20.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 10 success=True steps=120 inf=13.5s sim=2.9s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 11 success=False steps=120 inf=13.0s sim=4.1s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 12 success=False steps=120 inf=13.3s sim=3.0s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 13 success=True steps=120 inf=13.3s sim=3.5s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 14 success=False steps=120 inf=13.3s sim=3.8s total=20.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 15 success=False steps=120 inf=13.1s sim=4.5s total=20.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 16 success=True steps=120 inf=12.7s sim=4.6s total=20.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 17 success=True steps=120 inf=13.1s sim=4.6s total=21.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 18 success=False steps=120 inf=13.5s sim=3.8s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 19 success=False steps=120 inf=12.8s sim=4.4s total=20.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 20 success=True steps=120 inf=13.3s sim=2.9s total=19.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 21 success=True steps=120 inf=12.6s sim=3.7s total=19.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 22 success=True steps=120 inf=12.6s sim=3.6s total=19.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 23 success=False steps=120 inf=13.0s sim=3.9s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 24 success=True steps=120 inf=13.1s sim=3.8s total=20.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 25 success=False steps=120 inf=13.2s sim=3.4s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 26 success=False steps=120 inf=12.7s sim=3.1s total=18.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 27 success=False steps=120 inf=13.0s sim=4.0s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 28 success=True steps=120 inf=13.0s sim=3.1s total=19.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 29 success=True steps=120 inf=13.8s sim=3.0s total=19.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 30 success=False steps=120 inf=13.0s sim=3.4s total=19.4s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 31 success=False steps=120 inf=13.1s sim=4.4s total=20.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 32 success=False steps=120 inf=13.2s sim=3.6s total=19.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 33 success=False steps=120 inf=12.7s sim=4.7s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 34 success=True steps=120 inf=12.6s sim=3.3s total=18.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 35 success=True steps=120 inf=13.0s sim=4.3s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 36 success=True steps=120 inf=11.9s sim=3.7s total=18.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 37 success=False steps=120 inf=13.0s sim=3.8s total=19.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 38 success=False steps=120 inf=12.7s sim=4.3s total=20.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 39 success=False steps=120 inf=12.9s sim=4.1s total=20.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 40 success=False steps=120 inf=12.6s sim=4.7s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 41 success=True steps=120 inf=13.1s sim=3.7s total=19.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 42 success=False steps=120 inf=12.9s sim=3.7s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 43 success=False steps=120 inf=13.1s sim=3.7s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 44 success=True steps=120 inf=13.1s sim=3.9s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 45 success=True steps=120 inf=13.0s sim=3.1s total=19.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 46 success=False steps=120 inf=13.0s sim=3.8s total=19.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 47 success=True steps=120 inf=13.1s sim=4.0s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 48 success=False steps=120 inf=12.7s sim=4.0s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 49 success=True steps=120 inf=12.6s sim=4.0s total=19.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 50 success=True steps=120 inf=13.2s sim=4.0s total=20.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 51 success=False steps=120 inf=12.9s sim=4.3s total=20.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 52 success=False steps=120 inf=12.9s sim=4.6s total=20.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 53 success=False steps=120 inf=12.9s sim=3.2s total=19.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 54 success=False steps=120 inf=12.9s sim=4.0s total=20.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 55 success=False steps=120 inf=12.7s sim=4.3s total=20.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 56 success=False steps=120 inf=13.1s sim=4.0s total=20.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 57 success=True steps=120 inf=13.1s sim=3.3s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 58 success=False steps=120 inf=12.5s sim=3.9s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 59 success=False steps=120 inf=12.2s sim=4.3s total=19.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 60 success=False steps=120 inf=12.6s sim=3.6s total=19.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 61 success=False steps=120 inf=13.3s sim=3.2s total=19.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 62 success=False steps=120 inf=12.5s sim=3.2s total=18.4s
+[octo-base|PutEggplantInBasketScene-v1|fitted_iso_x4.0] ep 63 success=False steps=120 inf=12.4s sim=4.5s total=19.9s
+== fitted_iso_x4.0: 27/64 success

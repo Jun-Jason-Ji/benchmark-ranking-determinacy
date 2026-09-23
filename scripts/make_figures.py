@@ -132,7 +132,8 @@ def fig_delta():
             cols.append(COLORS[CLASS[c]]); runs.append(r["runs"])
         x = np.arange(len(ys))
         for xi, m, lo, hi, col in zip(x, ys, Ls, Us, cols):
-            ax.errorbar(xi, m, yerr=[[m - lo], [hi - m]], fmt="o", color=col, capsize=2, ms=4)
+            ax.errorbar(xi, m, yerr=[[m - lo], [hi - m]], fmt="o", color=col, capsize=2, ms=4,
+                        zorder=3)
         ax.axhline(0, color="k", lw=0.8)
         # The envelope spans nominal together with the invisible conditions: the compatible set
         # contains the fitted nominal parameter by construction, so a bound that left it out would
@@ -140,7 +141,13 @@ def fig_delta():
         inv = [i for i, c in enumerate(labels) if CLASS[c].startswith("invisible") or c == "nominal"]
         if inv:
             L_set, U_set = min(Ls[i] for i in inv), max(Us[i] for i in inv)
-            ax.axhspan(L_set, U_set, xmin=0, xmax=1, color="#d62728", alpha=0.08, zorder=0)
+            # EPS has no alpha channel and the PostScript backend draws a translucent patch as
+            # a solid one, which is how the shipped Fig4 came to cover its own points. The fill is
+            # therefore the already-blended colour at full opacity, with the two bounds drawn as
+            # dashed lines so the envelope reads as an interval and not as a wash.
+            ax.axhspan(L_set, U_set, xmin=0, xmax=1, color="#fceeee", zorder=0)
+            for yb in (L_set, U_set):
+                ax.axhline(yb, color="#d62728", lw=0.6, ls=(0, (3, 2)), zorder=1)
             uv = mct.verdict(L_set, U_set, A, B)
             nom = labels.index("nominal")
             pv = mct.verdict(Ls[nom], Us[nom], A, B)

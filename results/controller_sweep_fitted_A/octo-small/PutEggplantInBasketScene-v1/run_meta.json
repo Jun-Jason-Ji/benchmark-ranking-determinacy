@@ -1,11 +1,11 @@
 {
-  "started_utc": "2026-09-23T07:29:14Z",
+  "started_utc": "2026-09-23T08:29:16Z",
   "args": {
     "env_id": "PutEggplantInBasketScene-v1",
     "policy_url": "http://127.0.0.1:8767",
     "policy_name": "octo-small",
     "preset": "fitted_v1",
-    "conditions": "fitted_iso_x4.0",
+    "conditions": "fitted_fric_x0.4",
     "episodes": 64,
     "episode_offset": 0,
     "policy_seed_base": 20260918,
@@ -71,8 +71,8 @@
       1.0
     ],
     "startup_seconds": 30.38002184999641,
-    "step_count": 360,
-    "sessions": 3,
+    "step_count": 480,
+    "sessions": 4,
     "session_isolation": true
   },
   "nominal": {
@@ -112,10 +112,11 @@
     "history": 2
   },
   "conditions": {
-    "fitted_iso_x4.0": {
-      "stiffness_scale": 8.0,
-      "damping_scale": 2.0,
-      "delay_steps": 1
+    "fitted_fric_x0.4": {
+      "stiffness_scale": 2.0,
+      "damping_scale": 0.5,
+      "delay_steps": 1,
+      "friction_scale": 0.4
     }
   },
   "evidence": "exploratory_ms3_windows_platform_not_original_simpler",

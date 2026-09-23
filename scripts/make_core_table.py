@@ -127,20 +127,32 @@ def runs_for(sets, policy, env, cond):
 def raw_by_config(sets, policy, env, cond):
     """{configuration: [every raw episode outcome]} pooled over directories -- the run unit.
 
-    For a deterministic policy the directories are record-identical repeats rather than independent
-    draws, so pooling them would multiply the apparent sample. We collapse to the first directory
-    that has data, matching runs_for's de-duplication.
+    De-duplication for policies labelled deterministic mirrors runs_for: collapse directories whose
+    records are IDENTICAL, keep the ones that differ. An earlier version of this function returned
+    the first non-empty directory outright and described that as matching runs_for. It does not, and
+    the difference is not hypothetical -- OpenVLA's directories are not record-identical. On the
+    eggplant census its nominal records differ from the first directory in 6 of 48 shared episodes,
+    and under the halved torque limit in 3 and 5. Returning one directory discards that variation
+    and sets the unobserved run-to-run term to zero, which understates the interval; it restored a
+    third point/set disagreement at S=3 when corrected.
+
+    The label `deterministic` describes the decoder (OpenVLA decodes greedily and ignores the policy
+    seed), not the whole pipeline. Something else varies across these collections -- the plausible
+    candidates are the inference-stack build and nondeterminism in the quantised kernels -- and
+    since we cannot attribute it from the records, we keep the differing collections as
+    observations rather than assert they are replicates of one number.
     """
     roots = list(sets_for(sets, policy).values())
+    accs = [a for a in (per_config(r, policy, env, cond, raw=True) for r in roots) if a]
     if is_deterministic(policy):
-        for root in roots:
-            acc = per_config(root, policy, env, cond, raw=True)
-            if acc:
-                return acc
-        return {}
+        uniq = []
+        for a in accs:
+            if not any(set(a) == set(u) and all(a[k] == u[k] for k in a) for u in uniq):
+                uniq.append(a)
+        accs = uniq
     acc = {}
-    for root in roots:
-        for c, vals in per_config(root, policy, env, cond, raw=True).items():
+    for a in accs:
+        for c, vals in a.items():
             acc.setdefault(c, []).extend(vals)
     return acc
 
@@ -247,9 +259,17 @@ def main():
                          "is the primary analysis; 'directory' was the earlier implementation and "
                          "is reported as a sensitivity. They disagree on two verdicts.")
     ap.add_argument("--out", default="results/CORE_TABLE.md")
+    ap.add_argument("--max-sets", type=int, default=0,
+                    help="keep only the first N seed-set directories. Sect. 7.2's claim is about "
+                         "the EVALUATION BUDGET, so it has to be measurable at the budgets the "
+                         "literature uses: --max-sets 3 is the reference protocol's, --max-sets 1 "
+                         "a single seed. 0 means use every set collected.")
     args = ap.parse_args()
-    global SETS_MS3, UNIT
+    global SETS_MS3, UNIT, SEED_SETS_OCTO, SEED_SETS_DET
     UNIT = args.unit
+    if args.max_sets:
+        SEED_SETS_OCTO = dict(list(SEED_SETS_OCTO.items())[:args.max_sets])
+        SEED_SETS_DET = dict(list(SEED_SETS_DET.items())[:args.max_sets])
     SETS_MS3 = dict(SEED_SETS_OCTO)
     if args.legacy_a:
         SETS_MS3.update(LEGACY_A)

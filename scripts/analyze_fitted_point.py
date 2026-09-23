@@ -33,6 +33,8 @@ import json
 import sys
 from pathlib import Path
 
+import numpy as np
+
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
@@ -112,6 +114,102 @@ def envelope(sets, point, others, env, n_cfg):
     if not used:
         return None
     return min(r["lo"] for r in used), max(r["hi"] for r in used), len(used), skipped
+
+
+def paired_shift(nom_sets, fit_sets, env, n_cfg):
+    """The change in Delta between the two operating points, on three explicit sampling models.
+
+    D = Delta_fitted - Delta_nominal, paired per configuration. Which interval belongs around it is
+    a question about what is random, and the paper's own estimand answers it: the 64 configurations
+    are a FIXED, fully enumerated population, so they are not a sampling unit. What remains random
+    is the policy seed within a configuration.
+
+    The primary model therefore holds the grid fixed and keeps the pairing intact. Each seed set k
+    supplies all four arms at configuration c, so it yields one complete shift
+
+        d_c^(k) = [p_A,fit(c,k) - p_B,fit(c,k)] - [p_A,nom(c,k) - p_B,nom(c,k)],
+
+    and the variance of the mean is N^-2 * sum_c Var_k(d_c^(k)) / K. This never assumes the four
+    arms are independent -- any common effect of seed set k cancels inside d_c^(k) before the
+    variance is taken, which is the point of pairing.
+
+    Two sensitivities are reported beside it. Summing the four arms' run variances separately
+    discards that pairing and treats the arms as independent, so it is wider. Treating whole seed
+    sets as blocks with df = 2 is wider still. An earlier version of this paper reported the
+    configuration-as-sampling-unit interval as primary; that answers a different question -- a fresh
+    draw of configurations from a superpopulation -- which is the estimand Sect. 5 argues is not the
+    benchmark's. All four contain zero, so the conclusion does not depend on the choice, and none of
+    them is an exact finite-sample guarantee.
+
+    Returns {model: (D, lo, hi)} or None if any arm is not a complete census.
+    """
+    arms = {}
+    for tag, sets, cond in (("fit", fit_sets, FIT_POINT), ("nom", nom_sets, NOM_POINT)):
+        for pol in (A, B):
+            ok, _ = census_status(sets, cond, env, n_cfg)
+            if not ok:
+                return None
+            arms[(tag, pol)] = mct.raw_by_config(sets, pol, env, cond)
+    cfgs = sorted(set.intersection(*[set(v) for v in arms.values()]))
+    if len(cfgs) != n_cfg:
+        return None
+
+    def mean(tag, pol, c):
+        return float(np.mean(arms[(tag, pol)][c]))
+
+    d_c = {c: (mean("fit", A, c) - mean("fit", B, c)) - (mean("nom", A, c) - mean("nom", B, c))
+           for c in cfgs}
+    D = float(np.mean([d_c[c] for c in cfgs]))
+    out = {}
+
+    # (1) fixed census, pairing kept inside each seed set -- primary.
+    keys = sorted(set(nom_sets) & set(fit_sets))
+    per_set = []
+    for k in keys:
+        one = {}
+        for tag, sets, cond in (("fit", {k: fit_sets[k]}, FIT_POINT),
+                                ("nom", {k: nom_sets[k]}, NOM_POINT)):
+            for pol in (A, B):
+                one[(tag, pol)] = mct.raw_by_config(sets, pol, env, cond)
+        if not all(set(cfgs) <= set(v) for v in one.values()):
+            per_set = []
+            break
+        per_set.append({c: (float(np.mean(one[("fit", A)][c])) - float(np.mean(one[("fit", B)][c])))
+                        - (float(np.mean(one[("nom", A)][c])) - float(np.mean(one[("nom", B)][c])))
+                        for c in cfgs})
+    if len(per_set) >= 2:
+        tot = sum(float(np.var([d[c] for d in per_set], ddof=1)) / len(per_set) for c in cfgs)
+        se = float(np.sqrt(tot)) / len(cfgs)
+        out["fixed census, pairing kept within seed set"] = (D, D - 1.96 * se, D + 1.96 * se)
+
+    # (2) the same fixed census with the four arms treated as independent.
+    tot = 0.0
+    for c in cfgs:
+        for key in arms:
+            v = arms[key][c]
+            var = float(np.var(v, ddof=1)) if len(v) > 1 else 0.0
+            tot += var / len(v)
+    se = float(np.sqrt(tot)) / len(cfgs)
+    out["fixed census, four arms independent"] = (D, D - 1.96 * se, D + 1.96 * se)
+
+    # (3) configurations as the sampling unit -- a superpopulation reading.
+    sd = float(np.std([d_c[c] for c in cfgs], ddof=1)) / np.sqrt(len(cfgs))
+    out["configurations as sampling unit"] = (D, D - 1.96 * sd, D + 1.96 * sd)
+
+    # (4) whole seed sets as blocks, df = 2.
+    per = []
+    for k in keys:
+        one_n, one_f = {k: nom_sets[k]}, {k: fit_sets[k]}
+        rn, rf = mct.delta(one_n, A, B, env, NOM_POINT), mct.delta(one_f, A, B, env, FIT_POINT)
+        if rn and rf:
+            per.append(rf["delta"] - rn["delta"])
+    if len(per) >= 2:
+        m = float(np.mean(per))
+        seb = float(np.std(per, ddof=1)) / np.sqrt(len(per))
+        t = {2: 4.302653, 3: 3.182446, 4: 2.776445}.get(len(per) - 1, 1.96)
+        out[f"seed sets as blocks, df={len(per) - 1}"] = (m, m - t * seb, m + t * seb)
+        out["_per_set"] = per
+    return out
 
 
 def selftest():
@@ -218,6 +316,27 @@ def main():
                   f"set verdict {'**flips**' if sflip else 'holds'}"
                   + (" (provisional, a condition is still running)" if skipped else "") + ".", ""]
             summary.append((name, fit_pt["delta"] - nom_pt["delta"], pflip, sflip, bool(skipped)))
+
+            ps = paired_shift(nom_sets, fit_sets, env, n_cfg)
+            if ps:
+                per = ps.pop("_per_set", None)
+                L += ["The shift itself, paired per configuration, under each sampling model. The "
+                      "first is the primary one because it matches this paper's estimand: the "
+                      "configuration grid is enumerated and fixed, so what is random is the policy "
+                      "seed within a configuration.", "",
+                      "| sampling model | $D$ | 95% | resolved? |", "|---|---:|---|---|"]
+                for i, (k, (d, lo, hi)) in enumerate(ps.items()):
+                    tag = k + (" **(primary)**" if i == 0 else " (sensitivity)")
+                    L.append(f"| {tag} | {d:+.4f} | [{lo:+.4f}, {hi:+.4f}] | "
+                             f"{'yes' if lo > 0 or hi < 0 else 'no'} |")
+                L.append("")
+                if per:
+                    L += ["Per seed set the shift is "
+                          + ", ".join(f"${v:+.3f}$" for v in per)
+                          + ", so the sets do not agree on its direction. Every model above "
+                            "contains zero: the change in $\Delta$ is not resolved at this "
+                            "budget under any of them, and none is an exact finite-sample "
+                            "guarantee.", ""]
 
     if summary:
         L += ["## Across tasks", "",

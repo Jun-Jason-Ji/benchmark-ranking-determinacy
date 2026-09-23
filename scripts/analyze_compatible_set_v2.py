@@ -9,22 +9,22 @@ What this script establishes, in order:
 
 1. THE LOSS FACTORISES. Grouping the 50-point replay grid by (d/k ratio, execution delay) gives 26
    groups. Within a group -- ratio and delay fixed, common gain scale varied fourfold -- the mean
-   paired loss moves by at most a few micrometres. Between groups it ranges over 60 mm. The
+   paired loss moves by at most 7.2e-6. Between groups it ranges over 6.0e-2. The
    calibration objective is flat along the common scale and steep along ratio and delay.
 
 2. THE ZERO THRESHOLD DEGENERATES. Eq. (2) retains a candidate when the one-sided bootstrap lower
    bound of its mean paired loss increase is <= 0. That rule is borrowed from settings where the
    quantity is noisy. Here the simulator is deterministic: replaying demonstration m at parameter z
    gives the same loss every time, so the only randomness is which demonstrations were drawn. With
-   98 paired demonstrations the bootstrap therefore resolves mean differences of order 1e-7 m, and
-   the rule rejects settings that differ by a tenth of a micrometre -- it rejects iso x2.0 and
-   iso x4.0, whose mean loss differs from nominal by 0.49 and 0.74 micrometres. As M grows the set
+   98 paired demonstrations the bootstrap therefore resolves mean differences of order 1e-7, and
+   the rule rejects settings that differ by 5e-7 -- it rejects iso x2.0 and iso x4.0, whose mean
+   loss differs from nominal by 4.9e-7 and 7.4e-7. As M grows the set
    shrinks to the single argmin regardless of physics. Statistical significance is the wrong
    question for a deterministic difference; magnitude is the right one.
 
 3. A TOLERANCE WITH AN EXTERNAL BASIS. The natural magnitude scale is not chosen by us: two
    independent implementations of the SAME nominal dynamics -- the ManiSkill3 port and the original
-   ManiSkill2/SAPIEN stack -- disagree on the replay loss by 1.356 mm in the paired mean. A
+   ManiSkill2/SAPIEN stack -- disagree on the replay loss by 1.356e-3 in the paired mean. A
    parameter difference below that cannot be attributed to the parameter rather than to which port
    was run, so tau = that disagreement is a floor the calibration protocol cannot resolve beneath.
    It is derived from data unrelated to any verdict in the paper, which is the property a tolerance
@@ -119,14 +119,14 @@ def main():
         gm = [float(np.mean(v)) for v in groups.values()]
         between = max(gm) - min(gm)
         fact[stack] = (per, ids, means, within, between)
-        L.append(f"| {stack} | {len(means)} | {len(ids)} | {len(groups)} | {within:.2e} m | "
-                 f"{between:.2e} m | {between / within:.0f}x |")
+        L.append(f"| {stack} | {len(means)} | {len(ids)} | {len(groups)} | {within:.2e} | "
+                 f"{between:.2e} | {between / within:.0f}x |")
     L += ["", "The common gain scale is varied fourfold inside each group. The between-group range is "
           "the effect of ratio and delay. This is the invariance of Sect. 4.2(i) measured on the "
           "calibration objective itself.", ""]
 
     # --- 2. the zero threshold degenerates --------------------------------------------------
-    L += ["## 2. At threshold 0 the rule rejects differences of a tenth of a micrometre", "",
+    L += ["## 2. At threshold 0 the rule rejects differences of 5e-7 in composite loss", "",
           "Iso-scale family against nominal on the original stack, `iso_ratio_v1`, the full "
           "16-fold range the policy sweeps use:", "",
           "| condition | mean paired diff vs nominal | 5% lower bound | retained at threshold 0 |",
@@ -139,8 +139,8 @@ def main():
         dv = np.array([iso[c][i] for i in iids]) - nomv
         lo = lower_bound(dv, np.random.default_rng(SEED))
         iso_worst = max(iso_worst, abs(float(dv.mean())))
-        L.append(f"| `{c}` | {dv.mean():+.3e} m | {lo:+.3e} m | {'yes' if lo <= 0 else '**no**'} |")
-    L += ["", "`iso_x2.0` and `iso_x4.0` are rejected on lower bounds of 1e-7 m. The simulator is "
+        L.append(f"| `{c}` | {dv.mean():+.3e} | {lo:+.3e} | {'yes' if lo <= 0 else '**no**'} |")
+    L += ["", "`iso_x2.0` and `iso_x4.0` are rejected on lower bounds of 1e-7. The simulator is "
           "deterministic, so the only randomness is the demonstration draw and the bootstrap "
           "resolves arbitrarily small mean differences; as the demonstration count grows the set "
           "shrinks to the single loss minimiser whatever the physics. The zero threshold is not a "
@@ -181,8 +181,8 @@ def main():
         worst = max(abs(float((np.array([per[c][i] for i in ids]) - ref).mean()))
                     for c in ISO_AT_FITTED_CONDS)
         iso_fit[stack] = worst
-        L.append(f"| {stack} | {len(ids)} | {worst * 1e6:.3f} um | "
-                 f"{'3.101 um' if 'original' in stack else '--'} | "
+        L.append(f"| {stack} | {len(ids)} | {worst:.3e} | "
+                 f"{'3.101e-06' if 'original' in stack else '--'} | "
                  f"{tau / worst:.0f}x |" if worst else "")
     L += ["", "So the invariance holds at the fitted ratio as well, with a residual a few times "
           "larger than at ratio 1 and still two orders of magnitude inside the between-stack "
@@ -193,18 +193,22 @@ def main():
     L += ["## 3. A tolerance whose basis is not chosen by us", "",
           f"The two stacks implement the same nominal dynamics. On the same {len(cids)} "
           f"demonstrations their replay loss differs by:", "",
-          f"- paired mean **{cd.mean() * 1000:+.4f} mm**, 95% CI "
-          f"[{np.percentile(cbs, 2.5) * 1000:+.4f}, {np.percentile(cbs, 97.5) * 1000:+.4f}] mm",
-          f"- mean absolute per demonstration {np.abs(cd).mean() * 1000:.4f} mm, "
-          f"median {np.median(np.abs(cd)) * 1000:.4f} mm, max {np.abs(cd).max() * 1000:.4f} mm", "",
+          f"- paired mean **{cd.mean():+.3e}**, 95% CI "
+          f"[{np.percentile(cbs, 2.5):+.3e}, {np.percentile(cbs, 97.5):+.3e}]",
+          f"- mean absolute per demonstration {np.abs(cd).mean():.3e}, "
+          f"median {np.median(np.abs(cd)):.3e}, max {np.abs(cd).max():.3e}", "",
+          f"All figures are in the composite units of the objective (metres of translation plus "
+          f"radians of rotation, one radian weighted as one metre); they are NOT lengths, so "
+          f"rendering them in mm or um is meaningless. The paired mean here decomposes into "
+          f"0.47 mm of translation and 0.88 mrad of rotation.", "",
           f"A parameter effect below this cannot be attributed to the parameter rather than to which "
-          f"port was run, so we take **tau = {tau * 1000:.3f} mm** (and report "
-          f"{tau_hi * 1000:.3f} mm, the upper end of the interval, as a sensitivity).", ""]
+          f"port was run, so we take **tau = {tau:.3e}** (and report "
+          f"{tau_hi:.3e}, the upper end of the interval, as a sensitivity).", ""]
 
     # --- 4. verdicts under both rules -------------------------------------------------------
     L += ["## 4. What is in the set, under each rule", "",
           "| stack | grid minimiser | nominal - best | 5% lower bound | at threshold 0 | "
-          f"at tau={tau * 1000:.3f} mm | at {tau_hi * 1000:.3f} mm |", "|---|---|---:|---:|---|---|---|"]
+          f"at tau={tau:.3e} | at {tau_hi:.3e} |", "|---|---|---:|---:|---|---|---|"]
     verdicts = {}
     for stack, (per, ids, means, _, _) in fact.items():
         best = min(means, key=means.get)
@@ -212,20 +216,20 @@ def main():
         dv = np.array([per[NOMINAL][i] for i in ids]) - rv
         lo = lower_bound(dv, np.random.default_rng(SEED))
         verdicts[stack] = (best, float(dv.mean()), lo)
-        L.append(f"| {stack} | `{best}` | {dv.mean() * 1000:+.4f} mm | {lo * 1000:+.4f} mm | "
+        L.append(f"| {stack} | `{best}` | {dv.mean():+.3e} | {lo:+.3e} | "
                  f"{'in' if lo <= 0 else '**out**'} | {'in' if lo <= tau else '**out**'} | "
                  f"{'in' if lo <= tau_hi else '**out**'} |")
     L += ["", "Read across the last three columns. The invariant directions of Sect. 4.2 are retained "
           "under every rule by a margin of two to five orders of magnitude "
-          f"(iso family <= {iso_worst * 1000:.4f} mm, torque limit <= 2e-5 mm, against tau = "
-          f"{tau * 1000:.3f} mm), so no conclusion about them depends on the threshold. Nominal is "
+          f"(iso family <= {iso_worst:.3e}, torque limit <= 2e-8, against tau = "
+          f"{tau:.3e}), so no conclusion about them depends on the threshold. Nominal is "
           "different: its distance from the loss minimiser is the same order as the disagreement "
           "between two implementations of the same equations, so its membership is genuinely "
           "borderline and we report it as such rather than picking the rule that settles it.", "",
           "### What this licenses", "",
           "- The structural-blindness results stand, and stand more sharply than a trajectory "
           "measurement can express: the calibration objective is flat along the common scale to "
-          f"{iso_worst * 1e6:.1f} micrometres across a 16-fold range.",
+          f"{iso_worst:.3e} in composite loss across a 16-fold range.",
           "- The benchmark's operating point is **not** the calibration optimum, and the gap is at "
           "the scale at which the protocol cannot distinguish a parameter change from a change of "
           "implementation. Either way it is not a setting the calibration evidence singles out.",

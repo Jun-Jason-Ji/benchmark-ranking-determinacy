@@ -44,3 +44,5 @@ tmp/
 submission/**/check.*
 scripts/make_manuscript_zh_pdf.py
 submission/**/chk.*
+review_editor_reviewer_*.md
+reviews/

@@ -104,6 +104,17 @@ exact repeats. `scripts/task_configs.py` exposes the mapping.
 does; OpenVLA decodes greedily and ignores the seed, so its "seed sets" are record-identical repeat
 runs and must be merged into one observation, not averaged as independent draws.
 
+## The replay loss is composite, and is not a length
+
+Every replay-loss number in this file and in the paper is the mean over timesteps of
+`||p_t - p_hat_t||_2` in metres **plus** `arcsin(||R_t - R_hat_t||_F / (2*sqrt(2)))` in radians. It
+adds a translation to a rotation, weighting one radian as one metre, so it has no unit and it is not
+a distance. Earlier versions of this file, of the paper and of `analyze_compatible_set_v2.py`
+multiplied it by 1000 and printed "mm" (and by 1e6 and printed "um"), which is not a meaningful
+operation; those renderings have been replaced by plain scientific notation. Where a genuine length
+is meant -- a maximum end-effector position difference, or the translation part of a composite value
+quoted on its own -- the unit is stated explicitly. Composite values do not compare with lengths.
+
 ## The compatible set: state the reference point, or the test cannot reject anything
 
 The inverted test needs four things named -- a search domain, a loss, a reference and a threshold --
@@ -115,8 +126,8 @@ and no threshold can then exclude it. Tested against the grid's loss minimiser i
 | | ManiSkill3 | original stack |
 |---|---|---|
 | loss minimiser over the 50-point grid | `s2_d0.5_delay1` | `s2_d0.5_delay1` |
-| nominal − minimiser, paired mean | +2.90 mm | +2.26 mm |
-| one-sided 5% lower bound | **+2.25 mm** | **+1.49 mm** |
+| nominal − minimiser, paired mean | +2.90e−3 | +2.26e−3 |
+| one-sided 5% lower bound | **+2.25e−3** | **+1.49e−3** |
 | nominal retained at threshold 0? | no | no |
 
 Both stacks independently prefer the same setting, and it is not the one the simulator ships with.
@@ -125,18 +136,18 @@ Two further points that took us longer than they should have:
 
 **The loss factorises.** Grouping the 50 grid points by (d/k ratio, execution delay) gives 26
 groups. Within a group, varying the common gain scale fourfold moves the mean loss by at most
-7.2 µm; between groups the range is 60 mm. The calibration objective is flat along the common scale
+7.2e−6; between groups the range is 6.0e−2. The calibration objective is flat along the common scale
 and steep along ratio and delay -- which is the paper's structural-blindness result, measured on the
 objective rather than on a trajectory.
 
 **The zero threshold degenerates on a deterministic simulator.** Replay is deterministic, so the only
 randomness is which demonstrations were drawn, and with 98 paired demonstrations the bootstrap
-resolves mean differences of order 1e-7 m. At threshold 0 the rule rejects iso ×2 and ×4, whose mean
-loss differs from nominal by 0.49 and 0.74 **micrometres**, and as the demonstration count grows the set
+resolves mean differences of order 1e−7. At threshold 0 the rule rejects iso ×2 and ×4, whose mean
+loss differs from nominal by 4.9e−7 and 7.4e−7, and as the demonstration count grows the set
 shrinks to the single argmin whatever the physics. Significance is the wrong question for a
 difference that carries no noise. A tolerance with an external basis is the fix, and the protocol
-supplies one: the two stacks, implementing the *same* nominal dynamics, disagree by **1.356 mm**
-(95% CI [0.614, 2.103]). Below that, a parameter effect cannot be told apart from a change of port.
+supplies one: the two stacks, implementing the *same* nominal dynamics, disagree by **1.356e−3**
+(95% CI [0.614, 2.103]e−3; 0.47 mm of translation plus 0.88 mrad of rotation). Below that, a parameter effect cannot be told apart from a change of port.
 Against that tolerance the invariant directions are retained by factors of 440 and 75 000, while
 nominal remains excluded -- so the invariance results are threshold-independent and nominal's status
 is genuinely borderline. `rebuild_compatible_set.py --tol` takes the tolerance as an argument and
@@ -166,7 +177,7 @@ directions. These two settings differ in the ratio and the delay, which the cali
 *identify*. A union over the invisible fibre is silent about a move along an identified axis.
 
 **Match the fibres before comparing them.** The common-scale invariance is verified in 14 of the
-grid's 26 (ratio, delay) groups across seven ratios, to 7.2 µm -- but ratio 0.25 has one grid point
+grid's 26 (ratio, delay) groups across seven ratios, to 7.2e−6 -- but ratio 0.25 has one grid point
 per delay, so at the fitted ratio it is unverified and the fitted fibre admits only the torque limit.
 `analyze_fitted_point.py` therefore reports the nominal side over both its full six-condition fibre
 and the matching two, and refuses any condition that is not a complete census: an envelope is a

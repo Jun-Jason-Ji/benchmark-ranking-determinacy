@@ -6,24 +6,24 @@ Loss `mean_total_err`, paired by demonstration, one-sided bootstrap B=10000, alp
 
 | stack | grid pts | demos | groups | max within-group spread | between-group range | ratio |
 |---|---:|---:|---:|---:|---:|---:|
-| ManiSkill3 | 50 | 98 | 26 | 7.17e-06 m | 5.99e-02 m | 8354x |
-| original stack | 50 | 98 | 26 | 7.19e-06 m | 6.30e-02 m | 8767x |
+| ManiSkill3 | 50 | 98 | 26 | 7.17e-06 | 5.99e-02 | 8354x |
+| original stack | 50 | 98 | 26 | 7.19e-06 | 6.30e-02 | 8767x |
 
 The common gain scale is varied fourfold inside each group. The between-group range is the effect of ratio and delay. This is the invariance of Sect. 4.2(i) measured on the calibration objective itself.
 
-## 2. At threshold 0 the rule rejects differences of a tenth of a micrometre
+## 2. At threshold 0 the rule rejects differences of 5e-7 in composite loss
 
 Iso-scale family against nominal on the original stack, `iso_ratio_v1`, the full 16-fold range the policy sweeps use:
 
 | condition | mean paired diff vs nominal | 5% lower bound | retained at threshold 0 |
 |---|---:|---:|---|
-| `iso_x0.25` | -3.101e-06 m | -5.529e-06 m | yes |
-| `iso_x0.5` | -1.082e-06 m | -1.880e-06 m | yes |
-| `nominal` | +0.000e+00 m | +0.000e+00 m | yes |
-| `iso_x2.0` | +4.886e-07 m | +9.505e-08 m | **no** |
-| `iso_x4.0` | +7.373e-07 m | +1.537e-07 m | **no** |
+| `iso_x0.25` | -3.101e-06 | -5.529e-06 | yes |
+| `iso_x0.5` | -1.082e-06 | -1.880e-06 | yes |
+| `nominal` | +0.000e+00 | +0.000e+00 | yes |
+| `iso_x2.0` | +4.886e-07 | +9.505e-08 | **no** |
+| `iso_x4.0` | +7.373e-07 | +1.537e-07 | **no** |
 
-`iso_x2.0` and `iso_x4.0` are rejected on lower bounds of 1e-7 m. The simulator is deterministic, so the only randomness is the demonstration draw and the bootstrap resolves arbitrarily small mean differences; as the demonstration count grows the set shrinks to the single loss minimiser whatever the physics. The zero threshold is not a usable notion of compatibility here.
+`iso_x2.0` and `iso_x4.0` are rejected on lower bounds of 1e-7. The simulator is deterministic, so the only randomness is the demonstration draw and the bootstrap resolves arbitrarily small mean differences; as the demonstration count grows the set shrinks to the single loss minimiser whatever the physics. The zero threshold is not a usable notion of compatibility here.
 
 ## 2b. The invariance at the ratio the calibration data prefer
 
@@ -31,8 +31,8 @@ The grid samples ratio 0.25 exactly once, so everything above verifies the commo
 
 | stack | demos | largest mean paired diff | vs ratio 1 | retained at tau |
 |---|---:|---:|---:|---:|
-| ManiSkill3 | 98 | 5.386 um | -- | 252x |
-| original stack | 98 | 11.125 um | 3.101 um | 122x |
+| ManiSkill3 | 98 | 5.386e-06 | -- | 252x |
+| original stack | 98 | 1.113e-05 | 3.101e-06 | 122x |
 
 So the invariance holds at the fitted ratio as well, with a residual a few times larger than at ratio 1 and still two orders of magnitude inside the between-stack disagreement. The iso directions in the fitted point's fibre are therefore measured, not inferred from the other ratios.
 
@@ -40,22 +40,24 @@ So the invariance holds at the fitted ratio as well, with a residual a few times
 
 The two stacks implement the same nominal dynamics. On the same 98 demonstrations their replay loss differs by:
 
-- paired mean **-1.3558 mm**, 95% CI [-2.1028, -0.6140] mm
-- mean absolute per demonstration 2.7619 mm, median 1.8400 mm, max 13.3943 mm
+- paired mean **-1.356e-03**, 95% CI [-2.103e-03, -6.140e-04]
+- mean absolute per demonstration 2.762e-03, median 1.840e-03, max 1.339e-02
 
-A parameter effect below this cannot be attributed to the parameter rather than to which port was run, so we take **tau = 1.356 mm** (and report 2.103 mm, the upper end of the interval, as a sensitivity).
+All figures are in the composite units of the objective (metres of translation plus radians of rotation, one radian weighted as one metre); they are NOT lengths, so rendering them in mm or um is meaningless. The paired mean here decomposes into 0.47 mm of translation and 0.88 mrad of rotation.
+
+A parameter effect below this cannot be attributed to the parameter rather than to which port was run, so we take **tau = 1.356e-03** (and report 2.103e-03, the upper end of the interval, as a sensitivity).
 
 ## 4. What is in the set, under each rule
 
-| stack | grid minimiser | nominal - best | 5% lower bound | at threshold 0 | at tau=1.356 mm | at 2.103 mm |
+| stack | grid minimiser | nominal - best | 5% lower bound | at threshold 0 | at tau=1.356e-03 | at 2.103e-03 |
 |---|---|---:|---:|---|---|---|
-| ManiSkill3 | `s2_d0.5_delay1` | +2.9013 mm | +2.2487 mm | **out** | **out** | **out** |
-| original stack | `s2_d0.5_delay1` | +2.2612 mm | +1.4909 mm | **out** | **out** | in |
+| ManiSkill3 | `s2_d0.5_delay1` | +2.901e-03 | +2.249e-03 | **out** | **out** | **out** |
+| original stack | `s2_d0.5_delay1` | +2.261e-03 | +1.491e-03 | **out** | **out** | in |
 
-Read across the last three columns. The invariant directions of Sect. 4.2 are retained under every rule by a margin of two to five orders of magnitude (iso family <= 0.0031 mm, torque limit <= 2e-5 mm, against tau = 1.356 mm), so no conclusion about them depends on the threshold. Nominal is different: its distance from the loss minimiser is the same order as the disagreement between two implementations of the same equations, so its membership is genuinely borderline and we report it as such rather than picking the rule that settles it.
+Read across the last three columns. The invariant directions of Sect. 4.2 are retained under every rule by a margin of two to five orders of magnitude (iso family <= 3.101e-06, torque limit <= 2e-8, against tau = 1.356e-03), so no conclusion about them depends on the threshold. Nominal is different: its distance from the loss minimiser is the same order as the disagreement between two implementations of the same equations, so its membership is genuinely borderline and we report it as such rather than picking the rule that settles it.
 
 ### What this licenses
 
-- The structural-blindness results stand, and stand more sharply than a trajectory measurement can express: the calibration objective is flat along the common scale to 3.1 micrometres across a 16-fold range.
+- The structural-blindness results stand, and stand more sharply than a trajectory measurement can express: the calibration objective is flat along the common scale to 3.101e-06 in composite loss across a 16-fold range.
 - The benchmark's operating point is **not** the calibration optimum, and the gap is at the scale at which the protocol cannot distinguish a parameter change from a change of implementation. Either way it is not a setting the calibration evidence singles out.
 - Policy verdicts in this paper range over the calibration-invisible fibre through nominal, not over this set, because every published rate is computed at nominal. The ranking at the calibration-preferred setting is unmeasured and needs the policy census re-run there.

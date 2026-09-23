@@ -65,6 +65,42 @@ Atreya, P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Badithela%
+\ \protect \BOthers {.}}{%
+Badithela%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2025}}%
+}]{%
+suresim2025}
+\APACinsertmetastar {%
+suresim2025}%
+\begin{APACrefauthors}%
+Badithela, A.%
+, Snyder, D.%
+, Zha, L.%
+, Mikhail, J.%
+, O'Kelly, M.%
+, Dixit, A.%
+\BCBL {} Majumdar, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reliable and Scalable Robot Policy Evaluation with Imperfect Simulators} {Reliable and scalable robot policy evaluation with imperfect simulators}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:2510.04354}{}{}{,}
+\newblock
+\begin{APACrefURL} {https://arxiv.org/abs/2510.04354} \end{APACrefURL}
+\newblock
+\APACrefnote{Preprint (SureSim); prediction-powered inference from a small set of paired real and simulated evaluations, giving finite-sample intervals for real performance}
+\newblock
+
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bellman%
 \ \BBA {} {\AA}str{\"o}m%
 }{%
@@ -272,6 +308,42 @@ Henderson, P.%
 {\BBOQ}\APACrefatitle {Deep reinforcement learning that matters} {Deep reinforcement learning that matters}.{\BBCQ}
 \newblock
  \APACrefbtitle {Proceedings of the AAAI Conference on Artificial Intelligence} {Proceedings of the aaai conference on artificial intelligence}\ (\BVOL~32, \BPGS\ 3207--3214).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jain%
+\ \protect \BOthers {.}}{%
+Jain%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2025}}%
+}]{%
+polaris2025}
+\APACinsertmetastar {%
+polaris2025}%
+\begin{APACrefauthors}%
+Jain, A.%
+, Zhang, M.%
+, Arora, K.%
+, Chen, W.%
+, Torne, M.%
+, Irshad, M.Z.%
+\BDBL {}Pertsch, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{PolaRiS}: Scalable Real-to-Sim Evaluations for Generalist Robot Policies} {{PolaRiS}: Scalable real-to-sim evaluations for generalist robot policies}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:2512.16881}{}{}{,}
+\newblock
+\begin{APACrefURL} {https://arxiv.org/abs/2512.16881} \end{APACrefURL}
+\newblock
+\APACrefnote{Preprint; a real-to-sim reconstruction and evaluation pipeline validated by empirical correlation with real evaluations, not a finite-sample interval method}
+\newblock
+
+\newblock
+
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -528,96 +600,6 @@ Tobin, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-}{%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-}{%
-{\protect \APACyear {2025}}%
-{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
-polaris2025}
-\APACinsertmetastar {%
-polaris2025}%
-\begin{APACrefauthors}%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2025{\protect \BCnt {1}}}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{PolaRiS}: Real-to-Sim Evaluation of Generalist Robot Policies via Scene Reconstruction} {{PolaRiS}: Real-to-sim evaluation of generalist robot policies via scene reconstruction}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2512.16881}{}{}{,}
-\newblock
-\begin{APACrefURL} {https://arxiv.org/abs/2512.16881} \end{APACrefURL}
-\newblock
-\APACrefnote{Preprint; paired real-to-sim evaluation protocol}
-\newblock
-
-\newblock
-
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-}{%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-}{%
-{\protect \APACyear {2025}}%
-{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
-suresim2025}
-\APACinsertmetastar {%
-suresim2025}%
-\begin{APACrefauthors}%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2025{\protect \BCnt {2}}}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{SureSim}: Prediction-Powered Inference for Reliable Simulation-Based Robot Policy Evaluation} {{SureSim}: Prediction-powered inference for reliable simulation-based robot policy evaluation}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2510.04354}{}{}{,}
-\newblock
-\begin{APACrefURL} {https://arxiv.org/abs/2510.04354} \end{APACrefURL}
-\newblock
-\APACrefnote{Preprint; uses a small set of paired real and simulated evaluations to give finite-sample intervals for real performance}
-\newblock
-
-\newblock
-
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-}{%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-}{%
-{\protect \APACyear {2026}}%
-}]{%
-scape2025}
-\APACinsertmetastar {%
-scape2025}%
-\begin{APACrefauthors}%
-{VERIFY AUTHORS BEFORE SUBMISSION}%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2026}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{SCAPE}: Scene-Conditioned Policy Evaluation with Simulator Bias Correction and Uncertainty Calibration} {{SCAPE}: Scene-conditioned policy evaluation with simulator bias correction and uncertainty calibration}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2608.19425}{}{}{,}
-\newblock
-\begin{APACrefURL} {https://arxiv.org/abs/2608.19425} \end{APACrefURL}
-\newblock
-\APACrefnote{Preprint; scene-conditioned estimands with calibrated uncertainty}
-\newblock
-
-\newblock
-
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Walke%
 \ \protect \BOthers {.}}{%
 Walke%
@@ -705,6 +687,41 @@ Zhou, Z.%
  \APACrefbtitle {Proceedings of the 9th Conference on Robot Learning (CoRL)} {Proceedings of the 9th conference on robot learning (corl)}\ (\BVOL~305, \BPGS\ 1997--2017).
 \newblock
 \APACrefnote{arXiv:2503.24278}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zhu%
+\ \protect \BOthers {.}}{%
+Zhu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2026}}%
+}]{%
+scape2026}
+\APACinsertmetastar {%
+scape2026}%
+\begin{APACrefauthors}%
+Zhu, D.%
+, Oh, S.%
+, Huang, R.%
+, Huang, Z.%
+, Ma, J.%
+\BCBL {} Tang, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2026}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{SCAPE}: Scenario-Conditioned Simulation-Augmented Policy Evaluation} {{SCAPE}: Scenario-conditioned simulation-augmented policy evaluation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:2608.19425}{}{}{,}
+\newblock
+\begin{APACrefURL} {https://arxiv.org/abs/2608.19425} \end{APACrefURL}
+\newblock
+\APACrefnote{Preprint; scenario-conditioned prediction with conformal calibration}
+\newblock
+
+\newblock
+
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

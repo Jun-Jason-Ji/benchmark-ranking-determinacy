@@ -304,39 +304,42 @@
 }
 
 % --- Direct neighbours on confidence statements for simulated / real-to-sim evaluation.
-% !! AUTHOR LISTS AND EXACT TITLES ARE UNVERIFIED PLACEHOLDERS. The arXiv identifiers are the
-% !! reliable part; the author fields must be filled from the actual preprints before submission.
-% !! Do not submit with "VERIFY AUTHORS BEFORE SUBMISSION" in the bibliography.
+% Author lists and titles verified against the arXiv records 2026-09-23.
 % These are cited to delimit our contribution, not as measured baselines: each requires paired real
 % evaluations that this project does not have, so we compare estimands and required information
-% rather than numbers (Sect. 2).
+% rather than numbers (Sect. 2). They are NOT one group: SureSim and SCAPE make statistical
+% statements about real performance, PolaRiS is a real-to-sim reconstruction and evaluation
+% pipeline. Sect. 2 keeps them separate.
 @article{suresim2025,
-  title        = {{SureSim}: Prediction-Powered Inference for Reliable Simulation-Based Robot
-                  Policy Evaluation},
-  author       = {{VERIFY AUTHORS BEFORE SUBMISSION}},
+  title        = {Reliable and Scalable Robot Policy Evaluation with Imperfect Simulators},
+  author       = {Badithela, Apurva and Snyder, David and Zha, Lihan and Mikhail, Joseph and
+                  O'Kelly, Matthew and Dixit, Anushri and Majumdar, Anirudha},
   journal      = {arXiv preprint arXiv:2510.04354},
   year         = {2025},
-  note         = {Preprint; uses a small set of paired real and simulated evaluations to give
-                  finite-sample intervals for real performance},
+  note         = {Preprint (SureSim); prediction-powered inference from a small set of paired real
+                  and simulated evaluations, giving finite-sample intervals for real performance},
   url          = {https://arxiv.org/abs/2510.04354}
 }
 
 @article{polaris2025,
-  title        = {{PolaRiS}: Real-to-Sim Evaluation of Generalist Robot Policies via Scene
-                  Reconstruction},
-  author       = {{VERIFY AUTHORS BEFORE SUBMISSION}},
+  title        = {{PolaRiS}: Scalable Real-to-Sim Evaluations for Generalist Robot Policies},
+  author       = {Jain, Arhan and Zhang, Mingtong and Arora, Kanav and Chen, William and
+                  Torne, Marcel and Irshad, Muhammad Zubair and Zakharov, Sergey and Wang, Yue and
+                  Levine, Sergey and Finn, Chelsea and Ma, Wei-Chiu and Shah, Dhruv and
+                  Gupta, Abhishek and Pertsch, Karl},
   journal      = {arXiv preprint arXiv:2512.16881},
   year         = {2025},
-  note         = {Preprint; paired real-to-sim evaluation protocol},
+  note         = {Preprint; a real-to-sim reconstruction and evaluation pipeline validated by
+                  empirical correlation with real evaluations, not a finite-sample interval method},
   url          = {https://arxiv.org/abs/2512.16881}
 }
 
-@article{scape2025,
-  title        = {{SCAPE}: Scene-Conditioned Policy Evaluation with Simulator Bias Correction and
-                  Uncertainty Calibration},
-  author       = {{VERIFY AUTHORS BEFORE SUBMISSION}},
+@article{scape2026,
+  title        = {{SCAPE}: Scenario-Conditioned Simulation-Augmented Policy Evaluation},
+  author       = {Zhu, Dijie and Oh, Seunghun and Huang, Ruopeng and Huang, Zhiyu and Ma, Jiaqi and
+                  Tang, Chen},
   journal      = {arXiv preprint arXiv:2608.19425},
   year         = {2026},
-  note         = {Preprint; scene-conditioned estimands with calibrated uncertainty},
+  note         = {Preprint; scenario-conditioned prediction with conformal calibration},
   url          = {https://arxiv.org/abs/2608.19425}
 }

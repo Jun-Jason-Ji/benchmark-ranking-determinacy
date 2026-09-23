@@ -37,10 +37,12 @@ From there, three independent findings:
 
 1. The calibration protocol is uninformative about two parameter directions, for structural reasons
    rather than as a fitting tolerance. Grouping the 50-point replay grid by gain ratio and execution
-   delay, a common rescaling of the joint PD gains moves the calibration loss by at most 3.1 µm over
+   delay, a common rescaling of the joint PD gains moves the calibration loss by at most 3.1e−6 over
    the sixteenfold range our sweeps use, and halving the torque limit leaves the replayed trajectory
    *bitwise* unchanged on 97 of 98 demonstrations, on two independent stacks. The scale to judge
-   those against is the 1.36 mm by which the two stacks disagree at *identical* nominal parameters —
+   those against is the 1.36e−3 by which the two stacks disagree at *identical* nominal parameters —
+   all in the composite units of the replay objective, which adds metres to radians and is not a
+   length —
    so the parameter effects are two to five orders of magnitude below the protocol's own resolution
    floor. These are properties of the protocol's excitation range, not flat regions of a noisy
    objective, so better fitting does not remove them.
@@ -48,19 +50,22 @@ From there, three independent findings:
    The same computation produced a result we did not expect and report prominently: the replay loss
    is minimised not at the simulator's shipped controller setting but at ratio 0.25 with one step of
    delay, on both stacks independently, and the shipped setting is rejected against that minimiser.
-   Every published rate, and every measurement in our paper, is computed at the shipped setting. We
-   restructured Section 4 around this and separated the compatible set from the
-   calibration-invisible fibre through the benchmark's operating point.
+   Every published rate is computed at the shipped setting, and so was every measurement in our
+   paper until this revision: Section 7.7 now re-runs the complete eggplant census at the preferred
+   setting as well, so the operating point is measured rather than assumed. We restructured
+   Section 4 around this and separated the compatible set from the calibration-invisible fibre
+   through the benchmark's operating point.
 
    We then measured the consequence rather than leaving it as a caveat. Re-running the complete
    64-configuration census at the calibration-preferred setting — same configurations, same policy
    seeds episode for episode — moves the policy difference by only 0.031, and that is enough to
-   carry the verdict from abstention to a declaration, under point calibration and under the union
-   bound alike (Section 7.7). The operating point is not pinned down by the calibration evidence,
-   and at the budgets in use it decides the answer. We think this is the paper's sharpest single
-   result, and it also delimits our own proposed remedy: a criterion defined over the
-   calibration-*invisible* directions cannot see a disagreement that lies in the directions the
-   calibration *identifies*.
+   carry the *point-calibration* verdict from abstention to a declaration (Section 7.7). The
+   set-valued verdict abstains at both operating points, which is the contrast we draw: the
+   operating point is not pinned down by the calibration evidence, at the budgets in use it decides
+   the point answer, and the criterion we propose is the one that does not move. We think this is
+   the paper's sharpest single result, and it also delimits our own proposed remedy: a criterion
+   defined over the calibration-*invisible* directions cannot see a disagreement that lies in the
+   directions the calibration *identifies*.
 
 2. The benchmark's initial states are a finite population, not a sample. The episode index fixes the
    initial state modulo 24 to 300 configurations, so episodes beyond that count are exact repeats;
@@ -69,8 +74,9 @@ From there, three independent findings:
    among the terms that remain is the suite's documented averaging over four robot *texture*
    variants — a parameter that carries no physics at all, across which one policy's success rate
    ranges over 0.400. Our contribution there is not that the step is hidden but what it implies for
-   the estimand: the published quantity is a mean over a four-point population rather than a rate,
-   so a single-variant reproduction measures something else, and differs by up to 0.227.
+   the estimand: the published quantity is a mean over a four-point *variant* population, not the
+   rate at any one variant, so a single-variant reproduction measures a different thing and differs
+   by up to 0.227. Both are rates; what differs is what they are rates over.
 
 3. At the reference protocol's own 72-episode budget, one of the four policy orderings it reports is
    statistically resolvable under the variance model its own randomisation implies, and two under a

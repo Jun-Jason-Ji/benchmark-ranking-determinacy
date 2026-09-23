@@ -7,13 +7,13 @@
 | eggplant (ms3) | octo-small vs octo-base | 64/64 | 5/5 | +0.055 [-0.01, +0.12] | abstain | [-0.01, +0.24] | abstain | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small vs octo-small@hist1 | 64/64 | 5/5 | +0.072 [+0.01, +0.13] | octo-small>† | [+0.01, +0.24] | octo-small>† | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small vs octo-base@hist1 | 64/64 | 5/5 | +0.128 [+0.07, +0.19] | octo-small> | [+0.01, +0.24] | octo-small> | 否 | empirical / empirical |
-| eggplant (ms3) | octo-small vs openvla-7b-4bit | 64/64 | 5/1 | +0.328 [+0.29, +0.37] | octo-small> | [+0.20, +0.50] | octo-small> | 否 | empirical / 1 run (drift unmeasured) |
+| eggplant (ms3) | octo-small vs openvla-7b-4bit | 64/64 | 5/1 | +0.328 [+0.26, +0.39] | octo-small> | [+0.17, +0.50] | octo-small> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-base vs octo-small@hist1 | 64/64 | 5/5 | +0.017 [-0.05, +0.08] | abstain | [-0.14, +0.16] | abstain | 否 | empirical / empirical |
 | eggplant (ms3) | octo-base vs octo-base@hist1 | 64/64 | 5/5 | +0.073 [+0.01, +0.14] | octo-base>† | [-0.06, +0.14] | abstain | **是** | empirical / empirical |
-| eggplant (ms3) | octo-base vs openvla-7b-4bit | 64/64 | 5/1 | +0.273 [+0.23, +0.32] | octo-base> | [+0.10, +0.42] | octo-base> | 否 | empirical / 1 run (drift unmeasured) |
+| eggplant (ms3) | octo-base vs openvla-7b-4bit | 64/64 | 5/1 | +0.273 [+0.21, +0.34] | octo-base> | [+0.07, +0.42] | octo-base> | 否 | empirical / empirical |
 | eggplant (ms3) | octo-small@hist1 vs octo-base@hist1 | 64/64 | 5/5 | +0.056 [-0.01, +0.12] | abstain | [-0.16, +0.15] | abstain | 否 | empirical / empirical |
-| eggplant (ms3) | octo-small@hist1 vs openvla-7b-4bit | 64/64 | 5/1 | +0.256 [+0.21, +0.30] | octo-small@hist1> | [+0.09, +0.41] | octo-small@hist1> | 否 | empirical / 1 run (drift unmeasured) |
-| eggplant (ms3) | octo-base@hist1 vs openvla-7b-4bit | 64/64 | 5/1 | +0.200 [+0.16, +0.24] | octo-base@hist1> | [+0.05, +0.43] | octo-base@hist1> | 否 | empirical / 1 run (drift unmeasured) |
+| eggplant (ms3) | octo-small@hist1 vs openvla-7b-4bit | 64/64 | 5/1 | +0.256 [+0.19, +0.32] | octo-small@hist1> | [+0.09, +0.41] | octo-small@hist1> | 否 | empirical / empirical |
+| eggplant (ms3) | octo-base@hist1 vs openvla-7b-4bit | 64/64 | 5/1 | +0.200 [+0.13, +0.27] | octo-base@hist1> | [+0.02, +0.43] | octo-base@hist1> | 否 | empirical / empirical |
 | spoon (ms3) | octo-small vs octo-base | 24/24 | 2/2 | +0.396 [+0.23, +0.56] | octo-small> | [+0.04, +0.56] | octo-small> | 否 | empirical / empirical |
 | carrot (ms3) | octo-small vs octo-base | 24/24 | 2/2 | -0.042 [-0.12, +0.04] | abstain | [-0.20, +0.07] | abstain | 否 | empirical / empirical |
 | eggplant (ms2, original stack) | octo-small vs octo-base | 24/24 | 2/2 | +0.062 [-0.10, +0.22] | abstain | [-0.11, +0.29] | abstain | 否 | empirical / empirical |

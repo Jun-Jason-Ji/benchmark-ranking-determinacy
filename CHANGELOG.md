@@ -21,6 +21,51 @@ Nothing about the data changed across any of the four: `SHA256SUMS.txt` is byte-
 throughout. **v1.2.0 was the first release to add evaluation data**, so its `SHA256SUMS.txt` differs
 from the earlier ones by 72 new record files.
 
+## v1.5.0 -- 2026-09-23
+
+A correctness release with no new data. Three defects found in review, two of them ours.
+
+### The replay loss was reported in millimetres, and it is not a length
+
+The replay objective is the mean over timesteps of the L2 end-effector position error **in metres**
+plus `arcsin(||R - R_hat||_F / (2*sqrt(2)))` **in radians**. It adds a translation to a rotation and
+weights one radian as one metre. Multiplying it by 1000 and calling the result "mm" -- which the
+paper, `REPRODUCIBILITY.md` and `analyze_compatible_set_v2.py` all did -- is not a meaningful
+operation, and it invited exactly the wrong comparison, because the composite total then looks like
+a distance that can be checked against a sub-millimetre trajectory tolerance.
+
+- The objective is now defined explicitly in the paper as Eq. (eq:loss), stated to be composite and
+  stated not to be a distance.
+- All composite values are now printed in plain scientific notation: tolerance `tau = 1.356e-3`
+  (95% CI `[0.614, 2.103]e-3`), nominal minus minimiser `+2.90e-3` / `+2.26e-3` with lower bounds
+  `+2.25e-3` / `+1.49e-3`, iso-family residual `3.101e-6` over a sixteenfold range, within-group
+  spread `7.2e-6` against a between-group range of `6.0e-2`, and the threshold-zero rejections at
+  `4.9e-7` and `7.4e-7`.
+- Where a length is genuinely meant, it is now labelled and decomposed: `tau` is 0.47 mm of
+  translation plus 0.88 mrad of rotation; the fit's own residual at the fitted setting is
+  `L = 0.0456` composite, of which 19.1 mm is translation -- not the "45.6 mm" the paper reported.
+  Trajectory differences (0.141 and 0.207 mm; the 84.5 um and 50.1 um position residuals at the
+  fitted point) are lengths and keep their units.
+- **Read any mm or um figure in the v1.2.0-v1.4.0 entries below that refers to the replay *loss* as
+  the composite value scaled by 1e-3 or 1e-6.** The numbers were right; the units were not.
+
+### A regression in the deterministic-policy path of `make_core_table.py`
+
+`raw_by_config()` deduplicated seed-set directories for deterministic policies by taking the first
+directory, on the reasoning that a deterministic policy gives identical results in each. OpenVLA's
+directories are *not* identical -- they differ by 6, 6, 3 and 5 success flags -- so the estimator was
+discarding real observations. It now compares the per-configuration outcomes and drops a directory
+only when it is an exact duplicate. This restores the S=3 declaration count to **3 of 17**; the
+"2 of 17" reported in the v1.4.0 documents was an artifact of the regression.
+
+### The set-valued verdict does not change at the fitted point
+
+v1.4.0 reported that the compatible-set envelope flips from abstention to a declaration at the
+calibration-preferred point. That was computed on two of six conditions. With `fitted_iso_x0.25`
+complete the envelope is `[-0.029, +0.192]` and abstains, as it does at nominal. The envelope is
+monotone in the condition set -- adding a condition can only widen it -- so no further condition can
+restore the declaration. What does change is the point estimate, by 0.031.
+
 ## v1.4.0 -- 2026-09-22
 
 Closes the limitation v1.3.0 opened. v1.3.0 established that the benchmark's nominal controller
