@@ -6,3 +6,12 @@ E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocch
 [octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 0 success=True steps=120 inf=10.6s sim=5.0s total=19.3s
 [octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 1 success=True steps=120 inf=10.2s sim=5.2s total=19.4s
 [octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 2 success=True steps=120 inf=10.7s sim=5.1s total=20.1s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 3 success=True steps=120 inf=11.2s sim=5.3s total=44.4s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 4 success=False steps=120 inf=10.6s sim=6.8s total=21.2s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 5 success=True steps=120 inf=10.5s sim=5.3s total=19.6s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 6 success=True steps=120 inf=10.0s sim=5.2s total=18.7s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 7 success=False steps=120 inf=10.0s sim=5.5s total=19.0s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 8 success=True steps=120 inf=10.5s sim=4.9s total=19.2s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 9 success=True steps=120 inf=11.2s sim=5.4s total=20.6s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 10 success=True steps=120 inf=10.3s sim=4.9s total=19.1s
+[octo-small|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 11 success=False steps=120 inf=11.2s sim=6.5s total=21.6s

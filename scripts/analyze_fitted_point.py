@@ -334,7 +334,7 @@ def main():
                     L += ["Per seed set the shift is "
                           + ", ".join(f"${v:+.3f}$" for v in per)
                           + ", so the sets do not agree on its direction. Every model above "
-                            "contains zero: the change in $\Delta$ is not resolved at this "
+                            "contains zero: the change in $\\Delta$ is not resolved at this "
                             "budget under any of them, and none is an exact finite-sample "
                             "guarantee.", ""]
 
