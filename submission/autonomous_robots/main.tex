@@ -1376,9 +1376,14 @@ census at five runs per policy, $\hat\Delta$ weights each configuration mean by 
 configuration's mean outcome, or about \textbf{three single-policy episodes} out of the 320 on each
 side of the comparison. Three episodes flipping the other way would erase it.
 Neither is a declaration in any useful sense; both sit on the knife edge, and we flag them rather
-than let the rounding carry them. The criterion's substantive declarations are the ones with margin:
-spoon $[+0.04, +0.56]$, the OpenVLA comparisons, and the fractal pair of Sect.~\ref{subsec8_4}. The
-generator marks every such row, so the distinction cannot be lost in a later revision. We also
+than let the rounding carry them. The criterion's substantive declarations are the ones with margin,
+and the multiplicity analysis below says which those are: the five cross-family Octo-versus-OpenVLA
+envelopes that survive a family-wise correction, plus the fractal pair of Sect.~\ref{subsec8_4}. The
+spoon envelopes are not among them --- $[+0.04, +0.56]$ looks wide but its \emph{lower} bound is
+$+0.035$, and the envelope's binding constraint is that bound rather than the width of the interval,
+so it does not survive. That is worth noticing: a wide envelope that only just clears zero is a weak
+declaration, not a strong one, and reading the interval's width for its margin gets it backwards. The
+generator marks every knife-edge row, so the distinction cannot be lost in a later revision. We also
 report, rather than bury, that the knife edges are not stable across the two observation units ---
 the largest of them under the directory unit was $+0.000042$, on a pair that abstains under the run
 unit. A bound that small is a property of the estimator's last digit, not of the policies.
