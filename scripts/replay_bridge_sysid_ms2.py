@@ -39,6 +39,16 @@ PRESETS = {
         ("iso_x0.25", dict(stiffness_scale=0.25, damping_scale=0.25)), ("iso_x0.5", dict(stiffness_scale=0.5, damping_scale=0.5)),
         ("nominal", dict()), ("iso_x2.0", dict(stiffness_scale=2.0, damping_scale=2.0)), ("iso_x4.0", dict(stiffness_scale=4.0, damping_scale=4.0)),
     ]),
+    # The common scale swept at the CALIBRATION-PREFERRED ratio (d/k = 0.25), which the 50-point
+    # grid samples only once. iso_ratio_v1 does the same at ratio 1. Sixteenfold span, matching the
+    # range the policy sweeps use. Grid naming (sN_dM_delayK) so the group analyses parse them.
+    "iso_at_fitted": OrderedDict([
+        ("s0.5_d0.125_delay1", dict(stiffness_scale=0.5, damping_scale=0.125, delay_steps=1)),
+        ("s1_d0.25_delay1", dict(stiffness_scale=1.0, damping_scale=0.25, delay_steps=1)),
+        ("s2_d0.5_delay1", dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1)),
+        ("s4_d1_delay1", dict(stiffness_scale=4.0, damping_scale=1.0, delay_steps=1)),
+        ("s8_d2_delay1", dict(stiffness_scale=8.0, damping_scale=2.0, delay_steps=1)),
+    ]),
 }
 
 

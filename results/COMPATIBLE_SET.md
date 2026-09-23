@@ -25,6 +25,17 @@ Iso-scale family against nominal on the original stack, `iso_ratio_v1`, the full
 
 `iso_x2.0` and `iso_x4.0` are rejected on lower bounds of 1e-7 m. The simulator is deterministic, so the only randomness is the demonstration draw and the bootstrap resolves arbitrarily small mean differences; as the demonstration count grows the set shrinks to the single loss minimiser whatever the physics. The zero threshold is not a usable notion of compatibility here.
 
+## 2b. The invariance at the ratio the calibration data prefer
+
+The grid samples ratio 0.25 exactly once, so everything above verifies the common-scale invariance at seven \emph{other} ratios. That is not sufficient for a fibre built through the fitted point, so the scale is swept sixteenfold at ratio 0.25 directly (`iso_at_fitted` replay preset), relative to the fitted point itself:
+
+| stack | demos | largest mean paired diff | vs ratio 1 | retained at tau |
+|---|---:|---:|---:|---:|
+| ManiSkill3 | 98 | 5.386 um | -- | 252x |
+| original stack | 98 | 11.125 um | 3.101 um | 122x |
+
+So the invariance holds at the fitted ratio as well, with a residual a few times larger than at ratio 1 and still two orders of magnitude inside the between-stack disagreement. The iso directions in the fitted point's fibre are therefore measured, not inferred from the other ratios.
+
 ## 3. A tolerance whose basis is not chosen by us
 
 The two stacks implement the same nominal dynamics. On the same 98 demonstrations their replay loss differs by:

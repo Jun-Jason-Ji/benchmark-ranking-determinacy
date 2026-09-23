@@ -1,0 +1,6 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-22 23:12:33,003 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_sink. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-22 23:12:33,110 - mani_skill  - WARNING - No initial pose set for actor builder of eggplant, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-22 23:12:33,123 - mani_skill  - WARNING - No initial pose set for actor builder of dummy_sink_target_plane, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+== fitted: 36/64 success

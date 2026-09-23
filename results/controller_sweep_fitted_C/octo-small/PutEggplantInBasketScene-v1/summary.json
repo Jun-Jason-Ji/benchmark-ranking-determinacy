@@ -1,6 +1,6 @@
 {
   "run_meta": {
-    "started_utc": "2026-09-23T04:25:54Z",
+    "started_utc": "2026-09-23T06:13:05Z",
     "args": {
       "env_id": "PutEggplantInBasketScene-v1",
       "policy_url": "http://127.0.0.1:8767",
@@ -72,8 +72,8 @@
         1.0
       ],
       "startup_seconds": 30.38002184999641,
-      "step_count": 240,
-      "sessions": 2,
+      "step_count": 120,
+      "sessions": 1,
       "session_isolation": true
     },
     "nominal": {

@@ -105,20 +105,40 @@ PRESETS = {
     # saturation argument of Sect. 4.2(ii) is about the commanded torque staying below the limit and
     # does not depend on the gain ratio, so it carries over from nominal.
     #
-    # NOTE on what is deliberately absent. There is no `fitted_iso_*` here, and the reason is a
-    # sampling gap rather than a failed test. The common-scale invariance is verified in 14 of the
-    # grid's 26 (ratio, delay) groups, spanning seven distinct ratios from 0.5 to 2.0, with a largest
-    # within-group spread of 7.2 um -- identically on both stacks. But ratio 0.25 has exactly one
-    # grid point per delay value, so at the fitted ratio specifically there is no second scale to
-    # compare against and the invariance is inferred from the pattern rather than measured. Adding
-    # iso variants here would rest on that inference; verifying it instead needs replay runs at, say,
-    # s1_d0.25_delay1 and s4_d1_delay1. Until then the fibre through the fitted point is narrower
-    # than the fibre through nominal, and analyze_fitted_point.py reports a matched two-condition
-    # nominal fibre so the set comparison stays like-for-like.
+    # The six conditions mirror variants_v1 one for one, so the two fibres can be compared without
+    # an asymmetry to apologise for. Getting there needed one extra measurement. The 50-point replay
+    # grid spans s, d in {0.5..2}, so its only point at ratio 0.25 is s2_d0.5: the common-scale
+    # invariance was verified at seven other ratios but not at the fitted one, and an iso variant
+    # here would have rested on inference. The `iso_at_fitted` replay preset closes that -- it sweeps
+    # the common scale over a sixteenfold range at ratio 0.25 and finds the loss flat to 5.4 um on
+    # ManiSkill3 and 11.1 um on the original stack, against the 1356 um at which the two stacks
+    # disagree at identical nominal parameters. So the iso directions are now measured at this ratio,
+    # not assumed. Friction and density need no ratio-specific argument: free-space replay never
+    # observes them at any ratio.
     "fitted_v1": {
         "fitted": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1),
+        "fitted_iso_x0.25": dict(stiffness_scale=0.5, damping_scale=0.125, delay_steps=1),
+        "fitted_iso_x4.0": dict(stiffness_scale=8.0, damping_scale=2.0, delay_steps=1),
         "fitted_force_x0.5": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1,
                                   force_scale=0.5),
+        "fitted_fric_x0.4": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1,
+                                 friction_scale=0.4),
+        "fitted_dens_x0.5": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1,
+                                 density_scale=0.5),
+    },
+    # Closes the sampling gap the fitted_v1 comment names. The 50-point replay grid spans
+    # s, d in {0.5, 0.7, 1, 1.4, 2}, so the only point at ratio 0.25 is s2_d0.5 and the common-scale
+    # invariance is verified at seven other ratios but not at that one. These five points hold the
+    # ratio at 0.25 and sweep the common scale over a sixteenfold range -- the same span
+    # iso_ratio_v1 covers at ratio 1 -- so the invariance can be measured where the calibration
+    # optimum actually sits instead of inferred from the other ratios. Named on the grid's
+    # convention (sN_dM_delayK) so check_iso_invariance.py and rebuild_compatible_set.py parse them.
+    "iso_at_fitted": {
+        "s0.5_d0.125_delay1": dict(stiffness_scale=0.5, damping_scale=0.125, delay_steps=1),
+        "s1_d0.25_delay1": dict(stiffness_scale=1.0, damping_scale=0.25, delay_steps=1),
+        "s2_d0.5_delay1": dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1),
+        "s4_d1_delay1": dict(stiffness_scale=4.0, damping_scale=1.0, delay_steps=1),
+        "s8_d2_delay1": dict(stiffness_scale=8.0, damping_scale=2.0, delay_steps=1),
     },
     "quick3": {
         "nominal": dict(),
