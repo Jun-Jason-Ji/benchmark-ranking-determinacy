@@ -71,10 +71,13 @@ def load(policy, env, seed, root=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=None)
-    ap.add_argument("--root", default="results/controller_sweep_ms2_official",
-                    help="results/controller_sweep_ms2_official_stream for the reference RNG lifecycle "
-                         "(seed once, one advancing stream); the default directory re-seeds every "
-                         "episode and is NOT the reference behaviour.")
+    ap.add_argument("--root", default="results/controller_sweep_ms2_official_stream",
+                    help="default is the REFERENCE RNG lifecycle (seed once, one advancing stream), "
+                         "which is what Table 4 of the paper reports. Pass "
+                         "results/controller_sweep_ms2_official for the superseded run that re-seeded "
+                         "every episode; that one is kept only so the two can be compared with "
+                         "--compare, and its agreement with the published table is better for the "
+                         "wrong reason (Sect. 6.2).")
     ap.add_argument("--compare", default=None,
                     help="second results root; prints both and their per-cell difference")
     args = ap.parse_args()
@@ -153,7 +156,10 @@ def main():
         L += ["## 读法", "",
               f"- {len(paired)} 个（任务 × 策略）单元中，我们与公布值的平均差 {diffs.mean():+.3f}，"
               f"平均绝对差 {np.abs(diffs).mean():.3f}，最大 {np.abs(diffs).max():.3f}。",
-              "- 对照本项目测得的种子噪声（茄子 64 构型：单种子 95% 半宽 ±0.108，3 个种子 ±0.062）。",
+              "- 对照本项目测得的策略种子噪声。两种噪声模型都在论文中报告，不可混用："
+              "按整个种子集之间的 sd 计算（`analyze_seed_noise.py`，茄子 64 构型），单种子 95% 半宽 "
+              "±0.132、3 个种子 ±0.076；按 Eq. (eq:var) 汇总每构型运行方差计算（论文各表所用），"
+              "3 个种子的逐对半宽为 0.075–0.088。上面每个格子与公布值的差都落在这两者之内。",
               "- 两种生命周期的对比用 `--compare` 打印；逐集重播种会放大轮间方差，"
               "从而把一个系统性的平台差异掩盖成看起来更好的一致性。", ""]
     text = "\n".join(L)

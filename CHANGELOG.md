@@ -64,6 +64,22 @@ discarding real observations. It now compares the per-configuration outcomes and
 only when it is an exact duplicate. This restores the S=3 declaration count to **3 of 17**; the
 "2 of 17" reported in the v1.4.0 documents was an artifact of the regression.
 
+### Multiplicity across the 17 pairs, performed rather than only flagged
+
+Appendix A.2 said a family of per-pair statements would have to be inflated for multiplicity before
+it could enter the error ledger, and that we had not performed the inflation. `analyze_multiplicity.py`
+performs it. Holm's step-down at alpha = 0.05 over the 17 bridge pairs takes point calibration from
+11 declarations to **9** and the union bound from 10 to **5**; Benjamini-Hochberg leaves both
+unchanged. The two point declarations removed are exactly the knife edges at +0.0091 and +0.0095.
+
+The asymmetry is the interesting part and it is a property of the criterion rather than of these
+data. The envelope declares only when every condition agrees in sign, which makes it an
+intersection-union test, so its p value is the **largest** of the per-condition ones rather than the
+smallest. Those p values start larger and a step-down procedure removes more of them: a criterion
+that is conservative pair by pair is not thereby conservative family-wise. This leaves the
+no-correction-across-conditions argument untouched -- it is the same fact seen from the other side --
+and it cannot affect an abstention, since a correction only removes declarations.
+
 ### The versions are not interchangeable, and three documents said they were
 
 `README.md`, the data-availability statement in `declarations_for_interface.md` and the v1.2.0 entry

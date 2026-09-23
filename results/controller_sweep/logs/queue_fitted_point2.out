@@ -58,3 +58,7 @@
 02:24:11 start egg octo-base fitted_fric_x0.4 base=20290101
 02:33:22 done rc=0 egg octo-small fitted_fric_x0.4 base=20290101 (22.7 min)
 02:33:22 start egg octo-small fitted_dens_x0.5 base=20260918
+02:47:27 done rc=0 egg octo-base fitted_fric_x0.4 base=20290101 (23.3 min)
+02:47:27 start egg octo-base fitted_dens_x0.5 base=20260918
+02:55:19 done rc=0 egg octo-small fitted_dens_x0.5 base=20260918 (21.9 min)
+02:55:19 start egg octo-small fitted_dens_x0.5 base=20280101

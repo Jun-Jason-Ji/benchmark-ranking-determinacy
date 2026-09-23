@@ -20,6 +20,7 @@ third-party simulator trees — those come from their own upstreams, listed in `
 | `results/**/analysis_*.md` | script-generated tables |
 | `results/**/FINDING_*.md` | hand-written conclusions, including the retractions |
 | `results/CORE_TABLE.md` | the point-versus-set verdict table, regenerable |
+| `results/MULTIPLICITY.md` | the same 17 pairs with a family-wise correction, regenerable |
 | `docs/` | manuscript drafts and the formal error ledger |
 | `submission/autonomous_robots/` | the manuscript as submitted, with its figures |
 | `SHA256SUMS.txt` | checksums for the record files of this version (count in its header), so a reader can confirm nothing drifted |
@@ -47,6 +48,7 @@ python scripts/rebuild_compatible_set.py --stack ms3   # full candidate table, s
 python scripts/make_table5.py --root results/controller_sweep_ms2_official_stream \
        --compare results/controller_sweep_ms2_official     # Tables 4-5, both RNG lifecycles
 python scripts/analyze_fitted_point.py             # nominal vs the calibration-preferred setting
+python scripts/analyze_multiplicity.py             # Holm/BH over the 17 bridge pairs (Sect. 7.2)
 python scripts/analyze_fractal_reversal.py         # the real-vs-sim reversal pair (Sect. 8.4)
 python scripts/analyze_torque_shift_s5.py          # the per-pair torque shift at S = 5 (Sect. 7.3)
 python scripts/analyze_benchmark_value.py          # benchmark-value estimator and intervals
@@ -225,8 +227,13 @@ closer to a target is not evidence of fidelity, and the systematic platform offs
 along where the first run could not resolve it. The carrot row is why this matters beyond
 bookkeeping: we had published a sign reversal that the corrected lifecycle does not reproduce.
 
-`scripts/analyze_official_protocol.py --compare` and `scripts/make_table5.py --compare` print both
-directories side by side.
+`scripts/analyze_official_protocol.py` now defaults to the reference-lifecycle directory
+(`results/controller_sweep_ms2_official_stream`), so running it with no arguments reproduces the
+paper's Table 4 -- mean difference -0.038, mean absolute 0.038, largest 0.111. It previously
+defaulted to the re-seeding directory, which meant the no-argument invocation printed the numbers
+the paper reports as an artefact of our own error. Pass
+`--root results/controller_sweep_ms2_official` for that run, or `--compare <the other root>` to get
+both side by side; `scripts/make_table5.py --compare` does the same for Table 5.
 
 ## Comparing across directories: pair on shared episode ids
 

@@ -494,6 +494,19 @@ $i \succ j$ when the interval for $\hat\Delta_{ij}$ there excludes zero;
 \item \textbf{the union bound}: declare only when every $z \in S$ agrees in sign, using the
 interval $\big[\min_{z} \mathrm{lo}(z),\ \max_{z} \mathrm{hi}(z)\big]$.
 \end{itemize}
+
+\noindent The second needs no multiplicity correction across the settings in $S$, and the reason is
+worth two lines because it is the only place this paper gets something for free. Suppose we declare
+$i \succ j$, so $\min_z \mathrm{lo}(z) > 0$, and suppose the declaration is wrong, so
+$\Delta(z_0) \le 0$ for some $z_0 \in S$. Then $\mathrm{lo}(z_0) > 0 \ge \Delta(z_0)$: that one
+setting's lower bound exceeded its own truth, which happens with probability at most $\alpha$ if the
+interval at $z_0$ is a valid one-sided bound. Since $z_0$ is fixed by the surface rather than chosen
+from the data, no union over $|S|$ is needed and the false-declaration rate is at most $\alpha$ for
+any finite $S$. What this argument does \emph{not} give is coverage of the whole range
+$[\min_z \Delta(z), \max_z \Delta(z)]$ by the envelope, which is a simultaneous statement and does
+require correction; Sect.~\ref{subsec8_2} measures that coverage rather than asserting it. Both
+statements are conditional on the intervals at each $z$ being valid, which Sect.~\ref{subsec5_4}
+qualifies where a variance term is imputed.
 Throughout the empirical sections $S = F_{\mathrm{nom}}$ and the single setting is nominal, which is
 the pairing the benchmark's own reporting implies.
 A third rung, a Gaussian-process simultaneous band over the parameter axes, is introduced in
@@ -1370,6 +1383,31 @@ unit. A bound that small is a property of the estimator's last digit, not of the
 At three seed sets, three rows disagreed. The two that no longer do were resolved by spending seeds,
 not by any change of method or of data-retention rule.
 
+\paragraph{The counts above are uncorrected for multiplicity, and correcting them cuts the union
+bound harder than it cuts point calibration.}
+Seventeen pairs are seventeen hypotheses, and a reader who scans the table for whichever orderings
+it declares is making a family-wise claim. Applying Holm's step-down procedure at $\alpha = 0.05$
+over the 17 bridge pairs --- which needs no independence assumption, and these pairs are certainly
+not independent, six of them being drawn from four Octo variants on shared policy data --- point
+calibration's 11 declarations fall to \textbf{9} and the union bound's 10 fall to \textbf{5}
+(\texttt{scripts/analyze\_multiplicity.py}; Benjamini--Hochberg leaves both counts unchanged, and we
+report Holm because the reading at issue is family-wise rather than one about a false-discovery
+rate). The two point declarations that go are exactly the knife edges of the previous paragraph, at
+$+0.0091$ and $+0.0095$.
+
+That the union bound loses half its declarations where point calibration loses two of eleven is not
+an accident of these data, and it is worth stating as a property of the criterion. The envelope
+declares only when \emph{every} condition agrees in sign, which makes it an intersection--union
+test: it rejects exactly when each per-condition test rejects, so its $p$ value is the
+\emph{largest} of the per-condition ones rather than the smallest. Those $p$ values therefore start
+larger, and a step-down procedure removes more of them. \textbf{A criterion that is conservative
+pair by pair is not thereby conservative family-wise.} This does not touch the
+no-correction-across-conditions argument of Sect.~\ref{subsec3_3} --- that argument is the same fact
+seen from the other side --- and it does not affect any abstention, since a correction can only
+remove declarations. It does mean that the 1-of-17 disagreement count and the declarations behind it
+should be read as per-pair statements, which is how Appendix~\ref{secA2} labels them and how we
+quote them throughout.
+
 \begin{table*}[t]
 \caption{The effect of raising the seed budget from three to five on the point-versus-set
 disagreements of the eggplant census. Both columns are recomputed on the run observation unit with
@@ -1665,9 +1703,18 @@ $F_{\mathrm{nom}}$ agrees in sign. Its guarantee is of \textbf{sampling-extremum
 to the extremes of $\Delta(z)$ over the settings actually run, and silent about values between them.
 
 \textbf{A Gaussian-process simultaneous band} fits $\Delta(z)$ over the parameter axes and requires
-the sign to hold across a simultaneous band over the whole compatible region. Its guarantee is of
+the sign to hold across a simultaneous band over the whole compatible region. We construct it by
+drawing $4{,}000$ posterior functions on a grid over the region, marginalising over a grid of
+$(\ell, \sigma_f)$ hyperparameters with the marginal-likelihood weights, and taking $L$ as the
+$2.5$th percentile of each draw's \emph{minimum} and $U$ as the $97.5$th percentile of each draw's
+\emph{maximum}. Both endpoints are therefore statements about the extremes of a whole function rather
+than about $\Delta$ at any one point, which is what makes the band simultaneous over the region and
+what makes it expensive in power. Its guarantee is of
 \textbf{within-band} type under a smoothness prior, and it therefore covers features that fall
-between sampled settings --- at a cost in power that Sect.~\ref{subsec8_2} quantifies.
+between sampled settings --- at a cost in power that Sect.~\ref{subsec8_2} quantifies. Marginalising
+over the hyperparameters rather than fixing them at the maximum-likelihood values matters here: the
+13 design points do not pin $\ell$ down, and a band conditioned on one $\ell$ understates the
+uncertainty that comes from not knowing it.
 
 An earlier design had a third element, a flatness gate that chose between the two per axis. We
 removed it; Sect.~\ref{subsec8_2} explains why.
@@ -1999,6 +2046,9 @@ families where its smoothness prior holds and fails where it does not
 declares on one replicate and not the other, which is a claim about abstention and not about
 declarations (Sect.~\ref{subsec8_3}); and it changes the verdict on 3 of 17 bridge policy pairs at
 the reference protocol's three seed sets, falling to 1 of 17 at five seed sets over a full census
+(Sect.~\ref{subsec7_2}). Its \emph{declarations} are the part to treat with most care: under a
+family-wise correction over the 17 pairs they fall from 10 to 5, a larger proportional loss than
+point calibration's, because an intersection--union test's $p$ value is a maximum over conditions
 (Sect.~\ref{subsec7_2}). It does not bound, and cannot bound, the ambiguity arising from a model gap
 that no setting of those parameters expresses --- and Sect.~\ref{subsec8_4} exhibits a pair where
 reaching abstention would have needed 0.070 while the gap between the simulated and published real
@@ -2396,13 +2446,18 @@ conditional --- on the benchmark's operating point, and on levels we do not esta
 \item \textbf{Our intervals are per pair; $E_{MC}$ and $E_b$ are joint events.} We compute an
 interval for each policy pair separately and report the collection. That is not
 $\forall (i,j)$: a family of per-pair statements must be inflated for multiplicity before it can
-enter the ledger, and we have not performed that inflation. The knife-edge bounds reported in
-Sect.~\ref{subsec7_2} ($+0.0091$, $+0.0095$) illustrate the point rather than correct for it --- a
-simultaneous procedure over 17 pairs would not retain declarations resting on margins that small.
+enter the ledger. Sect.~\ref{subsec7_2} performs that inflation and reports what it costs --- point
+calibration 11 declarations to 9 under Holm, the union bound 10 to 5 --- and the knife-edge bounds
+of $+0.0091$ and $+0.0095$ are among the ones it removes, as one would expect of margins that small.
+What the ledger asks for is still not supplied, because the corrected counts are a family-wise
+statement about \emph{these} 17 pairs and the ledger's $E_{MC}$ quantifies over $\Pi \times S$ as
+well; but the gap is now measured rather than merely named.
 Our per-pair results should be read as exploratory in the multiplicity sense. This is a statement
 about \emph{multiple policy pairs}, not about the envelope over conditions: for a fixed finite set
-of conditions, taking the minimum lower bound and the maximum upper bound is itself conservative
-and needs no further correction across those conditions.
+of conditions the envelope's false-declaration rate is at most $\alpha$ without correction, by the
+argument in Sect.~\ref{subsec3_3} --- a wrong declaration requires one particular condition's own
+lower bound to exceed its own truth. The two multiplicities are different: across conditions the
+error event pins down which interval must fail, across policy pairs it does not.
 
 \item \textbf{$E_\theta$ presumes that $z^*$ exists.} The event is empty of content if no
 parameter setting reproduces reality --- that is, if the simulator is structurally misspecified
