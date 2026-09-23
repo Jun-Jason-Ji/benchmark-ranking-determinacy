@@ -987,7 +987,10 @@ reports each in its own terms and they should not be ranked against one another 
 a scale. Every entry is a quantity in units of $\Delta$, the policy difference, and not a change in a
 single policy's success rate --- the two are easy to interchange and are not the same magnitude.
 The scopes differ per row. The seed row
-is census-scope at $S = 5$ on eggplant, median over policy pairs. The build row is a single run of
+is census-scope at $S = 5$ on eggplant, median over policy pairs, computed on the episode ids common
+to all five seed sets; \texttt{analyze\_seed\_noise.py} reports $0.068$ for the same statistic on its
+own per-pair id intersection, and the third-decimal difference is that restriction rather than a
+rounding of one number. The build row is a single run of
 each of two server builds on the eggplant census, so it carries no seed replication and no $S$; it
 reproduces at the episode level on 0.73--0.88 of episodes. The texture row is one run per
 configuration over the 300-configuration fractal census, also without seed replication; the four
@@ -2207,7 +2210,9 @@ touch, and we state it as that rather than as a ranking of magnitudes. On the eg
 single seed set gives a half-width of $\pm 0.132$ on $\Delta$, the reference protocol's three seeds
 $\pm 0.076$, and ten seeds would give $\pm 0.042$: this term falls as $1/\sqrt{S}$ and a practitioner
 can buy it down. The others do not move with budget at all. A halved torque limit, invisible to
-calibration, shifts $\Delta$ by 0.121; the robot texture variant spans $\Delta$ by 0.160 across four
+calibration, shifts $\Delta$ by 0.121 on the four Octo-versus-OpenVLA pairs of the eggplant census
+--- and by $-0.01$ to $-0.07$ on spoon, because its decision-relevance is a property of the
+task--policy pair rather than of the parameter (Sect.~\ref{subsec7_4}); the robot texture variant spans $\Delta$ by 0.160 across four
 settings that carry no physics; the implementation build shifts it by 0.109. These are shifts and
 spans rather than dispersions, so we do not say which is ``biggest'' --- the point is that
 \textbf{no number of extra episodes reduces any of them}. A practitioner who responds to an ambiguous
