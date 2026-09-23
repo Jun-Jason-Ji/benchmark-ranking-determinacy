@@ -70,8 +70,8 @@ determines, on a widely used sim-to-real suite across two embodiments, enumerati
 is structurally blind: replaying 98 demonstrations identifies the controller ratio and delay, while a
 common gain rescaling moves the loss by at most 3~\textmu m over a sixteenfold range and halving the
 torque limit leaves 97 of 98 replays bitwise unchanged. The same test rejects the simulator's shipped
-setting, and a full census at the setting the data do prefer moves a policy difference by only
-0.031 --- enough to turn abstention into a declaration. Second, the benchmark is a finite
+setting; a full census at the setting it prefers moves the verdict from abstention to a
+declaration on a difference change of 0.031 that is not itself resolved. Second, the benchmark is a finite
 configuration population: the episode index fixes the initial state modulo 24 to 300 configurations,
 and two ports enumerate different grids. Enumerating one zeroes configuration sampling error;
 among the terms that remain is the suite's averaging over four robot texture variants, which carry
@@ -79,7 +79,7 @@ no physics yet span 0.400 in a rate, making the published number a marginal rath
 any one. Third, following the published protocol reproduces its rates to 0.038 mean
 absolute difference, yet its own 72-episode budget resolves only one or two of four orderings. A
 set-valued verdict bounds only the ambiguity the compatible parameters express: on the one pair whose
-published real-robot result contradicts the simulator, it declares the ordering the robot reverses.
+published real mean contradicts the simulator, it declares the ordering those means reverse.
 Four of our claims are retracted.}
 
 \keywords{Policy evaluation, Sim-to-real transfer, Identifiability, Partial identification,
@@ -183,7 +183,7 @@ one- to three-seed budgets the literature actually uses it disagrees with point 
 17 policy pairs --- but when we spend more seeds, two of those three disagreements turn out to have
 been our own insufficient power, leaving one. And on the single policy pair for which published
 real-robot results contradict the simulator, the criterion over the invisible fibre
-\emph{declares the ordering the real robot reverses}. Its reach stops at the parameter family the
+\emph{declares the ordering the published real means reverse}. Its reach stops at the parameter family the
 calibration data can constrain, and the sim-to-real gap on that pair lies outside it.
 
 \subsection{Contributions}\label{subsec1_1}
@@ -216,12 +216,13 @@ decidable to abstaining --- stated, after our own larger-budget replication, as 
 evaluation budget rather than of parameter sign.
 \item (Sect.~\ref{subsec7_7}) A direct test of whether the choice of operating point decides a
 ranking: the same 64-configuration census, the same policy seeds, evaluated both at the benchmark's
-nominal controller setting and at the one its own calibration data prefer. $\hat\Delta$ moves by
-only $0.031$, but that is enough to carry the verdict from abstention to a declaration --- under
-point calibration and under the union bound over the invisible fibre alike, the latter because that
-fibre spans the directions the calibration data leave free while these two settings differ in the
-directions it constrains. The operating point is not pinned down by the calibration evidence, and at
-the budgets in use it decides the answer.
+nominal controller setting and at the one its own replay objective prefers. The verdict moves from
+abstention to a declaration under point calibration and under the union bound alike, while the
+paired change in $\hat\Delta$ is only $+0.031$ and is \emph{not} itself resolved
+($[-0.064, +0.126]$, with one of three seed sets moving the other way). The finding is fragility at
+these budgets, not a demonstrated difference between the two settings: the benchmark's operating
+point differs from the one its replay objective prefers, and at the budgets in use the declaration
+is sensitive to that choice.
 \item (Sect.~\ref{sec8}) A verdict ladder with its coverage and power measured on synthetic ground
 truth and its stability measured on real replicates, together with the negative result that
 delimits it: on the one pair with contradicting real-robot ground truth, the criterion declares the
@@ -286,6 +287,32 @@ evaluation, and all are validated by some form of sim-to-real agreement: rank co
 absolute difference, or per-task scatter against real rates. Our work takes such a suite as its
 object of study rather than as a tool, and asks not how closely it agrees with reality but which of
 its own outputs are determined by its own inputs.
+
+We should be precise about the suite we study, because it anticipates more than a correlation
+analysis. \citet{li2024simpler} discuss the weaknesses of Pearson correlation for this purpose,
+note that small real differences make rank agreement unstable, and propose a mean maximum rank
+violation to measure ordering agreement directly. What we add is not the observation that
+correlation is a poor summary. It is a per-pair analysis conditioned on a stated calibration
+protocol and a stated evaluation budget: which individual ranking claims that evidence determines,
+where the parameter directions the protocol cannot see enter, and how the answer moves with the
+operating point and the observation unit.
+
+\paragraph{Confidence statements for simulated evaluation, and what we do not offer.}
+The closest neighbours are methods that attach a finite-sample statement about \emph{real}
+performance to a simulated or partly-simulated evaluation. \citet{suresim2025} use a small set of
+paired real and simulated evaluations with prediction-powered inference to give intervals for real
+performance; \citet{polaris2025} improve real-to-sim evaluation of generalist policies through scene
+reconstruction and paired protocols; \citet{scape2025} study scene-conditioned performance with
+simulator-bias correction and uncertainty calibration. The distinction from our work is about the
+estimand and the information required, and it is not in our favour on the question those methods
+answer. They target real performance and pay for it with paired real data. We have no paired real
+evaluations of our own and therefore make no claim about real performance: our estimand is the
+benchmark's own quantity, and our output is which of \emph{its} pairwise claims its own evidence
+supports. A reader wanting an interval on real performance should use a method of that first kind;
+what this paper offers is an audit of what the simulated evidence settles before any sim-to-real
+correction is applied. We cannot present a fair measured comparison against them, because doing so
+needs the paired real data they assume and we lack, and we prefer to state that than to construct a
+baseline they would not recognise.
 
 \paragraph{Identifiability and system identification.}
 That not every parameter of a dynamical model can be recovered from a given excitation is classical,
@@ -360,7 +387,7 @@ degenerate for deterministically decoding policies, so for those the benchmark v
 exactly; and $\mathcal{C}$ itself depends on $\pi$, so two builds with different grids yield two
 different estimands that cannot be paired per episode.
 
-\subsection{The compatible set}\label{subsec3_2}
+\subsection{The compatible rule, and why we do not call it a confidence set}\label{subsec3_2}
 
 Calibration observes real demonstrations and scores a candidate $z$ by a replay loss $L(z)$. Rather
 than reporting the minimiser $\hat z$, we invert a one-sided test at level $\alpha$: a parameter
@@ -369,10 +396,30 @@ best,
 \begin{equation}\label{eq:cset}
 C_\alpha = \Big\{ z : \mathrm{lo}_{1-\alpha}\big( \mathbb{E}[L(z) - L(\hat z)] \big) \le 0 \Big\},
 \end{equation}
-where $\mathrm{lo}_{1-\alpha}(\cdot)$ is the paired-bootstrap $(1-\alpha)$ lower confidence bound,
-so $C_\alpha$ contains every parameter the calibration data cannot reject. Note that the threshold
-is exactly zero: the definition admits no engineering-equivalence margin, and if one is wanted it
-has to be introduced explicitly and justified. Directions in which the loss is invariant
+where $\mathrm{lo}_{1-\alpha}(\cdot)$ is the paired-bootstrap $(1-\alpha)$ lower confidence bound.
+The threshold is exactly zero: the definition admits no engineering-equivalence margin, and if one
+is wanted it has to be introduced explicitly and justified.
+
+\paragraph{This is an empirical rule, not a $1-\alpha$ confidence set, and we were wrong to call it
+one.} Each test is valid \emph{for a fixed reference}. Ours is not fixed: $\hat z$ is the argmin of
+the same demonstrations the test then uses, so it is the most favourable candidate in this draw and
+candidates near it are rejected more often than $\alpha$ allows. Inverting a test does not handle
+that selection. The size of the effect is easy to see under a null of $K$ candidates with identical
+risk, where every candidate is a true minimiser: at $K = 50$ and $M = 98$, matching our grid and
+demonstration count, a nominated true minimiser is retained about $53\%$ of the time against a
+nominal $95\%$ (\texttt{scripts/check\_selection\_bias.py}). Increasing the bootstrap count does not
+help, because the problem is the reference rather than the resampling. We therefore make \textbf{no
+coverage claim} for Eq.~\eqref{eq:cset} as computed, and read it as what it is: a reproducible
+empirical rule for which settings this loss and this grid cannot separate from the best one.
+
+\paragraph{A variant that does carry a level, and what it says.} Selecting the reference on one half
+of the demonstrations and testing on the other makes selection and inference independent. On the
+same null that variant retains a true minimiser $92.4\%$ of the time --- most of the gap closed,
+with a few points of residual shortfall from the percentile bootstrap itself at $M/2 \approx 49$, so
+we call it a large improvement rather than an exact procedure. We report it alongside the
+same-sample rule wherever the distinction could matter, and Sect.~\ref{subsec4_4} shows that the
+paper's substantive conclusion --- that the benchmark's nominal setting is excluded --- holds under
+it on both simulator stacks and across five random splits. Directions in which the loss is invariant
 (Sect.~\ref{subsec4_2}) enter $C_\alpha$ at every magnitude regardless of where the minimum lies,
 which is a stronger statement than ``the data are consistent with a range of values'': along such an
 axis there is no range, the axis is unconstrained. Parameters the replay cannot observe at all ---
@@ -408,13 +455,19 @@ we sampled; the union bound's guarantee is of sampling-extremum type and does no
 
 Writing $[L_{ij}, U_{ij}]$ for the union-bound interval, the claim that $i$ is genuinely better in
 practice requires three events to hold simultaneously: that the true parameter lies in the set the
-bound ranges over, $E_\theta = \{z^* \in S\}$ with $P(E_\theta) \ge 1 - \alpha$; that the
-evaluation intervals cover the simulated differences uniformly over the set, $E_{MC}$ with
-$P(E_{MC}) \ge 1 - \gamma$; and that the sim-to-real bias is bounded,
-$E_b = \{|\Delta^{\mathrm{real}}_{ij} - \Delta^{\mathrm{sim}}_{ij}(z^*)| \le b_{ij}\}$ with
-$P(E_b) \ge 1 - \beta$. On the intersection every real difference lies in
-$[L_{ij} - b_{ij}, U_{ij} + b_{ij}]$, and a union bound gives $1 - \alpha - \beta - \gamma$ without
-requiring independence.
+bound ranges over, $E_\theta = \{z^* \in S\}$; that the evaluation intervals cover the simulated
+differences uniformly over the set, $E_{MC}$; and that the sim-to-real bias is bounded,
+$E_b = \{|\Delta^{\mathrm{real}}_{ij} - \Delta^{\mathrm{sim}}_{ij}(z^*)| \le b_{ij}\}$. On the
+intersection every real difference lies in $[L_{ij} - b_{ij}, U_{ij} + b_{ij}]$, and \emph{if} the
+three carry levels $1-\alpha$, $1-\gamma$ and $1-\beta$, a union bound gives
+$1 - \alpha - \beta - \gamma$ without requiring independence.
+
+The conditional is doing real work and we leave it explicit. This paper establishes none of the
+three levels. $E_\theta$ would need a set with a coverage guarantee, and Sect.~\ref{subsec3_2}
+explains why ours has none as computed; $E_{MC}$ is a simultaneous statement and we report per-pair
+intervals; $E_b$ needs a sim-to-real bias bound we do not have. The ledger is therefore an accounting
+of what a defensible claim would require, and a record of which parts we supply --- not a derivation
+of a number attached to our results.
 
 We are deliberate about which of these this paper establishes, and the accounting is less favourable
 than the arithmetic above suggests.
@@ -601,7 +654,7 @@ indefensible. Replaying demonstration $m$ at parameter $z$ is deterministic --- 
 time --- so the only randomness is which demonstrations were drawn, and with 98 paired
 demonstrations the bootstrap resolves mean differences of order $10^{-7}$~m. At threshold zero the
 rule therefore \emph{rejects} $\times 2$ and $\times 4$ common rescalings whose mean loss differs
-from nominal by $0.5$ and $0.7$ \emph{nanometres}, and as the demonstration count grows the retained
+from nominal by $0.49$ and $0.74$ \emph{micrometres}, and as the demonstration count grows the retained
 set shrinks to the single loss minimiser whatever the physics. Statistical significance is the wrong
 question to ask of a difference that carries no noise; magnitude is the right one.
 
@@ -633,6 +686,18 @@ nominal is still out on ManiSkill3 and comes in on the original stack. So its me
 \textbf{genuinely borderline}: the distance from the benchmark's operating point to the calibration
 optimum is the same order as the disagreement between two implementations of the same equations. We
 report it that way rather than adopting whichever threshold settles it.
+
+\paragraph{The exclusion survives a procedure that does carry a level.}
+The rule above selects its reference from the same demonstrations it tests on, which
+Sect.~\ref{subsec3_2} shows invalidates the coverage reading, so the exclusion has to be checked
+against something better before any weight is put on it. Selecting the reference on one half of the
+98 demonstrations and testing on the other gives independent selection and inference. Nominal is
+still excluded: on ManiSkill3 its paired mean loss increase over the half-sample reference is
+$+2.80$~mm with a one-sided lower bound of $+1.90$~mm, and on the original stack $+2.49$ and
+$+1.43$~mm. Across five random splits the lower bounds run from $+1.02$ to $+3.03$~mm and nominal is
+excluded in all ten stack--split combinations, with the minimiser at delay $1$ and ratio $0.25$ or
+$0.35$ every time. The conclusion of this subsection does not depend on the invalid step, which is
+why we keep it.
 
 Two consequences follow, and we separate them carefully. Our earlier analysis fixed nominal \emph{as}
 the test reference, which makes its own loss increase zero by construction and so could never reject
@@ -763,7 +828,12 @@ sampling error is zero and only policy noise and run-to-run numerical noise rema
 \begin{equation}\label{eq:var}
 \mathrm{Var}(\hat\Delta) = N^{-2} \sum_{c} \big[ s^2_A(c)/S_c + s^2_B(c)/R_c \big],
 \end{equation}
-with $S_c$ and $R_c$ the number of runs of each policy at configuration $c$.
+with $S_c$ and $R_c$ the number of runs of each policy at configuration $c$. ``Run'' means one
+episode, and the count is pooled across seed-set directories: a configuration that received six
+episodes contributes $S_c = 6$, even where those episodes came from fewer directories. That choice
+matters --- an implementation that instead averaged within a directory and took each directory mean
+as the observation moves two verdicts --- and Sect.~\ref{subsec7_2} reports both alongside the
+reason for preferring this one.
 
 \emph{(ii) The generalisation value} --- performance on comparable scenes. Here configuration
 sampling error is real and the appropriate estimator is a paired bootstrap \emph{clustered by
@@ -1137,9 +1207,28 @@ different question. Wherever this paper says ``of 17 pairs'' it means the 17 bri
 Table~\ref{tab6} below is not that table; it shows only the three pairs whose point-versus-set
 verdict changed when we raised the seed budget.
 
+Before the numbers, the observation unit, because the estimator has two defensible ones and they
+disagree on two rows. Eq.~\eqref{eq:var} writes $S_c$ for the number of \emph{runs} at
+configuration $c$, and that is what we report: episode outcomes pooled across seed-set directories,
+so a configuration that received six episodes contributes six observations. An earlier
+implementation instead averaged a directory's episodes at a configuration and treated each
+\emph{directory mean} as the observation, making $S_c$ the number of directories. The two differ
+because seed set B carries 96 episodes on a 64-configuration grid, so ids 64--95 wrap onto
+configurations 0--31 and give those two episodes --- at different policy seeds, since
+$\text{policy\_seed} = \text{base} + \text{episode\_id}$. Neither unit is wrong: the run unit is
+finer and is what the formula states; the directory unit is conservative against a directory-level
+common effect, which the build-drift result of Sect.~\ref{subsec5_5} shows can exist across
+generations, though the five sets here share one build. We adopt the run unit because it is the
+formula's, and report the other as a sensitivity --- not the reverse, and not chosen by which
+declares more. \texttt{make\_core\_table.py --unit directory} reproduces it. The two units move two
+of the eighteen rows: \texttt{octo-small} vs \texttt{octo-base} on eggplant declares under the
+directory unit on a lower bound of $+0.000042$ and abstains under the run unit at
+$[-0.008, +0.117]$, and \texttt{octo-small} vs \texttt{octo-base} on the original-stack spoon does
+the opposite. \textbf{The point-versus-set disagreement count is 1 of 17 under both.}
+
 Of the 17 bridge pairs, \textbf{one} disagrees: \texttt{octo-base} vs \texttt{octo-base@hist1} on the
-eggplant census, point $\Delta = +0.069\,[+0.00, +0.13]$ declaring \texttt{octo-base} better, union
-interval $[-0.06, +0.13]$ abstaining.
+eggplant census, point $\Delta = +0.073\,[+0.01, +0.14]$ declaring \texttt{octo-base} better, union
+interval $[-0.06, +0.14]$ abstaining.
 
 The union runs over the nominal setting as well as the five calibration-invisible ones, and the
 reason is definitional rather than statistical. The set being unioned over is $F_{\mathrm{nom}}$,
@@ -1150,45 +1239,45 @@ Table~\ref{tab6}. We note that nominal's membership in $F_{\mathrm{nom}}$ is a t
 no implication that nominal is the calibration optimum --- Sect.~\ref{subsec4_4} shows it is not.
 
 One consequence should be stated plainly, because a reader scanning the table's two-decimal columns
-cannot see it. Two of the declarations rest on a bound that rounds to $+0.00$. For
-\texttt{octo-small} vs \texttt{octo-base} on the eggplant census the lower bound is
-$\mathbf{+0.000042}$ --- four hundredths of one episode on a 64-configuration grid --- and for the
-surviving disagreement's point calibration it is $+0.004$. Neither is a declaration in any useful
-sense; both sit on the knife edge between declaring and abstaining, and a single episode falling the
-other way would move them. We flag them rather than let the rounding carry them, and the criterion's
-substantive declarations are the ones with margin: spoon $[+0.04, +0.56]$, the OpenVLA comparisons,
-and the fractal pair of Sect.~\ref{subsec8_4}. The generator marks every such row, so the
-distinction cannot be lost in a later revision.
+cannot see it. Two declarations rest on a bound that rounds to $+0.01$: \texttt{octo-small} vs
+\texttt{octo-small@hist1} at $+0.0091$, and the surviving disagreement's own point calibration at
+$+0.0095$. On a 64-configuration census at five runs each, a lower bound of $+0.0095$ is about
+$0.0095 \times 64 \approx 0.6$ of one configuration's mean outcome --- and since each configuration
+carries five or six episodes, less than one episode's worth of evidence anywhere in the grid.
+Neither is a declaration in any useful sense; both sit on the knife edge, and we flag them rather
+than let the rounding carry them. The criterion's substantive declarations are the ones with margin:
+spoon $[+0.04, +0.56]$, the OpenVLA comparisons, and the fractal pair of Sect.~\ref{subsec8_4}. The
+generator marks every such row, so the distinction cannot be lost in a later revision. We also
+report, rather than bury, that the knife edges are not stable across the two observation units ---
+the largest of them under the directory unit was $+0.000042$, on a pair that abstains under the run
+unit. A bound that small is a property of the estimator's last digit, not of the policies.
 
-At three seed sets, three rows disagreed. The two that no longer do were resolved by spending seeds,
+At three seed sets, two rows disagreed. The one that no longer does was resolved by spending seeds,
 not by any change of method.
 
 \begin{table*}[t]
 \caption{The effect of raising the seed budget from three to five on the point-versus-set
-disagreements. Two of the three were our own insufficient power. The $S=5$ envelopes include the
-nominal setting, as the bound requires; the $S=3$ column is reproduced from the three-seed-set
-records, where all three verdicts are abstentions and adding a condition to a min/max envelope can
-only widen it, so no $S=3$ verdict here can turn on that inclusion.}\label{tab6}
+disagreements of the eggplant census. Both columns are recomputed on the run observation unit with
+$S=3$ defined as seed sets A$'$, B and C, so the two are directly comparable and both are
+reproducible from the release; an earlier version quoted historical $S=3$ figures whose seed-set
+membership was not recorded. Envelopes include the nominal setting, as the bound
+requires.}\label{tab6}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Pair & Union at $S=3$ & at $S=5$ & Outcome \\
 \midrule
-octo-small vs octo-base@hist1 & $[-0.03, +0.28]$ abstain & $[+0.01, +0.24]$ declare & withdrawn \\
-octo-base@hist1 vs OpenVLA & $[-0.00, +0.42]$ abstain & $[+0.02, +0.43]$ declare & withdrawn \\
-octo-base vs octo-base@hist1 & $[-0.10, +0.17]$ abstain & $[-0.06, +0.13]$ abstain & survives \\
+octo-small vs octo-base@hist1 & $[-0.020, +0.275]$ abstain & $[+0.012, +0.245]$ declare & withdrawn \\
+octo-base vs octo-base@hist1 & $[-0.099, +0.167]$ abstain & $[-0.064, +0.137]$ abstain & survives \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
-The decisive cell is \texttt{octo-base@hist1} vs OpenVLA under torque $\times 0.5$, where
-$\Delta = +0.068$ with interval $[-0.000, +0.135]$ at $S=3$ and $+0.073$ with $[+0.017, +0.128]$ at
-$S=5$. A lower bound sitting exactly on zero became a lower bound above it, and the disagreement
-evaporated. We had pre-committed to this test and to withdrawing the row if it went this way, which
-is why the surviving count is one rather than three.
+We had pre-committed to this test and to withdrawing a row if spending seeds resolved it, which is
+why the surviving count is one and not two.
 
 The honest general statement is therefore about the evaluation budget: at the budgets the literature
 actually uses --- a single seed, or the reference protocol's three --- point calibration declares
-orderings the union bound does not support, on 3 of 17 policy pairs; at five seed sets over a
+orderings the union bound does not support, on 2 of 17 policy pairs; at five seed sets over a
 complete configuration census, one remains. The criterion's value is concentrated in the budget
 regime practitioners are actually in. This is weaker than the claim we set out to make, and it
 remains useful: we are aware of no published evaluation that runs five seed sets over a full
@@ -1196,9 +1285,11 @@ configuration census, and the reference protocol itself uses three.
 
 The surviving pair is also instructive about \emph{why} it survives. It is not that its $\Delta$
 changes sign across conditions (Sect.~\ref{subsec7_5}), but that its nominal interval is barely
-decidable (lower bound $+0.004$) while the union bound takes the minimum lower bound over
-conditions, which friction $\times 0.4$ supplies at $-0.063$. It is a margin-and-width phenomenon,
-not a parameter-sign phenomenon.
+decidable (lower bound $+0.0095$) while the union bound takes the minimum lower bound over
+conditions, which friction $\times 0.4$ supplies at $-0.064$. It is a margin-and-width phenomenon,
+not a parameter-sign phenomenon --- and one whose point declaration sits on the knife edge, so the
+disagreement is between an abstention and a barely-made declaration rather than between two
+confident answers.
 
 \subsection{The mechanism: one parameter, measured on a complete census}\label{subsec7_3}
 
@@ -1334,21 +1425,29 @@ fitted, $d/k = 0.25$, delay 1 & $0$ & $+0.104$ & $[+0.016, +0.192]$ & $[+0.009, 
 \end{tabular}
 \end{table*}
 
-\paragraph{The point verdict flips, and the reason is not that the effect is large.}
-$\hat\Delta$ moves by only $+0.031$ between the two operating points --- less than half the
-$\pm 0.088$ half-width at this budget, and a quarter of the $0.121$ shift the torque limit produces.
-What makes it decisive is where it starts: at nominal the lower bound sits at $-0.016$, so a shift
-of $0.032$ in the bound is enough to carry it across zero, and it does. The declaration at the
-fitted point rests on a lower bound of $+0.016$, which is a fifth of an episode on a
-64-configuration grid.
+\paragraph{The verdict changes; the underlying difference is not resolved.}
+This distinction is the whole content of the result and we lead with it. What we observe is a
+\emph{verdict} change on this batch: at nominal the interval includes zero and the criterion
+abstains, at the fitted point it excludes zero and declares. What we do \emph{not} observe is a
+resolved change in the policy difference. Both $\hat\Delta$ are positive --- there is no sign
+reversal --- and the paired change itself,
+$D = \hat\Delta_{\mathrm{fitted}} - \hat\Delta_{\mathrm{nominal}} = +0.031$, is not distinguishable
+from zero: pairing per configuration and treating configurations as the sampling unit gives
+$D \in [-0.064, +0.126]$, and the three seed sets individually give $+0.172$, $+0.016$ and
+$\mathbf{-0.094}$ --- one of the three moves the other way. Treating whole runs as blocks gives
+$[-0.300, +0.363]$ on two degrees of freedom. So a significant interval at one operating point and a
+non-significant one at the other does not make the difference between them significant, and we do
+not claim a stable population effect.
 
-This is the paper's thesis instantiated in a single measurement, and it is worth being explicit
-about the structure. The choice of operating point is \emph{not} determined by the calibration data
-in the direction that matters here --- nominal and the minimiser differ by about as much as two
-implementations of the same dynamics differ (Sect.~\ref{subsec4_4}) --- yet at the budgets in use
-that choice decides whether a ranking is declared or withheld. A reader given only the published
-rates cannot see this, because the published rates exist at one operating point and carry no
-interval.
+What the measurement does establish is fragility, and that is the paper's thesis rather than a
+weaker version of it. A change of $0.031$ --- less than half the $\pm 0.088$ half-width at this
+budget, a quarter of the $0.121$ torque shift, and itself unresolved --- moves the answer from
+abstention to a declaration, because at nominal the lower bound already sat at $-0.016$. The
+declaration at the fitted point rests on a lower bound of $+0.016$; on a 64-configuration census
+with five to six episodes per configuration that is under one episode's worth of evidence anywhere
+in the grid. At the budgets in use the verdict is decided by a modelling choice the evidence does
+not settle, and a reader given only the published rates cannot see any of this, because those rates
+exist at one operating point and carry no interval.
 
 \paragraph{The set-valued verdict flips as well, and it was never going to do otherwise.}
 Taking the union over each point's own calibration-invisible fibre does not rescue the verdict. On
@@ -1357,32 +1456,39 @@ fitted side gives $[+0.0090, +0.1920]$ and declares. The nominal side over its f
 fibre gives $[-0.0348, +0.3002]$ and abstains. So both criteria change their answer when the
 controller moves to the setting the calibration data prefer.
 
-We match the fibres before comparing them, because they are not the same size. The common-scale
-invariance is verified in 14 of the replay grid's 26 $(\text{ratio}, \text{delay})$ groups, across
-seven ratios from $0.5$ to $2.0$, to within $7.2$~\textmu m --- but ratio $0.25$ has exactly one grid
-point per delay value, so at the fitted ratio the common scale is never varied and we decline to
-assume the invariance there. The halved torque limit does carry over, because the saturation
-argument concerns the commanded torque staying below the limit and does not involve the gain ratio.
-Hence two conditions on the fitted side and, for the comparison, two on the nominal side as well.
+Both fibre memberships are measured rather than assumed, which took two additional replay
+experiments. The common-scale directions: the invariance is verified in 14 of the replay grid's 26
+$(\text{ratio}, \text{delay})$ groups, across seven ratios from $0.5$ to $2.0$, to within
+$7.2$~\textmu m, but ratio $0.25$ has exactly one grid point per delay value, so we swept the common
+scale sixteenfold at ratio $0.25$ directly and found the loss flat to $5.4$~\textmu m on ManiSkill3
+and $11.1$~\textmu m on the original stack. The torque limit: the argument at nominal is that the
+commanded torque never reaches the limit, and that does \emph{not} transfer for free, because
+commanded torque depends on the gains and the fitted point doubles the stiffness. Measured at the
+fitted point, halving the limit leaves the replay unchanged on 96 of 98 demonstrations against 97 of
+98 at nominal, with a worst residual of $1.2\times10^{-5}$~m against $1.7\times10^{-6}$~m --- so the
+clip does activate slightly more often, as the mechanism predicts, and remains two orders of
+magnitude inside the between-stack disagreement. Both directions are retained at the fitted point on
+evidence rather than by inheritance.
 
-Two observations, and the second is the one that matters.
+Two observations, and the second corrects something we had stated too strongly.
 
 First, the fitted side's declaration is marginal by this paper's own standard: its lower bound is
 $+0.0090$, inside the knife-edge band of Sect.~\ref{subsec7_2}, where we decline to treat a
 declaration as carrying a margin. The torque limit pulls the bound down from the point value
 $+0.0164$ to $+0.0090$ without crossing zero.
 
-Second, and structurally: the union bound \textbf{cannot} protect against this, and expecting it to
-would misread what it does. It ranges over the directions the calibration data leave
-\emph{unconstrained}. Nominal and the fitted point differ in the ratio and the delay --- the
-directions the data \emph{do} constrain, and on which nominal loses. The invisible fibre never sees
-that axis, so a union over it is silent about a change along it by construction. This is a third
-kind of ambiguity, distinct from the two the ledger of Sect.~\ref{subsec3_4} tracks: not whether the
-true parameter lies in the set ($E_\theta$), and not evaluation noise ($E_{MC}$), but that the
-benchmark is \emph{operated} at a point its own calibration evidence rejects. No criterion defined
-over the invisible directions can bound it. What would address it is reporting the operating point
-and its standing against the calibration objective --- which costs nothing, and which no benchmark
-we know of does.
+Second: the union bound does not protect against this, but the reason is a property of \emph{this}
+set rather than an impossibility. An envelope over a set cannot speak about a point the set
+excludes, and nominal's fibre excludes the fitted point by construction --- the two differ in the
+ratio and the delay, which the calibration data constrain, so neither invisible fibre contains the
+other's base point. Nothing deeper than that is going on, and in particular a set containing both
+operating points and the region between them \emph{would} have an envelope covering both; it would
+simply be much wider, and wide enough to abstain everywhere in our data. So this is not a third
+irreducible kind of ambiguity. It is a question of set definition, and it identifies a choice the
+paper had left implicit: the invisible fibre is the right object for asking what the published
+numbers determine, and the wrong object for asking whether the operating point itself was well
+chosen. What addresses it is not a wider envelope but reporting the operating point and its standing
+against the calibration objective --- which costs nothing, and which no benchmark we know of does.
 
 \begin{figure*}[t]
 \centering
@@ -1392,10 +1498,9 @@ points are conditions the calibration data identifies, coloured points are the
 calibration-invisible ones, and the shaded band is the union bound over the invisible fibre --- the
 invisible conditions \emph{and} nominal, which the set contains by construction.
 Computed with the same estimator and the same seed sets as Table~\ref{tab6}, so figure and table
-report one computation rather than two. Verdicts and set bounds: carrot, point and set both abstain,
-$[-0.20, +0.07]$; spoon, both declare octo-small better, $[+0.04, +0.56]$; eggplant, both declare
-octo-small better, $[+0.00, +0.24]$ --- but that lower bound is $+0.000042$, so the eggplant
-declaration is a knife edge rather than a margin (Sect.~\ref{subsec7_2}). Available seed sets differ
+report one computation rather than two, on the run observation unit of Sect.~\ref{subsec7_2}.
+Verdicts and set bounds: carrot, point and set both abstain, $[-0.20, +0.07]$; spoon, both declare
+octo-small better, $[+0.04, +0.56]$; eggplant, both abstain, $[-0.008, +0.244]$. Available seed sets differ
 by task --- five for eggplant, two for spoon and carrot --- and the per-cell configuration and run
 counts are in Appendix~\ref{secC}.}\label{fig4}
 \end{figure*}
@@ -1610,13 +1715,21 @@ gain in agreement (0.50 to 0.88) bought with a real loss in declarations (0.38 t
 
 Everything to this point is internal to the simulator. The criterion is conservative where we can
 check conservatism and stabilises verdicts where we can check stability, but neither test asks
-whether it protects against being \emph{wrong about the real robot}. There is one place in this
-benchmark where that can be asked without hardware.
+whether it protects against being \emph{wrong about the real robot}. The published tables let that be
+asked without hardware, on a case we selected --- and we state the selection, because it is
+development information and not a held-out test.
 
 The reference implementation publishes real-robot and simulated success rates for the same policies
-on the same task. On pick-coke-can the two orderings disagree on three of fifteen policy pairs, all
-with small real margins; of those, exactly one has both checkpoints publicly available
-\citep{brohan2023rt1}.
+on the same task. Auditing all of them (\texttt{research\_audit/published\_pairwise\_audit.md}), 62
+within-task policy pairs have both rates published once RT-2-X is excluded for lack of public
+weights, and \textbf{5 of the 62 have opposite mean directions} in simulation and reality, with a
+further 3 tied in at least one domain. So this is not a unique case, and an earlier version of this
+paper wrongly called it one. We study \texttt{rt-1-converged} vs \texttt{rt-1-15pct} on
+pick-coke-can \citep{brohan2023rt1} for three stated reasons: both checkpoints are public, it has
+the largest published real margin of the five, and it is on the embodiment where we ran a complete
+300-configuration census. Those are reasons of convenience and coverage, not of significance --- the
+five are directional disagreements between \emph{rounded published means}, with no per-cell trial
+counts and no intervals on either side, so none of them is an established reversal.
 
 \begin{table*}[t]
 \caption{The real-versus-simulation reversal pair. Our reproduction of the published simulated rates
@@ -1722,7 +1835,7 @@ represent: on synthetic ground truth its observed coverage is conservative on al
 families where its smoothness prior holds and fails where it does not
 (Sect.~\ref{subsec8_2}); on real replicates it \emph{abstains} consistently where point calibration
 declares on one replicate and not the other, which is a claim about abstention and not about
-declarations (Sect.~\ref{subsec8_3}); and it changes the verdict on 3 of 17 bridge policy pairs at
+declarations (Sect.~\ref{subsec8_3}); and it changes the verdict on 2 of 17 bridge policy pairs at
 the budgets practitioners use, falling to 1 of 17 at five seed sets over a full census
 (Sect.~\ref{subsec7_2}). It does not bound, and cannot bound, the ambiguity arising from a model gap
 that no setting of those parameters expresses --- and Sect.~\ref{subsec8_4} exhibits a pair where
@@ -1762,14 +1875,17 @@ $(k{\times}1, d{\times}0.25, \text{delay}\ 1)$ and $(k{\times}4, d{\times}1, \te
 which would establish the invariance at the fitted ratio directly and let the fibre there be built
 out to the same width.
 
-\item \textbf{The criterion's central negative result rests on a single policy pair.}
-Section~\ref{subsec8_4} shows the union bound declaring an ordering the published real rates reverse,
-and that is one pair, on one task, on one embodiment. It is the only pair in this benchmark for which the
-published real and simulated orderings disagree \emph{and} both checkpoints are public, so it is the
-only such test available to us --- but a single counterexample establishes that the criterion's reach
-is limited, not how often the limit is reached. A reader should conclude that a union-bound
-declaration is not a sim-to-real guarantee, and should not conclude that such declarations are
-usually wrong.
+\item \textbf{The criterion's central negative result rests on one selected policy pair.}
+Section~\ref{subsec8_4} shows the union bound declaring an ordering the published real means
+reverse, on one pair, one task, one embodiment. It is \emph{not} the only such pair: our audit of the
+published tables finds 5 of 62 within-task pairs with opposite mean directions, and we chose this one
+for public checkpoints, the largest real margin among them, and census coverage. That makes it a case
+selected with development information in hand, which is the right way to read it --- a demonstration
+that the criterion's reach is limited, not an estimate of how often the limit is reached, and not a
+held-out test. The other four are available to anyone wishing to look, and one of them
+(\texttt{octo-base} vs \texttt{octo-small} on carrot) is a bridge pair we already have a census for.
+A reader should conclude that a union-bound declaration carries no sim-to-real warranty, and should
+not conclude that such declarations are usually wrong.
 
 \item \textbf{No hardware of our own.} Every simulated number here is ours; every real-robot number
 is quoted from the reference implementation's published tables. Those are the values the benchmark
@@ -1887,16 +2003,18 @@ fill.
 That last point is where our own expectations were corrected. We built the compatible-set criterion
 expecting to show that it repairs unreliable rankings, and what we can show is narrower: it detects
 when a benchmark's evidence cannot decide, it \emph{abstains} consistently where point calibration
-declares on one replicate and not the other, and it changes the answer on 3 of 17 pairs at the
+declares on one replicate and not the other, and it changes the answer on 2 of 17 pairs at the
 budgets practitioners use --- falling to 1 of 17 when we spend five seed sets over a full census. We
 are careful about the middle claim: on our eight replicate pairs the criterion declared once and
 that declaration did not reproduce, so what the replication data support is reliable abstention, and
 the validity of its declarations rests on the synthetic ground truth of
-Sect.~\ref{subsec8_2} rather than on replication. It does not protect against a model gap
-that no value of the parameters expresses, and on the single pair where published real-robot results
-contradict the simulator, it declares the ordering the real robot reverses. A criterion of this kind
-bounds the ambiguity it can represent. On at least one pair that is not the ambiguity that matters,
-and we know of no way to discover that fact from simulation alone.
+Sect.~\ref{subsec8_2} rather than on replication. It does not protect against a model gap that no
+value of the parameters expresses, and on a selected pair --- one of five in the published tables
+whose simulated and real means point opposite ways --- it declares the ordering those means reverse.
+Because the published real rates carry no intervals, we cannot say the criterion is wrong about the
+robot there; what we can say is that its declaration carries no warranty about the robot, which is
+the weaker claim and the one the evidence supports. A criterion of this kind bounds the ambiguity it
+can represent, and on at least one pair that is not the ambiguity that decides the answer.
 
 %%=============================================================================%%
 \bmhead{Acknowledgements}
@@ -1931,13 +2049,16 @@ Not applicable.
 
 \bmhead{Data availability}
 All episode-level records underlying the results are openly available in the archived release at
-\url{https://doi.org/10.5281/zenodo.22893458}, which resolves to the current version and lists every version with its
-own DOI. The records and the scripts that regenerate every table and figure are byte-identical
-across all versions to date, so any version reproduces the results reported here. Development is at
-\url{https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy}. They are append-only JSON Lines files, one per policy, task and
-simulator condition, together with the per-run provenance log that records the port branch,
-inference-stack version and random seeds for every episode, and \texttt{SHA256SUMS.txt} over the
-997 record files. The real-robot reference values used in Sect.~\ref{subsec8_4} are the published
+\url{https://doi.org/10.5281/zenodo.22893458}, which resolves to the newest version and lists every
+version with its own DOI. \textbf{The results in this paper correspond to version v1.5.0 and to that
+version's DOI}, not to the concept record generally: v1.0.0--v1.1.3 shared one immutable set of
+records, but v1.2.0 onwards added evaluation data --- the reference-lifecycle reproduction, the
+fitted-operating-point censuses and the additional replay sweeps --- so the versions are no longer
+interchangeable and an earlier one will not reproduce the tables here. Development is at
+\url{https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy}. The records are append-only
+JSON Lines files, one per policy, task and simulator condition, together with the per-run provenance
+log that records the port branch, inference-stack version and random seeds for every episode, and a
+\texttt{SHA256SUMS.txt} whose header states the file count for that version. The real-robot reference values used in Sect.~\ref{subsec8_4} are the published
 values distributed with the benchmark's own source and are not ours to redistribute; the manuscript
 cites their location.
 
@@ -2049,32 +2170,41 @@ E_{MC}   &= \big\{ \forall z \in S,\ \forall \pi \in \Pi,\ \forall (i,j): \notag
 E_b      &= \big\{ \forall (i,j):\ |\Delta^{\mathrm{real}}_{ij} -
              \Delta^{\mathrm{sim}}_{ij}(z^*)| \le b_{ij} \big\},
 \end{align}
-with $P(E_{MC}) \ge 1 - \gamma$ and $P(E_b) \ge 1 - \beta$, and with $P(E_\theta) \ge 1 - \alpha$
-\emph{when $S = C_\alpha$}. On $E_\theta \cap E_{MC} \cap E_b$ every real difference lies in
-$[L_{ij} - b_{ij},\ U_{ij} + b_{ij}]$ simultaneously, and a union bound gives at least
-$1 - \alpha - \beta - \gamma$ without any independence assumption. Note that $E_{MC}$ is stated
-over $\Pi \times S$: the implementation build is treated as an axis of the same kind as the
-physical parameters, for the reason given in Sect.~\ref{subsec5_5}.
+On $E_\theta \cap E_{MC} \cap E_b$ every real difference lies in
+$[L_{ij} - b_{ij},\ U_{ij} + b_{ij}]$ simultaneously, and \emph{if} those events hold at levels
+$1-\alpha$, $1-\gamma$ and $1-\beta$, a union bound gives at least $1 - \alpha - \beta - \gamma$
+without any independence assumption. We write the levels conditionally because none of the three is
+established here --- see the caveats below, of which the first is that our $S$ carries no coverage
+guarantee at all. Note that $E_{MC}$ is stated over $\Pi \times S$: the implementation build is
+treated as an axis of the same kind as the physical parameters, for the reason given in
+Sect.~\ref{subsec5_5}.
 
 Each event needs its own argument, and five caveats are worth stating explicitly because each is a
 way the ledger can be misused. The first two describe gaps between what this ledger asks for and what
 we report; we do not close either.
 
 \begin{enumerate}
-\item \textbf{We instantiate $S = F_{\mathrm{nom}}$, which carries no coverage probability.} The
-$1-\alpha$ guarantee on $E_\theta$ is a property of the inverted-test set $C_\alpha$. Our verdicts
-range over the invisible fibre through nominal instead (Sect.~\ref{subsec4_4}), and that fibre is
-generated by a point the calibration data reject, so $P(E_\theta)$ is simply unknown for the sets we
-use. Every ledger statement in this paper is therefore conditional on the benchmark's operating
-point, not a probabilistic statement about the true parameter.
+\item \textbf{Neither set we use carries a coverage probability, and for two separate reasons.}
+The first is the selection effect of Sect.~\ref{subsec3_2}: $C_\alpha$ as computed picks its
+reference from the same demonstrations it then tests on, and under a null of equal-risk candidates
+at our $K$ and $M$ that retains a true minimiser about $53\%$ of the time rather than $95\%$. So
+even $C_\alpha$ is an empirical rule, not a confidence set; a split-sample variant recovers most of
+the level and we report it, but we do not claim exactness for it either. The second is that our
+verdicts do not range over $C_\alpha$ at all but over the invisible fibre through nominal
+(Sect.~\ref{subsec4_4}), which is generated by a point the calibration data reject. On both counts
+$P(E_\theta)$ is unknown for the sets we use, and every ledger statement in this paper is
+conditional --- on the benchmark's operating point, and on levels we do not establish.
 
 \item \textbf{Our intervals are per pair; $E_{MC}$ and $E_b$ are joint events.} We compute an
 interval for each policy pair separately and report the collection. That is not
 $\forall (i,j)$: a family of per-pair statements must be inflated for multiplicity before it can
 enter the ledger, and we have not performed that inflation. The knife-edge bounds reported in
-Sect.~\ref{subsec7_2} ($+0.000042$, $+0.004$) illustrate the point rather than correct for it --- a
+Sect.~\ref{subsec7_2} ($+0.0091$, $+0.0095$) illustrate the point rather than correct for it --- a
 simultaneous procedure over 17 pairs would not retain declarations resting on margins that small.
-Our per-pair results should be read as exploratory in the multiplicity sense.
+Our per-pair results should be read as exploratory in the multiplicity sense. This is a statement
+about \emph{multiple policy pairs}, not about the envelope over conditions: for a fixed finite set
+of conditions, taking the minimum lower bound and the maximum upper bound is itself conservative
+and needs no further correction across those conditions.
 
 \item \textbf{$E_\theta$ presumes that $z^*$ exists.} The event is empty of content if no
 parameter setting reproduces reality --- that is, if the simulator is structurally misspecified
@@ -2177,10 +2307,17 @@ policy noise only (Sect.~\ref{subsec5_4}).
 
 The run counts are \emph{not} uniform within a cell, which Remark~\ref{rem:scope}'s shorthand
 ``$S = 5$'' elides. Where we write $S = 5$ we mean five seed-set directories; the per-configuration
-count is five on most configurations and four or six on the rest, for the reasons the caption gives.
-Eq.~\eqref{eq:var} takes the per-configuration $S_c$ and is unaffected, but any statement of the form
-``five runs per configuration'' should be read as the directory count and checked against this
-table.
+episode count is five on most configurations and four or six on the rest, for the reasons the
+caption gives. Any statement of the form ``five runs per configuration'' should be read as the
+directory count and checked against this table.
+
+An earlier version of this appendix added that Eq.~\eqref{eq:var} ``takes the per-configuration
+$S_c$ and is unaffected''. That was wrong about the implementation as it then stood, which averaged
+a directory's episodes at a configuration before computing the variance, making $S_c$ the number of
+directories rather than of runs. The estimator now uses the run count, matching the formula, and
+Sect.~\ref{subsec7_2} reports the two units and the two rows on which they differ. The columns here
+are generated by the same code path as the tables, so the counts and the estimator cannot disagree
+again.
 
 \begin{table*}[t]
 \caption{Per-cell configuration and run counts for octo-small versus octo-base on the three bridge
@@ -2232,12 +2369,18 @@ The release archived at the DOI in the Data Availability statement carries a
 follows is its structure.
 
 \textbf{Regenerating the tables and figures} requires no evaluation runs. Every number in this paper
-is computed from the episode records rather than transcribed, so the analysis scripts rebuild
-Table~\ref{tab6} (\texttt{make\_core\_table.py}), the compatible-set verdicts
-(\texttt{analyze\_compatible\_set.py}), the reversal pair of Sect.~\ref{subsec8_4}
-(\texttt{analyze\_fractal\_reversal.py}), the per-pair torque shift of Sect.~\ref{subsec7_3}
-(\texttt{analyze\_torque\_shift\_s5.py}), the build-drift figures of Sect.~\ref{subsec5_5}
-(\texttt{analyze\_platform\_drift\_paired.py}), this appendix's table
+is computed from the episode records rather than transcribed, so the analysis scripts rebuild the
+per-pair verdict table (\texttt{make\_core\_table.py}, with \texttt{--unit} selecting the observation
+unit of Sect.~\ref{subsec7_2}), the compatible set on the 98-demonstration grids against the loss
+minimiser (\texttt{analyze\_compatible\_set\_v2.py}, and
+\texttt{rebuild\_compatible\_set.py --split} for the split-sample variant; the older
+\texttt{analyze\_compatible\_set.py} is superseded and its defects are recorded in its own
+docstring), the operating-point comparison of Sect.~\ref{subsec7_7}
+(\texttt{analyze\_fitted\_point.py}, whose \texttt{--selftest} exercises the completeness gate), the
+selection-bias check behind Sect.~\ref{subsec3_2} (\texttt{check\_selection\_bias.py}), the reversal
+pair of Sect.~\ref{subsec8_4} (\texttt{analyze\_fractal\_reversal.py}), the per-pair torque shift of
+Sect.~\ref{subsec7_3} (\texttt{analyze\_torque\_shift\_s5.py}), the build-drift figures of
+Sect.~\ref{subsec5_5} (\texttt{analyze\_platform\_drift\_paired.py}), this appendix's table
 (\texttt{make\_appendix\_c.py}), and all six figures, which a companion script re-renders at the
 journal's geometry and audits against its width and lettering requirements.
 

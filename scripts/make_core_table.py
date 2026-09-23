@@ -63,7 +63,28 @@ POLICIES = ["octo-small", "octo-base", "octo-small@hist1", "octo-base@hist1", "o
             "rt-1-converged", "rt-1-15pct"]
 
 
-def per_config(root, policy, env, cond):
+def per_config(root, policy, env, cond, raw=False):
+    """Per-configuration outcomes from one directory.
+
+    THE OBSERVATION UNIT. With raw=False each configuration returns the MEAN of that directory's
+    episodes at it, so the unit entering the variance is the directory mean and S_c in
+    Eq. (eq:var) is the number of directories. With raw=True the individual episode outcomes are
+    returned, so the unit is the run and S_c is the number of runs at that configuration -- which is
+    what the manuscript's formula actually says.
+
+    The two differ because a directory can hold more than one episode per configuration: seed set B
+    and the pre-fix build carry 96 episodes on a 64-configuration grid, so ids 64-95 wrap onto
+    configurations 0-31 and give those two episodes, at different policy seeds (policy_seed =
+    base + episode_id), from the same directory.
+
+    They are not interchangeable and they change two verdicts (see --unit in main). Neither is
+    wrong: the run unit is finer and matches the stated formula, since the episodes really are
+    distinct seeds; the directory unit is conservative against any directory-level common effect,
+    which the build-drift result shows can exist across generations though these five sets share a
+    build. We report the run unit as primary because it is what Eq. (eq:var) defines, and the
+    directory unit as a sensitivity -- not the other way round, and not chosen by which one
+    declares.
+    """
     f = ROOT / root / policy / env / f"{cond}.jsonl"
     acc, seen = {}, set()
     if f.exists():
@@ -75,6 +96,8 @@ def per_config(root, policy, env, cond):
                     continue
                 seen.add(e)
                 acc.setdefault(config_id(env, e), []).append(int(bool(r["success"])))
+    if raw:
+        return acc
     return {c: float(np.mean(v)) for c, v in acc.items()}
 
 
@@ -101,7 +124,80 @@ def runs_for(sets, policy, env, cond):
     return out
 
 
-def delta(sets, a, b, env, cond):
+def raw_by_config(sets, policy, env, cond):
+    """{configuration: [every raw episode outcome]} pooled over directories -- the run unit.
+
+    For a deterministic policy the directories are record-identical repeats rather than independent
+    draws, so pooling them would multiply the apparent sample. We collapse to the first directory
+    that has data, matching runs_for's de-duplication.
+    """
+    roots = list(sets_for(sets, policy).values())
+    if is_deterministic(policy):
+        for root in roots:
+            acc = per_config(root, policy, env, cond, raw=True)
+            if acc:
+                return acc
+        return {}
+    acc = {}
+    for root in roots:
+        for c, vals in per_config(root, policy, env, cond, raw=True).items():
+            acc.setdefault(c, []).extend(vals)
+    return acc
+
+
+UNIT = "run"   # "run" (Eq. (eq:var) as written) or "directory" (the earlier implementation)
+
+
+def delta(sets, a, b, env, cond, unit=None):
+    """Benchmark-value Delta with its policy-noise interval, Eq. (eq:var).
+
+    `unit` selects the observation unit and defaults to the module-level UNIT. See per_config for
+    what the two mean and why it matters: they disagree on two verdicts out of eighteen.
+    """
+    if (unit or UNIT) == "run":
+        return _delta_run(sets, a, b, env, cond)
+    return _delta_dir(sets, a, b, env, cond)
+
+
+def _delta_run(sets, a, b, env, cond):
+    """S_c = the number of runs at configuration c, pooling episodes across directories."""
+    ra, rb = raw_by_config(sets, a, env, cond), raw_by_config(sets, b, env, cond)
+    if not ra or not rb:
+        return None
+    cfgs = sorted(set(ra) & set(rb))
+    if not cfgs:
+        return None
+    n = len(cfgs)
+    ma = {k: float(np.mean(ra[k])) for k in cfgs}
+    mb = {k: float(np.mean(rb[k])) for k in cfgs}
+
+    def terms(acc, policy):
+        out, known = {}, []
+        for k in cfgs:
+            v = float(np.var(acc[k], ddof=1)) if len(acc[k]) > 1 else None
+            out[k] = (v, len(acc[k]))
+            if v is not None:
+                known.append(v)
+        if known:
+            fill, model = float(np.mean(known)), "empirical"
+        elif is_deterministic(policy):
+            fill, model = 0.0, "1 run (drift unmeasured)"
+        else:
+            rate = float(np.mean([float(np.mean(acc[k])) for k in cfgs]))
+            fill, model = rate * (1 - rate), "binomial (1 run/config)"
+        return {k: ((fill if v is None else v), s) for k, (v, s) in out.items()}, model
+
+    ta, mda = terms(ra, a)
+    tb, mdb = terms(rb, b)
+    d = float(np.mean([ma[k] - mb[k] for k in cfgs]))
+    se = float(np.sqrt(sum(ta[k][0] / ta[k][1] + tb[k][0] / tb[k][1] for k in cfgs) / n ** 2))
+    return dict(delta=d, se=se, lo=d - 1.96 * se, hi=d + 1.96 * se, n=n,
+                runs=(min(ta[k][1] for k in cfgs), min(tb[k][1] for k in cfgs)),
+                runs_max=(max(ta[k][1] for k in cfgs), max(tb[k][1] for k in cfgs)),
+                model=f"{mda} / {mdb}", unit="run")
+
+
+def _delta_dir(sets, a, b, env, cond):
     ra, rb = runs_for(sets, a, env, cond), runs_for(sets, b, env, cond)
     if not ra or not rb:
         return None
@@ -135,7 +231,8 @@ def delta(sets, a, b, env, cond):
     d = float(np.mean([ma[k] - mb[k] for k in cfgs]))
     se = float(np.sqrt(sum(va[k] / sa[k] + vb[k] / sb[k] for k in cfgs) / n ** 2))
     return dict(delta=d, se=se, lo=d - 1.96 * se, hi=d + 1.96 * se, n=n,
-                runs=(len(ra), len(rb)), model=f"{mda} / {mdb}")
+                runs=(len(ra), len(rb)), runs_max=(len(ra), len(rb)),
+                model=f"{mda} / {mdb}", unit="directory")
 
 
 def verdict(lo, hi, a, b):
@@ -145,9 +242,14 @@ def verdict(lo, hi, a, b):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--legacy-a", action="store_true")
+    ap.add_argument("--unit", default="run", choices=["run", "directory"],
+                    help="observation unit for Eq. (eq:var). 'run' is what the formula states and "
+                         "is the primary analysis; 'directory' was the earlier implementation and "
+                         "is reported as a sensitivity. They disagree on two verdicts.")
     ap.add_argument("--out", default="results/CORE_TABLE.md")
     args = ap.parse_args()
-    global SETS_MS3
+    global SETS_MS3, UNIT
+    UNIT = args.unit
     SETS_MS3 = dict(SEED_SETS_OCTO)
     if args.legacy_a:
         SETS_MS3.update(LEGACY_A)
@@ -216,6 +318,13 @@ def main():
           "（真机 0.853 vs 0.920，仿真 0.857 vs 0.710），因此它检验的是"
           "**判据会不会在仿真出错的对上拒判**。结论见 `results/fractal_reversal/analysis_fractal_reversal.md`"
           "与论文 §8.4：不会——并集界在该对上宣布了真机反对的排序。", "",
+          f"**观察单位：`{UNIT}`。** Eq. (eq:var) 的 S_c 写的是「构型 c 上的运行次数」，即 `run` 口径；"
+          "早期实现先在目录内对同构型的多集取平均，再把目录均值作为观察值（`directory` 口径）。"
+          "两者在 18 对中有 2 对判决不同：MS3 eggplant small−base（`directory` 下界 +0.000042 宣布，"
+          "`run` 下为 [−0.0079, +0.1173] 拒判）与 MS2 spoon small−base（`directory` 拒判，`run` 宣布）。"
+          "**point/set 不一致的总数在两种口径下都是 1。** 主分析用 `run`，因为公式如此定义、且同一目录内不同 "
+          "episode 用的是不同策略种子；`directory` 更保守（防目录级共同效应），以 `--unit directory` 复现，"
+          "作为敏感性报告。口径不是按哪种更容易得到宣布来选的。", "",
           "口径与限制见 `docs/methods_census_2026-09-19.md`；形式化账本见 `docs/theory_protocol.md §6.1`；"
           "数据来源与风险分级见 `results/PROVENANCE_AUDIT_2026-09-19.md`。", ""]
     text = "\n".join(L)

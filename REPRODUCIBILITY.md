@@ -14,18 +14,26 @@ third-party simulator trees — those come from their own upstreams, listed in `
 |---|---|
 | `scripts/` | evaluation harness, the six resumable queues, every analysis script |
 | `benchmark/` | the synthetic decidability track (Track S) and the real-replicate track (Track R) |
-| `results/**/*.jsonl` | 832 files, 22.7 MB: one line per episode, with the outcome and the `info` counters |
+| `results/**/*.jsonl` | 871 files, 24.1 MB: one line per episode, with the outcome and the `info` counters |
 | `results/**/runs.jsonl` | append-only provenance: port branch, inference-stack version, seeds, per run |
-| `results/replay_sysid*/**/*.npz` | 14,064 files, 59.7 MB: per-episode replay trajectories, the evidence for the exact-invariance claim |
+| `results/replay_sysid*/**/*.npz` | 15436 files, 65.6 MB: per-episode replay trajectories, the evidence for the exact-invariance claim |
 | `results/**/analysis_*.md` | script-generated tables |
 | `results/**/FINDING_*.md` | hand-written conclusions, including the retractions |
 | `results/CORE_TABLE.md` | the point-versus-set verdict table, regenerable |
 | `docs/` | manuscript drafts and the formal error ledger |
 | `submission/autonomous_robots/` | the manuscript as submitted, with its figures |
-| `SHA256SUMS.txt` | checksums for the 1,069 record files, so a reader can confirm nothing drifted |
+| `SHA256SUMS.txt` | checksums for the record files of this version (count in its header), so a reader can confirm nothing drifted |
 
 Captured stderr (`results/**/*.err`, 57.8 MB) is excluded. It is build noise; the provenance claim
 rests on `runs.jsonl`.
+
+**File counts refer to the tagged version, not to the working tree.** From v1.2.0 onward each
+release has added evaluation data, so the counts above and the header of `SHA256SUMS.txt` are
+properties of a specific tag and the versions are no longer interchangeable. If a sweep is still
+running when you read this, the working tree will hold more records than the manifest lists and
+`sha256sum -c` will report those as missing from the manifest rather than as corrupt. Regenerate the
+manifest only at a freeze point, and cite the version DOI for the numbers in a paper rather than the
+concept DOI.
 
 ## Regenerating the tables and figures
 
@@ -124,7 +132,7 @@ objective rather than on a trajectory.
 **The zero threshold degenerates on a deterministic simulator.** Replay is deterministic, so the only
 randomness is which demonstrations were drawn, and with 98 paired demonstrations the bootstrap
 resolves mean differences of order 1e-7 m. At threshold 0 the rule rejects iso ×2 and ×4, whose mean
-loss differs from nominal by 0.5 and 0.7 **nanometres**, and as the demonstration count grows the set
+loss differs from nominal by 0.49 and 0.74 **micrometres**, and as the demonstration count grows the set
 shrinks to the single argmin whatever the physics. Significance is the wrong question for a
 difference that carries no noise. A tolerance with an external basis is the fix, and the protocol
 supplies one: the two stacks, implementing the *same* nominal dynamics, disagree by **1.356 mm**

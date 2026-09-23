@@ -1,12 +1,12 @@
 {
   "run_meta": {
-    "started_utc": "2026-09-23T06:13:05Z",
+    "started_utc": "2026-09-23T06:44:29Z",
     "args": {
       "env_id": "PutEggplantInBasketScene-v1",
       "policy_url": "http://127.0.0.1:8768",
       "policy_name": "octo-base",
       "preset": "fitted_v1",
-      "conditions": "fitted_force_x0.5",
+      "conditions": "fitted_iso_x0.25",
       "episodes": 64,
       "episode_offset": 0,
       "policy_seed_base": 20280101,
@@ -72,8 +72,8 @@
         1.0
       ],
       "startup_seconds": 29.723933556000702,
-      "step_count": 360,
-      "sessions": 3,
+      "step_count": 120,
+      "sessions": 1,
       "session_isolation": true
     },
     "nominal": {
@@ -113,11 +113,10 @@
       "history": 2
     },
     "conditions": {
-      "fitted_force_x0.5": {
-        "stiffness_scale": 2.0,
-        "damping_scale": 0.5,
-        "delay_steps": 1,
-        "force_scale": 0.5
+      "fitted_iso_x0.25": {
+        "stiffness_scale": 0.5,
+        "damping_scale": 0.125,
+        "delay_steps": 1
       }
     },
     "evidence": "exploratory_ms3_windows_platform_not_original_simpler",
@@ -126,67 +125,67 @@
     "episode_protocol": "run to max_episode_steps, success from final info; common episode_ids and policy seeds"
   },
   "conditions": {
-    "fitted_force_x0.5": {
+    "fitted_iso_x0.25": {
       "effective": {
         "arm_stiffness": [
-          2339.5783439008396,
-          1460.0,
-          1616.9202692788895,
-          2458.2598179248153,
-          2544.5520912837724,
-          2112.6653210264503
+          584.8945859752099,
+          365.0,
+          404.23006731972237,
+          614.5649544812038,
+          636.1380228209431,
+          528.1663302566126
         ],
         "arm_damping": [
-          165.0,
-          90.0,
-          76.06018282791294,
-          154.8107651361073,
-          100.52499355503691,
-          134.75729466347707
+          41.25,
+          22.5,
+          19.015045706978235,
+          38.70269128402683,
+          25.13124838875923,
+          33.68932366586927
         ],
         "arm_force_limit": [
+          200.0,
+          200.0,
           100.0,
           100.0,
-          50.0,
-          50.0,
-          50.0,
-          50.0
+          100.0,
+          100.0
         ],
         "gripper_force_limit": 60.0,
         "delay_steps": 1,
         "obj_friction": 0.5,
         "density_scale": 1.0,
         "built_stiffness": [
-          2339.5783439008396,
-          1460.0,
-          1616.9202692788895,
-          2458.2598179248153,
-          2544.5520912837724,
-          2112.6653210264503
+          584.8945859752099,
+          365.0,
+          404.23006731972237,
+          614.5649544812038,
+          636.1380228209431,
+          528.1663302566126
         ],
         "built_damping": [
-          165.0,
-          90.0,
-          76.06018282791294,
-          154.8107651361073,
-          100.52499355503691,
-          134.75729466347707
+          41.25,
+          22.5,
+          19.015045706978235,
+          38.70269128402683,
+          25.13124838875923,
+          33.68932366586927
         ],
         "built_force_limit": [
+          200.0,
+          200.0,
           100.0,
           100.0,
-          50.0,
-          50.0,
-          50.0,
-          50.0
+          100.0,
+          100.0
         ],
         "control_freq": 5,
         "sim_freq": 500,
         "horizon": 120
       },
       "episodes": 64,
-      "successes": 23,
-      "success_rate": 0.359375,
+      "successes": 29,
+      "success_rate": 0.453125,
       "episode_ids": [
         0,
         1,

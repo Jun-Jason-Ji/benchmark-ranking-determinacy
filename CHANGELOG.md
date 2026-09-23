@@ -100,8 +100,8 @@ Three results follow, and the first two are better than what they replace:
   **3.1 µm**. This is the structural-blindness result measured on the calibration objective instead
   of on a trajectory, and it is far sharper than the 0.141--0.207 mm the paper had been quoting.
 - **The zero threshold degenerates.** Replay is deterministic, so the bootstrap resolves mean
-  differences of ~1e-7 m and the rule rejects iso ×2 and ×4 over differences of 0.5 and 0.7
-  *nanometres*. As the demonstration count grows the set collapses to the single argmin whatever the
+  differences of ~1e-7 m and the rule rejects iso ×2 and ×4 over differences of 0.49 and 0.74
+  *micrometres*. As the demonstration count grows the set collapses to the single argmin whatever the
   physics. The fix is a tolerance with a basis outside the conclusion, and the protocol supplies
   one: the two stacks disagree by **1.356 mm** at identical nominal parameters. The invariant
   directions clear that by factors of 440 and 75 000.

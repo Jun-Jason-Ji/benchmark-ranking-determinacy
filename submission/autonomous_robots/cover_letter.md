@@ -24,10 +24,14 @@ actually determine?
 including the pseudo-random-number lifecycle its inference wrapper implies — on a different operating
 system with a software rasteriser and an out-of-process inference server, we reproduce the published
 success rates to a mean absolute difference of 0.038 across eight cells, and on a second embodiment
-to +0.003 and −0.040. The agreement carries a systematic −0.038 offset, an order of magnitude below
-the effects the paper is about; every claim we draw is a difference between two policies measured in
-the same configuration, where a common offset cancels. That agreement is what licenses everything
-else, and we would ask that it be read as the starting point of the paper.
+to +0.003 and −0.040. The differences are one-signed: six of the eight fall below the published
+value, two match it, mean −0.038. We deliberately do not turn that into a platform constant — the
+eight cells share tasks, policies and seeds, so they are not eight independent replications — and we
+do not claim it is negligible relative to the paper's effects, since 0.038 is about a third of the
+0.121 torque shift and the largest single cell (0.111) is close to it. What the check licenses is
+narrower: every effect we report is a difference between two policies measured in the same
+configuration on one pipeline, and we compare our absolute rates against published absolute rates
+only in that section. We would ask that the reproduction be read as the starting point of the paper.
 
 From there, three independent findings:
 
@@ -68,24 +72,36 @@ From there, three independent findings:
    the estimand: the published quantity is a mean over a four-point population rather than a rate,
    so a single-variant reproduction measures something else, and differs by up to 0.227.
 
-3. At the reference protocol's own 72-episode budget, only one of the four policy orderings it
-   reports is statistically resolvable. On carrot the published difference is +0.014 and ours is
-   +0.028 with an interval of [−0.039, +0.094] — a number whose sign its own budget does not
-   determine. We reproduce the protocol down to the pseudo-random-number lifecycle its wrapper
+3. At the reference protocol's own 72-episode budget, one of the four policy orderings it reports is
+   statistically resolvable under the variance model its own randomisation implies, and two under a
+   coarser model; we report both rather than pick one. On carrot the published difference is +0.014
+   and ours is +0.028 with an interval of [−0.039, +0.094] — a number whose sign its own budget does
+   not determine. We reproduce the protocol down to the pseudo-random-number lifecycle its wrapper
    implies (seeded once per run, one stream advancing across episodes, rather than re-seeded each
    episode), and Section 6 reports what that choice changes: it halves the across-run spread of a
-   cell's rate, reveals a systematic −0.038 offset from the published rates that our first,
-   noisier reproduction had masked, and it is the reason we withdraw a sign reversal we had
-   previously claimed.
+   cell's rate, moves the mean difference from the published rates from −0.005 to −0.038, and it is
+   the reason we withdraw a sign reversal we had previously claimed.
 
-We then measure what a set-valued verdict over the calibration-compatible parameters buys — and we
-report where it fails. On the one policy pair in this benchmark whose published real-robot results
-contradict the simulator, the criterion declares the ordering the real robot reverses. We state that
-in the abstract and in Section 1 rather than burying it, because it delimits our own proposed remedy:
-a compatible-set criterion bounds the ambiguity it can represent, and on that pair the ambiguity that
-matters lies outside it. Concretely, abstention would have required the bound to lose 0.070 on its
-lower end; the two dynamics conditions in the set span 0.044, while the gap between the simulated and
-the published real margin is 0.214 and points the other way.
+We then measure what a set-valued verdict over the calibration-invisible conditions buys — and we
+report where it fails. On a selected policy pair — one of five in the published tables whose
+simulated and real means point opposite ways — the criterion declares the ordering those published
+means reverse. We state that in the abstract and in Section 1 rather than burying it, because it
+delimits our own proposed remedy. Two honest qualifications travel with it: the published real rates
+carry no intervals, so we claim only that the declaration has no real-robot warranty, not that it is
+demonstrably wrong; and the pair was chosen with the audit in hand, so it is a case study rather
+than a held-out test. Concretely, abstention would have required the bound to lose 0.070 on its
+lower end; the dynamics conditions we ran span 0.044, while the gap between the simulated and the
+published real margin is 0.214 and points the other way.
+
+**On statistical scope.** We want to be direct about one limit, because a reader could otherwise
+mistake the paper for offering a guarantee. The compatible-set construction selects its reference
+from the same demonstrations it then tests against, which is a post-selection problem: under a null
+of equally good candidates at our grid size and demonstration count, the procedure retains a true
+best candidate about 53% of the time rather than 95%. We therefore make **no coverage claim** for
+it, describe it as an empirical compatibility rule, and report a split-sample variant that does
+carry an approximate level. The paper's substantive conclusion — that the benchmark's shipped
+controller setting is excluded by its own replay objective — holds under that valid variant on both
+simulator stacks and across five random splits, which is why we keep it.
 
 **On the absence of our own hardware.** We ran no robot. Where real-robot ground truth is required,
 we use the success rates published alongside the benchmark for the same policies and task — the

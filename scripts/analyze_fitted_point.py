@@ -29,6 +29,7 @@ comparing against a larger-budget interval would confound the operating point wi
 Usage: python scripts/analyze_fitted_point.py [--out results/FITTED_POINT.md]
 """
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -58,19 +59,47 @@ FIT_FIBRE = ["fitted_iso_x0.25", "fitted_iso_x4.0", "fitted_force_x0.5",
              "fitted_fric_x0.4", "fitted_dens_x0.5"]
 
 
+def census_status(sets, cond, env, n_cfg):
+    """Per seed set and per policy: which of the expected episode ids are present.
+
+    Returns (ok, detail). This checks the records directly rather than inferring completeness from
+    the estimator's summary, because the summary cannot distinguish the cases. An earlier version
+    tested `delta()['n'] == 64 and min(runs) == 3`, which a partial design can satisfy: the
+    configuration count is a UNION across seed sets, so one complete set plus two sets holding a
+    single configuration each still reports n=64, and the run count is a per-configuration minimum
+    that the complete set can supply on its own. The expected ids here are 0..n_cfg-1, which is
+    what the queue runs with --episodes n_cfg --episode-offset 0.
+    """
+    want = set(range(n_cfg))
+    detail, ok = {}, True
+    for key, root in sets.items():
+        for pol in (A, B):
+            f = ROOT / root / pol / env / f"{cond}.jsonl"
+            have = set()
+            if f.exists():
+                for line in f.read_text(encoding="utf-8").splitlines():
+                    if line.strip():
+                        have.add(json.loads(line)["episode_id"])
+            detail[(key, pol)] = len(have & want)
+            if have & want != want:
+                ok = False
+    return ok, detail
+
+
 def complete(sets, cond, env, n_cfg):
-    """The delta for this condition, or None unless it is a complete census at every seed set.
+    """The delta for this condition, or None unless every seed set and policy has the full census.
 
     An envelope is a min/max, so ONE partial condition can move the bound with nothing to show it
     did. Configurations are covered in a deterministic order (config_id is a function of
     episode_id), so a partial condition is a systematic slice of object poses rather than a random
     sample of them. A partial run of this analysis once produced a set bound of [+0.0000, +0.1920]
-    and the opposite conclusion to the complete data, which is why this gate exists.
+    and the opposite conclusion to the complete data, which is why this gate exists -- and why it
+    now verifies the records rather than the estimator's summary.
     """
-    r = mct.delta(sets, A, B, env, cond)
-    if not r or r["n"] != n_cfg or min(r["runs"]) != len(sets):
+    ok, _ = census_status(sets, cond, env, n_cfg)
+    if not ok:
         return None
-    return r
+    return mct.delta(sets, A, B, env, cond)
 
 
 def envelope(sets, point, others, env, n_cfg):
@@ -85,10 +114,50 @@ def envelope(sets, point, others, env, n_cfg):
     return min(r["lo"] for r in used), max(r["hi"] for r in used), len(used), skipped
 
 
+def selftest():
+    """Regression check on the completeness gate, using the real records.
+
+    The pattern that used to slip through: one seed set holding the full census and the others
+    holding a single configuration each. The configuration count is a union, so the estimator
+    reported n=64 with runs=(3,3) and the old gate passed it. Anything that reports a complete
+    design must fail here.
+    """
+    import shutil
+    import tempfile
+    env, n_cfg = "PutEggplantInBasketScene-v1", 64
+    ok, det = census_status(FIT_DIRS, FIT_POINT, env, n_cfg)
+    print(f"real census complete: {ok}  (per set/policy: {sorted(set(det.values()))})")
+    assert ok, "the real fitted census should pass"
+    tmp = Path(tempfile.mkdtemp())
+    try:
+        for key, keep_all in (("A", True), ("C", False)):
+            src = FIT_DIRS["A'" if keep_all else "C"]
+            for pol in (A, B):
+                d = tmp / key / pol / env
+                d.mkdir(parents=True)
+                lines = (ROOT / src / pol / env / f"{FIT_POINT}.jsonl").read_text(
+                    encoding="utf-8").splitlines()
+                (d / f"{FIT_POINT}.jsonl").write_text(
+                    "\n".join(lines if keep_all else lines[:1]), encoding="utf-8")
+        bad, det2 = census_status({"A": str(tmp / "A"), "C": str(tmp / "C")},
+                                  FIT_POINT, env, n_cfg)
+        counts = {f"{k}/{p.split('-')[-1]}": v for (k, p), v in det2.items()}
+        print(f"[64, 1] pattern rejected: {not bad}  (counts: {counts})")
+        assert not bad, "a seed set with one configuration must not count as a census"
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    print("selftest passed")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="results/FITTED_POINT.md")
+    ap.add_argument("--selftest", action="store_true",
+                    help="regression-check the completeness gate and exit")
     args = ap.parse_args()
+    if args.selftest:
+        selftest()
+        return
 
     L = ["# The ranking at the calibration-preferred operating point", "",
          "Complete configuration censuses, octo-small vs octo-base, evaluated at the benchmark's "
@@ -107,12 +176,11 @@ def main():
         nom_pt = complete(nom_sets, NOM_POINT, env, n_cfg)
         fit_pt = complete(fit_sets, FIT_POINT, env, n_cfg)
         if not fit_pt:
-            raw = mct.delta(fit_sets, A, B, env, FIT_POINT)
-            got = f"{raw['n']}/{n_cfg} configs at {min(raw['runs'])}/{len(keys)} runs" if raw \
-                else "no records"
-            L += [f"**Incomplete: {got}.** No verdict reported; configurations are covered in a "
-                  f"deterministic order, so a partial slice is a systematic subset of object poses "
-                  f"rather than a random one.", ""]
+            _, det = census_status(fit_sets, FIT_POINT, env, n_cfg)
+            got = ", ".join(f"{k}/{pol.split('-')[-1]} {v}/{n_cfg}" for (k, pol), v in det.items())
+            L += [f"**Incomplete.** Episodes present per seed set and policy: {got}. No verdict "
+                  f"reported; configurations are covered in a deterministic order, so a partial "
+                  f"slice is a systematic subset of object poses rather than a random one.", ""]
             continue
 
         nom_env = envelope(nom_sets, NOM_POINT, NOM_FIBRE, env, n_cfg)

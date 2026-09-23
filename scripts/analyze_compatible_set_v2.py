@@ -18,7 +18,7 @@ What this script establishes, in order:
    gives the same loss every time, so the only randomness is which demonstrations were drawn. With
    98 paired demonstrations the bootstrap therefore resolves mean differences of order 1e-7 m, and
    the rule rejects settings that differ by a tenth of a micrometre -- it rejects iso x2.0 and
-   iso x4.0, whose mean loss differs from nominal by 0.5 and 0.7 nanometres. As M grows the set
+   iso x4.0, whose mean loss differs from nominal by 0.49 and 0.74 micrometres. As M grows the set
    shrinks to the single argmin regardless of physics. Statistical significance is the wrong
    question for a deterministic difference; magnitude is the right one.
 

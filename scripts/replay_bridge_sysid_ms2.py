@@ -49,6 +49,21 @@ PRESETS = {
         ("s4_d1_delay1", dict(stiffness_scale=4.0, damping_scale=1.0, delay_steps=1)),
         ("s8_d2_delay1", dict(stiffness_scale=8.0, damping_scale=2.0, delay_steps=1)),
     ]),
+    # Is the torque limit still invisible AT THE FITTED POINT? The argument at nominal is that the
+    # commanded torque never reaches tau_max, so the clip is inactive. That argument does NOT carry
+    # over for free: commanded torque depends on the gains, the tracking error and the delay, and
+    # the fitted point doubles the stiffness, which raises commanded torque. Non-saturation at
+    # nominal therefore does not imply non-saturation here -- it has to be measured. This preset
+    # measures it: the fitted point with and without the halved limit, paired on the same demos.
+    "fitted_force_probe": OrderedDict([
+        ("s2_d0.5_delay1", dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1)),
+        ("s2_d0.5_delay1_force0.5", dict(stiffness_scale=2.0, damping_scale=0.5, delay_steps=1,
+                                         force_scale=0.5)),
+        # nominal with the halved limit, as the reference the manuscript already reports, so both
+        # operating points are measured by one script on one demonstration set.
+        ("nominal", dict()),
+        ("nominal_force0.5", dict(force_scale=0.5)),
+    ]),
 }
 
 
