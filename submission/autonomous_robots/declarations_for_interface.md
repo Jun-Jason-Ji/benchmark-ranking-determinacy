@@ -45,9 +45,11 @@ Not applicable.
 ```
 All episode-level records underlying the results are openly available in the archived release at
 https://doi.org/10.5281/zenodo.22893458, which resolves to the current version and lists every version with its own DOI.
-Each version keeps its own DOI and its own checksum manifest, and CHANGELOG.md records which version
-introduced which result, so the version reproducing a given number is identifiable; the newest
-version contains every record reported here. Development is at https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
+The results in this paper correspond to version v1.5.0 and to that version's DOI, not to the concept
+record generally: v1.0.0-v1.1.3 shared one immutable set of records, but v1.2.0 onwards added
+evaluation data, so the versions are not interchangeable and an earlier one will not reproduce the
+tables here. Each version keeps its own DOI and its own checksum manifest, and CHANGELOG.md records
+which version introduced which result. Development is at https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
 files, one per policy, task and simulator condition, together with the per-run provenance log
 recording the port branch, inference-stack version and random seeds for every episode, and
 SHA256SUMS.txt over the 997 record files. The real-robot reference values used in Section 8.4 are

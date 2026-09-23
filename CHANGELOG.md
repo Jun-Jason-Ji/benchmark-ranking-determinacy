@@ -4,7 +4,11 @@ Versions are tagged in git and archived on Zenodo. **A tag is a promise**: once 
 for it, that snapshot is permanent.
 
 The manuscript cites the **concept DOI** [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458), which always resolves to the
-newest version, so it does not go stale when a new one is released. Every version keeps its own DOI:
+newest version, so it does not go stale when a new one is released, and it states in the data
+availability section that the results correspond to **v1.5.0** specifically. Every version keeps its
+own DOI. The table below lists the DOIs minted so far; v1.1.3 onwards are minted at release time and
+their identifiers are added here when Zenodo returns them, so a version absent from the table is one
+not yet archived rather than one that does not exist:
 
 | Version | DOI |
 |---|---|
@@ -13,13 +17,15 @@ newest version, so it does not go stale when a new one is released. Every versio
 | v1.1.0 | [`10.5281/zenodo.22895382`](https://doi.org/10.5281/zenodo.22895382) |
 | v1.0.0 | [`10.5281/zenodo.22893459`](https://doi.org/10.5281/zenodo.22893459) |
 
-There are four versions for one result, and the reason is worth stating plainly: v1.0.0 and v1.1.0
+The first four versions are one result released four times, and the reason is worth stating plainly: v1.0.0 and v1.1.0
 chased byte-exactness between the archive and the manuscript by re-tagging, which cannot converge —
 a version DOI is minted by the snapshot that contains the manuscript, so the DOI always lands one
 commit after the archive it names. v1.1.2 switched the citation to the concept DOI, which ends it.
-Nothing about the data changed across any of the four: `SHA256SUMS.txt` is byte-identical
-throughout. **v1.2.0 was the first release to add evaluation data**, so its `SHA256SUMS.txt` differs
-from the earlier ones by 72 new record files.
+Nothing about the data changed across any of those four: `SHA256SUMS.txt` is byte-identical
+throughout. **That stops at v1.2.0**, the first release to add evaluation data, whose
+`SHA256SUMS.txt` differs from the earlier ones by 72 new record files; v1.4.0 and v1.5.0 added the
+operating-point censuses. From v1.2.0 on the versions are **not** interchangeable, and an earlier one
+will not reproduce a later table.
 
 ## v1.5.0 -- 2026-09-23
 
