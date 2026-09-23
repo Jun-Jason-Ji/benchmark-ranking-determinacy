@@ -45,8 +45,9 @@ Not applicable.
 ```
 All episode-level records underlying the results are openly available in the archived release at
 https://doi.org/10.5281/zenodo.22893458, which resolves to the current version and lists every version with its own DOI.
-The records and the scripts that regenerate every table and figure are byte-identical across all
-versions to date, so any version reproduces the results reported here. Development is at https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
+Each version keeps its own DOI and its own checksum manifest, and CHANGELOG.md records which version
+introduced which result, so the version reproducing a given number is identifiable; the newest
+version contains every record reported here. Development is at https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. They are append-only JSON Lines
 files, one per policy, task and simulator condition, together with the per-run provenance log
 recording the port branch, inference-stack version and random seeds for every episode, and
 SHA256SUMS.txt over the 997 record files. The real-robot reference values used in Section 8.4 are
@@ -54,16 +55,23 @@ the published values distributed with the benchmark's own source and are not our
 the manuscript cites their location.
 ```
 
-> ✅ Published 2026-09-22. The statements cite the **concept DOI 10.5281/zenodo.22893458**, which always resolves to the
-> newest version, and name **no version at all**.
+> ✅ Published 2026-09-22, current release v1.5.0 (2026-09-23). The statements cite the
+> **concept DOI 10.5281/zenodo.22893458**, which always resolves to the newest version, and name
+> **no version at all**.
 >
-> Both of those are deliberate, and the second took two attempts to get right. A version DOI is
-> minted by the snapshot that contains the manuscript, so it necessarily lands one commit after the
-> archive it names; re-tagging to close that gap moves it rather than closing it. Naming a version
-> in prose instead has exactly the same defect for exactly the same reason. The statements therefore
-> assert the property that is version-independent and is what a reader following the pointer
-> actually needs: the records and regeneration scripts are byte-identical across every version, so
-> any of them reproduces the paper. That is verifiable from `SHA256SUMS.txt` and does not decay.
+> Both of those are deliberate. A version DOI is minted by the snapshot that contains the
+> manuscript, so it necessarily lands one commit after the archive it names; re-tagging to close
+> that gap moves it rather than closing it, and naming a version in prose has the same defect for
+> the same reason.
+>
+> An earlier draft of this note justified the choice by asserting that the records and scripts are
+> byte-identical across every version, so any of them reproduces the paper. **That is not true and
+> the claim is withdrawn.** v1.2.0 added 72 evaluation record files and v1.4.0 and v1.5.0 added the
+> census at the calibration-preferred operating point, so `SHA256SUMS.txt` differs between versions
+> and an early version cannot reproduce a later result. What the concept DOI actually guarantees is
+> that the pointer resolves to a release that contains every record the paper reports, and that each
+> version keeps its own DOI and its own checksum manifest. `CHANGELOG.md` records which version
+> introduced which result, which is what a reader reproducing one number needs.
 >
 > Repository: https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy
 

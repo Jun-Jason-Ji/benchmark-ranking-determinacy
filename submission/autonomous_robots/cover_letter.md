@@ -116,8 +116,21 @@ instrument for the question rather than a substitute for the right one: the clai
 what the *simulated* evidence determines, and the comparison that tests it is against the benchmark's
 own published real rates. We did attempt to obtain independent hardware results through two public
 evaluation services; one endpoint was offline throughout this work and the other's queue allocation
-could not be confirmed. Both attempts are documented with dates in the appendix, and a hardware
-replication of the pair in Section 8.4 is named as the single most valuable follow-up.
+could not be confirmed. Both attempts are documented with dates in the appendix.
+
+Because the journal asks for a path to real-world performance rather than an acknowledgement that
+one is missing, Section 9's limitations now state the experiment rather than gesture at it:
+`rt-1-converged` versus `rt-1-15pct` on pick-coke-can, on a Google Robot or equivalent 7-DoF arm, at
+the published protocol's scene layout, with the analysis rule and the simulator operating point
+frozen before the trials start — both being choices this paper shows decide answers. The trial count
+follows from the margin: at the published rates 0.853 and 0.920 a normal-approximation interval on
+the difference has half-width 0.062 at n = 200 and 0.044 at n = 400, so 200 trials per policy is
+where the published sign becomes distinguishable from zero and 400 is where it is resolved. Our
+release already contains the simulated side at census scope, so the real arm is the only missing
+term, and the four other reversal pairs from the 5-of-62 audit extend the same design at the same
+cost each — one of them, `octo-base` versus `octo-small` on carrot, already has its census. We are
+stating a protocol we cannot execute, and a reader with an arm should be able to run it from the
+release without asking us anything.
 
 **On negative results.** The manuscript retracts four conclusions of our own, each after we ran the
 experiment designed to test it, and reports the strong form of its central claim as false. We list

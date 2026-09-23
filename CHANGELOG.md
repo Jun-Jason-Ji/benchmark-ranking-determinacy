@@ -58,6 +58,17 @@ discarding real observations. It now compares the per-configuration outcomes and
 only when it is an exact duplicate. This restores the S=3 declaration count to **3 of 17**; the
 "2 of 17" reported in the v1.4.0 documents was an artifact of the regression.
 
+### The versions are not interchangeable, and three documents said they were
+
+`README.md`, the data-availability statement in `declarations_for_interface.md` and the v1.2.0 entry
+below all justified citing the concept DOI by asserting that the records and regeneration scripts are
+byte-identical across every version, so any version reproduces the paper. That was true of
+v1.0.0--v1.1.2 and stopped being true at v1.2.0, which added 72 evaluation record files; v1.4.0 and
+v1.5.0 added the census at the calibration-preferred operating point. **The claim is withdrawn.**
+What the concept DOI guarantees is that the pointer resolves to a release containing every record the
+paper reports, and that each version carries its own DOI and its own `SHA256SUMS.txt`. Which version
+introduced which result is what this file is for, and it is now the stated answer.
+
 ### The set-valued verdict does not change at the fitted point
 
 v1.4.0 reported that the compatible-set envelope flips from abstention to a declaration at the

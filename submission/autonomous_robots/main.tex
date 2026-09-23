@@ -2026,8 +2026,28 @@ itself is validated against, and using them is what makes Sect.~\ref{subsec8_4} 
 laboratory, but they carry their own uncertainty and are published without intervals: they are
 single-protocol real
 evaluations, and the pair in Sect.~\ref{subsec8_4} has a real margin of 0.067, of the same order as
-the seed noise we measure in simulation. A replication of that pair on a real robot is the single
-most valuable follow-up, and it is out of our reach.
+the seed noise we measure in simulation.
+
+The path to a real-robot test is short enough to specify rather than gesture at, and we specify it
+here as a \emph{plan}, not as work done. The experiment that would falsify or confirm the one
+declaration this paper's criterion gets wrong is: \texttt{rt-1-converged} versus
+\texttt{rt-1-15pct} on pick-coke-can, on a Google Robot or equivalent 7-DoF arm, at the published
+protocol's scene layout, with $n \ge 200$ trials per policy so that a real margin of $0.067$ is
+resolved rather than assumed. At the published rates $0.853$ and $0.920$ a normal-approximation
+interval on the difference has half-width $0.062$ at $n = 200$, $0.044$ at $n = 400$ and $0.031$ at
+$n = 800$, so $n = 200$ is where the published sign becomes distinguishable from zero at all and
+$n \approx 400$ where it is resolved with margin. Two things must be frozen before
+the trials start, because both are choices we have shown decide answers: the analysis rule
+(interval, threshold and observation unit) and the simulator operating point against which the
+comparison is made. Our release contains the simulated side at census scope, so the real side is
+the only missing term. The four other reversal pairs in the 5-of-62 audit of
+Sect.~\ref{subsec8_4} extend the same design at the same cost per pair, and one of them ---
+\texttt{octo-base} versus \texttt{octo-small} on carrot --- is a bridge pair for which we already
+hold a complete configuration census, so it needs only the real arm.
+
+We are stating a protocol we cannot execute: we have no arm, and the two public evaluation services
+that would have supplied one were unavailable during this work (Sect.~\ref{subsec1_3}). A reader
+with either should be able to run the above from the release without asking us anything.
 
 \item \textbf{One suite, and two kinds of conclusion.} Every measurement here comes from a single
 evaluation suite, and the two kinds of claim we draw from it do not travel equally. Claims that

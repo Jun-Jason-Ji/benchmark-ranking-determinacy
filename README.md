@@ -6,7 +6,7 @@ Comparison*, submitted to *Autonomous Robots*.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22893458.svg)](https://doi.org/10.5281/zenodo.22893458)
 
-Archived release: [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458) — the concept DOI, which always resolves to the newest version and lists every version with its own DOI. The manuscript cites this DOI and names no version: the records and regeneration scripts are byte-identical across all versions, so any of them reproduces the paper.
+Archived release: [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458) — the concept DOI, which always resolves to the newest version and lists every version with its own DOI. The manuscript cites this DOI and names no version, which is a choice about citation stability and **not** a claim that the versions are interchangeable. They are not: v1.0.0--v1.1.2 share a byte-identical `SHA256SUMS.txt`, v1.2.0 added 72 evaluation record files, and v1.4.0 and v1.5.0 added the census at the calibration-preferred operating point. To reproduce a specific number in the paper, use the version whose `CHANGELOG.md` entry introduced it, or the newest version, which contains every record the paper reports. Each version keeps its own DOI and its own checksum manifest; `CHANGELOG.md` lists them.
 
 **Start here:** [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) - what is in this release, and the exact
 commands that regenerate every table and figure from the per-episode records.

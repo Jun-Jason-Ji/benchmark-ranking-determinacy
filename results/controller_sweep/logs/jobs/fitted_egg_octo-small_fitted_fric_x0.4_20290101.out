@@ -59,3 +59,12 @@ E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocch
 [octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 53 success=False steps=120 inf=12.0s sim=6.2s total=22.2s
 [octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 54 success=False steps=120 inf=10.9s sim=6.8s total=21.7s
 [octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 55 success=False steps=120 inf=11.4s sim=5.5s total=20.9s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 56 success=True steps=120 inf=11.7s sim=6.1s total=21.8s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 57 success=True steps=120 inf=11.4s sim=5.3s total=20.7s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 58 success=True steps=120 inf=10.9s sim=5.2s total=20.3s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 59 success=True steps=120 inf=11.4s sim=5.2s total=20.3s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 60 success=False steps=120 inf=11.1s sim=6.5s total=21.4s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 61 success=True steps=120 inf=11.4s sim=5.3s total=20.4s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 62 success=False steps=120 inf=11.1s sim=7.8s total=23.0s
+[octo-small|PutEggplantInBasketScene-v1|fitted_fric_x0.4] ep 63 success=False steps=120 inf=10.6s sim=7.2s total=21.8s
+== fitted_fric_x0.4: 30/64 success
