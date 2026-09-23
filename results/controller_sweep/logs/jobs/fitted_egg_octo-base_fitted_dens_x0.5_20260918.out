@@ -48,3 +48,23 @@ E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocch
 [octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 42 success=True steps=120 inf=12.4s sim=3.9s total=19.3s
 [octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 43 success=False steps=120 inf=11.6s sim=4.8s total=19.7s
 [octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 44 success=False steps=120 inf=12.6s sim=4.9s total=20.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 45 success=True steps=120 inf=11.9s sim=5.6s total=20.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 46 success=False steps=120 inf=11.6s sim=4.9s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 47 success=False steps=120 inf=9.4s sim=3.9s total=16.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 48 success=True steps=120 inf=12.2s sim=5.6s total=20.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 49 success=False steps=120 inf=13.2s sim=4.8s total=21.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 50 success=False steps=120 inf=11.8s sim=4.6s total=19.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 51 success=False steps=120 inf=11.8s sim=4.5s total=19.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 52 success=False steps=120 inf=12.5s sim=5.4s total=20.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 53 success=False steps=120 inf=12.8s sim=4.6s total=20.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 54 success=True steps=120 inf=12.5s sim=5.9s total=21.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 55 success=False steps=120 inf=12.7s sim=5.2s total=21.1s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 56 success=False steps=120 inf=12.3s sim=4.2s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 57 success=True steps=120 inf=12.7s sim=5.2s total=21.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 58 success=False steps=120 inf=12.5s sim=5.6s total=21.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 59 success=False steps=120 inf=12.8s sim=4.8s total=20.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 60 success=False steps=120 inf=12.1s sim=5.1s total=20.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 61 success=False steps=120 inf=12.0s sim=4.1s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 62 success=False steps=120 inf=11.9s sim=3.5s total=18.3s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 63 success=False steps=120 inf=11.8s sim=5.0s total=20.2s
+== fitted_dens_x0.5: 19/64 success

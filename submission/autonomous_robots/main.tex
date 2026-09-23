@@ -64,27 +64,25 @@ Simulation-Based Policy Comparison}
 %%   Shengjie Guo      0009-0004-6852-4836
 %%   Yi Sui            0009-0001-8081-5183
 
-\abstract{Simulation benchmarks increasingly rank robot foundation policies, treating a calibrated
-simulator as evidence of which is better. We ask which ranking claims a benchmark's own evidence
-determines, on a widely used sim-to-real suite across two embodiments, enumerating every grid. First, the calibration protocol
-is structurally blind: replaying 98 demonstrations identifies the controller ratio and delay, while a
-common gain rescaling moves the replay objective by at most $3\times10^{-6}$ of its own composite
-units over a sixteenfold range --- against $1.4\times10^{-3}$ between two independent implementations
-of the same dynamics --- and halving the
-torque limit leaves 97 of 98 replays bitwise unchanged. The same test rejects the simulator's shipped
-setting; a full census at the setting it prefers moves the point-calibration verdict from abstention
-to a declaration on a difference change of 0.031 that is not itself resolved, while the set-valued
-verdict abstains at both points. Second, the benchmark is a finite
-configuration population: the episode index fixes the initial state modulo 24 to 300 configurations,
-and two ports enumerate different grids. Enumerating one zeroes configuration sampling error;
-among the terms that remain is the suite's averaging over four robot texture variants, which carry
-no physics yet span 0.400 in a rate, making the published number a marginal rather than the rate at
-any one. Third, following the published protocol reproduces its rates to 0.038 mean
-absolute difference, yet its own 72-episode budget resolves only one or two of four orderings. A
-set-valued verdict bounds only the ambiguity the compatible parameters express: on the pair we
-selected from the 5 of 62 published pairs whose real and simulated means point opposite ways, it
-declares the ordering those means reverse.
-Four of our claims are retracted.}
+\abstract{Simulation benchmarks increasingly rank robot foundation policies, treating a calibrated simulator
+as evidence of which is better. We ask which ranking claims a benchmark's own evidence determines,
+on a widely used sim-to-real suite across two embodiments, enumerating every grid.
+First, demonstration-replay calibration is structurally blind: it identifies the controller ratio
+and delay, while over the ranges tested a common gain rescaling moves the replay objective by at
+most $3\times10^{-6}$ of its own composite units across a sixteenfold range --- against
+$1.4\times10^{-3}$ between two implementations of the same dynamics --- and halving the torque limit
+leaves 97 of 98 replays bitwise unchanged. Re-applied to 98 demonstrations from the same public
+dataset, it disfavours the shipped controller setting on both stacks; a census at the preferred
+setting moves the point verdict from abstention to a declaration on an unresolved change of 0.031,
+while the set verdict abstains at both.
+Second, the benchmark is a finite configuration population: the episode index fixes the initial
+state modulo 24 to 300 configurations, and two ports enumerate different ones. Enumeration zeroes
+configuration sampling error; among the terms left is its averaging over four physics-free robot
+texture variants, which span 0.400 in a rate. Third, the published protocol's own 72-episode
+budget resolves only one or two of the four orderings it reports. A set-valued verdict bounds only
+the ambiguity the compatible parameters express: on a selected pair whose published real and
+simulated means point opposite ways, it declares the ordering those means reverse. Four of our
+claims are retracted.}
 
 \keywords{Policy evaluation, Sim-to-real transfer, Identifiability, Partial identification,
 Benchmark reproducibility, Robot manipulation}
@@ -502,9 +500,13 @@ $\Delta(z_0) \le 0$ for some $z_0 \in S$. Then $\mathrm{lo}(z_0) > 0 \ge \Delta(
 setting's lower bound exceeded its own truth, which happens with probability at most $\alpha$ if the
 interval at $z_0$ is a valid one-sided bound. Since $z_0$ is fixed by the surface rather than chosen
 from the data, no union over $|S|$ is needed and the false-declaration rate is at most $\alpha$ for
-any finite $S$. What this argument does \emph{not} give is coverage of the whole range
-$[\min_z \Delta(z), \max_z \Delta(z)]$ by the envelope, which is a simultaneous statement and does
-require correction; Sect.~\ref{subsec8_2} measures that coverage rather than asserting it. Both
+any finite $S$. Coverage of the whole range $[\min_z \Delta(z), \max_z \Delta(z)]$ is a different
+statement, and it costs a factor of two rather than a factor of $|S|$: with equal-tailed valid
+intervals, $\min_z \mathrm{lo}(z) \le \mathrm{lo}(z_{\min}) \le \Delta(z_{\min})$ fails only if the
+interval at the \emph{argmin} misses low, and symmetrically at the argmax, so the envelope covers the
+range with probability at least $1 - 2\alpha$ regardless of how many settings $S$ holds. Neither
+statement says anything about parameter values we did not sample, which is the limitation
+Sect.~\ref{subsec8_2} measures. Both
 statements are conditional on the intervals at each $z$ being valid, which Sect.~\ref{subsec5_4}
 qualifies where a variance term is imputed.
 Throughout the empirical sections $S = F_{\mathrm{nom}}$ and the single setting is nominal, which is
@@ -645,6 +647,33 @@ We replayed 98 BridgeData V2 demonstrations \citep{walke2023bridgedata} on (a) t
 \citep{tao2024maniskill3} and (b) the original reference stack (ManiSkill2
 \citep{gu2023maniskill2} with SAPIEN \citep{xiang2020sapien}), the latter running headless through a
 purpose-built Vulkan layer (Appendix~\ref{secB}).
+
+\paragraph{What these 98 demonstrations are, and what they are not.}
+This bears on how strongly the rest of this section can be read, so we state it before the results
+rather than in a limitation. The demonstrations are read from four fixed shards of the public
+BridgeData V2 RLDS release by bounded HTTP range request, with CRC32C and SHA-256 verified per
+record, and the manifest records the byte offset of every one. They are therefore \emph{the same
+public dataset} the reference calibration draws on, and the selection is reproducible to the byte.
+They are \textbf{not} verified to be the same trajectories the reference parameters were fitted on.
+The reference preparation script selects its demonstrations by TFDS iteration index; we read records
+positionally from shards. Record $k$ of shard 0 very probably is TFDS iteration $k$ under an
+unshuffled read, but the format does not guarantee it, our loader records the equality as an
+assumption rather than a check, and we could not locate a fitting log or trajectory-identity map to
+settle it. Nor is our search domain the reference's: we enumerate a 50-point grid that may be wider
+than the one the original fit searched.
+
+Two consequences, and we hold to them throughout. What this section establishes is that
+\emph{applying the reference replay-calibration protocol to 98 demonstrations from the same public
+dataset, over our stated grid, the shipped controller setting is disfavoured on both simulator
+stacks.} What it does not establish is the stronger historical claim that the original fitting
+evidence, on the original sample and under the original search domain, would have rejected the
+setting that fit produced. Replicating on two stacks and splitting the sample address precision and
+selection; neither addresses sample identity, and a conclusion drawn on 98 demonstrations would not
+transfer automatically to a 12-demonstration subset even if that subset were shown to be contained
+in ours. The consequence this paper actually needs is the weaker one: the benchmark's operating point
+is not the one \emph{a} faithful application of its own stated protocol prefers, which is enough to
+make the question of Sect.~\ref{subsec7_7} --- does the ranking move with the operating point? ---
+worth measuring.
 
 \begin{table*}[t]
 \caption{Replay identifiability on two independent simulator stacks. 98 BridgeData V2
@@ -855,7 +884,8 @@ what a criterion that reports the range of answers the evidence permits is for.
 
 \textbf{The question of this paper is therefore what a policy ranking computed over
 $F_{\mathrm{nom}}$ is worth}, with the separate finding that the operating point generating that
-fibre is one the calibration data reject, and with Sect.~\ref{subsec7_7} measuring what that costs.
+fibre is one our re-application of the calibration protocol disfavours --- in the bounded sense
+Sect.~\ref{subsec4_3} states --- and with Sect.~\ref{subsec7_7} measuring what that costs.
 
 %%=============================================================================%%
 \section{What a finite benchmark measures}\label{sec5}
@@ -1391,30 +1421,56 @@ unit. A bound that small is a property of the estimator's last digit, not of the
 At three seed sets, three rows disagreed. The two that no longer do were resolved by spending seeds,
 not by any change of method or of data-retention rule.
 
-\paragraph{The counts above are uncorrected for multiplicity, and correcting them cuts the union
-bound harder than it cuts point calibration.}
+\paragraph{The counts above are uncorrected for multiplicity, and under a common error-control
+standard the two rules disagree \emph{more}, not less.}
 Seventeen pairs are seventeen hypotheses, and a reader who scans the table for whichever orderings
-it declares is making a family-wise claim. Applying Holm's step-down procedure at $\alpha = 0.05$
-over the 17 bridge pairs --- which needs no independence assumption, and these pairs are certainly
-not independent, six of them being drawn from four Octo variants on shared policy data --- point
-calibration's 11 declarations fall to \textbf{9} and the union bound's 10 fall to \textbf{5}
-(\texttt{scripts/analyze\_multiplicity.py}; Benjamini--Hochberg leaves both counts unchanged, and we
-report Holm because the reading at issue is family-wise rather than one about a false-discovery
-rate). The two point declarations that go are exactly the knife edges of the previous paragraph, at
-$+0.0091$ and $+0.0095$.
+it declares is making a family-wise claim. We therefore apply Holm's step-down procedure at
+$\alpha = 0.05$ to each rule's 17 $p$ values --- Holm needs no independence assumption, and these
+pairs are certainly not independent, six of them being drawn from four Octo variants on shared
+policy data (\texttt{scripts/analyze\_multiplicity.py}).
 
-That the union bound loses half its declarations where point calibration loses two of eleven is not
-an accident of these data, and it is worth stating as a property of the criterion. The envelope
-declares only when \emph{every} condition agrees in sign, which makes it an intersection--union
-test: it rejects exactly when each per-condition test rejects, so its $p$ value is the
-\emph{largest} of the per-condition ones rather than the smallest. Those $p$ values therefore start
-larger, and a step-down procedure removes more of them. \textbf{A criterion that is conservative
-pair by pair is not thereby conservative family-wise.} This does not touch the
-no-correction-across-conditions argument of Sect.~\ref{subsec3_3} --- that argument is the same fact
-seen from the other side --- and it does not affect any abstention, since a correction can only
-remove declarations. It does mean that the 1-of-17 disagreement count and the declarations behind it
-should be read as per-pair statements, which is how Appendix~\ref{secA2} labels them and how we
-quote them throughout.
+\begin{table}[h]
+\caption{The same 17 bridge pairs under two error-control standards. The last column is the
+quantity this section reports.}\label{tab6b}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Standard over the 17 pairs & point & envelope & disagree \\
+\midrule
+no correction across pairs & 11 & 10 & \textbf{1} \\
+Holm at $\alpha = 0.05$ & 9 & 5 & \textbf{4} \\
+Benjamini--Hochberg & 11 & 10 & \textbf{1} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Read the last column, because it is the one the paper's claim is about. Point
+calibration's 11 declarations fall to 9 --- the two that go are exactly the knife edges of the
+previous paragraph, at $+0.0091$ and $+0.0095$ --- and the envelope's 10 fall to 5, so the
+\emph{disagreement} between the rules rises from 1 of 17 to \textbf{4 of 17}. Quoting the envelope's
+own fall from 10 to 5 in isolation, as an earlier draft of this paragraph did, drops the comparison
+the section exists to make: correcting for multiplicity makes the set-valued rule \emph{more}
+consequential relative to point calibration, not less, because it removes more of the envelope's
+declarations and so turns agreements into disagreements. The four pairs are
+\texttt{octo-small} vs \texttt{octo-base@hist1} and \texttt{octo-base@hist1} vs \texttt{openvla} on
+the eggplant census, and \texttt{octo-small} vs \texttt{octo-base} on spoon on each stack.
+
+Three limits on that reading, and we hold to all three. \textbf{Four extra abstentions are not four
+corrected errors.} We have no true ordering for these pairs, so we cannot tell an avoided false
+declaration from a surrendered correct one, and the two rules are not even answering the same
+question --- one asks about a single setting, the other about agreement across a set. What is
+established is that a declaration is sensitive to the parameter set and to the error-control
+standard; that a set-valued rule \emph{decides better} is not established here and we do not claim
+it. \textbf{Holm needs valid input $p$ values}, which ours are only under the normal approximation
+and the variance imputation of Sect.~\ref{subsec5_4}; a correction does not repair a calibration
+problem in the thing it corrects, so this is a sensitivity analysis under a stated working model
+rather than a guarantee. And \textbf{the direction of the envelope's larger loss is a fact about
+these records, not a theorem}: an intersection--union test's $p$ value is the largest of its
+components, which explains why the envelope declares less often to begin with, but it does not
+determine how a step-down procedure over a different index --- pairs, not conditions --- will treat
+it. None of this touches the no-correction-across-conditions argument of Sect.~\ref{subsec3_3}, and
+a correction cannot affect an abstention, since it only removes declarations. Benjamini--Hochberg
+leaves every count unchanged; we report Holm because the reading at issue is family-wise rather than
+one about a false-discovery rate.
 
 \begin{table*}[t]
 \caption{The effect of raising the seed budget from three to five on the point-versus-set
@@ -1556,7 +1612,7 @@ become visible.
 \subsection{The ranking at the calibration-preferred operating point}\label{subsec7_7}
 
 Everything above is computed at the simulator's shipped nominal controller setting, which
-Sect.~\ref{subsec4_4} showed the calibration data reject in favour of
+Sect.~\ref{subsec4_4} showed our re-application of the calibration protocol disfavours in favour of
 $(k{\times}2,\ d{\times}0.5,\ \text{delay}\ 1)$. That leaves an obvious question, and rather than
 argue about it we measured it: we re-ran the complete 64-configuration eggplant census for
 \texttt{octo-small} and \texttt{octo-base} at the fitted setting, under three seed sets whose bases
@@ -2054,10 +2110,11 @@ families where its smoothness prior holds and fails where it does not
 declares on one replicate and not the other, which is a claim about abstention and not about
 declarations (Sect.~\ref{subsec8_3}); and it changes the verdict on 3 of 17 bridge policy pairs at
 the reference protocol's three seed sets, falling to 1 of 17 at five seed sets over a full census
-(Sect.~\ref{subsec7_2}). Its \emph{declarations} are the part to treat with most care: under a
-family-wise correction over the 17 pairs they fall from 10 to 5, a larger proportional loss than
-point calibration's, because an intersection--union test's $p$ value is a maximum over conditions
-(Sect.~\ref{subsec7_2}). It does not bound, and cannot bound, the ambiguity arising from a model gap
+(Sect.~\ref{subsec7_2}). Both counts are uncorrected for multiplicity across pairs; under Holm the
+rules disagree on 4 of 17 rather than 1, because the correction removes more of the envelope's
+declarations than of point calibration's (Sect.~\ref{subsec7_2}). Which count to quote depends on
+whether the claim is about one named pair or about whichever orderings the table declares, and the
+extra abstentions are abstentions rather than demonstrated corrections. It does not bound, and cannot bound, the ambiguity arising from a model gap
 that no setting of those parameters expresses --- and Sect.~\ref{subsec8_4} exhibits a pair where
 reaching abstention would have needed 0.070 while the gap between the simulated and published real
 margins is 0.214 and points the other way.
@@ -2076,9 +2133,12 @@ in the order that flatters the paper.
 
 \begin{enumerate}
 \item \textbf{The operating-point measurement covers one task and one policy pair.}
-Section~\ref{subsec4_4} finds that the replay loss is minimised at
+Section~\ref{subsec4_4} finds that the replay loss over our grid is minimised at
 $(k{\times}2, d{\times}0.5, \text{delay}\ 1)$ on both stacks, and that nominal --- ratio 1, no delay,
-where every published rate is computed --- is rejected against that minimiser.
+where every published rate is computed --- is rejected against that minimiser on our 98
+demonstrations. Sect.~\ref{subsec4_3} states why that is a re-calibration result and not a claim
+about the original fit: we did not verify that our demonstrations are the trajectories that fit
+used, and our search grid may be wider than its.
 Section~\ref{subsec7_7} measures what that costs on the eggplant census and finds the point verdict
 flipping from abstention to a declaration while the set verdict abstains at both. That is one task,
 one policy pair, and one alternative operating point. We do not know whether the pattern --- point
@@ -2117,18 +2177,45 @@ evaluations, and the pair in Sect.~\ref{subsec8_4} has a real margin of 0.067, o
 the seed noise we measure in simulation.
 
 The path to a real-robot test is short enough to specify rather than gesture at, and we specify it
-here as a \emph{plan}, not as work done. The experiment that would falsify or confirm the one
-declaration this paper's criterion gets wrong is: \texttt{rt-1-converged} versus
-\texttt{rt-1-15pct} on pick-coke-can, on a Google Robot or equivalent 7-DoF arm, at the published
-protocol's scene layout, with $n \ge 200$ trials per policy so that a real margin of $0.067$ is
-resolved rather than assumed. At the published rates $0.853$ and $0.920$ a normal-approximation
-interval on the difference has half-width $0.062$ at $n = 200$, $0.044$ at $n = 400$ and $0.031$ at
-$n = 800$, so $n = 200$ is where the published sign becomes distinguishable from zero at all and
-$n \approx 400$ where it is resolved with margin. Two things must be frozen before
-the trials start, because both are choices we have shown decide answers: the analysis rule
-(interval, threshold and observation unit) and the simulator operating point against which the
-comparison is made. Our release contains the simulated side at census scope, so the real side is
-the only missing term. The four other reversal pairs in the 5-of-62 audit of
+here as a \emph{plan} whose outcome we do not know. The open question is whether the ordering our
+criterion declares on \texttt{rt-1-converged} versus \texttt{rt-1-15pct} holds on the robot; the
+published point estimates point the other way, but they carry no interval, so the question is open
+in both directions and we do not write it as a known error. The design: those two checkpoints on
+pick-coke-can, on hardware matched to the published protocol in the respects that decide an action
+--- the same arm, the same control interface and action semantics, the same camera placement and the
+same scene layout, since a different 7-DoF arm is not a replication of this benchmark merely by
+having seven joints.
+
+Sizing it needs power, not an interval half-width, and the two are easy to confuse. Suppose the
+published rates $0.853$ and $0.920$ are the truth, trials are independent Bernoulli, arms are
+equally sized, and there is no scene clustering or protocol drift --- all four assumptions
+optimistic. Then a two-sided normal-approximation test at $\alpha = 0.05$ has
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+per policy & total & expected half-width & power \\
+\midrule
+200 & 400 & 0.062 & 0.57 \\
+400 & 800 & 0.044 & 0.85 \\
+800 & 1{,}600 & 0.031 & 0.99 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent So $n = 200$ per policy is a coin flip, not a resolution: an expected half-width of $0.062$
+below a hypothesised gap of $0.067$ does not make the observed interval exclude zero. About
+$400$ per policy --- $800$ trials --- is the point at which the hypothesised gap would be detected
+$85\%$ of the time, and an earlier version of this paragraph read the half-width column as though it
+were the power column. A paired design, clustering, a different true gap or a different stopping
+rule all move these figures, so the table is a magnitude check on the plan and not a formal sample
+size (\texttt{scripts/plan\_real\_robot\_trial.py}).
+
+Two things must be frozen before the trials start, because both are choices we have shown decide
+answers: the analysis rule (interval, threshold and observation unit) and the simulator operating
+point against which the comparison is made. Our release contains the simulated side at census scope,
+so the real side is the only missing term. The four other reversal pairs in the 5-of-62 audit of
 Sect.~\ref{subsec8_4} extend the same design at the same cost per pair, and one of them ---
 \texttt{octo-base} versus \texttt{octo-small} on carrot --- is a bridge pair for which we already
 hold a complete configuration census, so it needs only the real arm.
@@ -2198,9 +2285,11 @@ answered it on a widely used sim-to-real evaluation suite. The calibration proto
 about a common scaling of the joint gains, and all but exactly so about the torque limit --- at most
 $3.1\times10^{-6}$ of composite loss across a sixteenfold rescaling, and bitwise identical replays on 97 of 98
 demonstrations, on two independent simulator stacks. It is \emph{not} uninformative about the
-controller ratio and the execution delay, and there it rejects the setting the simulator ships with:
-the benchmark is operated at a point its own calibration evidence excludes, and moving to the point
-that evidence prefers shifts a policy difference by $0.031$, which is enough to turn a
+controller ratio and the execution delay, and there it disfavours the setting the simulator ships
+with: the benchmark is operated at a point that a faithful re-application of its own stated protocol
+excludes --- on 98 demonstrations from the same public dataset, though not on a sample whose identity
+with the original fit we could verify (Sect.~\ref{subsec4_3}) --- and moving to the preferred point
+shifts a policy difference by $0.031$, which is enough to turn a
 point-calibration abstention into a declaration while the set-valued verdict abstains at both.
 The benchmark's initial states form a finite population of 24 to 300
 configurations rather than a sample, so enumerating them sets configuration sampling error to zero,
@@ -2233,8 +2322,8 @@ Report which implementation build and which visual variant a number came from: t
 variants is part of the documented protocol, but a number reported without naming the variant cannot
 be told apart from a mean over all four, and on our census those differ by up to 0.227.
 Report the operating point \emph{and how it stands against the calibration objective}, which costs
-nothing and which no suite we know of does. A benchmark evaluated at a setting its own replay data
-reject is not thereby wrong, but a reader cannot tell whether the verdict computed there is the
+nothing and which no suite we know of does. A benchmark evaluated at a setting a re-application of
+its own replay protocol disfavours is not thereby wrong, but a reader cannot tell whether the verdict computed there is the
 verdict at the setting that data prefer --- and on the one pair where we checked, it is not. The
 direction is worth stating precisely: nominal abstains and the fitted point declares, so what moved
 was not a declaration failing to survive but an abstention becoming one, on a change in

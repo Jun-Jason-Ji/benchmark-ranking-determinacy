@@ -30,11 +30,24 @@ core table is "each of these declared orderings holds", which is a family-wise s
 false-discovery-rate procedure would license a different and weaker reading. We print BH alongside
 it so the choice is inspectable rather than inherited.
 
-The headline finding of this file is that the ENVELOPE's declarations are the more fragile of the
-two under a family-wise reading -- 10 to 5, against point calibration's 11 to 9 -- which is a direct
-consequence of its being an IUT. Its p values start larger because they are maxima over conditions,
-so a step-down procedure removes more of them. A criterion that is conservative pair-by-pair is not
-thereby conservative family-wise, and this is the cheapest available demonstration of that.
+Two findings, and the second is the one the manuscript reports.
+
+The envelope's p values are maxima over conditions and so start larger, which is why its set of
+declarations is the smaller of the two before any correction. That it also loses the larger SHARE of
+them under Holm (10 to 5, against point calibration's 11 to 9) is a fact about these records and not
+a theorem: an IUT p value being larger does not by itself determine how a step-down procedure over a
+different index -- pairs, not conditions -- will treat it.
+
+The quantity the manuscript reports is the DISAGREEMENT between the two rules, and it moves the
+other way: 1 of 17 uncorrected, **4 of 17** under Holm. Under a common error-control standard across
+pairs the two rules disagree more, not less, because the correction removes more of the envelope's
+declarations. Reporting only "10 to 5" drops the comparison that matters.
+
+Neither number says the criterion decides better. Four extra abstentions are four abstentions; with
+no true ordering for these pairs we cannot tell an avoided false declaration from a surrendered
+correct one. And Holm needs valid input p values, which these are only under the normal
+approximation and the variance imputation of Sect. 5.4 -- a correction does not repair a calibration
+problem in what it corrects. This file is a sensitivity analysis under a stated working model.
 
 Usage:  python scripts/analyze_multiplicity.py [--alpha 0.05] [--out results/MULTIPLICITY.md]
 """
@@ -153,6 +166,16 @@ def main():
     s_he = sum(1 for i, r in enumerate(rows) if dec_env(r) and he[i])
     s_be = sum(1 for i, r in enumerate(rows) if dec_env(r) and be[i])
 
+    # The paper's headline quantity is the DISAGREEMENT -- point declares where the envelope does
+    # not -- so the corrected version of that is what has to be compared, not each rule's own count.
+    # Reading only "the envelope went from 10 to 5" drops the comparison: under a common error-control
+    # standard across pairs the two rules disagree MORE, not less.
+    dis_raw = [i for i, r in enumerate(rows) if dec_point(r) and not dec_env(r)]
+    dis_holm = [i for i, r in enumerate(rows)
+                if (dec_point(r) and hp[i]) and not (dec_env(r) and he[i])]
+    dis_bh = [i for i, r in enumerate(rows)
+              if (dec_point(r) and bp[i]) and not (dec_env(r) and be[i])]
+
     L = [f"# Multiplicity across the {len(rows)} bridge policy pairs", "",
          "Per-pair intervals are what the core table reports, and the ledger's $E_{MC}$ is a joint "
          "event over pairs, so the counts have to be corrected before they can be read as "
@@ -180,9 +203,28 @@ def main():
             f"{'**yes**' if he[i] else 'no'} | {'yes' if be[i] else 'no'} |")
 
     L += ["", "## Counts", "",
-          "| criterion | declares uncorrected | survives Holm | survives BH |", "|---|---:|---:|---:|",
-          f"| point calibration | {n_point} | {s_hp} | {s_bp} |",
-          f"| union bound over the fibre | {n_env} | {s_he} | {s_be} |", ""]
+          "| standard applied over the 17 pairs | point declares | envelope declares | "
+          "point declares, envelope abstains |", "|---|---:|---:|---:|",
+          f"| no correction across pairs | {n_point} | {n_env} | **{len(dis_raw)}** |",
+          f"| Holm at $\\alpha$ = {args.alpha} | {s_hp} | {s_he} | **{len(dis_holm)}** |",
+          f"| Benjamini-Hochberg at {args.alpha} | {s_bp} | {s_be} | **{len(dis_bh)}** |", "",
+          "The last column is the quantity the manuscript reports, and it is the one to read. Under a "
+          "common error-control standard across pairs the two rules disagree on "
+          f"**{len(dis_holm)} of {len(rows)}** pairs, not {len(dis_raw)}: the correction removes more "
+          "of the envelope's declarations than of point calibration's, so it turns agreements into "
+          "disagreements. Quoting only the envelope's own fall from "
+          f"{n_env} to {s_he} drops that comparison.", "",
+          "What this does **not** show is that the extra abstentions are corrections. They are "
+          "abstentions. Without the true ordering for these pairs we cannot say whether each one "
+          "avoided a false declaration or gave up a correct one, and the two rules are answering "
+          "different questions in any case -- one about a single setting, one about agreement across "
+          "a set of settings. What is established is that a declaration is sensitive to the "
+          "parameter set and to the error-control standard; that a set-valued rule improves "
+          "real-world decision accuracy is not established here and we do not claim it.", ""]
+    if dis_holm:
+        L += ["Pairs on which the two rules disagree after Holm: "
+              + "; ".join(f"`{rows[i]['a']}` vs `{rows[i]['b']}` ({rows[i]['task']})"
+                          for i in dis_holm) + ".", ""]
 
     lost_p = [f"`{r['a']}` vs `{r['b']}` ({r['task']}, lower bound {r['lo']:+.4f})"
               for i, r in enumerate(rows) if dec_point(r) and not hp[i]]

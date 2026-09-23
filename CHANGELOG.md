@@ -64,6 +64,36 @@ discarding real observations. It now compares the per-configuration outcomes and
 only when it is an exact duplicate. This restores the S=3 declaration count to **3 of 17**; the
 "2 of 17" reported in the v1.4.0 documents was an artifact of the regression.
 
+### The calibration result is a re-calibration audit, not a claim about the original fit
+
+The paper said the benchmark "is operated at a point its own calibration evidence excludes." That
+reading needs our 98 demonstrations to be the sample the reference parameters were fitted on, and it
+is not established. `read_bridge_batch.py` records the assumption in its own docstring: record k of
+shard 0 very likely equals TFDS iteration k under an unshuffled read, but the format does not
+guarantee it. The reference preparation script selects by TFDS iteration index; we read positionally
+from four shards. No fitting log or trajectory-identity map was found, and our 50-point grid may be
+wider than the original fit's search domain.
+
+Sect. 4.3 now carries a provenance paragraph before the results. The claim is that applying the
+reference protocol to 98 demonstrations from the same public dataset, over our stated grid, the
+shipped setting is disfavoured on both stacks -- a re-calibration audit on same-source
+demonstrations. Replicating on two stacks and splitting the sample address precision and selection,
+not sample identity, and a result on 98 demonstrations would not transfer automatically to a
+12-demonstration subset. Propagated to the abstract, Sect. 4.4, Sect. 7.7, Limitation 1, the
+conclusion, the recommendations and the cover letter. The weaker claim is what the paper needs.
+
+### The trial-count plan confused interval half-width with power
+
+Sect. 9 said 200 trials per policy is where the published sign becomes distinguishable from zero,
+reasoning from an expected half-width of 0.062 against a hypothesised gap of 0.067. That is not
+power: at 200 per policy the two-sided test has **0.57** power, and about 400 per policy -- 800
+trials -- reaches 0.85. An expected half-width below the gap does not make the observed interval
+exclude zero. Sect. 9 now gives the power table with its four optimistic assumptions named,
+distinguishes per-policy from total n, states the outcome as an open question rather than as
+confirming a known error, and requires the hardware to match on control interface, action semantics,
+camera placement and scene layout rather than on degrees of freedom. New script
+`plan_real_robot_trial.py`. The cover letter carried both faults and is fixed the same way.
+
 ### Multiplicity across the 17 pairs, performed rather than only flagged
 
 Appendix A.2 said a family of per-pair statements would have to be inflated for multiplicity before
@@ -72,13 +102,20 @@ performs it. Holm's step-down at alpha = 0.05 over the 17 bridge pairs takes poi
 11 declarations to **9** and the union bound from 10 to **5**; Benjamini-Hochberg leaves both
 unchanged. The two point declarations removed are exactly the knife edges at +0.0091 and +0.0095.
 
-The asymmetry is the interesting part and it is a property of the criterion rather than of these
-data. The envelope declares only when every condition agrees in sign, which makes it an
-intersection-union test, so its p value is the **largest** of the per-condition ones rather than the
-smallest. Those p values start larger and a step-down procedure removes more of them: a criterion
-that is conservative pair by pair is not thereby conservative family-wise. This leaves the
-no-correction-across-conditions argument untouched -- it is the same fact seen from the other side --
-and it cannot affect an abstention, since a correction only removes declarations.
+The quantity to report is the DISAGREEMENT between the rules, and it moves the other way: 1 of 17
+uncorrected, **4 of 17** under Holm. Correcting for multiplicity makes the set-valued rule more
+consequential relative to point calibration, not less, because it removes more of the envelope's
+declarations and so turns agreements into disagreements. An earlier version of this entry quoted the
+envelope's own fall from 10 to 5 as a shrinking of the result, which drops that comparison.
+
+Three limits travel with it. Four extra abstentions are not four corrected errors: with no true
+ordering for these pairs, an avoided false declaration cannot be told from a surrendered correct
+one, so what is established is sensitivity to the parameter set and the error-control standard, not
+better decisions. Holm needs valid input p values, which ours are only under the normal
+approximation and the variance imputation of Sect. 5.4. And the envelope's larger loss is a fact
+about these records: an intersection-union test's p value being a maximum over conditions explains
+why it declares less often to begin with, but does not determine how a correction over pairs will
+treat it.
 
 ### The versions are not interchangeable, and three documents said they were
 

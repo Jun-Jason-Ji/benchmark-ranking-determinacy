@@ -50,6 +50,16 @@ From there, three independent findings:
    The same computation produced a result we did not expect and report prominently: the replay loss
    is minimised not at the simulator's shipped controller setting but at ratio 0.25 with one step of
    delay, on both stacks independently, and the shipped setting is rejected against that minimiser.
+   We are careful about how strongly this reads, and Section 4.3 states the bound explicitly. Our 98
+   demonstrations come from the same public BridgeData V2 release the reference calibration draws
+   on, verified to the byte, but we did not establish that they are the same trajectories the
+   reference parameters were fitted on — the reference script selects by TFDS iteration index and we
+   read positionally from shards, an equality the format does not guarantee — and our search grid
+   may be wider than the original fit's. So this is a **re-calibration audit on same-source
+   demonstrations**, not a demonstration that the original fitting evidence contradicted itself. The
+   weaker statement is what the rest of the paper needs: the benchmark's operating point is not the
+   one a faithful re-application of its own stated protocol prefers, which is enough to make the
+   consequence worth measuring.
    Every published rate is computed at the shipped setting, and so was every measurement in our
    paper until this revision: Section 7.7 now re-runs the complete eggplant census at the preferred
    setting as well, so the operating point is measured rather than assumed. We restructured
@@ -122,15 +132,20 @@ Because the journal asks for a path to real-world performance rather than an ack
 one is missing, Section 9's limitations now state the experiment rather than gesture at it:
 `rt-1-converged` versus `rt-1-15pct` on pick-coke-can, on a Google Robot or equivalent 7-DoF arm, at
 the published protocol's scene layout, with the analysis rule and the simulator operating point
-frozen before the trials start — both being choices this paper shows decide answers. The trial count
-follows from the margin: at the published rates 0.853 and 0.920 a normal-approximation interval on
-the difference has half-width 0.062 at n = 200 and 0.044 at n = 400, so 200 trials per policy is
-where the published sign becomes distinguishable from zero and 400 is where it is resolved. Our
-release already contains the simulated side at census scope, so the real arm is the only missing
-term, and the four other reversal pairs from the 5-of-62 audit extend the same design at the same
-cost each — one of them, `octo-base` versus `octo-small` on carrot, already has its census. We are
-stating a protocol we cannot execute, and a reader with an arm should be able to run it from the
-release without asking us anything.
+frozen before the trials start — both being choices this paper shows decide answers — and the
+hardware matched in the respects that decide an action, since another 7-DoF arm is not a replication
+of this benchmark merely by having seven joints. We size it by power rather than by interval width,
+because the two are easy to confuse: at the published rates 0.853 and 0.920, taken as the truth
+under independent equal-sized Bernoulli arms, 200 trials per policy gives an expected half-width of
+0.062 against a gap of 0.067 but only **0.57 power**, and about 400 per policy — 800 trials — is
+where that gap would be detected 85% of the time. We state the experiment as an open question, not a
+confirmation: the published point estimates point against our criterion's declaration but carry no
+interval of their own, so the outcome is unknown in both directions. Our release already contains
+the simulated side at census scope, so the real arm is the only missing term, and the four other
+reversal pairs from the 5-of-62 audit extend the same design at the same cost each — one of them,
+`octo-base` versus `octo-small` on carrot, already has its census. We are stating a protocol we
+cannot execute, and a reader with an arm should be able to run it from the release without asking us
+anything.
 
 **On negative results.** The manuscript retracts four conclusions of our own, each after we ran the
 experiment designed to test it, and reports the strong form of its central claim as false. We list

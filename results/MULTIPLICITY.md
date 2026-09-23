@@ -26,10 +26,17 @@ Estimator: Eq. (eq:var), run observation unit, $\alpha = 0.05$. The $z$ for a pa
 
 ## Counts
 
-| criterion | declares uncorrected | survives Holm | survives BH |
+| standard applied over the 17 pairs | point declares | envelope declares | point declares, envelope abstains |
 |---|---:|---:|---:|
-| point calibration | 11 | 9 | 11 |
-| union bound over the fibre | 10 | 5 | 10 |
+| no correction across pairs | 11 | 10 | **1** |
+| Holm at $\alpha$ = 0.05 | 9 | 5 | **4** |
+| Benjamini-Hochberg at 0.05 | 11 | 10 | **1** |
+
+The last column is the quantity the manuscript reports, and it is the one to read. Under a common error-control standard across pairs the two rules disagree on **4 of 17** pairs, not 1: the correction removes more of the envelope's declarations than of point calibration's, so it turns agreements into disagreements. Quoting only the envelope's own fall from 10 to 5 drops that comparison.
+
+What this does **not** show is that the extra abstentions are corrections. They are abstentions. Without the true ordering for these pairs we cannot say whether each one avoided a false declaration or gave up a correct one, and the two rules are answering different questions in any case -- one about a single setting, one about agreement across a set of settings. What is established is that a declaration is sensitive to the parameter set and to the error-control standard; that a set-valued rule improves real-world decision accuracy is not established here and we do not claim it.
+
+Pairs on which the two rules disagree after Holm: `octo-small` vs `octo-base@hist1` (eggplant (ms3)); `octo-base@hist1` vs `openvla-7b-4bit` (eggplant (ms3)); `octo-small` vs `octo-base` (spoon (ms3)); `octo-small` vs `octo-base` (spoon (ms2, original stack)).
 
 Point declarations that do not survive Holm: `octo-small` vs `octo-small@hist1` (eggplant (ms3), lower bound +0.0091); `octo-base` vs `octo-base@hist1` (eggplant (ms3), lower bound +0.0095).
 

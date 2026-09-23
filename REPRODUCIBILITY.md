@@ -49,6 +49,7 @@ python scripts/make_table5.py --root results/controller_sweep_ms2_official_strea
        --compare results/controller_sweep_ms2_official     # Tables 4-5, both RNG lifecycles
 python scripts/analyze_fitted_point.py             # nominal vs the calibration-preferred setting
 python scripts/analyze_multiplicity.py             # Holm/BH over the 17 bridge pairs (Sect. 7.2)
+python scripts/plan_real_robot_trial.py            # power table for the Sect. 9 validation plan
 python scripts/analyze_fractal_reversal.py         # the real-vs-sim reversal pair (Sect. 8.4)
 python scripts/analyze_torque_shift_s5.py          # the per-pair torque shift at S = 5 (Sect. 7.3)
 python scripts/analyze_benchmark_value.py          # benchmark-value estimator and intervals
