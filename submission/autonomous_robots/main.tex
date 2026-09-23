@@ -188,6 +188,36 @@ calibration data can constrain, and the sim-to-real gap on that pair lies outsid
 
 \subsection{Contributions}\label{subsec1_1}
 
+This is an audit of an evaluation pipeline, and its content reduces to three claims, each of which
+can be checked or refuted on its own from the released records.
+
+\begin{description}
+\item[C1. The calibration protocol is weakly informative about directions that move rankings.]
+Demonstration replay pins the gain ratio and the execution delay tightly and says almost nothing
+about a common gain rescaling or an inactive torque limit; those insensitive directions shift policy
+differences by up to 0.121. \emph{Refutable by} showing the loss is sensitive to those directions
+over the ranges we tested, or that the shifts are smaller than reported.
+\item[C2. The evaluation target is a finite population, and what survives enumerating it does not
+shrink with budget.] The configuration set is enumerable rather than sampled; after enumeration, the
+implementation build, the invisible parameters and a physics-free texture variant remain, and none
+responds to more episodes. \emph{Refutable by} showing the grid is not index-determined, or that
+these terms fall with budget.
+\item[C3. At the budgets in use, individual pairwise claims are decided by choices the evidence does
+not settle.] The protocol's own 72-episode budget resolves one or two of the four orderings it
+reports depending on the variance model; the observation unit moves two verdicts of eighteen; the
+pseudo-random-number lifecycle moves the agreement with the published table and decided one sign;
+and the controller operating point --- which the replay objective does not favour --- moves a
+verdict from abstention to a declaration. \emph{Refutable by} showing any of these choices is
+determined by the evidence, or that the verdicts are stable across them.
+\end{description}
+
+\noindent A set-valued verdict over the insensitive directions is the natural response to C1, and we
+report what it buys and where it stops rather than as a contribution in its own right: it is
+classical partial identification applied as an audit tool, it carries no coverage guarantee as we
+compute it (Sect.~\ref{subsec3_2}), and it does not protect against the operating-point choice of
+C3. The itemised findings behind the three claims follow; four conclusions of our own are withdrawn
+along the way and are listed in Sect.~\ref{subsec1_2}.
+
 \begin{enumerate}
 \item (Sect.~\ref{sec4}) A structural non-identifiability in demonstration-replay calibration,
 argued from the mechanism and measured on two independent simulator stacks: over the ranges the
@@ -1663,8 +1693,14 @@ analysis cannot diverge.}\label{fig6}
 \subsection{Stability on real replicate data}\label{subsec8_3}
 
 Synthetic ground truth cannot tell us whether the real surfaces resemble any of the four families.
-So we also score the criteria on real data by replication: a verdict is \emph{stable} if an
-independent replicate of the same evaluation reproduces it.
+So we also score the criteria on real data by re-evaluation: a verdict is \emph{stable} if a second
+evaluation of the same policy pair returns it. We avoid calling these ``independent replicates of
+the same evaluation'', because the two sides of a pair differ by more than sampling noise. Some
+differ in the policy seed set only; others differ in the simulator port or the inference-stack
+build, which Sect.~\ref{subsec5_5} shows is itself a parameter of consequence. What the table
+therefore measures is consistency under changes of seed, implementation and protocol together ---
+which is the practically relevant notion, and a weaker one than replication in the statistical
+sense.
 
 \begin{table*}[t]
 \caption{Verdict stability over the eight replicate pairs whose two sides enumerate the same
@@ -1786,15 +1822,21 @@ of 75 configurations each) does turn the verdict to abstention, $L = -0.067$ ---
 is of the second kind identified in Sect.~\ref{subsec7_5}. All twelve cells have \textbf{positive}
 point margins, from $+0.053$ to $+0.213$, and not one places \texttt{rt-1-15pct} above
 \texttt{rt-1-converged} with interval support. The bound reaches zero only through interval width at
-75 configurations per cell. Being precise about why: each cell's interval is a policy-noise interval
-over an enumerated 75-configuration sub-grid, so its width shrinks with additional \emph{runs} per
-configuration and not with additional episodes, and in the limit of many runs $L$ approaches the
-minimum of the twelve cell point margins, $+0.053$, rather than zero. That limit assumes the twelve
-point margins are themselves the quantities of interest --- with one run per configuration they
-carry binomial uncertainty we have not resolved, so $+0.053$ is where the bound tends under our
-estimand and not a measured endpoint. Either way the abstention is produced by interval width rather
-than by any cell disagreeing in sign, so by our own test in Sect.~\ref{subsec7_2} it reflects our
-power and not a parameter fact, and we decline to claim it as a success of the criterion.
+75 configurations per cell.
+
+We put this more carefully than we first did, because the asymptotic statement is easy to overclaim.
+Each cell's interval is a policy-noise interval over an enumerated 75-configuration sub-grid, so its
+width shrinks with additional \emph{runs} per configuration rather than with additional episodes. If
+the twelve observed point margins were the population quantities, $L$ would tend to their minimum,
+$+0.053$, and the abstention would dissolve. But they are not: with one run per configuration each
+cell margin carries binomial uncertainty we have not resolved, so twelve positive \emph{sample}
+means do not establish that all twelve population means are positive, and $+0.053$ is where the
+bound tends under our estimand rather than a measured endpoint. What we can say without that
+assumption is narrower and enough for the purpose: the abstention here is produced by interval width
+and not by any cell disagreeing in sign, so by our own test in Sect.~\ref{subsec7_2} it is at least
+partly our power rather than a demonstrated parameter fact, and we decline to claim it as a success
+of the criterion. Resolving whether it is \emph{only} power would need repeat runs per configuration
+in each cell, which we have not done.
 
 One objection should be met here rather than deferred. The published real margin is $-0.067$,
 which is of the same order as the policy-seed noise we measure in simulation, and the published
@@ -2119,8 +2161,16 @@ inherit it from a reference choice.
 Two properties of this construction carry the argument of Sect.~\ref{sec4}, and we state them with
 the measured numbers rather than in the limit.
 
-\paragraph{The invariant directions are retained, with differences six to ten orders of magnitude
-below the identified ones.}
+\paragraph{The insensitive directions move the loss by six to ten orders of magnitude less than the
+identified ones.}
+One clarification before the numbers, because two different tests appear in this paper and mixing
+them is easy. The set construction of Eq.~\eqref{eq:csetA} tests candidates against the grid's
+\emph{loss minimiser}, and under that test nominal is rejected (Sect.~\ref{subsec4_4}). The figures
+below are a different and narrower comparison: each insensitive direction against \emph{nominal},
+which measures the flatness of the loss along that direction and says nothing about whether nominal
+itself is retained by the set construction. It is not. What follows is therefore evidence about the
+directions, not about the point they pass through.
+
 If $L_m(z) = L_m(z')$ for every $m$, the paired differences vanish identically, the bootstrap
 distribution is a point mass at zero, and $\mathrm{lo}_{1-\alpha} = 0 \le 0$ irrespective of $\alpha$,
 $B$ or $M$. Our two directions approach that limit rather than attaining it, so what matters is the
@@ -2334,30 +2384,30 @@ $S_c$ and so was always computed correctly; it is the reporting that had to be c
 from the episode records by \texttt{scripts/make\_appendix\_c.py}.}\label{tabC1}
 \centering
 % Appendix C, generated by scripts/make_appendix_c.py -- do not hand-edit.
-\begin{tabular}{@{}llrrrr@{}}
+\begin{tabular}{@{}llrrllll@{}}
 \toprule
-Task & Condition & Configs & Covered & Runs (S/B) & $\Delta$ \\
+Task & Condition & Configs & Covered & Sets & Runs/config, S & Runs/config, B & $\Delta$ \\
 \midrule
-carrot & \texttt{nominal} & 24 & 24 & 2/2 & $-0.042$ \\
- & \texttt{iso\_x0.25} & 24 & 24 & 2/2 & $-0.083$ \\
- & \texttt{iso\_x4.0} & 24 & 24 & 2/2 & $-0.042$ \\
- & \texttt{force\_x0.5} & 24 & 24 & 2/2 & $-0.104$ \\
- & \texttt{fric\_x0.4} & 24 & 24 & 2/2 & $-0.062$ \\
- & \texttt{dens\_x0.5} & 24 & 24 & 2/2 & $-0.042$ \\
+carrot & \texttt{nominal} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $-0.042$ \\
+ & \texttt{iso\_x0.25} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $-0.083$ \\
+ & \texttt{iso\_x4.0} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $-0.042$ \\
+ & \texttt{force\_x0.5} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $-0.104$ \\
+ & \texttt{fric\_x0.4} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $-0.062$ \\
+ & \texttt{dens\_x0.5} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $-0.042$ \\
 \midrule
-spoon & \texttt{nominal} & 24 & 24 & 2/2 & $+0.396$ \\
- & \texttt{iso\_x0.25} & 24 & 24 & 2/2 & $+0.250$ \\
- & \texttt{iso\_x4.0} & 24 & 24 & 2/2 & $+0.354$ \\
- & \texttt{force\_x0.5} & 24 & 24 & 2/2 & $+0.375$ \\
- & \texttt{fric\_x0.4} & 24 & 24 & 2/2 & $+0.208$ \\
- & \texttt{dens\_x0.5} & 24 & 24 & 2/2 & $+0.250$ \\
+spoon & \texttt{nominal} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $+0.396$ \\
+ & \texttt{iso\_x0.25} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $+0.250$ \\
+ & \texttt{iso\_x4.0} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $+0.354$ \\
+ & \texttt{force\_x0.5} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $+0.375$ \\
+ & \texttt{fric\_x0.4} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $+0.208$ \\
+ & \texttt{dens\_x0.5} & 24 & 24 & 2/2 & 2$\times$24 & 2$\times$24 & $+0.250$ \\
 \midrule
-eggplant & \texttt{nominal} & 64 & 64 & 5/5 & $+0.064$ \\
- & \texttt{iso\_x0.25} & 64 & 64 & 5/5 & $+0.092$ \\
- & \texttt{iso\_x4.0} & 64 & 64 & 5/5 & $+0.174$ \\
- & \texttt{force\_x0.5} & 64 & 64 & 5/5 & $+0.106$ \\
- & \texttt{fric\_x0.4} & 64 & 64 & 5/5 & $+0.080$ \\
- & \texttt{dens\_x0.5} & 64 & 64 & 5/5 & $+0.128$ \\
+eggplant & \texttt{nominal} & 64 & 64 & 5/5 & 6$\times$32, 5$\times$32 & 6$\times$32, 5$\times$32 & $+0.055$ \\
+ & \texttt{iso\_x0.25} & 64 & 64 & 4/4 & 5$\times$48, 4$\times$16 & 5$\times$48, 4$\times$16 & $+0.092$ \\
+ & \texttt{iso\_x4.0} & 64 & 64 & 4/4 & 5$\times$48, 4$\times$16 & 5$\times$48, 4$\times$16 & $+0.174$ \\
+ & \texttt{force\_x0.5} & 64 & 64 & 5/5 & 5$\times$64 & 5$\times$64 & $+0.106$ \\
+ & \texttt{fric\_x0.4} & 64 & 64 & 5/5 & 6$\times$32, 5$\times$32 & 6$\times$32, 5$\times$32 & $+0.077$ \\
+ & \texttt{dens\_x0.5} & 64 & 64 & 4/4 & 5$\times$48, 4$\times$16 & 5$\times$48, 4$\times$16 & $+0.128$ \\
 \bottomrule
 \end{tabular}
 \end{table*}
