@@ -1,12 +1,12 @@
 {
   "run_meta": {
-    "started_utc": "2026-09-23T10:46:31Z",
+    "started_utc": "2026-09-23T11:27:11Z",
     "args": {
       "env_id": "PutSpoonOnTableClothInScene-v1",
       "policy_url": "http://127.0.0.1:8767",
       "policy_name": "octo-small",
       "preset": "fitted_v1",
-      "conditions": "fitted_force_x0.5",
+      "conditions": "fitted_dens_x0.5",
       "episodes": 24,
       "episode_offset": 0,
       "policy_seed_base": 20260918,
@@ -72,8 +72,8 @@
         1.0
       ],
       "startup_seconds": 30.38002184999641,
-      "step_count": 480,
-      "sessions": 5,
+      "step_count": 720,
+      "sessions": 11,
       "session_isolation": true
     },
     "nominal": {
@@ -113,11 +113,11 @@
       "history": 2
     },
     "conditions": {
-      "fitted_force_x0.5": {
+      "fitted_dens_x0.5": {
         "stiffness_scale": 2.0,
         "damping_scale": 0.5,
         "delay_steps": 1,
-        "force_scale": 0.5
+        "density_scale": 0.5
       }
     },
     "evidence": "exploratory_ms3_windows_platform_not_original_simpler",
@@ -126,7 +126,7 @@
     "episode_protocol": "run to max_episode_steps, success from final info; common episode_ids and policy seeds"
   },
   "conditions": {
-    "fitted_force_x0.5": {
+    "fitted_dens_x0.5": {
       "effective": {
         "arm_stiffness": [
           2339.5783439008396,
@@ -145,17 +145,17 @@
           134.75729466347707
         ],
         "arm_force_limit": [
+          200.0,
+          200.0,
           100.0,
           100.0,
-          50.0,
-          50.0,
-          50.0,
-          50.0
+          100.0,
+          100.0
         ],
         "gripper_force_limit": 60.0,
         "delay_steps": 1,
         "obj_friction": 0.5,
-        "density_scale": 1.0,
+        "density_scale": 0.5,
         "built_stiffness": [
           2339.5783439008396,
           1460.0,
@@ -173,20 +173,20 @@
           134.75729466347707
         ],
         "built_force_limit": [
+          200.0,
+          200.0,
           100.0,
           100.0,
-          50.0,
-          50.0,
-          50.0,
-          50.0
+          100.0,
+          100.0
         ],
         "control_freq": 5,
         "sim_freq": 500,
         "horizon": 60
       },
       "episodes": 24,
-      "successes": 5,
-      "success_rate": 0.20833333333333334,
+      "successes": 10,
+      "success_rate": 0.4166666666666667,
       "episode_ids": [
         0,
         1,

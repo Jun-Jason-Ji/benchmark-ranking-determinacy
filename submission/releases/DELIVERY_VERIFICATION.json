@@ -1,0 +1,16 @@
+[
+  {
+    "file": "2026-09-23_manuscript.zip",
+    "files": 25,
+    "bytes": 1064126,
+    "sha256": "f42f2b5ed6461d27abcbe11d086ac400291e8675027aeeff1a177dee4e1fbd37",
+    "verified": true
+  },
+  {
+    "file": "2026-09-23_companion_data_code.zip",
+    "files": 16817,
+    "bytes": 70836786,
+    "sha256": "1c1cbec92336309b0bbc9b91bc8ae0604322412d2eb9c7d47109123817fa2b7c",
+    "verified": true
+  }
+]

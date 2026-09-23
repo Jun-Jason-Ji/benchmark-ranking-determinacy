@@ -18,3 +18,13 @@ E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocch
 [octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 12 success=False steps=60 inf=5.2s sim=1.9s total=8.6s
 [octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 13 success=False steps=60 inf=6.3s sim=2.3s total=10.2s
 [octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 14 success=True steps=60 inf=6.2s sim=2.0s total=9.7s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 15 success=False steps=60 inf=6.8s sim=2.4s total=10.9s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 16 success=True steps=60 inf=6.0s sim=2.2s total=9.9s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 17 success=False steps=60 inf=6.6s sim=2.2s total=10.4s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 18 success=False steps=60 inf=6.1s sim=2.4s total=10.1s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 19 success=True steps=60 inf=6.1s sim=2.3s total=10.1s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 20 success=False steps=60 inf=6.2s sim=2.2s total=10.1s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 21 success=True steps=60 inf=6.2s sim=2.2s total=10.0s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 22 success=True steps=60 inf=6.1s sim=2.2s total=9.9s
+[octo-small|PutSpoonOnTableClothInScene-v1|fitted_iso_x0.25] ep 23 success=False steps=60 inf=5.6s sim=2.4s total=9.7s
+== fitted_iso_x0.25: 8/24 success

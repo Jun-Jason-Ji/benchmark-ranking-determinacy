@@ -206,7 +206,14 @@ def paired_shift(nom_sets, fit_sets, env, n_cfg):
     if len(per) >= 2:
         m = float(np.mean(per))
         seb = float(np.std(per, ddof=1)) / np.sqrt(len(per))
-        t = {2: 4.302653, 3: 3.182446, 4: 2.776445}.get(len(per) - 1, 1.96)
+        # Student t, two-sided 97.5%. df = 1 matters: spoon has two seed sets, and an earlier
+        # version of this dict started at df = 2 and fell back to the normal quantile 1.96, which
+        # understated that task's block half-width by a factor of six.
+        t = {1: 12.706205, 2: 4.302653, 3: 3.182446, 4: 2.776445,
+             5: 2.570582, 6: 2.446912}.get(len(per) - 1)
+        if t is None:
+            raise RuntimeError(f"no t quantile for df={len(per) - 1}; add it rather than "
+                               "falling back to the normal quantile")
         out[f"seed sets as blocks, df={len(per) - 1}"] = (m, m - t * seb, m + t * seb)
         out["_per_set"] = per
     return out
@@ -331,11 +338,24 @@ def main():
                              f"{'yes' if lo > 0 or hi < 0 else 'no'} |")
                 L.append("")
                 if per:
+                    same = all(v > 0 for v in per) or all(v < 0 for v in per)
+                    ivs = [(d, lo, hi) for (d, lo, hi) in ps.values()]
+                    n_zero = sum(1 for _, lo, hi in ivs if lo <= 0 <= hi)
+                    if n_zero == len(ivs):
+                        res = ("Every model above contains zero: the change in $\\Delta$ is not "
+                               "resolved at this budget under any of them")
+                    elif n_zero == 0:
+                        res = ("No model above contains zero: the change in $\\Delta$ is resolved "
+                               "under every sampling model we report")
+                    else:
+                        res = (f"{len(ivs) - n_zero} of the {len(ivs)} models above exclude zero "
+                               "and the rest do not, so whether the change is resolved depends on "
+                               "the sampling model")
                     L += ["Per seed set the shift is "
                           + ", ".join(f"${v:+.3f}$" for v in per)
-                          + ", so the sets do not agree on its direction. Every model above "
-                            "contains zero: the change in $\\Delta$ is not resolved at this "
-                            "budget under any of them, and none is an exact finite-sample "
+                          + (", and the sets agree on its direction. " if same else
+                             ", so the sets do not agree on its direction. ")
+                          + res + ", and none of these intervals is an exact finite-sample "
                             "guarantee.", ""]
 
     if summary:

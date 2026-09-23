@@ -21,16 +21,34 @@ The shift itself, paired per configuration, under each sampling model. The first
 | configurations as sampling unit (sensitivity) | +0.0312 | [-0.0639, +0.1264] | no |
 | seed sets as blocks, df=2 (sensitivity) | +0.0312 | [-0.3004, +0.3629] | no |
 
-Per seed set the shift is $+0.172$, $+0.016$, $-0.094$, so the sets do not agree on its direction. Every model above contains zero: the change in $\Delta$ is not resolved at this budget under any of them, and none is an exact finite-sample guarantee.
+Per seed set the shift is $+0.172$, $+0.016$, $-0.094$, so the sets do not agree on its direction. Every model above contains zero: the change in $\Delta$ is not resolved at this budget under any of them, and none of these intervals is an exact finite-sample guarantee.
 
 ## spoon (24 configurations, 2 seed sets)
 
-**Incomplete.** Episodes present per seed set and policy: A'/small 24/24, A'/base 1/24, C/small 24/24, C/base 0/24. No verdict reported; configurations are covered in a deterministic order, so a partial slice is a systematic subset of object poses rather than a random one.
+| operating point | $\Delta$ | point 95% | point verdict | set bound | conditions | set verdict |
+|---|---:|---|---|---|---:|---|
+| nominal (shipped) | +0.3958 | [+0.2275, +0.5642] | octo-small> | [+0.0351, +0.5642] | 6 | octo-small> |
+| fitted (minimiser) | +0.1250 | [-0.0041, +0.2541] | abstain | [-0.1264, +0.3195] | 6 | abstain |
+
+- $\Delta$ shifts by **-0.2708** between the two operating points.
+- Point verdict **flips**; set verdict **flips**.
+
+The shift itself, paired per configuration, under each sampling model. The first is the primary one because it matches this paper's estimand: the configuration grid is enumerated and fixed, so what is random is the policy seed within a configuration.
+
+| sampling model | $D$ | 95% | resolved? |
+|---|---:|---|---|
+| fixed census, pairing kept within seed set **(primary)** | -0.2708 | [-0.4580, -0.0837] | yes |
+| fixed census, four arms independent (sensitivity) | -0.2708 | [-0.4830, -0.0587] | yes |
+| configurations as sampling unit (sensitivity) | -0.2708 | [-0.4991, -0.0425] | yes |
+| seed sets as blocks, df=1 (sensitivity) | -0.2708 | [-0.5355, -0.0061] | yes |
+
+Per seed set the shift is $-0.250$, $-0.292$, and the sets agree on its direction. No model above contains zero: the change in $\Delta$ is resolved under every sampling model we report, and none of these intervals is an exact finite-sample guarantee.
 
 ## Across tasks
 
 | task | $\Delta$ shift | point verdict | set verdict |
 |---|---:|---|---|
 | eggplant | +0.0313 | flips | holds |
+| spoon | -0.2708 | flips | flips |
 
 The union bound cannot protect against a change of operating point, and it is worth being clear that this is structural rather than a shortcoming of the particular fibre. The bound ranges over the directions the calibration data leave \emph{unconstrained}; nominal and the minimiser differ in the gain ratio and the execution delay, which the data \emph{identify}. A union over the invisible directions is silent about a move along an identified one by construction.

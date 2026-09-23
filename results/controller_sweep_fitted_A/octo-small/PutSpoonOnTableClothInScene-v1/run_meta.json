@@ -1,11 +1,11 @@
 {
-  "started_utc": "2026-09-23T10:54:33Z",
+  "started_utc": "2026-09-23T11:27:11Z",
   "args": {
     "env_id": "PutSpoonOnTableClothInScene-v1",
     "policy_url": "http://127.0.0.1:8767",
     "policy_name": "octo-small",
     "preset": "fitted_v1",
-    "conditions": "fitted_iso_x0.25",
+    "conditions": "fitted_dens_x0.5",
     "episodes": 24,
     "episode_offset": 0,
     "policy_seed_base": 20260918,
@@ -71,8 +71,8 @@
       1.0
     ],
     "startup_seconds": 30.38002184999641,
-    "step_count": 600,
-    "sessions": 7,
+    "step_count": 720,
+    "sessions": 11,
     "session_isolation": true
   },
   "nominal": {
@@ -112,10 +112,11 @@
     "history": 2
   },
   "conditions": {
-    "fitted_iso_x0.25": {
-      "stiffness_scale": 0.5,
-      "damping_scale": 0.125,
-      "delay_steps": 1
+    "fitted_dens_x0.5": {
+      "stiffness_scale": 2.0,
+      "damping_scale": 0.5,
+      "delay_steps": 1,
+      "density_scale": 0.5
     }
   },
   "evidence": "exploratory_ms3_windows_platform_not_original_simpler",

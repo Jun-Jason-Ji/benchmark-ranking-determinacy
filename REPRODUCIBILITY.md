@@ -32,9 +32,27 @@ rests on `runs.jsonl`.
 release has added evaluation data, so the counts above and the header of `SHA256SUMS.txt` are
 properties of a specific tag and the versions are no longer interchangeable. If a sweep is still
 running when you read this, the working tree will hold more records than the manifest lists and
-`sha256sum -c` will report those as missing from the manifest rather than as corrupt. Regenerate the
-manifest only at a freeze point, and cite the version DOI for the numbers in a paper rather than the
-concept DOI.
+`sha256sum -c` checks only the paths actually listed: it can detect a missing or changed listed
+file, but does not detect extra, unlisted files. Checking completeness requires a separate inventory
+comparison. Regenerate the manifest only at a freeze point, and cite the version DOI for the numbers
+in a paper rather than the concept DOI.
+
+### Frozen review packages prepared on 2026-09-23
+
+The submission closeout prepares independent, write-once manuscript and companion data/code
+snapshots under `submission/releases/`. Their own manifests and verifiers, rather than the older
+root `SHA256SUMS.txt`, identify the exact included bytes. The current companion includes both
+completed eggplant and spoon censuses at nominal and fitted operating points, with all six
+conditions at each point. Its capture guard verifies every expected episode ID exactly once and
+matches policy seeds between the two operating points. Earlier eggplant-only review snapshots
+are superseded for the current two-task manuscript. The current manifest records its precise
+scope and exclusions; its README gives the verification command.
+
+These locally prepared review snapshots do not assert that the current evidence has already been
+deposited in the public archive. The version-specific DOI for the final snapshot remains a separate
+publication step; the concept DOI and earlier versions alone do not establish that the latest
+results are publicly archived. `submission/autonomous_robots/REVIEW_EVIDENCE_INDEX.md` maps the
+main claims to their analyses, and `SUBMISSION_CHECKLIST.md` records the current release status.
 
 ## Regenerating the tables and figures
 

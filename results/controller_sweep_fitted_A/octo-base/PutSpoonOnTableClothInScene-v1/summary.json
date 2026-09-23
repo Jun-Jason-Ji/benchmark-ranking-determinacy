@@ -1,12 +1,12 @@
 {
   "run_meta": {
-    "started_utc": "2026-09-23T10:52:28Z",
+    "started_utc": "2026-09-23T11:42:21Z",
     "args": {
       "env_id": "PutSpoonOnTableClothInScene-v1",
       "policy_url": "http://127.0.0.1:8768",
       "policy_name": "octo-base",
       "preset": "fitted_v1",
-      "conditions": "fitted",
+      "conditions": "fitted_dens_x0.5",
       "episodes": 24,
       "episode_offset": 0,
       "policy_seed_base": 20260918,
@@ -72,8 +72,8 @@
         1.0
       ],
       "startup_seconds": 29.723933556000702,
-      "step_count": 360,
-      "sessions": 3,
+      "step_count": 720,
+      "sessions": 11,
       "session_isolation": true
     },
     "nominal": {
@@ -113,10 +113,11 @@
       "history": 2
     },
     "conditions": {
-      "fitted": {
+      "fitted_dens_x0.5": {
         "stiffness_scale": 2.0,
         "damping_scale": 0.5,
-        "delay_steps": 1
+        "delay_steps": 1,
+        "density_scale": 0.5
       }
     },
     "evidence": "exploratory_ms3_windows_platform_not_original_simpler",
@@ -125,7 +126,7 @@
     "episode_protocol": "run to max_episode_steps, success from final info; common episode_ids and policy seeds"
   },
   "conditions": {
-    "fitted": {
+    "fitted_dens_x0.5": {
       "effective": {
         "arm_stiffness": [
           2339.5783439008396,
@@ -154,7 +155,7 @@
         "gripper_force_limit": 60.0,
         "delay_steps": 1,
         "obj_friction": 0.5,
-        "density_scale": 1.0,
+        "density_scale": 0.5,
         "built_stiffness": [
           2339.5783439008396,
           1460.0,
@@ -184,8 +185,8 @@
         "horizon": 60
       },
       "episodes": 24,
-      "successes": 3,
-      "success_rate": 0.125,
+      "successes": 6,
+      "success_rate": 0.25,
       "episode_ids": [
         0,
         1,

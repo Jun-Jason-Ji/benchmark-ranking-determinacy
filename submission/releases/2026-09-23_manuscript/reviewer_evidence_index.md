@@ -1,0 +1,71 @@
+# Review evidence index
+
+This index is a navigation aid for the frozen manuscript and its companion data/code snapshot.
+It does not add a claim, validate a real-world ordering, or replace the limitations in the paper.
+Use the companion snapshot's inventory and checksums to identify the inputs; a public concept DOI
+or an earlier archived version does not establish that it contains the same records.
+
+## What the paper establishes
+
+| Claim | Measurement and scope | Analysis entry point | Boundary |
+|---|---|---|---|
+| Calibration and policy-comparison sensitivity differ | Octo-small versus Octo-base; MS3 eggplant, all 64 configurations, five seed sets. Estimated gaps range 0.0546875–0.17421875, a span of 0.11953125. The table's replay bounds are from MS2, explicitly identified separately. | `scripts/make_evidence_chain.py`; `results/EVIDENCE_CHAIN.md`; manuscript label `tab6a` | Both nominal and set-valued rules abstain on this pair. A span of point estimates is not a paired-effect confidence interval or a real-world ranking reversal. |
+| The finite evaluation population matters | Task grids contain 24–300 configurations; two ports can enumerate different populations. Repeated policy evaluations are distinguished from configuration sampling. | `scripts/task_configs.py`; Section 5; configuration/provenance records | A census removes configuration sampling error only for the stated finite population, not policy randomness or deployment uncertainty. |
+| Declaration counts depend on inference scope | Across 17 bridge pairs, unadjusted point/set counts are 11/10; Holm-adjusted counts are 9/5, with four additional set abstentions. | `scripts/analyze_multiplicity.py`; `results/MULTIPLICITY.md` | Input p values rely on the stated normal approximation and variance treatment. Four abstentions are not four confirmed error corrections. |
+| Re-calibration can change a single-setting verdict | Both operating points have all six eggplant conditions: nominal envelope [-0.0348, +0.3002], fitted envelope [-0.0293, +0.2186]. Both abstain. The point difference shifts by about +0.0313. | `scripts/analyze_fitted_point.py`; `results/FITTED_POINT.md`; manuscript label `tab10` | The primary paired-shift interval includes zero. The 98 same-source demonstrations are not certified as the original fitting sample. |
+| The published budget need not resolve each reported ordering | Correct reference RNG lifecycle; 72 episodes per cell; one or two of four orderings resolved depending on the variance model. | `scripts/analyze_official_protocol.py`; `results/controller_sweep_ms2_official_stream/` | A protocol reproduction and budget diagnosis, not a verified real-robot reversal. |
+
+The separate torque comparison across four Octo/OpenVLA pairs has shifts 0.104–0.146
+(mean 0.121). It must not be substituted for the effect on the first row's Octo/Octo pair.
+The fitted-spoon extension is not evidence for any current manuscript result and is excluded
+from the frozen companion snapshot even if it finishes later in the working tree.
+
+## Reproduce the main decision tables
+
+From the root of the companion data/code snapshot, with the recorded Python analysis dependencies:
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE = '1'
+python scripts/reproduce_review_evidence.py --out ../review-reproduction
+```
+
+On POSIX shells, prefix the Python command with `PYTHONDONTWRITEBYTECODE=1` instead. This environment
+setting is inherited by the analysis subprocesses and prevents cache files from changing the
+verified snapshot. Alternatively, run in a working copy. The output path must be new.
+The command runs five existing CPU analyses, records their source and
+output hashes, writes separate logs and stops on failure. It does not run policies, launch services,
+download checkpoints or write to `results/`. `FITTED_POINT.md` may identify the excluded spoon
+extension as unavailable; the manuscript's operating-point result is the completed eggplant section.
+See `REPRODUCIBILITY.md` for further analyses and the original evaluation instructions.
+
+## Interpret the statistical statements
+
+For a fixed finite parameter set and valid equal-tailed 95% component intervals, a false declaration
+in a pre-specified direction has probability at most 0.025. A rule that may declare either direction
+has any-false-declaration probability at most 0.05. The outer interval covers the true range over
+that finite set with probability at least 0.95. These statements do not cover unsampled parameter
+values, invalidate the paper's variance caveats, or confer a sim-to-real guarantee.
+
+The proposed physical validation is an unexecuted plan. Its sample-size illustration gives power
+approximately 0.565/0.852/0.989 at 200/400/800 trials **per policy**, under the explicitly stated
+independent-Bernoulli and normal-approximation assumptions. It is not evidence that a future result
+will reverse a simulated ranking.
+
+## Release boundary
+
+The manuscript snapshot contains the PDF, editable sources, bibliography, figures, cover letter,
+interface declarations and this index. The companion snapshot separately contains the selected
+records, replay trajectories, scripts and dependencies documented by its manifest. Its inclusion of
+historical or quarantined records is for traceability, not permission to treat every record as an
+analysis observation. The existing scripts define filtering and completeness rules.
+
+The final companion snapshot contains 16,812 selected source files (16,817 files including package
+metadata), and was verified again after the five analyses were reproduced. Its identifiers are:
+
+- `DATA_SHA256SUMS.txt`: `2e4be93048b1088482cb1440038e4a81e597bab77713813c36b6f74e8f33c712`
+- `REVIEW_PACKAGE_SHA256SUMS.txt`: `4552b08259938c1f9adf492a8661237d6f4bd4d7b280814ee9137926adf93eb6`
+
+Current public deposition of this exact snapshot has not been verified. Authors can provide both
+review packages as submission materials or deposit them separately and record the resulting
+version-specific identifier. The official annual journal classification required by the institution
+is also an author-side eligibility check; this package does not assert that it has been verified.
