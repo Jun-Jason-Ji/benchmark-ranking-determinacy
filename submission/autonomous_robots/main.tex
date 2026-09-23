@@ -2368,13 +2368,19 @@ the configuration grid, since it is finite and the marginal episode past it carr
 Report which implementation build and which visual variant a number came from: the aggregation over
 variants is part of the documented protocol, but a number reported without naming the variant cannot
 be told apart from a mean over all four, and on our census those differ by up to 0.227.
-Report the operating point \emph{and how it stands against the calibration objective}, which costs
-nothing and which no suite we know of does. A benchmark evaluated at a setting a re-application of
-its own replay protocol disfavours is not thereby wrong, but a reader cannot tell whether the verdict computed there is the
-verdict at the setting that data prefer --- and on the one pair where we checked, it is not. The
-direction is worth stating precisely: nominal abstains and the fitted point declares, so what moved
-was not a declaration failing to survive but an abstention becoming one, on a change in
-$\hat\Delta$ that is itself unresolved (Sect.~\ref{subsec7_7}). No criterion defined over the calibration-invisible directions can supply
+Report the operating point \emph{and how it stands against the calibration objective}. This is the
+recommendation we would most like a suite to adopt, it costs nothing, and no suite we know of does
+it: publish the parameter setting the rates were computed at, the loss that setting achieves on the
+calibration data, and the best loss found over whatever domain was searched. Three numbers. A
+benchmark whose operating point is not the loss minimiser is not thereby wrong --- the choice may
+rest on stability, on runtime, or on evidence outside the replay set, and our own re-application of
+the protocol used demonstrations we cannot certify as the fitted sample (Sect.~\ref{subsec4_3}). What
+a reader cannot currently do is \emph{tell}, and that is the defect: with those three numbers a
+reader can see whether the reported verdict is the verdict at a calibration-preferred setting, and
+without them cannot. On the one pair where we checked, it is not: nominal abstains and the fitted
+point declares, so what moved was an abstention becoming a declaration rather than a declaration
+failing to survive, on a change in $\hat\Delta$ that is itself unresolved
+(Sect.~\ref{subsec7_7}). No criterion defined over the calibration-invisible directions can supply
 this, because the discrepancy lies in the directions the calibration \emph{does} constrain.
 Spend budget on seeds before episodes --- but only for policies that consume a seed. For a
 deterministically decoding policy the seed axis is degenerate (Sect.~\ref{subsec5_3}), a census is
