@@ -10,3 +10,17 @@ E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocch
 [octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 4 success=False steps=120 inf=11.2s sim=3.9s total=18.1s
 [octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 5 success=True steps=120 inf=11.7s sim=4.0s total=18.5s
 [octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 6 success=False steps=120 inf=11.2s sim=4.2s total=42.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 7 success=True steps=120 inf=11.7s sim=4.9s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 8 success=True steps=120 inf=11.3s sim=3.7s total=18.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 9 success=False steps=120 inf=12.3s sim=3.8s total=19.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 10 success=True steps=120 inf=12.5s sim=4.5s total=20.4s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 11 success=False steps=120 inf=11.8s sim=6.0s total=21.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 12 success=False steps=120 inf=11.9s sim=4.1s total=19.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 13 success=True steps=120 inf=11.6s sim=4.2s total=18.9s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 14 success=False steps=120 inf=11.8s sim=4.6s total=19.8s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 15 success=False steps=120 inf=11.8s sim=5.1s total=20.2s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 16 success=True steps=120 inf=12.1s sim=4.1s total=19.5s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 17 success=True steps=120 inf=12.6s sim=3.9s total=19.6s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 18 success=True steps=120 inf=13.1s sim=5.4s total=21.7s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 19 success=False steps=120 inf=12.7s sim=4.9s total=21.0s
+[octo-base|PutEggplantInBasketScene-v1|fitted_dens_x0.5] ep 20 success=True steps=120 inf=12.7s sim=4.1s total=20.2s
