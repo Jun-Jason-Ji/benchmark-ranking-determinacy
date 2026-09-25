@@ -10,6 +10,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 from matplotlib.ticker import FixedLocator, NullLocator, FixedFormatter  # noqa: E402
+from paper_labels import condition_label  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "results/figures"
@@ -49,43 +50,72 @@ def success(policy, env, cond):
 
 # ---------------- Figure 1: replay identifiability ----------------
 def fig_replay():
-    fig, axes = plt.subplots(1, 3, figsize=(6.85, 2.9))  # 174 mm journal full-column width
+    # All panels show paired changes, not absolute replay loss. Sharing the y-axis
+    # makes the near-insensitivity of common gain scaling directly comparable.
+    fig, axes = plt.subplots(1, 3, figsize=(6.85, 2.85), sharey=True)
     nom = replay_err("s1_d1_delay0")
-    # (a) ratio curve at scale 1 (damping 1): s in {0.5,0.7,1,1.4,2}
-    ratios, means, los, his = [], [], [], []
-    for s in [0.5, 0.7, 1, 1.4, 2]:
-        e = replay_err(f"s{s:g}_d1_delay0"); common = sorted(set(e) & set(nom))
-        m, lo, hi = boot([e[i] - nom[i] for i in common]); ratios.append(s); means.append(m); los.append(lo); his.append(hi)
-    ax = axes[0]
-    ax.errorbar(ratios, means, yerr=[np.array(means) - np.array(los), np.array(his) - np.array(means)], fmt="o-", color="#1f77b4", capsize=3)
-    ax.axhline(0, color="k", lw=0.8); ax.set_xscale("log"); ax.xaxis.set_major_locator(FixedLocator(ratios)); ax.xaxis.set_major_formatter(FixedFormatter([f"{r:g}" for r in ratios])); ax.xaxis.set_minor_locator(NullLocator())
-    ax.set_xlabel(r"ratio $d/k$ ($\times$ nominal)", fontsize=8)
-    ax.set_ylabel(r"$\Delta$ replay error vs nominal", fontsize=8)
-    ax.set_title("(a) ratio", fontsize=8.5)
-    # (b) scale axis at ratio 1: s=d in {0.5,0.7,1,1.4,2}
-    ax = axes[1]
-    scales, means2, los2, his2 = [], [], [], []
-    for s in [0.5, 0.7, 1, 1.4, 2]:
-        e = replay_err(f"s{s:g}_d{s:g}_delay0"); common = sorted(set(e) & set(nom))
-        m, lo, hi = boot([e[i] - nom[i] for i in common]); scales.append(s); means2.append(m); los2.append(lo); his2.append(hi)
-    ax.errorbar(scales, means2, yerr=[np.array(means2) - np.array(los2), np.array(his2) - np.array(means2)], fmt="s-", color="#d62728", capsize=3)
-    ax.axhline(0, color="k", lw=0.8); ax.set_xscale("log"); ax.xaxis.set_major_locator(FixedLocator(scales)); ax.xaxis.set_major_formatter(FixedFormatter([f"{r:g}" for r in scales])); ax.xaxis.set_minor_locator(NullLocator())
-    ax.set_ylim(axes[0].get_ylim())
-    ax.set_xlabel(r"common scale ($\times$ nominal)", fontsize=8)
-    ax.set_title("(b) common scale", fontsize=8.5)
-    # (c) delay
-    ax = axes[2]
-    vals = []
-    for cond, lab in [("s1_d1_delay1", "delay 1 step")]:
-        e = replay_err(cond); common = sorted(set(e) & set(nom)); vals.append((lab,) + boot([e[i] - nom[i] for i in common]))
-    lab, m, lo, hi = vals[0]
-    ax.bar([0], [m], yerr=[[m - lo], [hi - m]], color="#2ca02c", capsize=4, width=0.5); ax.set_xticks([0]); ax.set_xticklabels([lab])
-    ax.axhline(0, color="k", lw=0.8); ax.set_ylim(axes[0].get_ylim())
-    ax.set_title("(c) delay", fontsize=8.5)
-    # No in-figure title: the journal forbids titles inside figure files, and the caption carries it.
-    for a in axes:
-        a.tick_params(labelsize=8)
-    fig.tight_layout(); fig.savefig(OUT / "fig_replay_identifiability.png", dpi=180, bbox_inches="tight"); plt.close(fig)
+
+    def paired_change(cond):
+        values = replay_err(cond)
+        common = sorted(set(values) & set(nom))
+        return boot([values[i] - nom[i] for i in common])
+
+    def draw_points(ax, x, stats, color, *, connect=True):
+        means, lower, upper = np.asarray(stats).T
+        ax.errorbar(x, means, yerr=[means - lower, upper - means],
+                    fmt="o-" if connect else "o", color=color,
+                    capsize=2.5, markersize=4.5, linewidth=1.2, zorder=3)
+        # The reference compared with itself is exactly zero by definition.
+        reference_x = 1 if connect else 0
+        ax.plot(reference_x, 0, "o", color=color, markerfacecolor="white",
+                markersize=4.5, markeredgewidth=1.2, zorder=4)
+
+    # (a) d/k: damping is fixed at 1; stiffness scale s gives d/k = 1/s.
+    settings = [0.5, 0.7, 1, 1.4, 2]
+    ratio_points = sorted((1 / s, paired_change(f"s{s:g}_d1_delay0")) for s in settings)
+    ratios, stats = zip(*ratio_points)
+    draw_points(axes[0], ratios, stats, "#1f77b4")
+    axes[0].set_xscale("log")
+    axes[0].xaxis.set_major_locator(FixedLocator(ratios))
+    axes[0].xaxis.set_major_formatter(FixedFormatter([f"{r:.3g}" for r in ratios]))
+    axes[0].xaxis.set_minor_locator(NullLocator())
+    axes[0].set_xlabel("Ratio $d/k$ ($\\times$ nominal)\nLog scale", fontsize=8)
+    axes[0].set_ylabel("Replay-loss change from nominal", fontsize=8)
+    axes[0].set_title("(a) Gain ratio", fontsize=8.5)
+
+    # (b) Equal stiffness and damping multipliers leave d/k unchanged.
+    scale_stats = [paired_change(f"s{s:g}_d{s:g}_delay0") for s in settings]
+    draw_points(axes[1], settings, scale_stats, "#c77400")
+    axes[1].set_xscale("log")
+    axes[1].xaxis.set_major_locator(FixedLocator(settings))
+    axes[1].xaxis.set_major_formatter(FixedFormatter([f"{s:g}" for s in settings]))
+    axes[1].xaxis.set_minor_locator(NullLocator())
+    axes[1].set_xlabel("Common gain scale ($\\times$ nominal)\nLog scale", fontsize=8)
+    axes[1].set_title("(b) Common gain scaling", fontsize=8.5)
+    maximum = max(abs(row[0]) for row in scale_stats)
+    mantissa, exponent = f"{maximum:.1e}".split("e")
+    axes[1].text(0.5, 0.58, "Largest absolute mean change\n"
+                 + rf"${mantissa} \times 10^{{{int(exponent)}}}$",
+                 transform=axes[1].transAxes, ha="center", va="center", fontsize=8)
+
+    # (c) Include the actual zero-delay reference instead of an isolated bar.
+    delay_stats = [paired_change("s1_d1_delay0"), paired_change("s1_d1_delay1")]
+    draw_points(axes[2], [0, 1], delay_stats, "#2a8336", connect=False)
+    axes[2].set_xticks([0, 1])
+    axes[2].set_xlim(-0.3, 1.3)
+    axes[2].set_xlabel("Execution delay (steps)", fontsize=8)
+    axes[2].set_title("(c) Execution delay", fontsize=8.5)
+
+    for ax in axes:
+        ax.axhline(0, color="#777777", linewidth=0.7, zorder=1)
+        ax.set_ylim(-0.00065, 0.011)
+        ax.tick_params(labelsize=8)
+    for ax in axes[1:]:
+        ax.tick_params(axis="y", left=False, labelleft=False)
+        ax.spines["left"].set_visible(False)
+    fig.subplots_adjust(left=0.105, right=0.985, bottom=0.24, top=0.88, wspace=0.26)
+    fig.savefig(OUT / "fig_replay_identifiability.png", dpi=180, bbox_inches="tight")
+    plt.close(fig)
 
 
 # ---------------- Figure 2: Δ by condition per task with compatible-set verdict ----------------
@@ -161,10 +191,10 @@ def fig_delta():
                   f"runs={runs[nom][0]}/{runs[nom][1]}")
         ax.set_title(name, fontsize=9)
         ax.set_xticks(x)
-        ax.set_xticklabels([c.replace("_", " ") for c in labels], rotation=90, ha="center", fontsize=8)
+        ax.set_xticklabels([condition_label(c) for c in labels], rotation=90, ha="center", fontsize=8)
         ax.tick_params(axis="y", labelsize=8)
         ax.set_ylim(-0.35, 0.65)
-    axes[0].set_ylabel(r"$\Delta$ = small $-$ base (probability points)", fontsize=8.5)
+    axes[0].set_ylabel(r"$\Delta$ (S $-$ B; probability points)", fontsize=8.5)
     handles = [plt.Line2D([], [], marker="o", ls="", color=c, label=k) for k, c in COLORS.items()
                if k in {CLASS[c] for c in conds}]
     axes[-1].legend(handles=handles, loc="upper right", fontsize=8, frameon=False)

@@ -1,0 +1,114 @@
+{
+  "started_utc": "2026-09-24T18:05:23Z",
+  "protocol_version": "V3-controlled-initialization",
+  "args": {
+    "policy_name": "octo-base",
+    "env_id": "PutSpoonOnTableClothInScene-v1",
+    "policy_url": "http://127.0.0.1:8768",
+    "policy_seed_base": 809300400,
+    "conditions": "fitted",
+    "episodes": 24,
+    "episode_offset": 0
+  },
+  "variant_config": {
+    "ensemble": true,
+    "exec_horizon": 1,
+    "history": 2
+  },
+  "policy_server": {
+    "model": "octo-base",
+    "hf_id": "hf://rail-berkeley/octo-base",
+    "jax": "0.5.3",
+    "flax": "0.10.4",
+    "tensorflow": "2.18.0",
+    "numpy": "2.0.2",
+    "python": "3.11.16",
+    "jax_backend": "gpu",
+    "load_seconds": 13.112561459987774,
+    "jit_warmup_seconds": 14.001424022004358,
+    "rotation_convention": "transforms3d.euler2axangle(roll,pitch,yaw) static xyz",
+    "variants": "reset config: ensemble(bool), exec_horizon(int), history(int), policy_setup(str)",
+    "policy_setups": {
+      "widowx_bridge": {
+        "sticky_gripper_num_repeat": 1
+      },
+      "google_robot": {
+        "sticky_gripper_num_repeat": 15
+      }
+    },
+    "action_mean": [
+      0.00021160596224945039,
+      0.00012613728176802397,
+      -0.00017021960229612887,
+      -0.0001506186235928908,
+      -0.00023830769350752234,
+      0.0002564573078416288,
+      0.0
+    ],
+    "action_std": [
+      0.009637207724153996,
+      0.013506603427231312,
+      0.012518610805273056,
+      0.028067905455827713,
+      0.03016904927790165,
+      0.07632624357938766,
+      1.0
+    ],
+    "startup_seconds": 29.723933556000702,
+    "step_count": 549,
+    "sessions": 10,
+    "session_isolation": true
+  },
+  "compatibility_adapter": {
+    "ik": "upstream_torch_jacobian_solver_on_cpu",
+    "pci_parser": "preserve_full_pci_address",
+    "benchmark_equivalent": false
+  },
+  "versions": {
+    "sapien": "3.0.3",
+    "mani_skill": "3.0.1",
+    "torch": "2.7.1+cu128",
+    "gymnasium": "1.3.0",
+    "numpy": "1.26.4"
+  },
+  "nominal": {
+    "arm_stiffness": [
+      1169.7891719504198,
+      730.0,
+      808.4601346394447,
+      1229.1299089624076,
+      1272.2760456418862,
+      1056.3326605132252
+    ],
+    "arm_damping": [
+      330.0,
+      180.0,
+      152.12036565582588,
+      309.6215302722146,
+      201.04998711007383,
+      269.51458932695414
+    ],
+    "arm_force_limit": [
+      200,
+      200,
+      100,
+      100,
+      100,
+      100
+    ],
+    "gripper_stiffness": 1000,
+    "gripper_damping": 200,
+    "gripper_force_limit": 60
+  },
+  "initialization": "fresh environment; nominal settling; then arm condition applied without physics advance",
+  "render_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "sim_backend": "cpu",
+  "render_backend": "pci:0000:01:00.0",
+  "source_sha256": {
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/execute_cell.py": "0a289af12b33dc2f45f509123c9898bc402324b2181b994bfc9cc2f43a5b9980",
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/fresh_reset.py": "eaf31d93d9ab7486b9b88ab0c486b4407d5878b01df9e9e7967c895a98a35fa1",
+    "scripts/controller_sweep.py": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+    "scripts/octo_policy_server.py": "fc7ad4acd0c27f621d9a177f5162060ecc8d9e96d5d23b9328debb1f2325bde3",
+    "scripts/ms3_windows_compat.py": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194"
+  }
+}

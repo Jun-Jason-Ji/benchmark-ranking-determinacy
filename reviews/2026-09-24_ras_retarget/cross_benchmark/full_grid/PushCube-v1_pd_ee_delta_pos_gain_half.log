@@ -1,0 +1,38 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+{
+  "experiment": "independent_native_task_pilot",
+  "args": {
+    "env_id": "PushCube-v1",
+    "mode": "pd_ee_delta_pos",
+    "num_envs": 256,
+    "setting": "gain_half",
+    "seed_start": 2026092500,
+    "output": "full_grid/PushCube-v1_pd_ee_delta_pos_gain_half.json"
+  },
+  "versions": {
+    "mani_skill": "3.0.1",
+    "sapien": "3.0.3",
+    "torch": "2.7.1+cu128",
+    "gymnasium": "1.3.0",
+    "numpy": "1.26.4"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "checkpoint_sha256": "5210b0d48bed5b1b6b94aeef54d46bb6b5dceaebe812d1356983241d6b0d1b75",
+  "script_sha256": "2d012d22ffbeee552d1d64c6eb0245cebfa24d8c3163606afd8689b1b7fcb4ea",
+  "nominal_arm_gains": {
+    "stiffness": 1000.0,
+    "damping": 100.0,
+    "force_limit": 100.0
+  },
+  "applied_arm_gains": {
+    "stiffness": 500.0,
+    "damping": 50.0,
+    "force_limit": 100.0
+  },
+  "policy_execution": "deterministic actor mean; no action noise",
+  "simulator": "native GPU PhysX",
+  "elapsed_seconds": 3.5228981971740723,
+  "success_at_end": 59,
+  "success_once": 177
+}

@@ -1,0 +1,9 @@
+{
+  "baseline": "submission/releases/2026-09-24_companion_provenance_final.zip",
+  "checked_unique_inputs": 13342,
+  "replay_inputs": 13081,
+  "statistical_inputs": 261,
+  "missing": [],
+  "mismatched": [],
+  "all_existing_baseline_bytes_match": true
+}

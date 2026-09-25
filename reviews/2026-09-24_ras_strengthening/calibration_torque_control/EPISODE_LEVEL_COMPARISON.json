@@ -1,0 +1,445 @@
+{
+ "scope": "Half-torque control versus shared nominal cells; same block, policy, configuration and policy seed.",
+ "episodes": 384,
+ "success_unchanged": 380,
+ "diagnostic_flags_unchanged": 370,
+ "success_changed": [
+  {
+   "block": 2,
+   "policy": "octo-small",
+   "episode_id": 11,
+   "nominal": true,
+   "half_torque": false
+  },
+  {
+   "block": 2,
+   "policy": "octo-small",
+   "episode_id": 13,
+   "nominal": false,
+   "half_torque": true
+  },
+  {
+   "block": 2,
+   "policy": "octo-small",
+   "episode_id": 22,
+   "nominal": true,
+   "half_torque": false
+  },
+  {
+   "block": 4,
+   "policy": "octo-small",
+   "episode_id": 13,
+   "nominal": true,
+   "half_torque": false
+  }
+ ],
+ "diagnostic_flags_changed": [
+  {
+   "block": 1,
+   "policy": "octo-small",
+   "episode_id": 12,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 2,
+   "policy": "octo-small",
+   "episode_id": 11,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": true,
+    "success": true
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 2,
+   "policy": "octo-small",
+   "episode_id": 13,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": true,
+    "success": true
+   }
+  },
+  {
+   "block": 2,
+   "policy": "octo-small",
+   "episode_id": 22,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": true,
+    "success": true
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 2,
+   "policy": "octo-base",
+   "episode_id": 11,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 3,
+   "policy": "octo-small",
+   "episode_id": 12,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 3,
+   "policy": "octo-small",
+   "episode_id": 13,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 4,
+   "policy": "octo-small",
+   "episode_id": 3,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 4,
+   "policy": "octo-small",
+   "episode_id": 12,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 4,
+   "policy": "octo-small",
+   "episode_id": 13,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": true,
+    "success": true
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 6,
+   "policy": "octo-small",
+   "episode_id": 7,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 8,
+   "policy": "octo-small",
+   "episode_id": 12,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 8,
+   "policy": "octo-small",
+   "episode_id": 13,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": true,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  },
+  {
+   "block": 8,
+   "policy": "octo-base",
+   "episode_id": 3,
+   "nominal": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": true,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   },
+   "half_torque": {
+    "elapsed_steps": 60,
+    "moved_correct_obj": false,
+    "moved_wrong_obj": false,
+    "is_src_obj_grasped": false,
+    "consecutive_grasp": false,
+    "src_on_target": false,
+    "success": false
+   }
+  }
+ ],
+ "per_block": {
+  "1": {
+   "episodes": 48,
+   "success_changed": 0,
+   "flags_changed": 1,
+   "net_gap_change_numerator": 0
+  },
+  "2": {
+   "episodes": 48,
+   "success_changed": 3,
+   "flags_changed": 4,
+   "net_gap_change_numerator": -1
+  },
+  "3": {
+   "episodes": 48,
+   "success_changed": 0,
+   "flags_changed": 2,
+   "net_gap_change_numerator": 0
+  },
+  "4": {
+   "episodes": 48,
+   "success_changed": 1,
+   "flags_changed": 3,
+   "net_gap_change_numerator": -1
+  },
+  "5": {
+   "episodes": 48,
+   "success_changed": 0,
+   "flags_changed": 0,
+   "net_gap_change_numerator": 0
+  },
+  "6": {
+   "episodes": 48,
+   "success_changed": 0,
+   "flags_changed": 1,
+   "net_gap_change_numerator": 0
+  },
+  "7": {
+   "episodes": 48,
+   "success_changed": 0,
+   "flags_changed": 0,
+   "net_gap_change_numerator": 0
+  },
+  "8": {
+   "episodes": 48,
+   "success_changed": 0,
+   "flags_changed": 3,
+   "net_gap_change_numerator": 0
+  }
+ },
+ "note": "Outcome-level check only; trajectories and commanded torques were not stored.",
+ "inputs": {
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_01\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "7b1dd7c2ab17ef39befc3bbe12613cc473e28981f67ab7a0575941eb974fc23d",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_01\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "095d026a5387b4fb2b637ce1c8a65ee98e0774fcd5646a285f56fa05cc253386",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_01\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "aeb6265474e17c27270f9cac4a1db8d8a99517a67ae318e7f5938926f4799028",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_01\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "efad541b33f870c5a97d5db135f081bc7a8f96ca5d7603f373e4b38f529ff059",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_02\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "e872bf0863f2e25fd6503aa3fa9dac9abd138fd2f9d21e67fb8e4bdb66d5d475",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_02\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "3ee2203d22d48685794be5a50afb5b0c786c60fe366a229b4dba4dd2b7554036",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_02\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "df7d9fb21c75c212605ff38e782f7dfa6ace73070d5b19aefc38a606716e4f5c",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_02\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "d0ff2539ceab0bf1979547bc71a197d9dbbbe9eb8fe7de63ca3f38044fc8622f",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_03\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "6be49ce39c355c94758d3b9bacd5b24e090d958113ff0c9396f36df0d0db6fe6",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_03\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "e290ca5e1839cc0fd3836039f723b5e9a1132874eb0d11a08956441a371f4f57",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_03\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "cb2fe1ceb717628b62e92f5d32a4c8906b766dc2045c6f0cbefa9a518fc7fa01",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_03\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "d66f633dde5a3c439c319a00cbc8d050a76edb141d8affe244b5ef463fc98a4c",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_04\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "2f28f83c64d562e45d0ed0db04f011d0ad65f87dabbf69e8bbf49be59a78c6d4",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_04\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "0cd3f92ff83b1ca400ea78c8da180ff4cd8d6cf7f6116e9fe0c88fc4f0bc83c1",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_04\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "29b6ccbd8be1a487ca392eb2ba13f53b3b104a227916ef7ae036ddc03a1ac002",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_04\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "2d32d69c26ebd6a00d6e53729470b9140815430f68b0a5c87f45e59c0f2f3c40",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_05\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "571254787f8f851e80e275086f9ecf3dfb2f4bec04743a5abdf64efcf199867f",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_05\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "bdb0c7c5e62e4ecd6a912d6227f169284d4320f58504bf6cbe7c4e32bb58f96e",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_05\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "9e8e59da96ef0a1c8e7bdd0561d2f030c216268691e4ee4dfee2f32dfe305952",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_05\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "878f68fbe0598a0d979ad40a7fea8e29ea9b7077af2c7024a11e10ca640a8300",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_06\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "68ce8e8d9a061e60b785fc9e47ed32628c2cbcbdef226def2afcb787d97f9e17",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_06\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "0ef4952e2461c1d112a836254dc31f833e6328bd547d21537aca432e75106e49",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_06\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "8967563807a08d24724f7d8411430294426f2385212c6e67a8ddebb749cb61c8",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_06\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "618e35ee34f8b2fbee5d264313e137e967ff817282ed6b1c65e52af4343026eb",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_07\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "e66f3c5450cdcd4dac7450737b4bbd13785af9a666fa5418b755226ad1b39277",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_07\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "a86ebbf3f4df1ddbce4ad25309c190a59722ac7f2bee730e28c66d417604ef91",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_07\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "4871b9740b3010519daa04faa69198f3bc511ef2d9c2c07456c8e9391b89d030",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_07\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "ac2567374f36c06f79888d95820fd447dd9bb47d5461b356ae425acc858419e3",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_08\\octo-small\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "c4ff6d9d10f44c46bf57f37cd76971aedee8793e15699c4c2c1021c858a73fd4",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_08\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "4dd917eeb73836e2ff544eaf57297dbafedb4071133bd51bf6300e9224c964c9",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_torque_control\\data\\block_08\\octo-base\\PutSpoonOnTableClothInScene-v1\\forcehalf.jsonl": "db2dba15d66a434a5a324ee6d9077d4216eebe31376cf355c3687c36805a0aeb",
+  "reviews\\2026-09-24_ras_strengthening\\calibration_confirmation_v3\\data\\block_08\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal.jsonl": "af476f9cd0f172397b7468f9c1e1ab676bd118d61a2165c0cd5a5bce1ceabd62"
+ }
+}

@@ -3897,8 +3897,8 @@ FUNCTION {format.url}
       if$
     }
   if$
-%%"\url{" url * "}" *
-  "{" url * "}" *
+% Local compatibility fix: preserve literal URL characters and permit line breaks.
+  "\url{" url * "}" *
   enclose.check
 }
 FUNCTION {url.block}

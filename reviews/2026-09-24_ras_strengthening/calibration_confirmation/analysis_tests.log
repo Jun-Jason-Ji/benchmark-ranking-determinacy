@@ -1,0 +1,13 @@
+test_difference_of_gaps_range (__main__.FrozenAnalysisChecks.test_difference_of_gaps_range) ... ok
+test_direction_is_not_mean (__main__.FrozenAnalysisChecks.test_direction_is_not_mean) ... ok
+test_eight_negative (__main__.FrozenAnalysisChecks.test_eight_negative) ... ok
+test_full_record_gate (__main__.FrozenAnalysisChecks.test_full_record_gate) ... ok
+test_no_partial_pvalue (__main__.FrozenAnalysisChecks.test_no_partial_pvalue) ... ok
+test_seven_negative (__main__.FrozenAnalysisChecks.test_seven_negative) ... ok
+test_zero_observed_variance_not_point_ci (__main__.FrozenAnalysisChecks.test_zero_observed_variance_not_point_ci) ... ok
+test_zeros_are_not_removed (__main__.FrozenAnalysisChecks.test_zeros_are_not_removed) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

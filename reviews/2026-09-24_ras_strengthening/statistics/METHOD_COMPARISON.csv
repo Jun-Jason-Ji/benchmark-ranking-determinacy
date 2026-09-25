@@ -1,0 +1,8 @@
+method,n_pairs,n_supported,unadjusted_point,unadjusted_envelope,holm_point,holm_envelope
+legacy_normal,17,17,11,10,9,5
+raw_legacy_variance_normal,17,17,11,10,9,5
+raw_execution_normal,17,17,11,10,9,4
+episode_hoeffding,17,17,8,2,5,1
+seed_cluster_hoeffding,17,11,1,0,0,0
+directory_cluster_hoeffding,17,17,0,0,0,0
+complete_block_t,17,6,3,0,0,0

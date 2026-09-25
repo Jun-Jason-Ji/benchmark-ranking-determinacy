@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "python_version": "3.11.16 (main, Aug 14 2026, 15:34:35) [MSC v.1944 64 bit (AMD64)]",
+  "unit_tests": 12,
+  "local_install_origin": "E:\\research\\the_world\\reviews\\2026-09-24_ras_retarget\\artifact\\policy_rank_audit\\checks\\installed\\policy_rank_audit\\__init__.py",
+  "wheel": "policy_rank_audit-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "73deca15a688b7dcc6add4ae3a7747bfb458d24e5201c2b5da3690793888e584",
+  "complete_example_rows": 144,
+  "incomplete_example_rows": 143,
+  "complete_example_holm_verdicts": [
+    {
+      "pair": "A-B",
+      "verdict": "a_better"
+    },
+    {
+      "pair": "A-C",
+      "verdict": "abstain"
+    },
+    {
+      "pair": "B-C",
+      "verdict": "abstain"
+    }
+  ],
+  "incomplete_example_all_envelopes_refused": true,
+  "allocation_cost": 100.0,
+  "calls": [
+    {
+      "arguments": [
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--upgrade",
+        "--target",
+        "E:\\research\\the_world\\reviews\\2026-09-24_ras_retarget\\artifact\\policy_rank_audit\\checks\\installed",
+        "E:\\research\\the_world\\reviews\\2026-09-24_ras_retarget\\artifact\\policy_rank_audit\\dist\\policy_rank_audit-0.1.0-py3-none-any.whl"
+      ],
+      "returncode": 0,
+      "stdout": "Processing .\\dist\\policy_rank_audit-0.1.0-py3-none-any.whl\nInstalling collected packages: policy-rank-audit\nSuccessfully installed policy-rank-audit-0.1.0\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "-c",
+        "import policy_rank_audit; print(policy_rank_audit.__file__)"
+      ],
+      "returncode": 0,
+      "stdout": "E:\\research\\the_world\\reviews\\2026-09-24_ras_retarget\\artifact\\policy_rank_audit\\checks\\installed\\policy_rank_audit\\__init__.py\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_allocation_rejects_uninformative_pilot_and_invalid_weights (test_audit.AuditTests.test_allocation_rejects_uninformative_pilot_and_invalid_weights) ... ok\ntest_complete_census_run_is_the_variance_unit (test_audit.AuditTests.test_complete_census_run_is_the_variance_unit) ... ok\ntest_configuration_identifier_is_not_an_independent_run (test_audit.AuditTests.test_configuration_identifier_is_not_an_independent_run) ... ok\ntest_declared_dependence_prevents_independent_policy_interval (test_audit.AuditTests.test_declared_dependence_prevents_independent_policy_interval) ... ok\ntest_duplicate_rows_cannot_supply_extra_repeats (test_audit.AuditTests.test_duplicate_rows_cannot_supply_extra_repeats) ... ok\ntest_holm_includes_unsupported_pairs_in_family (test_audit.AuditTests.test_holm_includes_unsupported_pairs_in_family) ... ok\ntest_missing_cell_never_yields_complete_envelope (test_audit.AuditTests.test_missing_cell_never_yields_complete_envelope) ... ok\ntest_mixed_direction_iut_does_not_use_small_two_sided_pvalues (test_audit.AuditTests.test_mixed_direction_iut_does_not_use_small_two_sided_pvalues) ... ok\ntest_neyman_continuous_cost_constraint_and_local_optimum (test_audit.AuditTests.test_neyman_continuous_cost_constraint_and_local_optimum) ... ok\ntest_one_run_descriptive_only_even_with_many_configurations (test_audit.AuditTests.test_one_run_descriptive_only_even_with_many_configurations) ... ok\ntest_unplanned_run_ids_are_rejected (test_audit.AuditTests.test_unplanned_run_ids_are_rejected) ... ok\ntest_zero_empirical_variance_is_not_certainty (test_audit.AuditTests.test_zero_empirical_variance_is_not_certainty) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.046s\n\nOK\n"
+    },
+    {
+      "arguments": [
+        "-m",
+        "policy_rank_audit",
+        "audit",
+        "examples/complete.csv",
+        "--manifest",
+        "examples/manifest.json",
+        "--out",
+        "checks/complete_audit.json"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "-m",
+        "policy_rank_audit",
+        "audit",
+        "examples/incomplete.csv",
+        "--manifest",
+        "examples/manifest.json",
+        "--out",
+        "checks/incomplete_audit.json"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "-m",
+        "policy_rank_audit",
+        "allocate",
+        "examples/allocation.json",
+        "--out",
+        "checks/allocation.json"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

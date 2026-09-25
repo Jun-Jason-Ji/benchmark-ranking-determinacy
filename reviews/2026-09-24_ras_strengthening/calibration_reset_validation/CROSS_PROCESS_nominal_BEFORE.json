@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-24T17:40:20.063306+00:00",
+  "condition": "nominal",
+  "scope": "Twenty-four resets in a new Python process; exact state and input comparison only",
+  "adapter_sha256": "eaf31d93d9ab7486b9b88ab0c486b4407d5878b01df9e9e7967c895a98a35fa1",
+  "test_sha256": "0216201a8dcfc5052683dec7dcc9d1801d8cbdb20b2bfe88c1d5ec9da9edf304",
+  "canonical_records_sha256": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452"
+}

@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-24T18:55:48.430344+00:00",
+  "completed_cells": 6,
+  "passed": true,
+  "checks": [
+    {
+      "block": 1,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 1,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 2,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 2,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 3,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 3,
+      "policy": "octo-small",
+      "episodes": 24
+    }
+  ],
+  "issues": [],
+  "success_fields_accessed": false,
+  "comparative_analysis_computed": false
+}

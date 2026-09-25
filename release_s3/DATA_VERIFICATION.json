@@ -1,0 +1,9 @@
+{
+  "status": "passed_two_source_capture_passes",
+  "checked_utc": "2026-09-24T15:51:48.897830+00:00",
+  "source_files_checked": 16858,
+  "missing": [],
+  "changed": [],
+  "data_manifest_sha256": "4df336b3f35a9a32dcd7fc16f8002fbb150a910a049306759e4071a3424618e0",
+  "note": "Post-write verification checks every copied byte and exact package inventory."
+}

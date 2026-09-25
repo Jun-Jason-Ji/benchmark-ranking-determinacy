@@ -1,0 +1,22 @@
+{
+  "adapter_sha256": "34b87414f0a8725930b16ceda245369a03de91f5c33c2705b5ed83fbf4f872eb",
+  "figures": [
+    {
+      "figure": "Fig3",
+      "source": "scripts/make_figures_v2.py",
+      "source_sha256": "7103cc78f2295aad5b146542e019da10cc42037cb09f6629b3bd04f049f6955f",
+      "numeric_artist_coordinates_sha256": "b3ab411c6505814337b03924f8863558c54c5a396bdcf4f90d25ba6be2ce3ac7",
+      "numeric_coordinates_unchanged": true,
+      "output_sha256": "d5ca181a14fc009f20ba845a0579cc7f6bcb28de406b681521e88a482ae4133d"
+    },
+    {
+      "figure": "Fig4",
+      "source": "scripts/make_figures.py",
+      "source_sha256": "0676c79386368236e56551c5e87b54059e0783cfd2919102e7f3dcfcd3cb31be",
+      "numeric_artist_coordinates_sha256": "cdeba6e3ebba84461cb81d508c01a5712035926b4fa1ddd244e339f23cae43f5",
+      "numeric_coordinates_unchanged": true,
+      "output_sha256": "e38288df0e4ead8209c7022142da59f172d4b79dc35ae0b0f352c3a36fe2e169"
+    }
+  ],
+  "scope": "Historical protocol contrasts. Nominal is a reference, not an identified parameter. Greedy decoding does not imply execution determinism."
+}

@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-09-24T17:08:58.913854+00:00",
+  "status": "runtime_amendment_after_one_saved_cell_before_any_primary_analysis",
+  "original_frozen_manifest_sha256": "54774f8cfa4d13fabda8275f35ebdbbf9a98dd8657dce145c3a3536777b5c618",
+  "files": {
+    "PLAN.md": "83c3b586df2ea9d5cd8b108cfe313c5326e5861c5abea89c4694526d2bdfffbd",
+    "run_confirmatory_v2.py": "cb3309cd774d6838ab08d5c827dee7f936be3eb2615d25842e19a7595d1af59c",
+    "run_all_v2.py": "8fd10f38be5f99c53b7226c95c7a88bf6209da81db7bd7381d0df3158032f9db",
+    "analyze_confirmatory_v2.py": "bf911ef9901af94ed820c0518812248bc1d58097e00debeb9aaded4502b12e9b",
+    "RUNTIME_AMENDMENT_V2.md": "8db90d8f9ec6f4ad7c0cfc15e879b06d3ddf3778511808650f55ac10162036e5"
+  },
+  "retained_original_raw": {
+    "PickCube-v1_pd_joint_delta_pos_nominal_batch0.json": "149c57136388bfd542e8402ecbac0a9889fc90bdd99f87addc4f8b466e3e3ddf"
+  },
+  "original_failed_execution_sha256": "2566bd8a6e6e49cc3a489fae0abb5d8ac24f24ef4a881fb1debf4bc951e5b1ef"
+}

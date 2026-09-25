@@ -1,18 +1,28 @@
-# What Determines a Simulation Benchmark Ranking?
+# Auditing Robot Policy Rankings in Simulation
 
-Reproducibility release for the manuscript *What Determines a Simulation Benchmark Ranking?
-Structural Blindness, Finite Configuration Grids, and Evaluation Budget in Simulation-Based Policy
-Comparison*, submitted to *Autonomous Robots*.
+Research data and code for *Auditing robot policy rankings in simulation: Calibration, initialization, and success criteria*, submitted to *Robotics and Autonomous Systems*.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22893458.svg)](https://doi.org/10.5281/zenodo.22893458)
 
-Archived release: [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458) — the concept DOI, which always resolves to the newest version and lists every version with its own DOI. The manuscript cites this DOI and names no version, which is a choice about citation stability and **not** a claim that the versions are interchangeable. They are not: v1.0.0--v1.1.2 share a byte-identical `SHA256SUMS.txt`, v1.2.0 added 72 evaluation record files, and v1.4.0 and v1.5.0 added the census at the calibration-preferred operating point. To reproduce a specific number in the paper, use the version whose `CHANGELOG.md` entry introduced it, or the newest version, which contains every record the paper reports. Each version keeps its own DOI and its own checksum manifest; `CHANGELOG.md` lists them.
+Concept DOI (all versions): [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458).
+**v2.0.0** (2026-09-25) is the first public release containing the complete Supplement S3 research
+package: the independent 20,480-rollout native-task confirmation, the 768-rollout spoon
+operating-point comparison with the 384 additional half-torque rollouts, initial-state validation,
+public-count reanalysis, and the reusable policy-ranking audit component
+(`reviews/2026-09-24_ras_retarget/artifact/policy_rank_audit/`). Earlier releases up to v1.1.3
+predate these studies. The `reviews/` directory name is a development-era path kept because frozen
+analyses reference it; it does not contain referee reports.
 
-**Start here:** [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) - what is in this release, and the exact
-commands that regenerate every table and figure from the per-episode records.
+**Start here:** [`release_s3/README.md`](release_s3/README.md) lists the S3 contents and the
+CPU-only reproduction commands. `python release_s3/verify_in_repo.py` checks all 17,609 S3 payload
+files in this repository against the S3 SHA-256 manifest (the distributed S3 archive had SHA-256
+`eb2813aec994a4972df4420b91052e42bb0722b89476343a72bf72951b1d772c`). The earlier
+[`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) describes the baseline analyses.
 
-This is a **code-and-aggregate release**: it contains the harness, every per-episode record behind
-every number in the paper, the append-only provenance logs, and the analysis scripts. It does not
+The review packages contain the simulation harness, recorded per-episode outcomes, provenance,
+public aggregate inputs and analysis code. Public-real count sensitivity uses compatible counts
+and reported budgets, not recovered trial identities. The native-task discovery and confirmation runs, controlled-initialization records,
+statistical sensitivities and locally installable audit component are in the RAS extension. The packages do not
 redistribute simulator assets, policy checkpoints or the source datasets; see
 [`NOTICE.md`](NOTICE.md).
 
@@ -20,14 +30,15 @@ redistribute simulator assets, policy checkpoints or the source datasets; see
 |---|---|
 | How to cite | [`CITATION.cff`](CITATION.cff) |
 | What changed between releases | [`CHANGELOG.md`](CHANGELOG.md) |
-| Integrity of the record files | [`SHA256SUMS.txt`](SHA256SUMS.txt) - 997 files, `sha256sum -c` |
+| Integrity of the current review package | Its `DATA_SHA256SUMS.txt` and `REVIEW_PACKAGE_SHA256SUMS.txt`; the root `SHA256SUMS.txt` is an older inventory |
 | Third-party components | [`NOTICE.md`](NOTICE.md) |
 | Licence | [`LICENSE`](LICENSE) - MIT for original code; records and derived outputs per `NOTICE.md` |
-| The manuscript as submitted | `submission/autonomous_robots/` |
+| The manuscript prepared for submission | `submission/ras/` |
 
 A caution for anyone recomputing these numbers: the record directories differ in episode count, and
-because the episode index wraps onto the configuration grid, any cross-directory comparison has to
-be paired on shared episode ids. See "Comparing across directories" in `REPRODUCIBILITY.md`.
+because the episode index wraps onto the configuration grid, shared episode identifiers establish record alignment only. Verify actual physical reset states
+before treating them as a controlled intervention. The historical "Comparing across directories"
+section in `REPRODUCIBILITY.md` does not certify such state identity.
 
 ---
 

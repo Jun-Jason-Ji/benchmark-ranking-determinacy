@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "n": 16,
+  "probability_grid_cases": 231,
+  "outcome_multinomial_states": 153,
+  "worst_grid_coverage": {
+    "coverage": 0.9787292480468771,
+    "p_plus": 0.5,
+    "p_minus": 0.5
+  },
+  "maximum_false_direction_on_grid": {
+    "probability": 0.021270751953125104,
+    "p_plus": 0.5,
+    "p_minus": 0.5
+  },
+  "limitation": "Finite numerical verification is not a replacement for the Clopper\u2013Pearson union-bound argument."
+}

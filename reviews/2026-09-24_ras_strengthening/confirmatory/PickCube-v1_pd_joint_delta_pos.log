@@ -1,0 +1,24 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+{"cell": "PickCube-v1_pd_joint_delta_pos_nominal_batch0.json", "seconds": 4.153865575790405, "completed": true}
+Traceback (most recent call last):
+  File "E:\research\the_world\reviews\2026-09-24_ras_strengthening\confirmatory\run_confirmatory.py", line 70, in <module>
+    obs,_=env.reset(seed=list(range(seed_start,seed_start+256)))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\gymnasium\core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\gymnasium\wrappers\common.py", line 399, in reset
+    return super().reset(seed=seed, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\gymnasium\core.py", line 333, in reset
+    return self.env.reset(seed=seed, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\envs\sapien_env.py", line 968, in reset
+    self.agent.controller.reset()
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\agents\controllers\base_controller.py", line 253, in reset
+    controller.reset()
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\agents\controllers\pd_joint_pos.py", line 61, in reset
+    self._start_qpos[self.scene._reset_mask] = self.qpos[
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Inplace update to inference tensor outside InferenceMode is not allowed.You can make a clone to get a normal tensor before doing inplace update.See https://github.com/pytorch/rfcs/pull/17 for more details.

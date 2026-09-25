@@ -1,0 +1,1050 @@
+{
+  "script_sha256": "6b46dd298ce7e82db1646dc5b08b7bed63ca67bdf64b27cd1723e2e053939aaa",
+  "files": {
+    "scripts/make_core_table.py": {
+      "sha256": "46538af8148ee2dfb148d70e457de0738fc239f74fbc44b26d0b8d921794ab31",
+      "bytes": 19724
+    },
+    "scripts/analyze_multiplicity.py": {
+      "sha256": "59b60389c611305a91cb30f9327d3b4f7562750e5b34a5ee90b304a4982ca12f",
+      "bytes": 15714
+    },
+    "scripts/task_configs.py": {
+      "sha256": "b9faf4a97c094946bc55231b484540b03a856caf231ee085e50f5f28e0a42cc8",
+      "bytes": 3483
+    },
+    "scripts/controller_sweep.py": {
+      "sha256": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+      "bytes": 23779
+    },
+    "scripts/controller_sweep_ms2.py": {
+      "sha256": "6f48c43214313ff48a54570f78cb4262f828e410d3c6f0fb169939b958f5fc49",
+      "bytes": 25272
+    },
+    "scripts/octo_policy_server.py": {
+      "sha256": "fc7ad4acd0c27f621d9a177f5162060ecc8d9e96d5d23b9328debb1f2325bde3",
+      "bytes": 17930
+    },
+    "scripts/openvla_policy_server.py": {
+      "sha256": "b09db83f7f38ba2da7c3dce3425720a5c50fbe163bc742bac532e7e5e31eb180",
+      "bytes": 6554
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "cf06ee12e452b02e7f202392c809c960cde9694eb27160c855fb78e6531da542",
+      "bytes": 34468
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "aa0beb643006bbcab94a16fc8eb3234899d3a56cff4f0a8f09cc93fce874355f",
+      "bytes": 3161
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "ccef5cfda930c8dd46bd5b13f3117ceb2e4089035a66b61db0dce9ca34a9f281",
+      "bytes": 51638
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "fd172347e4c0e7fcc0b25975e47fb5aa44ea7f12271af83994207180c7e99ecb",
+      "bytes": 3158
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "95a7a1464c119104b3adef8028c06bde3a01ced9f24fc08cbc7d072e685f3dd7",
+      "bytes": 34445
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "b5873904c29d39c3215a3987637c0d10af9d66529332632a371fdb7aa7a99c89",
+      "bytes": 3158
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "5a039b0b385ddbcac03569927b25ab4243689b2aa74363513a621df358a1e9ea",
+      "bytes": 34433
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "96383454573b4ba43d3a7df023dcb1af9fca765d2ae69f0a73e25185ef90f8d9",
+      "bytes": 3188
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "05a2a8554cf18412ebb8230efb752ef6865ab81254071b6592db1f13e0e8b258",
+      "bytes": 34438
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "a2fcc3f549b72c045ae64c819aecdfcc27bc6e2e640c8678201b94a94739b285",
+      "bytes": 3188
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "453e5a35c0ae6f27049b6e4a27188eb207e5e77249d6c4b6f23edfc0b154c5b6",
+      "bytes": 34443
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "0cc07735b51a4cdd80dc3ff5a8eaf7d839a37a87037834ec7c8f81c1d28203af",
+      "bytes": 3164
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "2b4282a0771997825be7e76015b42d29d04ade5fd3962d16f2ec3d653af59d95",
+      "bytes": 51527
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "66f1ae13d475f2b91e60756c874aba35ab532371ba7f1ca1185e2ca890f7262e",
+      "bytes": 3161
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "66050c4496d8a6d1208d3dfcf5d8ff71e6c5c784b9c6ff066ad5a73ff8bd3f28",
+      "bytes": 34343
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "e34d063b98843a14ca6c032c00c962345fee1d7b6a8e937caaf5c8299aa8a97c",
+      "bytes": 3161
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "d3f05f995eb039388b11b8b89bd4bbce210da1d5ee755f1660e76e954aac3006",
+      "bytes": 34415
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "becba02a3b237368fae1e9a1a5d9d068e6c0681db9f16b9b6ac2a655f02693d5",
+      "bytes": 3191
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "fd32870686cc7f6d1d75d0f5f2280d4f609732796c4a0b3d9ac762d72af1f1cd",
+      "bytes": 34384
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "f39f10ad0135e4b816feca022e0b49f234e59332fd7d03f17e90ff3772e7f4dc",
+      "bytes": 3191
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "74c61604a31ff7b2ca0336fba664f5e0809873ba08da6fb9762fe7d60fbd4cc3",
+      "bytes": 34577
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "1d579ed16ed9e7fe600f2151d6a66a6297bb1ed0d87ad1862c53732f796affce",
+      "bytes": 25905
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "76dc933b5ead334685c56a1380d1dcc412bac2354e64b59c8f3cf38a76685c89",
+      "bytes": 34595
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "c5fd2ce0f025b32cce396eb4ae9a371ec4ff28c74811e10ea0cb0281624df20e",
+      "bytes": 34595
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "9a4918f2a8ba844a1984ff03638e4e0abce8f3dc507c2e784e42c8677a23f2f7",
+      "bytes": 34592
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "c777d37415d7781efd8aa467fdcdf0333f25319a5da26b4c861542e442573fe3",
+      "bytes": 34549
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "bcc12cd974986bcc893972920c5d4c437e2c66269c9864d67fc48425181c0bab",
+      "bytes": 25854
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "8a3daf773d118abc97fa2d605d08a30027955798fd7e3d3c5b189db97e0f462b",
+      "bytes": 34517
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "9469304baa82721a237cc79933c94c9a409c9e467f656404c7fa03de80770eaf",
+      "bytes": 34587
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "1b38ba9fe3ceae73d0f4098555ac5908675eaa7fe8074b11f7b1290f8b12c912",
+      "bytes": 34515
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "60c44ff53d9207769fd7a072a7a391e1b56f40d6bfadf288dd6782611e833d9c",
+      "bytes": 34483
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "5bcec762b5f6fe3a0c22dd892bb6b2d02f73a66d875360f93734d84d8f3f831f",
+      "bytes": 25855
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "8bf18c81a3a6435a90021059a4fdb3f3b9f0498cf625439102cddb6082b71078",
+      "bytes": 34507
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "d4c2f34128b99864edda980bed09ba4112715f244bb19f0b63e9ba215148a361",
+      "bytes": 34543
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "2c0c8cfd419802f9deb15370f2e17b57d6dad904cb75e9e5eee7c5b0ea860b93",
+      "bytes": 34472
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "7f08c0732dbe3e57fa829e87d7d625665bde09808acbed407e11e9702bfdcbb8",
+      "bytes": 34480
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "4c405b32134feb738d402901a7009bd5dc9150fb16399e6af529cf69b72f3f1a",
+      "bytes": 25799
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "16c038a45953f2b25e598012706f8aa52ce14db20b2b6698d15edb894b8fb698",
+      "bytes": 34481
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "75117ee54ce07f5c47f4159aa2189406468d84fb546260438559674de62df99c",
+      "bytes": 34481
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "c396f03e0d7eb53a959c10ccf1d89dff5f303d9bd9ad06b5a6e6b8eebb28de3f",
+      "bytes": 34466
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "2b07bbf90eacbb472cb2871cca4cbe492cfef13e1c0b67083147eb8a694eb0da",
+      "bytes": 34666
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "d24cf254e6c64a42470d1070c8a8b708f82e0d90ea584a8256c1f9b8d2a9335e",
+      "bytes": 34627
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "ed47dbe981ed712a9681e97d4a323796f048cbd6f5ae5c8a80372e565bf0ff4e",
+      "bytes": 34648
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "6cdf8bc5dec04c015f25670ef8c25eed50ff75a198144080a8656a7c5222dc21",
+      "bytes": 34641
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "fa5f24649a0669a6cad7a1fd4ab9ed73f48dde18c6979d72bcc0fdebfda81496",
+      "bytes": 34656
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "4a02bf6a8078ef5b9b52d0095ddfa22db9e4387c3288daaa30cb98d7e536d4bc",
+      "bytes": 34628
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "bec4aafeee77c9637e86842aa9bd005e9b3a15e04955520683a75154e0faf7cf",
+      "bytes": 34560
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "d6213e550fb10634878aae63ebddbedfe308b5996dbb9ef324c3ecc19f459d1e",
+      "bytes": 34583
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "9cbbd8c7766f23a4a7ee6138fd6f60a151bd660372ca8cf23619e87b9144fa06",
+      "bytes": 34624
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "e35b91290cca2805c8a398bb65dd7ec159a71aa4c7fd348321d087aced1ecf7b",
+      "bytes": 34644
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "e2926fbc21234e6357996bca11cbd66b38c5a937f00e5e28e490bf09db75f8ba",
+      "bytes": 34590
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "67ffbc20aa0220c42e23305c6c56d42e75bb174af23cc5a2edc7d0116cf6a7fe",
+      "bytes": 51810
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "de14813aedeae49f57c3a4ed5a7723a15414530125bfa2d11e4489dd9402a488",
+      "bytes": 34589
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "c492ebfd88788b9cfa82acb28c3a9b84b8a6a0775766f6a523e7f29dc1f61ebc",
+      "bytes": 34597
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "296c068f106b6be841112b562c30c556bd3eb6307d842939f2ffaff71e1e38d8",
+      "bytes": 34537
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "41220907f2eb0c4de5e956e230ff72e55d383c40f9730756498a01a666da0448",
+      "bytes": 34542
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "d9848c4e9089009b7233b3f194a3bcba60428d85bfee143a81f69a5ccdd2f6d4",
+      "bytes": 51732
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "c1bc81c51a10e6694bcc97cd423577e9a43f858c291b9aa04066fecfb4488529",
+      "bytes": 34514
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "b478e623d3788a93b2e6600b12b90fcb432d09c33d375173b3d32d939f1ab82f",
+      "bytes": 34562
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "cb6fa65598a4047a557a8519ad9571b1bead10776c352e1e32e0c819361a925b",
+      "bytes": 34526
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "e2eec55bd26bd6125f0c52a56c48bbbdd523b5b915068c3613ef8685de47c650",
+      "bytes": 34565
+    },
+    "results/controller_sweep_gpu_rep/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "dee41f73ad6e1eee1da845a3bd0ae9ab3704b6bd939a23fbecbf985bd6b1a844",
+      "bytes": 25903
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "ec7c9d7af3830d4ddcc88ef380c0882d2fd1af102b0e9878e408af7f88cdb9ff",
+      "bytes": 34585
+    },
+    "results/controller_sweep_gpu_rep4/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "382fd1da5fc8203cdfb4f45965d36d3cb0c3750a32d0e0c151b0b9db8bb2d5a6",
+      "bytes": 34562
+    },
+    "results/controller_sweep_gpu_rep5/octo-small/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "4673b194c4de26ac61980fd399bae55474ab6b192a0d71c7b161fa795ba6725a",
+      "bytes": 34574
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "5535b28f609701597f9a0b4e947e80cd93d81cc3efd528f10d8204b34a063778",
+      "bytes": 34555
+    },
+    "results/controller_sweep_gpu_rep/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "f7aba3d9a05a65a47a8874f58c6d55720b9f64c647003f6fd63dd9b7225b8b29",
+      "bytes": 25865
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "594b21c4d5fd777bdfa19c343e09dbff7705b947d83caebf260b7e905a701cce",
+      "bytes": 34522
+    },
+    "results/controller_sweep_gpu_rep4/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "69ca0b6aa81e4ab98f3a6d0eafabb523b8aa3dcc93f609e351b3c4f8bf2a662f",
+      "bytes": 34563
+    },
+    "results/controller_sweep_gpu_rep5/octo-base/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "c6394e9f6e7bbbed66b995441b13be8681e309243a8839c7d389678887de5816",
+      "bytes": 34555
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "b0b296d7066f621a52df8c3127a84406a8c5ae1462913a6355be9e36268d711c",
+      "bytes": 34884
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "a6fe1f763d34a9ee1e5077cfc79db00a70ba8f603b8c2115510cf5adbf7f4db2",
+      "bytes": 3165
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "d063bacbff5a199519d1220b6a1b15fddc96b8818acf02f20647a9cf7bf7bf14",
+      "bytes": 34844
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "a95268c3fa617b440598afc424410508d414291c0650c25029921d43b4741543",
+      "bytes": 3162
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "a3ea9c341d4b46d2ec5e558302eb11eda5f5c4ce3f0a8cd86936c3029ceede5c",
+      "bytes": 34876
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "62c3a5955f4539be7c3d658976eb8d38693edf5e6cc64900d8ddc4a64bd2ea14",
+      "bytes": 3162
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "63aa98805eb2628960202169d80eda41ad5e10cb7fe4a0428446eae77a2e26b5",
+      "bytes": 34848
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "b71a403cd2efa72aae401b8bb9d85febc04007e509b026918f294616d190c4af",
+      "bytes": 3192
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "0834b30252a688f1acca0af67c36611ce28f068bc4880985ff762608e983d170",
+      "bytes": 34853
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "0d5861038ae626a335948ff206cde432ffee63f09d941ab828870e6e24741e4d",
+      "bytes": 3192
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "15e5411f035bb20cec6ff38f490e3da972e79d9d436200dd6e23e52904bf78b4",
+      "bytes": 35026
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "7de113d890328e4c65af64c8c59da8169e7bf2b4aaec57bcf7b3d9115daeff60",
+      "bytes": 26246
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "43407404643b7c06543c17176d75a3eb1b79c39618d07dd8d91ade56e608f163",
+      "bytes": 35024
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "443a010469aa1fc42cf111f2d0417fa855c1c9471906eb3297e42d347804418b",
+      "bytes": 35002
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "7691503dfd71c546fe5cad02488683ed5f1ec721f53c0defcf80e0e5a7e9f3a6",
+      "bytes": 34970
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "9e88773da4066c214cc78d53282e13579f9e985909532df51e5491c2a2ee55c4",
+      "bytes": 34908
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "87b944fe50dfd28f5d7e03d6eb963997b215d47bad264c792eaabf3b395ebfb9",
+      "bytes": 26146
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "07e64241925c44c610eb5afd30cbe99640ddf6f6f693dede2cb603df0c2d25dd",
+      "bytes": 34934
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "a51494e2781ec2c4d7505fd6f67d82f6714c8c9e36362e56db75e4accf100a76",
+      "bytes": 34916
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "8128440c32311d9bf7d50c1eb12e9517a3f910637f1dd6e42b811fc7556e2592",
+      "bytes": 34909
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "46b65bdbe25fd2001f834c921df67db58ede98fa2130be022feade3f4c4a8568",
+      "bytes": 35050
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "4eb3c0246cf1851a73f562f3f376f517a404584fa5dcdf7f134e1f7c48a274a4",
+      "bytes": 35037
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "1693f56c3a5ec9a061e228089a90f0d5762524874dc544525410fcce086309d3",
+      "bytes": 35059
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "8705212ce3c7bd2f1ee7e4104025872712c0e62e9d9fe3fbdfeb002de949f0d4",
+      "bytes": 35044
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "6151c72637ec9314b1112736d4c17349a868fa13a829c360619870e0ec2edada",
+      "bytes": 35034
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "16712f85803e88df27b8f95bd9018509eacc4156f9a566600fd998096ede3f25",
+      "bytes": 35034
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "a0226cfe610f2d734af776ed66fa4ac9e95812820fc78a5f83bc0d8cac3fad08",
+      "bytes": 26235
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "7514ed39e5017b10a188409ec1d0878f985c6fb426405f42a77529d835e86fe4",
+      "bytes": 35027
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "557f4c94508295171300fa1a24c84290c54446337da7e7396abaef78def5b798",
+      "bytes": 35046
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "3ec7cb94945de6841650615eaaf2d9c6ac55c8b1cf935460db63b1acb4cd373c",
+      "bytes": 34955
+    },
+    "results/controller_sweep_gpu_replayA/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "cbf0b163e1fc69ca818302ea81cd3174cb859796080d3b1f7ac001b150f71ed1",
+      "bytes": 34985
+    },
+    "results/controller_sweep_gpu_rep/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "40a75185b13bf2784898798313ec38640656394abd97a418f6c4b529aade3123",
+      "bytes": 26217
+    },
+    "results/controller_sweep_gpu_rep3/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "60920ae8ff8ba317b163f2e828f435a120067053199f105c2ded403a86655dcb",
+      "bytes": 35000
+    },
+    "results/controller_sweep_gpu_rep4/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "62451152ce9b7d5d276caa0f0ae7b72d2386beba29d7c894377f455332bcd2b2",
+      "bytes": 34982
+    },
+    "results/controller_sweep_gpu_rep5/octo-small@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "da4e469ea358c0a19670990e823866be5c838e916836be426e53602ac6f492db",
+      "bytes": 34953
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "3a17df76a2b5b67abb9702cd6f925e959fc166f5ac75a15dbf5a3a1772940255",
+      "bytes": 34820
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "6546e5e53ced5e76e4e08c5c5e1f54fd73f3558b9241f2d4f94bc58d9d6d8d79",
+      "bytes": 3168
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "ef1b0280c3a29bf04d50ee9e7161570ce7ed2de8cfe946509a8ac453e72f6735",
+      "bytes": 34776
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "e0945d1417159679358c7dc840e39354a09b54c275d83cce5b762202bf8e60f0",
+      "bytes": 3165
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "09bb4bd9d8c7115cf32f16e8ff0d4f87676121d0c1ae8959faef6c77b3ed17c0",
+      "bytes": 34811
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "0d6948ccb4c31842198093c7d0952b09626134427470bc0462532c2a372c2055",
+      "bytes": 3165
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "493a9ebfc88fe2875e049a62428b00df6a52fdfccc427b0a6a956d79b4aa2862",
+      "bytes": 34816
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "a85640e5e415e5d949e30039eb6ff9ac09189212a2453016aceafba0ea5954ad",
+      "bytes": 3195
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "a1a22c6411eb23bfffbb1484573f61f7e0916f07ec78ab7245001773fd963a24",
+      "bytes": 34813
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "f8ed79309cc33080ab7997ed95ca5123cc12c5456df11d2491e6f6b6318c7054",
+      "bytes": 3195
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "25ac0436262d108996733689325f899c86894caad9d7de1d3d166b6d27594dd2",
+      "bytes": 34953
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "08ae1496f63f1e27edfe51bf410094506ee55e6d94f75c1f290158091528103e",
+      "bytes": 26212
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "ee83a94e31984666a6d43544c91b57940e6357d1096c111962336741591cb1c7",
+      "bytes": 34928
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "be514d45e7684dc5d535009c9ae18df7e7e50b1f2151e6f4a47648f3772a0102",
+      "bytes": 34929
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "8b3641cdb2a7a98312593199000e10b30203a06dcceabab1652b060505fbdb42",
+      "bytes": 34916
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "ca1cb1fbd8f77418ae17ec8de1d0e312acbe0627fa581d441daa3124eb33d18d",
+      "bytes": 34867
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "b8536941a4bb0ed684b2dbcdbc47856ea4c66ad40c14d70012e9939b82a2041e",
+      "bytes": 26117
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "7a2af5a4f8b76e23056d15afa5cf547cc211cda918b8678fe424d4ed53b814fe",
+      "bytes": 34875
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "2d3d176af1e5f6a920eafdca55eacd0531db9591d9e96b0f3a7069748243cf1f",
+      "bytes": 34898
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "5ef06bead28078e64e9a591ee119a2fcdb7601f591cd02528590e9229ce1f5ec",
+      "bytes": 34884
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "f261f2c3ab4533f70078342a872871c1bf89ec32462501e2068b8d011c4f0b40",
+      "bytes": 35009
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "2af476bde46c767c2954de4dca4c269b36aba31bfce8e39999cd2e50c923b0df",
+      "bytes": 34983
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "c49a45c5ad22b4f34ae8639b4341471f168eb1032025990c3c5c8ca2400d5e3a",
+      "bytes": 34995
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "341c628562173bcd702854c4cd66e003fddaeb69c47cb513a7bc536c945fa7d0",
+      "bytes": 35017
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "0cf23893b62d0d204ff4ab54705802aa51d1023949d8a27615e79ed8644f86fd",
+      "bytes": 35015
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "a3f3de9525897fa0dc67338d6e20a07d6b5d397dbfd43f1e3800cafd6bad98e0",
+      "bytes": 34921
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "83d1cb3c3e2fd06dc20d9c9269ece7af180fd2b01838599fe13e452b4137fb3a",
+      "bytes": 26176
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "6cf707bcad15e19df94ef46e4743f04f2d5f1ab16a2f6d147576ee2e956b95bd",
+      "bytes": 34907
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "daaf8520d0e1a82e4d851ba18cc64ff077dcdf3a521680a9b4095a01d4475669",
+      "bytes": 34930
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "2364c7d5f023c9ad05be22ca76f0c72e32ea11d204fbfb8354ef0089b4a4bf89",
+      "bytes": 34896
+    },
+    "results/controller_sweep_gpu_replayA/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "e86f67d110fade0536a7be55a60f6f23e373ed1ae9e7a129d848edaff32bfb55",
+      "bytes": 34952
+    },
+    "results/controller_sweep_gpu_rep/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "aa4b9ed98043294a0893edbae2b2f8410d9ef934bcf8f882a3e121037d15274a",
+      "bytes": 26193
+    },
+    "results/controller_sweep_gpu_rep3/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "1bc155eb15b5010b06645659ca41c1de5678c7575036dfb81c4d0de48c5f285d",
+      "bytes": 34910
+    },
+    "results/controller_sweep_gpu_rep4/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "f266bea1fa24f98c1579a5d70df2b06bacb4dace28ad6b296e0a2973daa72496",
+      "bytes": 34946
+    },
+    "results/controller_sweep_gpu_rep5/octo-base@hist1/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "fcd1b18262601e117cdf6db201f8017a23cb194cb12b66b32b62c567157230cb",
+      "bytes": 34945
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "bc0eb01d3ad9c9626942579da002700de1d0b6579e0aab45e70c6a5ab6ce98e1",
+      "bytes": 34854
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "1116c8a4bf20c3d992eb2e92a98bfb0af1b3ed46a7cb6b9203e03bec65201f08",
+      "bytes": 2901
+    },
+    "results/controller_sweep_gpu_rep/openvla-7b-4bit/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "ed9d8b01f9f74a3f2c2bc17ecb8cbe5b243250e204b37d770eedd6180d3dcfc4",
+      "bytes": 26137
+    },
+    "results/controller_sweep_gpu_rep/openvla-7b-4bit/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "279eda45847345b71b9cdefd677afaed4af988ee3a2e46b7f7b0c96a7906209d",
+      "bytes": 2640
+    },
+    "results/controller_sweep_gpu_rep3/openvla-7b-4bit/PutEggplantInBasketScene-v1/nominal.jsonl": {
+      "sha256": "2f433daae27b5de384b5a7e20aecad6e2dd43e46eacd6500935d1f97be31a40e",
+      "bytes": 26137
+    },
+    "results/controller_sweep_gpu_rep3/openvla-7b-4bit/PutEggplantInBasketScene-v1/run_meta.json": {
+      "sha256": "0c847de250c1226432dbc7c4c11f0fd72f7e826ee3945c776f3c36989ab27ab8",
+      "bytes": 2639
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/iso_x0.25.jsonl": {
+      "sha256": "d072496943d21707f1a35f91097e7e6605471890bbefbef0220d30a1a6f54dbb",
+      "bytes": 34970
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/iso_x4.0.jsonl": {
+      "sha256": "e5591e7dc2679887e996ffeb90e62dd3ae15045500d44f4801777e18e18e1a61",
+      "bytes": 34907
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "1004bbb66eccc8bc5ee39f3021e18659403e7c10c5190f56c34c375f1877ac81",
+      "bytes": 35015
+    },
+    "results/controller_sweep_gpu_rep/openvla-7b-4bit/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "8c57ebc0dad5e6302bb320bf29229c7276936bf099731faff6397d5c6fae6cc1",
+      "bytes": 26253
+    },
+    "results/controller_sweep_gpu_rep3/openvla-7b-4bit/PutEggplantInBasketScene-v1/force_x0.5.jsonl": {
+      "sha256": "95382af57c452ecf11d16e4dbc0d05b761bf20594ab5f22c703461e82e7f3c6c",
+      "bytes": 26249
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/fric_x0.4.jsonl": {
+      "sha256": "b1458cf93b1f4f57763ecaa31d4d8f0f2bbd7b39dca2903006a77514eade9602",
+      "bytes": 35016
+    },
+    "results/controller_sweep_gpu/openvla-7b-4bit/PutEggplantInBasketScene-v1/dens_x0.5.jsonl": {
+      "sha256": "cfd85a463a50688ef3c42814f93fc6293d665fe32797947f823e32445a6e0854",
+      "bytes": 34948
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "d6189eaeb4f0826b39d9668dad72ba1ccb76d60c19d3b1c9a9d27b2f362e4221",
+      "bytes": 12823
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/run_meta.json": {
+      "sha256": "d0e38a234f8ecfa40a57ecdcbd46c7a9b03b6d3a7fa1af9eb469786ec26c88fb",
+      "bytes": 3165
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "d713acde9f27cf1d43a6e2f8e68af9554a3e8e1eb31a4afbfa9d196a4c691efd",
+      "bytes": 12813
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/run_meta.json": {
+      "sha256": "e7a88d2c137b2fb8b55f4e96dceabd3db4333cbe72b21b5ea1c58e2c59a77353",
+      "bytes": 3162
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "ca107f0a223e99dbb83f5f7b56878a7219ff39df9d561db318947eddc1e32b13",
+      "bytes": 12827
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/run_meta.json": {
+      "sha256": "3585670a22dbe080982a0d3219e4e2114bb3a111128a728b72c223cd2c23dc22",
+      "bytes": 3168
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "cddd7d48ad09718a2cdfa6554223d9eca8aeb08b2f629e934396af4725bd7116",
+      "bytes": 12848
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/run_meta.json": {
+      "sha256": "1105e25baaac820e08ece55a26891f57caa916bda6b69c86b894fd6d0909154c",
+      "bytes": 3165
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "4fe45c52eef0593d274e812f7ca6a25c6ad5a6245f8b3bdbc730658b256afed5",
+      "bytes": 12884
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "9bdad6ec888371aee1a8208fc846808c954f93f6657d799c4814d4f173fc1d3e",
+      "bytes": 12864
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "7aa4a5b3b364026234987b241d97ed4c7a44b876600929e1a529e948355905f1",
+      "bytes": 12884
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "95eae8de9c9e48ea0864d30e0f5df2a8cb19c298f03777356961120652b85681",
+      "bytes": 12874
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "d06c1d54b333c65f5a57519250e281723c6ed65ab3759cd12f3f13e66bb2bc72",
+      "bytes": 12852
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "13e5471f89f2fa15a7b300e1b312151b3bcee7d2417d6ba0211c3a1d4c050bf3",
+      "bytes": 12834
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "4f3a5848300da77ab84484f95ab57b49108efb9f991494ff0229072231d99752",
+      "bytes": 12866
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "b1856986f913081c73c2820c7abca888d1bf9ba6295482349733f02196f255f8",
+      "bytes": 12848
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl": {
+      "sha256": "afdd68e3d03a6b8ec9895ff5e14cc305181873845dbbf7c4c8e0469acb0903c5",
+      "bytes": 12899
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl": {
+      "sha256": "ef40ee487691a5abdd2cd5a9bfb160e2c960b09e480edf63c79921bb0aa734a7",
+      "bytes": 12889
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl": {
+      "sha256": "48f3e8720c095ebbc42d74748a915b2b61032e63df4f4ec0088d2743c8c4da41",
+      "bytes": 12902
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl": {
+      "sha256": "6545c5bb6a1a666dbe9380030516b7dd21fe69a48af6ed82e8c028300e9e772d",
+      "bytes": 12900
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "09c5981cbd87f1455f8b0e3c2b2c16f3bcede89bb768c12dd6936b74de947930",
+      "bytes": 12885
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "e00efe3aa67d7beac4a854294d295b3594ed60f547ccc4832a9980f44b27637c",
+      "bytes": 12871
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "5661fde8de44891a8c6c91cb8ceb4755c37f088186e1b22c7b52f2e3250e598b",
+      "bytes": 12884
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "b051e5a6cb76d4445c6626d249970c5caf3b58e532a681489febb02fc817706e",
+      "bytes": 12863
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutSpoonOnTableClothInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "febbffe1d68814c130d4953971dc24f5297567f89387f16a528fb7b4e427fe7a",
+      "bytes": 12873
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutSpoonOnTableClothInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "c7b8e841e7f326e75183e9e47784af4746f80676149e7687b2bde05f88839741",
+      "bytes": 12877
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutSpoonOnTableClothInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "b0450e09658c38f243d21e2ce435a0e1ccb6928148463ffac4e84d022505bee6",
+      "bytes": 12881
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutSpoonOnTableClothInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "5733e6dcd90f7b2854029d6bb2931e04045366c9be4cbd3eb1a85ce23fb16193",
+      "bytes": 12887
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/nominal.jsonl": {
+      "sha256": "34aafb97918166eef37600331005c30d771b71ec05e7a9798a942efec1b79673",
+      "bytes": 12604
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/run_meta.json": {
+      "sha256": "9edfc65d0ef713f676cd64f651bece2404f7ac6261e4c6d2eeab5af600402beb",
+      "bytes": 3161
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/nominal.jsonl": {
+      "sha256": "fda62d21e82ed9b902ea554dfa2b25ae47ebe5a59a46588f12a5e3eb8b1669d1",
+      "bytes": 12603
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/run_meta.json": {
+      "sha256": "9a58e50f39dfb9cd2fecf5f0e06ff252e50be52a2f2e67aedeafe470d2e01c49",
+      "bytes": 3158
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/nominal.jsonl": {
+      "sha256": "450062bad603cb1fb4492096c73133d79c98da3a6b64e38ec79b336c7654b939",
+      "bytes": 12561
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/run_meta.json": {
+      "sha256": "173a486e46fa216f267efe78d85bbc7b4362dbf4fc4bf886d9cda5e09786dccb",
+      "bytes": 3164
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/nominal.jsonl": {
+      "sha256": "b6c0cfc64cad5e1ef6af156f4b685052018790215dcd35fdb95cc5de3c9558f2",
+      "bytes": 12564
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/run_meta.json": {
+      "sha256": "27b0d4e4ee76e0df7bdff996e0e9fb26ae2362cba11c6e90e2944004fbc81d90",
+      "bytes": 3161
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "278ff388d9fe67be75af5e7ccac7eafef770a01cef00bb43f12f89037aacf06f",
+      "bytes": 12660
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "6f408c826a9d08760ba65910b24f1e1cbf0829777b4c83fd632c13efa124dd77",
+      "bytes": 12640
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "0c39f7aae7234c6b477c67fee0f42f2908d85108b82a9cf657646f22456d1d89",
+      "bytes": 12601
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/iso_x0.25.jsonl": {
+      "sha256": "5f0d55f28297d4ea9ba35bbaed1fd3d2f1b22aa87df69688c06e4a62188547ea",
+      "bytes": 12600
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "e24db75b557aa12f03a0f5408590088967ecf08445dc9f4d7ffbd20a002a1d2d",
+      "bytes": 12620
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "24509b0303d7a3cb92fd1ee33b30f104a05c42a302013ab9cbd6a1b31d52fd40",
+      "bytes": 12635
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "55dbff4b9f8a5ea36ebcbdd6b12c17482442f21db0934c4d99b89f94f1d372ed",
+      "bytes": 12589
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl": {
+      "sha256": "0f65c3ebf6d5289ee6b228b997a5149d2029bfcaaf88f93e7f73825a4ab11d57",
+      "bytes": 12572
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/force_x0.5.jsonl": {
+      "sha256": "05d71f4db0b741f0da9b71909a967179be474577ec8e28a369f0175014cc961d",
+      "bytes": 12667
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/force_x0.5.jsonl": {
+      "sha256": "a43ac128dce23f03072448d5e611da8a462a58de0e466265d568fea7565ee752",
+      "bytes": 12673
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/force_x0.5.jsonl": {
+      "sha256": "0a0d796a43ebf6dd9ffc84e0fb8091ba54b0cc00426bca0d03a0e4c7011c78e4",
+      "bytes": 12633
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/force_x0.5.jsonl": {
+      "sha256": "4059c2167a5ddc5240c71ae1c6995771719b0b0172a9bc3e2b28249adae3ec48",
+      "bytes": 12624
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "b98be7f9a1a94620ec77aceecb3ab4e5a397fe2e886972f73b2cf8fb8ebfd027",
+      "bytes": 12651
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "1aa8ae9d6312f72cea7bf89b3415cdd210ac628ebcc788864da3ebb762824dc1",
+      "bytes": 12649
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "8c59a4f380a87d07b14f82ed61304a059645e41c90384a9c579d27a8c42932de",
+      "bytes": 12615
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/fric_x0.4.jsonl": {
+      "sha256": "9b229cb0ba66376e9377d999cb0bb28c29bcfd9a54b0e47bcb8f233a502e0e03",
+      "bytes": 12620
+    },
+    "results/controller_sweep_gpu_replayA/octo-small/PutCarrotOnPlateInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "3b82ea166fdde2495647c98d9534366fbb104d76744ed48f7bd4d0b2cb76d7fe",
+      "bytes": 12650
+    },
+    "results/controller_sweep_gpu_rep3/octo-small/PutCarrotOnPlateInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "a2c1c75d6952d13bbfaa963f41ee884f1e6d61c62716a8166b00fbebd6f37985",
+      "bytes": 12647
+    },
+    "results/controller_sweep_gpu_replayA/octo-base/PutCarrotOnPlateInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "57abad86a4695c1081a8a11e8509529916490ecd2d588b63160fa4e32a0eaca3",
+      "bytes": 12616
+    },
+    "results/controller_sweep_gpu_rep3/octo-base/PutCarrotOnPlateInScene-v1/dens_x0.5.jsonl": {
+      "sha256": "5916e70e20e649b598c581949c2e09f46563182f862960d1e4c002f66e8de8ad",
+      "bytes": 12612
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/nominal.jsonl": {
+      "sha256": "f042ea3fa90436c3b2edc652b615afe7548f36702850b27638b8fa1052552aef",
+      "bytes": 35992
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/run_meta_variants_v1.json": {
+      "sha256": "dd4d814cca688e98dfabfadeab9e27f020a9c120f9d151e47c92d1e14624939b",
+      "bytes": 2093
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/nominal.jsonl": {
+      "sha256": "fdec8f58d1149da6857261dbc046d543f6c03221e8d1707f76c57cf89f9bed19",
+      "bytes": 35954
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/run_meta_variants_v1.json": {
+      "sha256": "10298431832e5c25036d166a9ed9dff5edd1c973f052a3714452106c60c55fb1",
+      "bytes": 2089
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/iso_x0.25.jsonl": {
+      "sha256": "21ca001d1c04345c4e323990cd2f7c5081f2f4a4cc28233a5ecf80ef64d90e1a",
+      "bytes": 36094
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/iso_x0.25.jsonl": {
+      "sha256": "de5e229e55db8c9b1d727d2e6796ece73fe9760760e8c097993118ce3e2af975",
+      "bytes": 36026
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/iso_x4.0.jsonl": {
+      "sha256": "64670878b6079d5775189c1cc602225e1b9027fdfc5e1718cf86d1a3e26c0798",
+      "bytes": 35992
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/iso_x4.0.jsonl": {
+      "sha256": "e8e57f32bf651b9ed8d8925dede5b0fe3c729246f3becce83c7429d3c51f0619",
+      "bytes": 35938
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/force_x0.5.jsonl": {
+      "sha256": "ba60396e5c77d239ed1152a7e9111a6a6f1edaf2eb83a0b074869af1c83c33a7",
+      "bytes": 36105
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/force_x0.5.jsonl": {
+      "sha256": "8281053a3ef34eef4c6d03388a7bf81dc2f3b82b07f7de5e904e60d2129a3bc2",
+      "bytes": 36095
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/fric_x0.4.jsonl": {
+      "sha256": "b7be0021b45ef11c2f8da7327da0e7599372e8e68da48769634e122739e8182e",
+      "bytes": 36111
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/fric_x0.4.jsonl": {
+      "sha256": "910c399d6e48abf89ac27504c5c2a9601fff231e0ff61bb5b52e9ce7bc51f41e",
+      "bytes": 36075
+    },
+    "results/controller_sweep_ms2/octo-small/PutEggplantInBasketScene-v0/dens_x0.5.jsonl": {
+      "sha256": "f700430537d3ac58ce68eadccd6043f77685eed1fb1eb4e458a01b518de7c3ae",
+      "bytes": 36077
+    },
+    "results/controller_sweep_ms2/octo-base/PutEggplantInBasketScene-v0/dens_x0.5.jsonl": {
+      "sha256": "4eb157a3cfd9f96897d8815f34db6d636b3c3b84dca29e20166190c0ef7f54a9",
+      "bytes": 36053
+    },
+    "results/controller_sweep_ms2/openvla-7b-4bit/PutEggplantInBasketScene-v0/nominal.jsonl": {
+      "sha256": "f7a54276e9ce14fb59443c270b51870374c5a5bcc187be520a23956bcd408c3c",
+      "bytes": 18393
+    },
+    "results/controller_sweep_ms2/openvla-7b-4bit/PutEggplantInBasketScene-v0/run_meta_variants_v1.json": {
+      "sha256": "27365956a20e234a269a6f6cea3fc1bae15cc2691e905063de88f98648c66d18",
+      "bytes": 1644
+    },
+    "results/controller_sweep_ms2/openvla-7b-4bit/PutEggplantInBasketScene-v0/force_x0.5.jsonl": {
+      "sha256": "444a9157fe892fa1e64309b88dfead76ced88df3fd442bf1075568f95d9efd3d",
+      "bytes": 18513
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/nominal.jsonl": {
+      "sha256": "f2f1954ee02afc634d63effaec1bb2157ae496bff18905c438261e21bb788df0",
+      "bytes": 35452
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/run_meta_variants_v1.json": {
+      "sha256": "b400b4c4c616ee3fd90b47e9541bba4fdcbc41c1ce39a16507a3526589db5257",
+      "bytes": 2079
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/nominal.jsonl": {
+      "sha256": "702703b87b79b6d203cb5fe8e6f860346972f05ba3438bab3a9ddc7c55c31350",
+      "bytes": 35584
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/run_meta_variants_v1.json": {
+      "sha256": "dd70c225c392c196e2085bf1b4827dc49d7903ea306cee433cbd6a4855dd0e8e",
+      "bytes": 2075
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/iso_x0.25.jsonl": {
+      "sha256": "2c5525fbc19988bc0074f6ac944db96de96b51d8d4fda3dafad81053694bd50b",
+      "bytes": 35553
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/iso_x0.25.jsonl": {
+      "sha256": "991ca2fb0158e834cff09b11f08609e5033bd44a7a3b2eda0228d7102550b99a",
+      "bytes": 35714
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/iso_x4.0.jsonl": {
+      "sha256": "7e6ab16a2c2e1073009d54ed3bd5cc2e047073832a9dfe3bb707c095c95798aa",
+      "bytes": 35456
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/iso_x4.0.jsonl": {
+      "sha256": "aa6e6d3135c754ffeec4ec17fb57c7520a8be0d70e919f113292b30af573456d",
+      "bytes": 35670
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/force_x0.5.jsonl": {
+      "sha256": "085c30c4cca28d59ca36f2f463ffa2b792b8fe44afebd548d29dd3de7a87fdd1",
+      "bytes": 35576
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/force_x0.5.jsonl": {
+      "sha256": "93c80f6b1e6e9edfcff175a73b2a8dfcc018026501d9c880329a3fade0303cc3",
+      "bytes": 35763
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/fric_x0.4.jsonl": {
+      "sha256": "4d9eadec6f0e6be75a66a2d6aa9c2fe7c978b49b072ae03b67150b87080e4172",
+      "bytes": 35551
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/fric_x0.4.jsonl": {
+      "sha256": "55108d72054d8bd4c53d711f0ae89d511baa23ab23133e12fd5e9070bab7e84a",
+      "bytes": 35763
+    },
+    "results/controller_sweep_ms2/octo-small/PutSpoonOnTableClothInScene-v0/dens_x0.5.jsonl": {
+      "sha256": "f86860627a57f6707dc0ec8a3890f35fc3e11975f31d65ea152f0a10e3a13097",
+      "bytes": 35508
+    },
+    "results/controller_sweep_ms2/octo-base/PutSpoonOnTableClothInScene-v0/dens_x0.5.jsonl": {
+      "sha256": "0ecb6dda6d4716ecc6b467fd5273a7cc10fa7dc28546ca42cd04f49261119373",
+      "bytes": 35763
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/nominal.jsonl": {
+      "sha256": "c942ab7805f53a0f7e27f7f38f919f5eee35027e09f77f7ef8cb273c866b5ec9",
+      "bytes": 35159
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/run_meta_variants_v1.json": {
+      "sha256": "69d95d809c4cdcb9258ff4cf504007ce093d18db63c0d9f11289c988c60b760e",
+      "bytes": 2076
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/nominal.jsonl": {
+      "sha256": "96f25731757e66fccf1f1f1521ac91148e45e882927cef3420e04f1a29601d30",
+      "bytes": 35035
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/run_meta_variants_v1.json": {
+      "sha256": "350430f59d03ef48d8e1329969396e5cc9d17e197c92c5dd28d2b9c02f558996",
+      "bytes": 2071
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/iso_x0.25.jsonl": {
+      "sha256": "1486e0a399b0e78e00a28629dd8733024013fdb63aea3e63fc61b36a79103df7",
+      "bytes": 35250
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/iso_x0.25.jsonl": {
+      "sha256": "4143fe007740115b3f9bf7dd243bc66e408c22c4ee57bec99e563c787e4e6771",
+      "bytes": 35122
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/iso_x4.0.jsonl": {
+      "sha256": "3bf76be06e316359458199d33e8384a6359d31e854df213354b0960ad6775a31",
+      "bytes": 35186
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/iso_x4.0.jsonl": {
+      "sha256": "9f9c14222a37bf8d77347b93735e191cb936780f0c3901448b673f1ed41f81c1",
+      "bytes": 35063
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/force_x0.5.jsonl": {
+      "sha256": "a908f61067412777b73e04a33f20f98b1f4695d237b3868fb2f0286fc41640d0",
+      "bytes": 35297
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/force_x0.5.jsonl": {
+      "sha256": "a327aa9392d91f1670c9e1dc73eb92f40baedc0527fca0914511a8ed13440afe",
+      "bytes": 35166
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/fric_x0.4.jsonl": {
+      "sha256": "5b3715493cfe446f559a39047c9f5aeb558681fc42fc092717537dda3a4b10ad",
+      "bytes": 35259
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/fric_x0.4.jsonl": {
+      "sha256": "ab7748336191b52f254ff4d035521d61e1833c7156d866485ce691d5ce6c7e33",
+      "bytes": 35143
+    },
+    "results/controller_sweep_ms2/octo-small/PutCarrotOnPlateInScene-v0/dens_x0.5.jsonl": {
+      "sha256": "b020bba4e0b467868d0f9e6d8c630ee183439573164d8960661dcc74398b8db8",
+      "bytes": 35226
+    },
+    "results/controller_sweep_ms2/octo-base/PutCarrotOnPlateInScene-v0/dens_x0.5.jsonl": {
+      "sha256": "9222256ac78bdc8db2879a75a5d070e57f29d89064e6586a426f8ccf2d20ac6f",
+      "bytes": 35137
+    }
+  },
+  "file_count": 261
+}

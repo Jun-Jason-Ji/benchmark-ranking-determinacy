@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-09-24T19:14:16.868965+00:00",
+  "completed_cells": 16,
+  "passed": true,
+  "checks": [
+    {
+      "block": 1,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 1,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 2,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 2,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 3,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 3,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 4,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 4,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 5,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 5,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 6,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 6,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 7,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 7,
+      "policy": "octo-small",
+      "episodes": 24
+    },
+    {
+      "block": 8,
+      "policy": "octo-base",
+      "episodes": 24
+    },
+    {
+      "block": 8,
+      "policy": "octo-small",
+      "episodes": 24
+    }
+  ],
+  "issues": [],
+  "success_fields_accessed": false,
+  "comparative_analysis_computed": false
+}

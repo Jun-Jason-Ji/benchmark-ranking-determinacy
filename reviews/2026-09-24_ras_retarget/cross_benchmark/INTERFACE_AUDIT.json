@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "purpose": "evaluator parity; not additional independent outcome evidence",
+  "checked_export_commit": "baab60ede2e89167c1b7aaed41a9aa8e690a9d1e",
+  "runs": [
+    {
+      "mode": "pd_joint_delta_pos",
+      "configuration": {
+        "control_freq": 20,
+        "sim_freq": 100,
+        "obs_shape": [
+          256,
+          35
+        ],
+        "action_shape": [
+          8
+        ],
+        "arm_gains": {
+          "stiffness": 1000.0,
+          "damping": 100.0,
+          "force_limit": 100.0
+        },
+        "arm_action_lower": -0.1,
+        "arm_action_upper": 0.1
+      },
+      "success_at_end": 2,
+      "success_once": 256,
+      "initial_and_each_step_historical_observation_max_abs_diff": 0.0,
+      "manual_success_agrees_at_all_steps": true,
+      "original_loop_vs_official_wrapper_episode_disagreements": 0,
+      "original_loop_vs_official_wrapper_ever_disagreements": 0,
+      "final_truncations": 256,
+      "final_episode_lengths": [
+        50
+      ],
+      "final_xy_in_goal": 2,
+      "final_old_height_criterion_success": 2,
+      "final_cube_height_quantiles": [
+        -0.8996490836143494,
+        0.019999812822788954,
+        0.01999992784112692,
+        0.019999969750642776,
+        0.03558199480175972
+      ],
+      "elapsed_seconds": 39.12300944328308
+    },
+    {
+      "mode": "pd_ee_delta_pos",
+      "configuration": {
+        "control_freq": 20,
+        "sim_freq": 100,
+        "obs_shape": [
+          256,
+          35
+        ],
+        "action_shape": [
+          4
+        ],
+        "arm_gains": {
+          "stiffness": 1000.0,
+          "damping": 100.0,
+          "force_limit": 100.0
+        },
+        "arm_action_lower": -0.1,
+        "arm_action_upper": 0.1
+      },
+      "success_at_end": 78,
+      "success_once": 200,
+      "initial_and_each_step_historical_observation_max_abs_diff": 0.0,
+      "manual_success_agrees_at_all_steps": true,
+      "original_loop_vs_official_wrapper_episode_disagreements": 0,
+      "original_loop_vs_official_wrapper_ever_disagreements": 0,
+      "final_truncations": 256,
+      "final_episode_lengths": [
+        50
+      ],
+      "final_xy_in_goal": 79,
+      "final_old_height_criterion_success": 78,
+      "final_cube_height_quantiles": [
+        -0.8996531963348389,
+        0.01999982027336955,
+        0.01999989990144968,
+        0.01999995158985257,
+        0.03361176699399948
+      ],
+      "elapsed_seconds": 3.695482015609741
+    }
+  ],
+  "limitation": "This rules out the checked local inference/observation/termination mistakes; it does not prove equality of old and current simulator dynamics."
+}

@@ -1,0 +1,18 @@
+{
+  "source": "scripts/make_figures_v2.py",
+  "source_sha256": "7103cc78f2295aad5b146542e019da10cc42037cb09f6629b3bd04f049f6955f",
+  "adapter_sha256": "d1d9484e35a43cc96be53c13f00077794670d707bc74e93b8eb8d605fc16855e",
+  "calculation_unchanged": true,
+  "values": {
+    "seed_sd": 0.06720468429163608,
+    "drift_max": 0.109375,
+    "drift_mean": 0.0859375,
+    "shift": 0.12122395833333333,
+    "drift_detail": {
+      "nominal": -0.109375,
+      "force_x0.5": -0.0625
+    }
+  },
+  "output_sha256": "4b075409ff12463b28f846b488081df4ee40adb1d7d506c50b978ff5015178b0",
+  "scope": "Historical execution-protocol contrasts, not isolated causal parameter effects. Illustrative noise projections retain their working assumptions."
+}

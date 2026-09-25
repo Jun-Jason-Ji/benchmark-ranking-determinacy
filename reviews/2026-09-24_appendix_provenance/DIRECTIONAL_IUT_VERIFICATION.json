@@ -1,0 +1,201 @@
+{
+  "regressions": [
+    "Opposite strong signs give p=1",
+    "A degenerate zero gap cannot establish strict ordering",
+    "Nonzero zero-SE gaps retain the explicitly degenerate working-model behavior",
+    "A common sign uses the least significant condition; sign reversal is symmetric",
+    "A noisy zero point estimate gives p=1",
+    "Mixed-sign evidence cannot occupy an early Holm rank",
+    "Empty and invalid variance inputs fail explicitly"
+  ],
+  "number_of_pairs": 17,
+  "before": {
+    "uncorrected": {
+      "point": 11,
+      "envelope": 10,
+      "disagreement": 1
+    },
+    "Holm": {
+      "point": 9,
+      "envelope": 5,
+      "disagreement": 4
+    },
+    "BH": {
+      "point": 11,
+      "envelope": 10,
+      "disagreement": 1
+    }
+  },
+  "after": {
+    "uncorrected": {
+      "point": 11,
+      "envelope": 10,
+      "disagreement": 1
+    },
+    "Holm": {
+      "point": 9,
+      "envelope": 5,
+      "disagreement": 4
+    },
+    "BH": {
+      "point": 11,
+      "envelope": 10,
+      "disagreement": 1
+    }
+  },
+  "comparisons": [
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base",
+      "old_point_p": 0.08678818855449343,
+      "new_point_p": 0.08678818855449343,
+      "old_envelope_p": 0.08678818855449343,
+      "new_envelope_p": 0.08678818855449343
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-small@hist1",
+      "old_point_p": 0.024872094571381165,
+      "new_point_p": 0.024872094571381165,
+      "old_envelope_p": 0.024872094571381165,
+      "new_envelope_p": 0.024872094571381165
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base@hist1",
+      "old_point_p": 4.754752852254459e-05,
+      "new_point_p": 4.754752852254459e-05,
+      "old_envelope_p": 0.020595451555046673,
+      "new_envelope_p": 0.020595451555046673
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-small",
+      "policy_b": "openvla-7b-4bit",
+      "old_point_p": 2.2538386102270846e-23,
+      "new_point_p": 2.2538386102270846e-23,
+      "old_envelope_p": 1.1292448167551417e-15,
+      "new_envelope_p": 1.1292448167551417e-15
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-base",
+      "policy_b": "octo-small@hist1",
+      "old_point_p": 0.6037651485645346,
+      "new_point_p": 0.6037651485645346,
+      "old_envelope_p": 0.6037651485645346,
+      "new_envelope_p": 1.0
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-base",
+      "policy_b": "octo-base@hist1",
+      "old_point_p": 0.02426532013340431,
+      "new_point_p": 0.02426532013340431,
+      "old_envelope_p": 0.9872094021673835,
+      "new_envelope_p": 1.0
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-base",
+      "policy_b": "openvla-7b-4bit",
+      "old_point_p": 8.65141173318592e-16,
+      "new_point_p": 8.65141173318592e-16,
+      "old_envelope_p": 2.6898369253647257e-05,
+      "new_envelope_p": 2.6898369253647257e-05
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-small@hist1",
+      "policy_b": "octo-base@hist1",
+      "old_point_p": 0.08540580828461952,
+      "new_point_p": 0.08540580828461952,
+      "old_envelope_p": 0.11666446478102338,
+      "new_envelope_p": 1.0
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-small@hist1",
+      "policy_b": "openvla-7b-4bit",
+      "old_point_p": 5.60784182662898e-14,
+      "new_point_p": 5.60784182662898e-14,
+      "old_envelope_p": 6.766400421801721e-07,
+      "new_envelope_p": 6.766400421801721e-07
+    },
+    {
+      "task": "eggplant (ms3)",
+      "policy_a": "octo-base@hist1",
+      "policy_b": "openvla-7b-4bit",
+      "old_point_p": 2.5991452943094617e-09,
+      "new_point_p": 2.5991452943094617e-09,
+      "old_envelope_p": 0.010100129933700668,
+      "new_envelope_p": 0.010100129933700668
+    },
+    {
+      "task": "spoon (ms3)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base",
+      "old_point_p": 4.06215042865871e-06,
+      "new_point_p": 4.06215042865871e-06,
+      "old_envelope_p": 0.01842212545409902,
+      "new_envelope_p": 0.01842212545409902
+    },
+    {
+      "task": "carrot (ms3)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base",
+      "old_point_p": 0.31731050786291415,
+      "new_point_p": 0.31731050786291415,
+      "old_envelope_p": 0.4795001221869535,
+      "new_envelope_p": 0.4795001221869535
+    },
+    {
+      "task": "eggplant (ms2, original stack)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base",
+      "old_point_p": 0.4385780260809999,
+      "new_point_p": 0.4385780260809999,
+      "old_envelope_p": 0.46685427082272557,
+      "new_envelope_p": 0.46685427082272557
+    },
+    {
+      "task": "eggplant (ms2, original stack)",
+      "policy_a": "octo-small",
+      "policy_b": "openvla-7b-4bit",
+      "old_point_p": 2.55962508777167e-12,
+      "new_point_p": 2.55962508777167e-12,
+      "old_envelope_p": 2.55962508777167e-12,
+      "new_envelope_p": 2.55962508777167e-12
+    },
+    {
+      "task": "eggplant (ms2, original stack)",
+      "policy_a": "octo-base",
+      "policy_b": "openvla-7b-4bit",
+      "old_point_p": 2.0048960802802991e-13,
+      "new_point_p": 2.0048960802802991e-13,
+      "old_envelope_p": 5.733031437583891e-07,
+      "new_envelope_p": 5.733031437583891e-07
+    },
+    {
+      "task": "spoon (ms2, original stack)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base",
+      "old_point_p": 0.0015654022580025523,
+      "new_point_p": 0.0015654022580025523,
+      "old_envelope_p": 0.011412036386001677,
+      "new_envelope_p": 0.011412036386001677
+    },
+    {
+      "task": "carrot (ms2, original stack)",
+      "policy_a": "octo-small",
+      "policy_b": "octo-base",
+      "old_point_p": 1.0,
+      "new_point_p": 1.0,
+      "old_envelope_p": 1.0,
+      "new_envelope_p": 1.0
+    }
+  ]
+}

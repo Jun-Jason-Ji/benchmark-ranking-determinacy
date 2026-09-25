@@ -1,0 +1,70 @@
+# Trace of the four early exploratory candidates
+
+Audit date: 2026-09-24. This is a read-only audit of existing reports, scripts, execution logs and episode records. No simulations or inferential analyses were rerun. The accompanying `EARLY_CANDIDATE_TRACE.json` assigns source IDs S01--S18 and raw-record IDs R01--R19, records exact repository-relative paths and SHA-256 hashes, and independently checks the success counts and episode budgets reported below.
+
+## Findings that change the wording of Appendix E
+
+1. The four candidates can be identified. Two concerned opposite signs of point estimates. The other two concerned a declaration at one condition and abstention at another, with positive point estimates at both. Calling all four "ranking-flip candidates" is inaccurate.
+2. All four concern carrot or spoon, each with 24 distinct initial configurations. A 24-episode batch already enumerates the configuration grid. Extending to 48 or 96 episodes adds stochastic policy observations on the same configurations; it does not add new configurations. The earlier wording "therefore use complete configuration censuses" does not describe what resolved these particular candidates.
+3. The larger-budget results do not establish that the underlying parameter effects are zero. They establish that the particular initial signals were not retained in the recorded follow-ups. Avoid the historical reports' stronger phrases such as "sample-size artefact", "no influence" or "false effect" unless supported by a separate test.
+4. These were adaptive exploratory follow-ups, selected after looking at smaller-budget results. Their historical episode-bootstrap intervals are retained as provenance, not as confirmatory evidence or as intervals retrospectively corrected for repeated looks and selection.
+5. The records support an earlier written intention to examine the effect of more seeds and remove resolved disagreements. They do not provide an independently time-stamped preregistration of that intention before the relevant data were collected. "Pre-committed" should be replaced with a factual description of the sensitivity analysis.
+
+## Common design and units
+
+The original exploratory platform was ManiSkill3/SAPIEN3 on Windows with an adapted IK implementation and Octo inference served from WSL2 (S01--S03). All four candidates use Octo policies. The stored records directly verify `policy_seed = 20260918 + episode_id` for all 19 inspected raw files. This is the older per-episode reseeding lifecycle, not the reference protocol's single advancing stream per run.
+
+For these carrot and spoon tasks, `configuration_id = episode_id mod 24` (S10). Thus episode IDs 0--23, 0--47 and 0--95 contain 24 configurations with respectively one, two and four policy-randomness draws per configuration, all within the original seed schedule. They are not 24, 48 and 96 independent configurations, and they should not be described as one, two or four independently collected seed-set replications. Historical intervals resampled paired episodes (S01, S04--S06). Their inferential interpretation differs from the later configuration-census analyses.
+
+Here and below, Delta is the success-rate difference of the first named policy minus the second. Confidence intervals quoted in this report are historical report values, not newly calculated intervals. Success counts were rechecked directly from the current archived JSONL records, including the initial prefixes. No duplicated episode IDs were found in the 19 inspected raw files.
+
+## Candidate inventory
+
+| ID | Task and policy comparison | Parameter conditions | Initial signal and budget | Recorded follow-up | Disposition and source IDs |
+|---|---|---|---|---|---|
+| C1 | Carrot; Octo-Small versus Octo-Base | Common stiffness/damping scales 0.5 and 4, with nominal and scales 0.25 and 2 also inspected | At 24 episodes per condition, Delta(0.5) = -0.125 (2 versus 5 successes) and Delta(4) = +0.125 (5 versus 2). The respective historical intervals touch zero, so this was an opposite-point-estimate candidate, not an interval-supported reversal. At 48 episodes, the 0.5-scale interval excluded zero on the negative side; the 4-scale interval still included zero. | The 0.25, 0.5 and 4 scales were extended to 96 episodes; nominal and scale 2 remained at 48. At scale 0.5, Delta = -0.0625 (6 versus 12 of 96), interval [-0.14, +0.01]; at scale 4, Delta = 0 (13 versus 13), interval [-0.08, +0.08]. | Opposite point-estimate signs were not retained at the two candidate endpoints. The intermediate declaration at scale 0.5 also became abstention. S02, S03, S18; raw R01--R06. |
+| C2 | Spoon; Octo-Small versus Octo-Base | Nominal versus torque limit multiplied by 0.5 | At 24 paired episodes, nominal Delta = 7/24 = +0.292, interval [+0.12, +0.46]; reduced torque Delta = 4/24 = +0.167, interval [0.00, +0.38]. Both point estimates were positive: declaration versus abstention, not an ordering reversal. | At 48 paired episodes, nominal Delta = 14/48 = +0.292, interval [+0.15, +0.44]; reduced torque Delta = 11/48 = +0.229, interval [+0.10, +0.35]. | Both conditions declared the same positive ordering under the historical episode-bootstrap rule. S02, S04, S05; raw R07, R08, R11, R12. |
+| C3 | Spoon; Octo-Small versus Octo-Base | Stiffness multiplied by 2 versus damping multiplied by 0.5 | At 24 paired episodes, the respective Deltas were 7/24 = +0.292, interval [+0.12, +0.50], and 4/24 = +0.167, interval [0.00, +0.33]. Both point estimates were positive: declaration versus abstention. | At 48 paired episodes, the respective Deltas were 10/48 = +0.208, interval [+0.06, +0.35], and 7/48 = +0.146, interval [+0.04, +0.27]. | Both conditions declared the same positive ordering under the historical episode-bootstrap rule. S02, S04, S05; raw R09, R10, R13, R14. |
+| C4 | Spoon; Octo-Small with default two-frame history versus the same weights with single-frame history | Nominal versus friction coefficient 0.2 (0.4 times nominal 0.5); common gain scale 0.25 was another inspected condition | At 24 episodes, nominal Delta = +0.125 (9 versus 6 successes), low-friction Delta = -0.2083 (4 versus 9), and scale-0.25 Delta = -0.0833 (6 versus 8). The selection report says the intervals included zero. | A queue extended the pair to 96 episodes on all six deployment-variant conditions. Following quarantine and rerun of contaminated records, nominal had 30 versus 30 successes and low friction 19 versus 19, both Delta = 0; scale 0.25 had 27 versus 23, Delta = +0.0417. | The initial opposite-sign pattern was not retained. S06 explicitly calls this the fourth intermediate candidate. S06--S09, S17; raw R07, R15--R19. |
+
+The raw-ID range for C4 intentionally includes R07, the shared Octo-Small nominal record already used for C2. The four rows are four historical follow-up questions, not four independent tasks or an exhaustive denominator over every comparison inspected.
+
+## Selection, continuation and stopping provenance
+
+- **Initial rule, S01 lines 28--43:** a point-estimate sign change was labelled a candidate; opposing intervals excluding zero were required for an interval-supported reversal. The retained protocol specified continuing candidate episodes from 24 to 48 without changing the conditions. This is an internal protocol record. Its heading says "frozen before results", but the local Git history does not independently verify that timing.
+- **C1, S03 lines 19--49:** the report explicitly planned the extension of extreme common-scale conditions to 96 episodes, then appended 48- and 96-episode findings. The execution log (S18 lines 1--7) records the 96-episode extension ending at 13:53:32; the written finding is labelled 2026-09-18 13:55. The nominal condition was not extended to 96 in this historical analysis. Do not imply that every scale had a balanced 96-episode design.
+- **C2/C3, S02 lines 40--47:** the queue planned extension of the spoon sweep to 48 episodes. The appended 2026-09-18 11:50 note names the two declaration-versus-abstention patterns and says both disappeared at 48. Their earlier and later tables remain available as S04 and S05.
+- **C4, S07 lines 54--58 and S08 lines 1--27:** the policy-variant scan identified the candidate, and the retained queue explicitly targeted 96 episodes on six conditions. This was a data-informed follow-up, not a held-out test of a candidate selected without looking at results.
+- **C4 data quarantine, S09 and S17:** shared policy-server state contaminated some extensions. The affected records and the contaminated derived report were isolated. S17 contains an initial completion at 04:34:52 followed by a clean rerun completion at 05:24:03. S06, dated 2026-09-19 05:24, expressly reports the latter. The current JSONL prefix and 96-episode counts match S06. Both the quarantine explanation and the clean rerun provenance should remain accessible; do not cite the first completion marker as evidence that the clean follow-up had already completed.
+
+**Limit of the C4 reconstruction.** The current 24-episode prefix success counts match the point estimates documented in the retained selection report (S07) and the follow-up summary (S06). The quarantine report (S09) identifies later episode ranges, starting at episode 24 or 48, for the affected C4 conditions; it does not identify episodes 0--23 as affected. However, no independently frozen copy or pre-selection hash of those original prefix files was verified in this audit. The correspondence is therefore supported by the retained summaries and current episode counts, not by a byte-for-byte comparison with a separately preserved pre-selection snapshot. Calling the prefix "archived" does not establish when its exact bytes were archived. The contaminated first 96-episode report is not the source for the clean 96-episode outcome.
+
+No formal sequential-testing adjustment, alpha-spending rule, independent registered timestamp, or complete machine-readable ledger of every candidate inspected was found in this scoped trace. This is a finding about the retained evidence, not a claim that no such record could exist elsewhere. The supplement should disclose the exploratory selection and describe the stopping budgets recorded in the queue, without retrospectively branding the analyses as preregistered or confirmatory.
+
+## The separate S = 3 to S = 5 claim
+
+The word "pre-committed" in the current main manuscript concerns the later eggplant seed-budget check, not C1--C4. These must not be conflated.
+
+- S12 lines 133--140 contains prospective-looking text proposing the S = 3 to S = 5 extension and stating that a then-marginal Octo-Base (single-frame) versus OpenVLA disagreement would be removed if more seeds resolved it.
+- S13 lines 67--73 describes the planned seed-budget sensitivity experiment.
+- S14 gives the executed design: four Octo policy variants, six conditions, 64 configurations, and two new seed schedules, 20290101 and 20300101, adding 3,072 episodes. It identifies the three initially disagreeing pairs. The queue orders binding conditions first and has operational fallback behaviour; it is an execution plan rather than a formal statistical registration.
+- S15 starts with a restart dated 2026-09-20 and records the final completion marker at 04:36:42. S16 documents the result.
+- The earliest Git commit returned for the protocol, planning draft, queue plan and fourth-candidate report is `9353b38`, dated **2026-09-22 00:04:18 -0700**, after these experiments. File contents have informative internal dates, but the repository does not independently establish that their exact present contents existed before all observations.
+
+Recommended replacement in the main manuscript:
+
+> We use the extension from three to five seed sets as a sensitivity analysis of the disagreement count. Two disagreements are resolved at the larger budget, leaving one; the historical analysis record and follow-up design are documented in the supplementary provenance record.
+
+This preserves what was done and what was learned without asserting an unsupported registration status. The supplement may state that an earlier retained draft described the planned check and withdrawal rule, with the timestamp limitation above.
+
+## Suggested concise supplement paragraph
+
+> Four exploratory candidates from the early 24- and 48-episode sweeps were not retained after follow-up. Two involved opposite signs of point estimates: a common-gain-scale comparison on carrot and an observation-history comparison on spoon. Two others involved declaration at one controller setting and abstention at another on spoon; neither implied opposite policy orderings. At 48 or 96 episodes, the corresponding initial signals were no longer present under the historical analysis rule. These tasks each have 24 initial configurations, so the extensions added policy-randomness observations on already enumerated configurations. The candidates were selected using the initial results. Their episode-bootstrap intervals are retained for provenance and are not used as confirmatory evidence. The source inventory records each comparison, its changing budget, the clean-rerun status where relevant, and its disposition.
+
+A sentence worth retaining near the substantive main-text result:
+
+> No interval-supported opposite ordering was retained in these exploratory follow-ups; this does not establish the absence of parameter effects.
+
+## Scope of this audit
+
+The reported historical success counts were independently recomputed from 19 current JSONL files; the 24/48/96 prefix counts, grid coverage, duplicate checks and seed-schedule checks are in the JSON inventory. The report quotations and intervals were inspected against the retained sources. Historical bootstrap confidence levels were not revalidated for adaptive selection, repeated observations of configurations, build changes or all protocol deviations. Primary conclusions should continue to rely on the later explicitly specified analysis units and completed censuses, with their stated limitations.

@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-24T17:53:20.030838+00:00",
+  "plan_sha256": "7255d46104a169ca272ba123d9b848456a2b1ed2f044ccfc4df3ab583694786f",
+  "v3_frozen_plan_sha256": "abd02682f155a95f2e0c07079dc8e9bc747be3a00f6efdbc9d8b7a75e7a6c246",
+  "v3_outcomes_analyzed": false,
+  "additional_rollouts": 384,
+  "shared_baseline_rollouts": 384,
+  "primary_v3_unchanged": true
+}

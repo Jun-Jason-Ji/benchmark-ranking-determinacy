@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-24T17:17:33Z",
+  "analyzer_sha256": "036b82898b937949aab8fc46e3e1b8e762820a9e86c684900f07dbaaf3294b58",
+  "tests_sha256": "368f84f4f0109d69d610be8699c088bbb55998745126bfb0ca1488a777ad14a7",
+  "plan_sha256": "976d0789d1f8fa35c8a7e5b44fbd21f3fadfbd709637ad66fccba00abf40a298",
+  "primary": "8-block exact one-sided sign/binomial test; zeros nonnegative; complete design only",
+  "secondary": "block t working model and bounded mean on [-2,2]",
+  "all_tests_passed": 8
+}

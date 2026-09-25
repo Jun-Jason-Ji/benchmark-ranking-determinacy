@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-09-24T17:04:35.074846+00:00",
+  "status": "locally_frozen_before_new_data_not_external_preregistration",
+  "files": {
+    "PLAN.md": "83c3b586df2ea9d5cd8b108cfe313c5326e5861c5abea89c4694526d2bdfffbd",
+    "run_confirmatory.py": "1e3e05c49afa30e39583c99ec105cb6c26fa5f17c4d1303da0c78121b8abb445",
+    "run_all.py": "c6a2eb2284970eba529f7570ffb7a8b2c9ab58570e2a5c163f1fe0e5d67486da",
+    "analyze_confirmatory.py": "7de77e1b641116e0459d2bf7c09482880cd64003efeb9e6fea5aa4104736dd4a"
+  },
+  "checkpoint_hashes": {
+    "ppo_pd_ee_delta_pos_ckpt.pt": "0b17b5ed9690ccf83111d0f09af8d1599f69ee7ba0077e1aac48814ac78ce99c",
+    "ppo_pd_joint_delta_pos_ckpt.pt": "78959417279892d73e4ed5930a6d8de8626a24eee0ec553dfc6af61391b0b356",
+    "PushCube_ppo_pd_ee_delta_pos_ckpt.pt": "5210b0d48bed5b1b6b94aeef54d46bb6b5dceaebe812d1356983241d6b0d1b75",
+    "PushCube_ppo_pd_joint_delta_pos_ckpt.pt": "3651c85eb5635e80aa39c5775fb238f0f5b0ae85a5eefb75dcf4ed6226e56d2a"
+  },
+  "prior_source_environment_sha256": "37283580b587f93d276c63718b1c91a12072a42cefe7487498d5e4a616210f8d",
+  "previous_outcomes_not_used_for_new_sample_selection": true,
+  "seed_vector_starts": [
+    731250001,
+    893460001,
+    1135790001,
+    1579130001
+  ],
+  "batch_size": 256,
+  "intended_primary_family": 20,
+  "alpha": 0.05,
+  "confirmation_rule": "PushCube: all five ever50 gaps positive AND all five at50 gaps negative; PickCube: both positive over all five settings."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "unchanged_plan_sha256": "83c3b586df2ea9d5cd8b108cfe313c5326e5861c5abea89c4694526d2bdfffbd",
+  "runtime_repeat": {
+    "cells": 1,
+    "episodes": 256,
+    "initial_observations_identical": true,
+    "full_initial_states_identical": true,
+    "all_100_success_bits_and_50_100_states_identical": true,
+    "used_as_extra_evidence": false
+  },
+  "source_and_binary_hashes_match_original_environment": {
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/tabletop/pick_cube.py": true,
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/tabletop/push_cube.py": true,
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": true,
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/robots/panda/panda.py": true,
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": true,
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": true,
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/utils/kinematics.py": true,
+    "reviews/2026-09-24_ras_retarget/cross_benchmark/physx_runtime/PhysXGpu_64.dll": true,
+    "reviews/2026-09-24_ras_retarget/cross_benchmark/physx_windows_dll.zip": true
+  },
+  "independent_endpoint_predicate_checks": 40960,
+  "independent_binomtest_interval_checks": 20,
+  "all_parameter_assignments_match_fixed_settings": true,
+  "result_sha256": "ee97b9787884b57082ce0173f38d34a2da198aac11df5507be64aa817a0b9bcb"
+}

@@ -1,0 +1,12 @@
+{
+  "file_format_version": "1.0.0",
+  "layer": {
+    "name": "VK_LAYER_the_world_fakesemfd",
+    "type": "GLOBAL",
+    "library_path": "./libVkLayer_fakesemfd.so",
+    "api_version": "1.3.275",
+    "implementation_version": "1",
+    "description": "Advertise VK_KHR_external_semaphore_fd / external_fence_fd on drivers lacking them (SAPIEN 2 on WSL lavapipe). Explicit layer: enable with VK_LAYER_PATH + VK_INSTANCE_LAYERS.",
+    "functions": { "vkNegotiateLoaderLayerInterfaceVersion": "vkNegotiateLoaderLayerInterfaceVersion" }
+  }
+}

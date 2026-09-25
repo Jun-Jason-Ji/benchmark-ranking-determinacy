@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scipy_version": "1.12.0",
+  "numpy_version": "1.26.4",
+  "clopper_pearson_comparisons": 432,
+  "maximum_absolute_CP_error": 4.977129819394577e-13,
+  "exact_mcnemar_tables_checked": 7,
+  "scipy_pearson_and_upstream_summary_rows_checked": 18
+}

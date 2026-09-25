@@ -1,8 +1,9 @@
 """Re-render the paper figures as submission-ready EPS for Autonomous Robots.
 
 The journal requires vector graphics in EPS, sans-serif lettering (Helvetica or Arial) at 8-12 pt, figure
-files named Fig1.eps, Fig2.eps, ..., and no captions inside the figure files. Our figure scripts are
-matplotlib and therefore vector-native, so EPS is a true vector export rather than a wrapped raster.
+files named Fig1.eps, Fig2.eps, ..., and no captions inside the figure files. Lines and lettering
+remain vector artwork. Figure 6 also contains heatmaps and a colour bar; export those raster
+components at 800 dpi so they remain above 600 dpi after scaling to the manuscript's text width.
 
 Rather than edit the four figure scripts, this one imports them, overrides the font family (their rcParams
 set DejaVu Sans first, which is neither Helvetica nor Arial), and patches Figure.savefig so that every PNG
@@ -20,6 +21,10 @@ Fig5 is redrawn from run_track_s.py's cached cells (track_s_results.json) rather
 300 repetitions per cell.
 
 Usage: python scripts/export_submission_figures.py
+
+Figure 6 also has a direct PDF counterpart, written using the existing
+Fig6-eps-converted-to.pdf compatibility name. It avoids Ghostscript downsampling
+and font-conversion issues while preserving the same Matplotlib scene.
 """
 import argparse
 import sys
@@ -83,7 +88,16 @@ def _patched_savefig(self, fname, **kw):
     OUT.mkdir(parents=True, exist_ok=True)
     eps = OUT / f"Fig{n}.eps"
     kw2 = {k: v for k, v in kw.items() if k in ("bbox_inches", "pad_inches")}
-    _orig_savefig(self, eps, format="eps", **kw2)
+    # An EPS container does not make imshow/colorbar artists vector. The
+    # default 100 dpi gave Fig6 only about 92 dpi after manuscript scaling.
+    eps_options = {"dpi": 800} if n == 6 else {}
+    _orig_savefig(self, eps, format="eps", **eps_options, **kw2)
+    if n == 6:
+        # Keep the compatibility filename used by the LaTeX build, but write
+        # directly from this scene to preserve image resolution and fonts.
+        with matplotlib.rc_context({"pdf.fonttype": 42}):
+            _orig_savefig(self, OUT / "Fig6-eps-converted-to.pdf",
+                          format="pdf", dpi=800, **kw2)
     # A proof raster at the exact submitted geometry, so the layout can be eyeballed for label collisions
     # at the size the journal will print. Not submitted; EPS is the deliverable.
     _orig_savefig(self, OUT / "proof" / f"Fig{n}_proof.png", format="png", dpi=200, **kw2)

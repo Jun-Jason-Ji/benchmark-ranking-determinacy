@@ -1,14 +1,15 @@
-# Declarations — to paste into the Editorial Manager submission interface
+# Declarations — to paste into the journal submission system
 
-The journal's guidelines are explicit on this point: **only the declaration information submitted via
-the interface appears in the published version.** The same text is in `main.tex` under
-"Declarations", but entering it in the manuscript alone is not sufficient. Copy each block below into
-the corresponding interface field.
+The journal requires **author contributions and competing interests** to be entered through
+the submission interface; for these two categories, the interface entries determine the final
+published statements. The manuscript also retains its required declarations after the references.
+Copy the applicable blocks into the corresponding fields; uploading the manuscript does not
+complete this step. The interface has not been filled or submitted by this preparation workflow.
 
 Review every one of these before submitting — several are assertions about the authors, not about
 the research. The confirmed author, funding and competing-interest statements are retained below.
-The current results will be supplied in a frozen companion review package; a version-specific
-public deposit matching that package has not yet been verified. The AI disclosure records the tools
+The current results are supplied in a frozen companion review package, which has not yet been
+published as a new public archive. The AI disclosure records the tools
 used through this revision.
 
 ---
@@ -45,24 +46,23 @@ Not applicable.
 ## Data availability
 
 ```
-The episode-level records underlying this manuscript will be supplied in a frozen companion review
-package. The package will include append-only JSON Lines files by policy, task and simulator
-condition, per-run provenance logs recording the port branch, inference-stack version and random
-seeds, and a SHA256SUMS.txt manifest identifying the frozen files. Earlier releases are available
-through the concept DOI https://doi.org/10.5281/zenodo.22893458; they do not contain all records
-added for the current manuscript. A version-specific public deposit matching the current review
-package has not yet been verified, and the concept DOI should not be read as confirmation that the
-current results are publicly archived. Development is at
-https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. The real-robot reference values used
-in Section 8.4 are the published values distributed with the benchmark's own source and are not
-ours to redistribute; the manuscript cites their location.
+Episode-level evaluation records, replay trajectories and analysis inputs are supplied in the frozen
+companion review package, with a file manifest, SHA-256 checksums and the scope of the included
+experiments. The records identify policy, task, simulator condition, inference build and random
+seeds. Development is at https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy.
+As verified on 23 September 2026, the latest public archive is v1.1.3,
+https://doi.org/10.5281/zenodo.22896508; the concept DOI
+https://doi.org/10.5281/zenodo.22893458 indexes the release history. That earlier archive is
+not interchangeable with the current review snapshot, which includes additional evaluation data.
+The current snapshot is supplied with this submission and identified by its accompanying manifest;
+it has not yet been published as a new public archive. The real-robot reference
+values in Section 8.4 come from the benchmark's published source tables, whose location
+is cited, rather than from experiments conducted for this study.
 ```
 
-> Archive status checked against `CHANGELOG.md` on 2026-09-23: its DOI table ends at v1.1.2 and
-> explicitly describes versions absent from the table as not yet archived. The current manuscript
-> includes later results. Its frozen review package and corresponding checksum manifest must be
-> identified separately from those earlier archives; a current version-specific deposit remains
-> unverified.
+> Public GitHub, Zenodo and DOI-registry metadata were checked on 2026-09-23: the latest published
+> release is v1.1.3, DOI `10.5281/zenodo.22896508`. The current manuscript includes later results.
+> Its frozen review package must be identified separately; no new public deposition was performed.
 
 ## Materials availability
 
@@ -73,15 +73,13 @@ Not applicable.
 ## Code availability
 
 ```
-The evaluation harness, configuration-census utilities, resumable evaluation queues, analysis and
-figure-generation scripts, and Vulkan compatibility layer will be supplied with the frozen
-companion review package. REPRODUCIBILITY.md gives the commands for regenerating the manuscript's
-tables and figures from the accompanying records. Original code is licensed under MIT; evaluation
-records and outputs derived from third-party simulators, policies and demonstration data are
-governed by the package's NOTICE file. Development is at
-https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy. Earlier code releases are available
-through https://doi.org/10.5281/zenodo.22893458. A version-specific public deposit of the current
-scripts and matching records has not yet been verified.
+The companion review package supplies the analysis scripts and reproduction instructions. The
+project repository also contains the evaluation harness, configuration-census utilities, resumable
+queues and Vulkan compatibility layer described in Appendix B. Original code is released
+under the MIT licence; records and outputs derived from third-party simulators, policies and
+demonstrations remain subject to the third-party terms identified in the accompanying notices. The review evidence index maps the main claims
+to their records and analysis commands. The current review snapshot should be used when reproducing
+the manuscript rather than an earlier archived version.
 ```
 
 > Keep the code, records, regeneration instructions and checksum manifest together in the frozen
@@ -89,28 +87,30 @@ scripts and matching records has not yet been verified.
 
 ## Author contributions
 
-> ✅ Settled 2026-09-21. CRediT roles carried over from the authors' prior submission
-> (`IVC_Paper2_Submission_2026-09-12`); Shengjie Guo, who is new to this paper, takes the same roles
-> as Xiaolei Zhang, as directed. Paste as CRediT roles if the interface offers them, otherwise as the
-> prose block below.
+> Updated from the authors’ explicit contribution statement on 2026-09-23.
+> Enter these assignments as CRediT roles if supported, otherwise paste the prose below.
 
 ```
-CRediT authorship contribution statement
+Author contributions.
 
 Jun Ji: Data curation, Methodology, Formal analysis, Resources, Writing – original draft.
 Bowen Tan: Software, Formal analysis, Writing – review & editing.
-Yi Li: Supervision, Project administration, Writing – review & editing.
-Xiaolei Zhang: Supervision, Project administration, Writing – review & editing.
-Shengjie Guo: Supervision, Project administration, Writing – review & editing.
+Yi Li: Formal analysis, Project administration, Writing – review & editing.
+Xiaolei Zhang: Software, Project administration, Writing – review & editing.
+Yizhou Zhao: Software, Writing – review & editing.
+Shengjie Guo: Software, Writing – review & editing.
 Yi Sui: Supervision, Validation, Writing – review & editing.
 ```
 
-> Note for the interface: journal policy requires every listed author to have contributed
-> substantially and to have approved the manuscript, and this is the statement that asserts it.
+> Before submission, the corresponding author should confirm every listed author
+> meets the authorship requirements and approves the final manuscript. The CRediT list
+> records contributions; it is not, by itself, a record of final approval.
 
 ## Authors, affiliations and ORCIDs (for the interface author fields)
 
 Order as submitted. Yi Sui is the corresponding author.
+
+Updated at the authors' direction on 2026-09-23: Yizhou Zhao is fifth, immediately before Shengjie Guo. His CRediT roles match Shengjie Guo's. The supplied institutional identities, emails and ORCIDs are preserved. Affiliation addresses uniformly use institution, city/region and country, without postal codes. On 2026-09-24, the authors specified Sino-French Institute for Yizhou Zhao and the College of Computer and Information Engineering for Shengjie Guo. The Sino-French Institute is at RUC’s Suzhou campus, so affiliation 3 uses Suzhou. The department names and city are synchronized with both manuscript languages and CITATION.cff.
 
 | # | Author | Affiliation | Email | ORCID |
 |---|---|---|---|---|
@@ -118,18 +118,20 @@ Order as submitted. Yi Sui is the corresponding author.
 | 2 | Bowen Tan | HKUST (2) | btanab@connect.ust.hk | 0009-0007-0554-9261 |
 | 3 | Yi Li | Qingdao University (1) | ly2005@qdu.edu.cn | 0000-0002-4185-3152 |
 | 4 | Xiaolei Zhang | Qingdao University (1) | zhangxiaolei@qdu.edu.cn | 0000-0002-0122-4554 |
-| 5 | Shengjie Guo | Inner Mongolia Agricultural University (3) | guosj@emails.imau.edu.cn | 0009-0004-6852-4836 |
-| 6 | **Yi Sui** (corresponding) | Qingdao University (1) | suiyi@qdu.edu.cn | 0009-0001-8081-5183 |
+| 5 | Yizhou Zhao | Sino-French Institute, Renmin University of China (3) | yizhou-zhao@ruc.edu.cn | 0009-0004-7515-6322 |
+| 6 | Shengjie Guo | College of Computer and Information Engineering, Inner Mongolia Agricultural University (4) | guosj@emails.imau.edu.cn | 0009-0004-6852-4836 |
+| 7 | **Yi Sui** (corresponding) | Qingdao University (1) | suiyi@qdu.edu.cn | 0009-0001-8081-5183 |
 
 Affiliations as typeset:
 
-1. College of Computer Science and Technology, Qingdao University, Qingdao 266071, China
+1. College of Computer Science and Technology, Qingdao University, Qingdao, China
 2. The Hong Kong University of Science and Technology, Hong Kong SAR, China
-3. Inner Mongolia Agricultural University, Hohhot, China
+3. Sino-French Institute, Renmin University of China, Suzhou, China
+4. College of Computer and Information Engineering, Inner Mongolia Agricultural University, Hohhot, China
 
 > Ethan Yixuan Ji was removed from the author list on 2026-09-21, and affiliation 4 (The Middle
 > School Affiliated to Qingdao University) went with him, since no remaining author was attached to
-> it. The other three affiliation numbers are unchanged.
+> it. That historical removal is retained for the record; the current affiliation numbers are shown above.
 >
 > ✅ Confirmed by the authors 2026-09-22: **Hohhot** as Inner Mongolia Agricultural University's
 > city, and **Shengjie Guo** in given-name-first order as Springer typesets it. Nothing outstanding
@@ -140,21 +142,19 @@ Affiliations as typeset:
 > Updated 2026-09-23 to include the tools and assistance used during manuscript preparation and
 > the subsequent submission review. This statement assigns responsibility to the authors without
 > implying that every design or analytical decision was made without AI assistance.
+> The block below matches the independent Use of generative AI section following the conclusion.
 
 ```
-Generative AI tools (Anthropic Claude and OpenAI ChatGPT/Codex) assisted with drafting and revising
-the manuscript and submission materials, developing analysis and figure-generation scripts, and
-checking statistical calculations and consistency of reporting. Quantitative results are computed
-from the episode records by the analysis scripts. The authors take full responsibility for the
-study design, conduct of the experiments, analysis, interpretation and final content. No AI system
-is listed as an author.
+Large language models (OpenAI ChatGPT/Codex) assisted with manuscript revision, analysis scripts. Quantitative results are computed from the recorded episodes by the supplied
+scripts. The authors are responsible for the study design, verification and interpretation of the
+results and the final manuscript; no language model is listed as an author.
 ```
 
 ---
 
 ## Other interface fields to expect
 
-- **Title, abstract, keywords** — the abstract in `main.tex` is approximately 231 words, inside the journal's
+- **Title, abstract, keywords** — use the final abstract in `main.tex`, verified within the journal's
   150–250 limit. Keywords are the six in `main.tex`; the limit is 4–6.
 - **Corresponding author** with an active email address, and ORCID if you have one (16 digits).
 - **Suggested reviewers** — follow the submission system's requirements. If supplied, choose

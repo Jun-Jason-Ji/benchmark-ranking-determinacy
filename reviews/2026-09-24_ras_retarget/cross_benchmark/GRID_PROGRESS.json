@@ -1,0 +1,105 @@
+{
+  "plan_sha256": "9102181fb8b13619130b718d682006e5c5fa115b5571e6dc39b74f338dd99105",
+  "jobs": [
+    {
+      "name": "PickCube-v1_pd_joint_delta_pos_nominal",
+      "returncode": 0,
+      "elapsed": 42.67609930038452
+    },
+    {
+      "name": "PickCube-v1_pd_joint_delta_pos_gain_half",
+      "returncode": 0,
+      "elapsed": 42.97112679481506
+    },
+    {
+      "name": "PickCube-v1_pd_joint_delta_pos_gain_double",
+      "returncode": 0,
+      "elapsed": 42.60625243186951
+    },
+    {
+      "name": "PickCube-v1_pd_joint_delta_pos_force_half",
+      "returncode": 0,
+      "elapsed": 42.590779304504395
+    },
+    {
+      "name": "PickCube-v1_pd_joint_delta_pos_force_double",
+      "returncode": 0,
+      "elapsed": 42.68786263465881
+    },
+    {
+      "name": "PickCube-v1_pd_ee_delta_pos_nominal",
+      "returncode": 0,
+      "elapsed": 43.57730984687805
+    },
+    {
+      "name": "PickCube-v1_pd_ee_delta_pos_gain_half",
+      "returncode": 0,
+      "elapsed": 43.327473878860474
+    },
+    {
+      "name": "PickCube-v1_pd_ee_delta_pos_gain_double",
+      "returncode": 0,
+      "elapsed": 43.59025192260742
+    },
+    {
+      "name": "PickCube-v1_pd_ee_delta_pos_force_half",
+      "returncode": 0,
+      "elapsed": 43.4531524181366
+    },
+    {
+      "name": "PickCube-v1_pd_ee_delta_pos_force_double",
+      "returncode": 0,
+      "elapsed": 44.29470133781433
+    },
+    {
+      "name": "PushCube-v1_pd_joint_delta_pos_nominal",
+      "returncode": 0,
+      "elapsed": 42.55182123184204
+    },
+    {
+      "name": "PushCube-v1_pd_joint_delta_pos_gain_half",
+      "returncode": 0,
+      "elapsed": 42.772990703582764
+    },
+    {
+      "name": "PushCube-v1_pd_joint_delta_pos_gain_double",
+      "returncode": 0,
+      "elapsed": 42.6898295879364
+    },
+    {
+      "name": "PushCube-v1_pd_joint_delta_pos_force_half",
+      "returncode": 0,
+      "elapsed": 42.27834510803223
+    },
+    {
+      "name": "PushCube-v1_pd_joint_delta_pos_force_double",
+      "returncode": 0,
+      "elapsed": 42.2915403842926
+    },
+    {
+      "name": "PushCube-v1_pd_ee_delta_pos_nominal",
+      "returncode": 0,
+      "elapsed": 43.84681415557861
+    },
+    {
+      "name": "PushCube-v1_pd_ee_delta_pos_gain_half",
+      "returncode": 0,
+      "elapsed": 43.06280303001404
+    },
+    {
+      "name": "PushCube-v1_pd_ee_delta_pos_gain_double",
+      "returncode": 0,
+      "elapsed": 43.14683651924133
+    },
+    {
+      "name": "PushCube-v1_pd_ee_delta_pos_force_half",
+      "returncode": 0,
+      "elapsed": 43.50904870033264
+    },
+    {
+      "name": "PushCube-v1_pd_ee_delta_pos_force_double",
+      "returncode": 0,
+      "elapsed": 43.34308433532715
+    }
+  ]
+}

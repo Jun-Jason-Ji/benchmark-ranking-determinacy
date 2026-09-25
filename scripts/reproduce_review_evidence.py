@@ -17,6 +17,7 @@ ANALYSES = (
     ('analyze_multiplicity.py', 'MULTIPLICITY.md'),
     ('analyze_fitted_point.py', 'FITTED_POINT.md'),
     ('analyze_official_protocol.py', 'OFFICIAL_PROTOCOL.md'),
+    ('analyze_torque_scope_current.py', 'TORQUE_SCOPE_CURRENT.json'),
 )
 
 

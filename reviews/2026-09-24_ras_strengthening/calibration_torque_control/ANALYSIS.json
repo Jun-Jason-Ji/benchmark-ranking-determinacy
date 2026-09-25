@@ -1,0 +1,1451 @@
+{
+  "status": "complete",
+  "additional_unique_rollouts": 384,
+  "shared_v3_nominal_rollouts": 384,
+  "joint_unique_rollouts": 1152,
+  "secondary_sign_test": {
+    "target": "One strict direction has probability greater than one half",
+    "null": "P(T < 0) <= 0.5 and P(T > 0) <= 0.5",
+    "n_blocks": 8,
+    "negative_blocks": 2,
+    "positive_blocks": 0,
+    "zero_blocks": 6,
+    "negative_one_sided_p": 0.96484375,
+    "positive_one_sided_p": 1.0,
+    "two_sided_p": 1.0,
+    "reject_at_005": false,
+    "zero_rule": "Zeros match neither direction and remain among all eight blocks",
+    "scope": "Independent identically sampled seed blocks; not a mean-effect or equivalence test"
+  },
+  "mean_sensitivity": {
+    "t_working_model": {
+      "mean": -0.010416666666666666,
+      "sd": 0.01928791874526149,
+      "se": 0.006819309069874761,
+      "df": 7,
+      "interval_available": true,
+      "scope": "Secondary independent approximately normal block-difference working model",
+      "lower": -0.026541770268427016,
+      "upper": 0.005708436935093682
+    },
+    "bounded_mean": {
+      "mean": -0.010416666666666666,
+      "lower": -1.9310622493065082,
+      "upper": 1.9102289159731747,
+      "radius": 1.9206455826398414,
+      "support": [
+        -2,
+        2
+      ],
+      "scope": "Secondary independent-block Hoeffding 95% interval; unrestricted within-block dependence"
+    }
+  },
+  "blocks": [
+    {
+      "block": 1,
+      "seed_base": 431700100,
+      "small_nominal": 8,
+      "base_nominal": 2,
+      "small_forcehalf": 8,
+      "base_forcehalf": 2,
+      "denominator": 24,
+      "shift_numerator": 0,
+      "shift": 0.0
+    },
+    {
+      "block": 2,
+      "seed_base": 557900200,
+      "small_nominal": 11,
+      "base_nominal": 2,
+      "small_forcehalf": 10,
+      "base_forcehalf": 2,
+      "denominator": 24,
+      "shift_numerator": -1,
+      "shift": -0.041666666666666664
+    },
+    {
+      "block": 3,
+      "seed_base": 683100300,
+      "small_nominal": 5,
+      "base_nominal": 0,
+      "small_forcehalf": 5,
+      "base_forcehalf": 0,
+      "denominator": 24,
+      "shift_numerator": 0,
+      "shift": 0.0
+    },
+    {
+      "block": 4,
+      "seed_base": 809300400,
+      "small_nominal": 14,
+      "base_nominal": 3,
+      "small_forcehalf": 13,
+      "base_forcehalf": 3,
+      "denominator": 24,
+      "shift_numerator": -1,
+      "shift": -0.041666666666666664
+    },
+    {
+      "block": 5,
+      "seed_base": 947500500,
+      "small_nominal": 10,
+      "base_nominal": 1,
+      "small_forcehalf": 10,
+      "base_forcehalf": 1,
+      "denominator": 24,
+      "shift_numerator": 0,
+      "shift": 0.0
+    },
+    {
+      "block": 6,
+      "seed_base": 1089700600,
+      "small_nominal": 7,
+      "base_nominal": 0,
+      "small_forcehalf": 7,
+      "base_forcehalf": 0,
+      "denominator": 24,
+      "shift_numerator": 0,
+      "shift": 0.0
+    },
+    {
+      "block": 7,
+      "seed_base": 1231900700,
+      "small_nominal": 7,
+      "base_nominal": 2,
+      "small_forcehalf": 7,
+      "base_forcehalf": 2,
+      "denominator": 24,
+      "shift_numerator": 0,
+      "shift": 0.0
+    },
+    {
+      "block": 8,
+      "seed_base": 1393100800,
+      "small_nominal": 9,
+      "base_nominal": 1,
+      "small_forcehalf": 9,
+      "base_forcehalf": 1,
+      "denominator": 24,
+      "shift_numerator": 0,
+      "shift": 0.0
+    }
+  ],
+  "cells": [
+    {
+      "block": 1,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 8,
+      "n": 24
+    },
+    {
+      "block": 1,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 2,
+      "n": 24
+    },
+    {
+      "block": 2,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 10,
+      "n": 24
+    },
+    {
+      "block": 2,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 2,
+      "n": 24
+    },
+    {
+      "block": 3,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 5,
+      "n": 24
+    },
+    {
+      "block": 3,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 0,
+      "n": 24
+    },
+    {
+      "block": 4,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 13,
+      "n": 24
+    },
+    {
+      "block": 4,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 3,
+      "n": 24
+    },
+    {
+      "block": 5,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 10,
+      "n": 24
+    },
+    {
+      "block": 5,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 1,
+      "n": 24
+    },
+    {
+      "block": 6,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 7,
+      "n": 24
+    },
+    {
+      "block": 6,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 0,
+      "n": 24
+    },
+    {
+      "block": 7,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 7,
+      "n": 24
+    },
+    {
+      "block": 7,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 2,
+      "n": 24
+    },
+    {
+      "block": 8,
+      "policy": "octo-small",
+      "condition": "forcehalf",
+      "successes": 9,
+      "n": 24
+    },
+    {
+      "block": 8,
+      "policy": "octo-base",
+      "condition": "forcehalf",
+      "successes": 1,
+      "n": 24
+    }
+  ],
+  "two_claim_family": {
+    "names": [
+      "V3 one-sided direction repeatability",
+      "Secondary two-sided torque direction repeatability"
+    ],
+    "raw_p": [
+      0.03515625,
+      1.0
+    ],
+    "holm_adjusted_p": [
+      0.0703125,
+      1.0
+    ],
+    "reject": [
+      false,
+      false
+    ],
+    "baseline_shared": true,
+    "independence_between_tests_required": false
+  },
+  "integrity": {
+    "complete_16_cells": true,
+    "all_states_images_match_shared_baseline": true,
+    "all_parameters_verified": true,
+    "all_reseeds_and_closures_verified": true
+  },
+  "scope": "Fixed finite spoon configurations, fixed build/policy pipelines, final60 and canonical nominal-settled initialization. Independent identically sampled seed blocks assumed. Secondary majority-direction test is not a mean test or equivalence test. Historical effects remain protocol contrasts.",
+  "input_sha256": {
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/FROZEN_ANALYSIS.json": {
+      "sha256": "d11938d62bcb2a0c670aeb7dd600033108bb97fa5bb9f9cf585a9dc789fe89b3",
+      "bytes": 636
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/FROZEN_PLAN.json": {
+      "sha256": "616bccfeb61147a5026b2fb7257080f5f771f330485b3df12f727987fa4a8f9d",
+      "bytes": 6407
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/HYPOTHESIS_FREEZE.json": {
+      "sha256": "cd9058d957c12d22b04278c3fd0a27bce72857c67a518fa02869c884165e23f0",
+      "bytes": 375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/PLAN.md": {
+      "sha256": "7255d46104a169ca272ba123d9b848456a2b1ed2f044ccfc4df3ab583694786f",
+      "bytes": 5607
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/execute_cell.py": {
+      "sha256": "6e0bb6fd039bc955192f647dac19a5d5b8e7c3a68f012ad4a12ed8b99af67b15",
+      "bytes": 10715
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/fresh_reset_torque.py": {
+      "sha256": "dcd9ae9f581feefac34382cfda222b1df7e73458ddd467d19a94aa9c6c8ab526",
+      "bytes": 5134
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/run_torque_control.py": {
+      "sha256": "852bd4132108b86f6dcea79a357223d18f0dbb276bca4772fdb2af4841e7bf48",
+      "bytes": 8439
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/analyze_torque.py": {
+      "sha256": "bbff2a5c2cbc1e3fd21b228e6fe3d0d45dc289223a845a28cff18a4e143b7463",
+      "bytes": 14257
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/test_analysis.py": {
+      "sha256": "c61d1afbf3f9ddf497f98aeeb10d97a724948ad38a389ac7df28f3b690b5aa47",
+      "bytes": 1798
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/RESET_VALIDATION_RESULTS.json": {
+      "sha256": "1b83a7d531dad6ba16d38e373f4711105f4a65e04c00cef076779c09d623a736",
+      "bytes": 1173
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/torque_reset_records.jsonl": {
+      "sha256": "4f6033120579910c02a7757fe9c7e543479581b2ee94e90aa82b4bf1473f87ff",
+      "bytes": 153643
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/FROZEN_TECHNICAL_PROTOCOL.json": {
+      "sha256": "e9a4c19c093a6a5c68e4c3d8f4cac8915f103e808e1b5293f0df0c3d536e727f",
+      "bytes": 995
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/validate_torque_reset.py": {
+      "sha256": "c687d84931c277e43532047508050f3b6205913a285c5ad03d35eb5e5a3861a7",
+      "bytes": 4288
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/FROZEN_PLAN.json": {
+      "sha256": "abd02682f155a95f2e0c07079dc8e9bc747be3a00f6efdbc9d8b7a75e7a6c246",
+      "bytes": 4483
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/FROZEN_ANALYSIS.json": {
+      "sha256": "5a929d5283cbce23c974747d50f033dd380abb2d6953a045ff0fe516edfb3209",
+      "bytes": 541
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/reset_records.jsonl": {
+      "sha256": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452",
+      "bytes": 302001
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/PLAN.md": {
+      "sha256": "1afcd0898d52321d8aac2d35eec6eb475bd10db9653b270600b7ce1b752688b3",
+      "bytes": 6633
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/execute_cell.py": {
+      "sha256": "0a289af12b33dc2f45f509123c9898bc402324b2181b994bfc9cc2f43a5b9980",
+      "bytes": 9938
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/run_confirmation.py": {
+      "sha256": "52209e9b517b59a6127b125ed2a9724bf26e22b10efca837c9354f48470fc380",
+      "bytes": 7756
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/analyze_confirmation.py": {
+      "sha256": "10f654193fdb1809f1bab0e872ea77e3eac5c36c8c2bcd73c58605c03e31a7fb",
+      "bytes": 16759
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/test_analysis.py": {
+      "sha256": "9fb69e03dd1658685be349cab6c49ac555969fd2bb8510cb34d3cb775551004f",
+      "bytes": 2189
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/RESULTS.json": {
+      "sha256": "2b41abf4a8976b07528a5162f6332148f17be97442c5cb9c33344e82c23e5bc1",
+      "bytes": 1022
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/FROZEN_TECHNICAL_PROTOCOL.json": {
+      "sha256": "72511fe2f9b73b462cc28a500f3a5fc314386a8370132fb269d81e05df8d898e",
+      "bytes": 2137
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/V2_UNAVAILABLE_INVENTORY.json": {
+      "sha256": "338e399e86efcb6a3b291199da2d7d0bc8062eda2169e6d8388047bf8d24d6b5",
+      "bytes": 14736
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/PLAN.md": {
+      "sha256": "20eb0d7bc03cfa39dd2f8124d9fa4ff3f59b77e864a5cfb7087a5f7b763625c5",
+      "bytes": 2367
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/fresh_reset.py": {
+      "sha256": "eaf31d93d9ab7486b9b88ab0c486b4407d5878b01df9e9e7967c895a98a35fa1",
+      "bytes": 5063
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/validate_fresh_reset.py": {
+      "sha256": "98931354439fb793f1135735fd3458ee19c6a81bd2bd53100b95f7a04b5b8e29",
+      "bytes": 4313
+    },
+    "scripts/controller_sweep.py": {
+      "sha256": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+      "bytes": 23779
+    },
+    "scripts/ms3_windows_compat.py": {
+      "sha256": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194",
+      "bytes": 1152
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.md": {
+      "sha256": "62c30d31d1f91563f144c742dfbcfdebc7483276d31f6fc7fabbf0cee824ca46",
+      "bytes": 4207
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.json": {
+      "sha256": "3e1cb60e295302a5e2a3f3e6916325fa0812b4996d71403fa7b3e094194ef486",
+      "bytes": 40474
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": {
+      "sha256": "459196c275764eaf53ccba8e154e3207036399e54c8bdd45f9e7d0919970464b",
+      "bytes": 76011
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/base_agent.py": {
+      "sha256": "64b0c9f45577ef842ae41449af36529e476ad68d26e726de5c9d858496f8824d",
+      "bytes": 18704
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": {
+      "sha256": "ce05feb05c4370ec2be58c60465082dde15fd97e6398a187a648a5e932a4d58e",
+      "bytes": 11116
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": {
+      "sha256": "318110fe18cb879eae00ca106f0117eed94679b79ee00ee226bacd38e4755f97",
+      "bytes": 13458
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py": {
+      "sha256": "00e8395e1e171f8032ae25021d561f59c79aa013620fc72a74cfe1814ea784ed",
+      "bytes": 22627
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py": {
+      "sha256": "9032845fe7b51eae6466206cf717c4cd4da38f1df97875ab8800181497016e01",
+      "bytes": 9419
+    },
+    "scripts/octo_policy_server.py": {
+      "sha256": "fc7ad4acd0c27f621d9a177f5162060ecc8d9e96d5d23b9328debb1f2325bde3",
+      "bytes": 17930
+    },
+    "scripts/task_configs.py": {
+      "sha256": "b9faf4a97c094946bc55231b484540b03a856caf231ee085e50f5f28e0a42cc8",
+      "bytes": 3483
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/COMPLETE.json": {
+      "sha256": "a570f08965bf5fa2a163b985b144ff3a18ab5be0fbf4963e64f442917f6d73c1",
+      "bytes": 1113
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/COMPLETE.json": {
+      "sha256": "96f3cf6cba5c742294b80faf3959973807ae2d6e93d8990df6e7e0a148900f18",
+      "bytes": 1846
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/ANALYSIS.json": {
+      "sha256": "c48b1414a73c891361d19ede5c4e9679228ae6fe068f2814064c8259da327a6c",
+      "bytes": 185645
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "7b1dd7c2ab17ef39befc3bbe12613cc473e28981f67ab7a0575941eb974fc23d",
+      "bytes": 13939
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "c6145c5fd0b68062a303af314d7cc95719ffec9e48b944c92fbd7637c90d793a",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "d1e63df2fd7080330c70d92824f97309af9fd93adaa3d5bf0752dff795b3d26a",
+      "bytes": 6396
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "f2f8558c998cee436e0a0aff60fa753a60572929aab8859e87cd08d464f9c716",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "26edea222a0607e76df56fc53443962ecb7151c775d33bdb8484323595b61390",
+      "bytes": 81923
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "2d9d02f5279a78e172523f7ae41d3e7f72ae58f4574b51d925e34bbd929f6e01",
+      "bytes": 81364
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "aeb6265474e17c27270f9cac4a1db8d8a99517a67ae318e7f5938926f4799028",
+      "bytes": 13949
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "39bd0414986e8e813f5c9217356951d417621b760096cfb333cc6777447570ca",
+      "bytes": 3527
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "7b5bf49b58d80cc79c86c1f961405a965aaebeb63a801bf7b41518da2daae3ae",
+      "bytes": 6395
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "99ba281f356a40795a1a5d091edadaa7a7eab11a07204e1f8fb6b4da5ad0b271",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "30a6589d68e24a1e051cee0712058cda8a4b95073e2847b24f6023b7409b4347",
+      "bytes": 81925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "8b046c4252cd62a8d0fc9c3bc99445800de27de5fa4b71e95cbc94660e723838",
+      "bytes": 81363
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "e872bf0863f2e25fd6503aa3fa9dac9abd138fd2f9d21e67fb8e4bdb66d5d475",
+      "bytes": 13922
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "9c056dcb824708f0cc8ef4d5d95effa989fcaa3b3c9ea7a658993f552a072ce9",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "f206ef4396a425a63428d8d4a440dd1fa6fe1447f692f2d0de5ffe2d90fc1a23",
+      "bytes": 6397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "3f539824be75ca9639d7a5a3fa7525557ff9bfb5dca6d290cd38172edc59f3a1",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "d0b8524653077d744d383ee79abc1e0e3304fab945bea0a9f6b1409d9a167cd8",
+      "bytes": 80879
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "3cc0b152a2474de5888b8c9c475f62d59fc7d06dbfb9610c2f37ebf63d816313",
+      "bytes": 81364
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "df7d9fb21c75c212605ff38e782f7dfa6ace73070d5b19aefc38a606716e4f5c",
+      "bytes": 13950
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "21d8e16474bf4ed234d92bc08afd2cf947530de7f58f80a51eab02c5d048428d",
+      "bytes": 3527
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "99b30809fe360f12469a935b2124a9e2fdb7646b090dac33b18ba9445f387900",
+      "bytes": 6395
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "1ea562c5760f997cdbcd615346236b26dd35bd2132cae6db033c48a4c55fd216",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "344e5d252ecb6298f0f86b8d0e0f6ddd0586869c32831555ad9da61e1f248317",
+      "bytes": 80880
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "b6ccd57fe34e1f68e6b5349474eb46a29a25e44090aa3eb68abf52262df5f01b",
+      "bytes": 81364
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "6be49ce39c355c94758d3b9bacd5b24e090d958113ff0c9396f36df0d0db6fe6",
+      "bytes": 13945
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "c010f88da0b4a1db22f0b4edcc5bd98d0d73815a7a3e11c1c8ad4a9ac915d99c",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "8085a1d47c3b6aafcc99bb442aa936c5f120dd5051ec6b73cb747d5334ac6e9c",
+      "bytes": 6396
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "f33ff388cc9a4281407825421cc8f365413495645ba1f4a05d9aef50ff6a60f1",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "9fcb74f668bcb3fb8ac9554a4ec9d58d454abf72874ae9cf50237a488eb42c46",
+      "bytes": 80877
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "0362a6466292599d5adc74157a9e70aa08b60c25e5e4402e67e4994706e6bfa6",
+      "bytes": 81361
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "cb2fe1ceb717628b62e92f5d32a4c8906b766dc2045c6f0cbefa9a518fc7fa01",
+      "bytes": 13957
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "6984674725d8b6a65ebf266d0fc8a918b63a78b89eee230fd61fc3dc815cfd5e",
+      "bytes": 3527
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "b4ccb57c00bd58de80957a7a954c77f33bcca4db1b4a0416055952327a13db51",
+      "bytes": 6395
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "18ccded32822c717bd8b9ef51960fb13ba8a0eebd6dbc3f92404302ed016e9cb",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "61807ff863cf4da760d6a9931da5ce984c3b3d06ef411cd99561a6acf053458d",
+      "bytes": 80877
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "73f2d652279cfc649aac401bba36077553165a221eb9325d4a1c8169dc2dc605",
+      "bytes": 81314
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "2f28f83c64d562e45d0ed0db04f011d0ad65f87dabbf69e8bbf49be59a78c6d4",
+      "bytes": 13921
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "52591eb7c1c288f43c591eca51f8cebd9e272baf7ad866b0367e876496393980",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "ad23649760f48fd824533c3c6a7f4d8471e470f1ac0477b2404ec5fb3fe016bd",
+      "bytes": 6397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "44f4cb9e1849a43838b554d67e6167794200de76ccad270085d374e3836529e2",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "c7d30874d8449f934d8b911dce13606f070331dc23328305da4e5b4195265fb8",
+      "bytes": 80878
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "49d8618b63172006c465e2674f2fe6a419c0434517e450b7aab95a004bff2e2e",
+      "bytes": 81366
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "29b6ccbd8be1a487ca392eb2ba13f53b3b104a227916ef7ae036ddc03a1ac002",
+      "bytes": 13949
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "767fe31e032359b8b37afce40284ee80da6c362f7d9588215f8069a188ebb7e9",
+      "bytes": 3527
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "77c3612cf5de2bfbbc1bae3a808d63787924ff752bbf7f6327846a10e5b31843",
+      "bytes": 6395
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "466db41a8439be7e8ba5e58513b51b5f436f7740386b53312a505afafbb95f10",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "ec8a824d45c2e003ec86e96813f2ee357e3ce9b0184f8ba7a45be187ae14f0cd",
+      "bytes": 80876
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "0afa1b8b0afab349968b066f9827c766977d381a9ee5e68448dd0e549fc3850b",
+      "bytes": 81363
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "571254787f8f851e80e275086f9ecf3dfb2f4bec04743a5abdf64efcf199867f",
+      "bytes": 13924
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "65b59ee2ded5841b5b0545d392cfd51791a5b9a0bfa4bb601ead6c48e1ca8f2b",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "d1c55cba5d1e0a8705e1eed17d65dc312d43ee7bf3e879bc1dc96c354f71310f",
+      "bytes": 6397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "a4ff276b3a0f32c2d2518ecfdd10252e9b02cbb7c4d21933d8340708b98b5b4e",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "fdf948cdf303a8741b1ebe48be097a3fc89d38fe9a0974d0d150740bcf58fb6d",
+      "bytes": 80875
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "3192c04be67c5fec3fbaf96c18140642e1e425cef3789df4e82c1638d1c76013",
+      "bytes": 81367
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "9e8e59da96ef0a1c8e7bdd0561d2f030c216268691e4ee4dfee2f32dfe305952",
+      "bytes": 13958
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "050f3648bee79c670b05b5ad82086a70726da0089f2c4d88885f4a36bf32283d",
+      "bytes": 3527
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "ae10c77554c962038650b59af1f28e65e8e88b9a796b65f22964e6f86b1f8b99",
+      "bytes": 6395
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "7d63feeab911f34a9571d642ae87a6a23419d49c2d02df8f5a2ff7a2b4f08aba",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "38a07846a8c6c8e433a791744c00f99c3ec18e409b7c235e50587ee00b5747b0",
+      "bytes": 80878
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "246fa9f29bb32ea772a343703337d50bb1440d00a636dfbed1022662e6f502f8",
+      "bytes": 81363
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "68ce8e8d9a061e60b785fc9e47ed32628c2cbcbdef226def2afcb787d97f9e17",
+      "bytes": 13956
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "5d3caff6a9c4cd5d2dcd1eeb4277962a929a68752523c8a333e9c89cc88423e5",
+      "bytes": 3529
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "4930c0340597973e320840baf2166e84b7eace03271f9c378297cbbc378ccdc7",
+      "bytes": 6397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "4ae77163626d1e601d5e7a0be068a9f01dc8829ed23bf799a9c195ab648da3c0",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "a7bb64206d9c1dc713957eb5f5bc58be2b61e5e56739c10f924944878d3dcdf6",
+      "bytes": 80927
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "82cf7978eb232e30ba97fb4d29ebc826ae5ec92f4f0e66d3e73d4b96ea231d0c",
+      "bytes": 81407
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "8967563807a08d24724f7d8411430294426f2385212c6e67a8ddebb749cb61c8",
+      "bytes": 13986
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "2a29a0e980f56c70f4bc5b008c2c9720c7c2d083e10cdbbf29408cb3887b94a7",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "14bad7775aab647e9223a82589dd5440e8956fddd44e41c09ef9a4c88cbcddd0",
+      "bytes": 6396
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "bfc3b14e1550eedbeacbf21ad89bb04749a2096c6b3220e7a0c560e8aa59cdf0",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "b58993968f79b731f6b3983b4c6c67df426767509f946f7386ab33d9e273d9fe",
+      "bytes": 80927
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "fb44f2dd30c5bd2f1ced53cf92356572b5c05f2a54f13745e7dd461f21ae1efc",
+      "bytes": 81413
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "e66f3c5450cdcd4dac7450737b4bbd13785af9a666fa5418b755226ad1b39277",
+      "bytes": 13958
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "f1c0c9504529a214e662efbba37f8ffa0a06e0a30db9676776b2c1d8ca9433cd",
+      "bytes": 3529
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "e498c495675c2200e83df2d5b290cf192c1fc1cfd070f77557aab2b887d4e11d",
+      "bytes": 6397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "c5b7273f7215ac852f00586f5ff1df94e9a495ff89bf4b3bd3fd4a9d72d4336b",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "a3bad3ca5afae3c63d1e1cfb37e73217acc5f62500f4c4a1a061373ad70d85b3",
+      "bytes": 80925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "e9471657a30443dfe16da8d46fd86c1042885ddf90070e4498616a95d9120a50",
+      "bytes": 81365
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "4871b9740b3010519daa04faa69198f3bc511ef2d9c2c07456c8e9391b89d030",
+      "bytes": 13968
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "0e50ebb301225f5c02bd4b55c02da4c44fb100c028b39737304d97314297656a",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "094af127b02b2137c129891c94aa54217c0d70b1b974e7c41f31bd243891c1a9",
+      "bytes": 6396
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "023c7ef69e0edc39c4d3bf839d2b71b32f44288e0fd7711adaeedcead05a516c",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "319471c0d79f5f65bf089f9bdcd7594fc3fe1cfe3ab05abfe62926b11e5e49b6",
+      "bytes": 80925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "dd3e5fcdd38019f876371d9d2a52b2230844b96ba8fae5a586c55dc581e83f0e",
+      "bytes": 81412
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "c4ff6d9d10f44c46bf57f37cd76971aedee8793e15699c4c2c1021c858a73fd4",
+      "bytes": 13959
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "3a83fee3cbad5e6765568cb54fa4317e59e284a03d0a9130ebefe0ff0ff6caf0",
+      "bytes": 3529
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "61645d01c737aa6aa0555ef56a3e5a2b25a5024c370e44c8d13473fc5ab5f420",
+      "bytes": 6397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "9bb849ebdda0ef6115daffc6c0a34e8f38599b975c26792bc8348da8bad967ec",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "35ea5239249e58c2eab29302c9566f4c951ed824618a246e434196c2fdc2d7d6",
+      "bytes": 80932
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "baffdce21f24a4db1caa48b02250095fbd1335c907f84c061ae5f1e1eb198ccc",
+      "bytes": 81410
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf.jsonl": {
+      "sha256": "db2dba15d66a434a5a324ee6d9077d4216eebe31376cf355c3687c36805a0aeb",
+      "bytes": 13979
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_run_meta.json": {
+      "sha256": "f4778cbcf91f71ebc8eed30757eda65794d757ef03a54129f6f85861e3b0cff6",
+      "bytes": 3528
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_summary.json": {
+      "sha256": "a7f42f389c65954f5dbca2051a07d1ecedcb2ee1e58878cdffae211de71e2246",
+      "bytes": 6396
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "a1e7cc05959bc0c9f4cbf17819b32bc9dc426ee05f1d65031faaae41f9aa243f",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "9aff26c77122fdb360b7437bff6e0206c630438d0b03425f514af7f561e45c68",
+      "bytes": 80933
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/forcehalf_audit.jsonl": {
+      "sha256": "d916a2680b1761bf8002b967c70d98bb785baccb6446f742c7d10766623d0212",
+      "bytes": 81413
+    }
+  },
+  "v3_input_sha256": {
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/FROZEN_ANALYSIS.json": {
+      "sha256": "5a929d5283cbce23c974747d50f033dd380abb2d6953a045ff0fe516edfb3209",
+      "bytes": 541
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/FROZEN_PLAN.json": {
+      "sha256": "abd02682f155a95f2e0c07079dc8e9bc747be3a00f6efdbc9d8b7a75e7a6c246",
+      "bytes": 4483
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/PLAN.md": {
+      "sha256": "1afcd0898d52321d8aac2d35eec6eb475bd10db9653b270600b7ce1b752688b3",
+      "bytes": 6633
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/execute_cell.py": {
+      "sha256": "0a289af12b33dc2f45f509123c9898bc402324b2181b994bfc9cc2f43a5b9980",
+      "bytes": 9938
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/run_confirmation.py": {
+      "sha256": "52209e9b517b59a6127b125ed2a9724bf26e22b10efca837c9354f48470fc380",
+      "bytes": 7756
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/analyze_confirmation.py": {
+      "sha256": "10f654193fdb1809f1bab0e872ea77e3eac5c36c8c2bcd73c58605c03e31a7fb",
+      "bytes": 16759
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/test_analysis.py": {
+      "sha256": "9fb69e03dd1658685be349cab6c49ac555969fd2bb8510cb34d3cb775551004f",
+      "bytes": 2189
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/RESULTS.json": {
+      "sha256": "2b41abf4a8976b07528a5162f6332148f17be97442c5cb9c33344e82c23e5bc1",
+      "bytes": 1022
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/reset_records.jsonl": {
+      "sha256": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452",
+      "bytes": 302001
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/FROZEN_TECHNICAL_PROTOCOL.json": {
+      "sha256": "72511fe2f9b73b462cc28a500f3a5fc314386a8370132fb269d81e05df8d898e",
+      "bytes": 2137
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/V2_UNAVAILABLE_INVENTORY.json": {
+      "sha256": "338e399e86efcb6a3b291199da2d7d0bc8062eda2169e6d8388047bf8d24d6b5",
+      "bytes": 14736
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/PLAN.md": {
+      "sha256": "20eb0d7bc03cfa39dd2f8124d9fa4ff3f59b77e864a5cfb7087a5f7b763625c5",
+      "bytes": 2367
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/fresh_reset.py": {
+      "sha256": "eaf31d93d9ab7486b9b88ab0c486b4407d5878b01df9e9e7967c895a98a35fa1",
+      "bytes": 5063
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/validate_fresh_reset.py": {
+      "sha256": "98931354439fb793f1135735fd3458ee19c6a81bd2bd53100b95f7a04b5b8e29",
+      "bytes": 4313
+    },
+    "scripts/controller_sweep.py": {
+      "sha256": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+      "bytes": 23779
+    },
+    "scripts/ms3_windows_compat.py": {
+      "sha256": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194",
+      "bytes": 1152
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.md": {
+      "sha256": "62c30d31d1f91563f144c742dfbcfdebc7483276d31f6fc7fabbf0cee824ca46",
+      "bytes": 4207
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.json": {
+      "sha256": "3e1cb60e295302a5e2a3f3e6916325fa0812b4996d71403fa7b3e094194ef486",
+      "bytes": 40474
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": {
+      "sha256": "459196c275764eaf53ccba8e154e3207036399e54c8bdd45f9e7d0919970464b",
+      "bytes": 76011
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/base_agent.py": {
+      "sha256": "64b0c9f45577ef842ae41449af36529e476ad68d26e726de5c9d858496f8824d",
+      "bytes": 18704
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": {
+      "sha256": "ce05feb05c4370ec2be58c60465082dde15fd97e6398a187a648a5e932a4d58e",
+      "bytes": 11116
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": {
+      "sha256": "318110fe18cb879eae00ca106f0117eed94679b79ee00ee226bacd38e4755f97",
+      "bytes": 13458
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py": {
+      "sha256": "00e8395e1e171f8032ae25021d561f59c79aa013620fc72a74cfe1814ea784ed",
+      "bytes": 22627
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py": {
+      "sha256": "9032845fe7b51eae6466206cf717c4cd4da38f1df97875ab8800181497016e01",
+      "bytes": 9419
+    },
+    "scripts/octo_policy_server.py": {
+      "sha256": "fc7ad4acd0c27f621d9a177f5162060ecc8d9e96d5d23b9328debb1f2325bde3",
+      "bytes": 17930
+    },
+    "scripts/task_configs.py": {
+      "sha256": "b9faf4a97c094946bc55231b484540b03a856caf231ee085e50f5f28e0a42cc8",
+      "bytes": 3483
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/COMPLETE.json": {
+      "sha256": "96f3cf6cba5c742294b80faf3959973807ae2d6e93d8990df6e7e0a148900f18",
+      "bytes": 1846
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "095d026a5387b4fb2b637ce1c8a65ee98e0774fcd5646a285f56fa05cc253386",
+      "bytes": 13421
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "f2f8558c998cee436e0a0aff60fa753a60572929aab8859e87cd08d464f9c716",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "8604e3a6a6b6d2d9f55b44b95215daf0e72aee0b3ffd722a834ccb518163a50a",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "26edea222a0607e76df56fc53443962ecb7151c775d33bdb8484323595b61390",
+      "bytes": 81923
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "8d4ff0444fabb67094890b77cbb55a9ccf891421c63916b499186e129c4906f8",
+      "bytes": 13419
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "01b6ec16c5e609c204c87797c616e691a6f131afd0d9df90e12dad5ed7bfc254",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "c8f8b8fcf16fb92dfdadf478e5e7d4533ebfa0035937f2d777bce7f93f1ea5d7",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "ce86536682f88c7f44cf898ab846e87911e61b8596a6a6828e0bc06a399b448b",
+      "bytes": 80781
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "efad541b33f870c5a97d5db135f081bc7a8f96ca5d7603f373e4b38f529ff059",
+      "bytes": 13447
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "99ba281f356a40795a1a5d091edadaa7a7eab11a07204e1f8fb6b4da5ad0b271",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "e297894d5f9422d8891c59df563ef29c1f47e7859d4077a29d19b4ce8c44855b",
+      "bytes": 6375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "30a6589d68e24a1e051cee0712058cda8a4b95073e2847b24f6023b7409b4347",
+      "bytes": 81925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "c13c3dfed91f03998a731312827fffdaba6ed5850dd22d7284284c99eb7d2911",
+      "bytes": 13402
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e076561df9a0454d82d18a24372f400c014bc7c4e0d4fe0dfc26b385572d62a6",
+      "bytes": 3498
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "b991dd1df3feda2328511a36203dfe7fd39f03f7cb7262fb9b2e9c4bb5895aba",
+      "bytes": 6370
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "085d156db8cacbb3880cab983783a83847a5407ff01daa251b7bfb283ca20160",
+      "bytes": 80781
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "3ee2203d22d48685794be5a50afb5b0c786c60fe366a229b4dba4dd2b7554036",
+      "bytes": 13419
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "3f539824be75ca9639d7a5a3fa7525557ff9bfb5dca6d290cd38172edc59f3a1",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "15ce435fb1dd0e446b9c8362b6083d846c56077953eed65c94aae3fa7c441aed",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "d0b8524653077d744d383ee79abc1e0e3304fab945bea0a9f6b1409d9a167cd8",
+      "bytes": 80879
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "95a8826231bf77e4812e773d109eb047f0745b92008d30245bb1b5be67d131e0",
+      "bytes": 13402
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "20ddc78a77a228a11d822862aef648a2d9d018de56c8619c56e44bc0c575dff9",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "af6ff1e15d36db91b26c745637ed4007d8cf802dc2531ed0cb15b50953f8d220",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "cd0d64eb7c8c19b50e16981de95a2484b46aac3792c5c840a0c6ad3122b111c2",
+      "bytes": 80779
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "d0ff2539ceab0bf1979547bc71a197d9dbbbe9eb8fe7de63ca3f38044fc8622f",
+      "bytes": 13449
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "1ea562c5760f997cdbcd615346236b26dd35bd2132cae6db033c48a4c55fd216",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "335622d805f7aa6153a6445f0345c43a1315bf0d45efa403ce949e79f425e0e5",
+      "bytes": 6375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "344e5d252ecb6298f0f86b8d0e0f6ddd0586869c32831555ad9da61e1f248317",
+      "bytes": 80880
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "5334cffba3a5f5dcf9d765de2c03acbf82c84cfa75247cdd2762d248112a0562",
+      "bytes": 13397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "9bae3199771e6e26ef4777db6340179b775fbbd5e8c66a06959cefb3b3aae63c",
+      "bytes": 3498
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "505c062ef93206e9e1d9808df31c81614f7a0df75ed4a7a7b559649790958e08",
+      "bytes": 6370
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "099aba5a587a4072109623a4fc8034bdf8fbc805d4e59928dd744c335aa96731",
+      "bytes": 80778
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "e290ca5e1839cc0fd3836039f723b5e9a1132874eb0d11a08956441a371f4f57",
+      "bytes": 13445
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "f33ff388cc9a4281407825421cc8f365413495645ba1f4a05d9aef50ff6a60f1",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "57776deba1860ff249bc9c445db1915a4e472832fb159ea0506520716fc172e5",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "9fcb74f668bcb3fb8ac9554a4ec9d58d454abf72874ae9cf50237a488eb42c46",
+      "bytes": 80877
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "ca7fc7396dce84b8c8423fa61a58f1ffa8dce67f65967d6e9adab3a749adac79",
+      "bytes": 13410
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "131973a243adf3bfbd81a71adb70eb7ddbe6954abf580b737880e3eb311d0664",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "bfd0e4978372f813f797cdfdac8c2d5c1da2e8dd9bae96512cf78db9f1a6729c",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "de1f24bf7eb5548341ce4d20bbb31cd927daa67284678229ec1c4aff3e7f4a28",
+      "bytes": 80780
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "d66f633dde5a3c439c319a00cbc8d050a76edb141d8affe244b5ef463fc98a4c",
+      "bytes": 13449
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "18ccded32822c717bd8b9ef51960fb13ba8a0eebd6dbc3f92404302ed016e9cb",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "cd271f97617e861d52fde5e8ef17504f889a92b78245fef484492348ff5a2e37",
+      "bytes": 6375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "61807ff863cf4da760d6a9931da5ce984c3b3d06ef411cd99561a6acf053458d",
+      "bytes": 80877
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "24f263136f8f03bc181ec857be0c3a4b7be1d0b07aa580e9d14fd061d5c59d9b",
+      "bytes": 13407
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "1b80596b787b209157b2765c65ac4bf056c7718871c76be8249e84ce69b24977",
+      "bytes": 3498
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "f08d068c13a1eacfda6f7c78ff4fd11021988a2c1d4e7cc7fe79cd39797d4c9d",
+      "bytes": 6370
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "32db48a8b4e802845cbd01b304509238ee8f689aecf04c13136f0fc1d1959ebe",
+      "bytes": 80782
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "0cd3f92ff83b1ca400ea78c8da180ff4cd8d6cf7f6116e9fe0c88fc4f0bc83c1",
+      "bytes": 13410
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "44f4cb9e1849a43838b554d67e6167794200de76ccad270085d374e3836529e2",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "42ac258642c55e9d7544dcdf96cc0557f6f55a62dbe7288699bf7d7c0584ea2e",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "c7d30874d8449f934d8b911dce13606f070331dc23328305da4e5b4195265fb8",
+      "bytes": 80878
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "ced72a239d7767a2e43da06790d3c88101779952acc69af2885e73d3b7d1e0f8",
+      "bytes": 13398
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "df32baebc3a490ba2af28224bdf3ce7eb517e839a359ba9bedbab5c5e4f3b9b5",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "676dbfe7ce25786a648fc5d5db5f15fc4fdb754ac231b8471c28f04e62fda3af",
+      "bytes": 6373
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "367bb885ebe2dff3dadbfb4e75b96311da5dece0d7f94618cdc6fd533d9987dd",
+      "bytes": 80779
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "2d32d69c26ebd6a00d6e53729470b9140815430f68b0a5c87f45e59c0f2f3c40",
+      "bytes": 13444
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "466db41a8439be7e8ba5e58513b51b5f436f7740386b53312a505afafbb95f10",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "4e3d4eed7c8f85828ec3049fd51779e342b69d160a10a266ceebed9d2c99f2ac",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "ec8a824d45c2e003ec86e96813f2ee357e3ce9b0184f8ba7a45be187ae14f0cd",
+      "bytes": 80876
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "bc8fc2f4b28d7deb5715b1ad794ee074958d62dbc3ef1df043239adafd702084",
+      "bytes": 13413
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e97ee0b77a5ba354db850b1a01c035cbd7b2ece3fe2cea286de2694ec2117c5f",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "878fe4d2ce90e0ac37152e70747e76c2be9ce5805de5a870118f10fb9f13fb3c",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "acf10d8fd30a4833816167ee62ba4b093e685c6edec538fa865a46a0adf07b88",
+      "bytes": 80782
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "bdb0c7c5e62e4ecd6a912d6227f169284d4320f58504bf6cbe7c4e32bb58f96e",
+      "bytes": 13418
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "a4ff276b3a0f32c2d2518ecfdd10252e9b02cbb7c4d21933d8340708b98b5b4e",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "1757a23338723b6078abc1f2ab92327b05b104c0eaefa4d802d9797d82981c80",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "fdf948cdf303a8741b1ebe48be097a3fc89d38fe9a0974d0d150740bcf58fb6d",
+      "bytes": 80875
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "a4a6bdc1c70ce38d959a9661e2146eed40ceea9715c3514df1e9a0f1ca0c4351",
+      "bytes": 13400
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "89d793f3ad4c49087fcb08b97e20885a1b766e2425f6fab21cf2808e2d1f623a",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "bdc04797a5eb21b0795ad790a9f88922a1403e3c5bb1d56fcea2727275229d10",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "c30d59ae416048f887f785d53e7cc0c6e5293ef66585c2db0b48bd32c59949d8",
+      "bytes": 80782
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "878f68fbe0598a0d979ad40a7fea8e29ea9b7077af2c7024a11e10ca640a8300",
+      "bytes": 13457
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "7d63feeab911f34a9571d642ae87a6a23419d49c2d02df8f5a2ff7a2b4f08aba",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "628dd97fff3ee1e9d36bcdffe643e0d256bd561f54fbb6b76522ea01982a1986",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "38a07846a8c6c8e433a791744c00f99c3ec18e409b7c235e50587ee00b5747b0",
+      "bytes": 80878
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "7e65b6c83f00b02cfc6c7b285dcee208aaee4800bf848c970d4f58ae129dc056",
+      "bytes": 13404
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e2d59b98460b489e6fdf2dbbc63c86072933d28b3033bdb1c8e1589bca7c0060",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "bd6c8093ae0bc91ba95a296e01fe3218fe7b96abd8c29a52d204ba5c3882a7ab",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "48c5050cda48dd675bf040cfa74bd74448550b5b634ee901458f91306d58564a",
+      "bytes": 80783
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "0ef4952e2461c1d112a836254dc31f833e6328bd547d21537aca432e75106e49",
+      "bytes": 13443
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "4ae77163626d1e601d5e7a0be068a9f01dc8829ed23bf799a9c195ab648da3c0",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "ff968dc2d3f216a30cae5e00463ba88833a4fe839b6114624fea09612336ba37",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "a7bb64206d9c1dc713957eb5f5bc58be2b61e5e56739c10f924944878d3dcdf6",
+      "bytes": 80927
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "cce6cf9e1990c06b4857b400686808e5a7523fd60a66c483d27be0464c777c11",
+      "bytes": 13432
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "aed65601b27696b5d8c7f94b2eec07739012145a02d294ee803c373868442653",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "55c2d8aa97ec651a81a863872e74a1795298e11a0e814291415dfd8c5e3f6961",
+      "bytes": 6373
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "c61318147bc244b8a38652f6b3c97fb8bbb7b51f998e5c3d3831d83ab80a73de",
+      "bytes": 80777
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "618e35ee34f8b2fbee5d264313e137e967ff817282ed6b1c65e52af4343026eb",
+      "bytes": 13479
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "bfc3b14e1550eedbeacbf21ad89bb04749a2096c6b3220e7a0c560e8aa59cdf0",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "d6d21c7528818bc10cea921b866ea93d4e0c006f0ab6428adc0da9823c09941c",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "b58993968f79b731f6b3983b4c6c67df426767509f946f7386ab33d9e273d9fe",
+      "bytes": 80927
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "c6e82f79bd0ba17b76e1184a851929df5f076c3e4c48a9e75b01f206adb4ab27",
+      "bytes": 13425
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "22c6f4460975c17d9e6e298931e1fd4aa60edcb356189010bc50a53e8c1c6e45",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "766c95e399108b097fbe53f70105dd509e15a4569a0c69d7856c14889b4eaeba",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "629d8d27f3c80b6cbd6973121f78d463c004561365de8bfe3f2244ee9be8ffe4",
+      "bytes": 80828
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "a86ebbf3f4df1ddbce4ad25309c190a59722ac7f2bee730e28c66d417604ef91",
+      "bytes": 13445
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "c5b7273f7215ac852f00586f5ff1df94e9a495ff89bf4b3bd3fd4a9d72d4336b",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "c2ef552622ec9f9fc9b5d8ab1b9d3cd7ac1fe1eae95f8ab8c18982dd7ceee13d",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "a3bad3ca5afae3c63d1e1cfb37e73217acc5f62500f4c4a1a061373ad70d85b3",
+      "bytes": 80925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "a1f6fd649a996f19d1795b5fd299b48e2c88a36aabf80e5d051616b4e3166fc1",
+      "bytes": 13422
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "78fd1d3561ab39fc002e7e4895f4a3faf279fa3f89fd0b3221aead0c8c0acc85",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "c8cb867c90b40dab27c4ca182989734ec3f3b1531b90115622620466f4d7df98",
+      "bytes": 6374
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "f11202d7ae2e41c07b51034b4e2e92412bd46756334974bfe61afa19112b73f2",
+      "bytes": 80830
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "ac2567374f36c06f79888d95820fd447dd9bb47d5461b356ae425acc858419e3",
+      "bytes": 13464
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "023c7ef69e0edc39c4d3bf839d2b71b32f44288e0fd7711adaeedcead05a516c",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "d7b9c6c9f7e1e700b368448499faf59dd3390cf8f363f57814e6307f00af557a",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "319471c0d79f5f65bf089f9bdcd7594fc3fe1cfe3ab05abfe62926b11e5e49b6",
+      "bytes": 80925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "9e38033a88a509a697d43e02d9dab9c12ca4092e62fb373ffaaeab164d0f80ba",
+      "bytes": 13430
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e057f1cc0be9a37df2e57acbc9599bb2b2b7910fc29d05d39be6d407c4d28324",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "207fd17379e734a57c30c38e831d20a919e9ee6844b9da292018c8129de9e0ba",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "ecf189d106a988e216da3d6af580a2d812a447a19c36177710290eccba66bbcf",
+      "bytes": 80831
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "4dd917eeb73836e2ff544eaf57297dbafedb4071133bd51bf6300e9224c964c9",
+      "bytes": 13456
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "9bb849ebdda0ef6115daffc6c0a34e8f38599b975c26792bc8348da8bad967ec",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "0fb61403e06000e172199d2b259fa3167305a3315f2959e85c91a09728a0727a",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "35ea5239249e58c2eab29302c9566f4c951ed824618a246e434196c2fdc2d7d6",
+      "bytes": 80932
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "9d1fc9c2865e31d535b50b307b5e721f0a049f6a0b9478b4394aae2f65e0c50f",
+      "bytes": 13433
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "370ab3e5d57dac698056d9d930b20be88e32abcb966b500f87013ace9d96e7e6",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "60d6b9745ade1a910c338ca717def3f6431c6cd1c73b0e0f074f0f09eb7f4729",
+      "bytes": 6373
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "5d4bd24c8b494b3f0bd364deff832429d0a681601b587d8c8ae89548d6bc9669",
+      "bytes": 80828
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "af476f9cd0f172397b7468f9c1e1ab676bd118d61a2165c0cd5a5bce1ceabd62",
+      "bytes": 13473
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "a1e7cc05959bc0c9f4cbf17819b32bc9dc426ee05f1d65031faaae41f9aa243f",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "221e047d42e8b7ffa13fb053bb4659a66f437fa86a89495627e5108ff1fe7d59",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "9aff26c77122fdb360b7437bff6e0206c630438d0b03425f514af7f561e45c68",
+      "bytes": 80933
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "556a47185ab79ab90c62b826010f13fbb46cae4c13721c6b281b2d15d1be9366",
+      "bytes": 13427
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "7aa2381904defaed569ab2122059f6a21b89e0e3b7b3d00274d58339e3ac95c2",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "70a16f443fa3b788820069103c3c90fc921a15cba8915b3d2bddd69f57cbbfd8",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "04c0ab0b59e4578c0aad67d536c631fb7288307307177e7d31d14bdcc2ed4f56",
+      "bytes": 80828
+    }
+  },
+  "analyzer_sha256": "bbff2a5c2cbc1e3fd21b228e6fe3d0d45dc289223a845a28cff18a4e143b7463"
+}

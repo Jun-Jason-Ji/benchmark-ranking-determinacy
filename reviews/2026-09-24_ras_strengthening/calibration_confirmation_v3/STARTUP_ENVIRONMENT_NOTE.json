@@ -1,0 +1,47 @@
+{
+  "status": "pre_outcome_startup_error_resolved_by_environment",
+  "episode_records": 0,
+  "policy_resets": 0,
+  "policy_actions": 0,
+  "frozen_source_changed": false,
+  "required_MS_ASSET_DIR": "E:/research/the_world/data/maniskill-assets",
+  "explanation": "The validated asset directory must be set before ManiSkill imports. Initial attempt failed at missing-assets prompt before any environment reset or policy reset. All logs retained; retry uses unchanged frozen source and identical design.",
+  "archived_files": [
+    {
+      "original_path": "RUNNING.json",
+      "sha256": "000c47d6bf10f61512d54fba284b2f009346695c2e00cf2c344b589112861d04"
+    },
+    {
+      "original_path": "SERVER_HEALTH.json",
+      "sha256": "e78068eeaa19ffb63c5fb958f77ff86233175495a9e90cf78cf1cf3fc6945fcf"
+    },
+    {
+      "original_path": "TECHNICAL_FAILURE.json",
+      "sha256": "ca9d8976e598311cabdfdc8a8372a309c190bfbb2f16ccf8a6da55beac616085"
+    },
+    {
+      "original_path": "data\\block_01\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal_run_meta.json",
+      "sha256": "2ef7cded53bdea2594e869675b25a90cc38b6654963194a7465ddd4bc5355fea"
+    },
+    {
+      "original_path": "data\\block_01\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal_run_meta.json",
+      "sha256": "63e6df1a1e3c9bfeb2445a426cbf653e12897c9cd26ac75bd1c54c6111f69cd5"
+    },
+    {
+      "original_path": "data\\block_01\\octo-base\\PutSpoonOnTableClothInScene-v1\\nominal_audit.jsonl",
+      "sha256": "15f845f620b36919035a3d95ced77297756459451a15b25930f5fa58f038cc0a"
+    },
+    {
+      "original_path": "data\\block_01\\octo-small\\PutSpoonOnTableClothInScene-v1\\nominal_audit.jsonl",
+      "sha256": "5c3c158ca3eb21a2e7bfe09898330a71e79e1cc5c321d8645e8ef94716ab3c14"
+    },
+    {
+      "original_path": "logs\\block_01_octo-base_nominal.log",
+      "sha256": "9057d2dbf12fe8b03420fc4803605488ad090ac23799fa68af2818b004bff923"
+    },
+    {
+      "original_path": "logs\\block_01_octo-small_nominal.log",
+      "sha256": "9057d2dbf12fe8b03420fc4803605488ad090ac23799fa68af2818b004bff923"
+    }
+  ]
+}

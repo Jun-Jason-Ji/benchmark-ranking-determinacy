@@ -1,0 +1,9 @@
+{
+  "inputs": {
+    "calibration_confirmation_v3/ANALYSIS.json": "c48b1414a73c891361d19ede5c4e9679228ae6fe068f2814064c8259da327a6c",
+    "calibration_torque_control/ANALYSIS.json": "7794017e73884b0d34fe81d882336e50712fa295f436777dd09bcb650562f985"
+  },
+  "source_sha256": "dada0e0cbe41ad6a9681e954f05a01b741cbe8799ae4582be407087f8bf58ca9",
+  "output_sha256": "abbd1aeda73e94d184a52f05227e320846ad893707ff5a86c4dce4f287a2eaa3",
+  "display": "Every prespecified block; mean and unadjusted secondary t working intervals; bounded-mean sensitivities reported in S2, not omitted from inference."
+}

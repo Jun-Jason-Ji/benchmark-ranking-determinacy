@@ -165,8 +165,8 @@ Thank you for your consideration.
 Yours sincerely,
 
 Yi Sui, on behalf of all authors
-College of Computer Science and Technology, Qingdao University, Qingdao 266071, China
+College of Computer Science and Technology, Qingdao University, Qingdao, China
 suiyi@qdu.edu.cn
 
 Co-authors: Jun Ji, Yi Li, Xiaolei Zhang (Qingdao University); Bowen Tan (The Hong Kong University
-of Science and Technology); Shengjie Guo (Inner Mongolia Agricultural University).
+of Science and Technology); Yizhou Zhao (Renmin University of China); Shengjie Guo (Inner Mongolia Agricultural University).

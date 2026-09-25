@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-09-24T17:56:37.0795197Z",
+  "scope": "48 outcome-free fresh resets; nominal then forcehalf; 24 configurations; exact canonical state and RGB; actual drives, gripper/contact invariance, lifecycle and controller-reset persistence; no policy calls",
+  "files": {
+    "scripts/ms3_windows_compat.py": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194",
+    "scripts/controller_sweep.py": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/validate_torque_reset.py": "c687d84931c277e43532047508050f3b6205913a285c5ad03d35eb5e5a3861a7",
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/fresh_reset_torque.py": "dcd9ae9f581feefac34382cfda222b1df7e73458ddd467d19a94aa9c6c8ab526",
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/reset_records.jsonl": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452"
+  }
+}

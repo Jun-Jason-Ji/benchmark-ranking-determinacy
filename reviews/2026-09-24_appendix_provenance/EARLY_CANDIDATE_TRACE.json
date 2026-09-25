@@ -1,0 +1,741 @@
+{
+  "generated_utc": "2026-09-24",
+  "scope": "Read-only trace of four historical exploratory candidates; no new statistical test",
+  "sources": [
+    {
+      "id": "S01",
+      "path": "results/controller_sweep/PROTOCOL.md",
+      "sha256": "1ca1642de32fc69627c9865d2174dbce503daf0a7ae3edcd6a5b990523d333b7",
+      "bytes": 3526,
+      "lines": "28-43",
+      "purpose": "Exploratory sweep design, paired bootstrap and escalation rules",
+      "line_count": 43
+    },
+    {
+      "id": "S02",
+      "path": "results/controller_sweep_gpu/SUMMARY_24.md",
+      "sha256": "f7151392bd7467f5c4e97afda2334bf3717bbc10c0977749a7ff0c3b79584eeb",
+      "bytes": 4903,
+      "lines": "16-51",
+      "purpose": "Early candidate table and the two spoon corrections",
+      "line_count": 51
+    },
+    {
+      "id": "S03",
+      "path": "results/controller_sweep_gpu/FINDING_iso_scale_carrot.md",
+      "sha256": "dfd3f6dd34a5e18d7b985c9907d0a8ad57a49ece9ff6a9418cbfcfa6c00d32ab",
+      "bytes": 3912,
+      "lines": "1-49",
+      "purpose": "Carrot trajectory from 24 through 48 to 96 episodes",
+      "line_count": 49
+    },
+    {
+      "id": "S04",
+      "path": "results/controller_sweep_gpu/analysis_equiv_pairs_carrot_spoon.md",
+      "sha256": "c84a32108efb89bb83e3e4d2fc9ac77b52608c905e6fc3f0121cf560c4bf9d60",
+      "bytes": 3245,
+      "lines": "28-49",
+      "purpose": "The two spoon declaration/abstention differences at 24 episodes",
+      "line_count": 49
+    },
+    {
+      "id": "S05",
+      "path": "results/controller_sweep_gpu/analysis_equiv_pairs_spoon48.md",
+      "sha256": "a8a94b1cf6e3f85b49d84f1214e3147e8d8a4110798bd03b6378bde9bbfdf0ef",
+      "bytes": 3113,
+      "lines": "27-40",
+      "purpose": "Both spoon differences disappear at 48 episodes",
+      "line_count": 40
+    },
+    {
+      "id": "S06",
+      "path": "results/controller_sweep_gpu/FINDING_spoon_candidate_pair_96.md",
+      "sha256": "1c979c17d2e7c8c5fd4204b84750e8d1295b6ca1a4f7876c94955ba562e99588",
+      "bytes": 1304,
+      "lines": "1-18",
+      "purpose": "Fourth candidate explicitly identified; clean 96-episode outcome",
+      "line_count": 18
+    },
+    {
+      "id": "S07",
+      "path": "docs/execution_status_2026-09-18_v2.md",
+      "sha256": "f457f535f8ee178da4cd58d5d77936dda676d6e6d588761eebbf479660dfa657",
+      "bytes": 6348,
+      "lines": "43-58",
+      "purpose": "Selection of the deployment-history candidate for follow-up",
+      "line_count": 58
+    },
+    {
+      "id": "S08",
+      "path": "scripts/queue_spoon_hist1_96.py",
+      "sha256": "8d7c0934ecfff7e488a0af25392e9d0406c31231a79f8806662a695cc1b1acf0",
+      "bytes": 3040,
+      "lines": "1-27",
+      "purpose": "Retained adaptive follow-up queue specifies 96-episode budget",
+      "line_count": 57
+    },
+    {
+      "id": "S09",
+      "path": "results/contaminated_2026-09-19/README.md",
+      "sha256": "eb89f8e0cf3a5564d508c60c435ece0f50055976ea094509d85d06423502c7f5",
+      "bytes": 1000,
+      "lines": "1-11",
+      "purpose": "Server-state contamination and quarantine before clean rerun",
+      "line_count": 11
+    },
+    {
+      "id": "S10",
+      "path": "scripts/task_configs.py",
+      "sha256": "b9faf4a97c094946bc55231b484540b03a856caf231ee085e50f5f28e0a42cc8",
+      "bytes": 3483,
+      "lines": "1-27",
+      "purpose": "24-configuration grids and modulo mapping",
+      "line_count": 74
+    },
+    {
+      "id": "S11",
+      "path": "scripts/controller_sweep.py",
+      "sha256": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+      "bytes": 23779,
+      "lines": "261-263,373-376,404-407",
+      "purpose": "Per-episode policy random seed and success record",
+      "line_count": 432
+    },
+    {
+      "id": "S12",
+      "path": "docs/paper_draft_s6.md",
+      "sha256": "84ddaa2f0801a89f4c19d8fbfdbcda237180047714b5ec17f8a8133a66faa916",
+      "bytes": 10514,
+      "lines": "133-140",
+      "purpose": "Earlier draft says to withdraw a disagreement if more seeds resolve it",
+      "line_count": 149
+    },
+    {
+      "id": "S13",
+      "path": "docs/task_queue_plan_2026-09-20.md",
+      "sha256": "f24f1405cad97b4bf22b06fd7ea57bc5220b79110d0e140cf7672dd06375f406",
+      "bytes": 11342,
+      "lines": "67-73",
+      "purpose": "Seed-budget follow-up plan",
+      "line_count": 177
+    },
+    {
+      "id": "S14",
+      "path": "scripts/queue_t2a_seeds.py",
+      "sha256": "ed51102eb0142a901378b5bc143cbeb5298aef620069e2a5579278edb6303b39",
+      "bytes": 4937,
+      "lines": "1-38",
+      "purpose": "Fixed S=3 to S=5 follow-up design and conditions",
+      "line_count": 92
+    },
+    {
+      "id": "S15",
+      "path": "results/controller_sweep/logs/queue_t2a_seeds.out",
+      "sha256": "87331f0dd21e332b68f56e5cc847f160705a5931ac0f22812fb52c9402b4e454",
+      "bytes": 6361,
+      "lines": "1-99",
+      "purpose": "Execution log ending at T2A_SEEDS_DONE",
+      "line_count": 99
+    },
+    {
+      "id": "S16",
+      "path": "results/controller_sweep_gpu_rep3/FINDING_t2a_seeds.md",
+      "sha256": "827fc9684c3954ddd70c20064880e7a3d137059ff9fe71f2a563ef377953024b",
+      "bytes": 3973,
+      "lines": "1-60",
+      "purpose": "Seed-budget follow-up outcome",
+      "line_count": 60
+    },
+    {
+      "id": "S17",
+      "path": "results/controller_sweep/logs/queue_spoon_hist1_96.out",
+      "sha256": "e0cddf1da4d42baf31f15458ca8cbd49e5cd0ffbe47560944e41c12f74c187df",
+      "bytes": 4113,
+      "lines": "1-49",
+      "purpose": "Follow-up log; first completion is before contaminated data rerun",
+      "line_count": 49
+    },
+    {
+      "id": "S18",
+      "path": "results/controller_sweep/logs/queue_v2.out",
+      "sha256": "22ea417a4299aeb22922099b121d81a747b69e93f79fafea69aa6df9d9f815e8",
+      "bytes": 3105,
+      "lines": "1-7",
+      "purpose": "Carrot 96-episode extension execution log",
+      "line_count": 40
+    }
+  ],
+  "raw_episode_records": [
+    {
+      "id": "R01",
+      "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/nominal.jsonl",
+      "sha256": "bd3db54c215522498be9495e101e99490031a3464de2f7009dc96f4b81dee68f",
+      "bytes": 25221,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 3,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 6,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 6,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/iso_x0.5.jsonl",
+      "sha256": "7994cfb8954bd8832a70caf6a0bf9ac2ab5264cf0fcd64c5c796db014236c6a8",
+      "bytes": 50576,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 2,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 3,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 6,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "path": "results/controller_sweep_gpu/octo-small/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl",
+      "sha256": "0a92ede8dd14f718230dee504489462e93a1de708e61c866e1a518ddcf743d37",
+      "bytes": 50520,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 5,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 9,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 13,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/nominal.jsonl",
+      "sha256": "6a83541d60e327ffb97512c61bd13b8a07fb38cee3dfe4bfd2907e69b8c4a28f",
+      "bytes": 25135,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 2,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 7,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 7,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/iso_x0.5.jsonl",
+      "sha256": "711132daa4a8fca78d791f09881804bd7c78abd10207aaef860623224203b563",
+      "bytes": 50452,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 5,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 9,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 12,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "path": "results/controller_sweep_gpu/octo-base/PutCarrotOnPlateInScene-v1/iso_x4.0.jsonl",
+      "sha256": "4efd94fc164bf925d4a0206eb439b6f40d065d26607f0dcb91c0c83a765188aa",
+      "bytes": 50477,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 2,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 6,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 13,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl",
+      "sha256": "ffcdb0550feaaa94eb1a7176df990e8fe62ffc009b8b18c2dae270b1dab0e5f0",
+      "bytes": 51377,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 9,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 18,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 30,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl",
+      "sha256": "110335005e56fa2c1531e681301c2f0aa489ef1eb36401b97719af9701f3d7da",
+      "bytes": 51663,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 6,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 16,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 29,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/stiff_x2.0.jsonl",
+      "sha256": "a0634a0f3d6886f9ac8663e0a84eac8b8fcffbcc5c9103563b0245ffd9e5936c",
+      "bytes": 25834,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 8,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 14,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 14,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/damp_x0.5.jsonl",
+      "sha256": "2431b45a1a8a46851aa035ab06e7ef92c793e781123459e8b4a116ca8a9cda6c",
+      "bytes": 25792,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 6,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 10,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 10,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl",
+      "sha256": "cc24ccdeed7d077c97e1713faeb83e37aae58c65f9e0109477e1fec534fcd744",
+      "bytes": 25704,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 2,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 4,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 4,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/force_x0.5.jsonl",
+      "sha256": "ef4f005043fa01860cd85af3ac9c07cf039d0ee51a89cd50e7b3da0eb7a346ef",
+      "bytes": 25841,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 2,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 5,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 5,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/stiff_x2.0.jsonl",
+      "sha256": "e4d0880797666deaa965faf0f3be9218e5810b1d710dc0e8495d79b9142e0465",
+      "bytes": 25866,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 1,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 4,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 4,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "path": "results/controller_sweep_gpu/octo-base/PutSpoonOnTableClothInScene-v1/damp_x0.5.jsonl",
+      "sha256": "7cd1eadfdc4b90cef6c40dce925faeaabeb6559a78cd076882c057a48a844f8e",
+      "bytes": 25811,
+      "records": 48,
+      "unique_episode_ids": 48,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 2,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 3,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 48,
+          "successes": 3,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl",
+      "sha256": "c487a58db1849cbc35d634279b41d32c16fa344f52e4127fb71dc334e39e422b",
+      "bytes": 51617,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 4,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 10,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 19,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "path": "results/controller_sweep_gpu/octo-small/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl",
+      "sha256": "0205a3ca01e0e578d34adc69845c3ca0a9f37a3d02a1390af6be100f8860ba5b",
+      "bytes": 51584,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 6,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 12,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 27,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "path": "results/controller_sweep_gpu/octo-small@hist1/PutSpoonOnTableClothInScene-v1/nominal.jsonl",
+      "sha256": "90dc5fbe553f1d334dbbaea500417fa5fb05a44a59ad98ab90f69337fe84fe30",
+      "bytes": 51899,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 6,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 13,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 30,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "path": "results/controller_sweep_gpu/octo-small@hist1/PutSpoonOnTableClothInScene-v1/fric_x0.4.jsonl",
+      "sha256": "d250f3b9ab4c83159aa4ec74dfa3d06728cbc871a3a283c8298a6688897d84c0",
+      "bytes": 52132,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 9,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 12,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 19,
+          "distinct_configurations": 24
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "path": "results/controller_sweep_gpu/octo-small@hist1/PutSpoonOnTableClothInScene-v1/iso_x0.25.jsonl",
+      "sha256": "8d671792a92c55e7adc2866f360a0566e55b999a295be5235846ebc33493386e",
+      "bytes": 52146,
+      "records": 96,
+      "unique_episode_ids": 96,
+      "duplicate_ids": 0,
+      "policy_seed_equals_20260918_plus_episode_id": true,
+      "prefix_counts": [
+        {
+          "episode_ids_below": 24,
+          "observations": 24,
+          "successes": 8,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 48,
+          "observations": 48,
+          "successes": 15,
+          "distinct_configurations": 24
+        },
+        {
+          "episode_ids_below": 96,
+          "observations": 96,
+          "successes": 23,
+          "distinct_configurations": 24
+        }
+      ]
+    }
+  ],
+  "git_history_probe": "9353b38 2026-09-22 00:04:18 -0700 Reproducibility release for the Autonomous Robots submission"
+}

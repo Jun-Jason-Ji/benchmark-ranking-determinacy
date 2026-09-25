@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-24T17:34:40.683711+00:00",
+  "purpose": "Outcome-blind reset implementation validation; no policy outcomes",
+  "files": {
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/PLAN.md": "20eb0d7bc03cfa39dd2f8124d9fa4ff3f59b77e864a5cfb7087a5f7b763625c5",
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/fresh_reset.py": "eaf31d93d9ab7486b9b88ab0c486b4407d5878b01df9e9e7967c895a98a35fa1",
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/validate_fresh_reset.py": "98931354439fb793f1135735fd3458ee19c6a81bd2bd53100b95f7a04b5b8e29",
+    "scripts/controller_sweep.py": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+    "scripts/ms3_windows_compat.py": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194",
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.md": "62c30d31d1f91563f144c742dfbcfdebc7483276d31f6fc7fabbf0cee824ca46",
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.json": "3e1cb60e295302a5e2a3f3e6916325fa0812b4996d71403fa7b3e094194ef486",
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": "459196c275764eaf53ccba8e154e3207036399e54c8bdd45f9e7d0919970464b",
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/base_agent.py": "64b0c9f45577ef842ae41449af36529e476ad68d26e726de5c9d858496f8824d",
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": "ce05feb05c4370ec2be58c60465082dde15fd97e6398a187a648a5e932a4d58e",
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": "318110fe18cb879eae00ca106f0117eed94679b79ee00ee226bacd38e4755f97",
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py": "00e8395e1e171f8032ae25021d561f59c79aa013620fc72a74cfe1814ea784ed",
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py": "9032845fe7b51eae6466206cf717c4cd4da38f1df97875ab8800181497016e01"
+  }
+}

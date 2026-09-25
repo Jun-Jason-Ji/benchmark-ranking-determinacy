@@ -1,0 +1,42 @@
+[
+  {
+    "sha256": "ea7791fa7e359bf7586346b763e524bcca9db22b11308ea11d9405f4194280d4",
+    "path": "scripts/replay_bridge_sysid.py"
+  },
+  {
+    "sha256": "333024880149b2d6300278cb6f93c6acabee0a19397871e69824dbe008b05852",
+    "path": "scripts/replay_bridge_sysid_ms2.py"
+  },
+  {
+    "sha256": "0b1e5f5130f5533698137c54b820aa28ca02db0753669305d803bd3f1d89c906",
+    "path": "scripts/run_replay100.cmd"
+  },
+  {
+    "sha256": "053137705714b2f3d7ba659a2c17686e2800430bb0fe95a900e8d236b000da83",
+    "path": "scripts/run_replay_ms2.sh"
+  },
+  {
+    "sha256": "5c61ca24c58be0192415bcbae90cc161872b6140659c47592f82aad2ba0cf58c",
+    "path": ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/empty_env.py"
+  },
+  {
+    "sha256": "64b0c9f45577ef842ae41449af36529e476ad68d26e726de5c9d858496f8824d",
+    "path": ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/base_agent.py"
+  },
+  {
+    "sha256": "e464faa563de9dfeef7596274cbdea528019e5401b8da5188367cd394325bbe9",
+    "path": "third_party/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/agents/base_agent.py"
+  },
+  {
+    "sha256": "532cf7981ae3c13c292f3bac913e2d17baa1b5f8316d437da0c0674b07d9a77b",
+    "path": "third_party/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/envs/custom_scenes/base_env.py"
+  },
+  {
+    "sha256": "b3d62a3f46ae9eb69f017b91671d8d29de818a51e5aa7ac9066628fabdcf3538",
+    "path": "third_party/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/agents/controllers/pd_ee_pose.py"
+  },
+  {
+    "sha256": "1aaefcd3742c2b0a8204f012dfebcc58dfc4dbaf29a279b91c42f5ba72586e57",
+    "path": "third_party/SimplerEnv/ManiSkill2_real2sim/mani_skill2_real2sim/agents/base_controller.py"
+  }
+]

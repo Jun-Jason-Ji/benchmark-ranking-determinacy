@@ -98,6 +98,9 @@ def figure(cells, path):
     # withdrew it from the ladder, so plotting it here would contradict the paper.
     plt.rcParams["font.family"] = ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"]
     shown = [m for m in METHODS if m != "gated"]
+    # Display scientific method names while retaining the cached method keys.
+    method_labels = {"point": "Point calibration", "union": "Union envelope",
+                     "gp_sim": "GP simultaneous band"}
     fig, axes = plt.subplots(2, len(SURFACES), figsize=(6.85, 4.6), sharey="row", sharex=True)
     colors = {"point": "#888", "union": "#0b5d8a", "gp_sim": "#a1541a", "gated": "#1d7a3e"}
     for j, kind in enumerate(SURFACES):
@@ -106,7 +109,7 @@ def figure(cells, path):
                 cs = sorted([c for c in cells if c["surface"] == kind and c["n"] == n], key=lambda c: c["d0"])
                 x = [c["d0"] for c in cs]
                 axes[0, j].plot(x, [c["methods"][m]["false_declare"] for c in cs], ls, color=colors[m],
-                                marker="o", ms=2.5, lw=1.2, label=f"{m}, n={n}" if j == 0 else None)
+                                marker="o", ms=2.5, lw=1.2, label=f"{method_labels[m]}, n={n}" if j == 0 else None)
                 axes[1, j].plot(x, [c["methods"][m]["cover"] for c in cs], ls, color=colors[m],
                                 marker="o", ms=2.5, lw=1.2)
         axes[0, j].axhline(0.05, color="k", lw=0.6)

@@ -1,0 +1,22 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+{"cell": "PickCube-v1_pd_joint_delta_pos_nominal_batch0.json", "seconds": 3.649803876876831, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_half_batch0.json", "seconds": 3.5802433490753174, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_double_batch0.json", "seconds": 3.425370693206787, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_half_batch0.json", "seconds": 3.53695011138916, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_double_batch0.json", "seconds": 3.512310266494751, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_nominal_batch1.json", "seconds": 3.576632261276245, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_half_batch1.json", "seconds": 3.5526161193847656, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_double_batch1.json", "seconds": 3.532160520553589, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_half_batch1.json", "seconds": 3.5329816341400146, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_double_batch1.json", "seconds": 3.575991630554199, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_nominal_batch2.json", "seconds": 3.6026813983917236, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_half_batch2.json", "seconds": 3.54909610748291, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_double_batch2.json", "seconds": 3.42467999458313, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_half_batch2.json", "seconds": 3.529237747192383, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_double_batch2.json", "seconds": 3.561483860015869, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_nominal_batch3.json", "seconds": 3.560612678527832, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_half_batch3.json", "seconds": 3.518505573272705, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_gain_double_batch3.json", "seconds": 3.5112082958221436, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_half_batch3.json", "seconds": 3.5253374576568604, "completed": true}
+{"cell": "PickCube-v1_pd_joint_delta_pos_force_double_batch3.json", "seconds": 3.5179872512817383, "completed": true}

@@ -1,0 +1,76 @@
+{
+  "complete": true,
+  "elapsed_seconds": 1788.7189999999828,
+  "jobs": [
+    [
+      [
+        1,
+        "forcehalf"
+      ],
+      [
+        2,
+        "forcehalf"
+      ],
+      [
+        3,
+        "forcehalf"
+      ],
+      [
+        4,
+        "forcehalf"
+      ],
+      [
+        5,
+        "forcehalf"
+      ],
+      [
+        6,
+        "forcehalf"
+      ],
+      [
+        7,
+        "forcehalf"
+      ],
+      [
+        8,
+        "forcehalf"
+      ]
+    ],
+    [
+      [
+        1,
+        "forcehalf"
+      ],
+      [
+        2,
+        "forcehalf"
+      ],
+      [
+        3,
+        "forcehalf"
+      ],
+      [
+        4,
+        "forcehalf"
+      ],
+      [
+        5,
+        "forcehalf"
+      ],
+      [
+        6,
+        "forcehalf"
+      ],
+      [
+        7,
+        "forcehalf"
+      ],
+      [
+        8,
+        "forcehalf"
+      ]
+    ]
+  ],
+  "frozen_plan_sha256": "616bccfeb61147a5026b2fb7257080f5f771f330485b3df12f727987fa4a8f9d",
+  "protocol_version": "SECONDARY-controlled-initialization-half-torque"
+}

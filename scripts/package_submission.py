@@ -5,8 +5,9 @@ Usage:
   python scripts/package_submission.py verify output/submission_2026-09-23
 
 The output directory must not exist. Only explicitly selected manuscript/material files
-are copied, after two byte-level checks that the source files did not change. No records,
-analysis outputs, root SHA256SUMS.txt, services, or queues are changed or included.
+are copied, after two byte-level checks that the source files did not change. The optional
+S1 archive includes scoped provenance records; the complete data release stays separate.
+No root data manifest, services, queues, or experimental records are changed.
 This is a write-once workflow with verifiable hashes, not OS-enforced immutable storage.
 """
 from __future__ import annotations
@@ -37,7 +38,9 @@ def selection(root: Path, evidence_index: Path | None = None) -> dict[str, Path]
                 "sn-apacite.bst", "cover_letter.md", "declarations_for_interface.md"]
     required += [f"Fig{i}.eps" for i in range(1, 7)]
     required += [f"Fig{i}-eps-converted-to.pdf" for i in range(1, 7)]
-    optional = ["cover_letter.pdf", "cover_letter.docx", "SUBMISSION_CHECKLIST.md"]
+    optional = ["cover_letter.pdf", "cover_letter.docx", "cover_letter.txt", "SUBMISSION_CHECKLIST.md",
+                "REFERENCE_VERIFICATION.md", "supplementary_provenance.tex",
+                "supplementary_provenance.pdf", "supplementary_provenance_sources.zip"]
     files = {}
     for name in required + optional:
         src = root / MANUSCRIPT / name
@@ -88,8 +91,9 @@ Source Git HEAD: {revision or 'unavailable'}
 This package freezes the manuscript source, compiled PDF, bibliography, figures,
 cover letter, submission declarations, and any supplied reviewer evidence index.
 It is **not the full reproducibility/data release** and is not evidence of a Zenodo
-deposit. No episode records, live analysis outputs, or repository data checksum
-manifest are included. The companion data/code package separately contains the
+deposit. The optional S1 source archive includes the episode records and historical
+reports needed for its scoped provenance audit. This is not the full experimental
+record collection or the repository data checksum manifest. The companion data/code package separately contains the
 completed eggplant and spoon operating-point comparisons used by this manuscript.
 Statements inside copied documents retain their own scope and must be reviewed separately.
 
@@ -105,6 +109,9 @@ source bundle (`main.tex`, `main.bbl`, `references.bib`, the journal class/style
 and six EPS figures with their PDF conversions). `cover_letter.md` and any rendered
 cover-letter files are separate submission materials. The declarations and checklist
 are preparation aids, not pages to append to the manuscript.
+`supplementary_provenance.pdf`, when present, is Supplementary Material S1 and must
+travel with the manuscript. Its editable source and the accompanying provenance-source
+archive preserve exploratory-candidate and analysis-revision evidence.
 
 Compile from that directory using a TeX installation:
 
@@ -154,7 +161,8 @@ def create_snapshot(root: Path, out: Path, evidence_index: Path | None = None) -
     manifest = {"schema_version": 1, "kind": "submission_materials_snapshot",
                 "created_utc": created, "git_head": head,
                 "full_data_release_included": False, "archive_deposit_verified": False,
-                "episode_records_included": False,
+                "episode_records_included": any(name.endswith("supplementary_provenance_sources.zip") for name in sources),
+                "episode_record_scope": "Optional S1 provenance-source archive only; the full data release is separate.",
                 "files": sorted(metadata, key=lambda row: row["path"])}
     data[MANIFEST] = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     checksum_text = "# Submission materials only; NOT the research-data release.\n"

@@ -1,11 +1,12 @@
 cff-version: 1.2.0
 title: >-
-  What Determines a Simulation Benchmark Ranking? Structural Blindness, Finite
-  Configuration Grids, and Evaluation Budget in Simulation-Based Policy Comparison
-  -- reproducibility release
+  Auditing robot policy rankings in simulation: Calibration, initialization, and
+  success criteria -- research data and code
 message: >-
-  If you use this release, please cite both the archived release (below) and the
-  manuscript it accompanies.
+  If you use these materials, please cite this archived release and the manuscript
+  it accompanies. Version 2.0.0 contains the complete Supplement S3 research
+  package (study records, replay inputs and analysis code); release_s3/ holds its
+  manifest and an in-repository verifier.
 type: software
 authors:
   - family-names: Ji
@@ -32,11 +33,16 @@ authors:
     orcid: "https://orcid.org/0000-0002-0122-4554"
     affiliation: >-
       College of Computer Science and Technology, Qingdao University, Qingdao, China
+  - family-names: Zhao
+    given-names: Yizhou
+    email: yizhou-zhao@ruc.edu.cn
+    orcid: "https://orcid.org/0009-0004-7515-6322"
+    affiliation: Sino-French Institute, Renmin University of China, Suzhou, China
   - family-names: Guo
     given-names: Shengjie
     email: guosj@emails.imau.edu.cn
     orcid: "https://orcid.org/0009-0004-6852-4836"
-    affiliation: Inner Mongolia Agricultural University, Hohhot, China
+    affiliation: College of Computer and Information Engineering, Inner Mongolia Agricultural University, Hohhot, China
   - family-names: Sui
     given-names: Yi
     email: suiyi@qdu.edu.cn
@@ -44,22 +50,24 @@ authors:
     affiliation: >-
       College of Computer Science and Technology, Qingdao University, Qingdao, China
 keywords:
-  - policy evaluation
-  - sim-to-real transfer
-  - identifiability
-  - partial identification
-  - benchmark reproducibility
-  - robot manipulation
+  - robot policy evaluation
+  - simulation benchmarks
+  - calibration
+  - success criteria
+  - ranking uncertainty
+  - reproducibility
 # Matches the previous release in this line: MIT for original code, with NOTICE.md
 # governing evaluation records and anything inherited from upstream. Zenodo reads this
 # file at tag time, so it must be correct before the tag, not after.
 license: MIT
-version: 1.5.0
-date-released: "2026-09-23"
+version: 2.0.0
+date-released: "2026-09-25"
 repository-code: "https://github.com/Jun-Jason-Ji/benchmark-ranking-determinacy"
 doi: "10.5281/zenodo.22893458"   # concept DOI: always resolves to the newest version
-# The manuscript cites the concept DOI above rather than a version DOI: a version DOI is minted
-# by the snapshot containing the manuscript, so it can never appear inside that snapshot.
-# Version DOIs: v1.0.0 10.5281/zenodo.22893459, v1.1.0 10.5281/zenodo.22895382,
-# v1.1.1 10.5281/zenodo.22896075, v1.1.2 10.5281/zenodo.22896200. All are also listed on the
-# concept record, and CHANGELOG.md tabulates them.
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22893458"
+    description: "Concept DOI for all versions of this project."
+  - type: doi
+    value: "10.5281/zenodo.22896508"
+    description: "Earlier public release v1.1.3; superseded by v2.0.0."

@@ -1,19 +1,79 @@
-[
-  {
-    "file": "2026-09-23_manuscript_reviewed2.zip",
-    "files": 25,
-    "bytes": 1089075,
-    "sha256": "db907c1e33537c5c73b06ece155e851b12a9214d64905dda845e6a37fdb0c11a",
-    "verified": true
+{
+  "status": "passed",
+  "scope": "Requested Data availability shortening and current-package synchronisation",
+  "archives": [
+    {
+      "path": "submission/releases/2026-09-25_ras_polished3_submission.zip",
+      "files": 55,
+      "bytes": 1529061,
+      "sha256": "a511150a2ccf3a1d84df99de21795bf139ed73552956ffffb09139f5d1d842ca",
+      "crc_inventory_manifest_and_byte_checks": "passed"
+    },
+    {
+      "path": "submission/releases/2026-09-25_ras_polished3_evidence.zip",
+      "files": 1063,
+      "bytes": 51257445,
+      "sha256": "f29ddb257f06117b9a6908a12afbb19b09370241eb4625078ddaf1c44347d83e",
+      "crc_inventory_manifest_and_byte_checks": "passed"
+    }
+  ],
+  "changed_current_members": [
+    "README_BUILD.md",
+    "REVIEW_EVIDENCE_INDEX.md",
+    "SUBMISSION_CHECKLIST.md",
+    "declarations_for_interface.md",
+    "main.pdf",
+    "main.tex"
+  ],
+  "supplements_unchanged": true,
+  "concept_DOI_scope": "Project public-release family; not a claim of a new current-snapshot deposit",
+  "pages": 30,
+  "visual_check_pages": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "build_errors": [],
+  "undefined_references": [],
+  "overfull_boxes": [],
+  "files": {
+    "2026-09-25_ras_polished3_submission.zip": {
+      "bytes": 1529061,
+      "sha256": "a511150a2ccf3a1d84df99de21795bf139ed73552956ffffb09139f5d1d842ca"
+    },
+    "2026-09-25_ras_polished3_evidence.zip": {
+      "bytes": 51257445,
+      "sha256": "f29ddb257f06117b9a6908a12afbb19b09370241eb4625078ddaf1c44347d83e"
+    },
+    "2026-09-25_ras_polished_provenance_sources.zip": {
+      "bytes": 1264648,
+      "sha256": "313e87dc8ccd5768817387bd9ffc9e0527dd1c05d31d5e6bbd081a74ce636219"
+    },
+    "2026-09-24_companion_provenance_final.zip": {
+      "bytes": 70942410,
+      "sha256": "5ef6d49d78e0cbe7bcbe617e77b3e90abd4b621139983fb4a99b77fac4d44021"
+    },
+    "2026-09-25_ras_polished3_submission/main.pdf": {
+      "bytes": 413112,
+      "sha256": "372ef1392db11c9c1fb62142c0b2aed6398cc3b8e4e69a304b3e0da37aa60152"
+    },
+    "2026-09-25_ras_polished3_submission/supplementary_methods.pdf": {
+      "bytes": 611042,
+      "sha256": "34d7729ce244ccb34743680c91c3a9fcea41d722f8667a9b0eb23942e7ffba4c"
+    },
+    "2026-09-25_ras_polished3_submission/supplementary_provenance.pdf": {
+      "bytes": 196507,
+      "sha256": "a67965066195540d4b6bd5586f1ee631f8b57d5dc21b5d239d368bde59e51110"
+    },
+    "2026-09-25_ras_polished3_submission/MANIFEST.json": {
+      "bytes": 7199,
+      "sha256": "78f56b0bd0de45b2e8ca6d082ded103f1b7e82277ac13bfbe934220033d4f3ce"
+    }
   },
-  {
-    "file": "2026-09-23_companion_data_code_reviewed2.zip",
-    "files": 16853,
-    "bytes": 70827542,
-    "sha256": "d9a202b67e9faba0aaa4b6fd5bdb7eeb487c71acbea29c2ba2885e22a9bf19e1",
-    "verified": true
-  },
-  {
-    "frozen_manuscript_pdf_sha256": "3b30159dffad154c4773dee8d2a961115b9f5e959309920b2d9f182298e910f3"
-  }
-]
+  "external_actions": []
+}

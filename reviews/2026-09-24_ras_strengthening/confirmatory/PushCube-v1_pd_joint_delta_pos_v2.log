@@ -1,0 +1,22 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+{"cell": "PushCube-v1_pd_joint_delta_pos_nominal_batch0.json", "seconds": 4.72234034538269, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_half_batch0.json", "seconds": 3.6416022777557373, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_double_batch0.json", "seconds": 3.6166160106658936, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_half_batch0.json", "seconds": 3.5334646701812744, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_double_batch0.json", "seconds": 3.595479726791382, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_nominal_batch1.json", "seconds": 3.7053639888763428, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_half_batch1.json", "seconds": 3.530102014541626, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_double_batch1.json", "seconds": 3.637939214706421, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_half_batch1.json", "seconds": 3.4979450702667236, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_double_batch1.json", "seconds": 3.4299118518829346, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_nominal_batch2.json", "seconds": 3.7788360118865967, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_half_batch2.json", "seconds": 3.5255331993103027, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_double_batch2.json", "seconds": 3.632096290588379, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_half_batch2.json", "seconds": 3.476532459259033, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_double_batch2.json", "seconds": 3.5085701942443848, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_nominal_batch3.json", "seconds": 3.5316097736358643, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_half_batch3.json", "seconds": 3.409895420074463, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_gain_double_batch3.json", "seconds": 3.533521890640259, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_half_batch3.json", "seconds": 3.502906084060669, "completed": true}
+{"cell": "PushCube-v1_pd_joint_delta_pos_force_double_batch3.json", "seconds": 3.4689018726348877, "completed": true}

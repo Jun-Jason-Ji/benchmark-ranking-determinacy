@@ -1,0 +1,489 @@
+{
+  "seed": 20260924,
+  "simulations_per_design_scenario": 20000,
+  "null": "Each observation marginally Bernoulli(0.5); each policy true finite-configuration mean 0.5; true gap exactly zero.",
+  "dependence": "Independent policy-specific block Gaussian shocks and observation innovations; threshold at zero; latent rho=0,.05,.20. Blocks independent. Same observation inventory as frozen nominal runs.",
+  "scope": "Synthetic per-pair, single-setting falsification check. Not an estimate of actual dependence, actual error rate, or 17-pair family-wise error. Perfectly shared setting outcomes would make a null IUT identical to this test; no simulated setting independence is assumed.",
+  "results": [
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "episode_normal",
+      "false_declarations": 1056,
+      "trials": 20000,
+      "rate": 0.0528,
+      "monte_carlo_95_interval": [
+        0.04974083877812922,
+        0.055989964592130036
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "directory_normal",
+      "false_declarations": 1056,
+      "trials": 20000,
+      "rate": 0.0528,
+      "monte_carlo_95_interval": [
+        0.04974083877812922,
+        0.055989964592130036
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "complete_block_t",
+      "false_declarations": 1007,
+      "trials": 20000,
+      "rate": 0.05035,
+      "monte_carlo_95_interval": [
+        0.04736004462378473,
+        0.05347150671099278
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "episode_hoeffding",
+      "false_declarations": 127,
+      "trials": 20000,
+      "rate": 0.00635,
+      "monte_carlo_95_interval": [
+        0.005296377642938963,
+        0.007550736855472248
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "directory_cluster_hoeffding",
+      "false_declarations": 0,
+      "trials": 20000,
+      "rate": 0.0,
+      "monte_carlo_95_interval": [
+        0.0,
+        0.0001844269639618992
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "episode_normal",
+      "false_declarations": 5557,
+      "trials": 20000,
+      "rate": 0.27785,
+      "monte_carlo_95_interval": [
+        0.2716496432014749,
+        0.2841149920750654
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "directory_normal",
+      "false_declarations": 5306,
+      "trials": 20000,
+      "rate": 0.2653,
+      "monte_carlo_95_interval": [
+        0.25919079791956307,
+        0.2714774940976231
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "complete_block_t",
+      "false_declarations": 992,
+      "trials": 20000,
+      "rate": 0.0496,
+      "monte_carlo_95_interval": [
+        0.04663162165984587,
+        0.05270015918299923
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "episode_hoeffding",
+      "false_declarations": 2647,
+      "trials": 20000,
+      "rate": 0.13235,
+      "monte_carlo_95_interval": [
+        0.12768225941443023,
+        0.13712489164372946
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "directory_cluster_hoeffding",
+      "false_declarations": 0,
+      "trials": 20000,
+      "rate": 0.0,
+      "monte_carlo_95_interval": [
+        0.0,
+        0.0001844269639618992
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "episode_normal",
+      "false_declarations": 10706,
+      "trials": 20000,
+      "rate": 0.5353,
+      "monte_carlo_95_interval": [
+        0.5283580602979401,
+        0.5422316745896698
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "directory_normal",
+      "false_declarations": 10432,
+      "trials": 20000,
+      "rate": 0.5216,
+      "monte_carlo_95_interval": [
+        0.5146492315452362,
+        0.5285444872995687
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "complete_block_t",
+      "false_declarations": 1055,
+      "trials": 20000,
+      "rate": 0.05275,
+      "monte_carlo_95_interval": [
+        0.04969223212450518,
+        0.055938586484702485
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "episode_hoeffding",
+      "false_declarations": 7867,
+      "trials": 20000,
+      "rate": 0.39335,
+      "monte_carlo_95_interval": [
+        0.38657086274172153,
+        0.4001601537916334
+      ]
+    },
+    {
+      "task": "eggplant",
+      "N": 64,
+      "episodes_per_policy": 352,
+      "blocks": 5,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "directory_cluster_hoeffding",
+      "false_declarations": 0,
+      "trials": 20000,
+      "rate": 0.0,
+      "monte_carlo_95_interval": [
+        0.0,
+        0.0001844269639618992
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "episode_normal",
+      "false_declarations": 1225,
+      "trials": 20000,
+      "rate": 0.06125,
+      "monte_carlo_95_interval": [
+        0.05796572878321511,
+        0.06466251225049374
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "directory_normal",
+      "false_declarations": 1225,
+      "trials": 20000,
+      "rate": 0.06125,
+      "monte_carlo_95_interval": [
+        0.05796572878321511,
+        0.06466251225049374
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "complete_block_t",
+      "false_declarations": 46,
+      "trials": 20000,
+      "rate": 0.0023,
+      "monte_carlo_95_interval": [
+        0.0016843660787305861,
+        0.0030666994612510547
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "episode_hoeffding",
+      "false_declarations": 107,
+      "trials": 20000,
+      "rate": 0.00535,
+      "monte_carlo_95_interval": [
+        0.004386464572245163,
+        0.00646132005554083
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.0,
+      "binary_within_block_correlation": 0.0,
+      "method": "directory_cluster_hoeffding",
+      "false_declarations": 0,
+      "trials": 20000,
+      "rate": 0.0,
+      "monte_carlo_95_interval": [
+        0.0,
+        0.0001844269639618992
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "episode_normal",
+      "false_declarations": 3058,
+      "trials": 20000,
+      "rate": 0.1529,
+      "monte_carlo_95_interval": [
+        0.1479379709528621,
+        0.1579631496270353
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "directory_normal",
+      "false_declarations": 3058,
+      "trials": 20000,
+      "rate": 0.1529,
+      "monte_carlo_95_interval": [
+        0.1479379709528621,
+        0.1579631496270353
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "complete_block_t",
+      "false_declarations": 162,
+      "trials": 20000,
+      "rate": 0.0081,
+      "monte_carlo_95_interval": [
+        0.0069046730975194405,
+        0.009441444596507795
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "episode_hoeffding",
+      "false_declarations": 723,
+      "trials": 20000,
+      "rate": 0.03615,
+      "monte_carlo_95_interval": [
+        0.033605646030028996,
+        0.03883030909446853
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.05,
+      "binary_within_block_correlation": 0.03184426647332069,
+      "method": "directory_cluster_hoeffding",
+      "false_declarations": 0,
+      "trials": 20000,
+      "rate": 0.0,
+      "monte_carlo_95_interval": [
+        0.0,
+        0.0001844269639618992
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "episode_normal",
+      "false_declarations": 6812,
+      "trials": 20000,
+      "rate": 0.3406,
+      "monte_carlo_95_interval": [
+        0.3340306084914352,
+        0.347215756011842
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "directory_normal",
+      "false_declarations": 6812,
+      "trials": 20000,
+      "rate": 0.3406,
+      "monte_carlo_95_interval": [
+        0.3340306084914352,
+        0.347215756011842
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "complete_block_t",
+      "false_declarations": 399,
+      "trials": 20000,
+      "rate": 0.01995,
+      "monte_carlo_95_interval": [
+        0.018057138196295133,
+        0.02198415411448664
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "episode_hoeffding",
+      "false_declarations": 3364,
+      "trials": 20000,
+      "rate": 0.1682,
+      "monte_carlo_95_interval": [
+        0.16303961731726727,
+        0.17345702187980558
+      ]
+    },
+    {
+      "task": "spoon",
+      "N": 24,
+      "episodes_per_policy": 48,
+      "blocks": 2,
+      "latent_correlation": 0.2,
+      "binary_within_block_correlation": 0.12818843369794988,
+      "method": "directory_cluster_hoeffding",
+      "false_declarations": 0,
+      "trials": 20000,
+      "rate": 0.0,
+      "monte_carlo_95_interval": [
+        0.0,
+        0.0001844269639618992
+      ]
+    }
+  ]
+}

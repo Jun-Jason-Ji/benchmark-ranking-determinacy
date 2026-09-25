@@ -1,0 +1,158 @@
+{
+  "created_utc": "2026-09-24T18:09:15Z",
+  "scope": "Completed-cell technical interfaces only; no outcome aggregation, directional assessment or inference",
+  "completed_cells_checked": 14,
+  "passed": true,
+  "checks": [
+    {
+      "cell": "block_01/octo-base/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_01/octo-base/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_01/octo-small/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_01/octo-small/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_02/octo-base/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_02/octo-base/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_02/octo-small/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_02/octo-small/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_03/octo-base/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_03/octo-base/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_03/octo-small/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_03/octo-small/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_04/octo-base/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    },
+    {
+      "cell": "block_04/octo-small/fitted",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json"
+    }
+  ],
+  "issues": [],
+  "unique_initial_state_hashes": 24,
+  "frequencies": [
+    [
+      5,
+      500
+    ]
+  ],
+  "frozen_analysis_unchanged": true,
+  "confirmatory_p_value_computed": false
+}

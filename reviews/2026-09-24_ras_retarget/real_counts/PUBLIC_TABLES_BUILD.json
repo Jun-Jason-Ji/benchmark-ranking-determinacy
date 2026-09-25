@@ -1,0 +1,8 @@
+{
+  "input": "reviews\\2026-09-24_ras_retarget\\real_counts\\analysis.json",
+  "input_sha256": "97c447a7772e8c56a8e203258ef3f1fab83687cb298940751d8c11a9e6ee04c2",
+  "output": "submission\\ras\\public_results_tables.tex",
+  "output_sha256": "3804c62c355960ee26050a3da17300af81d1625e2052438ef2a6df0bdce5cae6",
+  "correlation_rows": 9,
+  "count_sensitivity_rows": 5
+}

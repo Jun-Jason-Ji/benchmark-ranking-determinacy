@@ -1,0 +1,120 @@
+method,task,a,b,p_point,p_envelope,complete_support,nominal_delta,lo,hi,complete_blocks,holm_point,holm_envelope
+legacy_normal,eggplant (ms3),octo-small,octo-base,0.08678818855449343,0.08678818855449343,True,0.0546875,-0.007900490145208106,0.1172754901452081,"['A', 'C', 'D', 'E']",False,False
+legacy_normal,eggplant (ms3),octo-small,octo-small@hist1,0.024872094571381165,0.024872094571381165,True,0.071875,0.009079227628145392,0.1346707723718546,"['A', 'C', 'D', 'E']",False,False
+legacy_normal,eggplant (ms3),octo-small,octo-base@hist1,4.754752852254459e-05,0.020595451555046693,True,0.128125,0.06638356868943043,0.18986643131056954,"['A', 'C', 'D', 'E']",True,False
+legacy_normal,eggplant (ms3),octo-small,openvla-7b-4bit,2.2538386102270846e-23,1.129244816755165e-15,True,0.328125,0.2635618311048956,0.3926881688951044,['A'],True,True
+legacy_normal,eggplant (ms3),octo-base,octo-small@hist1,0.6037651485645346,1.0,True,0.017187499999999998,-0.047721768272249776,0.08209676827224976,"['A', 'C', 'D', 'E']",False,False
+legacy_normal,eggplant (ms3),octo-base,octo-base@hist1,0.02426532013340431,1.0,True,0.0734375,0.009547685317698021,0.13732731468230197,"['A', 'C', 'D', 'E']",False,False
+legacy_normal,eggplant (ms3),octo-base,openvla-7b-4bit,8.65141173318592e-16,2.689836925364733e-05,True,0.2734375,0.20681688113737695,0.34005811886262305,['A'],True,True
+legacy_normal,eggplant (ms3),octo-small@hist1,octo-base@hist1,0.08540580828461952,1.0,True,0.056249999999999994,-0.007843376705397587,0.12034337670539758,"['A', 'C', 'D', 'E']",False,False
+legacy_normal,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,5.60784182662898e-14,6.766400421801788e-07,True,0.25625000000000003,0.18943413829785627,0.3230658617021438,['A'],True,True
+legacy_normal,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,2.5991452943094617e-09,0.010100129933700698,True,0.2,0.13417405764062318,0.26582594235937684,['A'],True,False
+legacy_normal,spoon (ms3),octo-small,octo-base,4.06215042865871e-06,0.01842212545409902,True,0.3958333333333333,0.2274731869539455,0.5641934797127212,"['A', 'C']",True,False
+legacy_normal,carrot (ms3),octo-small,octo-base,0.31731050786291415,0.4795001221869535,True,-0.041666666666666664,-0.12333333333333332,0.04,"['A', 'C']",False,False
+legacy_normal,"eggplant (ms2, original stack)",octo-small,octo-base,0.4385780260809999,0.46685427082272557,True,0.0625,-0.09564681997013619,0.2206468199701362,['ms2'],False,False
+legacy_normal,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,2.55962508777167e-12,2.55962508777167e-12,True,0.4375,0.315,0.56,['ms2'],True,True
+legacy_normal,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,2.0048960802802991e-13,5.733031437583891e-07,True,0.375,0.27497916883635354,0.47502083116364646,['ms2'],True,True
+legacy_normal,"spoon (ms2, original stack)",octo-small,octo-base,0.0015654022580025523,0.011412036386001677,True,0.20833333333333334,0.07920699554312452,0.33745967112354214,['ms2'],True,False
+legacy_normal,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.0,-0.10002083116364643,0.10002083116364643,['ms2'],False,False
+raw_legacy_variance_normal,eggplant (ms3),octo-small,octo-base,0.0867881885544935,0.0867881885544935,True,0.0546875,-0.00790049014520812,0.11727549014520812,"['A', 'C', 'D', 'E']",False,False
+raw_legacy_variance_normal,eggplant (ms3),octo-small,octo-small@hist1,0.024872094571381228,0.024872094571381228,True,0.07187499999999997,0.00907922762814535,0.1346707723718546,"['A', 'C', 'D', 'E']",False,False
+raw_legacy_variance_normal,eggplant (ms3),octo-small,octo-base@hist1,4.754752852254471e-05,0.02059545155504669,True,0.128125,0.06638356868943042,0.18986643131056957,"['A', 'C', 'D', 'E']",True,False
+raw_legacy_variance_normal,eggplant (ms3),octo-small,openvla-7b-4bit,4.157530171458118e-31,1.1292448167551423e-15,True,0.328125,0.2726795579094989,0.3835704420905011,['A'],True,True
+raw_legacy_variance_normal,eggplant (ms3),octo-base,octo-small@hist1,0.6037651485645352,1.0,True,0.017187499999999967,-0.04772176827224982,0.08209676827224975,"['A', 'C', 'D', 'E']",False,False
+raw_legacy_variance_normal,eggplant (ms3),octo-base,octo-base@hist1,0.024265320133404347,1.0,True,0.07343749999999999,0.009547685317697993,0.13732731468230197,"['A', 'C', 'D', 'E']",False,False
+raw_legacy_variance_normal,eggplant (ms3),octo-base,openvla-7b-4bit,1.9010875661530173e-20,2.6898369253647162e-05,True,0.2734375,0.2156092964270701,0.3312657035729299,['A'],True,True
+raw_legacy_variance_normal,eggplant (ms3),octo-small@hist1,octo-base@hist1,0.08540580828461937,1.0,True,0.05625000000000002,-0.007843376705397573,0.12034337670539762,"['A', 'C', 'D', 'E']",False,False
+raw_legacy_variance_normal,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,5.0794221084548215e-18,6.766400421801698e-07,True,0.25625000000000003,0.1981969755668722,0.31430302443312785,['A'],True,True
+raw_legacy_variance_normal,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,5.659746988103839e-12,0.010100129933700672,True,0.2,0.14308911388553738,0.2569108861144626,['A'],True,False
+raw_legacy_variance_normal,spoon (ms3),octo-small,octo-base,4.062150428658698e-06,0.018422125454099023,True,0.3958333333333333,0.2274731869539455,0.5641934797127212,"['A', 'C']",True,False
+raw_legacy_variance_normal,carrot (ms3),octo-small,octo-base,0.31731050786291404,0.47950012218695337,True,-0.04166666666666667,-0.12333333333333334,0.039999999999999994,"['A', 'C']",False,False
+raw_legacy_variance_normal,"eggplant (ms2, original stack)",octo-small,octo-base,0.4385780260809998,0.46685427082272546,True,0.0625,-0.09564681997013619,0.2206468199701362,['ms2'],False,False
+raw_legacy_variance_normal,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,2.55962508777167e-12,2.55962508777167e-12,True,0.4375,0.315,0.56,['ms2'],True,True
+raw_legacy_variance_normal,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,2.004896080280303e-13,5.733031437583867e-07,True,0.375,0.27497916883635354,0.47502083116364646,['ms2'],True,True
+raw_legacy_variance_normal,"spoon (ms2, original stack)",octo-small,octo-base,0.001565402258002548,0.011412036386001658,True,0.20833333333333331,0.07920699554312449,0.33745967112354214,['ms2'],True,False
+raw_legacy_variance_normal,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.0,-0.10002083116364643,0.10002083116364643,['ms2'],False,False
+raw_execution_normal,eggplant (ms3),octo-small,octo-base,0.0867881885544935,0.0867881885544935,True,0.0546875,-0.00790049014520812,0.11727549014520812,"['A', 'C', 'D', 'E']",False,False
+raw_execution_normal,eggplant (ms3),octo-small,octo-small@hist1,0.024872094571381228,0.024872094571381228,True,0.07187499999999997,0.00907922762814535,0.1346707723718546,"['A', 'C', 'D', 'E']",False,False
+raw_execution_normal,eggplant (ms3),octo-small,octo-base@hist1,4.754752852254471e-05,0.02059545155504669,True,0.128125,0.06638356868943042,0.18986643131056957,"['A', 'C', 'D', 'E']",True,False
+raw_execution_normal,eggplant (ms3),octo-small,openvla-7b-4bit,4.157530171458118e-31,7.086928678331945e-09,True,0.328125,0.2726795579094989,0.3835704420905011,['A'],True,True
+raw_execution_normal,eggplant (ms3),octo-base,octo-small@hist1,0.6037651485645352,1.0,True,0.017187499999999967,-0.04772176827224982,0.08209676827224975,"['A', 'C', 'D', 'E']",False,False
+raw_execution_normal,eggplant (ms3),octo-base,octo-base@hist1,0.024265320133404347,1.0,True,0.07343749999999999,0.009547685317697993,0.13732731468230197,"['A', 'C', 'D', 'E']",False,False
+raw_execution_normal,eggplant (ms3),octo-base,openvla-7b-4bit,1.9010875661530173e-20,4.494584131401272e-05,True,0.2734375,0.2156092964270701,0.3312657035729299,['A'],True,True
+raw_execution_normal,eggplant (ms3),octo-small@hist1,octo-base@hist1,0.08540580828461937,1.0,True,0.05625000000000002,-0.007843376705397573,0.12034337670539762,"['A', 'C', 'D', 'E']",False,False
+raw_execution_normal,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,5.0794221084548215e-18,0.009231012998751517,True,0.25625000000000003,0.1981969755668722,0.31430302443312785,['A'],True,False
+raw_execution_normal,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,5.659746988103839e-12,0.010100129933700672,True,0.2,0.14308911388553738,0.2569108861144626,['A'],True,False
+raw_execution_normal,spoon (ms3),octo-small,octo-base,4.062150428658698e-06,0.018422125454099023,True,0.3958333333333333,0.2274731869539455,0.5641934797127212,"['A', 'C']",True,False
+raw_execution_normal,carrot (ms3),octo-small,octo-base,0.31731050786291404,0.47950012218695337,True,-0.04166666666666667,-0.12333333333333334,0.039999999999999994,"['A', 'C']",False,False
+raw_execution_normal,"eggplant (ms2, original stack)",octo-small,octo-base,0.4385780260809998,0.46685427082272546,True,0.0625,-0.09564681997013619,0.2206468199701362,['ms2'],False,False
+raw_execution_normal,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,2.55962508777167e-12,1.7678987451167158e-10,True,0.4375,0.315,0.56,['ms2'],True,True
+raw_execution_normal,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,2.004896080280303e-13,2.8244313617280497e-05,True,0.375,0.27497916883635354,0.47502083116364646,['ms2'],True,True
+raw_execution_normal,"spoon (ms2, original stack)",octo-small,octo-base,0.001565402258002548,0.011412036386001658,True,0.20833333333333331,0.07920699554312449,0.33745967112354214,['ms2'],True,False
+raw_execution_normal,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.0,-0.10002083116364643,0.10002083116364643,['ms2'],False,False
+episode_hoeffding,eggplant (ms3),octo-small,octo-base,0.7040633716345001,0.7040633716345001,True,0.05468749999999768,-0.04810891337581283,0.1574839133758082,"['A', 'C', 'D', 'E']",False,False
+episode_hoeffding,eggplant (ms3),octo-small,octo-small@hist1,0.3563461035457847,0.3563461035457847,True,0.07187500000000017,-0.0332317336021727,0.17698173360217306,"['A', 'C', 'D', 'E']",False,False
+episode_hoeffding,eggplant (ms3),octo-small,octo-base@hist1,0.0083259797814889,0.300478481898551,True,0.1281250000000002,0.023018266397827336,0.23323173360217309,"['A', 'C', 'D', 'E']",False,False
+episode_hoeffding,eggplant (ms3),octo-small,openvla-7b-4bit,3.4859133515942345e-09,0.0001350281311135647,True,0.32812499999999933,0.18779240696082766,0.468457593039171,['A'],True,True
+episode_hoeffding,eggplant (ms3),octo-base,octo-small@hist1,1.0,1.0,True,0.017187499999999998,-0.08791923360217288,0.12229423360217287,"['A', 'C', 'D', 'E']",False,False
+episode_hoeffding,eggplant (ms3),octo-base,octo-base@hist1,0.33032837721067027,1.0,True,0.07343750000000003,-0.031669233602172844,0.17854423360217292,"['A', 'C', 'D', 'E']",False,False
+episode_hoeffding,eggplant (ms3),octo-base,openvla-7b-4bit,1.654208046701627e-06,0.12624242253679446,True,0.2734374999999994,0.13310490696082772,0.41377009303917106,['A'],True,False
+episode_hoeffding,eggplant (ms3),octo-small@hist1,octo-base@hist1,0.7266191387180121,1.0,True,0.056249999999999994,-0.05111735208668362,0.1636173520866836,"['A', 'C', 'D', 'E']",False,False
+episode_hoeffding,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,1.2200962979637729e-05,0.28432821675617903,True,0.2562499999999994,0.1142163437255603,0.3982836562744385,['A'],True,False
+episode_hoeffding,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,0.0013319136534188675,0.7564831333332206,True,0.1999999999999996,0.057966343725560476,0.3420336562744387,['A'],True,False
+episode_hoeffding,spoon (ms3),octo-small,octo-base,0.0010833619537911894,0.24902894288824517,True,0.3958333333333332,0.11861202229458895,0.6730546443720775,"['A', 'C']",True,False
+episode_hoeffding,carrot (ms3),octo-small,octo-base,1.0,1.0,True,-0.04166666666666666,-0.3188879777054109,0.2355546443720776,"['A', 'C']",False,False
+episode_hoeffding,"eggplant (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.062499999999999944,-0.2147213110387443,0.3397213110387442,['ms2'],False,False
+episode_hoeffding,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,0.004374982236365789,0.004374982236365797,True,0.43749999999999983,0.09797462106484495,0.7770253789351547,['ms2'],False,False
+episode_hoeffding,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,0.02221799307648467,0.08787386724681504,True,0.3749999999999999,0.035474621064845,0.7145253789351548,['ms2'],False,False
+episode_hoeffding,"spoon (ms2, original stack)",octo-small,octo-base,0.24902894288824517,0.5271942762314527,True,0.2083333333333333,-0.06888797770541097,0.4855546443720775,['ms2'],False,False
+episode_hoeffding,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,6.938893903907228e-18,-0.27722131103874426,0.27722131103874426,['ms2'],False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-small,octo-base,1.0,1.0,True,0.05468749999999768,-0.09068858195938424,0.20006358195937962,"['A', 'C', 'D', 'E']",False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-small,octo-small@hist1,0.8281843651924728,0.8281843651924728,True,0.07187500000000017,-0.07514380169369032,0.21889380169369066,"['A', 'C', 'D', 'E']",False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-small,octo-base@hist1,0.12141759386471866,0.7476134498322762,True,0.1281250000000002,-0.018893801693690288,0.2751438016936907,"['A', 'C', 'D', 'E']",False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-small,openvla-7b-4bit,1.0,1.0,False,0.32812499999999933,,,['A'],False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-base,octo-small@hist1,1.0,1.0,True,0.017187499999999998,-0.1298313016936905,0.1642063016936905,"['A', 'C', 'D', 'E']",False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-base,octo-base@hist1,0.7967060521458438,1.0,True,0.07343750000000003,-0.07358130169369047,0.22045630169369052,"['A', 'C', 'D', 'E']",False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-base,openvla-7b-4bit,1.0,1.0,False,0.2734374999999994,,,['A'],False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-small@hist1,octo-base@hist1,1.0,1.0,True,0.056249999999999994,-0.09559036547707572,0.2080903654770757,"['A', 'C', 'D', 'E']",False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,1.0,1.0,False,0.2562499999999994,,,['A'],False,False
+seed_cluster_hoeffding,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,1.0,1.0,False,0.1999999999999996,,,['A'],False,False
+seed_cluster_hoeffding,spoon (ms3),octo-small,octo-base,0.04654808167456958,0.7057321629176976,True,0.3958333333333332,0.0037831954834906534,0.7878834711831757,"['A', 'C']",False,False
+seed_cluster_hoeffding,carrot (ms3),octo-small,octo-base,1.0,1.0,True,-0.04166666666666666,-0.4337168045165092,0.3503834711831759,"['A', 'C']",False,False
+seed_cluster_hoeffding,"eggplant (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.062499999999999944,-0.3295501378498426,0.4545501378498425,['ms2'],False,False
+seed_cluster_hoeffding,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,1.0,1.0,False,0.43749999999999983,,,['ms2'],False,False
+seed_cluster_hoeffding,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,1.0,1.0,False,0.3749999999999999,,,['ms2'],False,False
+seed_cluster_hoeffding,"spoon (ms2, original stack)",octo-small,octo-base,0.7057321629176976,1.0,True,0.2083333333333333,-0.18371680451650926,0.6003834711831758,['ms2'],False,False
+seed_cluster_hoeffding,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,6.938893903907228e-18,-0.39205013784984255,0.39205013784984255,['ms2'],False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-small,octo-base,1.0,1.0,True,0.05468749999999768,-1.0,1.0,"['A', 'C', 'D', 'E']",False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-small,octo-small@hist1,1.0,1.0,True,0.07187500000000017,-1.0,1.0,"['A', 'C', 'D', 'E']",False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-small,octo-base@hist1,1.0,1.0,True,0.1281250000000002,-1.0,1.0,"['A', 'C', 'D', 'E']",False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-small,openvla-7b-4bit,1.0,1.0,True,0.32812499999999933,-1.0,1.0,['A'],False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-base,octo-small@hist1,1.0,1.0,True,0.017187499999999998,-1.0,1.0,"['A', 'C', 'D', 'E']",False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-base,octo-base@hist1,1.0,1.0,True,0.07343750000000003,-1.0,1.0,"['A', 'C', 'D', 'E']",False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-base,openvla-7b-4bit,1.0,1.0,True,0.2734374999999994,-1.0,1.0,['A'],False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-small@hist1,octo-base@hist1,1.0,1.0,True,0.056249999999999994,-1.0,1.0,"['A', 'C', 'D', 'E']",False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,1.0,1.0,True,0.2562499999999994,-1.0,1.0,['A'],False,False
+directory_cluster_hoeffding,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,1.0,1.0,True,0.1999999999999996,-1.0,1.0,['A'],False,False
+directory_cluster_hoeffding,spoon (ms3),octo-small,octo-base,1.0,1.0,True,0.3958333333333332,-1.0,1.0,"['A', 'C']",False,False
+directory_cluster_hoeffding,carrot (ms3),octo-small,octo-base,1.0,1.0,True,-0.04166666666666666,-1.0,1.0,"['A', 'C']",False,False
+directory_cluster_hoeffding,"eggplant (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.062499999999999944,-1.0,1.0,['ms2'],False,False
+directory_cluster_hoeffding,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,1.0,1.0,True,0.43749999999999983,-1.0,1.0,['ms2'],False,False
+directory_cluster_hoeffding,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,1.0,1.0,True,0.3749999999999999,-1.0,1.0,['ms2'],False,False
+directory_cluster_hoeffding,"spoon (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,0.2083333333333333,-1.0,1.0,['ms2'],False,False
+directory_cluster_hoeffding,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,True,6.938893903907228e-18,-1.0,1.0,['ms2'],False,False
+complete_block_t,eggplant (ms3),octo-small,octo-base,0.16537039580601628,0.16537039580601628,True,0.078125,-0.05805450230102838,0.21430450230102838,"['A', 'C', 'D', 'E']",False,False
+complete_block_t,eggplant (ms3),octo-small,octo-small@hist1,0.03901485449356368,0.09893159351509398,True,0.1015625,0.009648341332179997,0.19347665866782,"['A', 'C', 'D', 'E']",False,False
+complete_block_t,eggplant (ms3),octo-small,octo-base@hist1,0.013133767590216703,0.18015855358701954,True,0.13671875,0.05457091160700121,0.21886658839299877,"['A', 'C', 'D', 'E']",False,False
+complete_block_t,eggplant (ms3),octo-small,openvla-7b-4bit,1.0,1.0,False,,,,['A'],False,False
+complete_block_t,eggplant (ms3),octo-base,octo-small@hist1,0.5860311109690105,1.0,True,0.0234375,-0.09920808468420625,0.14608308468420625,"['A', 'C', 'D', 'E']",False,False
+complete_block_t,eggplant (ms3),octo-base,octo-base@hist1,0.07233417133003117,1.0,True,0.05859375,-0.009873232575402666,0.12706073257540268,"['A', 'C', 'D', 'E']",False,False
+complete_block_t,eggplant (ms3),octo-base,openvla-7b-4bit,1.0,1.0,False,,,,['A'],False,False
+complete_block_t,eggplant (ms3),octo-small@hist1,octo-base@hist1,0.21516994256954994,1.0,True,0.03515625,-0.036256883476363036,0.10656938347636304,"['A', 'C', 'D', 'E']",False,False
+complete_block_t,eggplant (ms3),octo-small@hist1,openvla-7b-4bit,1.0,1.0,False,,,,['A'],False,False
+complete_block_t,eggplant (ms3),octo-base@hist1,openvla-7b-4bit,1.0,1.0,False,,,,['A'],False,False
+complete_block_t,spoon (ms3),octo-small,octo-base,0.03347541671314822,1.0,False,0.39583333333333337,0.1311207346576646,0.6605459320090021,"['A', 'C']",False,False
+complete_block_t,carrot (ms3),octo-small,octo-base,0.49999999999999956,1.0,False,-0.041666666666666664,-0.5710918640180039,0.4877585306846706,"['A', 'C']",False,False
+complete_block_t,"eggplant (ms2, original stack)",octo-small,octo-base,1.0,1.0,False,,,,['ms2'],False,False
+complete_block_t,"eggplant (ms2, original stack)",octo-small,openvla-7b-4bit,1.0,1.0,False,,,,['ms2'],False,False
+complete_block_t,"eggplant (ms2, original stack)",octo-base,openvla-7b-4bit,1.0,1.0,False,,,,['ms2'],False,False
+complete_block_t,"spoon (ms2, original stack)",octo-small,octo-base,1.0,1.0,False,,,,['ms2'],False,False
+complete_block_t,"carrot (ms2, original stack)",octo-small,octo-base,1.0,1.0,False,,,,['ms2'],False,False

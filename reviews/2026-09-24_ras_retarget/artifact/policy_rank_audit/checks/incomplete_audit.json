@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "build": "synthetic-demo-build-1",
+    "estimand": "equal_configuration_mean_success_difference",
+    "replicate_unit": "complete_independent_census_run",
+    "independent_runs": true,
+    "independent_policy_evaluations": true,
+    "description": "Illustrative binary outcomes only. Not robot experiments or evidence of real-world coverage."
+  },
+  "alpha": 0.05,
+  "input_sha256": {
+    "csv": "ae19274f10677b98afb05654e506846ba8bd322be507e03df0c94f1fcabf2330",
+    "manifest": "8a4af9efb6386d5c8d71e33f23aeadf527034735d80a2d4a0acccab2ccab6197"
+  },
+  "inference": "Normal working model with estimated variance across complete independent census runs; no finite-sample or real-world coverage guarantee.",
+  "family": "All manifest policy pairs across all manifest tasks, including unsupported pairs with p=1.",
+  "family_size": 3,
+  "coverage": [
+    {
+      "task": "synthetic_pick",
+      "expected_observations": 144,
+      "observed_observations": 143,
+      "complete_inventory": false,
+      "expected_configurations": 6,
+      "expected_conditions": 2,
+      "expected_runs_per_policy_condition": 4,
+      "missing_observations": [
+        [
+          "synthetic_pick",
+          "C",
+          "stress",
+          "c5",
+          "run3"
+        ]
+      ],
+      "complete_runs": [
+        {
+          "policy": "A",
+          "condition": "nominal",
+          "n": 4
+        },
+        {
+          "policy": "A",
+          "condition": "stress",
+          "n": 4
+        },
+        {
+          "policy": "B",
+          "condition": "nominal",
+          "n": 4
+        },
+        {
+          "policy": "B",
+          "condition": "stress",
+          "n": 4
+        },
+        {
+          "policy": "C",
+          "condition": "nominal",
+          "n": 4
+        },
+        {
+          "policy": "C",
+          "condition": "stress",
+          "n": 3
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "task": "synthetic_pick",
+      "policy_a": "A",
+      "policy_b": "B",
+      "conditions": [
+        {
+          "condition": "nominal",
+          "mean_a": 0.8333333333333334,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.6666666666666667,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": null,
+          "interval": null
+        },
+        {
+          "condition": "stress",
+          "mean_a": 0.7916666666666666,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.625,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": null,
+          "interval": null
+        }
+      ],
+      "eligible": false,
+      "unsupported_reasons": [
+        "incomplete_predeclared_inventory"
+      ],
+      "envelope": null,
+      "unadjusted_verdict": "abstain_unsupported",
+      "raw_p": 1.0,
+      "iut": null,
+      "holm_adjusted_p": 1.0,
+      "holm_verdict": "abstain_unsupported"
+    },
+    {
+      "task": "synthetic_pick",
+      "policy_a": "A",
+      "policy_b": "C",
+      "conditions": [
+        {
+          "condition": "nominal",
+          "mean_a": 0.8333333333333334,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.6666666666666667,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": null,
+          "interval": null
+        },
+        {
+          "condition": "stress",
+          "mean_a": 0.7916666666666666,
+          "mean_b": 0.8333333333333334,
+          "gap": -0.04166666666666674,
+          "runs_a": 4,
+          "runs_b": 3,
+          "standard_error": null,
+          "interval": null
+        }
+      ],
+      "eligible": false,
+      "unsupported_reasons": [
+        "incomplete_predeclared_inventory"
+      ],
+      "envelope": null,
+      "unadjusted_verdict": "abstain_unsupported",
+      "raw_p": 1.0,
+      "iut": null,
+      "holm_adjusted_p": 1.0,
+      "holm_verdict": "abstain_unsupported"
+    },
+    {
+      "task": "synthetic_pick",
+      "policy_a": "B",
+      "policy_b": "C",
+      "conditions": [
+        {
+          "condition": "nominal",
+          "mean_a": 0.16666666666666666,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.0,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": null,
+          "interval": null
+        },
+        {
+          "condition": "stress",
+          "mean_a": 0.16666666666666666,
+          "mean_b": 0.8333333333333334,
+          "gap": -0.6666666666666667,
+          "runs_a": 4,
+          "runs_b": 3,
+          "standard_error": null,
+          "interval": null
+        }
+      ],
+      "eligible": false,
+      "unsupported_reasons": [
+        "incomplete_predeclared_inventory"
+      ],
+      "envelope": null,
+      "unadjusted_verdict": "abstain_unsupported",
+      "raw_p": 1.0,
+      "iut": null,
+      "holm_adjusted_p": 1.0,
+      "holm_verdict": "abstain_unsupported"
+    }
+  ],
+  "limitations": [
+    "Manifest assertions do not verify build identity or independence in the physical data.",
+    "Replicate IDs are run labels, not proof of independence; shared seeds do not establish policy pairing.",
+    "Complete configuration coverage does not eliminate stochastic policy variation.",
+    "Two runs are a minimum for variance estimation, not evidence that a normal approximation is accurate.",
+    "No inference outside the declared finite condition/configuration inventory; no sim-to-real bias certificate."
+  ]
+}

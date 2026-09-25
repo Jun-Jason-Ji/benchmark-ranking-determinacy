@@ -1,0 +1,35 @@
+{
+  "package": "mani_skill 3.0.1",
+  "files": {
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": {
+      "snapshot": "files/mani_skill/envs/sapien_env.py",
+      "sha256": "459196c275764eaf53ccba8e154e3207036399e54c8bdd45f9e7d0919970464b",
+      "bytes": 76011
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/base_agent.py": {
+      "snapshot": "files/mani_skill/agents/base_agent.py",
+      "sha256": "64b0c9f45577ef842ae41449af36529e476ad68d26e726de5c9d858496f8824d",
+      "bytes": 18704
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": {
+      "snapshot": "files/mani_skill/agents/controllers/pd_joint_pos.py",
+      "sha256": "ce05feb05c4370ec2be58c60465082dde15fd97e6398a187a648a5e932a4d58e",
+      "bytes": 11116
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": {
+      "snapshot": "files/mani_skill/agents/controllers/pd_ee_pose.py",
+      "sha256": "318110fe18cb879eae00ca106f0117eed94679b79ee00ee226bacd38e4755f97",
+      "bytes": 13458
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py": {
+      "snapshot": "files/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py",
+      "sha256": "00e8395e1e171f8032ae25021d561f59c79aa013620fc72a74cfe1814ea784ed",
+      "bytes": 22627
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py": {
+      "snapshot": "files/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py",
+      "sha256": "9032845fe7b51eae6466206cf717c4cd4da38f1df97875ab8800181497016e01",
+      "bytes": 9419
+    }
+  }
+}

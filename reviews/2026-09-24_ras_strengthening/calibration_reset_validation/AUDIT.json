@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "verified_records": 96,
+  "verified_canonical_pngs": 24,
+  "exact_full_state_dict_comparisons": 96,
+  "decoded_image_hash_comparisons": 96,
+  "scope": "CPU-only verification of reset states, inputs, applied parameters and source/lifetime records",
+  "no_policy_outcomes": true,
+  "frozen_sources_unchanged": true,
+  "records_sha256": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452"
+}

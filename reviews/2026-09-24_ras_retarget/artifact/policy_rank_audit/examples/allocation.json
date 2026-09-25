@@ -1,0 +1,7 @@
+{
+  "budget": 100,
+  "strata": [
+    {"id": "stratum_a", "weight": 0.5, "sigma": 0.2, "cost": 1},
+    {"id": "stratum_b", "weight": 0.5, "sigma": 0.4, "cost": 4}
+  ]
+}

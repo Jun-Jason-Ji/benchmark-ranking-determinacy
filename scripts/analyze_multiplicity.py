@@ -5,25 +5,28 @@ a joint event over pairs, so a family of per-pair statements would have to be in
 could enter the ledger -- and that we had not performed the inflation. This script performs it, so
 the manuscript can report the corrected counts rather than only the caveat.
 
-What is and is not being corrected. Across CONDITIONS no correction is needed: a false envelope
-declaration requires one particular condition's own lower bound to exceed its own truth, and that
-condition is fixed by the surface rather than chosen from the data, so the false-declaration rate is
-at most alpha for any finite condition set (Sect. 3.3). Across PAIRS the error event does not pin
+What is and is not being corrected. Across CONDITIONS no correction is needed: in a pre-specified
+direction a false envelope declaration requires one particular condition's one-sided bound to fail.
+That condition is fixed by the surface rather than chosen from the data. With tail level alpha/2,
+the probability of a false declaration in either direction is at most alpha for a fixed finite
+condition set (Sect. 3.3), conditional on valid component bounds. Across PAIRS the error does not pin
 down which interval failed, so the usual multiplicity problem applies and a correction is required.
 
 Method. For each pair we form the z statistic Delta/se from Eq. (eq:var) -- the same estimator the
-core table uses -- and the two-sided p value erfc(|z|/sqrt 2). For the envelope the relevant p is
-not the smallest of the per-condition ones but the LARGEST: the envelope declares only when every
-condition agrees in sign, which makes it an intersection-union test, and an IUT rejects exactly when
-each component test rejects. Holm's step-down procedure at alpha = 0.05 is then applied over the 17
+core table uses -- and the two-sided p value erfc(|z|/sqrt 2). In each direction the envelope's
+intersection-union p value is the largest ONE-SIDED component p value. Since the rule may declare
+either direction, its p value is min(1, 2 * min(max(p_positive), max(p_negative))). This equals
+the largest two-sided component p value only when all estimated differences have the same sign;
+mixed-sign estimates give p = 1. The sign is accounted for BEFORE multiplicity correction, so a
+mixed-sign row cannot consume an early Holm rank and loosen other rows' thresholds.
+Holm's step-down procedure at alpha = 0.05 is then applied over the 17
 bridge pairs; it controls the family-wise error rate without any independence assumption, which
 matters because the pairs are not independent -- they are drawn from four Octo variants plus OpenVLA
 on shared policy data.
 
 The surviving count is the intersection of "declared without correction" with "still rejected after
-it", because a correction can only remove declarations. Reporting the corrected rejection count on
-its own would be wrong in both directions: it can flag a pair whose envelope straddles zero, and it
-cannot promote an abstention.
+it", retaining the interval-based declaration rule as a consistency check. A correction can only
+remove declarations, never promote an abstention.
 
 Holm is the right default here rather than Benjamini-Hochberg. The claim a reader takes from the
 core table is "each of these declared orderings holds", which is a family-wise statement; a
@@ -32,7 +35,7 @@ it so the choice is inspectable rather than inherited.
 
 Two findings, and the second is the one the manuscript reports.
 
-The envelope's p values are maxima over conditions and so start larger, which is why its set of
+The envelope's p values are no smaller than the nominal point's p value, which is why its set of
 declarations is the smaller of the two before any correction. That it also loses the larger SHARE of
 them under Holm (10 to 5, against point calibration's 11 to 9) is a fact about these records and not
 a theorem: an IUT p value being larger does not by itself determine how a step-down procedure over a
@@ -68,6 +71,31 @@ FRACTAL = "GraspSingleOpenedCokeCanInScene-v0"
 def norm_sf(z):
     """Two-sided tail of the standard normal, via erfc -- no scipy dependency."""
     return math.erfc(abs(z) / math.sqrt(2.0))
+
+
+def directional_pvalues(delta, se):
+    """One-sided normal tails for positive and negative orderings.
+
+    A zero standard error is treated as degenerate under the supplied variance model;
+    it does not validate that model. Exact zero difference supports neither direction.
+    """
+    if se < 0 or not math.isfinite(se) or not math.isfinite(delta):
+        raise ValueError("A finite difference and nonnegative finite standard error are required")
+    if se == 0:
+        if delta == 0:
+            return 1.0, 1.0
+        return (0.0, 1.0) if delta > 0 else (1.0, 0.0)
+    z = delta / se
+    return (0.5 * math.erfc(z / math.sqrt(2.0)),
+            0.5 * math.erfc(-z / math.sqrt(2.0)))
+
+
+def ordering_pvalue(differences):
+    """Bidirectional intersection-union p value for (difference, SE) pairs."""
+    tails = [directional_pvalues(delta, se) for delta, se in differences]
+    if not tails:
+        raise ValueError("An ordering test requires at least one setting")
+    return min(1.0, 2.0 * min(max(p[0] for p in tails), max(p[1] for p in tails)))
 
 
 def holm(pvals, alpha):
@@ -118,19 +146,17 @@ def collect():
             env_rs = inv + [nom]
             lo = min(r["lo"] for r in env_rs)
             hi = max(r["hi"] for r in env_rs)
-            # The envelope declares only if EVERY condition agrees in sign, so it is an
-            # intersection-union test: it rejects exactly when each per-condition test rejects, and
-            # its p value is therefore the LARGEST of the per-condition p values, not the smallest.
-            # That is the same fact as the no-correction-across-conditions argument of Sect. 3.3 seen
-            # from the other side. An earlier version of this script took the condition whose bound
-            # lay nearest zero, which is not the binding one when a condition's interval straddles
-            # zero, and it reported envelope "rejections" for pairs whose envelope abstains.
-            ps = [norm_sf(r["delta"] / r["se"]) if r["se"] > 0 else 0.0 for r in env_rs]
-            worst = env_rs[max(range(len(ps)), key=lambda i: ps[i])]
+            # Form directional IUTs before choosing between the two possible orderings.
+            # Maxima of two-sided tails alone incorrectly give small p values to settings
+            # with strong but opposite signs; filtering declarations after Holm is too late.
+            tails = [directional_pvalues(r["delta"], r["se"]) for r in env_rs]
+            direction = min(range(2), key=lambda j: max(p[j] for p in tails))
+            worst = env_rs[max(range(len(tails)), key=lambda i: tails[i][direction])]
+            p_env = ordering_pvalue((r["delta"], r["se"]) for r in env_rs)
             rows.append(dict(
                 task=label, a=a, b=b, n=nom["n"],
                 d=nom["delta"], se=nom["se"], lo=nom["lo"], hi=nom["hi"],
-                env_lo=lo, env_hi=hi, p_env=max(ps),
+                env_lo=lo, env_hi=hi, p_env=p_env,
                 env_d=worst["delta"], env_se=worst["se"], n_cond=len(env_rs),
             ))
     return rows
@@ -144,7 +170,7 @@ def main():
 
     rows = collect()
     for r in rows:
-        r["p_point"] = norm_sf(r["d"] / r["se"]) if r["se"] > 0 else 0.0
+        r["p_point"] = ordering_pvalue([(r["d"], r["se"])])
 
     pp = [r["p_point"] for r in rows]
     pe = [r["p_env"] for r in rows]
@@ -181,13 +207,16 @@ def main():
          "event over pairs, so the counts have to be corrected before they can be read as "
          "\"each of these orderings holds\". This file performs the correction that "
          "Appendix A.2 previously only flagged as missing. Correction is needed across **pairs** "
-         "and not across **conditions**: a false envelope declaration requires one particular "
-         "condition's own lower bound to exceed its own truth, and that condition is fixed by the "
-         "surface rather than selected from the data (Sect. 3.3).", "",
+          "and not across **conditions**: in a pre-specified direction a false envelope declaration "
+          "requires one particular condition's one-sided bound to fail; accounting for both directions "
+          "gives total level alpha, conditional on valid component bounds (Sect. 3.3).", "",
          f"Estimator: Eq. (eq:var), run observation unit, $\\alpha = {args.alpha}$. The $z$ for a "
          "pair is $\\hat\\Delta/\\mathrm{se}$ at nominal. The envelope "
-         "declares only when every condition agrees, so it is an intersection-union test and its $p$ "
-         "is the LARGEST of the per-condition $p$ values. Holm then controls the family-wise error "
+          "declares only when every condition agrees. Its bidirectional IUT $p$ is "
+          r"$\min(1,2\min\{\max_z p_z^+,\max_z p_z^-\})$: the maximum one-sided $p$ within each "
+          "direction, followed by a two-direction correction. For same-sign estimates this equals "
+          "the largest two-sided component $p$; mixed-sign estimates give $p=1$ before Holm. "
+          "With valid input $p$ values, Holm controls the family-wise error "
          "rate over pairs without an independence assumption, "
          "which matters because these pairs share policy data. Benjamini-Hochberg is printed "
          "beside it because the choice between a family-wise and a false-discovery reading is a "

@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "build": "synthetic-demo-build-1",
+    "estimand": "equal_configuration_mean_success_difference",
+    "replicate_unit": "complete_independent_census_run",
+    "independent_runs": true,
+    "independent_policy_evaluations": true,
+    "description": "Illustrative binary outcomes only. Not robot experiments or evidence of real-world coverage."
+  },
+  "alpha": 0.05,
+  "input_sha256": {
+    "csv": "ec9d891434e33b09b588715478468832ff56a383d35ece08f6bff3ab957f5d4d",
+    "manifest": "8a4af9efb6386d5c8d71e33f23aeadf527034735d80a2d4a0acccab2ccab6197"
+  },
+  "inference": "Normal working model with estimated variance across complete independent census runs; no finite-sample or real-world coverage guarantee.",
+  "family": "All manifest policy pairs across all manifest tasks, including unsupported pairs with p=1.",
+  "family_size": 3,
+  "coverage": [
+    {
+      "task": "synthetic_pick",
+      "expected_observations": 144,
+      "observed_observations": 144,
+      "complete_inventory": true,
+      "expected_configurations": 6,
+      "expected_conditions": 2,
+      "expected_runs_per_policy_condition": 4,
+      "missing_observations": [],
+      "complete_runs": [
+        {
+          "policy": "A",
+          "condition": "nominal",
+          "n": 4
+        },
+        {
+          "policy": "A",
+          "condition": "stress",
+          "n": 4
+        },
+        {
+          "policy": "B",
+          "condition": "nominal",
+          "n": 4
+        },
+        {
+          "policy": "B",
+          "condition": "stress",
+          "n": 4
+        },
+        {
+          "policy": "C",
+          "condition": "nominal",
+          "n": 4
+        },
+        {
+          "policy": "C",
+          "condition": "stress",
+          "n": 4
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "task": "synthetic_pick",
+      "policy_a": "A",
+      "policy_b": "B",
+      "conditions": [
+        {
+          "condition": "nominal",
+          "mean_a": 0.8333333333333334,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.6666666666666667,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": 0.09622504486493763,
+          "interval": [
+            0.4780690443206381,
+            0.8552642890126954
+          ]
+        },
+        {
+          "condition": "stress",
+          "mean_a": 0.7916666666666666,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.625,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": 0.10485881160098263,
+          "interval": [
+            0.4194805058004033,
+            0.8305194941995967
+          ]
+        }
+      ],
+      "eligible": true,
+      "unsupported_reasons": [],
+      "envelope": [
+        0.4194805058004033,
+        0.8552642890126954
+      ],
+      "unadjusted_verdict": "a_better",
+      "raw_p": 2.516280111892331e-09,
+      "iut": {
+        "positive_iut_p": 1.2581400559461655e-09,
+        "negative_iut_p": 0.9999999999978689,
+        "two_direction_p": 2.516280111892331e-09
+      },
+      "holm_adjusted_p": 7.548840335676992e-09,
+      "holm_verdict": "a_better"
+    },
+    {
+      "task": "synthetic_pick",
+      "policy_a": "A",
+      "policy_b": "C",
+      "conditions": [
+        {
+          "condition": "nominal",
+          "mean_a": 0.8333333333333334,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.6666666666666667,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": 0.09622504486493763,
+          "interval": [
+            0.4780690443206381,
+            0.8552642890126954
+          ]
+        },
+        {
+          "condition": "stress",
+          "mean_a": 0.7916666666666666,
+          "mean_b": 0.8333333333333334,
+          "gap": -0.04166666666666674,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": 0.10485881160098265,
+          "interval": [
+            -0.2471861608662635,
+            0.16385282753293
+          ]
+        }
+      ],
+      "eligible": true,
+      "unsupported_reasons": [],
+      "envelope": [
+        -0.2471861608662635,
+        0.8552642890126954
+      ],
+      "unadjusted_verdict": "abstain",
+      "raw_p": 1.0,
+      "iut": {
+        "positive_iut_p": 0.6544488880775788,
+        "negative_iut_p": 0.9999999999978689,
+        "two_direction_p": 1.0
+      },
+      "holm_adjusted_p": 1.0,
+      "holm_verdict": "abstain"
+    },
+    {
+      "task": "synthetic_pick",
+      "policy_a": "B",
+      "policy_b": "C",
+      "conditions": [
+        {
+          "condition": "nominal",
+          "mean_a": 0.16666666666666666,
+          "mean_b": 0.16666666666666666,
+          "gap": 0.0,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": 0.09622504486493763,
+          "interval": [
+            -0.1885976223460286,
+            0.1885976223460286
+          ]
+        },
+        {
+          "condition": "stress",
+          "mean_a": 0.16666666666666666,
+          "mean_b": 0.8333333333333334,
+          "gap": -0.6666666666666667,
+          "runs_a": 4,
+          "runs_b": 4,
+          "standard_error": 0.09622504486493763,
+          "interval": [
+            -0.8552642890126954,
+            -0.4780690443206381
+          ]
+        }
+      ],
+      "eligible": true,
+      "unsupported_reasons": [],
+      "envelope": [
+        -0.8552642890126954,
+        0.1885976223460286
+      ],
+      "unadjusted_verdict": "abstain",
+      "raw_p": 1.0,
+      "iut": {
+        "positive_iut_p": 0.9999999999978689,
+        "negative_iut_p": 0.5,
+        "two_direction_p": 1.0
+      },
+      "holm_adjusted_p": 1.0,
+      "holm_verdict": "abstain"
+    }
+  ],
+  "limitations": [
+    "Manifest assertions do not verify build identity or independence in the physical data.",
+    "Replicate IDs are run labels, not proof of independence; shared seeds do not establish policy pairing.",
+    "Complete configuration coverage does not eliminate stochastic policy variation.",
+    "Two runs are a minimum for variance estimation, not evidence that a normal approximation is accurate.",
+    "No inference outside the declared finite condition/configuration inventory; no sim-to-real bias certificate."
+  ]
+}

@@ -255,12 +255,12 @@ def fig_uncertainty_budget():
     # rate range, and neither is a difference between policies, so neither belonged on this axis.
     # They remain three different KINDS of Delta-quantity -- a 95% half-width, a shift, and a span
     # across settings -- so each label says which, and the caption says not to rank them by length.
-    rows = [("Evaluation noise, 1 seed\n(95% half-width of $\\Delta$)", 1.96 * sd, BLUE, 0.45),
-            ("Evaluation noise, 3 seeds\n(95% half-width of $\\Delta$)", 1.96 * sd / np.sqrt(3), BLUE, 0.70),
-            ("Evaluation noise, 10 seeds\n(95% half-width of $\\Delta$)", 1.96 * sd / np.sqrt(10), BLUE, 0.95),
-            ("Implementation build\n(shift in $\\Delta$)", drift_max, VIOLET, 1.0),
-            ("Calibration-invisible parameter,\ntorque limit (shift in $\\Delta$)", shift, ORANGE, 1.0),
-            ("Robot texture variant, no physics\n(span of $\\Delta$ over 4 settings)", tex_span, AQUA, 1.0)]
+    rows = [("Evaluation noise, 1 seed\n(95% half-width of Δ)", 1.96 * sd, BLUE, 0.45),
+            ("Evaluation noise, 3 seeds\n(95% half-width of Δ)", 1.96 * sd / np.sqrt(3), BLUE, 0.70),
+            ("Evaluation noise, 10 seeds\n(95% half-width of Δ)", 1.96 * sd / np.sqrt(10), BLUE, 0.95),
+            ("Implementation build\n(shift in Δ)", drift_max, VIOLET, 1.0),
+            ("Calibration-invisible parameter,\ntorque limit (shift in Δ)", shift, ORANGE, 1.0),
+            ("Robot texture variant, no physics\n(span of Δ over 4 settings)", tex_span, AQUA, 1.0)]
     print("  texture variant per-urdf rates (single policy): "
           + ", ".join(f"{r:.3f}" for r in tex_rates) + f"  range {tex_range:.4f}")
     print("  texture variant per-urdf Delta: " + ", ".join(f"{d:+.4f}" for d in tex_deltas)
@@ -268,35 +268,51 @@ def fig_uncertainty_budget():
     print("  build: shift in Delta per condition: "
           + ", ".join(f"{k} {v:+.4f}" for k, v in drift_detail.items())
           + f"   -> max |shift| {drift_max:.4f}, mean |shift| {drift_mean:.4f}")
-    fig, ax = plt.subplots(figsize=(6.85, 3.5))  # 174 mm: the journal full-column width, so no rescale
-    y = np.arange(len(rows))[::-1]
-    vmax = max(r[1] for r in rows)
-    for yi, (lab, v, col, alpha) in zip(y, rows):
-        ax.barh(yi, v, height=0.52, color=col, alpha=alpha, edgecolor="white", linewidth=1.2, zorder=3)
-        ax.text(v + vmax * 0.02, yi, f"{v:.3f}", va="center", ha="left", fontsize=8.5, color=INK)
-    ax.set_yticks(y)
-    ax.set_yticklabels([r[0] for r in rows], fontsize=8.5)
-    ax.set_xlabel("effect on the success-rate difference $\\Delta$ (probability points).\n"
-                  "Three different quantities; see each label.", fontsize=8.5)
-    ax.set_xlim(0, vmax * 1.95)  # room for the right-hand brackets and their labels
-    ax.grid(axis="x", color=MUTED, alpha=0.45, linewidth=0.6, zorder=0)
-    ax.set_axisbelow(True)
-    ax.spines["left"].set_visible(False)
-    ax.tick_params(axis="y", length=0)
-    # right-hand brackets: what a bigger evaluation budget can and cannot buy
-    bx = vmax * 1.26
-    ax.plot([bx, bx], [y[0] + 0.3, y[2] - 0.3], color=BLUE, lw=1.4, solid_capstyle="round", clip_on=False, zorder=5)
-    ax.text(bx + vmax * 0.03, y[1], "reducible:\n$\\propto 1/\\sqrt{\\mathrm{seeds}}$", va="center", ha="left",
-            fontsize=8, color=BLUE)
-    # the texture variant is irreducible for the same reason as the torque limit, so one bracket spans both
-    ax.plot([bx, bx], [y[4] + 0.3, y[5] - 0.3], color=ORANGE, lw=1.4, solid_capstyle="round", clip_on=False, zorder=5)
-    ax.text(bx + vmax * 0.03, (y[4] + y[5]) / 2, "irreducible without\nnew calibration evidence", va="center",
-            ha="left", fontsize=8, color=ORANGE)
-    fig.tight_layout()
-    # bbox_inches="tight": the bracket labels sit outside the axes with clip_on=False, so a
-    # default bbox crops them (and the two-line xlabel) at the canvas edge.
-    fig.savefig(OUT / "fig_uncertainty_budget.png", dpi=300, bbox_inches="tight")
-    plt.close(fig)
+    # Design at the manuscript's actual 160 mm width. A scoped font choice keeps
+    # this revision from changing the other figures produced by this module.
+    from matplotlib.colors import to_rgb
+    with plt.rc_context({"font.family": "Arial", "font.size": 9.5,
+                         "text.color": INK, "axes.labelcolor": INK,
+                         "xtick.color": INK2, "ytick.color": INK2}):
+        fig = plt.figure(figsize=(160 / 25.4, 98 / 25.4))
+        ax = fig.add_axes([0.37, 0.215, 0.385, 0.735])
+        y = np.arange(len(rows))[::-1]
+        vmax = max(r[1] for r in rows)
+        for yi, (lab, v, col, alpha) in zip(y, rows):
+            # EPS has no transparency: blend against white explicitly so the
+            # three evaluation-budget shades survive both vector formats.
+            fill = tuple(alpha * c + (1 - alpha) for c in to_rgb(col))
+            ax.barh(yi, v, height=0.52, color=fill, edgecolor="white", linewidth=1.2, zorder=3)
+            ax.text(v + vmax * 0.02, yi, f"{v:.3f}", va="center", ha="left", fontsize=9.5, color=INK)
+        ax.set_yticks(y)
+        ax.set_yticklabels([r[0] for r in rows], fontsize=9.5)
+        ax.set_xlabel("Success-rate difference Δ (probability points)\n"
+                      "Half-width, shift or span (see row labels)", fontsize=9.5, labelpad=7)
+        ax.set_xlim(0, 0.20)
+        ax.set_xticks([0, 0.05, 0.10, 0.15, 0.20])
+        ax.set_ylim(-0.65, 5.65)
+        grid_color = tuple(0.45 * c + 0.55 for c in to_rgb(MUTED))
+        ax.grid(axis="x", color=grid_color, linewidth=0.6, zorder=0)
+        ax.set_axisbelow(True)
+        ax.spines["left"].set_visible(False)
+        ax.tick_params(axis="y", length=0, labelsize=9.5)
+        ax.tick_params(axis="x", labelsize=9.5)
+        # Brackets use axes-x/data-y coordinates so the annotations are outside
+        # the numerical scale. More runs reduce noise, not the measured shifts.
+        transform = ax.get_yaxis_transform()
+        bx = 1.06
+        ax.plot([bx, bx], [y[0] + 0.3, y[2] - 0.3], transform=transform,
+                color=BLUE, lw=1.4, solid_capstyle="round", clip_on=False, zorder=5)
+        ax.text(bx + 0.035, y[1], "Approx. scaling\n1/√(seeds)", transform=transform,
+                va="center", ha="left", fontsize=9.5, color=INK2)
+        # Include the implementation-build row as well as torque and texture;
+        # no claim is made that new calibration evidence is the only remedy.
+        ax.plot([bx, bx], [y[3] + 0.3, y[5] - 0.3], transform=transform,
+                color=ORANGE, lw=1.4, solid_capstyle="round", clip_on=False, zorder=5)
+        ax.text(bx + 0.035, y[4], "Not reduced by\nadditional\nevaluation runs", transform=transform,
+                va="center", ha="left", fontsize=9.5, color=INK2)
+        fig.savefig(OUT / "fig_uncertainty_budget.png", dpi=300)
+        plt.close(fig)
     return dict(seed_sd=sd, drift_max=drift_max, drift_mean=drift_mean, shift=shift,
                 drift_detail=drift_detail)
 
@@ -304,9 +320,11 @@ def fig_uncertainty_budget():
 ORIENT = ["-45", "0", "45", "90", "135", "180", "225", "270"]
 
 
+@matplotlib.rc_context({"font.family": ["Arial", "Helvetica", "sans-serif"],
+                        "pdf.fonttype": 42, "ps.fonttype": 42})
 def fig_torque_by_orientation():
-    panels = [(OPENVLA, DET_SETS, "OpenVLA-7B (deterministic)"),
-              ("octo-small", OCTO_SETS, "Octo-small (stochastic)")]
+    panels = [(OPENVLA, DET_SETS, "OpenVLA (7B, deterministic)"),
+              ("octo-small", OCTO_SETS, "Octo-Small (stochastic)")]
     fig, axes = plt.subplots(1, 2, figsize=(6.85, 3.1), sharex=True, sharey=True)  # 174 mm full-column
     for ax, (policy, sets, title) in zip(axes, panels):
         nom, frc = merged(sets, policy, "nominal"), merged(sets, policy, "force_x0.5")

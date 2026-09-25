@@ -1,0 +1,60 @@
+{
+  "inputs": {
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_joint_delta_pos_nominal_batch0.json": "a03dcc258ba004164dc58f75deb29bb8dc6fb759a6c1bcfe8a1e1e60c1a91bdf",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_joint_delta_pos_nominal_batch1.json": "9afa68241a75fdc020af3f0e8a3eced8d0ee0556a853cd3bf7cbfc3b9b21fdc2",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_joint_delta_pos_nominal_batch2.json": "c443387cba23981a972ca21cb236664c65c41b4e3d9e67e77981b3aafe4e7dc3",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_joint_delta_pos_nominal_batch3.json": "b4864d3dfa498e214a452016ea80b5d2e160b2f3977a6ae98a0122e714c508e1",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_ee_delta_pos_nominal_batch0.json": "e47e92adee01a75a42180ee7b6c0c435e190e03122910ffe1329b18781e02413",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_ee_delta_pos_nominal_batch1.json": "dfe5c3fc32a6a8073d36ee240cbd3196071b17d3b9d5213b619d393e7ba06228",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_ee_delta_pos_nominal_batch2.json": "b6bf0407a574690989c5302c08fcd2c1ca9cf0f9211b7df0db44243eb39f7d6d",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PickCube-v1_pd_ee_delta_pos_nominal_batch3.json": "64d35acdb7983896f71336df5f62de10bbfd4c247b277a44753d43a722c5a1de",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_joint_delta_pos_nominal_batch0.json": "01428aa2f7444b0f99687ef7a3a74c02f43df22ef7ae1a153d7c7e6c4425e195",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_joint_delta_pos_nominal_batch1.json": "56b10c19f07e9c0cb80ff6a9ab23116e98f5ace619c30bd26c5501860707ca2c",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_joint_delta_pos_nominal_batch2.json": "d4150955f518a7ef5660da2931807816354da3a94a080597320ac17071dd7598",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_joint_delta_pos_nominal_batch3.json": "d5ef5711baa344d1ee0de742100f85a2e702171d6b57d36db04451c2ffba4b31",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_ee_delta_pos_nominal_batch0.json": "3d64451665789e47f6203a35c7807761d4922b708d708404a37389ca63bd1207",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_ee_delta_pos_nominal_batch1.json": "e03fb2ee66226c56d3bb8c80c8177bc62a907402227a958522c6d3608af6724f",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_ee_delta_pos_nominal_batch2.json": "32477e61a584c94ed07ed52e9943408a29cae972195ee71314ecf4f2c29a9338",
+    "reviews\\2026-09-24_ras_strengthening\\confirmatory\\raw_v2\\PushCube-v1_pd_ee_delta_pos_nominal_batch3.json": "9ce8efc179299a67b5637eafcff3d29d88f0df33c32374ed6f22d5d893b034fe"
+  },
+  "output": "submission\\ras\\Fig4.pdf",
+  "output_sha256": "eb6616ed4347a035f4281fee7c887b240f1ccfd9c363a23a921101c390ba73db",
+  "summary": {
+    "PickCube-v1/pd_joint_delta_pos": {
+      "n": 1024,
+      "ever50": 994,
+      "at50": 985,
+      "peak_step": 48,
+      "peak_fraction": 0.9619140625,
+      "median_xy_distance_at_50": 0.011351946397371587,
+      "fraction_beyond_0p1_at_50": 0.017578125
+    },
+    "PickCube-v1/pd_ee_delta_pos": {
+      "n": 1024,
+      "ever50": 659,
+      "at50": 648,
+      "peak_step": 50,
+      "peak_fraction": 0.6328125,
+      "median_xy_distance_at_50": 0.01211225221626504,
+      "fraction_beyond_0p1_at_50": 0.29296875
+    },
+    "PushCube-v1/pd_joint_delta_pos": {
+      "n": 1024,
+      "ever50": 1024,
+      "at50": 18,
+      "peak_step": 18,
+      "peak_fraction": 0.890625,
+      "median_xy_distance_at_50": 0.19063332848827008,
+      "fraction_beyond_0p1_at_50": 0.98046875
+    },
+    "PushCube-v1/pd_ee_delta_pos": {
+      "n": 1024,
+      "ever50": 824,
+      "at50": 323,
+      "peak_step": 14,
+      "peak_fraction": 0.494140625,
+      "median_xy_distance_at_50": 0.1492332386500374,
+      "fraction_beyond_0p1_at_50": 0.6845703125
+    }
+  }
+}

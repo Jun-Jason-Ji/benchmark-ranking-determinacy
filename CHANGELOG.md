@@ -1,17 +1,88 @@
 # Changelog
 
-Versions are tagged in git and archived on Zenodo. **A tag is a promise**: once Zenodo mints a DOI
-for it, that snapshot is permanent.
+## v2.0.0 -- 2026-09-25 (public release)
 
-The manuscript cites the **concept DOI** [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458), which always resolves to the
-newest version, so it does not go stale when a new one is released, and it states in the data
-availability section that the results correspond to **v1.5.0** specifically. Every version keeps its
-own DOI. The table below lists the DOIs minted so far; v1.1.3 onwards are minted at release time and
-their identifiers are added here when Zenodo returns them, so a version absent from the table is one
-not yet archived rather than one that does not exist:
+First public GitHub/Zenodo release of the complete Supplement S3 research package, archived under
+the existing concept DOI 10.5281/zenodo.22893458. It adds, at their original relative paths, the
+study records and analysis code for the 20,480-rollout native-task confirmation, the 768-rollout
+spoon operating-point comparison and 384 half-torque rollouts, the initial-state validation, the
+public-count reanalysis, and the policy-ranking audit component. All 17,609 S3 payload files are
+byte-identical to the distributed S3 archive (SHA-256 eb2813ae...1d772c); `release_s3/` holds the
+S3 README, manifests and notices, and `release_s3/verify_in_repo.py` re-checks them. A
+`.gitattributes` rule stores every file verbatim so the archive does not depend on line-ending
+settings. No experiment was re-run for this release; manuscript drafts and submission materials
+are not part of it. Entries below marked "unpublished" describe local work now included here.
+
+## RAS controlled experiments and confirmation -- 2026-09-24 (unpublished)
+
+Added 21,632 valid new rollouts: 20,480 in a separately specified native-task
+confirmation and 1,152 in state-verified spoon comparisons. The latter comprises
+768 operating-point episodes and 384 additional half-torque episodes sharing
+the nominal baseline. A failed reset-integrity attempt (163 completed episodes)
+is retained and excluded; historical policy contrasts are no longer attributed
+solely to controller interventions.
+
+The operating-point direction test gives unadjusted p=0.03515625; the half-torque
+test gives p=1. Holm-adjusted values are 0.0703125 and 1, so neither supports a
+joint declaration. Non-rejection of the torque contrast is not equivalence.
+The native confirmation establishes opposite PushCube rankings for ever-success
+and success at the evaluation horizon, using a fixed simultaneous family of
+20 comparisons on new scenes. PickCube retains the same ordering.
+
+Rewrote the English abstract, results, conclusion and submission materials around
+these results. Historical variance-model sensitivities and all outcomes remain
+available in S2. Classic inference rules and broad reporting principles are not
+claimed as novel. New source/record manifests support separate clean manuscript
+build and CPU analysis checks. Previously frozen English and Chinese files remain
+unchanged. No hardware validation, external submission, new DOI or public release
+is claimed.
+
+## RAS rewrite and evidence extension -- 2026-09-24 (unpublished review snapshot)
+
+Retargeted the English article to Robotics and Autonomous Systems using the official Elsevier
+template. The old journal manuscript and Chinese reading files remain unchanged. New evidence
+comprises public real-count/correlation sensitivity, 5,120 native ManiSkill episodes on two tasks,
+and an installable finite-census audit component. The native-task check retains its primary endpoint
+and reports the secondary success-at-any-time analysis; these definitions favour opposite pipelines
+on PushCube. It does not claim new hardware evidence or replication across physics engines.
+
+A direct replay-array audit corrects the range and metric behind the reported position differences:
+Euclidean maxima are 0.147/0.224 mm on the two stacks over common scales 0.5--2, and 0.567 mm on
+the original-stack 0.25--4 sweep. The halved-torque exceptions are 0.211 micrometres/0.0542 mm.
+The underlying pose arrays are unchanged; both stacks retain 97/98 byte-identical stored pose pairs.
+The previous coordinate-wise and Euclidean quantities must not be interchanged.
+
+References include three verified additions, version-specific SAPIEN pagination and a corrected
+serial-proceedings entry type. Five legitimate unpaginated-conference BibTeX warnings are documented.
+The exact manuscript/evidence snapshot is identified by submission/releases/README_FINAL.md and
+its manifests. No GitHub release, new DOI, email or journal submission has been made. The existing
+1.5.0-review marker continues to denote unpublished working materials, not a newly minted release.
+
+## Author-list update — 2026-09-23 (local review materials)
+
+At the authors' direction, added Yizhou Zhao immediately before Shengjie Guo, with
+Renmin University of China, yizhou-zhao@ruc.edu.cn and ORCID 0009-0004-7515-6322. His CRediT
+roles match Shengjie Guo's: Software, Writing – review & editing, as corrected by
+the authors' latest contribution statement. English and Chinese manuscripts, cover letter, interface declarations
+and local citation metadata are synchronized. Affiliation display now uniformly uses institution,
+city/region and country without postal codes; Renmin University of China is followed by Beijing,
+China. No department, campus or street address has been inferred. This does not modify previously published release metadata.
+
+
+This file records local development versions and published archives separately. A local version
+heading or Git tag is not evidence of public deposition. Once a Zenodo record is published, that
+version's archived files are persistent.
+
+The concept DOI [`10.5281/zenodo.22893458`](https://doi.org/10.5281/zenodo.22893458) identifies the
+public release family. Read-only GitHub, Zenodo and DOI-registry checks on 2026-09-23 confirm that
+**v1.1.3** is the latest public release. The current manuscript cites that history separately from
+the newer, locally frozen companion review package named in `submission/releases/README_FINAL.md`.
+The table below lists verified published version DOIs; versions absent from it are not claimed to
+be publicly archived.
 
 | Version | DOI |
 |---|---|
+| v1.1.3 | [`10.5281/zenodo.22896508`](https://doi.org/10.5281/zenodo.22896508) |
 | v1.1.2 | [`10.5281/zenodo.22896200`](https://doi.org/10.5281/zenodo.22896200) |
 | v1.1.1 | [`10.5281/zenodo.22896075`](https://doi.org/10.5281/zenodo.22896075) |
 | v1.1.0 | [`10.5281/zenodo.22895382`](https://doi.org/10.5281/zenodo.22895382) |
@@ -19,15 +90,30 @@ not yet archived rather than one that does not exist:
 
 The first four versions are one result released four times, and the reason is worth stating plainly: v1.0.0 and v1.1.0
 chased byte-exactness between the archive and the manuscript by re-tagging, which cannot converge —
-a version DOI is minted by the snapshot that contains the manuscript, so the DOI always lands one
-commit after the archive it names. v1.1.2 switched the citation to the concept DOI, which ends it.
+in the automatic GitHub-to-Zenodo workflow, the version DOI becomes available after the tagged
+snapshot is archived. This is a workflow limitation, not an intrinsic impossibility: manual Zenodo
+deposits support reserving a DOI before publication. v1.1.2 switched to the concept DOI.
 Nothing about the data changed across any of those four: `SHA256SUMS.txt` is byte-identical
 throughout. **That stops at v1.2.0**, the first release to add evaluation data, whose
 `SHA256SUMS.txt` differs from the earlier ones by 72 new record files; v1.4.0 and v1.5.0 added the
 operating-point censuses. From v1.2.0 on the versions are **not** interchangeable, and an earlier one
 will not reproduce a later table.
 
-## v1.5.0 -- 2026-09-23
+## Final reference and prose audit -- 2026-09-23 (local review snapshot)
+
+All 24 bibliography entries were checked against primary sources. Corrections include formal
+RSS versions of Octo, ManiSkill3 and PolaRiS; the OpenVLA and RT-1 author lists; verified missing
+DOIs; and the Ljung book's publication location. SAPIEN's optional page range is omitted because
+the CVF page and DOI metadata disagree. SIMPLER's published scores now cite SIMPLER, while RT-1
+is cited as a policy paper. The distinction between the empirical compatible rule and the
+model-confidence-set procedure is explicit. Earlier descriptions below are a historical log,
+not the current specification; in particular the current false-declaration bound is 0.025 for a
+prespecified direction and 0.05 for either direction, and both eggplant and spoon are complete.
+
+The English source and full Chinese reading translation are prepared together. Public GitHub and
+Zenodo contents were inspected but not changed; v1.1.3 remains the verified public release.
+
+## v1.5.0 -- 2026-09-23 (local development)
 
 A correctness release with no new data. Three defects found in review, two of them ours.
 

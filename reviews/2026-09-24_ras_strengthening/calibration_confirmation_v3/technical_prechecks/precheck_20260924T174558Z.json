@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-09-24T17:45:58Z",
+  "scope": "Completed-cell technical interfaces only; no outcome aggregation, directional assessment or inference",
+  "completed_cells_checked": 0,
+  "passed": true,
+  "checks": [],
+  "issues": [],
+  "unique_initial_state_hashes": 0,
+  "frequencies": [],
+  "frozen_analysis_unchanged": true,
+  "confirmatory_p_value_computed": false
+}

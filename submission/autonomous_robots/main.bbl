@@ -29,9 +29,11 @@ Agarwal, R.%
 \newblock
 {\BBOQ}\APACrefatitle {Deep reinforcement learning at the edge of the statistical precipice} {Deep reinforcement learning at the edge of the statistical precipice}.{\BBCQ}
 \newblock
- \APACrefbtitle {Advances in Neural Information Processing Systems (NeurIPS)} {Advances in neural information processing systems (neurips)}\ (\BVOL~34).
+ \APACrefbtitle {Advances in Neural Information Processing Systems} {Advances in neural information processing systems}\ (\BVOL~34, \BPGS\ 29304--29320).
 \newblock
-\APACrefnote{arXiv:2108.13264}
+\APACaddressPublisher{}{Curran Associates, Inc.}
+\newblock
+\begin{APACrefURL} \url{https://proceedings.neurips.cc/paper/2021/hash/f514cec81cb148559cf475e7426eed5e-Abstract.html} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -59,7 +61,9 @@ Atreya, P.%
 \newblock
 {\BBOQ}\APACrefatitle {{RoboArena}: Distributed real-world evaluation of generalist robot policies} {{RoboArena}: Distributed real-world evaluation of generalist robot policies}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the 9th Conference on Robot Learning (CoRL)} {Proceedings of the 9th conference on robot learning (corl)}\ (\BVOL~305, \BPGS\ 336--364).
+ \APACrefbtitle {Proceedings of the 9th Conference on Robot Learning ({CoRL})} {Proceedings of the 9th conference on robot learning ({CoRL})}\ (\BVOL~305, \BPGS\ 336--364).
+\newblock
+\begin{APACrefURL} \url{https://proceedings.mlr.press/v305/atreya25a.html} \end{APACrefURL}
 \newblock
 \APACrefnote{arXiv:2506.18123}
 \PrintBackRefs{\CurrentBib}
@@ -87,17 +91,11 @@ Badithela, A.%
 \newblock
 \APACrefYearMonthDay{2025}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Reliable and Scalable Robot Policy Evaluation with Imperfect Simulators} {Reliable and scalable robot policy evaluation with imperfect simulators}.{\BBCQ}
+\APACrefbtitle {Reliable and Scalable Robot Policy Evaluation with Imperfect Simulators.} {Reliable and scalable robot policy evaluation with imperfect simulators.}
 \newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2510.04354}{}{}{,}
+\APAChowpublished {arXiv preprint arXiv:2510.04354}.
 \newblock
-\begin{APACrefURL} {https://arxiv.org/abs/2510.04354} \end{APACrefURL}
-\newblock
-\APACrefnote{Preprint (SureSim); prediction-powered inference from a small set of paired real and simulated evaluations, giving finite-sample intervals for real performance}
-\newblock
-
-\newblock
-
+\begin{APACrefURL} \url{https://doi.org/10.48550/arXiv.2510.04354} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -122,7 +120,9 @@ Bellman, R.%
 \newblock
 {\BBOQ}\APACrefatitle {On structural identifiability} {On structural identifiability}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Mathematical Biosciences}{7}{}{329--339,}
+\APACjournalVolNumPages{Mathematical Biosciences}{7}{3--4}{329--339,}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/0025-5564(70)90132-X} \end{APACrefDOI}
 \newblock
 
 \newblock
@@ -146,7 +146,7 @@ Brohan, A.%
 , Chebotar, Y.%
 , Dabis, J.%
 , Finn, C.%
-\BDBL {}Leal, I.%
+\BDBL {}Zitkovich, B.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -154,9 +154,9 @@ Brohan, A.%
 \newblock
 {\BBOQ}\APACrefatitle {{RT-1}: Robotics transformer for real-world control at scale} {{RT-1}: Robotics transformer for real-world control at scale}.{\BBCQ}
 \newblock
- \APACrefbtitle {Robotics: Science and Systems (RSS).} {Robotics: Science and systems (rss).}
+ \APACrefbtitle {Proceedings of Robotics: Science and Systems.} {Proceedings of robotics: Science and systems.}
 \newblock
-\APACrefnote{arXiv:2212.06817. 46 authors in total; list truncated at 20 per journal policy}
+\begin{APACrefURL} \url{https://doi.org/10.15607/RSS.2023.XIX.025} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -180,13 +180,11 @@ Colas, C.%
 \newblock
 \APACrefYearMonthDay{2018}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {How many random seeds? Statistical power analysis in deep reinforcement learning experiments} {How many random seeds? statistical power analysis in deep reinforcement learning experiments}.{\BBCQ}
+\APACrefbtitle {How many random seeds? Statistical power analysis in deep reinforcement learning experiments.} {How many random seeds? statistical power analysis in deep reinforcement learning experiments.}
 \newblock
-\APACjournalVolNumPages{arXiv preprint}{arXiv:1806.08295}{}{,}
+\APAChowpublished {arXiv preprint arXiv:1806.08295}.
 \newblock
-
-\newblock
-
+\begin{APACrefURL} \url{https://doi.org/10.48550/arXiv.1806.08295} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -201,7 +199,7 @@ octo2024}
 octo2024}%
 \begin{APACrefauthors}%
 Ghosh, D.%
-, Walke, H.%
+, Walke, H.R.%
 , Pertsch, K.%
 , Black, K.%
 , Mees, O.%
@@ -214,11 +212,9 @@ Ghosh, D.%
 \newblock
 {\BBOQ}\APACrefatitle {{Octo}: An open-source generalist robot policy} {{Octo}: An open-source generalist robot policy}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{arXiv preprint}{arXiv:2405.12213}{}{,}
+ \APACrefbtitle {Proceedings of Robotics: Science and Systems.} {Proceedings of robotics: Science and systems.}
 \newblock
-
-\newblock
-
+\begin{APACrefURL} \url{https://doi.org/10.15607/RSS.2024.XX.090} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -246,7 +242,9 @@ Gu, J.%
 \newblock
 {\BBOQ}\APACrefatitle {{ManiSkill2}: A unified benchmark for generalizable manipulation skills} {{ManiSkill2}: A unified benchmark for generalizable manipulation skills}.{\BBCQ}
 \newblock
- \APACrefbtitle {International Conference on Learning Representations (ICLR).} {International conference on learning representations (iclr).}
+ \APACrefbtitle {International Conference on Learning Representations ({ICLR}).} {International conference on learning representations ({ICLR}).}
+\newblock
+\begin{APACrefURL} \url{https://openreview.net/forum?id=b_CQDy9vrD1} \end{APACrefURL}
 \newblock
 \APACrefnote{arXiv:2302.04659}
 \PrintBackRefs{\CurrentBib}
@@ -307,7 +305,9 @@ Henderson, P.%
 \newblock
 {\BBOQ}\APACrefatitle {Deep reinforcement learning that matters} {Deep reinforcement learning that matters}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the AAAI Conference on Artificial Intelligence} {Proceedings of the aaai conference on artificial intelligence}\ (\BVOL~32, \BPGS\ 3207--3214).
+ \APACrefbtitle {Proceedings of the {AAAI} Conference on Artificial Intelligence} {Proceedings of the {AAAI} conference on artificial intelligence}\ (\BVOL~32, \BPGS\ 3207--3214).
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1609/aaai.v32i1.11694} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -315,7 +315,7 @@ Jain%
 \ \protect \BOthers {.}}{%
 Jain%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2025}}%
+{\protect \APACyear {2026}}%
 }]{%
 polaris2025}
 \APACinsertmetastar {%
@@ -331,19 +331,13 @@ Jain, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2025}{}{}.
+\APACrefYearMonthDay{2026}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {{PolaRiS}: Scalable Real-to-Sim Evaluations for Generalist Robot Policies} {{PolaRiS}: Scalable real-to-sim evaluations for generalist robot policies}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2512.16881}{}{}{,}
+ \APACrefbtitle {Proceedings of Robotics: Science and Systems.} {Proceedings of robotics: Science and systems.}
 \newblock
-\begin{APACrefURL} {https://arxiv.org/abs/2512.16881} \end{APACrefURL}
-\newblock
-\APACrefnote{Preprint; a real-to-sim reconstruction and evaluation pipeline validated by empirical correlation with real evaluations, not a finite-sample interval method}
-\newblock
-
-\newblock
-
+\begin{APACrefURL} \url{https://doi.org/10.15607/RSS.2026.XXII.062} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -371,7 +365,9 @@ Kim, M.J.%
 \newblock
 {\BBOQ}\APACrefatitle {{OpenVLA}: An open-source vision-language-action model} {{OpenVLA}: An open-source vision-language-action model}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the 8th Conference on Robot Learning (CoRL)} {Proceedings of the 8th conference on robot learning (corl)}\ (\BVOL~270, \BPGS\ 2679--2713).
+ \APACrefbtitle {Proceedings of the 8th Conference on Robot Learning ({CoRL})} {Proceedings of the 8th conference on robot learning ({CoRL})}\ (\BVOL~270, \BPGS\ 2679--2713).
+\newblock
+\begin{APACrefURL} \url{https://proceedings.mlr.press/v270/kim25c.html} \end{APACrefURL}
 \newblock
 \APACrefnote{arXiv:2406.09246}
 \PrintBackRefs{\CurrentBib}
@@ -401,7 +397,9 @@ Li, X.%
 \newblock
 {\BBOQ}\APACrefatitle {Evaluating real-world robot manipulation policies in simulation} {Evaluating real-world robot manipulation policies in simulation}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the 8th Conference on Robot Learning (CoRL)} {Proceedings of the 8th conference on robot learning (corl)}\ (\BVOL~270).
+ \APACrefbtitle {Proceedings of the 8th Conference on Robot Learning ({CoRL})} {Proceedings of the 8th conference on robot learning ({CoRL})}\ (\BVOL~270, \BPGS\ 3705--3728).
+\newblock
+\begin{APACrefURL} \url{https://proceedings.mlr.press/v270/li25c.html} \end{APACrefURL}
 \newblock
 \APACrefnote{arXiv:2405.05941}
 \PrintBackRefs{\CurrentBib}
@@ -425,7 +423,9 @@ Ljung, L.%
 \newblock
 \APACrefbtitle {System Identification: Theory for the User} {System identification: Theory for the user}\ (\PrintOrdinal{2}\ \BEd).
 \newblock
-\APACaddressPublisher{Englewood Cliffs, NJ}{Prentice-Hall}.
+\APACaddressPublisher{Upper Saddle River, NJ}{Prentice Hall PTR}.
+\newblock
+\begin{APACrefURL} \url{https://rt.isy.liu.se/books/sysid/} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -447,7 +447,9 @@ Manski, C.F.%
 \newblock
 \APACrefbtitle {Partial Identification of Probability Distributions} {Partial identification of probability distributions}.
 \newblock
-\APACaddressPublisher{New York}{Springer}.
+\APACaddressPublisher{New York, NY}{Springer}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1007/b97478} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -475,7 +477,9 @@ Peng, X.B.%
 \newblock
 {\BBOQ}\APACrefatitle {Sim-to-real transfer of robotic control with dynamics randomization} {Sim-to-real transfer of robotic control with dynamics randomization}.{\BBCQ}
 \newblock
- \APACrefbtitle {IEEE International Conference on Robotics and Automation (ICRA)} {Ieee international conference on robotics and automation (icra)}\ (\BPGS\ 3803--3810).
+ \APACrefbtitle {2018 {IEEE} International Conference on Robotics and Automation ({ICRA})} {2018 {IEEE} international conference on robotics and automation ({ICRA})}\ (\BPGS\ 3803--3810).
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1109/ICRA.2018.8460528} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -507,6 +511,8 @@ Swevers, J.%
 \newblock
 \APACjournalVolNumPages{IEEE Transactions on Robotics and Automation}{13}{5}{730--740,}
 \newblock
+\begin{APACrefDOI} \doi{10.1109/70.631234} \end{APACrefDOI}
+\newblock
 
 \newblock
 
@@ -531,7 +537,7 @@ Tamer, E.%
 \newblock
 {\BBOQ}\APACrefatitle {Partial identification in econometrics} {Partial identification in econometrics}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Annual Review of Economics}{2}{}{167--195,}
+\APACjournalVolNumPages{Annual Review of Economics}{2}{1}{167--195,}
 \newblock
 \begin{APACrefDOI} \doi{10.1146/annurev.economics.050708.143401} \end{APACrefDOI}
 \newblock
@@ -545,7 +551,7 @@ Tao%
 \ \protect \BOthers {.}}{%
 Tao%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2024}}%
+{\protect \APACyear {2025}}%
 }]{%
 tao2024maniskill3}
 \APACinsertmetastar {%
@@ -561,15 +567,13 @@ Tao, S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2024}{}{}.
+\APACrefYearMonthDay{2025}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{ManiSkill3}: {GPU} parallelized robotics simulation and rendering for generalizable embodied {AI}} {{ManiSkill3}: {GPU} parallelized robotics simulation and rendering for generalizable embodied {AI}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Demonstrating {GPU} Parallelized Robot Simulation and Rendering for Generalizable Embodied {AI} with {ManiSkill3}} {Demonstrating {GPU} parallelized robot simulation and rendering for generalizable embodied {AI} with {ManiSkill3}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{arXiv preprint}{arXiv:2410.00425}{}{,}
+ \APACrefbtitle {Proceedings of Robotics: Science and Systems.} {Proceedings of robotics: Science and systems.}
 \newblock
-
-\newblock
-
+\begin{APACrefURL} \url{https://doi.org/10.15607/RSS.2025.XXI.021} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -596,7 +600,9 @@ Tobin, J.%
 \newblock
 {\BBOQ}\APACrefatitle {Domain randomization for transferring deep neural networks from simulation to the real world} {Domain randomization for transferring deep neural networks from simulation to the real world}.{\BBCQ}
 \newblock
- \APACrefbtitle {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)} {Ieee/rsj international conference on intelligent robots and systems (iros)}\ (\BPGS\ 23--30).
+ \APACrefbtitle {2017 {IEEE}/{RSJ} International Conference on Intelligent Robots and Systems ({IROS})} {2017 {IEEE}/{RSJ} international conference on intelligent robots and systems ({IROS})}\ (\BPGS\ 23--30).
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1109/IROS.2017.8202133} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -624,7 +630,9 @@ Walke, H.R.%
 \newblock
 {\BBOQ}\APACrefatitle {{BridgeData V2}: A dataset for robot learning at scale} {{BridgeData V2}: A dataset for robot learning at scale}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the 7th Conference on Robot Learning (CoRL)} {Proceedings of the 7th conference on robot learning (corl)}\ (\BVOL~229, \BPGS\ 1723--1736).
+ \APACrefbtitle {Proceedings of the 7th Conference on Robot Learning ({CoRL})} {Proceedings of the 7th conference on robot learning ({CoRL})}\ (\BVOL~229, \BPGS\ 1723--1736).
+\newblock
+\begin{APACrefURL} \url{https://proceedings.mlr.press/v229/walke23a.html} \end{APACrefURL}
 \newblock
 \APACrefnote{arXiv:2308.12952}
 \PrintBackRefs{\CurrentBib}
@@ -654,7 +662,9 @@ Xiang, F.%
 \newblock
 {\BBOQ}\APACrefatitle {{SAPIEN}: A {SimulAted} part-based interactive {ENvironment}} {{SAPIEN}: A {SimulAted} part-based interactive {ENvironment}}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).} {Proceedings of the ieee/cvf conference on computer vision and pattern recognition (cvpr).}
+ \APACrefbtitle {Proceedings of the {IEEE}/{CVF} Conference on Computer Vision and Pattern Recognition ({CVPR}).} {Proceedings of the {IEEE}/{CVF} conference on computer vision and pattern recognition ({CVPR}).}
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1109/CVPR42600.2020.01111} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -684,7 +694,9 @@ Zhou, Z.%
 \newblock
 {\BBOQ}\APACrefatitle {{AutoEval}: Autonomous evaluation of generalist robot manipulation policies in the real world} {{AutoEval}: Autonomous evaluation of generalist robot manipulation policies in the real world}.{\BBCQ}
 \newblock
- \APACrefbtitle {Proceedings of the 9th Conference on Robot Learning (CoRL)} {Proceedings of the 9th conference on robot learning (corl)}\ (\BVOL~305, \BPGS\ 1997--2017).
+ \APACrefbtitle {Proceedings of the 9th Conference on Robot Learning ({CoRL})} {Proceedings of the 9th conference on robot learning ({CoRL})}\ (\BVOL~305, \BPGS\ 1997--2017).
+\newblock
+\begin{APACrefURL} \url{https://proceedings.mlr.press/v305/zhou25a.html} \end{APACrefURL}
 \newblock
 \APACrefnote{arXiv:2503.24278}
 \PrintBackRefs{\CurrentBib}
@@ -711,17 +723,11 @@ Zhu, D.%
 \newblock
 \APACrefYearMonthDay{2026}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{SCAPE}: Scenario-Conditioned Simulation-Augmented Policy Evaluation} {{SCAPE}: Scenario-conditioned simulation-augmented policy evaluation}.{\BBCQ}
+\APACrefbtitle {{SCAPE}: Scenario-Conditioned Simulation-Augmented Policy Evaluation.} {{SCAPE}: Scenario-conditioned simulation-augmented policy evaluation.}
 \newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2608.19425}{}{}{,}
+\APAChowpublished {arXiv preprint arXiv:2608.19425}.
 \newblock
-\begin{APACrefURL} {https://arxiv.org/abs/2608.19425} \end{APACrefURL}
-\newblock
-\APACrefnote{Preprint; scenario-conditioned prediction with conformal calibration}
-\newblock
-
-\newblock
-
+\begin{APACrefURL} \url{https://doi.org/10.48550/arXiv.2608.19425} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

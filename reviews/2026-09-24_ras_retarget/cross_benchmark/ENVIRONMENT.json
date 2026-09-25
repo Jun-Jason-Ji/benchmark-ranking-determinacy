@@ -1,0 +1,54 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.16",
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "mani_skill": "3.0.1",
+    "sapien": "3.0.3",
+    "gymnasium": "1.3.0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 616.92",
+  "public_model_revision": "d674485bbffdd533914e52d272fdda34c0515608",
+  "source_files": {
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/tabletop/pick_cube.py": {
+      "bytes": 8685,
+      "sha256": "6f881f11151bd124a4ec6d1189e86e20b17d366aa1cbcc6e2f751f1f5bb03ed1"
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/tabletop/push_cube.py": {
+      "bytes": 12686,
+      "sha256": "8ae1536c13fae2fe8f5c84be0c60ff40a6acd625e738dfafc056ec333a16e0d8"
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": {
+      "bytes": 76011,
+      "sha256": "459196c275764eaf53ccba8e154e3207036399e54c8bdd45f9e7d0919970464b"
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/robots/panda/panda.py": {
+      "bytes": 10759,
+      "sha256": "2a98a2133b49e5a94a83d05019c0ab833ad6767f85ff1bf66265cd9247cb0fda"
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": {
+      "bytes": 11116,
+      "sha256": "ce05feb05c4370ec2be58c60465082dde15fd97e6398a187a648a5e932a4d58e"
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": {
+      "bytes": 13458,
+      "sha256": "318110fe18cb879eae00ca106f0117eed94679b79ee00ee226bacd38e4755f97"
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/utils/kinematics.py": {
+      "bytes": 12208,
+      "sha256": "9e83b6f5bf63c4f54a88a85bd4ba1a4dcf728bd88c154df92b9d9dfe3df14408"
+    },
+    "reviews/2026-09-24_ras_retarget/cross_benchmark/physx_runtime/PhysXGpu_64.dll": {
+      "bytes": 236846104,
+      "sha256": "f70b3179e71a40853bcc9c5b0e6d500d2c31b1b62cdd24b5888535b58b162ab1"
+    },
+    "reviews/2026-09-24_ras_retarget/cross_benchmark/physx_windows_dll.zip": {
+      "bytes": 78497522,
+      "sha256": "3951650caa3b77d2fe671ab1418db31f142c29daaa6e32e2520f90e8f7455baa"
+    }
+  },
+  "runtime_library_source": "https://github.com/sapien-sim/physx-precompiled/releases/tag/105.1-physx-5.3.1.patch0",
+  "process_local_activation": "ctypes load official PhysX GPU DLL then sapien.physx._enable_gpu(); no installed module patch"
+}

@@ -1,0 +1,22 @@
+{
+  "purpose": "technical smoke test only",
+  "backend": "cpu",
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "mani_skill": "3.0.1",
+    "sapien": "3.0.3",
+    "gymnasium": "1.3.0"
+  },
+  "torch_cuda": true,
+  "observation_shape": [
+    1,
+    42
+  ],
+  "action_shape": [
+    8
+  ],
+  "step_seconds": 0.09578204154968262,
+  "finite": true,
+  "status": "passed",
+  "elapsed_seconds": 14.198921918869019
+}

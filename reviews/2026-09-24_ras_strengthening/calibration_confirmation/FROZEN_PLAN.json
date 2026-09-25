@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-09-24T17:11:05Z",
+  "seeds": [
+    431700100,
+    557900200,
+    683100300,
+    809300400,
+    947500500,
+    1089700600,
+    1231900700,
+    1393100800
+  ],
+  "episodes": 768,
+  "files": {
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/PLAN.md": "976d0789d1f8fa35c8a7e5b44fbd21f3fadfbd709637ad66fccba00abf40a298",
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/execute_cell.py": "3a44327c6470069af6004b7de6506d9b21d4dbf42763eb17feefe0ab8c351926",
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/run_confirmation.py": "7f5b5b93d74aebfe2bec682b0f1f861337e4d1a736dead100e3bdd00d923b347",
+    "scripts/controller_sweep.py": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+    "scripts/octo_policy_server.py": "fc7ad4acd0c27f621d9a177f5162060ecc8d9e96d5d23b9328debb1f2325bde3",
+    "scripts/ms3_windows_compat.py": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194",
+    "scripts/task_configs.py": "b9faf4a97c094946bc55231b484540b03a856caf231ee085e50f5f28e0a42cc8"
+  },
+  "precollection_amendment": "PRECOLLECTION_AMENDMENT.md"
+}

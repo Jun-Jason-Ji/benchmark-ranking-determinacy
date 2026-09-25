@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-24T17:58:29Z",
+  "analyzer_sha256": "bbff2a5c2cbc1e3fd21b228e6fe3d0d45dc289223a845a28cff18a4e143b7463",
+  "tests_sha256": "c61d1afbf3f9ddf497f98aeeb10d97a724948ad38a389ac7df28f3b690b5aa47",
+  "hypothesis_freeze_sha256": "cd9058d957c12d22b04278c3fd0a27bce72857c67a518fa02869c884165e23f0",
+  "protocol_version": "SECONDARY-controlled-initialization-half-torque",
+  "secondary_test": "Two-sided majority-direction binomial test, all eight blocks retained; zeros match neither sign",
+  "joint_family": "Holm over original V3 one-sided p and secondary two-sided p; shared baseline explicitly retained"
+}

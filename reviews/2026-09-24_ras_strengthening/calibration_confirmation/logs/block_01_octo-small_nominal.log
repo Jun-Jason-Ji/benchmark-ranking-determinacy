@@ -1,0 +1,30 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+[33;1m2026-09-24 10:18:37,776 - mani_skill  - WARNING - Mimic targets dictionary is missing for controller config for widowx250s_bridgedataset_flat_table. Assuming the first joint is the control joint and the second joint is the mimic joint[0m
+[33;1m2026-09-24 10:18:37,966 - mani_skill  - WARNING - No initial pose set for actor builder of bridge_spoon_generated_modified, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[33;1m2026-09-24 10:18:37,982 - mani_skill  - WARNING - No initial pose set for actor builder of table_cloth_generated_shorter, setting to default pose q=[1,0,0,0], p=[0,0,0]. Not setting reasonable initial poses may slow down simulation, see https://github.com/haosulab/ManiSkill/issues/421.[0m
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 0 success=False steps=60 inf=8.1s sim=1.1s total=11.0s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 1 success=False steps=60 inf=5.0s sim=1.3s total=7.7s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 2 success=True steps=60 inf=4.8s sim=1.1s total=7.3s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 3 success=False steps=60 inf=4.9s sim=1.2s total=7.3s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 4 success=True steps=60 inf=4.7s sim=1.1s total=7.1s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 5 success=True steps=60 inf=4.7s sim=1.1s total=7.0s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 6 success=False steps=60 inf=4.8s sim=1.2s total=7.2s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 7 success=False steps=60 inf=5.0s sim=1.2s total=7.4s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 8 success=True steps=60 inf=5.1s sim=1.1s total=7.5s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 9 success=False steps=60 inf=4.8s sim=1.2s total=7.1s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 10 success=False steps=60 inf=4.9s sim=1.2s total=7.4s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 11 success=True steps=60 inf=4.7s sim=1.3s total=7.2s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 12 success=False steps=60 inf=5.0s sim=1.3s total=8.0s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 13 success=False steps=60 inf=4.9s sim=1.4s total=7.5s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 14 success=True steps=60 inf=4.8s sim=1.2s total=7.1s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 15 success=False steps=60 inf=4.7s sim=1.3s total=7.3s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 16 success=False steps=60 inf=4.9s sim=1.2s total=7.4s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 17 success=False steps=60 inf=4.7s sim=1.3s total=7.3s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 18 success=False steps=60 inf=4.7s sim=1.2s total=7.2s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 19 success=False steps=60 inf=4.6s sim=1.3s total=7.3s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 20 success=False steps=60 inf=4.9s sim=1.3s total=7.4s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 21 success=False steps=60 inf=5.0s sim=1.2s total=7.5s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 22 success=False steps=60 inf=5.3s sim=1.1s total=7.9s
+[octo-small|PutSpoonOnTableClothInScene-v1|nominal] ep 23 success=True steps=60 inf=4.8s sim=1.2s total=7.2s
+== nominal: 7/24 success

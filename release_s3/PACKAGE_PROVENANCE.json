@@ -1,0 +1,22 @@
+{
+  "title": "Curated reviewer research data and code",
+  "date": "2026-09-25",
+  "public_deposit": false,
+  "source_archives_sha256": {
+    "2026-09-24_companion_provenance_final.zip": "5ef6d49d78e0cbe7bcbe617e77b3e90abd4b621139983fb4a99b77fac4d44021",
+    "2026-09-25_ras_polished3_evidence.zip": "f29ddb257f06117b9a6908a12afbb19b09370241eb4625078ddaf1c44347d83e",
+    "2026-09-25_ras_polished_provenance_sources.zip": "313e87dc8ccd5768817387bd9ffc9e0527dd1c05d31d5e6bbd081a74ce636219"
+  },
+  "scientific_member_conflicts": [],
+  "identical_duplicate_members_merged": 93,
+  "dependency_manifest_checks": {
+    "reviews/2026-09-24_ras_strengthening/editorial/REPLAY_INITIALIZATION_INPUTS.json": 13081,
+    "reviews/2026-09-24_ras_strengthening/statistics/INPUT_MANIFEST.json": 261,
+    "reviews/2026-09-24_ras_strengthening/calibration_torque_control/EPISODE_LEVEL_COMPARISON.json": 32,
+    "reviews/2026-09-25_ras_final_review/FIG4_DESCRIPTIVE_PROVENANCE.json": 16
+  },
+  "selection": "Research inputs, code, results, scientific plans/provenance and licenses; internal editorial/submission/build documents omitted.",
+  "modified_scientific_members": [],
+  "private_credential_pattern_hits": 0,
+  "validation_scope": "Curation, source-byte identity, dependency hashes, archive integrity; no new experiments or blanket analysis rerun."
+}

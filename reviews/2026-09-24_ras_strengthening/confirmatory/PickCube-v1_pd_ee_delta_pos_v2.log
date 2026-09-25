@@ -1,0 +1,22 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+{"cell": "PickCube-v1_pd_ee_delta_pos_nominal_batch0.json", "seconds": 5.613697528839111, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_half_batch0.json", "seconds": 5.331419467926025, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_double_batch0.json", "seconds": 5.337126016616821, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_half_batch0.json", "seconds": 5.341346025466919, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_double_batch0.json", "seconds": 5.4338343143463135, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_nominal_batch1.json", "seconds": 5.289609432220459, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_half_batch1.json", "seconds": 5.33448338508606, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_double_batch1.json", "seconds": 5.349261045455933, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_half_batch1.json", "seconds": 5.321502923965454, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_double_batch1.json", "seconds": 5.387101888656616, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_nominal_batch2.json", "seconds": 5.397135257720947, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_half_batch2.json", "seconds": 5.329179763793945, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_double_batch2.json", "seconds": 5.345306634902954, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_half_batch2.json", "seconds": 5.256610155105591, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_double_batch2.json", "seconds": 5.394316673278809, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_nominal_batch3.json", "seconds": 5.423938274383545, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_half_batch3.json", "seconds": 5.4760260581970215, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_gain_double_batch3.json", "seconds": 5.393759727478027, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_half_batch3.json", "seconds": 5.365206003189087, "completed": true}
+{"cell": "PickCube-v1_pd_ee_delta_pos_force_double_batch3.json", "seconds": 5.388662099838257, "completed": true}

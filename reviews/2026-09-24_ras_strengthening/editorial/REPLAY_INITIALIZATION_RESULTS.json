@@ -1,0 +1,280 @@
+{
+  "scope": "Read-only source and stored-trajectory audit; no simulator or policy execution",
+  "scopes": {
+    "ms3_grid": {
+      "directory": "results/replay_sysid_100/grid",
+      "n_conditions": 50,
+      "n_demos": 98,
+      "trajectories_checked": 4900,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.026460579620347e-05,
+      "max_initial_position_error_m": 9.970330739150729e-05,
+      "equal_ratio_groups": 14,
+      "max_equal_ratio_euclidean_displacement_m": 0.00014687605036716456,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 7.168956516770408e-06,
+      "torque_checks": [],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-19T02:37:27Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms3_sweep": {
+      "directory": "results/replay_sysid_100/sweep_v1",
+      "n_conditions": 7,
+      "n_demos": 98,
+      "trajectories_checked": 686,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.026460579620347e-05,
+      "max_initial_position_error_m": 9.970330739150729e-05,
+      "equal_ratio_groups": 2,
+      "max_equal_ratio_euclidean_displacement_m": 0.00010096673339513699,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 7.168956516770408e-06,
+      "torque_checks": [
+        {
+          "conditions": [
+            "nominal",
+            "force_x0.5"
+          ],
+          "bitwise_position_and_quaternion_equal": 97,
+          "total": 98,
+          "residuals": [
+            {
+              "episode": 9,
+              "max_position_difference_m": 2.1073424255447017e-07
+            }
+          ]
+        }
+      ],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-19T02:19:43Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms3_fitted_ratio": {
+      "directory": "results/replay_sysid_100_fitted_ratio/iso_at_fitted",
+      "n_conditions": 5,
+      "n_demos": 98,
+      "trajectories_checked": 490,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.026460579620347e-05,
+      "max_initial_position_error_m": 9.970330739150729e-05,
+      "equal_ratio_groups": 1,
+      "max_equal_ratio_euclidean_displacement_m": 0.0009837689855889426,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 6.666608791339179e-06,
+      "torque_checks": [],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-23T06:04:12Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms2_grid": {
+      "directory": "results/replay_sysid_ms2/grid",
+      "n_conditions": 50,
+      "n_demos": 98,
+      "trajectories_checked": 4900,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.781151556009652e-06,
+      "max_initial_position_error_m": 7.783459834597182e-05,
+      "equal_ratio_groups": 14,
+      "max_equal_ratio_euclidean_displacement_m": 0.0002238983624643227,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 7.189831998058449e-06,
+      "torque_checks": [],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-19T10:25:08Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms2_sweep": {
+      "directory": "results/replay_sysid_ms2/sweep_v1",
+      "n_conditions": 7,
+      "n_demos": 98,
+      "trajectories_checked": 686,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.781151556009652e-06,
+      "max_initial_position_error_m": 7.783459834597182e-05,
+      "equal_ratio_groups": 2,
+      "max_equal_ratio_euclidean_displacement_m": 0.00015205588814667375,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 7.189831998058449e-06,
+      "torque_checks": [
+        {
+          "conditions": [
+            "nominal",
+            "force_x0.5"
+          ],
+          "bitwise_position_and_quaternion_equal": 97,
+          "total": 98,
+          "residuals": [
+            {
+              "episode": 9,
+              "max_position_difference_m": 5.4181146671622013e-05
+            }
+          ]
+        }
+      ],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-19T09:57:38Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms2_extended_scale": {
+      "directory": "results/replay_sysid_ms2/iso_ratio_v1",
+      "n_conditions": 5,
+      "n_demos": 98,
+      "trajectories_checked": 490,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.781151556009652e-06,
+      "max_initial_position_error_m": 7.783459834597182e-05,
+      "equal_ratio_groups": 1,
+      "max_equal_ratio_euclidean_displacement_m": 0.0005666346342574792,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 3.838495610544723e-06,
+      "torque_checks": [],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-19T10:12:40Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms2_fitted_ratio": {
+      "directory": "results/replay_sysid_ms2_fitted_ratio/iso_at_fitted",
+      "n_conditions": 4,
+      "n_demos": 98,
+      "trajectories_checked": 392,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.781151556009652e-06,
+      "max_initial_position_error_m": 7.783459834597182e-05,
+      "equal_ratio_groups": 1,
+      "max_equal_ratio_euclidean_displacement_m": 0.0009066883902752033,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 1.3724461816626288e-05,
+      "torque_checks": [],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-23T06:00:10Z",
+      "metadata_contains_executed_script_hash": false
+    },
+    "ms2_fitted_force": {
+      "directory": "results/replay_sysid_ms2_force_probe/fitted_force_probe",
+      "n_conditions": 4,
+      "n_demos": 98,
+      "trajectories_checked": 392,
+      "initial_ee_frame_mismatches": [],
+      "all_initialization_flags_valid": true,
+      "bad_initialization_records": [],
+      "min_initial_position_error_m": 5.781151556009652e-06,
+      "max_initial_position_error_m": 7.783459834597182e-05,
+      "equal_ratio_groups": 0,
+      "max_equal_ratio_euclidean_displacement_m": 0.0,
+      "max_mean_composite_loss_change_within_equal_ratio_group": 0.0,
+      "torque_checks": [
+        {
+          "conditions": [
+            "nominal",
+            "nominal_force0.5"
+          ],
+          "bitwise_position_and_quaternion_equal": 97,
+          "total": 98,
+          "residuals": [
+            {
+              "episode": 9,
+              "max_position_difference_m": 5.4181146671622013e-05
+            }
+          ]
+        },
+        {
+          "conditions": [
+            "s2_d0.5_delay1",
+            "s2_d0.5_delay1_force0.5"
+          ],
+          "bitwise_position_and_quaternion_equal": 96,
+          "total": 98,
+          "residuals": [
+            {
+              "episode": 9,
+              "max_position_difference_m": 8.605219195639111e-05
+            },
+            {
+              "episode": 65,
+              "max_position_difference_m": 1.2244593433859053e-06
+            }
+          ]
+        }
+      ],
+      "recorded_array_fields": [
+        "sim_p",
+        "sim_q",
+        "gt_p",
+        "gt_q",
+        "transl_err",
+        "rot_err"
+      ],
+      "recorded_full_initial_joint_or_contact_state": false,
+      "started_utc": "2026-09-23T07:05:45Z",
+      "metadata_contains_executed_script_hash": false
+    }
+  },
+  "within_stack_across_scope_initial_frame_mismatches": [],
+  "total_trajectory_files": 12936,
+  "script_sha256": "8245056935bff66a47f6ba379960fb8768d4bf3e783e7dd72add08299d6e52be",
+  "input_file_count": 13081
+}

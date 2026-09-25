@@ -1,0 +1,8 @@
+{
+  "python": "3.11.16 (main, Aug 14 2026, 15:34:35) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "1.26.4",
+  "scipy": "1.12.0",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "scope": "CPU analysis runtime; distinct from the recorded simulator and policy-server runtimes",
+  "numeric_comparison": "Independent SciPy 1.17.1 t-quantile check differs by about 3e-11; archived-input SHA verifies integrity, recomputation uses numerical tolerance."
+}

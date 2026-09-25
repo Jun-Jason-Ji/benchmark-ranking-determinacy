@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-24T17:39:45Z",
+  "analyzer_sha256": "10f654193fdb1809f1bab0e872ea77e3eac5c36c8c2bcd73c58605c03e31a7fb",
+  "tests_sha256": "9fb69e03dd1658685be349cab6c49ac555969fd2bb8510cb34d3cb775551004f",
+  "plan_sha256": "1afcd0898d52321d8aac2d35eec6eb475bd10db9653b270600b7ce1b752688b3",
+  "protocol_version": "V3-controlled-initialization",
+  "primary": "Eight complete seed blocks; exact one-sided binomial/sign test; zeros nonnegative",
+  "secondary": "Block-t working model and bounded-mean interval on [-2,2]"
+}

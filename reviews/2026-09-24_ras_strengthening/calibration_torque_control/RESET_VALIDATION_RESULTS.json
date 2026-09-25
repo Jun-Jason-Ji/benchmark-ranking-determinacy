@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "cases": 48,
+  "configurations": 24,
+  "conditions": [
+    "nominal",
+    "forcehalf"
+  ],
+  "exact_prior_full_state_and_rgb": true,
+  "unchanged_gripper_contact_mass": true,
+  "actual_physical_and_config_parameters_verified": true,
+  "no_policy_calls": true,
+  "no_success_fields_read": true,
+  "compatibility": {
+    "ik": "upstream_torch_jacobian_solver_on_cpu",
+    "pci_parser": "preserve_full_pci_address",
+    "benchmark_equivalent": false
+  },
+  "versions": {
+    "mani_skill": "3.0.1",
+    "sapien": "3.0.3",
+    "torch": "2.7.1+cu128",
+    "gymnasium": "1.3.0",
+    "numpy": "1.26.4"
+  },
+  "render_device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "total_seconds": 18.653829300019424,
+  "initialization_seconds": {
+    "mean": 0.21080411041960664,
+    "median": 0.18980619998183101,
+    "maximum": 1.1950666999910027
+  },
+  "records_sha256": "4f6033120579910c02a7757fe9c7e543479581b2ee94e90aa82b4bf1473f87ff",
+  "prior_canonical_sha256": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452",
+  "frozen_protocol_sha256": "e9a4c19c093a6a5c68e4c3d8f4cac8915f103e808e1b5293f0df0c3d536e727f"
+}

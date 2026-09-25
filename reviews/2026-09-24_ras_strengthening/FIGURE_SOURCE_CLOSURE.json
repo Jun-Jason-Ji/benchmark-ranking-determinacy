@@ -1,0 +1,22 @@
+{
+  "scripts/make_figures.py": {
+    "in_baseline": true,
+    "matches_baseline": true
+  },
+  "scripts/make_figures_v2.py": {
+    "in_baseline": true,
+    "matches_baseline": true
+  },
+  "scripts/paper_labels.py": {
+    "in_baseline": true,
+    "matches_baseline": true
+  },
+  "scripts/make_core_table.py": {
+    "in_baseline": true,
+    "matches_baseline": true
+  },
+  "scripts/task_configs.py": {
+    "in_baseline": true,
+    "matches_baseline": true
+  }
+}

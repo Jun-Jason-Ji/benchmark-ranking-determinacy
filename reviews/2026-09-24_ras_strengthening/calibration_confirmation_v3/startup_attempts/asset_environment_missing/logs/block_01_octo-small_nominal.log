@@ -1,0 +1,31 @@
+E:\research\the_world\.venv-windows-ms3\Lib\site-packages\sapien\wrapper\pinocchio_model.py:299: UserWarning: pinnochio package is not installed, robotics functionalities will not be available
+  warnings.warn(
+Could not find asset bridge_v2_real2sim at C:\Users\Jason\.maniskill\data\tasks\bridge_v2_real2sim_dataset
+
+-------------------------
+Environment PutSpoonOnTableClothInScene-v1 requires asset(s) bridge_v2_real2sim which could not be found. Would you like to download them now?
+(y|n): Traceback (most recent call last):
+  File "E:\research\the_world\reviews\2026-09-24_ras_strengthening\calibration_confirmation_v3\execute_cell.py", line 138, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "E:\research\the_world\reviews\2026-09-24_ras_strengthening\calibration_confirmation_v3\execute_cell.py", line 75, in main
+    with fresh_reset_episode(env_id,ep,condition,render_backend)as(env,obs,initial):
+  File "E:\research\the_world\.runtime\python-win\cpython-3.11-windows-x86_64-none\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "E:\research\the_world\reviews\2026-09-24_ras_strengthening\calibration_reset_validation\fresh_reset.py", line 58, in fresh_reset_episode
+    env=gym.make(env_id,obs_mode='rgb+segmentation',num_envs=1,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\gymnasium\envs\registration.py", line 735, in make
+    env = env_creator(**env_spec_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\utils\registration.py", line 182, in make
+    env = env_spec.make(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\utils\registration.py", line 70, in make
+    response = download_asset.prompt_yes_no(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\research\the_world\.venv-windows-ms3\Lib\site-packages\mani_skill\utils\download_asset.py", line 28, in prompt_yes_no
+    answer = input("(y|n): ")
+             ^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line

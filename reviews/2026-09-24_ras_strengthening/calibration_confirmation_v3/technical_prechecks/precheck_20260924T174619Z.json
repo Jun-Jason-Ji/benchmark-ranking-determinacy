@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-09-24T17:46:19Z",
+  "scope": "Completed-cell technical interfaces only; no outcome aggregation, directional assessment or inference",
+  "completed_cells_checked": 2,
+  "passed": true,
+  "checks": [
+    {
+      "cell": "block_01/octo-base/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    },
+    {
+      "cell": "block_01/octo-small/nominal",
+      "rows": 24,
+      "source_and_metadata_gate": true,
+      "built_parameters_gate": true,
+      "session_reseed_gate": true,
+      "initial_state_image_pairing_gate": true,
+      "sessions": 1,
+      "summary_path": "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json"
+    }
+  ],
+  "issues": [],
+  "unique_initial_state_hashes": 24,
+  "frequencies": [
+    [
+      5,
+      500
+    ]
+  ],
+  "frozen_analysis_unchanged": true,
+  "confirmatory_p_value_computed": false
+}

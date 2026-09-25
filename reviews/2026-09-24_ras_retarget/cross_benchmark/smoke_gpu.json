@@ -1,0 +1,23 @@
+{
+  "purpose": "technical smoke test only",
+  "backend": "gpu",
+  "gpu_library_location": "audit-directory-only; official unchanged library",
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "mani_skill": "3.0.1",
+    "sapien": "3.0.3",
+    "gymnasium": "1.3.0"
+  },
+  "torch_cuda": true,
+  "observation_shape": [
+    1,
+    42
+  ],
+  "action_shape": [
+    8
+  ],
+  "step_seconds": 0.9299933910369873,
+  "finite": true,
+  "status": "passed",
+  "elapsed_seconds": 41.59085297584534
+}

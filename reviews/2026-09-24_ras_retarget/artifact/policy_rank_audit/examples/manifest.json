@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "build": "synthetic-demo-build-1",
+    "estimand": "equal_configuration_mean_success_difference",
+    "replicate_unit": "complete_independent_census_run",
+    "independent_runs": true,
+    "independent_policy_evaluations": true,
+    "description": "Illustrative binary outcomes only. Not robot experiments or evidence of real-world coverage."
+  },
+  "tasks": {
+    "synthetic_pick": {
+      "policies": ["A", "B", "C"],
+      "conditions": ["nominal", "stress"],
+      "configurations": ["c0", "c1", "c2", "c3", "c4", "c5"],
+      "replicates": ["run0", "run1", "run2", "run3"]
+    }
+  }
+}

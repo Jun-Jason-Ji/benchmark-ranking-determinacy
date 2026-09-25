@@ -1,0 +1,4833 @@
+{
+  "status": "complete",
+  "raw_rollouts": 768,
+  "n_independent_blocks_assumed": 8,
+  "configurations_per_block": 24,
+  "primary": {
+    "target": "P(D_block < 0) under independent identically sampled seed blocks",
+    "null": "P(D_block < 0) <= 0.5",
+    "alternative": "P(D_block < 0) > 0.5",
+    "negative_blocks": 7,
+    "nonnegative_blocks": 1,
+    "zero_blocks": 0,
+    "n_blocks": 8,
+    "one_sided_exact_binomial_p": 0.03515625,
+    "one_sided_exact_95_lower_bound": 0.5293205913988683,
+    "reject_at_005": true,
+    "zero_rule": "Zeros count as nonnegative; no observations are discarded"
+  },
+  "secondary": {
+    "t_working_model": {
+      "target": "Mean block shift E[D_block]",
+      "mean": -0.15104166666666669,
+      "sd": 0.1442301332912313,
+      "se": 0.05099305265083463,
+      "df": 7,
+      "scope": "Secondary Student-t working model for independent approximately normal block differences",
+      "interval_available": true,
+      "lower": -0.2716210755978753,
+      "upper": -0.03046225773545809
+    },
+    "bounded_mean": {
+      "target": "Mean block shift E[D_block]",
+      "mean": -0.15104166666666669,
+      "block_range": [
+        -2,
+        2
+      ],
+      "radius": 1.9206455826398414,
+      "lower": -2.0,
+      "upper": 1.7696039159731747,
+      "scope": "Secondary Hoeffding 95% interval; independent blocks, no Gaussian or within-block independence assumption"
+    }
+  },
+  "blocks": [
+    {
+      "block": 1,
+      "seed_base": 431700100,
+      "success_totals": {
+        "octo-small_nominal": 8,
+        "octo-small_fitted": 5,
+        "octo-base_nominal": 2,
+        "octo-base_fitted": 5
+      },
+      "denominator": 24,
+      "nominal_gap": 0.25,
+      "fitted_gap": 0.0,
+      "shift_numerator": -6,
+      "shift": -0.25
+    },
+    {
+      "block": 2,
+      "seed_base": 557900200,
+      "success_totals": {
+        "octo-small_nominal": 11,
+        "octo-small_fitted": 4,
+        "octo-base_nominal": 2,
+        "octo-base_fitted": 4
+      },
+      "denominator": 24,
+      "nominal_gap": 0.375,
+      "fitted_gap": 0.0,
+      "shift_numerator": -9,
+      "shift": -0.375
+    },
+    {
+      "block": 3,
+      "seed_base": 683100300,
+      "success_totals": {
+        "octo-small_nominal": 5,
+        "octo-small_fitted": 6,
+        "octo-base_nominal": 0,
+        "octo-base_fitted": 4
+      },
+      "denominator": 24,
+      "nominal_gap": 0.20833333333333334,
+      "fitted_gap": 0.08333333333333333,
+      "shift_numerator": -3,
+      "shift": -0.125
+    },
+    {
+      "block": 4,
+      "seed_base": 809300400,
+      "success_totals": {
+        "octo-small_nominal": 14,
+        "octo-small_fitted": 11,
+        "octo-base_nominal": 3,
+        "octo-base_fitted": 3
+      },
+      "denominator": 24,
+      "nominal_gap": 0.4583333333333333,
+      "fitted_gap": 0.3333333333333333,
+      "shift_numerator": -3,
+      "shift": -0.125
+    },
+    {
+      "block": 5,
+      "seed_base": 947500500,
+      "success_totals": {
+        "octo-small_nominal": 10,
+        "octo-small_fitted": 9,
+        "octo-base_nominal": 1,
+        "octo-base_fitted": 2
+      },
+      "denominator": 24,
+      "nominal_gap": 0.375,
+      "fitted_gap": 0.2916666666666667,
+      "shift_numerator": -2,
+      "shift": -0.08333333333333333
+    },
+    {
+      "block": 6,
+      "seed_base": 1089700600,
+      "success_totals": {
+        "octo-small_nominal": 7,
+        "octo-small_fitted": 7,
+        "octo-base_nominal": 0,
+        "octo-base_fitted": 4
+      },
+      "denominator": 24,
+      "nominal_gap": 0.2916666666666667,
+      "fitted_gap": 0.125,
+      "shift_numerator": -4,
+      "shift": -0.16666666666666666
+    },
+    {
+      "block": 7,
+      "seed_base": 1231900700,
+      "success_totals": {
+        "octo-small_nominal": 7,
+        "octo-small_fitted": 10,
+        "octo-base_nominal": 2,
+        "octo-base_fitted": 2
+      },
+      "denominator": 24,
+      "nominal_gap": 0.20833333333333334,
+      "fitted_gap": 0.3333333333333333,
+      "shift_numerator": 3,
+      "shift": 0.125
+    },
+    {
+      "block": 8,
+      "seed_base": 1393100800,
+      "success_totals": {
+        "octo-small_nominal": 9,
+        "octo-small_fitted": 6,
+        "octo-base_nominal": 1,
+        "octo-base_fitted": 3
+      },
+      "denominator": 24,
+      "nominal_gap": 0.3333333333333333,
+      "fitted_gap": 0.125,
+      "shift_numerator": -5,
+      "shift": -0.20833333333333334
+    }
+  ],
+  "cells": [
+    {
+      "block": 1,
+      "seed_base": 431700100,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 8,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 1,
+      "seed_base": 431700100,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 5,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 1,
+      "seed_base": 431700100,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 2,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 1,
+      "seed_base": 431700100,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 5,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 2,
+      "seed_base": 557900200,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 11,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 2,
+      "seed_base": 557900200,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 4,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 2,
+      "seed_base": 557900200,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 2,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 2,
+      "seed_base": 557900200,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 4,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 3,
+      "seed_base": 683100300,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 5,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 3,
+      "seed_base": 683100300,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 6,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 3,
+      "seed_base": 683100300,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 0,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 3,
+      "seed_base": 683100300,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 4,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 4,
+      "seed_base": 809300400,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 14,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 4,
+      "seed_base": 809300400,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 11,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 4,
+      "seed_base": 809300400,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 3,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 4,
+      "seed_base": 809300400,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 3,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 5,
+      "seed_base": 947500500,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 10,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 5,
+      "seed_base": 947500500,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 9,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 5,
+      "seed_base": 947500500,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 1,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 5,
+      "seed_base": 947500500,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 2,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 6,
+      "seed_base": 1089700600,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 7,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 6,
+      "seed_base": 1089700600,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 7,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 6,
+      "seed_base": 1089700600,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 0,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 6,
+      "seed_base": 1089700600,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 4,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 7,
+      "seed_base": 1231900700,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 7,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 7,
+      "seed_base": 1231900700,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 10,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 7,
+      "seed_base": 1231900700,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 2,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 7,
+      "seed_base": 1231900700,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 2,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 8,
+      "seed_base": 1393100800,
+      "policy": "octo-small",
+      "condition": "nominal",
+      "successes": 9,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 8,
+      "seed_base": 1393100800,
+      "policy": "octo-small",
+      "condition": "fitted",
+      "successes": 6,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 8,
+      "seed_base": 1393100800,
+      "policy": "octo-base",
+      "condition": "nominal",
+      "successes": 1,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "arm_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          1169.7891719504198,
+          730.0,
+          808.4601346394447,
+          1229.1299089624076,
+          1272.2760456418862,
+          1056.3326605132252
+        ],
+        "built_damping": [
+          330.0,
+          180.0,
+          152.12036565582588,
+          309.6215302722146,
+          201.04998711007383,
+          269.51458932695414
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 0,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            1169.7891845703125,
+            730.0,
+            808.4601440429688,
+            1229.1298828125,
+            1272.2760009765625,
+            1056.3326416015625
+          ],
+          "damping": [
+            330.0,
+            180.0,
+            152.120361328125,
+            309.62152099609375,
+            201.04998779296875,
+            269.51458740234375
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    },
+    {
+      "block": 8,
+      "seed_base": 1393100800,
+      "policy": "octo-base",
+      "condition": "fitted",
+      "successes": 3,
+      "n": 24,
+      "built_parameters": {
+        "arm_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "arm_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "arm_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "built_stiffness": [
+          2339.5783439008396,
+          1460.0,
+          1616.9202692788895,
+          2458.2598179248153,
+          2544.5520912837724,
+          2112.6653210264503
+        ],
+        "built_damping": [
+          165.0,
+          90.0,
+          76.06018282791294,
+          154.8107651361073,
+          100.52499355503691,
+          134.75729466347707
+        ],
+        "built_force_limit": [
+          200.0,
+          200.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "gripper_force_limit": 60,
+        "delay_steps": 1,
+        "obj_friction": 0.5,
+        "density_scale": 1.0,
+        "control_freq": 5,
+        "sim_freq": 500,
+        "horizon": 60,
+        "actual_joints": {
+          "stiffness": [
+            2339.578369140625,
+            1460.0,
+            1616.9202880859375,
+            2458.259765625,
+            2544.552001953125,
+            2112.665283203125
+          ],
+          "damping": [
+            165.0,
+            90.0,
+            76.0601806640625,
+            154.81076049804688,
+            100.52499389648438,
+            134.75729370117188
+          ],
+          "force_limit": [
+            200.0,
+            200.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "friction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "initialization_protocol": "fresh_nominal_settled_then_condition"
+      },
+      "configuration_state_digests": {
+        "0": "95419081ca7e70814ac1cc3a4b66b5912932bb70edb3dfabc8cb002b52d370e3",
+        "1": "3f17b9f58e3b3de265b66f18ea317be93799f92b19771fb69913765b42c680d6",
+        "2": "a6167a61b7d042d51b79693ffab0232465999471a89771de5fc7bd6283cec34a",
+        "3": "00d43a69fdb62c27a0c7a982a6414e3e5c31e261eb9e931136585d13b9b39e17",
+        "4": "4930ee49e0ed427d6531e934796170685fc242aeaf4a131f3ca37873799daee3",
+        "5": "7d6624d7b58f339b1da4df1ed6dde4249c071a6e489ff218b96a86017556d950",
+        "6": "9d7d84165463abb83ff9460784a24cd0f7675813ffc9c78b00e65cc4d05a77f6",
+        "7": "2f31c6b080a1a25269631d39c392b4bc7fd69f4572c3a22676b9f360c7be4ef6",
+        "8": "7588773db4094ae935bfdfcb74f0428a844eb7d7e572501ad51b3b701684e993",
+        "9": "6eeae5b836d5514d637b57915512a2f3b8b6b199fc9096b07df16a89231ba7ad",
+        "10": "c075bbe358419e817d2689b9d7fd8b5a061d5de7254a8faf74ab7b749225803f",
+        "11": "372bfab5e6d1973641e5d7e60adc9323eaba316fe5017912d2a43fe8409b26e1",
+        "12": "c6982eb373d784e37a0fcdc7208d603fe0261818c768b4c7f0e09ad43c7b5d6e",
+        "13": "c401a6b24de5faac5e93ea92f3a8733cc0afd805cb9cfc009b2c34dcf4bacaba",
+        "14": "9d5b95ce39b093a5d0b4a60cbd0afb7c75c69d08851cbaa8e52b95bd66605c8d",
+        "15": "ff312722cd0b66902f46387f8d8ea5a8985ef816d54f7752d3a17d8a4e21328d",
+        "16": "ffc5c2c5f48bd9d9855bd9bd3a0cfca9106c7165c41083ed8fe6b12af0bf1415",
+        "17": "855db44ca81040419d92a2d4d933f365a3aba71c941991415199b7b0e14c8ef3",
+        "18": "b35eee7b6470cd1908d4a4575d36d9bf9464de14fa818845a5738e8ca3d9fe98",
+        "19": "25fda0fc6a79e9882047c62d6b52780101ccdacf4a62f31627c3bd8290570ad3",
+        "20": "405434d8b54d9865c858324a9c40e7a921c983f70b3f25f1476336c5048f8d10",
+        "21": "4c7e866764f29f6e233af3e2e0bd5bc1858a3fafb5c2fe73ca1fa5f57e3d298d",
+        "22": "3b354446cfdae4e7925575e9b280d17f4b4c591dc531faff687c8995991c178d",
+        "23": "b0cac542ec226b4be891e38d1a92922755b3da87e71111f0c4b2acfd42c0e640"
+      }
+    }
+  ],
+  "integrity": {
+    "all_32_cells_complete": true,
+    "all_24_initial_states_and_images_match_across_policies_settings_blocks": true,
+    "all_built_parameters_checked": true,
+    "all_policy_resets_verified": true,
+    "server_metadata_stable": true
+  },
+  "scope": "V3 controlled initialization after exclusion of a technical attempt with unmatched initial states. Independent identically sampled policy-seed blocks are assumed; within-block dependence is unrestricted. Fixed finite scene population, fixed pipelines/build, final-success horizon 60.",
+  "exclusions": "Not a test of E[D]=0; not a six-setting envelope confirmation, real-world or cross-engine validation. This tests the direction under a repaired initialization protocol, not causal isolation of the historical protocol contrast.",
+  "input_sha256": {
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/FROZEN_ANALYSIS.json": {
+      "sha256": "5a929d5283cbce23c974747d50f033dd380abb2d6953a045ff0fe516edfb3209",
+      "bytes": 541
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/FROZEN_PLAN.json": {
+      "sha256": "abd02682f155a95f2e0c07079dc8e9bc747be3a00f6efdbc9d8b7a75e7a6c246",
+      "bytes": 4483
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/PLAN.md": {
+      "sha256": "1afcd0898d52321d8aac2d35eec6eb475bd10db9653b270600b7ce1b752688b3",
+      "bytes": 6633
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/execute_cell.py": {
+      "sha256": "0a289af12b33dc2f45f509123c9898bc402324b2181b994bfc9cc2f43a5b9980",
+      "bytes": 9938
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/run_confirmation.py": {
+      "sha256": "52209e9b517b59a6127b125ed2a9724bf26e22b10efca837c9354f48470fc380",
+      "bytes": 7756
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/analyze_confirmation.py": {
+      "sha256": "10f654193fdb1809f1bab0e872ea77e3eac5c36c8c2bcd73c58605c03e31a7fb",
+      "bytes": 16759
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/test_analysis.py": {
+      "sha256": "9fb69e03dd1658685be349cab6c49ac555969fd2bb8510cb34d3cb775551004f",
+      "bytes": 2189
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/RESULTS.json": {
+      "sha256": "2b41abf4a8976b07528a5162f6332148f17be97442c5cb9c33344e82c23e5bc1",
+      "bytes": 1022
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/reset_records.jsonl": {
+      "sha256": "4e14f98ceb914579703776d1f967b45112f95a83973e5c450c68b25a3e681452",
+      "bytes": 302001
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/FROZEN_TECHNICAL_PROTOCOL.json": {
+      "sha256": "72511fe2f9b73b462cc28a500f3a5fc314386a8370132fb269d81e05df8d898e",
+      "bytes": 2137
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/V2_UNAVAILABLE_INVENTORY.json": {
+      "sha256": "338e399e86efcb6a3b291199da2d7d0bc8062eda2169e6d8388047bf8d24d6b5",
+      "bytes": 14736
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/PLAN.md": {
+      "sha256": "20eb0d7bc03cfa39dd2f8124d9fa4ff3f59b77e864a5cfb7087a5f7b763625c5",
+      "bytes": 2367
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/fresh_reset.py": {
+      "sha256": "eaf31d93d9ab7486b9b88ab0c486b4407d5878b01df9e9e7967c895a98a35fa1",
+      "bytes": 5063
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_reset_validation/validate_fresh_reset.py": {
+      "sha256": "98931354439fb793f1135735fd3458ee19c6a81bd2bd53100b95f7a04b5b8e29",
+      "bytes": 4313
+    },
+    "scripts/controller_sweep.py": {
+      "sha256": "e91a593186e5777c0dc8044076ab04f622e2a3908339df8fa49d5e90ae719f2c",
+      "bytes": 23779
+    },
+    "scripts/ms3_windows_compat.py": {
+      "sha256": "a66f1b43eed32814cad7eb2c924b01874c10471c490db1881e484a10be36e194",
+      "bytes": 1152
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.md": {
+      "sha256": "62c30d31d1f91563f144c742dfbcfdebc7483276d31f6fc7fabbf0cee824ca46",
+      "bytes": 4207
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation/INITIAL_STATE_FAILURE.json": {
+      "sha256": "3e1cb60e295302a5e2a3f3e6916325fa0812b4996d71403fa7b3e094194ef486",
+      "bytes": 40474
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/sapien_env.py": {
+      "sha256": "459196c275764eaf53ccba8e154e3207036399e54c8bdd45f9e7d0919970464b",
+      "bytes": 76011
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/base_agent.py": {
+      "sha256": "64b0c9f45577ef842ae41449af36529e476ad68d26e726de5c9d858496f8824d",
+      "bytes": 18704
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_joint_pos.py": {
+      "sha256": "ce05feb05c4370ec2be58c60465082dde15fd97e6398a187a648a5e932a4d58e",
+      "bytes": 11116
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/agents/controllers/pd_ee_pose.py": {
+      "sha256": "318110fe18cb879eae00ca106f0117eed94679b79ee00ee226bacd38e4755f97",
+      "bytes": 13458
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py": {
+      "sha256": "00e8395e1e171f8032ae25021d561f59c79aa013620fc72a74cfe1814ea784ed",
+      "bytes": 22627
+    },
+    ".venv-windows-ms3/Lib/site-packages/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py": {
+      "sha256": "9032845fe7b51eae6466206cf717c4cd4da38f1df97875ab8800181497016e01",
+      "bytes": 9419
+    },
+    "scripts/octo_policy_server.py": {
+      "sha256": "fc7ad4acd0c27f621d9a177f5162060ecc8d9e96d5d23b9328debb1f2325bde3",
+      "bytes": 17930
+    },
+    "scripts/task_configs.py": {
+      "sha256": "b9faf4a97c094946bc55231b484540b03a856caf231ee085e50f5f28e0a42cc8",
+      "bytes": 3483
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/COMPLETE.json": {
+      "sha256": "96f3cf6cba5c742294b80faf3959973807ae2d6e93d8990df6e7e0a148900f18",
+      "bytes": 1846
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "095d026a5387b4fb2b637ce1c8a65ee98e0774fcd5646a285f56fa05cc253386",
+      "bytes": 13421
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "f2f8558c998cee436e0a0aff60fa753a60572929aab8859e87cd08d464f9c716",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "8604e3a6a6b6d2d9f55b44b95215daf0e72aee0b3ffd722a834ccb518163a50a",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "26edea222a0607e76df56fc53443962ecb7151c775d33bdb8484323595b61390",
+      "bytes": 81923
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "8d4ff0444fabb67094890b77cbb55a9ccf891421c63916b499186e129c4906f8",
+      "bytes": 13419
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "01b6ec16c5e609c204c87797c616e691a6f131afd0d9df90e12dad5ed7bfc254",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "c8f8b8fcf16fb92dfdadf478e5e7d4533ebfa0035937f2d777bce7f93f1ea5d7",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "ce86536682f88c7f44cf898ab846e87911e61b8596a6a6828e0bc06a399b448b",
+      "bytes": 80781
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "efad541b33f870c5a97d5db135f081bc7a8f96ca5d7603f373e4b38f529ff059",
+      "bytes": 13447
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "99ba281f356a40795a1a5d091edadaa7a7eab11a07204e1f8fb6b4da5ad0b271",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "e297894d5f9422d8891c59df563ef29c1f47e7859d4077a29d19b4ce8c44855b",
+      "bytes": 6375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "30a6589d68e24a1e051cee0712058cda8a4b95073e2847b24f6023b7409b4347",
+      "bytes": 81925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "c13c3dfed91f03998a731312827fffdaba6ed5850dd22d7284284c99eb7d2911",
+      "bytes": 13402
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e076561df9a0454d82d18a24372f400c014bc7c4e0d4fe0dfc26b385572d62a6",
+      "bytes": 3498
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "b991dd1df3feda2328511a36203dfe7fd39f03f7cb7262fb9b2e9c4bb5895aba",
+      "bytes": 6370
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_01/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "085d156db8cacbb3880cab983783a83847a5407ff01daa251b7bfb283ca20160",
+      "bytes": 80781
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "3ee2203d22d48685794be5a50afb5b0c786c60fe366a229b4dba4dd2b7554036",
+      "bytes": 13419
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "3f539824be75ca9639d7a5a3fa7525557ff9bfb5dca6d290cd38172edc59f3a1",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "15ce435fb1dd0e446b9c8362b6083d846c56077953eed65c94aae3fa7c441aed",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "d0b8524653077d744d383ee79abc1e0e3304fab945bea0a9f6b1409d9a167cd8",
+      "bytes": 80879
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "95a8826231bf77e4812e773d109eb047f0745b92008d30245bb1b5be67d131e0",
+      "bytes": 13402
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "20ddc78a77a228a11d822862aef648a2d9d018de56c8619c56e44bc0c575dff9",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "af6ff1e15d36db91b26c745637ed4007d8cf802dc2531ed0cb15b50953f8d220",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "cd0d64eb7c8c19b50e16981de95a2484b46aac3792c5c840a0c6ad3122b111c2",
+      "bytes": 80779
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "d0ff2539ceab0bf1979547bc71a197d9dbbbe9eb8fe7de63ca3f38044fc8622f",
+      "bytes": 13449
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "1ea562c5760f997cdbcd615346236b26dd35bd2132cae6db033c48a4c55fd216",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "335622d805f7aa6153a6445f0345c43a1315bf0d45efa403ce949e79f425e0e5",
+      "bytes": 6375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "344e5d252ecb6298f0f86b8d0e0f6ddd0586869c32831555ad9da61e1f248317",
+      "bytes": 80880
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "5334cffba3a5f5dcf9d765de2c03acbf82c84cfa75247cdd2762d248112a0562",
+      "bytes": 13397
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "9bae3199771e6e26ef4777db6340179b775fbbd5e8c66a06959cefb3b3aae63c",
+      "bytes": 3498
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "505c062ef93206e9e1d9808df31c81614f7a0df75ed4a7a7b559649790958e08",
+      "bytes": 6370
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_02/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "099aba5a587a4072109623a4fc8034bdf8fbc805d4e59928dd744c335aa96731",
+      "bytes": 80778
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "e290ca5e1839cc0fd3836039f723b5e9a1132874eb0d11a08956441a371f4f57",
+      "bytes": 13445
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "f33ff388cc9a4281407825421cc8f365413495645ba1f4a05d9aef50ff6a60f1",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "57776deba1860ff249bc9c445db1915a4e472832fb159ea0506520716fc172e5",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "9fcb74f668bcb3fb8ac9554a4ec9d58d454abf72874ae9cf50237a488eb42c46",
+      "bytes": 80877
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "ca7fc7396dce84b8c8423fa61a58f1ffa8dce67f65967d6e9adab3a749adac79",
+      "bytes": 13410
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "131973a243adf3bfbd81a71adb70eb7ddbe6954abf580b737880e3eb311d0664",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "bfd0e4978372f813f797cdfdac8c2d5c1da2e8dd9bae96512cf78db9f1a6729c",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "de1f24bf7eb5548341ce4d20bbb31cd927daa67284678229ec1c4aff3e7f4a28",
+      "bytes": 80780
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "d66f633dde5a3c439c319a00cbc8d050a76edb141d8affe244b5ef463fc98a4c",
+      "bytes": 13449
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "18ccded32822c717bd8b9ef51960fb13ba8a0eebd6dbc3f92404302ed016e9cb",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "cd271f97617e861d52fde5e8ef17504f889a92b78245fef484492348ff5a2e37",
+      "bytes": 6375
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "61807ff863cf4da760d6a9931da5ce984c3b3d06ef411cd99561a6acf053458d",
+      "bytes": 80877
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "24f263136f8f03bc181ec857be0c3a4b7be1d0b07aa580e9d14fd061d5c59d9b",
+      "bytes": 13407
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "1b80596b787b209157b2765c65ac4bf056c7718871c76be8249e84ce69b24977",
+      "bytes": 3498
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "f08d068c13a1eacfda6f7c78ff4fd11021988a2c1d4e7cc7fe79cd39797d4c9d",
+      "bytes": 6370
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_03/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "32db48a8b4e802845cbd01b304509238ee8f689aecf04c13136f0fc1d1959ebe",
+      "bytes": 80782
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "0cd3f92ff83b1ca400ea78c8da180ff4cd8d6cf7f6116e9fe0c88fc4f0bc83c1",
+      "bytes": 13410
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "44f4cb9e1849a43838b554d67e6167794200de76ccad270085d374e3836529e2",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "42ac258642c55e9d7544dcdf96cc0557f6f55a62dbe7288699bf7d7c0584ea2e",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "c7d30874d8449f934d8b911dce13606f070331dc23328305da4e5b4195265fb8",
+      "bytes": 80878
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "ced72a239d7767a2e43da06790d3c88101779952acc69af2885e73d3b7d1e0f8",
+      "bytes": 13398
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "df32baebc3a490ba2af28224bdf3ce7eb517e839a359ba9bedbab5c5e4f3b9b5",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "676dbfe7ce25786a648fc5d5db5f15fc4fdb754ac231b8471c28f04e62fda3af",
+      "bytes": 6373
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "367bb885ebe2dff3dadbfb4e75b96311da5dece0d7f94618cdc6fd533d9987dd",
+      "bytes": 80779
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "2d32d69c26ebd6a00d6e53729470b9140815430f68b0a5c87f45e59c0f2f3c40",
+      "bytes": 13444
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "466db41a8439be7e8ba5e58513b51b5f436f7740386b53312a505afafbb95f10",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "4e3d4eed7c8f85828ec3049fd51779e342b69d160a10a266ceebed9d2c99f2ac",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "ec8a824d45c2e003ec86e96813f2ee357e3ce9b0184f8ba7a45be187ae14f0cd",
+      "bytes": 80876
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "bc8fc2f4b28d7deb5715b1ad794ee074958d62dbc3ef1df043239adafd702084",
+      "bytes": 13413
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e97ee0b77a5ba354db850b1a01c035cbd7b2ece3fe2cea286de2694ec2117c5f",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "878fe4d2ce90e0ac37152e70747e76c2be9ce5805de5a870118f10fb9f13fb3c",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_04/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "acf10d8fd30a4833816167ee62ba4b093e685c6edec538fa865a46a0adf07b88",
+      "bytes": 80782
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "bdb0c7c5e62e4ecd6a912d6227f169284d4320f58504bf6cbe7c4e32bb58f96e",
+      "bytes": 13418
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "a4ff276b3a0f32c2d2518ecfdd10252e9b02cbb7c4d21933d8340708b98b5b4e",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "1757a23338723b6078abc1f2ab92327b05b104c0eaefa4d802d9797d82981c80",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "fdf948cdf303a8741b1ebe48be097a3fc89d38fe9a0974d0d150740bcf58fb6d",
+      "bytes": 80875
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "a4a6bdc1c70ce38d959a9661e2146eed40ceea9715c3514df1e9a0f1ca0c4351",
+      "bytes": 13400
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "89d793f3ad4c49087fcb08b97e20885a1b766e2425f6fab21cf2808e2d1f623a",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "bdc04797a5eb21b0795ad790a9f88922a1403e3c5bb1d56fcea2727275229d10",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "c30d59ae416048f887f785d53e7cc0c6e5293ef66585c2db0b48bd32c59949d8",
+      "bytes": 80782
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "878f68fbe0598a0d979ad40a7fea8e29ea9b7077af2c7024a11e10ca640a8300",
+      "bytes": 13457
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "7d63feeab911f34a9571d642ae87a6a23419d49c2d02df8f5a2ff7a2b4f08aba",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "628dd97fff3ee1e9d36bcdffe643e0d256bd561f54fbb6b76522ea01982a1986",
+      "bytes": 6376
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "38a07846a8c6c8e433a791744c00f99c3ec18e409b7c235e50587ee00b5747b0",
+      "bytes": 80878
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "7e65b6c83f00b02cfc6c7b285dcee208aaee4800bf848c970d4f58ae129dc056",
+      "bytes": 13404
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e2d59b98460b489e6fdf2dbbc63c86072933d28b3033bdb1c8e1589bca7c0060",
+      "bytes": 3499
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "bd6c8093ae0bc91ba95a296e01fe3218fe7b96abd8c29a52d204ba5c3882a7ab",
+      "bytes": 6371
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_05/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "48c5050cda48dd675bf040cfa74bd74448550b5b634ee901458f91306d58564a",
+      "bytes": 80783
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "0ef4952e2461c1d112a836254dc31f833e6328bd547d21537aca432e75106e49",
+      "bytes": 13443
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "4ae77163626d1e601d5e7a0be068a9f01dc8829ed23bf799a9c195ab648da3c0",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "ff968dc2d3f216a30cae5e00463ba88833a4fe839b6114624fea09612336ba37",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "a7bb64206d9c1dc713957eb5f5bc58be2b61e5e56739c10f924944878d3dcdf6",
+      "bytes": 80927
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "cce6cf9e1990c06b4857b400686808e5a7523fd60a66c483d27be0464c777c11",
+      "bytes": 13432
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "aed65601b27696b5d8c7f94b2eec07739012145a02d294ee803c373868442653",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "55c2d8aa97ec651a81a863872e74a1795298e11a0e814291415dfd8c5e3f6961",
+      "bytes": 6373
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "c61318147bc244b8a38652f6b3c97fb8bbb7b51f998e5c3d3831d83ab80a73de",
+      "bytes": 80777
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "618e35ee34f8b2fbee5d264313e137e967ff817282ed6b1c65e52af4343026eb",
+      "bytes": 13479
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "bfc3b14e1550eedbeacbf21ad89bb04749a2096c6b3220e7a0c560e8aa59cdf0",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "d6d21c7528818bc10cea921b866ea93d4e0c006f0ab6428adc0da9823c09941c",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "b58993968f79b731f6b3983b4c6c67df426767509f946f7386ab33d9e273d9fe",
+      "bytes": 80927
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "c6e82f79bd0ba17b76e1184a851929df5f076c3e4c48a9e75b01f206adb4ab27",
+      "bytes": 13425
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "22c6f4460975c17d9e6e298931e1fd4aa60edcb356189010bc50a53e8c1c6e45",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "766c95e399108b097fbe53f70105dd509e15a4569a0c69d7856c14889b4eaeba",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_06/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "629d8d27f3c80b6cbd6973121f78d463c004561365de8bfe3f2244ee9be8ffe4",
+      "bytes": 80828
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "a86ebbf3f4df1ddbce4ad25309c190a59722ac7f2bee730e28c66d417604ef91",
+      "bytes": 13445
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "c5b7273f7215ac852f00586f5ff1df94e9a495ff89bf4b3bd3fd4a9d72d4336b",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "c2ef552622ec9f9fc9b5d8ab1b9d3cd7ac1fe1eae95f8ab8c18982dd7ceee13d",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "a3bad3ca5afae3c63d1e1cfb37e73217acc5f62500f4c4a1a061373ad70d85b3",
+      "bytes": 80925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "a1f6fd649a996f19d1795b5fd299b48e2c88a36aabf80e5d051616b4e3166fc1",
+      "bytes": 13422
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "78fd1d3561ab39fc002e7e4895f4a3faf279fa3f89fd0b3221aead0c8c0acc85",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "c8cb867c90b40dab27c4ca182989734ec3f3b1531b90115622620466f4d7df98",
+      "bytes": 6374
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "f11202d7ae2e41c07b51034b4e2e92412bd46756334974bfe61afa19112b73f2",
+      "bytes": 80830
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "ac2567374f36c06f79888d95820fd447dd9bb47d5461b356ae425acc858419e3",
+      "bytes": 13464
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "023c7ef69e0edc39c4d3bf839d2b71b32f44288e0fd7711adaeedcead05a516c",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "d7b9c6c9f7e1e700b368448499faf59dd3390cf8f363f57814e6307f00af557a",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "319471c0d79f5f65bf089f9bdcd7594fc3fe1cfe3ab05abfe62926b11e5e49b6",
+      "bytes": 80925
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "9e38033a88a509a697d43e02d9dab9c12ca4092e62fb373ffaaeab164d0f80ba",
+      "bytes": 13430
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "e057f1cc0be9a37df2e57acbc9599bb2b2b7910fc29d05d39be6d407c4d28324",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "207fd17379e734a57c30c38e831d20a919e9ee6844b9da292018c8129de9e0ba",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_07/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "ecf189d106a988e216da3d6af580a2d812a447a19c36177710290eccba66bbcf",
+      "bytes": 80831
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "4dd917eeb73836e2ff544eaf57297dbafedb4071133bd51bf6300e9224c964c9",
+      "bytes": 13456
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "9bb849ebdda0ef6115daffc6c0a34e8f38599b975c26792bc8348da8bad967ec",
+      "bytes": 3502
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "0fb61403e06000e172199d2b259fa3167305a3315f2959e85c91a09728a0727a",
+      "bytes": 6378
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "35ea5239249e58c2eab29302c9566f4c951ed824618a246e434196c2fdc2d7d6",
+      "bytes": 80932
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "9d1fc9c2865e31d535b50b307b5e721f0a049f6a0b9478b4394aae2f65e0c50f",
+      "bytes": 13433
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "370ab3e5d57dac698056d9d930b20be88e32abcb966b500f87013ace9d96e7e6",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "60d6b9745ade1a910c338ca717def3f6431c6cd1c73b0e0f074f0f09eb7f4729",
+      "bytes": 6373
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-small/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "5d4bd24c8b494b3f0bd364deff832429d0a681601b587d8c8ae89548d6bc9669",
+      "bytes": 80828
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal.jsonl": {
+      "sha256": "af476f9cd0f172397b7468f9c1e1ab676bd118d61a2165c0cd5a5bce1ceabd62",
+      "bytes": 13473
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_run_meta.json": {
+      "sha256": "a1e7cc05959bc0c9f4cbf17819b32bc9dc426ee05f1d65031faaae41f9aa243f",
+      "bytes": 3501
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_summary.json": {
+      "sha256": "221e047d42e8b7ffa13fb053bb4659a66f437fa86a89495627e5108ff1fe7d59",
+      "bytes": 6377
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/nominal_audit.jsonl": {
+      "sha256": "9aff26c77122fdb360b7437bff6e0206c630438d0b03425f514af7f561e45c68",
+      "bytes": 80933
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted.jsonl": {
+      "sha256": "556a47185ab79ab90c62b826010f13fbb46cae4c13721c6b281b2d15d1be9366",
+      "bytes": 13427
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted_run_meta.json": {
+      "sha256": "7aa2381904defaed569ab2122059f6a21b89e0e3b7b3d00274d58339e3ac95c2",
+      "bytes": 3500
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted_summary.json": {
+      "sha256": "70a16f443fa3b788820069103c3c90fc921a15cba8915b3d2bddd69f57cbbfd8",
+      "bytes": 6372
+    },
+    "reviews/2026-09-24_ras_strengthening/calibration_confirmation_v3/data/block_08/octo-base/PutSpoonOnTableClothInScene-v1/fitted_audit.jsonl": {
+      "sha256": "04c0ab0b59e4578c0aad67d536c631fb7288307307177e7d31d14bdcc2ed4f56",
+      "bytes": 80828
+    }
+  },
+  "analysis_sha256": "10f654193fdb1809f1bab0e872ea77e3eac5c36c8c2bcd73c58605c03e31a7fb",
+  "frozen_analysis_sha256": "5a929d5283cbce23c974747d50f033dd380abb2d6953a045ff0fe516edfb3209"
+}

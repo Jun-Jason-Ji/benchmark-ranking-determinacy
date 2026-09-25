@@ -1,0 +1,6 @@
+{
+  "input": "confirmatory/RESULTS.json",
+  "input_sha256": "ee97b9787884b57082ce0173f38d34a2da198aac11df5507be64aa817a0b9bcb",
+  "output_sha256": "866863521b5f11085a78d68089e2a6a4237aaaeea761c1c96e9a1f364d51fee6",
+  "source": "prespecified simultaneous paired-discordance intervals, all 20 comparisons"
+}

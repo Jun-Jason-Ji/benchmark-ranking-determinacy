@@ -108,13 +108,18 @@ def selection(root: Path) -> tuple[set[str], set[str]]:
         for path in (root / directory).rglob("*"):
             if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc":
                 selected.add(path.relative_to(root).as_posix())
-    for name in ("LICENSE", "NOTICE.md", "REPRODUCIBILITY.md"):
+    for name in ("LICENSE", "NOTICE.md", "REPRODUCIBILITY.md", "README.md", "CITATION.cff", "CHANGELOG.md"):
         selected.add(name)
     for name in ("research_audit/simpler_published_scores.csv", "research_audit/simpler_manifest.json"):
         selected.add(name)
     # Analysis inputs, not a simulator install: two scripts parse SIMPLER_PERF.
     selected.add("third_party/SimplerEnv/simpler_env/utils/metrics.py")
     selected.add("third_party/SimplerEnv/LICENSE")
+    # Small workload-specific compatibility layer discussed in Appendix B.
+    # Ship its editable source and activation manifest, not a host-built binary.
+    for name in ("fakesemfd_layer.c", "build.sh", "VkLayer_fakesemfd.json"):
+        selected.add(f"third_party/vk_fakesemfd/{name}")
+    selected.add("docs/software_rendering_compatibility.md")
     for path in root.glob("requirements*.txt"):
         selected.add(path.name)
     # These explanations are analysis references, not claims of a current deposit.
@@ -246,6 +251,7 @@ def create(root: Path, out: Path) -> dict:
                            "Numeric data/bridge_sysid NPZ and shard manifests",
                            "Published SIMPLER score CSV and source manifest",
                            "SimplerEnv metrics.py reference constants with its upstream MIT LICENSE",
+                           "Appendix B Vulkan layer source, build script, manifest and implementation notes",
                            "scripts/, benchmark/, LICENSE, NOTICE, REPRODUCIBILITY, requirements files and two methods documents"],
              "excluded": ["Live analysis markdown, logs/stderr, policy checkpoints, simulator assets",
                           "Simulator trees except the single reference metrics.py and its LICENSE; original TFRecord shards"],
